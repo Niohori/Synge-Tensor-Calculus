@@ -552,35 +552,139 @@ Find the Jacobian of the transformation. Where is it zero or infinite?
 \end{tcolorbox}
 
 \begin{figure}[h]
-\centerline{\includegraphics[scale=.4]{spherical.jpg}}
+\centering
+\begin{minipage}[t]{.5\textwidth}
+%\centering
+\vspace{0pt}
+\includegraphics[scale=.5]{spherical.jpg}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\textwidth}
+%\centering
+\vspace{50pt}
+We use the latitude $\psi$ instead of the co-latitude $\phi$.\\\\
+$\left\{ \begin{array}{c}
+    x= r\cos (\psi )\cos (\theta) \\
+     y= r\cos (\psi )\sin (\theta) \\
+      z= r\sin(\psi )
+  \end{array} \right\}$
+\end{minipage}
 \end{figure}
-$$  \left\{ \begin{array}{c}
-    x= r\cos (\phi )\cos (\theta) \\
-     y= r\cos (\phi )\sin (\theta) \\
-      z= r\sin(\phi )
-  \end{array} \right\}$$
-Partial differentiating of (x,y,z) with respect to (r,$\phi$,$\theta$) gives the Jacobian
+Partial differentiating of (x,y,z) with respect to (r,$\psi$,$\theta$) gives the Jacobian
 \begin{align}
 \ J=
 \left| {\begin{array}{ccc}
-    \cos (\phi )\cos (\theta) & -r\sin (\phi )\cos (\theta) & -r\cos (\phi )\sin (\theta)\\
-    \cos (\phi )\sin (\theta) & -r\sin (\phi )\sin (\theta) & r\cos (\phi )\cos (\theta)\\
-    \sin (\phi ) & r\cos (\phi )& 0\\
+    \cos (\psi )\cos (\theta) & -r\sin (\psi )\cos (\theta) & -r\cos (\psi )\sin (\theta)\\
+    \cos (\psi )\sin (\theta) & -r\sin (\psi )\sin (\theta) & r\cos (\psi )\cos (\theta)\\
+    \sin (\psi ) & r\cos (\psi )& 0\\
   \end{array} } \right|
 \end{align}
 
+
+
 \begin{eqnarray}
-\ J &=& \cos(\phi)\cos(\theta)(-r^{2})\cos^{2}(\phi)\cos(\theta))\\ &+& r\sin(\phi) \cos(\theta)(-r\cos(\phi)\cos(\theta)\sin(\phi)) \\&-& r\cos(\phi)\sin(\theta)(r\cos^{2}(\phi)\sin(\theta)+r\sin^{2}(\phi)\sin(\theta))\\
-&=& -r^{2}\cos^{3}(\phi)\cos^{2}(\theta)
--r^{2}\sin^{2}(\phi)\cos^{2}(\theta)\cos(\phi)-r^{2}\cos(\phi)\sin^{2}(\theta)
+\ J &=& \cos(\psi)\cos(\theta)(-r^{2})\cos^{2}(\psi)\cos(\theta))\\ &+& r\sin(\psi) \cos(\theta)(-r\cos(\psi)\cos(\theta)\sin(\psi)) \\&-& r\cos(\psi)\sin(\theta)(r\cos^{2}(\psi)\sin(\theta)+r\sin^{2}(\psi)\sin(\theta))\\
+&=& -r^{2}\cos^{3}(\psi)\cos^{2}(\theta)
+-r^{2}\sin^{2}(\psi)\cos^{2}(\theta)\cos(\psi)-r^{2}\cos(\psi)\sin^{2}(\theta)
 \end{eqnarray}
 
 
 
-Noting that the $2^{nd}$ term in (5) can be written as $-r^{2}\cos^{2}(\theta)\cos(\phi)+r^{2}\cos^{2}(\theta)\cos^{3}(\phi)$, we get
+Noting that the $2^{nd}$ term in (5) can be written as $-r^{2}\cos^{2}(\theta)\cos(\psi)+r^{2}\cos^{2}(\theta)\cos^{3}(\psi)$, we get
 \begin{align}
-\ J &=  -r^{2}(\cos^{3}(\phi)\cos^{2}(\theta)+\cos^{2}(\theta)\cos(\phi)-\cos^{3}(\phi)\cos^{2}(\theta)+\cos(\phi)\sin^{2}(\theta))\\
-\ &= -r^{2}\cos(\phi)
+\ J &=  -r^{2}(\cos^{3}(\psi)\cos^{2}(\theta)+\cos^{2}(\theta)\cos(\psi)-\cos^{3}(\psi)\cos^{2}(\theta)+\cos(\psi)\sin^{2}(\theta))\\
+\ &= -r^{2}\cos(\psi)
+\end{align}
+J=0: for $r=0$ or $\psi = \frac{\pi}{2}|_{r \epsilon (-\infty, +\infty)}$ and $J\rightarrow \pm\infty$ or $\mp\infty$ for $r\rightarrow \pm\infty|_{\psi\neq 0}$. But what about the case $r\rightarrow \pm\infty|_{\psi\rightarrow 0}$? This case is not determined as long as no path is chosen in the $(r,\psi)$ configuration space.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 3.}
+\begin{tcolorbox}
+If $X, Y,Z$ are the components of a contravariant vector for rectangular Cartesian coordinates in Euclidean 3-space, find it's components for spherical polar coordinates.
+\end{tcolorbox}
+
+Be $x^{\alpha}$ the components of a contravariant vector in spherical polar coordinates and $x^{i}$ it's components in rectangular Cartesian coordinates. As we have  
+\begin{align}
+ \begin{array}{c}
+    \ x^{\rho} = \sqrt{x^{j}x^{j}}\\
+    \ x^{\theta} = \atan{\frac{x^{2}}{x^{1}}}\\
+    \ x^{\phi} = \asin{\frac{x^{3}}{\sqrt{{x^{j}x^{j}}}}}\\
+  \end{array} \quad \text{ and } \quad A^{\alpha} = A^{i}\pdv{x^{\alpha}}{x^{i}}
+  \end{align}
+\begin{align}
+\Rightarrow \left[A^{\alpha} \right]=  \left[A^{i}\pdv{x^{\alpha}}{x^{i}}\right] = \left[ {\begin{array}{ccc}
+    \ \frac{x^1} { \sqrt{x^{j}x^{j}}} & \frac{x^2} { \sqrt{x^{j}x^{j}}} & \frac{x^3} { \sqrt{x^{j}x^{j}}}\\\\
+    -\frac{x^2} { (x^1)^2+(x^2)^2} & \frac{x^1} { (x^1)^2+(x^2)^2}  & 0 \\\\
+    -\frac{x^3x^1} { (x^{j}x^{j})\sqrt{(x^1)^2+(x^2)^2}} & -\frac{x^3x^2} { (x^{j}x^{j})\sqrt{(x^1)^2+(x^2)^2}}  & \frac{\sqrt{(x^1)^2+(x^2)^2}} { (x^{j}x^{j})} \\
+  \end{array} } \right]\left[ {\begin{array}{c}
+    \ A^{1}\\\\
+    \ A^{2}\\\\
+    \ A^{3}\\\\
+  \end{array} } \right]
 \end{align}
 $$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 4.}
+\begin{tcolorbox}
+In a space of three dimensions, how many different expressions are represented by the product $A^{m}_{np} B^{pq}_{rs}C^{s}_{tu}$? How many terms occur in each such expression, when written out explicitly?
+\end{tcolorbox}
+
+As we have $V_{3}$ and considering that in $A^{m}_{np} B^{pq}_{rs}C^{s}_{tu}$ the six indices m, n, q, r, t, u are not dummy indices, we get $3^{6}$ different expressions (first choose m: you have three choices, then n: also three choices giving 3x3 possibilities, etc for q, r, t, u).\\
+For the second question, as in $A^{m}_{np} B^{pq}_{rs}$ there is only summation on over index (p) we get three terms for this part. As the summation with $A^{m}_{np} B^{pq}_{rs}$ and $C^{s}_{tu}$ occurs only on one index also (s) we get 3x3 terms in the expression.
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 5.}
+\begin{tcolorbox}
+If A  is an invariant in $V_{n}$, are the second derivatives $\pdv{A}{x^{r}}{x^{s}}$ the components of a tensor?
+\end{tcolorbox}
+
+As A is invariant (note: different alphabets in the indices indicates different coordinate systems):
+\begin{align}
+\ A(x^{\rho}) = A(x^{i})\\
+\Rightarrow \pdv{A(x^{\rho})}{x^{i}} = \pdv{A(x^{j})}{x^{i}}
+\end{align}
+To simplify the notation, we put $A(x^{\rho}) = A^{,}$ and $A(x^{j}) = A^{,}$ then (2) can be written as
+\begin{align}
+\pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}} = \pdv{A}{x^{i}}
+ \end{align}
+ Conclusion: $\pdv{A}{x^{i}}$ is a covariant tensor. \\\\Consider now $\pdv{A}{x^{i}} = \pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}$. Then,
+\begin{align}
+\pdv{A}{x^{i}}{x^{j}} &= \pdv{A^{,}}{x^{\rho}}{x^{j}}\pdv{x^{\rho}}{x^{i}}+ \pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}\\
+\Leftrightarrow \pdv{A}{x^{i}}{x^{j}} &= \pdv{A^{,}}{x^{\rho}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{j}}\pdv{x^{\rho}}{x^{i}}+ \pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}
+\end{align}
+The first term on the right side, behaves as covariant tensor but the presence of the second term makes that generally, $\pdv{A}{x^{i}}{x^{j}}$ has not a tensor character. This is only when $\pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}=0$, which means that $x^{\rho}, x^{i}$ are a linear map of each other.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 6.}
+\begin{tcolorbox}
+Suppose that in $V_2$ the components of a contravariant tensor field $T^{mn}$ in a coordinate system $x^r$ are 
+$$T^{11}=1 \quad T^{12}=0$$
+$$T^{21}=1 \quad T^{22}=0$$
+Find the components $T^{,mn}$ in a coordinate system $x^{,r}$, where
+$$x^{,1} =(x^{1})^2\quad x^{,2} = (x^{2})^2$$
+Write down the values of these components in particular at the point $x^1 = 1, x^2 0 =$.
+\end{tcolorbox}
+As we have a contravariant tensor field :
+\begin{align}
+\ T^{,mn} =  T^{ij}\pdv{x^{,m}}{x^{i}}\pdv{x^{,n}}{x^{j}}\\
+ \begin{array}{ccc}
+   \quad \quad \quad \quad  x^{,1} =(x^{1})^2  \Rightarrow & \pdv{x^{,1}}{x^{1}} = 2x^{1} & \pdv{x^{,1}}{x^{2}} = 0\\
+\quad \quad \quad \quad x^{,2} =(x^{2})^2  \Rightarrow & \pdv{x^{,2}}{x^{1}} = 0 & \pdv{x^{,2}}{x^{2}} = 2x^{2}\\
+  \end{array}\\
+  \end{align}
+  \begin{align}
+  &\Rightarrow T^{,11} = 4(x^{1})^2 + 4(x^{2})^2 \\
+  &\Rightarrow T^{,12} = T^{,21}=0 \\
+  &\Rightarrow T^{,22} = 4(x^{1})^2 + 4(x^{2})^2
+  \end{align}\\\\
+  The components in  at the point $x^1 = 1, x^2 = 0$ are
+  $$T^{,}(1,0) = \left[{\begin{array}{cc} 4 & 0 \\
+    0 & 4 \\ 
+    \end{array} } \right]$$
+    
+    $$\medblackdiamond$$
 \pagebreak[4]
