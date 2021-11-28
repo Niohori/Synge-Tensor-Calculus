@@ -1,0 +1,586 @@
+\chapter{Spaces and Tensors}
+\pagebreak[4]
+
+\section{p5-exercise}
+
+\begin{tcolorbox}
+
+The parametric equations of a hypersurface in $V_n$ are
+\begin{align*} 
+\ &x^1 = a \cos(u^1)\\
+\ &x^2 = a \sin(u^1)\cos(u^2)\\
+\ &x^3 = a \sin(u^1)\sin(u^2)\cos(u^3)\\
+\vdots\\
+\ &x^{N-1} = a \sin(u^1)\sin(u^2)\sin(u^3)\dots\sin(u^{N-2})\cos(u^{N-1})\\
+\ &x^{N} = a \sin(u^1)\sin(u^2)\sin(u^3)\dots\sin(u^{N-2})\sin(u^{N-1})\\
+\end{align*}
+where a is a constant. Find the single equation of the hyperspace in the form 1.103.
+
+\end{tcolorbox}
+
+We have:
+\begin{align*}
+\ (x^N)^2 + (x^{N-1})^2 &= a^2\prod_{i=1}^{N-2}\sin^2(u^i)(\cos^2(u^{N-1})+\sin^2(u^{N-1}))  \\
+\ &= a^2\prod_{i=1}^{N-2}\sin^2(u^i)\\
+\ &= a^2\prod_{i=1}^{N-3}\sin^2(u^i)\sin^2(u^{N-2})\\
+\ &= a^2\prod_{i=1}^{N-3}\sin^2(u^i)(1-\cos^2(u^{N-2})\\
+\ &= a^2\prod_{i=1}^{N-3}\sin^2(u^i) - a^2\prod_{i=1}^{N-3}\sin^2(u^i)\cos^2(u^{N-2})\\
+\ &= a^2\prod_{i=1}^{N-3}\sin^2(u^i) - (x^{N-2})^2\\
+\end{align*}
+giving
+$$(x^N)^2 + (x^{N-1})^2 + (x^{N-2})^2 = a^2\prod_{i=1}^{N-3}\sin^2(u^i)$$
+In general, by recursion
+$$\sum_{i=0}^k(x^{N-i})^2 = a^2\prod_{i=1}^{N-k-1}\sin^2(u^i)     \quad (k \leq N-2)$$
+be k = N - 2 (N - k - 1 = 1) and in the left term put j = N - i (j goes from 2 to N), we get
+\begin{align*}
+\sum_{j=2}^N(x^{j})^2 &= a^2\prod_{i=1}^{1}\sin^2(u^i)\\
+\ &= a^2(1-\cos^2(u^1))\\
+\ &= a^2 - (x^1)^2\\
+\end{align*}
+and thus the equation of the hyperspace is given by
+\begin{LARGE}
+\textbf{
+$$\sum_{j=1}^N(x^{j})^2 - a^2 = 0$$
+}
+\end{LARGE}
+\begin{tcolorbox}
+
+Determine whether the points $(\frac{1}{2}a,0,0,... 0)$, $(0,0,...,0, 2a)$ lie on the same or opposite sides of the hyperspace.
+\end{tcolorbox}
+For $(\frac{1}{2}a,0,0,... 0)$ we have $\sum_{j=1}^N(x^{j})^2 - a^2 = -\frac{3a^2}{4} < 0$ and for 
+$(0,0,...,0, 2a)$ \\we have $\sum_{j=1}^N(x^{j})^2 - a^2 = \frac{3a^2}{4} > 0$.\\
+So the points lie on opposite sides of the hyperplane.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p6-exercise}
+
+\begin{tcolorbox}
+
+Let $U_2$ and $W_2$ be subspaces of $V_N$. Show that if N = 3  they will in general intersect in a curve; if N = 4 they will in general intersect in a finite number of points; and if $N > 4$ they will not in general intersect at all.
+\end{tcolorbox}
+
+We have (see 1.102 page 5):
+$\quad x^r = f^r(u^1, u^2,..., u^M) \quad (r = 1, 2, ...,N)$
+
+Case N=3: \\
+
+For $U_2$ we have:
+$$x^r = \phi^r(u^1, u^2) \quad (r = 1, 2, 3)$$
+
+For $W_2$ we have:
+$$x^r = \psi^r(v^1, v^2) \quad (r = 1, 2, 3)$$
+
+The intersect of the two hyperplanes is given by the N equations:
+
+$$\phi^r(u^1, u^2) = \psi^r(v^1, v^2) \quad (r = 1, 2, 3)$$
+
+So we have 3 equations in 4 unknown $u^1,u^2, v^1, v^2$ and can choose (fix) one e.g. $u^1$ and solve the set of equations  for $u^2, v^1, v^2$ giving 
+$$x^r = \theta^r(u^1) \quad (r = 1, 2, 3)$$
+This is an equation of a curve in space (1 parameter equation)\\
+Case N=4: \\
+Using the same reasoning as with N=3, we get 4 equations for 4 unknown $u^1,u^2, v^1, v^2$.\\
+Provided that the set of equation does not degenerate, these 4 equations will determine $u^1,u^2, v^1, v^2$ without any degree of freedom. So we get  points as solutions. This solution does not to be unique, e.g. if the $\phi^r(u^1, u^2)$ are quadratic form, then the solutions 
+$$(u^1,u^2, v^1, v^2)$$
+$$(-u^1,u^2, v^1, v^2)$$
+$$ (u^1,-u^2, v^1, v^2)$$
+$$ (-u^1,-u^2, v^1, v^2)$$
+are possible.\\
+Case N=5: 
+There are more equations than variables. If the equations are not linear dependent, no solutions will be found.
+$$\medblackdiamond$$
+\pagebreak[4]
+\section{p8-exercise}
+
+\begin{tcolorbox}
+Show that $(a_{rst}+a_{str}+a_{srt})x^rx^sx^t = 3a_{rst}x^rx^sx^t$
+\end{tcolorbox}
+%\setcounter {equation} {1} %sets the counter to have the specified
+$(a_{rst}+a_{str}+a_{srt})x^rx^sx^t = a_{rst}x^rx^sx^t+a_{rts}x^rx^sx^t+a_{srt}x^rx^sx^t\quad$
+so by just renaming the dummy indices e.g. for the second term  $r \mapsto s\quad$, $s \mapsto t\quad$ and $t \mapsto r\quad$ we get the desired result.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p8-exercise}
+
+\begin{tcolorbox}
+If $\phi = a_{rs}x^rx^s$, show that
+$$\pdv{\phi}{x^{r}} = (a_{rs}+a_{sr})x^s \quad\text{,}\quad\pdv{\phi}{x^{r}}{x^{s}} = a_{rs}+a_{sr}$$
+Simplify these expressions in the case where $a^{rs} = a^{sr}$
+\end{tcolorbox}
+We have 
+\begin{align} 
+\pdv{\phi}{x^{t}} &= \pdv{a_{rs}}{x^{t}}x^{r}x^{s}+a_{rs}\pdv{x^{r}}{x^{t}}x^{s}+a_{rs}x^{r}\pdv{x^{s}}{x^{t}}\\
+&= \pdv{a_{rs}}{x^{t}}x^{r}x^{s}+a_{rs}\delta_t^rx^{s}+a_{rs}x^{r}\delta^s_t\\
+&= \pdv{a_{rs}}{x^{t}}x^{r}x^{s}+a_{ts}x^{s}+a_{rt}x^{r}\\
+&= \pdv{a_{rs}}{x^{t}}x^{r}x^{s}+a_{ts}x^{s}+a_{st}x^{s}\quad\text{(rename dummy variable in third term)}\\
+&= \pdv{a_{rs}}{x^{t}}x^{r}x^{s}+(a_{ts}+a_{st})x^{s}
+\end{align}
+Replace $x^t$ by $x^r$, we get
+\begin{align}
+\pdv{\phi}{x^{r}}  =\pdv{a_{rs}}{x^{r}}x^{r}x^{s}+(a_{rs}+a_{sr})x^{s}
+\end{align}
+So the asked expression is only true if $a_{rs}$ is not a function of the $x^{s}$.
+Assuming that $a_{rs}$ is not a function of the $x^{s}$, take the partial derivative of (6) with respect to $x^{t}$, we get
+\begin{align} 
+\pdv{\phi}{x^{r}}{x^{t}} &= (a_{rs}+a_{sr})\pdv{x^{s}}{x^{t}}\\
+&=(a_{rs}+a_{sr})\delta^{s}_{t}\\
+&=(a_{rt}+a_{tr})
+\end{align}
+Replace $x^t$ by $x^s$, and we get the proposed expression.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p8-clarification on expression 1.210}
+
+\begin{tcolorbox}
+$$\pdv{x^{,q}}{x^{p}}{x^{s}}+\pdv{x^{r}}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}} = 0 $$
+\end{tcolorbox}
+From 1.209:
+\begin{gather} 
+\pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}+\pdv{x^r}{x^{,n}}\pdv{x^{,n}}{x^p}{x^{s}} = 0
+\end{gather}
+ multiply (1)  with $\quad\pdv{x^{,q}}{x^{r}}$
+\begin{gather} 
+\pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}+\pdv{x^r}{x^{,n}}\pdv{x^{,n}}{x^p}{x^{s}}\pdv{x^{,q}}{x^{r}} = 0\\
+\Leftrightarrow\pdv{x^r}{x^{,n}}\pdv{x^{,n}}{x^p}{x^{s}}\pdv{x^{,q}}{x^{r}}+ \pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}= 0
+\end{gather}
+\begin{gather} 
+\text{\centering in the first term we get\quad\quad}\quad \pdv{x^{,q}}{x^{r}}\pdv{x^r}{x^{,n}} = \pdv{x^{,q}}{x^{,n}} = \delta_n^q
+\end{gather}
+(3) becomes
+\begin{gather} 
+\pdv{x^{,n}}{x^p}{x^{s}}\delta_n^q + \pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}=  0\\
+\Leftrightarrow\pdv{x^{,q}}{x^p}{x^{s}} + \pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}= 0
+\end{gather} 
+$$\medblackdiamond$$
+\pagebreak[4]
+
+
+
+\section{p9-exercise}
+
+\begin{tcolorbox}
+If $A_s^r$ are the elements of a determinant A, and $B_s^r$ the elements of a determinant B, show that the element of the product determinant is $A_n^rB^n_s$. Hence show that the product of the two jacobians
+$$J =\Bigg|\pdv{x^{r}}{x^{,s}}\Bigg|\text{,}\quad J^{'} = \Bigg|\pdv{x^{,r}}{x^{s}}\Bigg|$$
+is unity.
+\end{tcolorbox}
+Remark: Some nitpick about the formulation: $A_s^r$ are not the elements of a determinant A, but elements of the matrix A which gives $\det{A}$ provided that A is square (which is not explicitly mentioned.). The same remark for B and $A_n^rB^n_s$.\\
+Be $A^i_k $ the elements of matrix A and $B^k_j $ the elements of matrix B and C = A.B the resulting matrix of the multiplication of A and B, then
+$$C^i_j  = A^i_kB^k_j $$
+are the elements of matrix C.
+Now, put $A^i_k =\pdv{x^{i}}{x^{,k}} \quad$ and $B^k_j =\pdv{x^{,k}}{x^{j}} \quad$ then,
+\begin{align}
+C^{i}_{j}  &= A^{i}_{k}B^{k}_{j} \\
+&=\pdv{x^{i}}{x^{,k}}\pdv{x^{,k}}{x^{j}}\\
+&= \delta^{i}_{k}
+\end{align}
+So $C = JJ^{,}\quad$becomes the unity matrix. 
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p11-exercise}
+
+\begin{tcolorbox}
+Show that a finite contravariant vector determines the ratios of the components of an infinitesimal displacement. (Consider the transformation of the equation $dx^r=\theta T^r$, where $\theta$ is an arbitrary factor which does not change under the transformation. Alternatively, show that the equations $T^{r} dx^{s}-T^{s} x^{r} = 0$ remain true when we transform the coordinates.)
+
+\end{tcolorbox}
+Be $T^{q}$ a contravariant vector.
+\begin{align}
+T^{,q}=T^{r} \pdv{x^{,q}}{x^r}\quad\text{(by definition)}
+\end{align}
+Be  $\theta$ a small infinitesimal factor invariant for a coordinate transformation,  define \\
+\begin{align}
+\ dx^{r} = \theta T^{r} \\
+\end{align}
+then
+\begin{align}
+\dv{x^r}{x^s} = \frac{\theta T^r}{\theta T^s}\\
+\Leftrightarrow T^s dx^r - T^r dx^s = 0
+\end{align}
+Alternatively, multiply (5) with $\partial_{x^r}{x^{,q}}$, then
+\begin{align}
+\pdv{x^{,q}}{x^r} dx^r T^s   -  \pdv{x^{,q}}{x^r}dx^s T^r &= 0\\
+\Leftrightarrow \pdv{x^{,q}}{x^r} dx^r T^s   -  dx^s T^{,q} &= 0 \quad \text{(use (1) in the second term)}\\
+\Leftrightarrow dx^{,q} T^s   -  dx^s T^{,q} &= 0 \\
+\end{align}
+Multiply (8) with $\partial_{x^s}{x^{,p}}$, then
+\begin{align}
+\ &dx^{,q} T^s \partial_{x^s}{x^{,p}}  -  dx^s T^{,q}\partial_{x^s}{x^{,p}} = 0 \\
+\Leftrightarrow \quad &T^{,p} dx^q   -   T^{,q} dx^{,p} = 0 \quad \text{(use (1) in the first term)}
+\end{align}
+and thus 
+$$\dv{x^{,q}}{x^{,p}} = \frac{T^{,q}}{T^{,p}}$$
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+
+\section{p12-exercise}
+
+\begin{tcolorbox}
+Write down the equation of transformation, analogous to 1.305, of a contravariant tensor of the third order. Solve the equation so as to express the unprimed components in terms of the primed components.
+
+\end{tcolorbox}
+Be 
+\begin{align}
+T^{,uvw}=T^{rst} \pdv{x^{,u}}{x^r}\pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}\quad\text{(by definition)}
+\end{align}
+a contravariant vector.\\
+Multiply (1) by $\pdv{x^{n}}{x^{,u}}$
+\begin{align}
+\ T^{,uvw}\pdv{x^{n}}{x^{,u}}&= T^{rst} \pdv{x^{,u}}{x^r}\pdv{x^{n}}{x^{,u}}\pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}\\
+\Leftrightarrow  T^{,uvw}\pdv{x^{n}}{x^{,u}}&= T^{rst} \delta^{n}_{r}\pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}\\
+\Leftrightarrow  T^{,uvw}\pdv{x^{n}}{x^{,u}}&= T^{nst} \pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}
+\end{align}
+Multiply (4) by $\pdv{x^{m}}{x^{,v}}$
+\begin{align}
+\ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}} &= T^{nst} \pdv{x^{,v}}{x^s}\pdv{x^{m}}{x^{,v}}\pdv{x^{,w}}{x^t}\\
+\Leftrightarrow  \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}} &= T^{nst} \delta_{s}^{m}\pdv{x^{,w}}{x^t}\\
+\Leftrightarrow  \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}} &= T^{nmt} \pdv{x^{,w}}{x^t}
+\end{align}
+Multiply (7) by $\pdv{x^{p}}{x^{,w}}$
+\begin{align}
+\ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} &= T^{nmt} \pdv{x^{,w}}{x^t}\pdv{x^{p}}{x^{,w}}\\
+\Leftrightarrow \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} &= T^{nmt} \delta^{p}_{t}\\
+\Leftrightarrow  \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} &= T^{nmp} 
+\end{align}
+Giving
+$$T^{nmp} =  T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} $$
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p14-exercise}
+
+\begin{tcolorbox}
+For a transformation from on set of rectangular Cartesian coordinates to another in Euclidean 3-space, show that the law of transformation of a contravariant vector is precisely the same as that of a covariant vector. Can this statements be extended to cover tensor of higher orders?
+\end{tcolorbox}
+We have to prove that, given that, $$T^{,i}= T^{j} \pdv{x^{,i}}{x^j} \quad T^{,}_{i}= T_{j} \pdv{x^{j}}{x^{,i}}$$ that also
+\begin{align}
+\ T^{,i}= T^{j} \pdv{x^{j}}{x^{,i}} \quad T^{,}_{i}&= T_{j}\pdv{x^{,i}}{x^j} \\
+\Leftrightarrow \pdv{x^{j}}{x^{,i}} &= \pdv{x^{,i}}{x^j} 
+\end{align}
+Be
+\begin{align}
+\hat{e^{,i}} = g^i_k\hat{e^{k}}\quad\text{and } \hat{e^{i}} = h^i_k\hat{e^{,k}}
+\end{align}
+the transformation rules from one set of (rectangular Cartesian) basis vectors to another set of  (rectangular Cartesian) basis vectors.
+Then,
+\begin{align}
+\langle \hat{e^{,i}},\hat{e^{,j}} \rangle = \langle g^i_k\hat{e^{k}},g^j_k\hat{e^{k}} \rangle &\text{ and } \langle \hat{e^{i}},\hat{e^{j}} \rangle = \langle h^i_k\hat{e^{,k}},h^j_k\hat{e^{,k}} \rangle\\
+\Leftrightarrow \delta^p_j = g^p_k g^j_k &\text{ and } \delta^p_j = h^p_k h^j_k \\
+\end{align}
+Be $\vec{v}$ a random vector in the Euclidean space,
+\begin{align}
+\vec{v} = x^j\hat{e^{j}} = x^{,j}\hat{e^{,j}}
+\end{align}
+then
+\begin{align}
+\text{(3) } \Rightarrow x^j\hat{e^{j}} = x^{j}h^j_k\hat{e^{,k}}&\text{ and }x^{,j}\hat{e^{,j}} = x^{,j}g^j_k\hat{e^{k}}\\
+\Rightarrow x^{,j} = x^{m}h^m_j  &\text{ and }x^m = x^{,j}g^j_m\\
+\Rightarrow x^{,j} = x^{,i}g^i_m h^m_j&\text{ and } x^m = x^{k}h^k_j g^j_m \\
+\Rightarrow \delta^p_j =g^p_k h^k_j &\text{ and } \delta^p_j =g^k_j h^p_k\\
+\text{(5) } \Rightarrow g^p_k g^j_k=g^p_k h^k_j &\text{ and } h^p_k h^j_k=g^k_j h^p_k\\
+ \Rightarrow g^j_k =  h^k_j &\text{ and }h^j_k =  g^k_j
+\end{align}
+From (9)
+\begin{align}
+\ x^{j} = x^{,m} g^m_j &\text{ and } x^{,k} = x^{n} h^n_k\\
+\Rightarrow \pdv{x^{,k}}{x^j} = \pdv{x^{n}}{x^j} h^n_k  &\text{ and } \pdv{x^{j}}{x^{,k}} = \pdv{x^{,m}}{x^{,k}}g^m_j\\
+\Leftrightarrow \pdv{x^{,k}}{x^j} = \delta^n_j h^n_k  &\text{ and } \pdv{x^{j}}{x^{,k}} = \delta^m_k g^m_j\\
+\Leftrightarrow \pdv{x^{,k}}{x^j} = h^j_k  &\text{ and } \pdv{x^{j}}{x^{,k}} = g^k_j\\
+\text{(13) }\Rightarrow \pdv{x^{,k}}{x^j} &= \pdv{x^{j}}{x^{,k}}
+\end{align}
+So (13) matches (2), proving the assertion.\\\\
+Can this statements be extended to cover tensor of higher orders?
+Consider
+$$T^{,i,j,\dots ,n}= T^{r,s,\dots w} \pdv{x^{,i}}{x^{r}}\pdv{x^{,j}}{x^{s}}\dots \pdv{x^{,n}}{x^{w}} \text{ and } T^{r,s,\dots w}= T^{,i,j,\dots ,n} \pdv{x^{r}}{x^{,i}}\pdv{x^{s}}{x^{,j}}\dots \pdv{x^{w}}{x^{,n}}$$
+Using the same reasoning as in (1) to (2) we need
+$$\pdv{x^{,i}}{x^{r}}\pdv{x^{,j}}{x^{s}}\dots \pdv{x^{,n}}{x^{w}} =\pdv{x^{r}}{x^{,i}}\pdv{x^{s}}{x^{,j}}\dots \pdv{x^{w}}{x^{,n}}$$
+As the conclusion (18) is independent of the order of the tensor, it is obvious that the above equality yields. Hence, the answer is YES.
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p16-exercise}
+
+\begin{tcolorbox}
+In a space of 4 dimensions, the tensor $A_{rst}$ is skew-symmetric in the last pair of suffixes. Show that only 24 of the 64 components may be chosen arbitrarily. If the further condition
+$A_{rst} + A_{str}+A_{trs} =0$
+is imposed, show that that only 20 components may be chosen arbitrarily.
+
+\end{tcolorbox}
+We have, as A is skew-symmetric in the last pair of suffixes
+$$A_{rst} = -A_{rts}  \Rightarrow s=t \text{: } A_{rst} = 0 $$
+So, for each r (4 possible choices as N = 4) we have 4x4/2 - 4 = 6 degrees of freedom. [we have the term 4x4/2  as the tensor is (skew-)symmetric, e.g. once we choose element $a_{12}$, then $a_{21}$ is also known. The term -4 takes into account the diagonal element which are 0 and thus cannot be chosen.]\\
+So, we have 4x6 = 24 degrees of freedom.\\
+What about the supplementary constraint $A_{rst} + A_{str}+A_{trs} =0 $       :\\
+Consider the two possible excluding cases:\\
+
+i) $r=s\neq t \text{ (}\Leftrightarrow r=t\neq s \text{)}$\\
+This case gives - without the additional constraint (1) -  4x(4x3/2-4) = 8 degrees of freedom.
+Does the constraint (1) reduces this degree of freedom?\\
+We have, 
+\begin{align}
+\ A_{rst} + A_{str}+A_{trs} =0\\
+\Rightarrow \underbrace{A_{rrt} + A_{rtr}}_\text{= 0 (non-diagonal terms)} + \underbrace{A_{trr}}_\text{= 0 (diagonal terms)} =0
+\end{align}
+So, no additional constraints are added by (1) to the restriction i) and the DOF remains 8.\\
+
+ii) $t \neq r\neq s\neq t$\\
+This case means that we have to choose a set of 3 elements out of 4 elements without repetition. This a \textit{variation} of 3 elements out of 4.
+$$V^n_{k} = \frac{n!}{(n-k)!} \text{ giving } V^4_{3} = \frac{4!}{(4-3)!} = 24 $$
+The constraint (1) gives us 24 equations but as  $A_{rst} = -A_{rts}$ only 12 equations have to be considered. So, with the  additional constraints the DOF becomes 24-12 = 12.\\
+As i) and ii) are independent and excluding events we can add the DOF of both events and we get 8+12 = 20 DOF.
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p16-exercise}
+
+\begin{tcolorbox}
+If $A^{rs}$ is skew-symmetric and $B_{rs}$ is symmetric, prove that $A^{rs}B_{rs} = 0$. Hence show that the quadratic form $a_{ij}x^ix^j$ is unchanged if $a_{ij}$ is replaced by its symmetric part.
+\end{tcolorbox}
+We can split the summation $A^{rs}B_{rs}$ in three subsummations:
+\begin{align}
+\ A^{rs}B_{rs}  = &A^{rs}B_{rs} \vert_{r=s} \\
+\ + &A^{rs}B_{rs}\vert_{r>s} \\
+\ + &A^{rs}B_{rs}\vert_{r<s}
+\end{align}
+We have:\\
+(1) = 0 as $A^{kk} = 0$ (skew-symmetric)\\
+(2)+(3) = $A^{rs}B_{rs}\vert_{r>s} \ + A^{rs}B_{rs}\vert_{r<s}$\\
+As $A^{rs} = -A^{sr}$ and $B^{rs} = B^{sr}$ we can write (2)+(3) as :
+$$A^{rs}B_{rs}\vert_{r>s} \ + (-A^{sr})B_{sr}\vert_{r>s} = 0$$
+So, $A^{rs}B_{rs} = 0$\\\\
+Consider the quadratic form $\phi = a_{ij}x^ix^j$\\
+Be $A_{ij} = (a_{ij})$ and $B_{ij} = (x^ix^j)$, then it is obvious that $B_{ij}$ is symmetric and that $C_{ij} = -A_{ij}$ is the form where $-a_{ij}$ is replaced by its symmetric part (skew-symmetric).
+Hence $\phi = a_{ij}x^ix^j =a_{ij}b^{ij}= 0$ and so is $\phi = c_{ij}b^{ij}= 0$ 
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p18-exercise}
+
+\begin{tcolorbox}
+What are the values (in a space of N dimensions) of the folllowing contractions formed from the Kronecker delta?
+$$\delta^{m}_{m},  \delta^{m}_{n} \delta^{n}_{m},  \delta^{m}_{n} \delta^{n}_{r} \delta^{r}_{m}$$
+\end{tcolorbox}
+We can split the summation $A^{rs}B_{rs}$ in three subsummations:
+\begin{align}
+\delta^{m}_{m} = N\\
+\delta^{m}_{n} \delta^{n}_{m} = \delta^{m}_{m} = N\\
+\delta^{m}_{n} \delta^{n}_{r} \delta^{r}_{m} = \delta^{m}_{n} \delta^{n}_{m} = \delta^{m}_{m} = N
+\end{align}
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p19-exercise}
+\begin{tcolorbox}
+If $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors and $a_{rs}X^{r}Y^{s}$ is an invariant, then $a_{rs}$ are the components of a covariant tensor of the second order. 
+\end{tcolorbox}
+We have to prove that
+\begin{align}
+\ a^{,}_{rs} = a_{ij}\pdv{x^{i}}{x^{,r}}\pdv{x^{j}}{x^{,s}} \text{ or } a^{}_{ij} = a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}}
+\end{align}
+$a_{rs}X^{r}Y^{s}$ is an invariant, means
+\begin{align}
+\ a^{,}_{rs}X^{,r}Y^{,s} = a_{rs}X^{r}Y^{s}
+\end{align}
+As $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors, we have
+\begin{align}
+\ X^{,r} = X^{i}\pdv{x^{,r}}{x^{i}} \text{   and  } Y^{,s} = Y^{j}\pdv{x^{,s}}{x^{j}}
+\end{align}
+(3) in (2) gives
+\begin{align}
+\ a^{,}_{rs}X^{i}\pdv{x^{,r}}{x^{i}}Y^{j}\pdv{x^{,s}}{x^{j}} = a_{rs}X^{r}Y^{s}\\
+\Leftrightarrow a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}}X^{i}Y^{j} = a_{ij}X^{i}Y^{j}\\
+\Leftrightarrow (a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}} - a_{ij})X^{i}Y^{j} = 0
+\end{align}
+As $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors, we conclude that 
+\begin{align}
+\ a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}} - a_{ij} = 0\\
+\Leftrightarrow a_{ij} =  a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}} {x^{j}}
+\end{align}
+(8) = (1): OK
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p19-exercise}
+\begin{tcolorbox}
+If $X_{rs}$ is an arbitrary covariant tensor of the second order, and $A^{mn}_{r }X_{mn}$ is a covariant vector, then $A^{mn}_{r }$ has the mixed tensor character indicated by the positions of its suffixes 
+\end{tcolorbox}
+We have to prove that
+\begin{align}
+\ A^{,vw}_{r} = A^{mn}_k\pdv{x^{k}}{x^{,r}}\pdv{x^{,v}}{x^{m}}\pdv{x^{,w}}{x^{n}} 
+\end{align}
+We have
+\begin{align}
+\ P_{r} =A^{mn}_{r }X_{mn}
+\end{align}
+is a covariant vector
+\begin{align}
+\Rightarrow P^{,}_{r} =A^{mn}_{k }X_{mn}\pdv{x^{k}}{x^{,r}}
+\end{align}
+but $X_{mn}$ is a covariant tensor
+\begin{align}
+\Rightarrow X_{mn} = X^{,}_{ps}\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}
+\end{align}
+So (4) in (3) gives
+\begin{align}
+\ P^{,}_{r} =A^{mn}_{k }X^{,}_{ps}\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}\pdv{x^{k}}{x^{,r}}\\
+\Leftrightarrow P^{,}_{r} = \underbrace{A^{mn}_{k }\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}\pdv{x^{k}}{x^{,r}}}_\text{(*)}X^{,}_{ps}
+\end{align}
+Putting (*) as $ A^{,ps}_{r }= A^{mn}_{k }\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}\pdv{x^{k}}{x^{,r}}$ we see that (6) has the form (2) and that $A^{,ps}_{r }$ obeys the rule of a mixed tensor (1).
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p21-exercise}
+\begin{tcolorbox}
+If $A_{rs}$ is a skew-symmetric covariant tensor, prove that $B_{rst}$ defined as 
+$$B_{rst} = \partial_{r}{A_{st}} + \partial_{s}{A_{tr}} +\partial_{t}{A_{rs}} $$ is a covariant tensor, and that it is skew-symmetric in all pairs of suffixes.
+\end{tcolorbox}
+
+We have $A_{rs}$ is a covariant tensor
+\begin{align}
+\ A_{ij} &= A_{\alpha\beta}\pdv{x^{\alpha}}{x^{i}}\pdv{x^{\beta}}{x^{j}}\\
+\Rightarrow B_{rst} &= \partial_{r}{(A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}})} + \partial_{s}{(A_{\alpha\beta}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}})} +\partial_{t}{(A_{\alpha\beta}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}})}
+\end{align}
+Note that
+\begin{align}
+\partial_{k}{(A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}})} = 
+\partial_{k}{(A_{\alpha\beta})}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+
+\ A_{\alpha\beta}\partial_{k}{(\pdv{x^{\alpha}}{x^{s}})}\pdv{x^{\beta}}{x^{t}}+
+\ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}} \partial_{k}{(\pdv{x^{\beta}}{x^{t}})}\\
+\end{align}
+so, 
+\begin{align}
+\begin{array}{r c l}
+\ B_{rst} = \partial_{r}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+ \underbrace{A_{\alpha\beta}\partial_{r}{\pdv{x^{\alpha}}{x^{s}}}\pdv{x^{\beta}}{x^{t}}}_\text{*} +\underbrace{A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}\partial_{r}{\pdv{x^{\beta}}{x^{t}}}}_\text{**}\\ +
+\partial_{s}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}+\underbrace{A_{\alpha\beta}\partial_{s}{\pdv{x^{\alpha}}{x^{t}}}\pdv{x^{\beta}}{x^{r}}}_\text{***}+\underbrace{A_{\alpha\beta}\pdv{x^{\alpha}}{x^{t}}\partial_{s}{\pdv{x^{\beta}}{x^{r}}}}_\text{*}\\+
+\partial_{t}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}+A_{\alpha\beta}\underbrace{\partial_{t}{\pdv{x^{\alpha}}{x^{r}}}\pdv{x^{\beta}}{x^{s}}}_\text{**}+\underbrace{A_{\alpha\beta}\pdv{x^{\alpha}}{x^{r}}\partial_{t}{\pdv{x^{\beta}}{x^{s}}}}_\text{***}
+\end{array}
+\end{align}
+In (5) consider the two terms with (*) 
+\begin{align}
+\ T &= A_{\alpha\beta}\partial_{r}{\pdv{x^{\alpha}}{x^{s}}}\pdv{x^{\beta}}{x^{t}}+ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{t}}\partial_{s}{\pdv{x^{\beta}}{x^{r}}}\\
+& = A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}{x^{r}}\pdv{x^{\beta}}{x^{t}}+ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}{x^{s}}\\
+& = A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}{x^{r}}\pdv{x^{\beta}}{x^{t}}+ A_{\beta\alpha}\pdv{x^{\beta}}{x^{t}}\pdv{x^{\alpha}}{x^{r}}{x^{s}} \text{ (by renaming dummy variables)}
+\end{align}
+As $A_{ij} = - A_{ji}$ (skew-symmetric tensor), we get $T=0$. The same yields for the (**) and (***) terms. So, $B_{rst}$ reduces to
+\begin{align}
+\ B_{rst} = \partial_{r}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+ 
+\partial_{s}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}+
+\partial_{t}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}\\
+\Leftrightarrow \ B_{rst} = \pdv{A_{\alpha\beta}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{r}}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+ 
+\pdv{A_{\alpha\beta}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{s}}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}+
+\pdv{A_{\alpha\beta}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{t}}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}
+\end{align}
+By adequate renaming of the dummy variable in the 3 terms:
+$$  \left[ {\begin{array}{c}
+    1^{st} term \\
+    2^{nd} term  \\
+    3^{rd} term  
+  \end{array} } \right]
+\longrightarrow
+  \left[ {\begin{array}{ccc}
+    \gamma \to \alpha & \alpha \to \beta & \beta \to \gamma \\
+    \beta \to \alpha & \gamma \to \beta & \alpha \to \gamma \\
+    \alpha \to \alpha & \beta \to \beta & \gamma \to \gamma 
+  \end{array} } \right]
+$$
+we get
+\begin{align}
+\ B_{rst} = (\pdv{A_{\beta\gamma}}{x^{\alpha}}+\pdv{A_{\gamma\alpha}}{x^{\beta}}+\pdv{A_{\alpha\beta}}{x^{\gamma}})\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}\pdv{x^{\gamma}}{x^{t}}\\
+\Leftrightarrow  B_{rst} = (\underbrace{\partial_{\alpha}{A_{\beta\gamma}}+\partial_{\beta}{A_{\gamma\alpha}}+\partial_{\gamma}{A_{\alpha\beta}}}_\text{(****)})\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}\pdv{x^{\gamma}}{x^{t}}
+\end{align}
+The expression (****) has exactly the required form $B_{rst} = \partial_{r}{A_{st}} + \partial_{s}{A_{tr}} +\partial_{t}{A_{rs}} $ and is transformed (12) according the rules of a covariant tensor.\\
+Let's prove now that it is skew-symmetric in all pairs of suffixes.
+We have to consider the following permutations
+$$  \left[ {\begin{array}{c}
+    rst \\
+    rts\\
+    srt  \\
+    str\\  
+    trs \\
+    tsr
+  \end{array} } \right]$$
+  
+E.g. $srt$
+\begin{align}
+\ B_{rts} &= \partial_{r}{A_{ts}}+\partial_{t}{A_{sr}}+\partial_{s}{A_{rt}}\\
+&= -\partial_{r}{A_{st}}-\partial_{t}{A_{rs}}-\partial_{s}{A_{tr}}\\
+&= - B_{rst}
+\end{align}
+The same calculations can be done for the other permutations.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 1.}
+\begin{tcolorbox}
+In a $V_{4}$ there are two 2-spaces with equations
+$$x^r = f^r(u^1,u^2)\text{, }x^r = g^r(u^3,u^4) $$
+Prove that if these 2-spaces have a curve of intersection, then the determinal equation
+$$\left|\pdv{x^r}{u^s}\right| = 0$$
+is satisfied along the curve.
+\end{tcolorbox}
+Having a curve means that one of the parameters $u^i$ can be freely chosen while the other 3 are determined by the chosen parameter.\\
+We have,
+\begin{align}
+\left|\pdv{x^r}{u^s}\right| = \left| {\begin{array}{cccc}
+    \pdv{x^1}{u^1} & \pdv{x^1}{u^2} & \pdv{x^1}{u^3} & \pdv{x^1}{u^4}\\
+    \vdots & \vdots & \vdots & \vdots\\
+    \pdv{x^4}{u^1} & \pdv{x^4}{u^2} & \pdv{x^4}{u^3} & \pdv{x^4}{u^4}\\
+  \end{array} } \right|
+\end{align}
+Suppose we choose $u^4$ as parameter.
+This means $u^i = \phi^i(u^4)$ for i=1,2,3 and thus we can write
+\begin{align}
+\pdv{x^i}{u^4} &= \pdv{x^i}{u^j}\dv{\phi^j}{u^4}+ \pdv{x^i}{u^4}\quad\text{ with j=1,2,3} \quad\text{  i = 1,2,3,4}\\
+&\Rightarrow \pdv{x^i}{u^j}\dv{\phi^j}{u^4} = 0
+\end{align}
+This means that in (1) the three first columns a not linearly independent and thus have   $\left|\pdv{x^r}{u^s}\right| = 0$
+
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 2.}
+\begin{tcolorbox}
+In Euclidean space of three dimensions, write down the equations of transformation between rectangular Cartesian coordinates x, y, z and spherical polar coordinates $r$,$\theta$,$\phi$.\\
+Find the Jacobian of the transformation. Where is it zero or infinite?
+\end{tcolorbox}
+
+\begin{figure}[h]
+\centerline{\includegraphics[scale=.4]{spherical.jpg}}
+\end{figure}
+$$  \left\{ \begin{array}{c}
+    x= r\cos (\phi )\cos (\theta) \\
+     y= r\cos (\phi )\sin (\theta) \\
+      z= r\sin(\phi )
+  \end{array} \right\}$$
+Partial differentiating of (x,y,z) with respect to (r,$\phi$,$\theta$) gives the Jacobian
+\begin{align}
+\ J=
+\left| {\begin{array}{ccc}
+    \cos (\phi )\cos (\theta) & -r\sin (\phi )\cos (\theta) & -r\cos (\phi )\sin (\theta)\\
+    \cos (\phi )\sin (\theta) & -r\sin (\phi )\sin (\theta) & r\cos (\phi )\cos (\theta)\\
+    \sin (\phi ) & r\cos (\phi )& 0\\
+  \end{array} } \right|
+\end{align}
+
+\begin{eqnarray}
+\ J &=& \cos(\phi)\cos(\theta)(-r^{2})\cos^{2}(\phi)\cos(\theta))\\ &+& r\sin(\phi) \cos(\theta)(-r\cos(\phi)\cos(\theta)\sin(\phi)) \\&-& r\cos(\phi)\sin(\theta)(r\cos^{2}(\phi)\sin(\theta)+r\sin^{2}(\phi)\sin(\theta))\\
+&=& -r^{2}\cos^{3}(\phi)\cos^{2}(\theta)
+-r^{2}\sin^{2}(\phi)\cos^{2}(\theta)\cos(\phi)-r^{2}\cos(\phi)\sin^{2}(\theta)
+\end{eqnarray}
+
+
+
+Noting that the $2^{nd}$ term in (5) can be written as $-r^{2}\cos^{2}(\theta)\cos(\phi)+r^{2}\cos^{2}(\theta)\cos^{3}(\phi)$, we get
+\begin{align}
+\ J &=  -r^{2}(\cos^{3}(\phi)\cos^{2}(\theta)+\cos^{2}(\theta)\cos(\phi)-\cos^{3}(\phi)\cos^{2}(\theta)+\cos(\phi)\sin^{2}(\theta))\\
+\ &= -r^{2}\cos(\phi)
+\end{align}
+$$\medblackdiamond$$
+\pagebreak[4]

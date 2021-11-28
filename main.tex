@@ -1,0 +1,53 @@
+\documentclass{ut-thesis}
+
+\usepackage[utf8]{inputenc} 
+\usepackage{fdsymbol}
+\usepackage{amsmath}
+\usepackage{tensor}
+\usepackage[italicdiff]{physics}
+%\usepackage{mathtools}
+
+\usepackage{tcolorbox}
+\usepackage{chngcntr}
+\usepackage{titlesec}
+\usepackage {graphicx} 
+%\newcommand{\edal}{\end{align}}
+%\newcommand{\bgal}{\begin{align}}
+\counterwithin*{equation}{chapter}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\renewcommand{\theequation}{\arabic{equation}}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Huge}
+  
+\titlespacing*{\chapter}{0pt}{50pt}{*2}
+
+\author{Bernard Carrette}
+\gradyear{2020}
+\title{Tensor Calculus\\J.L. Synge and A.Shild (Dover Publication)\\ Solutions to exercices}
+\begin{document}
+\maketitle
+
+\section*{Remarks and warnings}
+\section*{Some notation conventions}
+\begin{center}
+\begin{tabular}{ c c  }
+$\partial_ra_{mn}\equiv \pdv{a_{m n}}{x^r}$ & \\\\
+$\Gamma^r_{mn} \equiv 
+\begin{Bmatrix}
+r\\
+m n\\
+\end{Bmatrix}$ & Christoffel symbol of the second kind\\\\
+
+\end{tabular}
+\end{center}
+
+\tableofcontents
+
+\include{chapter1}
+%\include{chapter2}
+%\include{chapter3}
+%\include{chapter4}
+%\include{chapter5}
+\end{document}
