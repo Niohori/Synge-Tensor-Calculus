@@ -688,3 +688,207 @@ As we have a contravariant tensor field :
     
     $$\medblackdiamond$$
 \pagebreak[4]
+
+\section{p24-exercise 7.}
+\begin{tcolorbox}
+Given that if $T_{mnrs}$ is a covariant tensor, and 
+$$ T_{mnrs}+T_{mnsr} = 0$$ in a coordinate system $x^{p}$, establish directly that $$ T^{,}_{mnrs}+T^{,}_{mnsr} = 0$$ in any other coordinate system $x{,q}$.
+\end{tcolorbox}
+Note: in the following, different alphabets in the indices indicates different coordinate systems.
+As we $T_{mnrs}$ is a covariant tensor :
+\begin{align}
+\ T_{\alpha\beta\gamma\delta} &=  T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\gamma}}\pdv{x^{s}}{x^{\delta}}\\
+\Rightarrow T_{\alpha\beta\gamma\delta}+T_{\alpha\beta\delta\gamma} &= T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\gamma}}\pdv{x^{s}}{x^{\delta}}+ T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\delta}}\pdv{x^{s}}{x^{\gamma}}
+\end{align}
+Now, swap the dummy indices r and s in the second term on the right and as $T_{mnrs} = - T_{mnsr}$:
+\begin{align}
+\ T_{\alpha\beta\gamma\delta}+T_{\alpha\beta\delta\gamma} &= T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\gamma}}\pdv{x^{s}}{x^{\delta}}+ T_{mnsr}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{s}}{x^{\delta}}\pdv{x^{r}}{x^{\gamma}}\\
+&= (T_{mnrs}+ T_{mnsr})\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{s}}{x^{\delta}}\pdv{x^{r}}{x^{\gamma}}\\&=0
+\end{align}
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p24-exercise 8.}
+\begin{tcolorbox}
+Prove that if $A_{r}$ is a covariant vector, then $\pdv{A_{r}}{x^{s}} - \pdv{A_{s}}{x^{r}}$ is a skew-symmetric covariant tensor of the second order (use the notation of 1.7).
+\end{tcolorbox}
+Be $B_{rs} = \pdv{A_{r}}{x^{s}} - \pdv{A_{s}}{x^{r}}$.\\
+i) $B_{rs}$ is skew-symmetric:
+It is obvious that:$$-B_{rs} = -\pdv{A_{r}}{x^{s}} + \pdv{A_{s}}{x^{r}} = \pdv{A_{s}}{x^{r}}-\pdv{A_{r}}{x^{s}}\equiv B_{sr}$$
+ii)  $B_{rs}$ is covariant:\\
+\textit{Note: in the following, different alphabets in the indices indicates different coordinate systems.}\\
+Let 
+\begin{align}
+\ C_{\alpha\beta} = (\partial_sA_r - \partial_rA_s)X^r_{\alpha}X^s_{\beta}. 
+\end{align}
+We know that $A_i= A_{\gamma}X^{\gamma}_i$  as $A_i$ is covariant. Hence,
+\begin{align}
+\partial_jA_i &= \partial_j A_{\gamma} X^{\gamma}_i + A_{\gamma}\partial_jX^{\gamma}_i\\
+\ &= \partial_{\alpha} A_{\gamma} X^{\alpha}_j X^{\gamma}_i + A_{\gamma}\partial_jX^{\gamma}_i
+\end{align}
+Using (3), we compute the first term in (1)
+\begin{align}
+\partial_sA_rX^r_{\alpha}X^s_{\beta}&=  \partial_{\rho} A_{\gamma} X^{\rho}_s X^{\gamma}_rX^r_{\alpha}X^s_{\beta}+A_{\gamma}\partial_sX^{\gamma}_rX^r_{\alpha}X^s_{\beta}\\
+\ &=  \partial_{\rho} A_{\gamma} X^{\rho}_{\beta} X^{\gamma}_{\alpha}+A_{\gamma}\partial_sX^{\gamma}_rX^r_{\alpha}X^s_{\beta}\\
+\ &=  \partial_{\rho} A_{\gamma} \delta^{\rho}_{\beta} \delta^{\gamma}_{\alpha}+A_{\gamma}\partial_sX^{\gamma}_rX^r_{\alpha}X^s_{\beta}\\
+\ &=  \partial_{\beta} A_{\alpha} +A_{\gamma}\partial_sX^{\gamma}_rX^r_{\alpha}X^s_{\beta}
+\end{align}
+In the same way, we get for the second term in (1)
+\begin{align}
+\partial_rA_sX^s_{\alpha}X^r_{\beta} &=  \partial_{\alpha} A_{\beta} + A_{\gamma}\partial_rX^{\gamma}_sX^r_{\alpha}X^s_{\beta}
+\end{align}\\
+And thus,
+\begin{align}
+\ C_{\alpha\beta} =(\partial_sA_r - \partial_rA_s)X^r_{\alpha}X^s_{\beta} &=\partial_{\beta} A_{\alpha} +A_{\gamma}\partial_sX^{\gamma}_rX^r_{\alpha}X^s_{\beta} - \partial_{\alpha} A_{\beta} - A_{\gamma}\partial_rX^{\gamma}_sX^r_{\alpha}X^s_{\beta}\\
+\ \Rightarrow \partial_{\beta} A_{\alpha}  - \partial_{\alpha} A_{\beta} &=  (\partial_sA_r - \partial_rA_s)X^r_{\alpha}X^s_{\beta}
+\end{align}
+So, i) and (10) proves that $\pdv{A_{r}}{x^{s}} - \pdv{A_{s}}{x^{r}}$ is skew-symmetric tensor of the second order.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p24-exercise 9.}
+\begin{tcolorbox}
+Let $x^r, \overline{x}^r, y^r,\overline{y}^r $ be four systems of coordinates. Examine the tensor character of $\pdv{x^r}{y^s}$ with respect to the following transformations:\\
+i) A transformation $x^r = f^r(\overline{x}^1,\dots,\overline{x}^N)$, with $y^r$ unchanged;\\
+ii) A transformation $y^r = g^r(\overline{y}^1,\dots,\overline{y}^N)$, with $x^r$ unchanged;
+\end{tcolorbox}
+\textit{Note: in the following, different alphabets in the indices indicates different coordinate systems.}\\\\
+%Be $A(r,s) = \pdv{x^r}{y^s}$.\\
+i) Let's compute the expression $A(\alpha, \beta) = \pdv{x^r}{y^s}\pdv{x^{\alpha}}{x^r}\pdv{x^s}{x^{\beta }}$. Obviously, the right side is an expression of a (possible) mixed tensor of the second order ($\pdv{x^r}{y^s}$) under transformation from the (r) coordinate system to the ($\alpha$) coordinate system. Then, 
+\begin{align}
+\ A(\alpha, \beta) &= \pdv{x^r}{y^s}\pdv{x^{\alpha}}{x^r}\pdv{x^s}{x^{\beta }}\\
+&= \pdv{x^{\alpha}}{y^s}\pdv{x^s}{x^{\beta }}\\
+&= \pdv{x^{\alpha}}{y^{\rho}}\pdv{y^{\rho }}{y^s}\pdv{x^s}{x^{\beta }}
+\end{align}
+If we consider the $\overline{y}^r$ coordinate system as the $y^{\rho }$ coordinate system and as $\overline{y}^r = y^r$ then $\pdv{y^{\rho }}{y^s} = \delta^{\rho}_s$ and we get from (3)
+\begin{align}
+\ A(\alpha, \beta) &= \pdv{x^{\alpha}}{y^{\rho}}\pdv{y^{\rho }}{y^s}\pdv{x^s}{x^{\beta }}\\
+\ &= \pdv{x^{\alpha}}{y^{\rho}}\delta^{\rho}_{s}\pdv{x^s}{x^{\beta }}\\
+\ &= \pdv{x^{\alpha}}{y^{\rho}}\pdv{x^{\rho}}{x^{\beta }}\\
+\ &= \pdv{x^{\alpha}}{y^{\rho}}\delta^{\rho}_{\beta }\\
+\ &= \pdv{x^{\alpha}}{y^{\beta}}\\
+\text{(1) and (8)   } \Rightarrow \pdv{x^{\alpha}}{y^{\beta}} &= \pdv{x^r}{y^s}\pdv{x^{\alpha}}{x^r}\pdv{x^s}{x^{\beta }}
+\end{align}
+So $A(r,s) = \pdv{x^r}{y^s}$ is a mixed tensor of type $A_s^r$\\\\
+ii) Let's compute the expression $A(\alpha, \beta) = \pdv{x^r}{y^s}\pdv{y^{\alpha}}{y^r}\pdv{y^s}{y^{\beta }}$. Obviously, the right side is an expression of a (possible) mixed tensor of the second order ($\pdv{x^r}{y^s}$) under transformation from the (r) coordinate system to the ($\alpha$) coordinate system. Then, 
+\begin{align}
+\ A(\alpha, \beta) &= \pdv{x^r}{y^s}\pdv{y^{\alpha}}{y^r}\pdv{y^s}{y^{\beta }}\\
+&= \pdv{x^r}{y^{\rho}}\pdv{y^{\rho}}{y^s}\pdv{y^{\alpha}}{y^r}\pdv{y^s}{y^{\beta }}\\
+&= \pdv{x^r}{y^{\rho}}\pdv{y^{\rho}}{y^{\beta}}\pdv{y^{\alpha}}{y^r}\\
+&= \pdv{x^r}{y^{\rho}}\delta^{\rho}_{\beta}\pdv{y^{\alpha}}{y^r}\\
+&= \pdv{x^r}{y^{\beta}}\pdv{y^{\alpha}}{y^r}\\
+&= \pdv{x^r}{x^{\sigma}}\pdv{x^{\sigma}}{y^{\beta}}\pdv{y^{\alpha}}{y^r}
+\end{align}
+If we consider the $\overline{x}^r$ coordinate system as the $x^{\sigma }$ coordinate system and as $\overline{x}^r = x^r$ then $\pdv{x^{\sigma }}{x^r} = \delta^{\sigma}_r$ and we get from (15)
+\begin{align}
+\ A(\alpha, \beta) &= \pdv{x^r}{x^{\sigma}}\pdv{x^{\sigma}}{y^{\beta}}\pdv{y^{\alpha}}{y^r}\\
+\ &= \delta^r_{\sigma}\pdv{x^{\sigma}}{y^{\beta}}\pdv{y^{\alpha}}{y^r}\\
+\ &= \pdv{x^{\sigma}}{y^{\beta}}\pdv{y^{\alpha}}{y^{\sigma}}\\
+\ &= \pdv{x^{\sigma}}{y^{\beta}}\delta^{\alpha}_{\sigma}\\
+\ &= \pdv{x^{\alpha}}{y^{\beta}}\\
+\text{(10) and (19)   } \Rightarrow \pdv{x^{\alpha}}{y^{\beta}} &= \pdv{x^r}{y^s}\pdv{y^{\alpha}}{y^r}\pdv{y^s}{y^{\beta }}
+\end{align}
+So $A(r,s) = \pdv{x^r}{y^s}$ is a mixed tensor of type $A_s^r$
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 10.}
+\begin{tcolorbox}
+If $x^r, y^r, z^r$ are three systems of coordinates, prove the follwoing rule for the multiplication of Jacobians.
+$$\left|\pdv{x^m}{y^n}\right|\left|\pdv{y^r}{z^s}\right| = \left|\pdv{x^t}{z^u}\right|$$
+\end{tcolorbox}
+ As we have  
+\begin{align}
+\pdv{x^t}{z^u} &=\pdv{x^t}{y^k} \pdv{y^k}{z^u}\\
+ \left[ { \begin{array}{ccc}
+   \ \pdv{x^1}{z^1} & \dots & \pdv{x^1}{z^N}\\
+   \vdots & \vdots & \vdots\\
+    \pdv{x^N}{z^1} & \dots & \pdv{x^N}{z^N}\\
+  \end{array}} \right] &= \left[ { \begin{array}{ccc}
+   \ \pdv{x^1}{y^k}\pdv{y^k}{z^1} & \dots & \pdv{x^1}{y^k}\pdv{y^k}{z^N}\\
+   \vdots & \vdots & \vdots\\
+    \pdv{x^N}{y^k}\pdv{y^k}{z^1}& \dots & \pdv{x^N}{y^k}\pdv{y^k}{z^N}\\
+  \end{array}} \right]\\
+  &= \left[ { \begin{array}{ccc}
+   \ \pdv{x^1}{y^1}& \dots & \pdv{x^1}{y^N}\\
+   \vdots & \vdots & \vdots\\
+    \pdv{x^N}{y^1}& \dots & \pdv{x^N}{y^k}\\
+  \end{array}} \right]\left[ { \begin{array}{ccc}
+   \ \pdv{y^1}{z^1} & \dots & \pdv{y^1}{z^N}\\
+   \vdots & \vdots & \vdots\\
+    \pdv{y^N}{z^1}& \dots & \pdv{y^N}{z^N}\\
+  \end{array}} \right]\\
+  \ & \Rightarrow \left|\pdv{x^m}{y^n}\right|\left|\pdv{y^r}{z^s}\right| = \left|\pdv{x^t}{z^u}\right|
+  \end{align}
+$$\medblackdiamond$$
+\pagebreak[4]
+
+
+\section{p23-exercise 11.}
+\begin{tcolorbox}
+Prove that with respect to transformations $$ x^{,r} = C_{rs}x^s$$ where the coefficients are constants satisfying $$C_{mr}C_{ms} = \delta^r_s$$ contravariant and covariant vectors have the same formula of transformation $$ A^{,r} = C_{rs}A^{s} \text{, } A_{,r} = C_{rs}A_{s} $$
+\end{tcolorbox}
+ i) $ A^{,r} = C_{rs}A^{s}$\\
+ 
+ Be $ A^{,r} = A^{s}\pdv{x^{,r}}{x^s}$ and as $x^{,r} = C_{rs}x^{s}$  we have $\pdv{x^{,r}}{x^s} = C_{rs}$. Hence,$$ A^{,r} = C_{rs}A^{s}$$.\\\\
+ i) $ A_{,r} = C_{rs}A_{s}$\\
+ Be $ A_{,r} = A_{s}\pdv{x^{s}}{x^{,r}}$ and as $x^{,r} = C_{rs}x^{s}$  we have
+\begin{align}
+\pdv{x^{,r}}{x^{,t}} &= C_{rs}\pdv{x^{s}}{x^{,t}}\\
+\Rightarrow \delta^{r}_{t} &= C_{rs}\pdv{x^{s}}{x^{,t}}
+  \end{align}
+  Now, multiply (2) by $C_{rq}$. We get,
+  \begin{align}
+ \delta^{r}_{t}C_{rq} &= C_{rq}C_{rs}\pdv{x^{s}}{x^{,t}}\\
+ \ C_{tq} &= C_{rq}C_{rs}\pdv{x^{s}}{x^{,t}}\\
+ \text{as }C_{mr}C_{ms} = \delta^r_s \Rightarrow \quad \quad  C_{tq} &= \delta^q_s\pdv{x^{s}}{x^{,t}}\\
+ \Rightarrow   C_{tq} &= \pdv{x^{q}}{x^{,t}} \text{  or  }  C_{rs} = \pdv{x^{s}}{x^{,r}}\\
+ \text{  as  } A_{,r} = A_{s}\pdv{x^{s}}{x^{,r}} \Rightarrow A_{,r} &= C_{rs}\pdv{x^{s}}{x^{,r}}
+  \end{align}
+$$\medblackdiamond$$
+\pagebreak[4]
+
+
+\section{p23-exercise 12.}
+\begin{tcolorbox}
+Prove that $$\pdv{ln\left|\pdv{x^m}{y^n}\right|}{x^r} =\pdv{y^m}{x^r}{x^n}\pdv{x^n}{y^m}$$.
+\end{tcolorbox}
+Lemma:\\
+Be $A$ a square matrix $NxN$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. \\Define $A^{,}$ as $(A^,_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^, = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
+Proof:\\
+By definition of the determinant, we have
+\begin{align}
+\left|A\right| = A_{iK}C_{K}^i \quad \text{ (no summation on K!)}
+\end{align}
+with $(C_{K}^i) =  (-1)^{i+K}M^{i}_K$ being the cofactor  of element $A_{iK}$ and $M^{i}_K$ the minor (N-1)x(N-1) matrix associated with the cofactor $A_{K^i}$. Be $C = (C_{ij})$ the NxN matrix formed with all posssible cofactor elements  $C_{j}^i \text{  }(i,j = 1 \dots,N)$.\\
+We have 
+\begin{align}
+\ A^{-1} &= \frac{C^T}{\left|A\right|}\\
+\Rightarrow (A^{-1})^T &= \frac{C}{\left|A\right|} \\
+\text{differentiating (1) }\Rightarrow \pdv{\left|A\right|}{A_{mn}} &= \pdv{A_{iK}}{A_{mn}}C^i_K +A_{iK} \pdv{C^i_K}{A_{mn}}\\
+\text{we have for i = m } & \begin{array}{c}
+    \pdv{A_{iK}}{A_{mn}} = 1\quad K=n\\
+    \pdv{A_{iK}}{A_{mn}} = 0\quad K \neq n\\
+  \end{array}
+\end{align}
+Also, $\forall K: \pdv{C^i_K}{A_{in}} = 0 $ as by definition of the cofactor matrix, $A_{ij} $ is not contained in $C_{ij} $.Hence, (4) becomes
+\begin{align}
+\pdv{\left|A\right|}{A_{ij}} &= C^i_j\\
+\text{But,}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{\pdv{\left|A\right|}{A_{ij}}}{\left|A\right|}\\
+\text{(6) and  (7) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{C^i_j}{\left|A\right|}\\
+\text{(3) and  (8) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{(A^{-1}_{ij})^T \left|A\right|}{\left|A\right|} = (A^{-1}_{ij})^T \\
+\Rightarrow (ln\left|A\right|)^, &= (A^{-1})^T
+\end{align}\\\\
+Now the main proof:\\
+Let, 
+\begin{align}
+\ A \equiv \left[ a_{mn}\right] &= \left[ \pdv{y^m}{x^n}\right]\\
+\Rightarrow \pdv{ln\left|A\right|}{x^r} &= \sum_{m,n = 1}^{N,N} \pdv{ln\left|A\right|}{a_{mn}}\pdv{a_{mn}}{x^r}\\
+\text{from (10) we get }\quad \pdv{ln\left|A\right|}{a_{mn}} &= (A^{-1})^T_{mn}\\
+\text{But A is a Jacobian, so } (A^{-1})_{mn} &= \pdv{x^m}{y^n}\\
+\text{ and thus  }(A^{-1})^T_{mn} &=  \pdv{x^n}{y^m}\\
+\text{(13) can be written as }  \pdv{ln\left|A\right|}{x^r} &=  \sum_{m,n = 1}^{N,N} \pdv{x^n}{y^m}\pdv{a_{mn}}{x^r}\\
+\Rightarrow \pdv{ln\left|A\right|}{x^r} &=  \sum_{m,n = 1}^{N,N} \pdv{x^n}{y^m}\pdv{y^m}{x^r}{x^n}
+\end{align}
+$$\medblackdiamond$$
+\pagebreak[4]
