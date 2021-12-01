@@ -860,7 +860,7 @@ By definition of the determinant, we have
 \begin{align}
 \left|A\right| = A_{iK}C_{K}^i \quad \text{ (no summation on K!)}
 \end{align}
-with $(C_{K}^i) =  (-1)^{i+K}M^{i}_K$ being the cofactor  of element $A_{iK}$ and $M^{i}_K$ the minor (N-1)x(N-1) matrix associated with the cofactor $A_{K^i}$. Be $C = (C_{ij})$ the NxN matrix formed with all posssible cofactor elements  $C_{j}^i \text{  }(i,j = 1 \dots,N)$.\\
+with $(C_{K}^i) =  (-1)^{i+K}M^{i}_K$ being the cofactor  of element $A_{iK}$ and $M^{i}_K$ the minor (N-1)x(N-1) matrix associated with the cofactor $A_{K^i}$. Be $C = (C_{ij})$ the NxN matrix formed with all possible cofactor elements  $C_{j}^i \text{  }(i,j = 1 \dots,N)$.\\
 We have 
 \begin{align}
 \ A^{-1} &= \frac{C^T}{\left|A\right|}\\
@@ -871,7 +871,8 @@ We have
     \pdv{A_{iK}}{A_{mn}} = 0\quad K \neq n\\
   \end{array}
 \end{align}
-Also, $\forall K: \pdv{C^i_K}{A_{in}} = 0 $ as by definition of the cofactor matrix, $A_{ij} $ is not contained in $C_{ij} $.Hence, (4) becomes
+Also, $\forall K: \pdv{C^i_K}{A_{in}} = 0 $ as by definition of the cofactor matrix, $A_{ij} $ is not contained in $C_{ij} $.\\
+Hence, (4) becomes
 \begin{align}
 \pdv{\left|A\right|}{A_{ij}} &= C^i_j\\
 \text{But,}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{\pdv{\left|A\right|}{A_{ij}}}{\left|A\right|}\\
@@ -883,12 +884,193 @@ Now the main proof:\\
 Let, 
 \begin{align}
 \ A \equiv \left[ a_{mn}\right] &= \left[ \pdv{y^m}{x^n}\right]\\
-\Rightarrow \pdv{ln\left|A\right|}{x^r} &= \sum_{m,n = 1}^{N,N} \pdv{ln\left|A\right|}{a_{mn}}\pdv{a_{mn}}{x^r}\\
+\Rightarrow \pdv{ln\left|A\right|}{x^r} &= \pdv{ln\left|A\right|}{a_{mn}}\pdv{a_{mn}}{x^r}\\
 \text{from (10) we get }\quad \pdv{ln\left|A\right|}{a_{mn}} &= (A^{-1})^T_{mn}\\
 \text{But A is a Jacobian, so } (A^{-1})_{mn} &= \pdv{x^m}{y^n}\\
 \text{ and thus  }(A^{-1})^T_{mn} &=  \pdv{x^n}{y^m}\\
-\text{(13) can be written as }  \pdv{ln\left|A\right|}{x^r} &=  \sum_{m,n = 1}^{N,N} \pdv{x^n}{y^m}\pdv{a_{mn}}{x^r}\\
-\Rightarrow \pdv{ln\left|A\right|}{x^r} &=  \sum_{m,n = 1}^{N,N} \pdv{x^n}{y^m}\pdv{y^m}{x^r}{x^n}
+\text{(13) can be written as }  \pdv{ln\left|A\right|}{x^r} &=  \pdv{x^n}{y^m}\pdv{a_{mn}}{x^r}\\
+\Rightarrow \pdv{ln\left|A\right|}{x^r} &=  \pdv{x^n}{y^m}\pdv{y^m}{x^r}{x^n}
 \end{align}
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 13.}
+\begin{tcolorbox}
+Consider the quantities $\dv{x^r}{t}$ for a particle moving in the plane. If $x^r$ are the rectangular Cartesian coordinates, are these quantities the components of a contravariant or covariant vector with respect to rotation of the axes? Are they components of a vector with respect to transformation to any curvilinear coordinates (e.g. polar coordinates)?
+\end{tcolorbox}
+Note: we suppose that by a rotation of the axes, the problem means a fixed rotation and not a rotation varying in time.\\\\
+ i) Be $v^{r} = \dv{x^r}{t}$ and consider $v^{\alpha}$  the same object but in another the coordinate system.
+ A rotation of the axes implies the linear form
+ \begin{align}
+ \ &x^{\alpha} = R^{\alpha }_k x^k \quad \text{ with } R^{\alpha }_k \neq R^{\alpha }_k (x^k)\\
+ \Rightarrow\quad  & \pdv{x^{\alpha}}{x^r} = R^{\alpha }_k \delta^k_r \\
+ \Rightarrow\quad  & R^{\alpha }_r  = \pdv{x^{\alpha}}{x^r} 
+ \end{align}
+ Consider $v^{\alpha} = \dv{x^{\alpha}}{t}$
+ \begin{align}
+ v^{\alpha} &= \dv{x^{\alpha}}{t}\\
+ \text{(1)   }\Rightarrow\quad v^{\alpha} &= R^{\alpha }_k \dv{x^k}{t}\\
+ \Rightarrow\quad v^{\alpha} &= R^{\alpha }_k v^k\\
+ \text{(3)   }\Rightarrow\quad v^{\alpha} &= v^k\pdv{x^{\alpha}}{x^r} 
+ \end{align}
+ Conclusion: $v^k$ is a contravariant vector.\\\\
+ ii) Are they components of a vector with respect to transformation to any curvilinear coordinates (e.g. polar coordinates)?\\
+We know that 
+\begin{align}
+\ dx^{\alpha} = \pdv{x^{\alpha}}{x^r}dx^r\\
+\Rightarrow \quad \dv{x^{\alpha}}{t} = \pdv{x^{\alpha}}{x^r}\dv{x^r}{t}\\
+\Rightarrow \quad v^{\alpha} = v^r\pdv{x^{\alpha}}{x^r}
+\end{align}
+So $v^r$ is a contravariant vector in general. Note that this proof is more straightforward than the prove in i).
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 14.}
+\begin{tcolorbox}
+Consider the question raised in No. 13 for the acceleration $\dv[2]{x^r}{t}$.
+\end{tcolorbox}
+From exercise 13. we know that 
+
+ \begin{align}
+ \dv{x^{\alpha}}{t} &= \pdv{x^{\alpha}}{x^r}\dv{x^r}{t}\\ 
+ \Rightarrow\quad \dv[2]{x^{\alpha}}{t} &= \dv[2]{x^r}{t}\pdv{x^{\alpha}}{x^r}+ \dv{\pdv{x^{\alpha}}{x^r}}{t}\dv{x^r}{t}\\ 
+ &= \dv[2]{x^r}{t}\pdv{x^{\alpha}}{x^r}+ \pdv{x^{\alpha}}{x^r}{x^m}\dv{x^m}{t}\dv{x^r}{t} 
+ \end{align}
+ The second term on the right does not vanish in general, hence $\dv[2]{x^r}{t}$ has not a tensor character.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 15.}
+\begin{tcolorbox}
+It is well known that the equation of an ellipse may be written $$ ax^2+2hxy+by^2 =1$$
+What is the tensor character of $a,h, b$ with respect to transformation to any Cartesian coordinates (rectangular or oblique) in the plane?
+\end{tcolorbox}
+Consider the transformation from a $(w,z)$ coordinate system to a $(x,y)$ coordinate system. For the considered type of transformation we have
+\begin {align}
+\begin{array}{c}
+\ x = \alpha w + \beta z\\
+\ y = \gamma w + \delta z\\
+  \end{array}\\
+\text{consider}\quad \begin{array}{c}
+\ ax^2+2hxy+by^2 =1\\
+\ pw^2+2qwz+rz^2 =1
+  \end{array}
+\end{align}
+the two representations of the same ellipse in the respective coordinate systems. Plugging (1) in (2):
+\begin {align}
+%\text{(2)}\quad \Rightarrow\quad ax^2+2hxy+by^2 = pw^2+2qwz+rz^2\\
+\ a\alpha^2 w^2 + a 2 \alpha \beta w z + \alpha \beta^2 z^2 +2h \alpha \gamma w^2 +\beta \delta z^2+2h(\alpha \delta + \gamma \beta) w z + b \gamma^2 w^2 + 2 b \gamma \delta w z +\delta^2 z^2 b = 1\\
+\end{align}
+Rearranging and equating the terms in $w^2, wz, z^2$ in (2) gives
+\begin{align}
+\ p &= a \alpha^2 + 2 h \alpha \gamma + b \gamma^2\\
+\ q &=  a \alpha \beta + h(\alpha \delta + \gamma \beta) + \gamma d\\
+\ r &= a \beta^2 + 2 h \beta \delta +b \delta^2
+\end{align}
+Consider the following objects
+\begin {align}
+\ (A_{ij}) = \left[ { \begin{array}{cc}
+  \ a &  h\\
+  \ h   &b\\
+  \end{array}} \right] \\
+  \ (A_{ij})^{,} = \left[ { \begin{array}{cc}
+  \ a^{,}_{11} &  a^{,}_{12}\\
+  \ a^{,}_{21}  & a^{,}_{21}\\
+  \end{array}} \right] \\
+  \text{ we calculate}\quad A^{,}_{ij} = A_{km}\pdv{x^k}{x^{,i}}\pdv{x^m}{x^{,j}}
+\end{align}
+with $(x^{,1},x^{,2}) = (w, z)$ and $(x^{1},x^{2}) = (x, y)$. We have,
+\begin{align}
+\ \pdv{x^1}{x^{,1}} &= \alpha, \pdv{x^1}{x^{,2}} = \beta,\pdv{x^2}{x^{,1}} = \gamma,\pdv{x^2}{x^{,2}} = \delta\\
+\text{ (10) and (11)}\quad \Rightarrow\ &\begin{array}{c}
+  \ a^{,}_{11} = a \alpha^2 + 2 h \alpha \gamma + b \gamma^2 \\
+  \ a^{,}_{22} = a \beta^2 + 2 h \delta \beta + b \delta^2 \\
+  \ a^{,}_{12} = a^{,}_{21} =a \alpha \beta + h( \alpha \delta + \gamma \beta) + b \gamma \delta \\
+  \end{array}
+\end{align}
+Combining (5), (6), (7) and (12) we get $$ p = a^{,}_{11}, r = a^{,}_{22}, q =  a^{,}_{12} = a^{,}_{21}$$ and so (9) becomes $$  (A_{ij})^{,} = \left[ { \begin{array}{cc}
+  \ p &  q\\
+  \ q  & r\\
+  \end{array}} \right] \\$$
+Considering (10) we see that $\left[ { \begin{array}{cc}
+  \ a &  h\\
+  \ h   &b\\
+  \end{array}} \right] $ transforms to $\left[ { \begin{array}{cc}
+  \ p &  q\\
+  \ q  & r\\
+  \end{array}} \right]$ according the rules of a covariant tensor of order two.
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p23-exercise 16.}
+\begin{tcolorbox}
+Matter is distributed in a plane and $A,B,H$ are the moments and product of inertia with respect to rectangular aces $0xy$ in a plane. Examine the tensor character of the set of quantities $A,B,H$ under rotation of the axes. What notation would you suggest for moments and product of inertia in order to exhibit the tensor character? What simple invariant can be formed from $A,B,H$ ?
+\end{tcolorbox}
+Consider the transformation from a $(x^1,x^2)$ coordinate system to a $(y^1,y^2)$ coordinate system. For the considered type of transformation we have
+\begin {align}
+\begin{array}{c}
+\ y^1 = \alpha x^1 + \beta x^2\\
+\ y^2 = \gamma x^1 + \delta x^2\\
+  \end{array}\\
+  \text{Be }\quad  \begin{array}{c}
+  \ A = \sum_{\rho} m_{\rho} (x^{2,\rho})^2\\
+  \ B = \sum_{\rho} m_{\rho} (x^{1,\rho})^2\\
+  \ H = \sum_{\rho} m_{\rho} x^{1,\rho} x^{2,\rho}\\
+  \end{array}
+    \text{and}\quad  \begin{array}{c}
+  \ A^, = \sum_{\rho} m_{\rho} (y^{2,\rho})^2\\
+  \ B^, = \sum_{\rho} m_{\rho} (y^{1,\rho})^2\\
+  \ H^, = \sum_{\rho} m_{\rho} y^{1,\rho} y^{2,\rho}\\
+  \end{array}
+\end{align}
+the moments and product of inertia, $\rho$ being the index of summation over all the points with mass $m_{\rho}$.\\
+For the sake of notational simplicty we consider only one point of mass as the linearity of $A, B, H$ related to $\rho$ ensures the validity of the nexts steps for all points in the plane.\\
+From (1) and (2) we have:
+\begin {align}
+\ \frac{A^,}{m_{\rho}}  &= \gamma^2 (x^1)^2+2 \gamma \delta x^1 x^2 + \delta ^2 (x^2)^2\\
+\  \frac{B^,}{m_{\rho}}  &= \alpha^2 (x^1)^2+2 \alpha \beta x^1 x^2 + \beta ^2 (x^2)^2\\
+\  \frac{H^,}{m_{\rho}}  &= \alpha \gamma (x^1)^2 + (\gamma \beta + \alpha \delta) x^1 x^2 + \beta \delta (x^2)^2\\
+\text{Note that} \quad &\begin{array}{cc}
+  \pdv{y^1}{x^1} = \alpha & \pdv{y^1}{x^2} = \beta\\ 
+	\pdv{y^2}{x^1} = \gamma & \pdv{y^2}{x^2} = \delta\\ 
+  \end{array}\\
+  \text{(6) in  (4):}\quad &\frac{B^,}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  + 2 (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\
+  &=  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}
+\end{align}
+Repeating the same calculations for $\frac{A^,}{m_{\rho}}$ and $\frac{H^,}{m_{\rho}} $ gives:
+\begin {align}
+\begin{array}{c}
+\frac{A^,}{m_{\rho}} =  (x^1)^2\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  (x^1)(x^2)\pdv{y^2}{x^1}\pdv{y^2}{x^2} + (x^2)(x^1)\pdv{y^2}{x^2}\pdv{y^2}{x^1} + (x^2)^2\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\
+\frac{B^,}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\
+\frac{H^,}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^2}\pdv{y^2}{x^1} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^2}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^2}{x^2}
+  \end{array}
+\end{align}
+Now, define 
+\begin{align}
+(K_{ij}) = \left[ { \begin{array}{cc}
+  \ (x^1)^2 &  (x^1)(x^2)\\\\
+  \ (x^2)(x^1)  & (x^2)^2\\
+  \end{array}} \right] \quad \quad (K_{ij})^{,} = \left[ { \begin{array}{cc}
+  \ (y^1)^2 &  (y^1)(y^2)\\\\
+  \ (y^2)(y^1)  & (y^2)^2\\
+  \end{array}} \right]
+\end{align}
+ Then (9) can be written as
+ \begin {align}
+\begin{array}{c}
+\frac{A^,}{m_{\rho}} = (y^1)^2 =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
+\frac{B^,}{m_{\rho}} = (y^2)^2 =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
+\frac{H^,}{m_{\rho}} = (y^1)(y^2)  = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
+  \end{array}\\\\
+  \text{or}\quad \begin{array}{c}
+  \ K^{,11}  =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
+\ K^{,22} =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
+ \ K^{,12} = K^{,21} = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
+  \end{array}
+\end{align}
+So the object $(K_{ij})$ transforms according (13) like a contravariant second order tensor.\\
+
+Now, consider $|K_{ij}|$, obviously $|K_{ij}| = 0$, but so is also $|K_{,ij}|$.
+$$\Rightarrow\quad |K_{ij}| \text{ is an invariant under the considered transformation}$$. 
 $$\medblackdiamond$$
 \pagebreak[4]
