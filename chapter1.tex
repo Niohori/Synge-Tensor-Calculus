@@ -792,7 +792,7 @@ So $A(r,s) = \pdv{x^r}{y^s}$ is a mixed tensor of type $A_s^r$
 $$\medblackdiamond$$
 \pagebreak[4]
 
-\section{p23-exercise 10.}
+\section{p24-exercise 10.}
 \begin{tcolorbox}
 If $x^r, y^r, z^r$ are three systems of coordinates, prove the follwoing rule for the multiplication of Jacobians.
 $$\left|\pdv{x^m}{y^n}\right|\left|\pdv{y^r}{z^s}\right| = \left|\pdv{x^t}{z^u}\right|$$
@@ -824,7 +824,7 @@ $$\medblackdiamond$$
 \pagebreak[4]
 
 
-\section{p23-exercise 11.}
+\section{p24-exercise 11.}
 \begin{tcolorbox}
 Prove that with respect to transformations $$ x^{,r} = C_{rs}x^s$$ where the coefficients are constants satisfying $$C_{mr}C_{ms} = \delta^r_s$$ contravariant and covariant vectors have the same formula of transformation $$ A^{,r} = C_{rs}A^{s} \text{, } A_{,r} = C_{rs}A_{s} $$
 \end{tcolorbox}
@@ -849,7 +849,7 @@ $$\medblackdiamond$$
 \pagebreak[4]
 
 
-\section{p23-exercise 12.}
+\section{p25-exercise 12.}
 \begin{tcolorbox}
 Prove that $$\pdv{ln\left|\pdv{x^m}{y^n}\right|}{x^r} =\pdv{y^m}{x^r}{x^n}\pdv{x^n}{y^m}$$.
 \end{tcolorbox}
@@ -894,7 +894,7 @@ Let,
 $$\medblackdiamond$$
 \pagebreak[4]
 
-\section{p23-exercise 13.}
+\section{p25-exercise 13.}
 \begin{tcolorbox}
 Consider the quantities $\dv{x^r}{t}$ for a particle moving in the plane. If $x^r$ are the rectangular Cartesian coordinates, are these quantities the components of a contravariant or covariant vector with respect to rotation of the axes? Are they components of a vector with respect to transformation to any curvilinear coordinates (e.g. polar coordinates)?
 \end{tcolorbox}
@@ -925,7 +925,7 @@ So $v^r$ is a contravariant vector in general. Note that this proof is more stra
 $$\medblackdiamond$$
 \pagebreak[4]
 
-\section{p23-exercise 14.}
+\section{p25-exercise 14.}
 \begin{tcolorbox}
 Consider the question raised in No. 13 for the acceleration $\dv[2]{x^r}{t}$.
 \end{tcolorbox}
@@ -940,7 +940,7 @@ From exercise 13. we know that
 $$\medblackdiamond$$
 \pagebreak[4]
 
-\section{p23-exercise 15.}
+\section{p25-exercise 15.}
 \begin{tcolorbox}
 It is well known that the equation of an ellipse may be written $$ ax^2+2hxy+by^2 =1$$
 What is the tensor character of $a,h, b$ with respect to transformation to any Cartesian coordinates (rectangular or oblique) in the plane?
@@ -1002,7 +1002,7 @@ Considering (10) we see that $\left[ { \begin{array}{cc}
 $$\medblackdiamond$$
 \pagebreak[4]
 
-\section{p23-exercise 16.}
+\section{p25-exercise 16.}
 \begin{tcolorbox}
 Matter is distributed in a plane and $A,B,H$ are the moments and product of inertia with respect to rectangular aces $0xy$ in a plane. Examine the tensor character of the set of quantities $A,B,H$ under rotation of the axes. What notation would you suggest for moments and product of inertia in order to exhibit the tensor character? What simple invariant can be formed from $A,B,H$ ?
 \end{tcolorbox}
@@ -1061,16 +1061,42 @@ Now, define
 \frac{A^,}{m_{\rho}} = (y^1)^2 =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
 \frac{B^,}{m_{\rho}} = (y^2)^2 =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
 \frac{H^,}{m_{\rho}} = (y^1)(y^2)  = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
-  \end{array}\\\\
-  \text{or}\quad \begin{array}{c}
+  \end{array}
+  \end{align}
+  Hence,
+  \begin{align}
+\begin{array}{c}
   \ K^{,11}  =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
 \ K^{,22} =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
  \ K^{,12} = K^{,21} = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
   \end{array}
 \end{align}
-So the object $(K_{ij})$ transforms according (13) like a contravariant second order tensor.\\
+So the object $(K_{ij})\equiv K^{ij}$ transforms according (12) like a contravariant second order tensor.\\
 
-Now, consider $|K_{ij}|$, obviously $|K_{ij}| = 0$, but so is also $|K_{,ij}|$.
-$$\Rightarrow\quad |K_{ij}| \text{ is an invariant under the considered transformation}$$. 
+Now, consider $|K^{ij}|$, obviously $|K^{ij}| = (x^1)^2(x^2)^2-(x^1)(x^2)(x^2)(x^1) =0$, but so is also $|K^{,ij}|$.
+$$\Rightarrow\quad |K^{ij}| \text{ is an invariant under the considered transformation}$$. 
+$$\medblackdiamond$$
+\pagebreak[4]
+
+\section{p25-exercise 17.}
+\begin{tcolorbox}
+$S_{nmr}$ is a skew-symmetric tensor in the first two indices.
+ $-f_{mnr} + f_{nmr} = S_{mnr}$.
+\end{tcolorbox}
+From exercise 13. we know that 
+\begin{align}
+-f_{mnr} + f_{nmr} = S_{mnr}
+\end{align}
+Swap the indices three times
+\begin{align}
+\text{i)}\quad n \leftrightarrow r: (1) &\Rightarrow -f_{mrn} + f_{rmn } = S_{mrn}\\
+\ &\Leftrightarrow \underbrace{f_{mnr}}_\text{*} + \underbrace{f_{rmn }}_\text{**} = -S_{rmn}\\
+\text{ii)}\quad m \leftrightarrow r: (1) &\Rightarrow -f_{rnm} + f_{nrm } = S_{rnm}\\
+\ &\Leftrightarrow \underbrace{f_{rmn}}_\text{**} + \underbrace{f_{nrm }}_\text{***} = -S_{nrm}\\
+\text{iii)}\quad m \leftrightarrow n: (1) &\Rightarrow -f_{nmr} + f_{mnr } = S_{nmr}\\
+\ &\Leftrightarrow \underbrace{f_{nrm}}_\text{***} + \underbrace{f_{mnr }}_\text{*} = -S_{mnr}\\
+\text{(3) - (5) + (7):} \quad 2\underbrace{f_{mnr}}_\text{*} &= -S_{rmn}+S_{nrm}-S_{mnr}\\
+\ \Leftrightarrow f_{mnr} &= \frac{-S_{rmn}+S_{nrm}-S_{mnr}}{2}
+\end{align}
 $$\medblackdiamond$$
 \pagebreak[4]
