@@ -436,8 +436,19 @@ $$\medblackdiamond$$
 
 \section{p41-exercise}
 \begin{tcolorbox}
-Prove the following identities: $$ [mn,r] = [nm,r], [rm,n]+[rn,m] = \partial_r a_{mn}$$
+Prove the following identities: $$ [mn,r] = [nm,r], \quad [rm,n]+[rn,m] = \partial_r a_{mn}$$
 \end{tcolorbox}
+\begin{align}
+\ [mn,r] &= \frac{1}{2}(\partial_{n} a_{mr}+ \partial_{m} a_{nr} - \partial_{r} a_{mn})\\
+\ &= \frac{1}{2}(\partial_{m} a_{nr} + \partial_{n} a_{mr}  - \partial_{r} a_{nm})\\
+\ &=[nm,r] 
+\end{align}
+and 
+\begin{align}
+\ [rm,n] + [rn,m]&= \frac{1}{2}(\partial_{r} a_{mn}+ \partial_{m} a_{rn} - \partial_{n} a_{rm} + \partial_{n} a_{rm}+ \partial_{r} a_{mn} - \partial_{m} a_{rn})\\
+\ &= \frac{1}{2}(\partial_{r} a_{mn}+\partial_{r} a_{mn})\\
+\ &=\partial_{r} a_{mn}
+\end{align}
 $$\medblackdiamond$$
 \newpage
 
@@ -445,6 +456,11 @@ $$\medblackdiamond$$
 \begin{tcolorbox}
 Prove that  $$ [mn,r] = a_{rs}\Gamma^s_{mn}$$
 \end{tcolorbox}
+\begin{align}
+\ a_{rs}\Gamma^s_{mn} & = a_{rs}a^{sk}[mn,k]\\
+\ & = \delta^k_r[mn,k]\\
+\ &= [mn,r]
+\end{align}
 $$\medblackdiamond$$
 \newpage
 
@@ -452,5 +468,47 @@ $$\medblackdiamond$$
 \begin{tcolorbox}
 ... This may proved without difficulty by starting with 2.427, in which $\lambda$ is a known function of $u$ , and defining $s$ by the relation$$ s = \int^u_{u_0}(exp\int^v_{v_0} \lambda(w)dw)dv$$ $u_0, v_0$ being constants....
 \end{tcolorbox}
+$$\medblackdiamond$$
+\newpage
+
+\section{p46-"geodesic null lines", some personal thoughts}
+\begin{tcolorbox}
+Can we grasp intuitively the notion of "geodesic null lines"? To understand this, here are two example of "geodesic null lines"
+\end{tcolorbox}
+We consider two examples, a classic one (Minkowski space) and a weird space.\\\\
+i) on dimensional Minkowski space\\\\
+For this space the metric is in normalized coordinates $$ ds^2 = dx^2 - dt^2$$
+It is easy to see that the equations of a geodesic null line (taking $t$ as parameter for the curve), reduce to \\
+\begin{align}
+\left. \begin{array}{c}
+\dv[2]{x}{t} = 0\\\\
+\ dx^2-dt^2 = 0
+\end{array} \right \}\\
+\Rightarrow x = at+b \quad \text{ and } \quad x = \pm t + g
+\end{align}
+If we choose $x=t$ at $t=0$ we see that the geodesic null lines are the bisectors of the x-t axes.\\\\
+ii) We consider a $V_2$ space equipped with a polar coordinate system and with a metric tensor defined as 
+\begin{align}
+\ ds^2 = (1-r)dr^2 + \sin(\theta)d \theta ^2
+\end{align}
+Giving as geodesic null line equations
+\begin{align}
+\left. \begin{array}{c}
+\dv[2]{r}{u} +\frac{1}{2(r-1)}(\dv{r}{u})^2 = 0\\\\
+\dv[2]{\theta}{u} +\frac{1}{2}\cot(\theta)(\dv{\theta}{u})^2 = 0\\\\
+\ (1-r)(\dv{r}{u})^2+ \sin(\theta)(\dv{\theta}{u})^2 = 0
+\end{array} \right \}
+\end{align}
+We see immediately that for $r \rightarrow 1$ and $ \theta\rightarrow k\frac{\pi}{2} \quad (k= 0, \pm 1, \pm2, \dots)$, some problems will occur and that no solutions might be found. On the next page some geodesic null lines are showed (equations solved numerically with Python Scipy library)
+\newpage
+\begin{figure}[htp] 
+    \centering
+\includegraphics[scale=.4]{nullgeodesics_theta.jpg}
+\includegraphics[scale=.45]{nullgeodesics_R.jpg}
+\end{figure}
+The first row shows the results for points at 2 different distance from the origin while changing the angle $\theta$. \\
+The second row shows the results for points at 2 different angles  while changing the distance from the origin. \\\
+
+Conclusion: with non-trivial metrics, getting an intuitive idea about the geodesic null lines gets very hard.
 $$\medblackdiamond$$
 \newpage
