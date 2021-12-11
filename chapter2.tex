@@ -468,6 +468,157 @@ $$\medblackdiamond$$
 \begin{tcolorbox}
 ... This may proved without difficulty by starting with 2.427, in which $\lambda$ is a known function of $u$ , and defining $s$ by the relation$$ s = \int^u_{u_0}(exp\int^v_{v_0} \lambda(w)dw)dv$$ $u_0, v_0$ being constants....
 \end{tcolorbox}
+\begin{align}
+\text{see 2.428 :} \quad  \lambda (u)=-\frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\\
+\end{align}
+We suppose $u(s)$ continuous by parts with continuous inverse.
+\begin{align}
+\Rightarrow \dv{s}{u} &= \frac{1}{\dv{u}{s}}\\
+\Rightarrow \dv[2]{s}{u}&= \dv{(\frac{1}{\dv{u}{s}})}{s}\dv{s}{u}\\
+\ & = -\frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\dv{s}{u}\\
+\Rightarrow \frac{\dv[2]{s}{u}}{\dv{s}{u}} &= - \frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}  
+\end{align}
+By definition (2.428)
+\begin{align}
+\ \lambda (u) &= - \frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\\
+\text{hence by (6) and (7):}\quad  \lambda (u) &= \frac{\dv[2]{s}{u}}{\dv{s}{u}}\\
+\text{in (8) put}\quad y &= \dv{s}{u} \\
+\text{ and so} \quad \lambda (w)  &= \frac{y^,}{y}\\
+\Rightarrow \int \frac{y^,}{y}dw &= \int \lambda (w)dw\\
+\Leftrightarrow \int d(lny) &= \int \lambda (w)dw\\
+\Rightarrow \left. ln(y) \right|^v_{v_0} &= \int^v_{v_0} \lambda (w)dw\\
+\Rightarrow y  &= exp(\int^v_{v_0} \lambda (w)dw) + C
+\end{align}
+Taking into account (9), we get:
+\begin{align}
+\dv{s}{v}  &= exp(\int^v_{v_0} \lambda (w)dw) + C\\
+\Rightarrow \left. s \right|^u_{u_0} &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B^,\\
+\Leftrightarrow  s  &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B
+\end{align}
+We show tha we have to put $C=0$ and can drop the constant $B$. Remember by (8)
+\begin{align}
+\lambda (u) &= \frac{\dv[2]{s}{u}}{\dv{s}{u}}\\
+\text{by (17)} \quad \dv{s}{u}  &=exp(\int^u_{u_0} \lambda (w)dw) +C\\
+\text{and}\quad \dv[2]{s}{u}  &= \lambda (u) exp(\int^u_{u_0} \lambda (w)dw) \\
+\text{hence by (18), (19) and (20):} \quad \lambda (u)&= \frac{\lambda (u) exp(\int^u_{u_0} \lambda (w)dw)}{exp(\int^u_{u_0} \lambda (w)dw) +C}
+\end{align}
+So, whatever the constant B, the relation (18) is correct on the condition that C=0. 
+So, indeed, we can choose the independent variable $s$ as
+$$s  =\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv $$ 
+$$\medblackdiamond$$
+\newpage
+
+\section{p42-clarification on 2.430}
+\begin{tcolorbox}
+After 2.430 it is stated:\\
+\it{"No matter what values these constants have, 2.424 is satisfied, and by adjusting the constant $v_0$, we can ensure that $a_{mn}\dv{x^m}{s}\dv{x^n}{s} = \pm1$ along $C$, so that $s$ is actually the arc length."}
+\end{tcolorbox}
+We first prove that 2.4.24 is satisfied, no matter what values the constants take. We have
+\begin{align}
+\text{(2.430) } \quad  &s =\int_{u_0}^u(exp\int_{v_0}^v \lambda (w)dw)dv\\
+\text{and (2.427)} \quad &\dv[2]{x^r}{u} + \Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} =  \lambda \dv{x^r}{u}
+\end{align}
+In (2) we can write the first term as
+\begin{align}
+\quad \dv[2]{x^r}{u} &= \dv{(\dv{x^r}{u})}{s}\dv{s}{u} \\
+\text{with } \quad \dv{(\dv{x^r}{u})}{s} &=  \dv{(\dv{x^r}{s}\dv{s}{u})}{s} = \dv[2]{x^r}{s}\dv{s}{u}+\dv{x^r}{s}\dv{(\dv{s}{u})}{s} 
+\end{align}
+Assuming the curve smooth, we have
+\begin{align}
+\dv{(\dv{s}{u})}{s} & = \dv{(\frac{1}{\dv{u}{s}})}{s} = -\frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}= \lambda
+\end{align}
+Putting (4) and (5) in (3) we get
+\begin{align}
+\dv[2]{x^r}{u} &= \dv[2]{x^r}{s} \left ( \dv{s}{u}\right )^2 + \lambda\dv{x^r}{s}\dv{s}{u}
+\end{align}
+Plugging (6) in 2.427 gives:
+\begin{align}
+\dv[2]{x^r}{s} \left (\dv{s}{u}\right )^2 + \lambda\dv{x^r}{s}\dv{s}{u} +\Gamma^r_{mn}\dv{x^m}{s}\dv{x^n}{s}\left (\dv{s}{u}\right )^2  &=  \lambda \dv{x^r}{s}\dv{s}{u}\\
+\Leftrightarrow \dv[2]{x^r}{s} \left (\dv{s}{u}\right )^2 +\Gamma^r_{mn}\dv{x^m}{s}\dv{x^n}{s}\left (\dv{s}{u}\right )^2  &=  0
+\end{align}
+We can assume that $\dv{s}{u} $ does not become $0$ or $\pm \infty$ along the curve by choosing an adequate constant $v_0$. Indeed, from (2.430) we get
+\begin{align}
+\dv{s}{u}  &= exp(\int_{u_0}^u \lambda (w)dw)\\
+\ &= \frac{\phi (u)}{\phi (u_0)}
+\end{align}
+with $\phi (u_0) =  e^{\theta(u_0)}$, $\theta(u)$ being the indefinite integral $\int \lambda (w)dw $.\\
+So, it is sufficient to choose $v_0$ so that $\theta(u_0)$ does not become  $\pm \infty$ to ensure that $\dv{s}{u} \ne 0$ or $ \ne \pm \infty$ along the curve and so we have from (8)
+\begin{align}
+\dv[2]{x^r}{s} +\Gamma^r_{mn}\dv{x^m}{s}\dv{x^n}{s}  &=  0\end{align}
+which is the definition (2.424) of a geodesic.\\\\
+The same reasoning about $\dv{s}{u} \ne 0$ can be made to prove that $a_{mn}\dv{x^m}{s}\dv{x^n}{s} = \pm1$ along $C$. Indeed, by definition (2.305):
+\begin{align}
+\ ds = &\left[ \epsilon a_{mn}\dv{x^m}{u}\dv{x^n}{u}\right]^\frac{1}{2}\\
+\text{ equating with (9)} \quad   &\left[ \epsilon a_{mn}\dv{x^m}{u}\dv{x^n}{u}\right]^\frac{1}{2} =                 exp(\int_{u_0}^u \lambda (w)dw)\\
+\Rightarrow \quad &\epsilon a_{mn}\dv{x^m}{s}\dv{x^n}{s}\left (\dv{s}{u}\right )^2 =  \left[ exp(\int_{u_0}^u \lambda (w)dw) \right]^2\\
+\text{but} \quad &\dv{s}{u} = exp(\int_{u_0}^u \lambda (w)dw)\\
+\text{ and so, (9) becomes} \quad &\epsilon a_{mn}\dv{x^m}{s}\dv{x^n}{s}\left (\dv{s}{u}\right )^2 =  \left (\dv{s}{u}\right )^2\\
+\Rightarrow \quad & a_{mn}\dv{x^m}{s}\dv{x^n}{s}=\epsilon
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+
+\section{p43-clarification }
+\begin{tcolorbox}
+$$\lambda = \Gamma^N_{\mu \nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + 2\Gamma^N_{\mu N}\dv{x^{\mu}}{x^N}+\Gamma^N_{N N} $$
+\end{tcolorbox}
+We start with 2.427 with $r=N$
+\begin{align}
+\ &\dv[2]{x^N}{{x^{N}}} + \Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} = \lambda \dv{x^N}{x^N}\\
+\Rightarrow\quad &\Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} = \lambda \quad \text{(as}\quad \dv[2]{x^N}{{x^{N}}} = 0 \quad \dv{x^N}{x^N} = 1 \text{)}
+\end{align}
+But (2) is only valid with the dummy indices $\mu$ and $\nu$ spanning the whole dimension $(1,2,\dots N)$, but by choice $\mu,\nu \quad \epsilon \quad (1,2, \dots, N-1)$. We have thus to add in the left term of (2) the cases
+\begin{align}
+\left\{ \begin{array}{cc}
+\Gamma^N_{N\nu}& \nu = (1,2,\dots ,N-1)\\\\
+\Gamma^N_{\mu N}& \mu = (1,2,\dots ,N-1)\\\\
+\Gamma^N_{NN}& \\
+\end{array} \right.\\
+\text{(2) becomes } \quad \Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{N \nu}\dv{x^N}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{\mu N}\dv{x^{\mu}}{x^N} \dv{x^{N}}{x^N} + \Gamma^N_{NN}\dv{x^{N}}{x^N} \dv{x^{N}}{x^N}= \lambda\\
+\Rightarrow   \quad \Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{N \nu}\dv{x^{\nu}}{x^N} + \Gamma^N_{\mu N}\dv{x^{\mu}}{x^N}+ \Gamma^N_{NN} = \lambda
+\end{align}
+As $\Gamma^N_{\mu N}$ is symmetric on the lower indices and $\mu$, $\nu$ being dummy indices:
+\begin{align}
+\lambda  =\Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + 2\Gamma^N_{N \nu}\dv{x^{\nu}}{x^N} +\Gamma^N_{NN}
+\end{align}
+The other $N-1$ equation for $r= 1,\dots, N-1$ can be deduced following the same reasoning.
+$$\medblackdiamond$$
+\newpage
+
+
+\section{p45-clarification }
+\begin{tcolorbox}
+$ f_r \equiv a_{rm}\dv[2]{x^m}{u} +[mn,r]\dv{x^m}{u}\dv{x^n}{u}$ is covariant and 
+$ f^r \equiv \dv[2]{x^m}{u} +\Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u}$ is contravariant.
+\end{tcolorbox}
+\begin{align}
+\ &f_r \equiv a_{rm}\dv[2]{x^m}{u} +[mn,r]\dv{x^m}{u}\dv{x^n}{u}\\
+\text{multiply with}\quad a^{sr}\quad \Rightarrow\quad &f_r a^{sr} = a^{sr}a_{rm}\dv[2]{x^m}{u} +a^{sr}[mn,r]\dv{x^m}{u}\dv{x^n}{u}\\
+\Rightarrow\quad &f^{s} = \delta^s_m \dv[2]{x^m}{u} +\underbrace{a^{sr}[mn,r]}_{\Gamma^s_{mn}}\dv{x^m}{u}\dv{x^n}{u}\\
+\Rightarrow \quad &f^{s} = \dv[2]{x^s}{u} +\Gamma^s_{mn}\dv{x^m}{u}\dv{x^n}{u}
+\end{align}
+By lifting the index of $f_r$ we get a contravariant vector confirming that (4) is contravariant.
+$$\medblackdiamond$$
+\newpage
+
+\section{p45-clarification }
+\begin{tcolorbox}
+(2.443) and (2.44)
+$$ p^r\pdv{w}{p^r} - w = C^t \quad \Rightarrow\quad w = C^t $$ 
+\end{tcolorbox}
+By definition 
+\begin{align}
+\ w &= a_{mn}p^mp^n\\
+\Rightarrow\quad \pdv{w}{p^r} &= a_{mn}(\pdv{p^m}{p^r}p^n + p^m \pdv{p^n}{p^r})\\
+\ &= a_{mn}(\delta^m_rp^n + p^m \delta^n_r)\\
+\ &= a_{rn}p^n + a_{mr}p^m \\
+\ &= 2a_{mr}p^m \quad\text{(as } a_{mn} \quad \text{is symmetric)}\\
+\text{(4)}\quad \Rightarrow \quad p^r\pdv{w}{p^r} &= 2a_{mr}p^rp^m \\
+\ &= 2w\\
+\text{(2.443)} \quad\Rightarrow\quad p^r\pdv{w}{p^r} -w &= 2w-w = w = C^t\\
+\Rightarrow\quad w &\equiv a_{mn}p^mp^n = C^t
+\end{align}
 $$\medblackdiamond$$
 \newpage
 
@@ -503,12 +654,117 @@ We see immediately that for $r \rightarrow 1$ and $ \theta\rightarrow k\frac{\pi
 \newpage
 \begin{figure}[htp] 
     \centering
-\includegraphics[scale=.4]{nullgeodesics_theta.jpg}
-\includegraphics[scale=.45]{nullgeodesics_R.jpg}
+\includegraphics[scale=.2]{nullgeodesics_theta.jpg}
+\includegraphics[scale=.25]{nullgeodesics_R.jpg}
+\includegraphics[scale=.25]{nullgeodesics_theta_p.jpg}
 \end{figure}
 The first row shows the results for points at 2 different distance from the origin while changing the angle $\theta$. \\
-The second row shows the results for points at 2 different angles  while changing the distance from the origin. \\\
-
+The second row shows the results for points at 2 different angles  while changing the distance from the origin. \\
+The second row shows the results for  a specific point while changing the the $\dv{\theta}{u}$ value in the initial condition when solving the system of differential equations. \\
 Conclusion: with non-trivial metrics, getting an intuitive idea about the geodesic null lines gets very hard.
+$$\medblackdiamond$$
+\newpage
+
+\section{p47-exercise }
+\begin{tcolorbox}
+The class of all parameters $u$, for which the equations of a geodesic null line assume the simple form 2.445, are obtained from any one such parameter by linear transformation $$ \overline{u} = au + b$$ $a$ and $b$ being constants.
+\end{tcolorbox}
+The simple form 2.445 is :
+\begin{align}
+\  \dv[2]{x^r}{u} +\Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0\\
+\end{align}
+The general form of a geodesic is (2.447) 
+\begin{align}
+\  \dv[2]{x^r}{\overline{u}} +\Gamma^r_{mn}\dv{x^m}{\overline{u}}\dv{x^n}{\overline{u}} = \lambda \dv{x^r}{\overline{u}}\\
+\end{align}
+So (2.447) can only of the form (2.445) if $\lambda = 0$
+\begin{align}
+\   \lambda  = - \frac{\dv[2]{\overline{u}}{u}}{\left( \dv{\overline{u}}{u}\right)^2} = 0\\
+\end{align}
+We can state that $\dv{\overline{u}}{u}\ne 0$ as $\overline{u}$ can't be a constant (being a parameter of a curve). So,
+\begin{align}
+\dv[2]{\overline{u}}{u}&=0\\
+\Rightarrow \quad \dv{\overline{u}}{u}&=a\\
+\Rightarrow \quad \overline{u}&=au +b
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+
+\section{p47-exercise }
+\begin{tcolorbox}
+Consider a 3-space with coordinates $x,y,z$ and a metric form $\Phi = (dx)^2+(dy)^2 - (dz)^2$. prove that the geodesic null lines may be represented by the equations
+$$x = au + a^,\quad y = bu + b^, \quad z = cu + c^,$$
+where $u$ is a parameter and $a, a^,,b,b^,,c,c^,$ are constants which are arbitrary except for the relation $a^2+b^2-c^2 =0$.
+\end{tcolorbox}
+Given is 
+\begin{align}
+\Phi = (dx)^2+(dy)^2 - (dz)^2
+\end{align}
+From the previous exercise we have already proven that $x,y,z$ are of the form
+\begin{align}
+\ x^i = q_i u + q_i^,
+\end{align}
+To be a null geodesic null line we need to have (2.448)
+\begin{align}
+\ a_{mn}\dv{x^m}{u}\dv{x^n}{u} &=0\\
+\text{from (1) we deduce}  \quad (a_{mn}) &= \begin{pmatrix}
+1& 0 & 0 \\
+ 0&1  & 0 \\
+ 0&  0& -1 \\
+\end{pmatrix}\\
+\text{(3)}\quad\Rightarrow\quad (dx)^2+(dy)^2 - (dz)^2 &=0\\
+\text{(2)}\quad\Rightarrow\quad (q_1)^2+(q_2)^2 - (q_3)^2 &=0
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p48-exercise }
+\begin{tcolorbox}
+Prove that the Christoffel symbols of the first kind transform according the equation 
+$$[mn,r]^, =  [pq,s]\pdv{x^p}{x^{,m}} \pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}+ a_{pq}\pdv{x^p}{x^{,r}}\pdv{x^q}{x^{,m}}{x^{,n}}$$
+\end{tcolorbox}
+From 2.438 page 45, we have
+\begin{align}
+\ f_r &\equiv a_{rm}\dv[2]{x^m}{u} +[mn,r]\dv{x^m}{u}\dv{x^n}{u} \quad\text{is covariant} \\
+\Rightarrow\quad f_r^, &= f_s\pdv{x^s}{x^{,r}}\\
+\text{with}\quad f_r^, &= a^,_{rm}\dv[2]{x^{,m}}{u} +[mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u}
+\end{align}
+Combining (1), (2) and (3) gives 
+\begin{align}
+\ a^,_{rm}\dv[2]{x^{,m}}{u} +[mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} = ( a_{sm}\dv[2]{x^m}{u} +[mn,s]\dv{x^m}{u}\dv{x^n}{u})\pdv{x^s}{x^{,r}}
+\end{align}
+We rewrite (4) as 
+\begin{align}
+\ [mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} &= -\underbrace{a^,_{rm}\dv[2]{x^{,m}}{u}}_\text{(*)} +\underbrace{ a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{,r}}}_\text{(**)} +\underbrace{[mn,s]\dv{x^m}{u}\dv{x^n}{u}\pdv{x^s}{x^{,r}}}_\text{(***)}\\
+\text{(***)} &\Leftrightarrow [mn,s]\pdv{x^m}{x^{,p}}\dv{x^{,p}}{u}\pdv{x^n}{x^{,q}}\dv{x^{,q}}{u}\pdv{x^s}{x^{,r}}
+\end{align}
+In (6) renaming the dummy indices $m,n,p,q$ gives
+\begin{align}
+\text{(***)} &\Leftrightarrow [pq,s]\pdv{x^p}{x^{,m}}\dv{x^{,m}}{u}\pdv{x^q}{x^{,n}}\dv{x^{,n}}{u}\pdv{x^s}{x^{,r}}\\
+&\Leftrightarrow [pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,n}}{u}\right)
+\end{align}
+Also,
+\begin{align}
+\text{(**)} &\Leftrightarrow  a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{,r}}\\
+\text{As we have}\quad \dv[2]{x^m}{u} &= \dv{(\pdv{x^m}{x^{,p}}\dv{x^{,p}}{u})}{u}\\
+&= \pdv{x^m}{x^{,p}}\dv[2]{x^{,p}}{u}+\dv{x^{,p}}{u}\pdv{x^m}{x^{,p}}{x^{,q}}\dv{x^{,q}}{u} 
+\end{align}
+(11) and (9) gives by changing the dummy indices ( $m\rightarrow t$, $p\rightarrow m$, $q\rightarrow n$)
+\begin{align}
+\text{(**)}&= \underbrace{a_{st}\pdv{x^t}{x^{,p}}\dv[2]{x^{,p}}{u}\pdv{x^s}{x^{,r}}}_\text{(****)}+a_{pq}\pdv{x^q}{x^{,m}}{x^{,n}}\pdv{x^{p}}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,m}}{u}\right) \\
+\text{with (****)}\quad &= a_{st}\left(\pdv{x^t}{x^{,m}}\pdv{x^s}{x^{,r}}\right)\dv[2]{x^{,m}}{u}
+\end{align}
+But $a_{st}$  is a covariant tensor, so
+\begin{align}
+\ a^{,}_{rm} &= a_{st}\pdv{x^t}{x^{,m}}\pdv{x^s}{x^{,r}}\\
+\text{(13) becomes}\quad \text{(****)} &= a^{,}_{rm}\dv[2]{x^{,m}}{u}\\
+\text{and from (5) we have }\quad \text{(*)} &= -a^{,}_{rm}\dv[2]{x^{,m}}{u}\\
+\end{align}
+and both terms cancel each other in equation (5). So adding $(*), (**)$ and $(***)$ in (5) , we get 
+\begin{align}
+\ [mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} &= a_{pq}\pdv{x^q}{x^{,m}}{x^{,n}}\pdv{x^{p}}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,m}}{u}\right)+[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,n}}{u}\right)\\
+\Rightarrow \ &[mn,r]^, =[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}+  a_{pq}\pdv{x^{p}}{x^{,r}}\pdv{x^q}{x^{,m}}{x^{,n}}
+\end{align}
 $$\medblackdiamond$$
 \newpage
