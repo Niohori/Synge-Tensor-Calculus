@@ -604,7 +604,7 @@ $$\medblackdiamond$$
 
 \section{p45-clarification }
 \begin{tcolorbox}
-(2.443) and (2.44)
+(2.443) and (2.444)
 $$ p^r\pdv{w}{p^r} - w = C^t \quad \Rightarrow\quad w = C^t $$ 
 \end{tcolorbox}
 By definition 
@@ -747,7 +747,7 @@ In (6) renaming the dummy indices $m,n,p,q$ gives
 Also,
 \begin{align}
 \text{(**)} &\Leftrightarrow  a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{,r}}\\
-\text{As we have}\quad \dv[2]{x^m}{u} &= \dv{(\pdv{x^m}{x^{,p}}\dv{x^{,p}}{u})}{u}\\
+\text{As we have also}\quad \dv[2]{x^m}{u} &= \dv{(\pdv{x^m}{x^{,p}}\dv{x^{,p}}{u})}{u}\\
 &= \pdv{x^m}{x^{,p}}\dv[2]{x^{,p}}{u}+\dv{x^{,p}}{u}\pdv{x^m}{x^{,p}}{x^{,q}}\dv{x^{,q}}{u} 
 \end{align}
 (11) and (9) gives by changing the dummy indices ( $m\rightarrow t$, $p\rightarrow m$, $q\rightarrow n$)
@@ -766,5 +766,150 @@ and both terms cancel each other in equation (5). So adding $(*), (**)$ and $(**
 \ [mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} &= a_{pq}\pdv{x^q}{x^{,m}}{x^{,n}}\pdv{x^{p}}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,m}}{u}\right)+[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,n}}{u}\right)\\
 \Rightarrow \ &[mn,r]^, =[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}+  a_{pq}\pdv{x^{p}}{x^{,r}}\pdv{x^q}{x^{,m}}{x^{,n}}
 \end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p50-clarification 2.515 }
+\begin{tcolorbox}
+$$\dv{\left(T_rS^r\right)}{u} = \dv{T_r}{u}S^r + T_r\dv{S^r}{u} = \left(\dv{T_r}{u} - \Gamma^m_{rn}T_m\dv{x^n}{u}\right)S^r$$ with $$\frac{\delta T_r}{\delta u} = \dv{T_r}{u} -\Gamma^m_{rn}\dv{x^n}{u} T_m$$ a covariant vector.
+\end{tcolorbox}
+It is given that $S^r$ is a tensor propagated parallelly along the curve. The by (2.5212) we have
+\begin{align}
+\dv{S^r}{u} &+ \Gamma^r_{mn}S^m\dv{x^n}{u}= 0\\
+\dv{S^r}{u} &= - \Gamma^r_{mn}S^m\dv{x^n}{u}\\
+\text{and}\quad \dv{\left(T_rS^r\right)}{u} &= \dv{T_r}{u}S^r + T_r\dv{S^r}{u} \\
+\ &= \dv{T_r}{u}S^r -\Gamma^r_{mn}S^m\dv{x^n}{u} T_r\\
+\end{align}
+Swap dummy indices $r$ and $m$ in the second term:
+\begin{align}
+\dv{\left(T_rS^r\right)}{u} &= \dv{T_r}{u}S^r -\Gamma^m_{rn}S^r\dv{x^n}{u} T_m\\
+\ &= \left(\dv{T_r}{u} -\Gamma^m_{rn}\dv{x^n}{u} T_m\right)S^r\\
+\end{align}
+As $T_rS^r$ is an invariant and thus is also $\dv{\left(T_rS^r\right)}{u}$ and as $S^r$ can be chosen arbitrarily (as long it is a contravariant tensor), implies that $$\dv{T_r}{u} -\Gamma^m_{rn}\dv{x^n}{u} T_m$$ is covariant and thus also $$\frac{\delta T_r}{\delta u} = \dv{T_r}{u} -\Gamma^m_{rn}\dv{x^n}{u} T_m$$
+$$\medblackdiamond$$
+\newpage
+
+\section{p50-clarification 2.516}
+\begin{tcolorbox}
+$$\frac{\delta T_{rs}}{\delta u} \equiv \dv{T_{rs}}{u}  - \Gamma^m_{rn}T_{ms}\dv{x^n}{u} - \Gamma^m_{sn}T_{rm}\dv{x^n}{u}$$ is a covariant vector.
+\end{tcolorbox}
+We build an invariant $ T_{rs} S^rU^s$ with $S^r$ and $U^s$ arbitrary contravariant tensors. The we know that $\dv{\left( T_{rs} S^r U^s\right)}{u}$ is also an invariant. We have 
+\begin{align}
+\dv{\left( T_{rs} S^r U^s\right)}{u} = \dv{T_{rs}}{u} S^r U^s + T_{rs} \dv{S^r}{u} U^s + T_{rs} S^r \dv{U^s}{u}
+\end{align} 
+with with $S^r$ and $U^s$ propagated parallelly along the curve. Then,
+\begin{align}
+\dv{S^r}{u} = - \Gamma^r_{mn}S^m\dv{x^n}{u}\\
+\dv{U^s}{u} = - \Gamma^s_{mn}Y^m\dv{x^n}{u}
+\end{align} 
+(2), (3) in (1) gives 
+\begin{align}
+\dv{\left( T_{rs} S^r U^s\right)}{u} = \dv{T_{rs}}{u} S^r U^s - T_{rs}U^s\Gamma^r_{mn}S^m\dv{x^n}{u} - T_{rs} S^r \Gamma^s_{mn}U^m\dv{x^n}{u}
+\end{align} 
+Changing the dummy indices in the second and third term gives:
+\begin{align}
+\dv{\left( T_{rs} S^r U^s\right)}{u} = (\dv{T_{rs}}{u}  - \Gamma^m_{rn}T_{ms}\dv{x^n}{u} - \Gamma^m_{sn}T_{rm}\dv{x^n}{u})S^r U^s
+\end{align} 
+As the left term is an invariant and $S^r$ and $U^s$ are arbitrary contravariant tensors, means that the expression in the brackets in the right part of the equation, is a covariant tensor.
+$$\medblackdiamond$$
+\newpage
+
+\section{p51-exercise}
+\begin{tcolorbox}
+Find the absolute derivative of $T^r_{st}$.
+\end{tcolorbox}
+Define the invariant $ I = D^r_{st}R^rS_sT_t$ 
+\begin{align}
+\ I &= D^r_{st}R^rS_sT_t\\
+\Rightarrow A &= \dv{I}{u}= 
+\dv{\left(D^r_{st}\right)}{u}R^rS_sT_t+
+\ D^r_{st}S_sT_t\dv{\left(R^r\right)}{u}+
+\ D^r_{st}R_rT_t\dv{\left(S^s\right)}{u}+
+\ D^r_{st}R_rS_s\dv{\left(T^t\right)}{u}
+\end{align} 
+Reminder, performing a parallel propagation of a covariant and contravariant vector gives as equations
+\begin{align}
+\dv{V^v}{u} = - \Gamma^v_{mn}V^m\dv{x^n}{u}\\
+\dv{W_w}{u} = + \Gamma^m_{wn}W^m\dv{x^n}{u}
+\end{align}
+So (2) becomes:
+\begin{align}
+\ A = \left\{ \begin{array}{c}
+\dv{\left(D^r_{st}\right)}{u}R^rS_sT_t\\\\
+\ -D^r_{st}S_sT_t\Gamma^r_{mn}R^m\dv{x^n}{u}\\\\
+\ +D^r_{st}R_rT_t \Gamma^m_{sn}S^m\dv{x^n}{u}\\\\
+\ +D^r_{st}R_rS_s\Gamma^m_{tn}T^m\dv{x^n}{u}
+\end{array} \right.
+\end{align}
+In (5) apply the following renaming of dummy variables 
+$$\left\{\begin{array}{c}
+2^{nd} line: \quad r\rightarrow m, m \rightarrow r\\
+3^{rd} line: \quad s\rightarrow m, m \rightarrow s\\
+4^{th} line: \quad t\rightarrow m, m \rightarrow t\\
+\end{array}  \right. $$
+and regrouping terms with $R^rS_sT_t$,(5) becomes then
+\begin{align}
+\ A = \left[\dv{\left(D^r_{st}\right)}{u}+(\ D^r_{mt}\Gamma^s_{mn}+\ D^r_{sm}\Gamma^t_{mn}-\ D^m_{st}\Gamma^m_{rn})\dv{x^n}{u}\right]R^rS_sT_t
+\end{align}
+But $A$ is an invariant, so the expression in the square parenthesis is a tensor of the form $T^r_{st}$ and we define the absolute derivative of $T^r_{st}$ as:
+$$ \frac{\delta T^r_{st}}{\delta u} = \dv{\left(T^r_{st}\right)}{u}+\Gamma^s_{mn} T^r_{mt}\dv{x^n}{u}+\Gamma^t_{mn}T^r_{sm}\dv{x^n}{u}-\Gamma^m_{rn} T^m_{st}\dv{x^n}{u}$$
+$$\medblackdiamond$$
+\newpage
+
+\section{p53-exercise}
+\begin{tcolorbox}
+Prove that $$\delta^r_{s|t} = 0, \quad a^{rs}_{|t} = 0$$
+\end{tcolorbox}
+
+i)$\delta^t_{s|t} = 0$
+\begin{align}
+\text{(2.524) gives:}\quad \delta^r_{s|t} &= \underbrace{\pdv{\delta^r_{s}}{x^t}}_\text{=0} + \Gamma^r_{mt}\delta^m_{s}- \Gamma^m_{st}\delta^r_{m}\\
+&= \Gamma^r_{st}- \Gamma^r_{st} = 0
+\end{align}
+
+ii)$ a^{rs}_{|t} = 0$
+We know that 
+\begin{align}
+\delta^r_{s|t} &= a_{sk}a^{kr}|_{t}\\
+\Rightarrow \delta^r_{s|t} &= \pdv{a_{sk}}{x^t}a^{kr}+ a_{sk}\pdv{a^{kr} }{x^t} + \Gamma^r_{mt}a_{sk}a^{km}- \Gamma^m_{st}a_{mk}a^{kr}
+\end{align}
+Rearrange (4) and add $\Gamma^k_{mt}a_{ks}a^{mr}$ and subtract $\Gamma^m_{kt}a_{ms}a^{kr}$ (as $\Gamma^k_{mt}a_{ks}a^{mr} - \Gamma^m_{kt}a_{ms}a^{kr}  =0 $)
+\begin{align}
+\delta^r_{s|t} &= (\pdv{a_{sk}}{x^t}- \Gamma^m_{st}a_{mk}-\Gamma^m_{kt}a_{ms} )a^{kr}+ (\pdv{a^{kr} }{x^t} + \Gamma^r_{mt}a^{km}+ \Gamma^k_{mt}a^{mr})a_{sk}\\
+\text{but} \quad  a_{sk|t} &= (\pdv{a_{sk}}{x^t}- \Gamma^m_{st}a_{mk}-\Gamma^m_{kt}a_{ms})\\
+\text{and as (2.526)}\quad a_{sk|t} = 0\\
+\text{(5) becomes}\quad \delta^r_{s|t} &= \underbrace{(\pdv{a^{kr} }{x^t} + \Gamma^r_{mt}a^{km}+ \Gamma^k_{mt}a^{mr})}_{\begin{huge}a^{kr}_{|t}\end{huge}}a_{sk}\\
+\ &= a^{kr}_{|t}a_{sk}\\
+\ &= 0 \quad \text{as}\quad \delta^r_{s|t}=0  \quad \text{(see first  part of this exercise)}
+\end{align}
+As all $a_{ks}$ can't be zero and as we didn't choose any special Riemannian space, we can conclude from $ a^{kr}_{|t}a_{sk} = 0$ that $$ a^{rs}_{|t} = 0$$ 
+$$\medblackdiamond$$
+\newpage
+
+\section{p54-exercise}
+\begin{tcolorbox}
+Prove that $$\dv{(a_{mn}\lambda^m\lambda^n)}{s} = 2 a_{mn}\lambda^m \frac{\delta\lambda^n}{\delta s}$$
+\end{tcolorbox}
+\begin{align} \dv{(a_{mn}\lambda^m\lambda^n)}{s}= \dv{a_{mn}}{s}\lambda^m\lambda^n+2a_{mn}\lambda^m \dv{\lambda^n}{s}
+\end{align}
+By definition of the absolute derivative, we have:
+\begin{align}
+\frac{\delta \lambda^n}{\delta s}& =\dv{\lambda ^n}{s}  + \Gamma^n_{pk}\lambda^p\dv{x^k}{s} \\
+\text{(2) in (1)}\quad \dv{(a_{mn}\lambda^m\lambda^n)}{s}&= \dv{a_{mn}}{s}\lambda^m\lambda^n+2a_{mn}\lambda^m (\frac{\delta \lambda^n}{\delta s} - \Gamma^n_{pk}\lambda^p\dv{x^k}{s})\\
+\ &= \dv{a_{mn}}{s}\lambda^m\lambda^n+2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} - 2a_{mn}\lambda^m \Gamma^n_{pk}\lambda^p\dv{x^k}{s}\\
+\text{we have} \quad \Gamma^n_{pk} &= a^{ns}[pk,s]\\
+\text{so,} \quad \dv{(a_{mn}\lambda^m\lambda^n)}{s}&= \dv{a_{mn}}{s}\lambda^m\lambda^n+2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} - 2\underbrace{a_{mn}a^{ns}}_{=\delta^s_m}[pk,s]\lambda^m \lambda^p\dv{x^k}{s}\\
+&= \dv{a_{mn}}{s}\lambda^m\lambda^n+2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} - 2[pk,m]\lambda^m \lambda^p\dv{x^k}{s}\\
+\text{but} \quad 2[pk,m]\lambda^m\lambda^p &= [pk,m]\lambda^m\lambda^p+[pk,m]\lambda^m\lambda^p\\
+&= [pk,m]\lambda^m\lambda^p+[mk,p]\lambda^m\lambda^p\\
+\text{we have also }\quad &\left \{ \begin{array}{c}
+\ [pk,m] = \frac{1}{2}(\partial _k a_{pm} + \partial _p a_{km}-\partial _m a_{pk})\\
+\ [mk,p] = \frac{1}{2}(\partial _k a_{pm} + \partial _m a_{pk}-\partial _p a_{mk})\\
+\end{array}\right.\\
+\ &\Rightarrow 2[pk,m] = \partial _k a_{pm}\\
+\text{so} \quad \dv{(a_{mn}\lambda^m\lambda^n)}{s} &= \dv{a_{mn}}{s}\lambda^m\lambda^n - \underbrace{ \partial _k a_{pm}\dv{x^k}{s}}_{=\dv{a_{mn}}{s}} \lambda^m \lambda^p +2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} \\
+\ & \Rightarrow \quad  \dv{(a_{mn}\lambda^m\lambda^n)}{s} = 2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} 
+\end{align} 
+
 $$\medblackdiamond$$
 \newpage
