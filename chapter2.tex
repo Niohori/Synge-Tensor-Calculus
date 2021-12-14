@@ -910,6 +910,210 @@ By definition of the absolute derivative, we have:
 \text{so} \quad \dv{(a_{mn}\lambda^m\lambda^n)}{s} &= \dv{a_{mn}}{s}\lambda^m\lambda^n - \underbrace{ \partial _k a_{pm}\dv{x^k}{s}}_{=\dv{a_{mn}}{s}} \lambda^m \lambda^p +2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} \\
 \ & \Rightarrow \quad  \dv{(a_{mn}\lambda^m\lambda^n)}{s} = 2a_{mn}\lambda^m \frac{\delta \lambda^n}{\delta s} 
 \end{align} 
+$$\medblackdiamond$$
+\newpage
+
+\section{p54-exercise}
+\begin{tcolorbox}
+Prove that $$(T^rS_s)_{|n} = T^r_{|n}S_s+T^rS_{|n}$$
+\end{tcolorbox}
+\begin{align} (T^rS_s)_{|n} &=  \partial_n(T^rS_s) + \Gamma^r_{nm}T^mS_s - \Gamma^m_{sn}T^rS_m\\
+\ &=  \partial_n(T^r)S_s+ T^r\partial_n(S_s) + S_s\Gamma^r_{nm}T^m - T^r\Gamma^m_{sn}S_m\\
+\ &=  T^r\underbrace{(\partial_n(S_s) - \Gamma^m_{sn}S_m)}_{S_{s|n}}+S_s\underbrace{(\partial_n(T^r)+ \Gamma^r_{nm}T^m)}_{T^r_{|n}}\\
+\ &=  T^rS_{s|n}+S_sT^r_{|n}
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p57-exercise}
+\begin{tcolorbox}
+Compute the Christoffel symbols in 2.540 directly from the definitions 2.421 and 2.422. Check that all Christoffels symbols not shown explicitly in 2.540 vanish.
+\end{tcolorbox}
+\textit{Easy but very tedious, not reproduced yet, later perhaps}
+$$\medblackdiamond$$
+\newpage
+
+\section{p57-exercise}
+\begin{tcolorbox}
+Show that for the spherical polar metric 2.532, we have $ln\sqrt{a} = 2 ln(x^1)+ln(sin(x^2))$ and 
+$$\textbf{2.544}\quad \Gamma^n_{1n} = \frac{2}{x^1},\quad \Gamma^n_{2n} = \cot (x^2),\quad\Gamma^n_{3n} =0$$
+\end{tcolorbox}
+The spherical polar metric 2.532 is,
+\begin{align}
+\ (a_{mn})&= \begin{pmatrix}
+ 1& 0 & 0 \\
+ 0& (x^1)^2 & 0 \\
+ 0& 0 & (x^1 \sin (x^2))^2 \\
+\end{pmatrix}\\
+\Rightarrow |a_{mn}| &= \left[(x^1)^2 \sin (x^2)\right]^2\\
+\Rightarrow ln(\sqrt{|a_{mn}|}) &= 2ln(x^1)+ln(\sin (x^2))\\
+\Rightarrow\quad\quad &\left \{\begin{array}{c}
+\Gamma^n_{1n} = \partial_1(ln(\sqrt{a})) = \frac{2}{x^1}\\\\
+\Gamma^n_{2n} = \partial_2(ln(\sqrt{a})) = \frac{\cos(x^2)}{\sin(x^2)} =  \cot (x^2)\\\\
+\Gamma^n_{3n} = 0\\
+\end{array}\right.
+\end{align} 
+$$\medblackdiamond$$
+\newpage
+
+\section{p58-exercise}
+\begin{tcolorbox}
+Show that for the spherical polar metric 
+$$\textbf{2.546}\quad T^n_{\ |n} = \frac{1}{r^2}\partial_r(r^2 \ T^1) + \frac{1}{\sin \theta }\partial_{\theta}(\sin \theta\  T^2) + \partial_{\phi}T^3 $$
+Obtain a similar expression for the "Laplacian" $\Delta V$ of an invariant $V$ defined as $$\textbf{2.547}\quad\Delta V = \left( a^{mn}\partial_m V\right)_{|n}$$
+\end{tcolorbox}
+We have
+\begin{align}
+\textbf{(2.545)}\quad T^n_{\ |n} &= \frac{1}{\sqrt{a}}\partial_n(\sqrt{a} \ T^n)\\
+\text{and from the previous exercise p.58:}\quad \sqrt{a} &= (x^1)^2\sin(x^2)
+\end{align}
+\begin{align}
+\Rightarrow \quad T^n_{\ |n} &= \frac{1}{\sqrt{a}}\left(\sin(x^2) \partial_1[(x^1)^2 T^1]  + (x^1)^2\partial_2 [ \sin (x^2)T^2] + (x^1)^2 \sin (x^2)\partial_3 T^3 \right)\\
+&= \frac{1}{x^1} \partial_1[(x^1)^2 T^1]  + \frac{1}{\sin (x^2)}\partial_2 [ \sin (x^2)T^2] + \partial_3 T^3 
+\end{align}
+Replace in (4) $\quad x^1 =r$, $x^2 =  \theta$ and $x^3 = \phi$
+\begin{align}
+\ T^n_{\ |n} = \frac{1}{r^2} \partial_r [r^2 \ T^r]  + \frac{1}{\sin \theta}\partial_{\theta} [ \sin \theta \ T^{\theta}] + \partial_{\phi} T^{\phi} 
+\end{align}
+Let's calculate the Laplacian.
+\begin{align}
+\Delta V &= \left( a^{mn}\partial_m V\right)_{|n}\\
+\text{be}\quad \quad \quad G^n &= a^{mn}\partial_m V\\
+\text{then (see exercise p.32) } \quad \quad \left\{ \begin{array}{c}
+\ G^1 = \partial_r V\\
+\ G^2 = \frac{1}{r^2}\partial_{\theta} V\\
+\ G^1 = \frac{1}{r^2 \sin ^2 \theta}\partial_{\phi} V\\
+\end{array}\right.
+\end{align}
+and by the previous result of this exercise
+\begin{align}
+\Delta V &= G^n_{|n} = \frac{1}{r^2} \partial_r [r^2 \ G^1]  + \frac{1}{\sin \theta}\partial_{\theta} [ \sin \theta \ G^{2}] + \partial_{\phi} G^{3} \\
+\ &= \frac{1}{r^2} \partial_r [r^2 \partial_r V]  + \frac{1}{r^2 \sin \theta}\partial_{\theta} [ \sin \theta \ \partial_{\theta} V] + \frac{1}{r^2 \sin ^2 \theta}\partial^2_{\phi} V
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p62-exercise}
+\begin{tcolorbox}
+Prove that if a pair of vectors are unit orthogonal vectors at a point on a curve, and if they are both propagated parallelly along the curve, then they remain unit orthogonal vectors along the curve.
+\end{tcolorbox}
+Given is, a pair of vectors $U^m$ and $V^m$ which are unit orthogonal vectors at a point on a curve. So,
+\begin{align}
+\begin{array}{cc}
+\text{U is a unit vector (2.302)}& a_{mn}U^m U^n = \epsilon\\
+\text{V is a unit vector (2.302)}& a_{mn}V^m V^n = \epsilon\\
+\text{U, V are orthogonal (2.317)}& a_{mn}U^m V^n = 0\\
+\end{array}
+\end{align}
+at one point on the curve.\\
+We have to prove that the above properties are valid along the curve (i.e. $\forall$ points on the curve) provided that the vectors are propagated // along the curve, which means
+\begin{align}
+\textbf{(2.512)}\quad\quad \frac{\delta U^r}{\delta u} &= \dv{U^r}{u} + \Gamma^r_{mn}U^m \dv{x^n}{u} = 0
+\end{align}
+for both vectors $U, V$. Thus,
+\begin{align}
+\dv{U^r}{u} = - \Gamma^r_{mn}U^m \dv{x^n}{u}
+\end{align}\\
+i) Consider the magnitude M at a random point on the curve
+\begin{align}
+\ M &= a_{mn}U^m U^n \\
+\Rightarrow \quad\quad \dv{M}{s} &= \dv{a_{mn}}{u}U^m U^n + 2a_{mn}U^m \dv{U^n}{u} 
+\end{align}\\
+Obviously $M$ and $\dv{M}{s}$ are invariants. Also, we can choose at any point on the curve a Riemaniann coordinate system (RCS) for which the Christoffel symbols vanish at that point. Hence, $\dv{U^r}{u} = 0 $ at that point and the second term in the right part of (5) vanish. (5) becomes then,
+\begin{align}
+ \dv{M}{s} = \pdv{a^,_{mn}}{x^{,k}}\dv{x^{,k}}{s}U^{,m} U^{,n}  
+\end{align}
+We also know \textbf{(2.425. page 41)} that $[km,n]^, + [kn,m]^, = \pdv{a^,_{mn}}{x^{,k}}$. But in the chosen coordinate system, $[km,n] = 0$ at the origin of this coordinate system. So by (6) we get $\dv{M}{s} = 0$.\\
+So the magnitude is constant along the curve and as we know that a certain point $M =1$:\\
+$$\textbf{ U,V are unit vectors along the curve}$$\newpage
+ii) Consider now the angle between the vectors $U,V$. Be $A = \cos \ \theta$.By definition 
+\begin{align}
+\ A &= a_{mn}U ^mV^n\\
+\Rightarrow \quad\quad \dv{A}{s} &= \dv{a_{mn}}{u}U^m V^n + a_{mn}(V^m \dv{U^n}{u} +U^m \dv{V^n}{u} )
+\end{align}
+We follow the same reasoning as in i) and so
+$$\dv{A}{s} = 0$$
+So, the angle is constant and we know is is $\frac{\pi}{2}$ at a certain point. So,:
+$$\textbf{ U,V are orthogonal along the curve}$$
+
+$$\medblackdiamond$$
+\newpage
+
+\section{p62-exercise}
+\begin{tcolorbox}
+Given that $\lambda^r$ is a unit vector field, prove that $$\lambda^r_{|s}\lambda_r = 0 \quad \text{and}\quad \lambda^r\lambda_{r|s} = 0 $$
+Is the relation $\lambda^r_{|s}\lambda_s = 0$ true for a general unit vector field?
+\end{tcolorbox}
+To simplify the calculation, we choose a random element in the unit vector field and use at that point a Riemaniann coordinate system (RCS). So, we have
+\begin{align}
+\lambda^r_{|s} = \partial_s \lambda^r \quad & \text{and}\quad \lambda_{r|s} = \partial_s \lambda_r\\
+\text{as we have a unit vector fields:}\quad\quad a_{mn}\lambda^m\lambda^n &= 1\\
+\Leftrightarrow \lambda_n\lambda^n &= 1\quad\quad\text{(by lowering the index m)}\\
+\Rightarrow \quad\quad \lambda^n\partial_s \lambda_n + \lambda_n\partial_s \lambda^n = 0
+\end{align}
+We prove that $$\lambda^n\partial_s\lambda_n = \lambda_n\partial_s\lambda^n\quad \forall\text{ vector fields}$$
+We have the trivial identity
+\begin{align}
+\partial_s(\lambda^r\lambda_r) &= \partial_s(\lambda^r\lambda_r)\\
+\Leftrightarrow \quad\quad \partial_s(a^{rm}\lambda_m\lambda_r) &= \partial_s(a_{rm}\lambda^m\lambda^r)
+\end{align}
+\begin{lemma}: $\partial_sa^{rm} = 0$ in a Riemaniann coordinate system (i.e. at the origin)\\\\
+We have
+\begin{align}
+\ a^{rm}a_{ms} &= \delta^r_s\\
+\Rightarrow a_{ms}\partial_k a^{rm}  & +a^{rm}\partial_k a_{ms} = 0\\
+\text{we know (2.618)}\quad\quad \partial_r a_{mn} &= 0\quad\quad\text{at the origin of a RCS}\\
+\text{so (8) becomes}\quad\quad a_{ms}\partial_k a^{rm} & = 0\\
+\text{multiply (10) by}\quad a^{ns}\quad\Rightarrow \underbrace{a^{ns}a_{ms}}_{= \delta^n_m}\partial_k a^{rm}& = 0\\
+\Rightarrow\quad\quad \partial_k a^{rn}& = 0
+\end{align}
+\end{lemma}
+$$\meddiamond$$
+Now, expanding (6) and using $\textbf{2.618}$ and the lemma:
+\begin{align}
+\ a^{rm}\lambda_m\partial_s \lambda_r+ a^{rm} \lambda_r \partial_s \lambda_m &= a_{rm} \lambda^m \partial_s \lambda^r + a_{rm} \lambda^r \partial_s \lambda^m\\
+\text{renaming dummy indices:}\quad\quad   a^{rm} \lambda_r \partial_s \lambda_m &= a_{rm} \lambda^r \partial_s \lambda^m \\
+\Rightarrow\quad\quad \lambda^m \partial_s \lambda_m &= \lambda_m \partial_s \lambda^m
+\end{align}
+Considering (5) and (15) we conclude:
+\begin{align}
+\lambda^n \partial_s \lambda_n &= \lambda_n \partial_s \lambda^n = 0
+\end{align}
+and as $\partial_s \lambda_n = \lambda_{n|s} $ and $\partial_s \lambda^n = \lambda^n_{\ |s} $ at the origin of the considered coordinate system, we have:
+\begin{align}
+\lambda^m \lambda_{n|s} &= \lambda_m \lambda^n_{\ |s} = 0
+\end{align}\\\\
+
+Is the relation $\lambda^r_{|s}\lambda_s = 0$ true for a general unit vector field?\\
+The answer is NO, as we used explicitly the requirement $a_{mn}\lambda^m\lambda^n = 1 $ to come to the identities (17).
+$$\medblackdiamond$$
+\newpage
+
+\section{p64-clarification 2.625}
+\begin{tcolorbox}
+$\textbf{2.625} \quad\quad\quad\quad\quad\quad \dv{ x^r}{x^N} = \frac{X^r}{X^N}$
+\end{tcolorbox}
+Be $C$ a surface defined by the function $F(x^1,\dots, x^{N-1}) = C$ and  $c_{\perp}$ the curve intersecting the surface $C$ perpendicularly at a point $p$.\\
+Along the curve at that point $p$ we have
+\begin{align}
+\text{as}\quad\quad & \left \{ \begin{array}{cc}
+\dv{ x^r}{s}& \text{is the tangent vector along}\quad c_{\perp}\\
+\ X^r = a^{rn}\pdv{F}{x^n}& \text{ is orthogonal on the surface (2.623)}\quad C\\
+\end{array}\right.\\
+\Rightarrow \quad\quad & \dv{ x^r}{s} = kX^r
+\end{align}
+So, $\dv{ x^r}{s}$ is proportional to $X^r$ (as the curve intersects the surface orthogonally). This means that also all the components (coordinates) of both quantities are proportional. And so,
+\begin{align}
+\frac{\dv{ x^r}{s}}{\dv{ x^N}{s}} &= \frac{kX^r}{kX^N}\\
+\Rightarrow\quad\quad \dv{ x^r}{x^N} &= \frac{X^r}{X^N}
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p65-exercise}
+\begin{tcolorbox}
+Deduce from $\textbf{2.629}$ that $$a^{N \rho} = 0  \quad\quad a^{NN} = \frac{1}{a_{NN}}$$
+\end{tcolorbox}
 
 $$\medblackdiamond$$
 \newpage
