@@ -367,7 +367,6 @@ $$\medblackdiamond$$
 What are the values (in a space of N dimensions) of the folllowing contractions formed from the Kronecker delta?
 $$\delta^{m}_{m},  \delta^{m}_{n} \delta^{n}_{m},  \delta^{m}_{n} \delta^{n}_{r} \delta^{r}_{m}$$
 \end{tcolorbox}
-We can split the summation $A^{rs}B_{rs}$ in three subsummations:
 \begin{align}
 \delta^{m}_{m} = N\\
 \delta^{m}_{n} \delta^{n}_{m} = \delta^{m}_{m} = N\\
@@ -853,8 +852,8 @@ $$\medblackdiamond$$
 \begin{tcolorbox}
 Prove that $$\pdv{ln\left|\pdv{x^m}{y^n}\right|}{x^r} =\pdv{y^m}{x^r}{x^n}\pdv{x^n}{y^m}$$.
 \end{tcolorbox}
-Lemma:\\
-Be $A$ a square matrix $NxN$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. \\Define $A^{,}$ as $(A^,_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^, = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
+\begin{lemma}
+Be $A$ a square matrix $NxN$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. Define $A^{,}$ as $(A^,_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^, = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
 Proof:\\
 By definition of the determinant, we have
 \begin{align}
@@ -879,7 +878,9 @@ Hence, (4) becomes
 \text{(6) and  (7) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{C^i_j}{\left|A\right|}\\
 \text{(3) and  (8) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{(A^{-1}_{ij})^T \left|A\right|}{\left|A\right|} = (A^{-1}_{ij})^T \\
 \Rightarrow (ln\left|A\right|)^, &= (A^{-1})^T
-\end{align}\\\\
+\end{align}
+\end{lemma}$$\meddiamond$$
+
 Now the main proof:\\
 Let, 
 \begin{align}

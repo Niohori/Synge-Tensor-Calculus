@@ -1114,6 +1114,59 @@ $$\medblackdiamond$$
 \begin{tcolorbox}
 Deduce from $\textbf{2.629}$ that $$a^{N \rho} = 0  \quad\quad a^{NN} = \frac{1}{a_{NN}}$$
 \end{tcolorbox}
+We have (see 2.629):
+\begin{align}
+\ a_{N\rho} =0\\
+\text{and also}\quad\quad a_{Nm}a^{ms} = \delta^s_N
+\end{align}
+In (2) split the $m$ index in the subspace and the remaining coordinate $N$
+\begin{align}
+\ a_{N\rho}a^{\rho s} +  a_{NN}a^{N s} &= \delta^s_N\\
+\text{as}\quad a_{N\rho} =0 \Rightarrow \quad\quad a_{NN}a^{N s} &= \delta^s_N
+\end{align}\\
+Case 1: $s\ne N$
+\begin{align}
+\  a_{NN}a^{N s} =0 \quad \Leftrightarrow \quad a_{NN}a^{N \rho} =0 \quad\quad \text{(as}\quad s\ne N \text{)}\\
+\text{as we suppose}\quad a_{NN}\ne 0 \quad \Rightarrow \quad a^{N \rho} =0
+\end{align}\\
+
+Case 2: $s= N$
+\begin{align}
+\  a_{NN}a^{N N} &=1 \\
+\Rightarrow \quad a^{N N} &=\frac{1}{a_{NN}}
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p69-exercise}
+\begin{tcolorbox}
+Show that
+$$\textbf{2.648}\quad\quad T^{\alpha}_{\ |\beta} = T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N$$
+$$\textbf{2.649}\quad\quad T^{N}_{\ |\alpha} = \partial_{\alpha}T^{N} - \frac{1}{2 a_{NN}} \partial_N a_{\alpha\mu}T^{\mu} + \frac{1}{2 a_{NN}} \partial_{\alpha} a_{NN}T^{N}$$
+$$\textbf{2.650}\quad\quad T^{\alpha}_{\ |N} = \partial_{N}T^{\alpha}  + \half a^{\alpha\mu} \partial_N a_{\mu\sigma}T^{\sigma} - \half a^{\alpha\mu}  \partial_{\mu} a_{NN}T^{N}$$
+\end{tcolorbox}
+i) $T^{\alpha}_{\ |\beta} = T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N$\\
+\begin{align}
+\textbf{(2.520)}\quad\quad \Rightarrow \quad\quad T^{\alpha}_{\ |\beta} &= \partial_{\beta}T^{\alpha}+\Gamma^{\alpha}_{m\beta}T^m \quad\quad\text{(}m = 1,\dots,N \text{)}\\
+\Leftrightarrow \quad\quad T^{\alpha}_{\ |\beta} &= \underbrace{ \partial_{\beta}T^{\alpha}+ \Gamma^{\alpha}_{\mu \beta} T^{\mu}}_{T^{\alpha}_{ \ || \beta}} +\Gamma^{\alpha}_{N \beta}T^{N}\\
+\textbf{(2.639)}\quad\quad \Gamma^{\alpha}_{N\beta} &= \half a^{\alpha \mu}\partial_N a^{\mu \beta}\\
+\text{(2) and (3): }\quad\quad T^{\alpha}_{\ |\beta} &= T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N
+\end{align}
+$$\meddiamond$$
+Remark: We also use $\textbf{(2.639)}$ for the two other identities.\\\\
+ii) $T^{N}_{\ |\alpha} = \partial_{\alpha}T^{N} - \frac{1}{2 a_{NN}} \partial_N a_{\alpha\mu}T^{\mu} + \frac{1}{2 a_{NN}} \partial_{\alpha} a_{NN}T^{N}$\\
+\begin{align}
+\textbf{(2.520)}\quad\quad \Rightarrow \quad\quad T^{N}_{\ |\alpha} &= \partial_{\alpha}T^{N}+\Gamma^{N}_{m\alpha}T^m \quad\quad\text{(}m = 1,\dots,N \text{)}\\
+\Leftrightarrow \quad\quad T^{N}_{\ |\alpha} &=  \partial_{\beta}T^{\alpha}+ \underbrace{\Gamma^{N}_{\sigma \alpha}}_{ - \frac{1}{2a_{NN}}\partial_N a_{\sigma\alpha}} T^{\sigma } +\underbrace{\Gamma^{N}_{N \alpha}}_{ \frac{1}{2a_{NN}}\partial_{\alpha} a_{NN}}T^{N}\\
+\Rightarrow \quad\quad T^{N}_{\ |\alpha} &=  \partial_{\beta}T^{\alpha} - \frac{1}{2a_{NN}}\partial_N a_{\sigma\alpha}T^{\sigma } +\frac{1}{2a_{NN}}\partial_{\alpha} a_{NN}T^{N}
+\end{align}\\
+iii) $T^{\alpha}_{\ |N} = \partial_{N}T^{\alpha}  + \half a^{\alpha\mu} \partial_N a_{\mu\sigma}T^{\sigma} - \half a^{\alpha\mu}  \partial_{\mu} a_{NN}T^{N}$\\
+\begin{align}
+\textbf{(2.520)}\quad\quad \Rightarrow \quad\quad T^{\alpha}_{\ |N} &= \partial_{N}T^{\alpha}+\Gamma^{\alpha}_{mN}T^m \quad\quad\text{(}m = 1,\dots,N \text{)}\\
+\Leftrightarrow \quad\quad T^{\alpha}_{\ |N} &=  \partial_{N}T^{\alpha}+ \underbrace{\Gamma^{\alpha}_{\sigma N }}_{ \half a^{\alpha \mu}\partial_N a_{\mu\sigma}}  T^{\sigma }+\underbrace{\Gamma^{\alpha}_{N N}}_{ -\half a^{\alpha\mu}\partial_{\mu} a_{NN}}T^{N}\\
+\Rightarrow \quad\quad T^{\alpha}_{\ |N} &=  \partial_{N}T^{\alpha}+ \half a^{\alpha \mu}\partial_N a_{\mu\sigma}T^{\sigma } -\half a^{\alpha\mu}\partial_{\mu} a_{NN}T^{N}
+\end{align}
+
 
 $$\medblackdiamond$$
 \newpage
