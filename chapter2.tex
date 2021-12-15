@@ -1082,10 +1082,78 @@ Considering (5) and (15) we conclude:
 and as $\partial_s \lambda_n = \lambda_{n|s} $ and $\partial_s \lambda^n = \lambda^n_{\ |s} $ at the origin of the considered coordinate system, we have:
 \begin{align}
 \lambda^m \lambda_{n|s} &= \lambda_m \lambda^n_{\ |s} = 0
-\end{align}\\\\
-
+\end{align}\\
+$$\meddiamond$$
 Is the relation $\lambda^r_{|s}\lambda_s = 0$ true for a general unit vector field?\\
-The answer is NO, as we used explicitly the requirement $a_{mn}\lambda^m\lambda^n = 1 $ to come to the identities (17).
+The answer is NO. Let's consider the following unit vector field in a Cartesian Coordinate system:
+\begin{figure}[H]
+\centering
+\begin{minipage}[H]{.4\textwidth}
+%\centering
+\vspace{0pt}
+\includegraphics[scale=.3]{unitvectorfield1.jpg}
+\end{minipage}\hfill
+\begin{minipage}[H]{0.4\textwidth}
+%\centering
+\vspace{50pt}
+$$V:\mathbb{R}_*^2\rightarrow \mathbb{R}^2|V(x,y) = \left< \frac{x}{\sqrt{x^2+y^2}},-\frac{y}{\sqrt{x^2+y^2}} \right>$$
+\end{minipage}
+\end{figure}
+Put $ \rho = \sqrt{x^2+y^2}$, we get (as we have a Cartesian Coordinate system, the calculation simplify as the Christoffel symbols vanish and the covariant components of the vectors are equal to their contravariant part):
+\begin{align}
+\ & \left \{ \begin{array}{c}
+\ V^1 = V_1 = +\frac{x}{r}\\
+\ V^2 = V_2 = -\frac{y}{r}\\
+\end{array}\right.\\
+\ & \left \{ \begin{array}{cc}
+\ V^1_{\ |1} =  V_{1|1} = \frac{y^2}{r^3}&V^1_{\ |2} =  V_{1|2} = -\frac{xy}{r^3}\\
+\ V^2_{\ |1} =  V_{2|1} = \frac{xy}{r^3}&V^2_{\ |2} =  V_{2|2} = -\frac{x^2}{r^3}\\
+\end{array}\right.\\
+\Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{|s}V_s = V^1_{|1}V_1+V^1_{|2}V_2 = \frac{y^2}{r^3}\frac{x}{r}+ (-\frac{xy}{r^3})(-\frac{y}{r}) = \frac{xy^2}{r^4} \ne 0\\
+\ V^2_{|s}V_s = V^2_{|1}V_1+V^2_{|2}V_2 = \frac{xy}{r^3}\frac{x}{r}+ (-\frac{y}{r})(-\frac{y}{r}) = \frac{x^2 y}{r^4} \ne 0
+\end{array} \right.
+\end{align}
+Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
+\begin{align}
+\Rightarrow \quad\quad &\left \{ \begin{array}{c}V^s_{|1}V_s = V^1_{|1}V_1+V^2_{|1}V_2 = (+\frac{y^2}{r^3})\frac{x}{r}+ (+\frac{xy}{r^3})(-\frac{y}{r}) =0\\
+\ V^s_{|2}V_s = V^1_{|2}V_1+V^2_{|2}V_2 = (-\frac{xy}{r^3})\frac{x}{r}+ (-\frac{y}{r})(-\frac{x^2}{r^3}) = 0
+\end{array} \right.
+\end{align}\\\\
+Now, let's consider another unit vector field in a Cartesian Coordinate system:
+\begin{figure}[H]
+\centering
+\begin{minipage}[H]{.4\textwidth}
+%\centering
+\vspace{0pt}
+\includegraphics[scale=.3]{unitvectorfield2.jpg}
+\end{minipage}\hfill
+\begin{minipage}[H]{0.4\textwidth}
+%\centering
+\vspace{50pt}
+$$V:\mathbb{R}_*^2\rightarrow \mathbb{R}^2|V(x,y) = \left< \frac{x}{\sqrt{x^2+y^2}},\frac{y}{\sqrt{x^2+y^2}} \right>$$
+\end{minipage}
+\end{figure}
+\begin{align}
+\ & \left \{ \begin{array}{c}
+\ V^1 = V_1 = +\frac{x}{r}\\
+\ V^2 = V_2 = +\frac{y}{r}\\
+\end{array}\right.\\
+\ & \left \{ \begin{array}{cc}
+\ V^1_{\ |1} =  V_{1|1} = \frac{y^2}{r^3}&V^1_{\ |2} =  V_{1|2} = -\frac{xy}{r^3}\\
+\ V^2_{\ |1} =  V_{2|1} = -\frac{xy}{r^3}&V^2_{\ |2} =  V_{2|2} = +\frac{x^2}{r^3}\\
+\end{array}\right.\\
+\Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{|s}V_s = V^1_{|1}V_1+V^1_{|2}V_2 = (+\frac{y^2}{r^3})\frac{x}{r}+ (-\frac{xy}{r^3})(+\frac{y}{r}) =  0\\
+\ V^2_{|s}V_s = V^2_{|1}V_1+V^2_{|2}V_2 = (-\frac{xy}{r^3})\frac{x}{r}+ (+\frac{y}{r})(+\frac{y}{r}) =  0
+\end{array} \right.
+\end{align}
+Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
+\begin{align}
+\Rightarrow \quad\quad &\left \{ \begin{array}{c}V^s_{|1}V_s = V^1_{|1}V_1+V^2_{|1}V_2 = (+\frac{y^2}{r^3})(+\frac{x}{r})+ (-\frac{xy}{r^3})(+\frac{y}{r}) =0\\
+\ V^s_{|2}V_s = V^1_{|2}V_1+V^2_{|2}V_2 = (-\frac{xy}{r^3})(+\frac{x}{r})+ (+\frac{y}{r})+\frac{x^2}{r^3}) = 0
+\end{array} \right.
+\end{align}\\
+So, in the second example the relationship $\lambda^r_{|s}\lambda_s = 0$ holds.
+Question (to investigate further and later) : does the fact that in the first case $rot\overline{V}  \ne 0$ and in the second case $rot \overline{V} = 0$, has a relation with this expression?
 $$\medblackdiamond$$
 \newpage
 
