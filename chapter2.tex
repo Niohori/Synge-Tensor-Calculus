@@ -1153,7 +1153,7 @@ Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
 \end{array} \right.
 \end{align}\\
 So, in the second example the relationship $\lambda^r_{|s}\lambda_s = 0$ holds.
-Question (to investigate further and later) : does the fact that in the first case $rot\overline{V}  \ne 0$ and in the second case $rot \overline{V} = 0$, has a relation with this expression?
+Question (to investigate further and later) : does the fact that in the first case $\del \maal \overline{V}  \ne 0$ and in the second case $\del \maal \overline{V}= 0$, means there some relation with this expression?
 $$\medblackdiamond$$
 \newpage
 
@@ -1206,6 +1206,21 @@ Case 2: $s= N$
 $$\medblackdiamond$$
 \newpage
 
+
+\section{p69-clarification on 2.645}
+\begin{tcolorbox}
+In 2.645 we have $$T_{\alpha | \beta} =T_{\alpha || \beta}  +\frac{1}{2}\frac{1}{a_{NN}}\partial_N  a_{\alpha\beta}T_{N}$$ and $$T_{\alpha | \beta} =T_{\alpha || \beta}  +\frac{1}{2}\partial_N  a_{\alpha\beta}T^{N}$$
+\end{tcolorbox}
+Indeed,
+\begin{align}
+\ T^N &= a^{mN}T_m\\
+\ & = a^{\alpha N}T_{\alpha}+a^{N N}T_{N}\\
+\text{but (2.631)}\quad\quad a^{\alpha N} &= 0\\
+\Rightarrow \quad\quad T^N &= a^{NN} T_N\\
+\text{as}\quad a^{NN}= \frac{1}{a_{NN}} \quad \Rightarrow \quad\quad  T_{\alpha | \beta} &= T_{\alpha || \beta}  + \frac{1}{2}\partial_N  a_{\alpha\beta}T^{N}
+\end{align}
+$$\medblackdiamond$$
+\newpage
 \section{p69-exercise}
 \begin{tcolorbox}
 Show that
@@ -1234,7 +1249,67 @@ iii) $T^{\alpha}_{\ |N} = \partial_{N}T^{\alpha}  + \half a^{\alpha\mu} \partial
 \Leftrightarrow \quad\quad T^{\alpha}_{\ |N} &=  \partial_{N}T^{\alpha}+ \underbrace{\Gamma^{\alpha}_{\sigma N }}_{ \half a^{\alpha \mu}\partial_N a_{\mu\sigma}}  T^{\sigma }+\underbrace{\Gamma^{\alpha}_{N N}}_{ -\half a^{\alpha\mu}\partial_{\mu} a_{NN}}T^{N}\\
 \Rightarrow \quad\quad T^{\alpha}_{\ |N} &=  \partial_{N}T^{\alpha}+ \half a^{\alpha \mu}\partial_N a_{\mu\sigma}T^{\sigma } -\half a^{\alpha\mu}\partial_{\mu} a_{NN}T^{N}
 \end{align}
+$$\medblackdiamond$$
+\newpage
 
+\section{p71-exercise}
+\begin{tcolorbox}
+Write down equation 2.643 tot 2.650 for the special cae of a geodesic normal coordinate system.
+\end{tcolorbox}
+\begin{align}
+\ \textbf{(2.643)}\quad \quad T_{\alpha || \beta} &= \partial_{\beta}T_{\alpha} - \Gamma^{\gamma}_{\alpha\beta}T_{\gamma}\quad\quad \text{(does not change)}\\
+\textbf{(2.644)}\quad \quad T_{\alpha | \beta} &=T_{\alpha || \beta}  - \underbrace{\Gamma^{N}_{\alpha\beta}}_{=\frac{1}{2} \frac{1}{a_{NN}}\partial_N  a_{\alpha\beta}}T_{N}\\
+&=T_{\alpha || \beta}  +\frac{1}{2} \epsilon\partial_N  a_{\alpha\beta}T_{N}\\
+\textbf{(2.645)}\quad \quad T_{\alpha | \beta} &=T_{\alpha || \beta}  +\frac{1}{2}\partial_N  a_{\alpha\beta}T^{N}\quad\quad \text{(does not change)}\\
+\textbf{(2.646)}\quad \quad T_{N| \alpha } &=\partial_{\alpha}T_N  -\frac{1}{2}\partial_N  a_{\mu\alpha}T^{\mu} -\frac{1}{2}\underbrace{\partial_{\alpha}  a_{NN}}_{=0}T^{N}\\
+&=\partial_{\alpha}T_N  -\frac{1}{2}\partial_N  a_{\mu\alpha}T^{\mu} \\
+\textbf{(2.647)}\quad \quad T_{ \alpha |N } &=\partial_N T_{\alpha}  -\frac{1}{2}\partial_N  a_{\mu\alpha}T^{\mu} -\frac{1}{2}\underbrace{\partial_{\alpha}  a_{NN}}_{=0}T^{N}\\
+&=\partial_N T_{\alpha}  -\frac{1}{2}\partial_N  a_{\mu\alpha}T^{\mu} \\
+\textbf{(2.648)}\quad \quad T^{\alpha}_{ \  | \beta} &=T^{\alpha}_{ || \beta}  + \frac{1}{2}a^{\alpha\mu}\partial_N  a_{\mu\beta}T_{N}\quad\quad\text{(does not change)}\\
+\textbf{(2.649)}\quad \quad T^N_{ \ | \alpha} &=\partial_{\alpha}T^N  -\frac{1}{2}\frac{1}{a_{NN}}\partial_N  a_{\mu\alpha}T^{\mu} -\frac{1}{2}\frac{1}{a_{NN}}\underbrace{\partial_{\alpha}  a_{NN}}_{=0}T^{N}\\
+\ &= \partial_{\alpha}T^N  -\frac{1}{2}\epsilon\partial_N  a_{\mu\alpha}T^{\mu} \\
+\textbf{(2.650)}\quad \quad T^{\alpha}_{\ |N} &=\partial_N T^{\alpha}  +\frac{1}{2}a^ {\alpha\mu}\partial_N  a_{\mu\sigma}T^{\sigma} -\frac{1}{2}a^{\alpha\mu}\underbrace{\partial_{\mu}  a_{NN}}_{=0}T^{N}\\
+\ &=\partial_N T^{\alpha}  +\frac{1}{2}a^ {\alpha\mu}\partial_N  a_{\mu\sigma}T^{\sigma} 
+\end{align}
+\\\\
+To investigate: note (3) and (4) which suggest that $\epsilon T_{N} = T^{N}$. Prove formally?
+$$\medblackdiamond$$
+\newpage
 
+\section{p75-exercise}
+\begin{tcolorbox}
+For positive definite metric forms, write out explicitly the Frenet formulae for the case N=2, 3 and 4.
+\end{tcolorbox}
+The general Frenet formulae are 
+\begin{align}
+\left \{ \begin{array}{c}
+\frac{\delta\lambda_{(M-1)}^r}{\delta s} = \kappa_{(M)}\lambda^r_{(M)} - \epsilon_{(M-2)}\epsilon_{(M-1)}\kappa_{(M-1)}\lambda^r_{(M-2)}\\
+\epsilon_{(M-1)}\lambda^n_{(M-1)}\lambda_{(M-1)n} = 1\quad\quad \text{(M=1,2,...,N)}
+\end{array} \right.
+\end{align}
+As $\Phi$ is positive definite, we have $\epsilon_{(k)} = 1\quad \forall k$\\\\
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+N=2 & N=3 & N=4 \\
+\hline
+& &\\
+$\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $ & $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $& $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $ \\ 
+& &\\
+$\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$& $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ & $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ \\ 
+& &\\
+& $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ & $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ \\
+& &\\
+& & $\frac{\delta\lambda_{(3)}^r}{\delta s} = \kappa_{(4)}\lambda^r_{(4)} - \kappa_{(3)}\lambda^r_{(2)}$ \\
+& &\\
+$\lambda^n\lambda_n= 1$&$\lambda^n\lambda_n= 1$&$\lambda^n\lambda_n= 1$\\
+& &\\
+$\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{(1)}^n\lambda_{(1)n}= 1$\\
+& &\\
+&$\lambda_{(2)}^n\lambda_{(2)n}= 1$&$\lambda_{(2)}^n\lambda_{(2)n}= 1$\\
+& &\\
+&&$\lambda_{(3)}^n\lambda_{(3)n}= 1$\\
+& &\\
+\hline
+\end{tabular}
 $$\medblackdiamond$$
 \newpage
