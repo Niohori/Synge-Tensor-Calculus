@@ -1276,6 +1276,88 @@ To investigate: note (3) and (4) which suggest that $\epsilon T_{N} = T^{N}$. Pr
 $$\medblackdiamond$$
 \newpage
 
+
+\section{p73-Clarification 2.706}
+\begin{tcolorbox}
+... Let us now define a unit vector $\lambda^r_{(2)}$ and a positive invariant $\kappa_{(2)}$ by the equation \\
+\begin{align}
+\left \{ \begin{array}{c}
+\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \epsilon\epsilon_{(1)}\kappa_{(1)}\lambda^r\\
+\epsilon_{(2)}\lambda^n_{(2)}\lambda_{(2)n} = 1
+\end{array} \right.
+\end{align}  
+\end{tcolorbox}
+We can state that $\kappa_{(2)}$ is an invariant but one has to check whether the expression $(1)$ implies that $\kappa_{(2)}$ is indeed invariant.\\
+What we know is that $\lambda^r, \frac{\delta \lambda^r}{\delta s},\frac{\delta\lambda_{(1)}^r}{\delta s},  \lambda^r_{(2)}$ are contravariant vectors. Also $\kappa_{(1)}$ is an invariant as $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)}$ and the magnitude of $\frac{\delta\lambda^r}{\delta s}$ does not depend on the coordinate system. So,
+\begin{align}
+\text{(1)}\times \lambda_{(2)r} \quad\Rightarrow \quad\quad \frac{\delta\lambda_{(1)}^r}{\delta s}\lambda_{(2)r} &= \kappa_{(2)}\lambda^r_{(2)}\lambda_{(2)r} - \epsilon\epsilon_{(1)}\kappa_{(1)}\lambda^r\lambda_{(2)r}\\
+\Rightarrow \quad\quad \kappa_{(2)}\underbrace{\lambda^r_{(2)}\lambda_{(2)r}}_{\text{invariant}} &= \underbrace{\frac{\delta\lambda_{(1)}^r}{\delta s}\lambda_{(2)r}}_{\text{invariant}}  + \underbrace{\epsilon\epsilon_{(1)}}_{\text{invariant}} \underbrace{\kappa_{(1)}}_{\text{invariant}} \underbrace{\lambda^r \lambda_{(2)r}}_{\text{invariant}} \\
+\Rightarrow \quad\quad \kappa_{(2)}&= \text{invariant} 
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p74-Clarification 2.710}
+\begin{tcolorbox}
+\begin{align}
+\textbf{2.710}\quad\quad\left \{ \begin{array}{c}
+\frac{\delta\lambda_{(M-1)}^r}{\delta s} = \kappa_{(M)}\lambda^r_{(M)} - \epsilon_{(M-2)}\epsilon_{(M-1)}\kappa_{(M-1)}\lambda^r_{(M-2)}\\
+\epsilon_{(M-1)}\lambda^n_{(M-1)}\lambda_{(M-1)n} = 1\quad\quad \text{(M=1,2,...,N)}
+\end{array} \right.
+\end{align}
+... It is easily proved by mathematical induction that the whole sequence of vectors defined by 2.710 are perpendicular to the tangent and to one another ...
+\end{tcolorbox}
+We already know from 2.703 to 2.709 that $\lambda^r, \lambda_{(1)}^r,\lambda_{(2)}^r,\lambda_{(3)}^r$, satisfying equations (1), are all mutually perpendicular. Let us assume that the orthogonality for the set $\{\lambda_{(k)}^r:k= 0,1,2,3,..., M-1\}$ has been verified. We prove by induction that then, $\lambda_{(M)}^r$ will be orthogonal to all elements of the set.\\
+i) Consider the set $\{\lambda_{(k)}^r:k= 0,1,2,3,..., M-3\}$ where we already know that $\lambda_{(k)}^r$ are mutually perpendicular and also $\lambda_{(k)}^r \perp \lambda_{(M-1)}^r $, $\lambda_{(k)}^r \perp \lambda_{(M-2)}^r$ and $\lambda_{(M-1)}^r \perp \lambda_{(M-1)}^r \quad \forall k$.
+\begin{align}
+\text{(1)}\times \lambda_{(k)r}\quad\Rightarrow\quad\quad \frac{\delta\lambda_{(M-1)}^r}{\delta s}\lambda_{(k)r} &= \kappa_{(M)}\lambda^r_{(M)}\lambda_{(k)r} - \epsilon_{(M-2)}\epsilon_{(M-1)}\kappa_{(M-1)}\underbrace{\lambda^r_{(M-2)}\lambda_{(k)r}}_{=0}\\
+\text{We have}  \quad \quad\quad\quad\quad\lambda_{(k)r}\lambda^r_{(M-1)} &=0\\
+\Rightarrow \quad \quad\quad\quad\quad\ \frac{\delta\lambda_{(k)r}\lambda_{(M-1)}^r}{\delta s} &= \lambda_{(M-1)}^r\frac{\delta\lambda_{(k)r}}{\delta s}+\lambda_{(k)r}\delta\frac{\lambda_{(M-1)}^r}{\delta s}=0\\
+\Rightarrow \quad \quad\quad\quad\quad\ \lambda_{(k)r}\delta\frac{\lambda_{(M-1)}^r}{\delta s} &= - \lambda_{(M-1)}^r\frac{\delta\lambda_{(k)r}}{\delta s}\\
+\text{We have}\quad \quad\quad\quad\quad\frac{\delta\lambda_{(k)r}}{\delta s} &= \kappa_{(k+1)}\lambda_{(k+1)r} - \epsilon_{(k)}\epsilon_{(k-1)}\kappa_{(k)}\lambda_{(k-1)r}\\
+\text{(5) and (6)}\Rightarrow \quad \quad\quad\quad\quad\ \lambda_{(k)r}\delta\frac{\lambda_{(M-1)}^r}{\delta s} &= -\kappa_{(k+1)}\underbrace{\lambda_{(k+1)r} \lambda_{(M-1)}^r}_{=0} - \epsilon_{(k)}\epsilon_{(k-1)}\kappa_{(k)}\underbrace{\lambda_{(k-1)r}\lambda_{(M-1)}^r}_{=0}\\
+\text{From (2)}\Rightarrow \quad \quad\quad\quad\quad\ \kappa_{(M)}\lambda^r_{(M)}\lambda_{(k)r}&=0\\
+\Rightarrow \quad \quad\quad\quad\quad\ \lambda^r_{(M)}& \perp\lambda_{(k)r}\quad\quad \forall k= 0,1,2,3,..., M-3 
+\end{align}\\\\
+ii) Consider the case $k = M-1$\\\begin{align}
+\text{(1)}\times \lambda_{(M-1)r}\quad \frac{\delta\lambda_{(M-1)}^r}{\delta s}\lambda_{(M-1)r} &= \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-1)r} - \epsilon_{(M-2)}\epsilon_{(M-1)}\kappa_{(M-1)}\underbrace{\lambda^r_{(M-2)}\lambda_{(M-1)r}}_{=0}\\
+\text{from (2.530):}\quad\quad \frac{\delta\lambda_{(M-1)}^r}{\delta s}\lambda_{(M-1)r}  &= \half\underbrace{\frac{\delta\lambda_{(M-1)r}\lambda_{(M-1)}^r}{\delta s}}_{=0\text{ as }\lambda_{(M-1)r}\lambda_{(M-1)}^r =  \epsilon_{(M-1)}}\\
+\Rightarrow \quad \quad\quad\quad\quad \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-1)r}&=0\\
+\Rightarrow \quad \quad\quad\quad\quad \lambda_{(M-1)r} & \perp\lambda_{(M)r}
+\end{align}
+
+iii) Consider the case $k = M-2$\\\begin{align}
+\text{(1)}\times \lambda_{(M-2)r}\quad \frac{\delta\lambda_{(M-1)}^r}{\delta s}\lambda_{(M-2)r} &= \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-2)r} - \epsilon_{(M-2)}\epsilon_{(M-1)}\kappa_{(M-1)}\underbrace{\lambda^r_{(M-2)}\lambda_{(M-2)r}}_{=\epsilon_{(M-2)}}\\
+\Rightarrow \quad \quad\quad\quad\quad\frac{\delta\lambda_{(M-1)}^r}{\delta s}\lambda_{(M-2)r} &= \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-2)r} - \epsilon_{(M-1)}\kappa_{(M-1)}\underbrace{\epsilon_{(M-2)}\epsilon_{(M-2)}}_{=1}\\
+\Rightarrow \quad \quad\quad\quad\quad\frac{\delta\lambda_{(M-1)}^r}{\delta s}\lambda_{(M-2)r} &= \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-2)r} - \epsilon_{(M-1)}\kappa_{(M-1)}\\
+\text{We have}  \quad \quad\quad\quad\quad\lambda_{(M-1)}^r\lambda_{(M-2)r} &=0\\
+\Rightarrow \quad \quad\quad\quad\quad\ \lambda_{(M-2)r}\frac{\delta\lambda_{(M-1)}^r}{\delta s} &= -\lambda_{(M-1)}^r\frac{\delta\lambda_{(M-2)r}}{\delta s}\\
+\text{We have also }  \quad\frac{\delta\lambda_{(M-2)r}}{\delta s} &= \kappa_{(M-1)}\lambda_{(M-1)r} - \epsilon_{(M-3)}\epsilon_{(M-2)}\kappa_{(M-2)}\lambda_{(M-3)r}\\
+\text{(19)}\times \lambda^r_{(M-1)} \text{ and (18): }  \lambda_{(M-2)r}\frac{\delta\lambda_{(M-1)}^r}{\delta s} &= -\kappa_{(M-1)}\underbrace{\lambda^r_{(M-1)}\lambda_{(M-1)r}}_{=\epsilon_{(M-1)}} - \epsilon_{(M-3)}\epsilon_{(M-2)}\kappa_{(M-2)}\underbrace{\lambda^r_{(M-3)}\lambda_{(M-1)r}}_{=0}\\
+\Rightarrow \quad \quad\quad\quad\quad\ \lambda_{(M-2)r}\frac{\delta\lambda_{(M-1)}^r}{\delta s} &= -\kappa_{(M-1)}\epsilon_{(M-1)}\\
+\text{(16) and (21):}\quad \quad\quad\quad\quad -\kappa_{(M-1)}\epsilon_{(M-1)} &= \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-2)r} - \epsilon_{(M-1)}\kappa_{(M-1)}\\
+\Rightarrow \quad \quad\quad\quad\quad \kappa_{(M)}\lambda^r_{(M)}\lambda_{(M-2)r}&=0\\
+\Rightarrow \quad \quad\quad\quad\quad \lambda_{(M-2)r}\perp\lambda_{(M)r}
+\end{align}
+With, i), ii), iii) all possible cases are covered which makes the proof complete.
+$$\medblackdiamond$$
+\newpage
+
+\section{p75-Clarification 2.714}
+\begin{tcolorbox}
+$\textbf{2.714} \quad \quad (\kappa_{(1)})^2 = \epsilon_{(1)} a_{mn} \frac{\delta \lambda^{m}}{\delta s} \frac{\delta \lambda^{n}}{\delta s}$,   $\quad \quad \epsilon_{(1)} = \pm 1$
+\end{tcolorbox}
+\begin{align}
+\ \frac{\delta \lambda^{n}}{\delta s} &= \kappa_{(1)}\lambda_{(1)}^{n}\\
+\text{(1)}\times \text{(1)}\quad\Rightarrow \quad\quad \frac{\delta \lambda^{m}}{\delta s}\frac{\delta \lambda^{n}}{\delta s} &= (\kappa_{(1)})^2 \lambda_{(1)}^{m}\lambda_{(1)}^{n}\\
+\text{(2)}\times a_{mn} \Rightarrow\quad\quad a_{mn}\frac{\delta \lambda^{m}}{\delta s}\frac{\delta \lambda^{n}}{\delta s} &= a_{mn}(\kappa_{(1)})^2 \lambda_{(1)}^{m}\lambda_{(1)}^{n}\\
+\ &= (\kappa_{(1)})^2 \underbrace{\lambda_{(1)m} \lambda_{(1)}^{n}}_{=\epsilon_{(1)}}\\
+\ &= (\kappa_{(1)})^2 
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+
 \section{p75-exercise}
 \begin{tcolorbox}
 For positive definite metric forms, write out explicitly the Frenet formulae for the case N=2, 3 and 4.
@@ -1287,7 +1369,26 @@ The general Frenet formulae are
 \epsilon_{(M-1)}\lambda^n_{(M-1)}\lambda_{(M-1)n} = 1\quad\quad \text{(M=1,2,...,N)}
 \end{array} \right.
 \end{align}
-As $\Phi$ is positive definite, we have $\epsilon_{(k)} = 1\quad \forall k$\\\\
+As $\Phi$ is positive definite, we have $\epsilon_{(k)} = 1\quad \forall k$
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+N=2 & N=3 & N=4 \\
+\hline
+& &\\
+$\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $ & $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $& $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $ \\ 
+$\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$& $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ & $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ \\ 
+& $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ & $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ \\
+& & $\frac{\delta\lambda_{(3)}^r}{\delta s} = \kappa_{(4)}\lambda^r_{(4)} - \kappa_{(3)}\lambda^r_{(2)}$ \\
+$\lambda^n\lambda_n= 1$&$\lambda^n\lambda_n= 1$&$\lambda^n\lambda_n= 1$\\
+$\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{(1)}^n\lambda_{(1)n}= 1$\\
+&$\lambda_{(2)}^n\lambda_{(2)n}= 1$&$\lambda_{(2)}^n\lambda_{(2)n}= 1$\\
+&&$\lambda_{(3)}^n\lambda_{(3)n}= 1$\\
+\hline
+\end{tabular}
+\end{center}
+Taking into account that $\kappa_{(N)} = 0$ for a space $V_N$, we get,
+\begin{center}
 \begin{tabular}{ |c|c|c|c| } 
 \hline
 N=2 & N=3 & N=4 \\
@@ -1295,11 +1396,11 @@ N=2 & N=3 & N=4 \\
 & &\\
 $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $ & $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $& $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)} $ \\ 
 & &\\
-$\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$& $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ & $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ \\ 
+$\frac{\delta\lambda_{(1)}^r}{\delta s} =  - \kappa_{(1)}\lambda^r$& $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ & $\frac{\delta\lambda_{(1)}^r}{\delta s} = \kappa_{(2)}\lambda^r_{(2)} - \kappa_{(1)}\lambda^r$ \\ 
 & &\\
-& $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ & $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ \\
+& $\frac{\delta\lambda_{(2)}^r}{\delta s} =  - \kappa_{(2)}\lambda^r_{(1)}$ & $\frac{\delta\lambda_{(2)}^r}{\delta s} = \kappa_{(3)}\lambda^r_{(3)} - \kappa_{(2)}\lambda^r_{(1)}$ \\
 & &\\
-& & $\frac{\delta\lambda_{(3)}^r}{\delta s} = \kappa_{(4)}\lambda^r_{(4)} - \kappa_{(3)}\lambda^r_{(2)}$ \\
+& & $\frac{\delta\lambda_{(3)}^r}{\delta s} =  - \kappa_{(3)}\lambda^r_{(2)}$ \\
 & &\\
 $\lambda^n\lambda_n= 1$&$\lambda^n\lambda_n= 1$&$\lambda^n\lambda_n= 1$\\
 & &\\
@@ -1311,5 +1412,6 @@ $\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{
 & &\\
 \hline
 \end{tabular}
+\end{center}
 $$\medblackdiamond$$
 \newpage
