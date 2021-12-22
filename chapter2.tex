@@ -1415,3 +1415,67 @@ $\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{(1)}^n\lambda_{(1)n}= 1$&$\lambda_{
 \end{center}
 $$\medblackdiamond$$
 \newpage
+
+\section{p76-exercise}
+\begin{tcolorbox}
+In an Euclidean space $V_N$, the fundamental form is given as $\Phi = dx^n dx^n$. Show that a curve which has $\kappa_{(2)} = 0$ and $\kappa_{(1)} = \text{constant}$ satisfies equations of the form
+$$x^r = A^r\cos\kappa_{(1)}s + B^r\sin\kappa_{(1)}s + C^r$$ where $A^r, B^r, C^r$ are constants satisfying $$ A^rA^R = B^rB^r = \frac{1}{\kappa_{(1)}^2},\quad A^rB^r = 0$$
+so that $A^r$ and $B^r$ are vectors of equal magnitude and perpendicular to one another. (This curve is a circle in the N-space)
+\end{tcolorbox}
+\begin{align}
+\text{What we know}\quad\quad\quad\quad \Phi &= dx^n dx^n\\
+\Rightarrow \quad\quad\quad\quad \left(a_{mn}\right) &= \left(\delta^m_n\right)\\
+\text{and given } \spatie \kappa_{(1)} = \text{constant}& \quad \kappa_{(2)} = 0\quad \epsilon_{(1)}=\epsilon_{(2)}, \dots = 1\\
+\text{we have (2.705) }\quad\quad\quad\quad \frac{\delta\lambda^r}{\delta s}&=  \kappa_{(1)} \frac{\delta\lambda_{(1)}^r}{\delta s} \quad \quad \text{with }\quad \lambda^r = \dv{x^r}{s}\\
+\text{but}\quad\left(a_{mn}\right) = \left(\delta^m_n\right)\quad\Rightarrow\spatie \frac{\delta\lambda^r}{\delta s} &= \dv{\lambda^r}{s}\\
+\text{(4) and (5)}\quad\Rightarrow\spatie \dv{\lambda^r}{s} &= \kappa_{(1)} \frac{\delta\lambda_{(1)}^r}{\delta s}\\
+\text{also}\spatie \frac{\delta\lambda_{(1)}^r}{\delta s} &= \underbrace{\kappa_{(1)}}_{=0} \frac{\delta\lambda_{(1)}^r}{\delta s}-  \kappa_{(1)} \frac{\delta\lambda_{(1)}^r}{\delta s}
+\end{align}
+Hence we get the following set of equations
+\begin{align}
+\left \{ \begin{array}{c}
+\dv{x^r}{s} = \lambda^r \\\\
+\dv{\lambda^r}{s} = \kappa_{(1)} \lambda_{(1)}^r\\\\
+\dv{\lambda_{(1)}^r}{ s} = -  \kappa_{(1)} \lambda_{(1)}^r\\\\
+\kappa_{(1)} = \kappa\quad \text{(=constant)}\\\\
+\kappa_{(2)} = 0\\\\
+\lambda^n\lambda_n = 1\\\\
+\lambda_{(1)}^n\lambda_{(1)n} = 1\\
+\end{array} \right.\\
+\text{(8)}\quad \Rightarrow \spatie \dv[2]{\lambda_{(1)}^r}{s} + \kappa ^2 \lambda_{(1)}^r = 0
+\end{align}
+Solving the ODE (9). Put $ e^{rs} = \lambda_{(1)}^k$
+\begin{align}
+\text{(9):}\spatie&  r^2 + \kappa^2 = 0\\
+\Rightarrow \spatie & r = \pm \imath \kappa\\
+\text{Hence, a general solution of (9) is of the form:} \spatie & \lambda_{(1)}^r = p^r e^{ \imath \kappa s}  + q^r e^{ -\imath \kappa s}\\
+\text{put}\quad  p^r+q^r = A^{,r}\quad &\text{and}\quad p^r-q^r = B^{,r}\\
+\Leftrightarrow \spatie p^r = \frac{A^{,r}+B^{,r}}{2} &\text{and}\quad p^r=\frac{A^{,r}-B^{,r}}{2}\\
+\text{(12) can then be written as }\quad  \lambda_{(1)}^r = A^{,r}\frac{ e^{ \imath \kappa s}+  e^{ -\imath \kappa s}}{2} & + B^{,r}\frac{ e^{ \imath \kappa s}- e^{ -\imath \kappa s}}{2}\\
+\text{or}\quad  \lambda_{(1)}^r = A^{,r}\cos \kappa s & + B^{,r}\sin \kappa s\\
+\text{We have (8)}\spatie \spatie  \lambda^r =  & -  \kappa_{(1)} \dv{\lambda_{(1)}^r}{ s} \\
+\dv{(16)}{s}\quad\text{and (17)}\Rightarrow\spatie \lambda^r =  A^{,r}\sin \kappa s & - B^{,r}\cos \kappa s\\
+\text{as}\quad \lambda^r = \dv{x^r}{s}\quad\text{ with (18)}\quad \Rightarrow \spatie x^r = - \frac{A^{,r}}{\kappa}\cos \kappa s &  - \frac{B^{,r}}{\kappa}\sin \kappa s + C^r\\
+\end{align}
+Replace $- \frac{A^{,r}}{\kappa}$ with $A^{r}$ and $- \frac{B^{,r}}{\kappa}$ with $B^{r}$, we get then the following set of equations,
+
+\begin{align}
+\left \{ \begin{array}{c}
+x^r = A^{r}\cos \kappa s   + B^{,r}\sin \kappa s + C^r\\
+\lambda^r =  -\kappa A^{r}\sin \kappa s  +\kappa B^{r}\cos \kappa s\\
+\lambda_{(1)}^r = - \kappa A^{r}\cos \kappa s  - \kappa B^{r}\sin \kappa s\\
+\end{array} \right.\\
+\text{with the following constraints}\spatie \lambda^n\lambda_n = 1\spatie 
+\lambda_{(1)}^n\lambda_{(1)n} &= 1\\
+\lambda^n\lambda_n = 1\quad\Rightarrow \kappa^2 A^r A^r \sin ^2 \kappa s+ \kappa^2 B^r B^r \cos ^2 \kappa s - 2 \kappa^2 A^rB^r\sin\kappa s\cos \kappa s &= 1\\
+\text{or} \spatie A^r A^r \sin ^2 \kappa s+  B^r B^r \cos ^2 \kappa s - 2 A^rB^r\sin\kappa s\cos \kappa s &= \frac{1}{\kappa^2 }\\
+\lambda_{(1)}^n\lambda_{(1)n} = 1\quad\Rightarrow \kappa^2 A^r A^r \cos ^2 \kappa s+ \kappa^2 B^r B^r \sin ^2 \kappa s + 2 \kappa^2 A^rB^r\sin\kappa s\cos \kappa s &= 1\\
+\text{or} \spatie A^r A^r \cos ^2 \kappa s+  B^r B^r \sin ^2 \kappa s + 2 A^rB^r\sin\kappa s\cos \kappa s &= \frac{1}{\kappa^2 }\\
+\text{Choose }\quad \kappa s = \frac{\pi}{2}\quad\text{and} \quad \kappa s = 0\\
+\Rightarrow \spatie A^r A^r =  \frac{1}{\kappa^2 }\quad\text{and}\quad B^r B^r =  \frac{1}{\kappa^2 }\\
+\text{Morover considering (26)-(24) and (28)}\quad \Rightarrow \spatie 2A^rB^r\sin \kappa s \cos \kappa s =0 \quad \forall \kappa s\\
+\Rightarrow \spatie A^rB^r=0
+\end{align}
+Note: when deriving expressions $(23)$ and $(26)$ we use the fact that $\left(a_{mn}\right) =  \left(a^{mn}\right) = \left(\delta^m_n\right) $
+$$\medblackdiamond$$
+\newpage
