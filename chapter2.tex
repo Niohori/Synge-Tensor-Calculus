@@ -1041,15 +1041,15 @@ $$\medblackdiamond$$
 
 \section{p62-exercise}
 \begin{tcolorbox}
-Given that $\lambda^r$ is a unit vector field, prove that $$\lambda^r_{|s}\lambda_r = 0 \quad \text{and}\quad \lambda^r\lambda_{r|s} = 0 $$
-Is the relation $\lambda^r_{|s}\lambda_s = 0$ true for a general unit vector field?
+Given that $\lambda^r$ is a unit vector field, prove that $$\lambda^r_{\ |s}\lambda_r = 0 \quad \text{and}\quad \lambda^r\lambda_{r|s} = 0 $$
+Is the relation $\lambda^r_{\ |s}\lambda_s = 0$ true for a general unit vector field?
 \end{tcolorbox}
 To simplify the calculation, we choose a random element in the unit vector field and use at that point a Riemaniann coordinate system (RCS). So, we have
 \begin{align}
-\lambda^r_{|s} = \partial_s \lambda^r \quad & \text{and}\quad \lambda_{r|s} = \partial_s \lambda_r\\
+\lambda^r_{\ |s} = \partial_s \lambda^r \quad & \text{and}\quad \lambda_{r|s} = \partial_s \lambda_r\\
 \text{as we have a unit vector fields:}\quad\quad a_{mn}\lambda^m\lambda^n &= 1\\
 \Leftrightarrow \lambda_n\lambda^n &= 1\quad\quad\text{(by lowering the index m)}\\
-\Rightarrow \quad\quad \lambda^n\partial_s \lambda_n + \lambda_n\partial_s \lambda^n = 0
+\Rightarrow \quad\quad \lambda^n\partial_s \lambda_n + \lambda_n\partial_s \lambda^n &= 0
 \end{align}
 We prove that $$\lambda^n\partial_s\lambda_n = \lambda_n\partial_s\lambda^n\quad \forall\text{ vector fields}$$
 We have the trivial identity
@@ -1099,7 +1099,7 @@ The answer is NO. Let's consider the following unit vector field in a Cartesian 
 $$V:\mathbb{R}_*^2\rightarrow \mathbb{R}^2|V(x,y) = \left< \frac{x}{\sqrt{x^2+y^2}},-\frac{y}{\sqrt{x^2+y^2}} \right>$$
 \end{minipage}
 \end{figure}
-Put $ \rho = \sqrt{x^2+y^2}$, we get (as we have a Cartesian Coordinate system, the calculation simplify as the Christoffel symbols vanish and the covariant components of the vectors are equal to their contravariant part):
+Put $ r = \sqrt{x^2+y^2}$, we get (as we have a Cartesian Coordinate system, the calculation simplify as the Christoffel symbols vanish and the covariant components of the vectors are equal to their contravariant part):
 \begin{align}
 \ & \left \{ \begin{array}{c}
 \ V^1 = V_1 = +\frac{x}{r}\\
@@ -1109,14 +1109,14 @@ Put $ \rho = \sqrt{x^2+y^2}$, we get (as we have a Cartesian Coordinate system, 
 \ V^1_{\ |1} =  V_{1|1} = \frac{y^2}{r^3}&V^1_{\ |2} =  V_{1|2} = -\frac{xy}{r^3}\\
 \ V^2_{\ |1} =  V_{2|1} = \frac{xy}{r^3}&V^2_{\ |2} =  V_{2|2} = -\frac{x^2}{r^3}\\
 \end{array}\right.\\
-\Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{|s}V_s = V^1_{|1}V_1+V^1_{|2}V_2 = \frac{y^2}{r^3}\frac{x}{r}+ (-\frac{xy}{r^3})(-\frac{y}{r}) = \frac{xy^2}{r^4} \ne 0\\
-\ V^2_{|s}V_s = V^2_{|1}V_1+V^2_{|2}V_2 = \frac{xy}{r^3}\frac{x}{r}+ (-\frac{y}{r})(-\frac{y}{r}) = \frac{x^2 y}{r^4} \ne 0
+\Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{\ |s}V_s = V^1_{\ |1}V_1+V^1_{\ |2}V_2 = \frac{y^2}{r^3}\frac{x}{r}+ (-\frac{xy}{r^3})(-\frac{y}{r}) = \frac{xy^2}{r^4} \ne 0\\
+\ V^2_{\ |s}V_s = V^2_{\ |1}V_1+V^2_{\ |2}V_2 = \frac{xy}{r^3}\frac{x}{r}+ (-\frac{y}{r})(-\frac{y}{r}) = \frac{x^2 y}{r^4} \ne 0
 \end{array} \right.
 \end{align}
 Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
 \begin{align}
-\Rightarrow \quad\quad &\left \{ \begin{array}{c}V^s_{|1}V_s = V^1_{|1}V_1+V^2_{|1}V_2 = (+\frac{y^2}{r^3})\frac{x}{r}+ (+\frac{xy}{r^3})(-\frac{y}{r}) =0\\
-\ V^s_{|2}V_s = V^1_{|2}V_1+V^2_{|2}V_2 = (-\frac{xy}{r^3})\frac{x}{r}+ (-\frac{y}{r})(-\frac{x^2}{r^3}) = 0
+\Rightarrow \quad\quad &\left \{ \begin{array}{c}V^s_{\ |1}V_s = V^1_{\ |1}V_1+V^2_{\ |1}V_2 = (+\frac{y^2}{r^3})\frac{x}{r}+ (+\frac{xy}{r^3})(-\frac{y}{r}) =0\\
+\ V^s_{\ |2}V_s = V^1_{\ |2}V_1+V^2_{\ |2}V_2 = (-\frac{xy}{r^3})\frac{x}{r}+ (-\frac{y}{r})(-\frac{x^2}{r^3}) = 0
 \end{array} \right.
 \end{align}\\\\
 Now, let's consider another unit vector field in a Cartesian Coordinate system:
@@ -1142,18 +1142,18 @@ $$V:\mathbb{R}_*^2\rightarrow \mathbb{R}^2|V(x,y) = \left< \frac{x}{\sqrt{x^2+y^
 \ V^1_{\ |1} =  V_{1|1} = \frac{y^2}{r^3}&V^1_{\ |2} =  V_{1|2} = -\frac{xy}{r^3}\\
 \ V^2_{\ |1} =  V_{2|1} = -\frac{xy}{r^3}&V^2_{\ |2} =  V_{2|2} = +\frac{x^2}{r^3}\\
 \end{array}\right.\\
-\Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{|s}V_s = V^1_{|1}V_1+V^1_{|2}V_2 = (+\frac{y^2}{r^3})\frac{x}{r}+ (-\frac{xy}{r^3})(+\frac{y}{r}) =  0\\
-\ V^2_{|s}V_s = V^2_{|1}V_1+V^2_{|2}V_2 = (-\frac{xy}{r^3})\frac{x}{r}+ (+\frac{y}{r})(+\frac{y}{r}) =  0
+\Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{\ |s}V_s = V^1_{\ |1}V_1+V^1_{\ |2}V_2 = (+\frac{y^2}{r^3})\frac{x}{r}+ (-\frac{xy}{r^3})(+\frac{y}{r}) =  0\\
+\ V^2_{\ |s}V_s = V^2_{\ |1}V_1+V^2_{\ |2}V_2 = (-\frac{xy}{r^3})\frac{x}{r}+ (+\frac{y}{r})(+\frac{y}{r}) =  0
 \end{array} \right.
 \end{align}
 Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
 \begin{align}
-\Rightarrow \quad\quad &\left \{ \begin{array}{c}V^s_{|1}V_s = V^1_{|1}V_1+V^2_{|1}V_2 = (+\frac{y^2}{r^3})(+\frac{x}{r})+ (-\frac{xy}{r^3})(+\frac{y}{r}) =0\\
-\ V^s_{|2}V_s = V^1_{|2}V_1+V^2_{|2}V_2 = (-\frac{xy}{r^3})(+\frac{x}{r})+ (+\frac{y}{r})+\frac{x^2}{r^3}) = 0
+\Rightarrow \quad\quad &\left \{ \begin{array}{c}V^s_{\ |1}V_s = V^1_{\ |1}V_1+V^2_{\ |1}V_2 = (+\frac{y^2}{r^3})(+\frac{x}{r})+ (-\frac{xy}{r^3})(+\frac{y}{r}) =0\\
+\ V^s_{\ |2}V_s = V^1_{\ |2}V_1+V^2_{\ |2}V_2 = (-\frac{xy}{r^3})(+\frac{x}{r})+ (+\frac{y}{r})+\frac{x^2}{r^3}) = 0
 \end{array} \right.
 \end{align}\\
 So, in the second example the relationship $\lambda^r_{|s}\lambda_s = 0$ holds.
-Question (to investigate further and later) : does the fact that in the first case $\del \maal \overline{V}  \ne 0$ and in the second case $\del \maal \overline{V}= 0$, means there some relation with this expression?
+Question (to investigate further and later) : does the fact that in the first case $\del \maal \overline{V}  \ne 0$ and in the second case $\del \maal \overline{V}= 0$, means that there is some relation with this expression?
 $$\medblackdiamond$$
 \newpage
 
@@ -1477,5 +1477,291 @@ x^r = A^{r}\cos \kappa s   + B^{,r}\sin \kappa s + C^r\\
 \Rightarrow \spatie A^rB^r=0
 \end{align}
 Note: when deriving expressions $(23)$ and $(26)$ we use the fact that $\left(a_{mn}\right) =  \left(a^{mn}\right) = \left(\delta^m_n\right) $
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 1}
+\begin{tcolorbox}
+For cylindrical coordinates in Euclidean 3-space, write down the metric form by inspection of a diagram showing a general infinitesimal displacement, and calculate all the Christoffel symbols of both kinds.
+\end{tcolorbox}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{.5\textwidth}
+%\centering
+\vspace{0pt}
+\includegraphics[scale=.4]{polar3d.jpg}
+\end{minipage}\hfill
+\end{figure}
+From the figure we get (assuming an infinitesimal displacement, we may approximate $\left| \overrightarrow{SS^{,}} \right|$ with the arclength $r d\theta$ and assume $\left|  \overrightarrow{S°S^{,,}} \right| \perp \left|  \overrightarrow{GS^{,}} \right|$) Hence, the infinitesimal displacement from S
+\begin{align}
+\ ds^2 &= \left| \overrightarrow{SS^{,}} \right|^2 + \left| \overrightarrow{S^{,,}P^{,}} \right|^2+\left| \overrightarrow{P^{,}J} \right|^2\\
+\ &= dr^2 + ((r+dr)d\theta)^2 + dz^2\\
+\ &= dr^2 + r^2d\theta^2 + dz^2\\
+\text{Hence} \spatie &\left(a_{mn}\right) = \begin{pmatrix}
+ 1& 0 & 0 \\
+ 0&  r^2&0  \\
+ 0&0  &1  \\
+\end{pmatrix}\quad\text{and}\quad \left(a_{mn}\right) = \begin{pmatrix}
+ 1& 0 & 0 \\
+ 0&  ^\frac{1}{r^2}&0  \\
+ 0&0  &1  \\
+\end{pmatrix}
+\end{align}
+Note that all $a_{mn} = 0 \quad \forall m\ne n$. So,
+\begin{align}
+\left \{ \begin{array}{c}
+\ [r \ r,r]=[\theta \  \theta, \theta] = [z \ z,z] = 0\\
+\ [r \ \theta,r]=[r \ r, \theta] = [r \ r,z] = 0\\
+\ [r \ z,\theta]=[z \  \theta, r] = [z \ \theta,z] = 0\\
+\end{array}\right.\\
+\text{But:}\spatie [\theta \ \theta,r]= -r \quad\text{and}\quad [r \  \theta, \theta] = r\\
+\text{Hence}\spatie \left \{ \begin{array}{c}
+\Gamma^m_{nk} = 0 \quad\forall\quad (nk) \ne (r, \theta), (\theta, \theta)\\\\
+\Gamma^{\theta}_{r\theta} = \frac{1}{r} \quad\text{and}\quad \Gamma^r_{\theta\theta} = -r
+\end{array}\right.\
+\end{align}
+
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 2}
+\begin{tcolorbox}
+If $a_{rs}$ and $b_{rs}$ are covariant tensors, show that the roots of the determinant equation $$\left|Xa_{rs} - b_{rs}\right |= 0$$ are invariants.
+\end{tcolorbox}
+\begin{align}
+\text{Be}\spatie c_{rs} &= Xa_{rs} - b_{rs}\\
+\text{Given }\spatie a_{rs} &= a^{,}_{mk}\pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
+\text{and }\spatie b_{rs} &= b^{,}_{mk}\pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
+\text{(1) }\quad\Rightarrow\spatie c_{rs} &= \underbrace{(Xa^{,}_{mk}-b^{,}_{mk})}_{=c^{,}_{km}} \pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
+\ &= c^{,}_{km} \pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
+\text{Be}\spatie J &= \left |\pdv{x^{,m}}{x^r}\right |= \left |\pdv{x^{,k}}{x^s}\right |\\
+\text{In (5) put  }\spatie d_{kr} &= c^{,}_{km} \pdv{x^{,m}}{x^r} \\
+\Rightarrow\spatie c_{rs} &= d^{,}_{kr} \pdv{x^{,k}}{x^s}\\
+\text{or in matrix form  } \spatie C &= D^T J\quad \text{with}\quad D = C^{,}J\\
+\Rightarrow\spatie \left |C \right| &= \left | (C^{,}J)^T J\right |\\
+\Leftrightarrow\spatie \left |C \right| &= \left | C^{,}\right | \left |J\right |\left |J\right |
+\end{align}
+As $ \left |J\right | \ne 0$ ( $J$ is the Jacobian of the transformation, and thus can't be zero), then $$\left |C \right| = 0 \Rightarrow \left |C^{,} \right| = 0$$.\\
+So, the root of $\left |C \right| = 0 $ is also a root of $\left |C^{,} \right| = 0$ and is as a consequence, invariant.
+
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 3}
+\begin{tcolorbox}
+Is the form $dx^2+3dxdy+4dy^2+dz^2$ positive definite?
+\end{tcolorbox}
+\begin{align}
+\Phi &= dx^2+3dxdy+4dy^2+dz^2\\
+\text{Put (1) in the form}\spatie  \Phi &= X^2+3XY+4Y^2+Z^2\\
+\text{Z has only a positive contribution: so put }\quad Z=0\quad\Rightarrow \quad \Phi &= X^2+3XY+4Y^2\\
+\text{(3) can only be zero or negative if }\quad XY < 0\quad\text{:put}\quad Y & =-aX\quad (a>0)\\
+\Rightarrow \Phi &= X^2-3aX^2 +4a^2X^2\\
+\text{The roots of (5) are }\quad a_{1,2} &= \frac{3\pm \sqrt{9-16}}{8}
+\end{align}
+So, by (6) we can't get a $a \in \mathbb{R}_*$, so that (1) can be $0$ or negative. Hence,
+$$\text{The form}\quad \Phi \quad \text{is positive definite}$$
+
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 4}
+\begin{tcolorbox}
+If $X^r, Y^r$ are uit vectors inclined at an angle $\theta$, prove that $$\sin^2 \theta = (a_{rm}a_{sn}- a_{rs}a_{mn})X^r Y^s X^m Y^n$$
+\end{tcolorbox}
+$X^r Y^s$ are unit vectors. So,
+\begin{align}
+\ a_{rm}X^rX^m = 1 \quad &\text{and}\quad a_{sn}Y^sY^n = 1\\
+\text{We have}\spatie \sin^2\theta &= 1 - \cos^2\theta\\
+\text{and (2.312)}\spatie \cos\theta &= a_{mn}X^mY^n\\
+\Rightarrow\spatie \sin^2 \theta &= a_{rm}X^rX^m a_{sn}Y^sY^n - a_{mn}X^mY^na_{rs}X^rY^s\\
+\ &= (a_{rm} a_{sn} - a_{mn}a_{rs})X^rY^sX^mY^n
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 5}
+\begin{tcolorbox}
+Show that, if $\theta$ is the angle between the normals to the surfaces $x^1 = C^{st}, x^2 = C^{st}$, then $$ \cos \theta = \frac{a^{12}}{\sqrt{a^{11}a^{22}}}$$
+\end{tcolorbox}
+\begin{align}
+\text{be}\spatie \phi^{,}_1(x^1,x^2,\dots,x^N) = C^{st} \quad \phi^{,}_2(x^1,x^2,\dots,x^N) = C^{st}
+\end{align}
+the two equations representing $S_1, S_2$ (see page 63). We can rewrite (1) as:
+\begin{align}
+\ x^1 &= \phi^{,}_1(x^1,x^2,\dots,x^N) = C^{st} \\
+\ x^2 &= \phi^{,}_2(x^1,x^2,\dots,x^N) = C^{st}\\
+\text{From (2.622) we know that}\quad X^m = a^{mn}\partial_n \phi_{1} & ,\ Y^m = a^{mn}\partial_n \phi_{2} \ \text{are}\perp\text{vectors to the surfaces}\  \phi_{1},\phi_{2}\\
+\text{We know also} \spatie \left|X^m\right |^2 &= a^{mk}X^mX^k\\
+\ & = a_{mk}a^{mn}\partial_n \phi_{1}a^{kp}\partial_p \phi_{1}\\
+\ & = \delta^k_k a^{kp}\partial_n \phi_{1}\partial_p \phi_{1}\\
+\ & = a^{np}\partial_n \phi_{1}\partial_p \phi_{1}\\
+\text{as} \ \phi_1 = x^1 = C^{st} \ \Rightarrow \ &= a^{np}\delta^1_n \delta^1_p\\
+\ &= \epsilon a^{11}\\
+\text{Analog, we have}\spatie \left|Y^m\right |^2 &= \epsilon a^{22}\\
+\text{By definition:}\spatie \cos\theta &= \frac{a_{mn}X^mY^n}{ \left|X^r\right | \left|Y^s\right |}\\
+\text{and }\spatie a_{mn}X^mY^n &= a_{mn} a^{mk}\partial_k \phi_{1} \  a^{np}\partial_p \phi_{2}\\
+\ &=\delta^k_n a^{np}\partial_k \phi_{1} \ \partial_p \phi_{2}\\
+\ &=a^{kp}\partial_k \phi_{1} \ \partial_p \phi_{2}\\
+\text{as} \ \phi_1 = x^1 = C^{st},  \ \phi_2 = x^2 = C^{st} \ \Rightarrow \ &= a^{kp}\delta^1_k\delta^2_p\\
+\ &= a^{12}\\
+\text{So (12) becomes with (10), (11) and (17)} \spatie \cos\theta &= \frac{a_{12}}{ \sqrt{\epsilon a^{11}\epsilon a^{22}}}\\
+&= \frac{a_{12}}{ \sqrt{ a^{11} a^{22}}}
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 6}
+\begin{tcolorbox}
+Let $x^1, \ x^2,\ x^3$ be rectangular Cartesian coordinates in Euclidean 3-space, and let $x^1, \ x^2$ be taken as coordinates on a surface $x^3 = f(x^1, \ x^2)$. Show that the Christoffel symbols of the second kind for the surface are $$ \Gamma^r_{mn} = \frac{f_r f_{mn}}{1+ f_n f_p}$$ the suffixes taking the values $1, \ 2$ and the subscripts indicating partial derivatives.
+\end{tcolorbox}
+We have (rectangular Cartesian coordinates in Euclidean 3-space)
+\begin{align}
+\ ds^2 &= (dx^1)^2 + (dx^2)^2+(dx^3)^2\\
+\text{with} \spatie x^3 &= f(x^1, \ x^2)\\
+\text{and thus } \spatie dx^3 &= \partial_1 f \ dx^1 + \partial_2 f \  dx^2\\
+\Rightarrow \spatie ds^2 &= (1+ (\partial_1 f)^2) (dx^1)^2 + (1+ (\partial_2 f)^2) (dx^2)^2+ 2\partial_1 f \ \partial_2 f \ dx^1 dx^2\\
+\text{put}\spatie & \left \{ \begin{array}{c}
+\ f_1 = \partial_1 f\\
+\ f_2 = \partial_2 f\\
+\ f_{11} = \partial_{11} f\\
+\ f_{22} = \partial_{22} f\\
+\ f_{12} = f_{21 } = \partial_{12} f\\
+\end{array}\right.\\
+\text{from (4)}\spatie \left(a_{mn}\right) =& \begin{pmatrix}
+ 1+f_1 ^2& f_1f_2 \\
+ f_1f_2& 1+f_2 ^2 \\
+\end{pmatrix}\\
+\Rightarrow\spatie \left|a_{mn}\right| &= (1+f_1 ^2)(1+f_2 ^2) - (f_1f_2)^2\\
+\ & = 1 + f_1 ^2+f_2 ^2\\
+\text{also} \spatie \left(a^{mn}\right) =& \frac{1}{1 + f_1 ^2+f_2 ^2}\begin{pmatrix}
+ 1+f_2 ^2& -f_1f_2 \\
+ -f_1f_2& 1+f_1 ^2 \\
+\end{pmatrix}
+\end{align}
+\begin{align}
+\textbf{Calculating the Christoffels symbols:}\quad [mn,\ k] &= \half (\partial_m a_{nk}+\partial_n a_{mk}-\partial_k a_{mn})\\
+\Rightarrow\spatie & \left \{ \begin{array}{c}
+\ [11,\ 1] =  f_1 f_{11}\\
+\ [11,\ 2] =  f_2 f_{11}\\
+\ [12,\ 1] =  f_1 f_{12}\\
+\ [12,\ 2] =  f_2 f_{21}\\
+\ [22,\ 2] =  f_2 f_{22}\\
+\end{array}\right.\\
+\text{From (11) we can see that the general form is:}\quad [mn,s] &= f_{mn}f_s\\
+\textbf{Calculating the Christoffels symbols:}\quad \Gamma^r_{mn} &= a_{rs}[mn,s]\\ 
+\text{(13) with (12):}\quad \Gamma^r_{mn} &= a_{rs}f_{mn}f_s = f_{mn}(a^{rs}f_s)\\
+\text{put } \Delta &= \frac{1}{1 + f_1 ^2+f_2 ^2}=\frac{1}{1 + f_p f_p} \\
+\Rightarrow\spatie  \left \{ \begin{array}{ll}
+\Gamma^1_{mn} & = (a_{11} f_1 + a_{12} f_2)f_{mn}\\
+\ & =  \Delta(f_1  + f_2^2f_1 - f_1f_2^2)f_{mn}\\
+\ & =  \Delta f_1 f_{mn}\\
+\end{array}\right. & \\\\
+\Gamma^2_{mn} & = (a_{21} f_1 + a_{22} f_2)f_{mn}\\
+\ & =  \Delta(- f_1^2f_2+f_2   + f_2f_1^2)f_{mn}\\
+\ & =  \Delta f_2 f_{mn}\\
+\end{align}
+$$\Rightarrow\quad \Gamma^r_{mn} = \frac{f_r f_{mn}}{1 + f_p f_p}$$
+$$\medblackdiamond$$
+\newpage
+
+\section{p78-exercise 7}
+\begin{tcolorbox}
+Write down the differential equations of the geodesics on a sphere, using colatitude $\theta$ and the azimuth $\phi$ as coordinates. Integrate the differential equations and obtain a finite equation $$ A\sin \theta \cos \phi + B \sin \theta \sin \phi + C\cos\theta = 0$$
+where $A,B,C$ are arbitrary constants.
+\end{tcolorbox}
+We will first find the solution, starting from the variational principle , defining a geodesic.
+In spherical coordinates we have (see exercise page 27) $ds^2 = dr^2 +  r^2\sin^2(\theta)d\phi^2+ r^2d\theta^2$.\\
+As $r=R= C^{st}$ this reduces to
+\begin{align}
+\ ds^2 = R^2\sin^2(\theta)d\phi^2+ R^2d\theta^2
+\end{align}
+So the length of a curve on the sphere from a point $P_1$ to another point $P_2$ , the curve being determined by $\theta = \theta(u)\quad \phi = \phi(u)$ is:\\
+\begin{align}
+\ L &= R\int_{P_1}^{P_2} = \sqrt{\sin^2(\theta)d\phi^2+ d\theta^2}du\\
+\text{Be}\quad \theta &= u \quad \phi = \phi(\theta)\\
+\Rightarrow \quad  L &= R\int_{\theta_1}^{\theta_2} = \sqrt{1+\sin^2(\theta)(\dv{\phi}{\theta})^2}d\theta
+\end{align}
+Applying the variational principle on L and using the Euler-Langrange equations:
+\begin{align}
+ \dv{\pdv{\mathcal{L}}{\dot{\phi}}}{\theta} - \pdv{\mathcal{L}}{\phi}&=0\\
+ \text{with}\quad \mathcal{L}& = \sqrt{1+\sin^2(\theta)(\dot{\phi})^2}\\
+ \text{as}\quad  \pdv{\mathcal{L}}{\phi}&=0\\
+ \text{(5) becomes:} \quad \dv{\pdv{\mathcal{L}}{\dot{\phi}}}{\theta} &=0\\
+ \Leftrightarrow \quad \pdv{\mathcal{L}}{\dot{\phi}} &= C\quad \ \text{(= constant)}\\
+\text{with}\quad \pdv{\mathcal{L}}{\dot{\phi}} &= \pdv{\sqrt{1+\sin^2 \theta   \  \dot{\phi}^2 }}{\dot{\phi}}= \frac{\sin^2 \theta \  \dot{\phi}}{ \sqrt{1+\sin^2 \theta \ \dot{\phi}^2 }}\\
+\text{(9) and (10):}\quad C &= \frac{\sin^2 \theta \  \dot{\phi}}{ \sqrt{1+\sin^2 \theta \ \dot{\phi}^2 }} \\
+\text{or}\quad \dot{\phi} &= \frac{C}{\sin \theta \sqrt{\sin^2 \theta - C^2}}
+\end{align}
+Solving the ODE (12).
+ \\Put $u = \cot \theta \quad \Rightarrow \quad du = - \csc^2 d\theta = -\frac{1}{\sin^2\theta} d\theta$. So,  
+\begin{align}
+\phi &= -C\int \frac{\sin \theta}{ \sqrt{\sin^2 \theta - C^2}}du\\
+&= -C\int \frac{du}{ \sqrt{1- \frac{C^2 }{\sin^2 \theta}}}\\
+&= -C\int \frac{du}{ \sqrt{1- C^2 - C^2 \cot^2 \theta}}\\
+&= -C\int \frac{du}{ \sqrt{1- C^2 - C^2 u^2}}\\
+\text{be}\quad a&= \frac{\sqrt{1-C^2}}{C}\\
+\text{(16) becomes}\quad \phi &= -\int \frac{1}{ \sqrt{a^2 -  u^2}}du\\
+\text{put }\quad u &= av\\
+\text{(18) becomes}\quad \phi &= -\int \frac{1}{ \sqrt{1 -  v^2}}dv\\
+\ &= -\arccos v + C^{st}\\
+\ &= -\arccos \frac{u}{a}  + \phi_0\\
+\text{or:}\quad \frac{u}{a} &= \cos (\phi - \phi_0)  \ \text{(by choosing an adequate}\ \phi_0\text{)}\\
+\text{so :}\quad \cot\theta &= a \cos (\phi - \phi_0)  \\
+\text{expanding} \  \cos (\phi - \phi_0)\  \text{gives:} \quad  \frac{\cos\theta}{\sin\theta} &= \ A\cos\phi + B\sin\phi\\
+\text{or:} \quad  A\cos\phi \sin\theta &+ B\sin\phi\sin\theta -\cos\theta=0
+\end{align}
+$$\meddiamond$$
+\newpage
+Finding the geodesics from the tensorial formula's.\\
+Note: For ease of notation we put $R=1$ without losing any general solutions.
+
+\begin{align}
+\text{from (1) we get:}\quad (a_{mn}) &= \begin{pmatrix}
+ 1&  0\\
+0 & \sin^2\theta \\
+\end{pmatrix}\\
+\text{and}\quad (a^{mn}) &= \begin{pmatrix}
+ \frac{1}{\sin^2\theta}&  0\\
+0 & 1 \\
+\end{pmatrix}\\
+\text{hence:}\quad & \left \{ \begin{array}{ll}
+\Gamma^1_{11}  = 0&\Gamma^2_{11}  = 0\\
+\Gamma^1_{12}  = 0&\Gamma^2_{12}  = \cot\theta\\
+\Gamma^1_{22}  = -\cos\theta\sin\theta&\Gamma^2_{22}  = 0\\
+\end{array}\right.
+\end{align}
+Finding the geodesics from the tensorial formula's, implies solving $2^{nd}$ order ODE's. In order to find the simpliest form to solve , we write down three possible forms of the geodesic equations:
+\begin{align}
+\text{arc-length s as independent variable}\quad& \left \{ \begin{array}{ll}
+\ (a)&\dv[2]{\phi}{s} + 2 \cot\theta\dv{\phi}{s} \dv{\theta}{s} = 0\\\\
+\ (b)&\dv[2]{\theta}{s} - \sin\theta\cos\theta(\dv{\phi}{s})^2  = 0\\\\
+\ (c)&\ (\dv{\theta}{s})^2+\sin^2\theta(\dv{\phi}{s})^2 = 1
+\end{array}\right.\\
+\theta \text{ as independent variable}\quad& \left \{ \begin{array}{l}
+\lambda =  - \sin\theta\cos\theta(\dv{\phi}{\theta})^2\\\\
+\dv[2]{\phi}{\theta}  = \lambda \dv{\phi}{\theta}- 2 \cot\theta\dv{\phi}{\theta}  \\
+\end{array}\right.\\
+\Rightarrow \quad \dv[2]{\phi}{\theta}  &= - \sin\theta\cos\theta(\dv{\phi}{\theta})^3- 2 \cot\theta\dv{\phi}{\theta}  \\
+\phi \text{ as independent variable}\quad& \left \{ \begin{array}{l}
+\lambda =  2 \cot\theta\dv{\theta}{\phi}\\\\
+\dv[2]{\theta}{\phi}  = \lambda \dv{\theta}{\phi} + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\
+\end{array}\right.\\
+\Rightarrow \quad \dv[2]{\theta}{\phi}  &= 2 \cot\theta(\dv{\theta}{\phi})^2 + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\
+\
+\end{align}
+Inspection shows hat the expression (32) and (34) are quite complicated while using (30b) and (30c) we can get an expression of the form
+\begin{align}
+\ddot{\theta} - \sin\theta\cos\theta\left(\frac{1 - \dot{\theta}^2}{\sin^2\theta}\right)&= 0\\
+\text{or:}\quad \ddot{\theta} - \cot\theta\left( 1-\dot{\theta}^2\right) &= 0\\
+\text{Put }\ u(\theta)= \dot{\theta}\quad\Rightarrow\quad \ddot{\theta} &= \dot{u}= \dot{u}u\\
+\text{(37) can be written as:}\quad \dot{u}u - \cot\theta\left( 1-u^2\right) &= 0\\
+\text{or}\quad \frac{\dot{u}u}{\left( 1-u^2\right)} &= \cot\theta\\
+\text{or}\quad \frac{u}{\left( 1-u^2\right)}du &= \cot\theta d\theta\\
+\Rightarrow\quad -\half \log (1-u^2) &= -\log\csc\theta\\
+\Rightarrow\quad \sqrt{(1-u^2)} &= \csc\theta\\
+\Rightarrow\quad u &= \sqrt{1-\csc^2\theta}\\
+\Rightarrow\quad  ds &= \frac{d\theta}{ \sqrt{1-\csc^2\theta}} 
+\end{align}
 $$\medblackdiamond$$
 \newpage
