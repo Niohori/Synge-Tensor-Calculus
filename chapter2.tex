@@ -1670,6 +1670,7 @@ $$\medblackdiamond$$
 Write down the differential equations of the geodesics on a sphere, using colatitude $\theta$ and the azimuth $\phi$ as coordinates. Integrate the differential equations and obtain a finite equation $$ A\sin \theta \cos \phi + B \sin \theta \sin \phi + C\cos\theta = 0$$
 where $A,B,C$ are arbitrary constants.
 \end{tcolorbox}
+$\textbf{We will use two different approaches to determine the relation.}$\\
 We will first find the solution, starting from the variational principle , defining a geodesic.
 In spherical coordinates we have (see exercise page 27) $ds^2 = dr^2 +  r^2\sin^2(\theta)d\phi^2+ r^2d\theta^2$.\\
 As $r=R= C^{st}$ this reduces to
@@ -1690,7 +1691,7 @@ Applying the variational principle on L and using the Euler-Langrange equations:
  \text{(5) becomes:} \quad \dv{\pdv{\mathcal{L}}{\dot{\phi}}}{\theta} &=0\\
  \Leftrightarrow \quad \pdv{\mathcal{L}}{\dot{\phi}} &= C\quad \ \text{(= constant)}\\
 \text{with}\quad \pdv{\mathcal{L}}{\dot{\phi}} &= \pdv{\sqrt{1+\sin^2 \theta   \  \dot{\phi}^2 }}{\dot{\phi}}= \frac{\sin^2 \theta \  \dot{\phi}}{ \sqrt{1+\sin^2 \theta \ \dot{\phi}^2 }}\\
-\text{(9) and (10):}\quad C &= \frac{\sin^2 \theta \  \dot{\phi}}{ \sqrt{1+\sin^2 \theta \ \dot{\phi}^2 }} \\
+\text{(9) and (10):}\quad C^2 &= \frac{\sin^2 \theta \  \dot{\phi}}{ \sqrt{1+\sin^2 \theta \ \dot{\phi}^2 }} \\
 \text{or}\quad \dot{\phi} &= \frac{C}{\sin \theta \sqrt{\sin^2 \theta - C^2}}
 \end{align}
 Solving the ODE (12).
@@ -1736,16 +1737,16 @@ Finding the geodesics from the tensorial formula's, implies solving $2^{nd}$ ord
 \text{arc-length s as independent variable}\quad& \left \{ \begin{array}{ll}
 \ (a)&\dv[2]{\phi}{s} + 2 \cot\theta\dv{\phi}{s} \dv{\theta}{s} = 0\\\\
 \ (b)&\dv[2]{\theta}{s} - \sin\theta\cos\theta(\dv{\phi}{s})^2  = 0\\\\
-\ (c)&\ (\dv{\theta}{s})^2+\sin^2\theta(\dv{\phi}{s})^2 = 1
+\ (c)&\ (\dv{\theta}{s})^2+\sin^2\theta(\dv{\phi}{s})^2 = 1\\\\
 \end{array}\right.\\
 \theta \text{ as independent variable}\quad& \left \{ \begin{array}{l}
 \lambda =  - \sin\theta\cos\theta(\dv{\phi}{\theta})^2\\\\
-\dv[2]{\phi}{\theta}  = \lambda \dv{\phi}{\theta}- 2 \cot\theta\dv{\phi}{\theta}  \\
+\dv[2]{\phi}{\theta}  = \lambda \dv{\phi}{\theta}- 2 \cot\theta\dv{\phi}{\theta}  \\\\
 \end{array}\right.\\
 \Rightarrow \quad \dv[2]{\phi}{\theta}  &= - \sin\theta\cos\theta(\dv{\phi}{\theta})^3- 2 \cot\theta\dv{\phi}{\theta}  \\
 \phi \text{ as independent variable}\quad& \left \{ \begin{array}{l}
 \lambda =  2 \cot\theta\dv{\theta}{\phi}\\\\
-\dv[2]{\theta}{\phi}  = \lambda \dv{\theta}{\phi} + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\
+\dv[2]{\theta}{\phi}  = \lambda \dv{\theta}{\phi} + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\\\
 \end{array}\right.\\
 \Rightarrow \quad \dv[2]{\theta}{\phi}  &= 2 \cot\theta(\dv{\theta}{\phi})^2 + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\
 \
@@ -1754,14 +1755,24 @@ Inspection shows hat the expression (32) and (34) are quite complicated while us
 \begin{align}
 \ddot{\theta} - \sin\theta\cos\theta\left(\frac{1 - \dot{\theta}^2}{\sin^2\theta}\right)&= 0\\
 \text{or:}\quad \ddot{\theta} - \cot\theta\left( 1-\dot{\theta}^2\right) &= 0\\
-\text{Put }\ u(\theta)= \dot{\theta}\quad\Rightarrow\quad \ddot{\theta} &= \dot{u}= \dot{u}u\\
+\text{Put }\ u(\theta)= \dot{\theta}\quad\Rightarrow\quad \ddot{\theta} &= \dot{u}u\\
 \text{(37) can be written as:}\quad \dot{u}u - \cot\theta\left( 1-u^2\right) &= 0\\
 \text{or}\quad \frac{\dot{u}u}{\left( 1-u^2\right)} &= \cot\theta\\
-\text{or}\quad \frac{u}{\left( 1-u^2\right)}du &= \cot\theta d\theta\\
-\Rightarrow\quad -\half \log (1-u^2) &= -\log\csc\theta\\
-\Rightarrow\quad \sqrt{(1-u^2)} &= \csc\theta\\
-\Rightarrow\quad u &= \sqrt{1-\csc^2\theta}\\
-\Rightarrow\quad  ds &= \frac{d\theta}{ \sqrt{1-\csc^2\theta}} 
+\text{or}\quad \frac{u}{\left( 1-u^2\right)}du &= \frac{\cos\theta}{\sin\theta} d\theta\\
+\text{or}\quad -\half\frac{1}{\left( 1-u^2\right)}d(1-u^2) &= \frac{1}{\sin \theta} d(\sin\theta)\\
+\text{hence}\quad -d(\log (\sqrt{1-u^2})) &= d(\log(\sin\theta))\\
+\Rightarrow \quad d(\log \sqrt{1-u^2} +\log(\sin\theta))&=0\\
+\Leftrightarrow \quad d(\log( \sqrt{1-u^2}\sin\theta))&=0\\
+\Rightarrow \quad (1-\dot{\theta}^2)\sin^2\theta &= C^2\\
+\Rightarrow \quad \dot{\theta}^2&= 1-\frac{C^2}{\sin^2\theta}\\
+\text{we have (30c)}\quad \dot{\theta}^2+\dot{\phi}^2\sin^2\theta &= 1\\
+\text{and so (47):}\quad 1-\frac{C^2}{\sin^2\theta}+\dot{\phi}^2\sin^2\theta &= 1\\
+\Rightarrow \quad \dot{\phi}^2 &= \frac{C^2}{\sin^4\theta}\\
+\Rightarrow \quad \dot{\phi} &= \frac{C}{\sin^2\theta}\\
+\text{we have} \quad \dot{\phi}=\dv{\phi}{\theta}\dot{\theta}\\
+\text{so} \quad d\phi  &= \frac{C}{\sin^2\theta\sqrt{1-\frac{C^2}{\sin^2\theta}}}d\theta\\
+\text{so} \quad d\phi  &= \frac{C}{\sin\theta\sqrt{\sin^2\theta-C^2}}d\theta
 \end{align}
+Note that expression (54) is exactly the expression (12) we found by applying directly the variational principle to find the general expression. So applying steps (13) to (26) gives us the same expression.
 $$\medblackdiamond$$
 \newpage
