@@ -552,48 +552,34 @@ Find the Jacobian of the transformation. Where is it zero or infinite?
 
 \begin{figure}[h]
 \centering
-\begin{minipage}[t]{.5\textwidth}
+\begin{minipage}[t]{.4\textwidth}
 %\centering
 \vspace{0pt}
-\includegraphics[scale=.5]{spherical.jpg}
+\includegraphics[scale=.6]{spherical.jpg}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.4\textwidth}
 %\centering
 \vspace{50pt}
-We use the latitude $\psi$ instead of the co-latitude $\phi$.\\\\
 $\left\{ \begin{array}{c}
-    x= r\cos (\psi )\cos (\theta) \\
-     y= r\cos (\psi )\sin (\theta) \\
-      z= r\sin(\psi )
+    x= r\sin \theta \cos \phi \\
+     y= r\sin \theta\sin \phi \\
+      z= r\cos\theta 
   \end{array} \right\}$
 \end{minipage}
 \end{figure}
-Partial differentiating of (x,y,z) with respect to (r,$\psi$,$\theta$) gives the Jacobian
+Partial differentiating of (x,y,z) with respect to (r,$\theta$,$\phi$) gives the Jacobian
 \begin{align}
-\ J=
+\ J&=
 \left| {\begin{array}{ccc}
-    \cos (\psi )\cos (\theta) & -r\sin (\psi )\cos (\theta) & -r\cos (\psi )\sin (\theta)\\
-    \cos (\psi )\sin (\theta) & -r\sin (\psi )\sin (\theta) & r\cos (\psi )\cos (\theta)\\
-    \sin (\psi ) & r\cos (\psi )& 0\\
+    \sin \theta \cos \phi & r\cos \theta\cos \phi  & -r\sin \theta \sin \phi\\
+    \sin \theta \sin \phi & r\cos \theta\sin \phi  & r\sin\theta \cos\phi\\
+    \cos\theta  & -r\sin \theta &0\\
   \end{array} } \right|
+  \\
+\ &= r^2\sin \theta (\sin^2 \theta\cos^2 \phi + \sin^2 \theta \sin^2 \phi + \cos^2\theta \cos^2\phi + \cos^2\theta\sin^2\phi)\\
+\  &= r^2\sin \theta 
 \end{align}
-
-
-
-\begin{eqnarray}
-\ J &=& \cos(\psi)\cos(\theta)(-r^{2})\cos^{2}(\psi)\cos(\theta))\\ &+& r\sin(\psi) \cos(\theta)(-r\cos(\psi)\cos(\theta)\sin(\psi)) \\&-& r\cos(\psi)\sin(\theta)(r\cos^{2}(\psi)\sin(\theta)+r\sin^{2}(\psi)\sin(\theta))\\
-&=& -r^{2}\cos^{3}(\psi)\cos^{2}(\theta)
--r^{2}\sin^{2}(\psi)\cos^{2}(\theta)\cos(\psi)-r^{2}\cos(\psi)\sin^{2}(\theta)
-\end{eqnarray}
-
-
-
-Noting that the $2^{nd}$ term in (5) can be written as $-r^{2}\cos^{2}(\theta)\cos(\psi)+r^{2}\cos^{2}(\theta)\cos^{3}(\psi)$, we get
-\begin{align}
-\ J &=  -r^{2}(\cos^{3}(\psi)\cos^{2}(\theta)+\cos^{2}(\theta)\cos(\psi)-\cos^{3}(\psi)\cos^{2}(\theta)+\cos(\psi)\sin^{2}(\theta))\\
-\ &= -r^{2}\cos(\psi)
-\end{align}
-J=0: for $r=0$ or $\psi = \frac{\pi}{2}|_{r \epsilon (-\infty, +\infty)}$ and $J\rightarrow \pm\infty$ or $\mp\infty$ for $r\rightarrow \pm\infty|_{\psi\neq 0}$. But what about the case $r\rightarrow \pm\infty|_{\psi\rightarrow 0}$? This case is not determined as long as no path is chosen in the $(r,\psi)$ configuration space.
+J=0: for $r=0$ or $\theta = 0_{\ r \epsilon (-\infty, +\infty)}$ and $J\rightarrow \pm\infty$ or $\mp\infty$ for $r\rightarrow \pm\infty|_{\theta\neq 0}$. But what about the case $r\rightarrow \pm\infty|_{\theta\rightarrow 0}$? This case is not determined as long as no path is chosen in the $(r,\theta)$ configuration space.
 $$\medblackdiamond$$
 \pagebreak[4]
 
@@ -853,7 +839,7 @@ $$\medblackdiamond$$
 Prove that $$\pdv{ln\left|\pdv{x^m}{y^n}\right|}{x^r} =\pdv{y^m}{x^r}{x^n}\pdv{x^n}{y^m}$$.
 \end{tcolorbox}
 \begin{lemma}
-Be $A$ a square matrix $NxN$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. Define $A^{,}$ as $(A^,_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^, = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
+Be $A$ a square matrix $N\times N$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. Define $A^{,}$ as $(A^,_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^, = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
 Proof:\\
 By definition of the determinant, we have
 \begin{align}

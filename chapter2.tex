@@ -27,75 +27,9 @@ $$\medblackdiamond$$
 \begin{tcolorbox}
 Show that if $x^1 = r, x^2 = \theta, x^3 = \phi$, in the usual notation of spherical polar coordinates, then $$ a_{11} =1, a_{22} = r^2, a_{33} = r^2\sin^2\theta$$ and the other components vanish.
 \end{tcolorbox}
-\begin{figure}[h]
-\centering
-\begin{minipage}[t]{.5\textwidth}
-%\centering
-\vspace{0pt}
-\includegraphics[scale=.5]{spherical.jpg}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.4\textwidth}
-%\centering
-\vspace{50pt}
-We use the latitude $\psi$ instead of the co-latitude $\phi$.\\\\
-$\left\{ \begin{array}{c}
-    x= r\cos (\psi )\cos (\theta) \\
-     y= r\cos (\psi )\sin (\theta) \\
-      z= r\sin(\psi )
-  \end{array} \right.$
-\end{minipage}
-\end{figure}
-\begin{align} 
-\ ds^2 = dx^2 + dy^2 + dz^2\quad\text{with}\\
-\left.
-\begin{array}{c}
-    dx= dr\cos (\psi )\cos (\theta)- r\sin (\psi )d\psi\cos (\theta) -r\cos (\psi )\sin (\theta)d\theta\\
-     dy= dr\cos (\psi )\sin (\theta) -r\sin (\psi )d\psi\sin (\theta)+r\cos (\psi )\cos (\theta)d\theta\\
-      dz= dr\sin(\psi )+r\cos(\psi )d\psi\\
-  \end{array} \right\}
-  \end{align}
-  \begin{align}
-  \left.
-  \begin{array}{c}
-    dx^2=
-    \cos^2 (\psi )\cos^2 (\theta)dr^2\\- r^2\sin^2 (\psi )\cos^2 (\theta)d\psi^2\\ -r^2\cos^2 (\psi )\sin^2 (\theta)d\theta^2\\
-    -\cos (\psi )\cos (\theta) r\sin (\psi )\cos (\theta)drd\psi\\
-    -\cos (\psi )\cos (\theta)r\cos (\psi )\sin (\theta)drd\theta\\
-    +r\sin (\psi )\cos (\theta)r\cos (\psi )\sin (\theta)d\psi d\theta  \\\\
-     dy^2=  \cos^2 (\psi )\sin^2 (\theta)dr^2\\ +r^2\sin^2 (\psi )\sin^2 (\theta)d\psi^2\\+r^2\cos^2 (\psi )\cos^2 (\theta)d\theta^2\\-\cos (\psi )\sin (\theta)r\sin (\psi )\sin (\theta)dr d\psi\\ - \cos (\psi )\sin (\theta)r\cos (\psi )\cos (\theta)drd\theta\\
-     -r\sin (\psi )\sin (\theta)r\cos (\psi )\cos (\theta)d\psi d\theta\\\\
-      dz^2= \sin^2(\psi )dr^2 +r^2\cos^2(\psi )d\psi^2 + r\sin(\psi )\cos(\psi )drd\psi\\
-  \end{array} \right\}
-\end{align}
-Rearrange terms:
-  \begin{align}
-  \left.
-  \begin{array}{c}
-    dx^2=
-    \cos^2 (\psi )\cos^2 (\theta)dr^2\\+ r^2\sin^2 (\psi )\cos^2 (\theta)d\psi^2\\ +r^2\cos^2 (\psi )\sin^2 (\theta)d\theta^2\\
-    -r\cos (\psi )\sin (\psi )\cos^2 (\theta)drd\psi\\
-    -r\cos^2 (\psi )\cos (\theta)\sin (\theta)drd\theta\\
-    +r^2\sin (\psi )\cos (\theta) \cos (\psi )\sin (\theta)d\psi d\theta  \\\\
-     dy^2=  \cos^2 (\psi )\sin^2 (\theta)dr^2\\ +r^2\sin^2 (\psi )\sin^2 (\theta)d\psi^2\\+r^2\cos^2 (\psi )\cos^2 (\theta)d\theta^2\\-r\cos (\psi )\sin (\psi )\sin^2 (\theta)dr d\psi\\ - r\cos^2 (\psi )\sin (\theta) \cos (\theta)drd\theta\\
-     -r^2\sin (\psi )\sin (\theta)\cos (\psi )\cos (\theta)d\psi d\theta\\\\
-      dz^2= \sin^2(\psi )dr^2 +r^2\cos^2(\psi )d\psi^2 + r\sin(\psi )\cos(\psi )drd\psi\\
-  \end{array} 
-  \right\}
-\end{align}
-Grouping similar infinitesimal components and using basic trigonometric identities gives:
-\begin{align}
-\ ds^2 &= dr^2 +  r^2d\psi^2 + r^2\cos^2(\psi)d\theta^2\\
-\text{replace  }\psi\text{ with } \frac{\pi}{2}-\phi \Rightarrow ds^2 &= dr^2 +  r^2d\phi^2 + r^2\sin^2(\phi)d\theta^2\\
-\Rightarrow (a_{mn}) &= \begin{pmatrix}
- 1& 0 & 0\\
-0 & r^2 & 0 \\
-0 & 0 & r^2\sin^2(\phi) \\
-\end{pmatrix}
-\end{align}
-\newpage
-A more geometrical way of deriving the metric\\
+One can choose to start from $ds^2 = dx^2+dy^2+dz^2$ and then expanding the $dx^i$ along $(r,\theta,\phi)$ but this a rather tedious way. So we use a more geometrical way of deriving the metric\\
 \includegraphics[scale=.6]{sphericalmetric.jpg}\\\\
-Consider an infinitesimal displacement of point E to J with $(dr, d\phi , d\theta)$.
+Consider an infinitesimal displacement of point E to J with $(dr,d\theta, d\phi )$.
 \begin{align}
 \ ds^2 &= |EJ|^2
 \end{align}
@@ -107,42 +41,42 @@ We have the following relationships
 \begin{align}
 \left.
 \begin{array}{c}
-\ |ES| = r\sin(\phi)d\theta\\\\
-\ |GE| = |GS| = r\sin(\phi)\\\\
-\ |GK| = |RJ| = (r+dr)\sin(\phi+d\phi) \\
-\ =(r+dr)(\cos(\phi)\sin(d\phi)+\sin(\phi)\cos(d\phi) )\\
-\ = (r+dr)(\cos(\phi)d\phi+\sin(\phi))\\
-\ = r\cos(\phi)d\phi+r\sin(\phi)+\sin(\phi)dr\\\\
-\ |OR| =  (r+dr)\cos(\phi+d\phi)\\
-\ = (r+dr)(\cos(\phi)\cos(d\phi)-\sin(\phi)\sin(d\phi))\\
-\ = (r+dr)(\cos(\phi)-\sin(\phi)d\phi)\\
-\ = r\cos(\phi)-r\sin(\phi)d\phi + \cos(\phi)dr\\\\
-\ |OG| = r\cos(\phi)\\\\
-\ |JK| = |OR|-|OG| = \cos(\phi)dr-r\sin(\phi)d\phi\\\\
-\ |SK| = |GK|-|GS| = r\cos(\phi)d\phi+\sin(\phi)dr\\\\
+\ |GE| = |GS| = r\sin\theta\\\\
+\ |ES| = |GE|d\phi = r\sin\theta d\phi\\\\
+\ |GK| = |RJ| = (r+dr)\sin(\theta+d\theta) \\
+\ =(r+dr)(\cos(\theta)\sin(d\theta)+\sin(\theta)\cos(d\theta) )\\
+\ = (r+dr)(\cos(\theta)d\theta+\sin(\theta))\\
+\ = r\cos(\theta)d\theta+r\sin(\theta)+\sin(\theta)dr\\\\
+\ |OR| =  (r+dr)\cos(\theta+d\theta)\\
+\ = (r+dr)(\cos(\theta)\cos(d\theta)-\sin(\theta)\sin(d\theta))\\
+\ = (r+dr)(\cos(\theta)-\sin(\theta)d\theta)\\
+\ = r\cos(\theta)-r\sin(\theta)d\theta + \cos(\theta)dr\\\\
+\ |OG| = r\cos(\theta)\\\\
+\ |JK| = |OR|-|OG| = \cos(\theta)dr-r\sin(\theta)d\theta\\\\
+\ |SK| = |GK|-|GS| = r\cos(\theta)d\theta+\sin(\theta)dr\\\\
 \end{array}
 \right\}
 \end{align}
 \begin{align}
 \left.
 \begin{array}{c}
-\ |ES|^2 = r^2\sin^2(\phi)d\theta^2\\
-\ |SK|^2 = r^2\cos^2(\phi)d\phi^2+\sin^2(\phi)dr^2 +2r\cos(\phi)\sin(\phi)drd\phi \\
-\ |JK|^2 = \cos^2(\phi)dr^2+r^2\sin^2(\phi)d\phi^2 -2r\cos(\phi)\sin(\phi)drd\phi\\
+\ |ES|^2 = r^2\sin^2(\theta)d\phi^2\\
+\ |SK|^2 = r^2\cos^2(\theta)d\theta^2+\sin^2(\theta)dr^2 +2r\cos(\theta)\sin(\theta)drd\theta \\
+\ |JK|^2 = \cos^2(\theta)dr^2+r^2\sin^2(\theta)d\theta^2 -2r\cos(\theta)\sin(\theta)drd\theta\\
 \end{array}
 \right\}
 \end{align}
 Hence,
 \begin{align}
 \ ds^2 &= |ES|^2+|SK|^2+|KJ|^2\\
-&= \left\{ \begin{array}{c} r^2\sin^2(\phi)d\theta^2 \\ +r^2\cos^2(\phi)d\phi^2+\sin^2(\phi)dr^2 +2r\cos(\phi)\sin(\phi)drd\phi\\+r^2\sin^2(\phi)d\phi^2+\cos^2(\phi)dr^2 -2r\cos(\phi)\sin(\phi)drd\phi\\
+&= \left\{ \begin{array}{c} r^2\sin^2(\theta)d\phi^2 \\ +r^2\cos^2(\theta)d\theta^2+\sin^2(\theta)dr^2 +2r\cos(\theta)\sin(\theta)drd\theta\\+r^2\sin^2(\theta)d\theta^2+\cos^2(\theta)dr^2 -2r\cos(\theta)\sin(\theta)drd\theta\\
 \end{array}
 \right.\\
-\ &\Rightarrow ds^2= dr^2 + r^2d\phi^2 + r^2\sin^2(\phi)d\theta^2\\
+\ &\Rightarrow ds^2= dr^2 + r^2d\theta^2 + r^2\sin^2(\theta)d\phi^2\\
 \ & \Rightarrow (a_{mn}) = \begin{pmatrix}
  1& 0 & 0\\
 0 & r^2 & 0 \\
-0 & 0 & r^2\sin^2(\phi) \\
+0 & 0 & r^2\sin^2\theta \\
 \end{pmatrix}
 \end{align}
 $$\medblackdiamond$$
@@ -272,7 +206,7 @@ We have (see exercise page 27):
 \ (a_{mn}) = \begin{pmatrix}
  1& 0 & 0\\
 0 & r^2 & 0 \\
-0 & 0 & r^2\sin^2(\phi) \\
+0 & 0 & r^2\sin^2\theta \\
 \end{pmatrix}
 \end{align}
 As $a_{mn} = 0 \quad \forall m \neq n$ we deduce (see previous exercise p31)
@@ -280,7 +214,7 @@ As $a_{mn} = 0 \quad \forall m \neq n$ we deduce (see previous exercise p31)
 \ (a^{mn}) = \begin{pmatrix}
  1& 0 & 0\\
 0 & \frac{1}{r^2} & 0 \\
-0 & 0 & \frac{1}{r^2\sin^2(\phi)}\\
+0 & 0 & \frac{1}{r^2\sin^2\theta)}\\
 \end{pmatrix}
 \end{align}
 $$\medblackdiamond$$
@@ -1567,7 +1501,7 @@ $$\medblackdiamond$$
 
 \section{p78-exercise 4}
 \begin{tcolorbox}
-If $X^r, Y^r$ are uit vectors inclined at an angle $\theta$, prove that $$\sin^2 \theta = (a_{rm}a_{sn}- a_{rs}a_{mn})X^r Y^s X^m Y^n$$
+If $X^r, Y^r$ are unit vectors inclined at an angle $\theta$, prove that $$\sin^2 \theta = (a_{rm}a_{sn}- a_{rs}a_{mn})X^r Y^s X^m Y^n$$
 \end{tcolorbox}
 $X^r Y^s$ are unit vectors. So,
 \begin{align}
@@ -1898,7 +1832,8 @@ $$\Gamma^{\rho}_{N \sigma},\ \Gamma^{N}_{\rho \sigma},\ \Gamma^{\rho}_{N N}, \ \
 For the Christoffel symbols of the second kind we use:
 \begin{align}
 \Gamma^r_{st} &= a^{rk}[st,\ k]\\
-\ a^{rk} &= a^{,mn}\pdv{x^r}{x^{,m}}\pdv{x^k}{x^{,n}}
+\ a^{rk} &= a^{,mn}\pdv{x^r}{x^{,m}}\pdv{x^k}{x^{,n}}\\
+ \text{(2.631) page 65:}\spatie a^{N \rho} &= 0 
 \end{align}
 \newpage
 $\boldsymbol{\Gamma^{\rho}_{N \sigma}}$\\
@@ -1919,5 +1854,144 @@ And so,
 So, $\Gamma^{\rho}_{N \sigma}$ is a $2^{nd}$ order mixed tensor (contravariant in $\rho$, covariant in $\sigma$.)
 $$\meddiamond$$
 $\boldsymbol{\Gamma^{N }_{\rho \sigma}}$\\
+\begin{align}
+\Gamma^{N }_{\rho \sigma} &= a^{N  k}[\rho \sigma,\ k]\\
+\ & = \underbrace{a^{N \tau}}_{=0}[\rho \sigma,\ \tau]+ a^{N N}[\rho \sigma,\ N]\\
+\text{(8):}\quad &= a^{,NN}[\alpha \beta, \ N]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
+\text{considering :}\quad \ a^{,N \tau} & =0 \quad \text{we can write this as:}\\
+\Gamma^{N }_{\rho \sigma} &=a^{,N \tau}[\alpha \beta, \ \tau]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}+ a^{,NN}[\alpha \beta, \ N]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
+\ &=\underbrace{a^{,N k}[\alpha \beta, \ k]^{,}}_{= \Gamma^{,N}_{\alpha \beta}}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
+\Rightarrow \quad \Gamma^{N }_{\rho \sigma} &= \Gamma^{,N}_{\alpha \beta}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}
+\end{align}
+So, $\Gamma^{N }_{\rho \sigma}$ is a $2^{nd}$ order mixed tensor (covariant in both indices)
+$$\meddiamond$$
+
+$\boldsymbol{\Gamma^{\rho}_{N N}}$\\
+\begin{align}
+\Gamma^{\rho }_{N N} &= a^{\rho  k}[N N,\ k]\\
+\ & = a^{\rho \tau}[N N,\ \tau]+ \underbrace{a^{\rho N}}_{=0}[N N,\ N]\\
+\text{(16):}\quad &= a^{,mn}\pdv{x^\rho}{x^{,m}}\pdv{x^\tau}{x^{,n}}[NN, \ \alpha]^, \partial_{\tau}x^{,\alpha}\\
+\ &= a^{,mn}\pdv{x^\rho}{x^{,m}} \underbrace{\pdv{x^{\alpha}}{x^{,n}}}_{= \delta^{\alpha}_{n}}[NN, \ \alpha]^, \\
+\ &= a^{, \tau \alpha}[NN, \ \alpha]^,\pdv{x^\rho}{x^{, \tau}}+  \underbrace{a^{,N \alpha}}_{=0}[NN, \ \alpha]^,\pdv{x^\rho}{x^{,N}} \\
+\ &= \underbrace{a^{, \tau \alpha}[NN, \ \alpha]^,}_{= \Gamma^{, \tau}_{NN}}\pdv{x^\rho}{x^{, \tau}}  \\
+\Rightarrow \quad \Gamma^{\rho }_{N N} &= \Gamma^{, \tau}_{NN}\pdv{x^\rho}{x^{, \tau}}  
+\end{align}
+So, $\Gamma^{\rho }_{N N}$ is a $1^{st}$ order contravariant tensor.
+$$\meddiamond$$
+
+$\boldsymbol{\Gamma^{N}_{N \rho}}$\\
+\begin{align}
+\Gamma^{N}_{N \rho} &= a^{N  k}[N \rho,\ k]\\
+\ & = a^{N N}[N \rho,\ N]+ \underbrace{a^{N \tau}}_{=0}[N \rho,\ \tau]\\
+\text{(16):}\quad &= a^{,NN}[N\alpha, \ N ]^, \partial_{\rho}x^{,\alpha}\\
+\text{considering :}\quad \ a^{,N \tau} & =0 \quad \text{we can write this as:}\\
+\ &= a^{,N\tau}[N\alpha, \ \tau ]^, \partial_{\rho}x^{,\alpha}+ a^{,NN}[N\alpha, \ N ]^, \partial_{\rho}x^{,\alpha}\\
+\ &= \underbrace{a^{,N k}[N \alpha, \ k ]^,}_{= \Gamma^{,N}_{N \alpha}} \partial_{\rho}x^{,\alpha}\\
+\Rightarrow \quad \Gamma^{N}_{N \rho} &= \Gamma^{,N}_{N \alpha} \partial_{\rho}x^{,\alpha}
+\end{align}
+So, $\Gamma^{N}_{N \rho}$ is a $1^{st}$ order covariant tensor.
+$$\meddiamond$$
+\newpage
+$\boldsymbol{\Gamma^{N}_{N N}}$\\
+\begin{align}
+\Gamma^{N}_{N N} &= a^{N  k}[N N,\ k]\\
+\ & = a^{N N}[N N,\ N]+ \underbrace{a^{N \tau}}_{=0}[N N,\ \tau]\\
+\ & = a^{,N N}[N N,\ N]\\
+\text{(22):}\quad &= a^{,N N}[N N,\ N]^,\\
+\Rightarrow \quad \Gamma^{N}_{N N} &= \Gamma^{,N}_{N N}
+\end{align}
+So, $\Gamma^{N}_{N N}$ is an invariant.
+$$\medblackdiamond$$
+\newpage
+\section{p79-exercise 10}
+\begin{tcolorbox}
+If $\theta, \phi$ are colatitude and azimuth on a sphere, and we take
+$$x^2 = \theta \cos \phi, \ x^2=\theta\sin \phi$$.
+Calculate the Christoffels symbols for the coordinate system $x^1, x^2$ and show tht they vanish at the point $\theta = 0$
+\end{tcolorbox}
+We have, page 48  (2.509):
+\begin{align}
+\ [mn,r]^, =[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}+ a_{pq}\pdv{x^p}{x^{,r}}\pdv{x^q}{x^{,m}}{x^{,n}}
+\end{align}
+We know also that in a spherical coordinate system all $[pq,s]$ vanish except for
+\begin{align}
+\ [\phi \phi, \theta ] &= -\sin\theta\cos\theta\\
+\ [\phi \theta, \phi  ] &= [ \theta \phi, \phi  ] = \sin\theta\cos\theta\\
+\text{note that }\quad  [\phi \phi, \theta ] &= -[\phi \theta, \phi  ]\\
+\text{and}\quad \left( a_{\theta\phi}\right) &= \begin{pmatrix}
+ 1& 0 \\
+ 0& \sin^2 \theta \\
+\end{pmatrix}\\
+\text{and}\quad \left( a^{\theta\phi}\right) &= \begin{pmatrix}
+ 1& 0 \\
+ 0& \frac{1}{\sin^2 \theta }\\
+\end{pmatrix}\\
+\text{then}\quad [11,1]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{1}\phi + [\phi\phi,\theta]\partial_{1}\phi\partial_{1}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{11}\phi\\
+\ [12,1]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{1}\phi + [\phi\phi,\theta]\partial_{1}\phi\partial_{2}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{12}\phi\\
+\ [22,1]^, &= 2[\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi + [\phi\phi,\theta]\partial_{2}\phi\partial_{2}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{22}\phi\\
+\ [11,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi + [\phi\phi,\theta]\partial_{1}\phi\partial_{1}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{11}\phi\\
+\ [12,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{2}\phi + [\phi\phi,\theta]\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{12}\phi\\
+\ [22,2]^, &= 2[\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{2}\phi + [\phi\phi,\theta]\partial_{2}\phi\partial_{2}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{22}\phi\\
+\end{align}
+\begin{align}
+\text{(4):}\quad [11,1]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{1}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{1}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{11}\phi\\
+\ [12,1]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{1}\phi  - [\theta\phi,\phi]\partial_{1}\phi\partial_{2}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{12}\phi\\
+\ [22,1]^, &= 2[\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi - [\theta\phi,\phi]\partial_{2}\phi\partial_{2}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{22}\phi\\
+\ [11,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{1}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{11}\phi\\
+\ [12,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{12}\phi\\
+\ [22,2]^, &= 2[\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{2}\phi\partial_{2}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{22}\phi\\
+\text{so:}\quad [11,1]^, &= [\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{1}\phi +a_{\theta\theta}\partial_{1}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{11}\phi\\
+\ [12,1]^, &= [\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{1}\phi  +a_{\theta\theta}\partial_{1}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{12}\phi\\
+\ [22,1]^, &= 2[\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi - [\theta\phi,\phi]\partial_{2}\phi\partial_{2}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{22}\phi\\
+\ [11,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{1}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{11}\phi\\
+\ [12,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{12}\phi\\
+\ [22,2]^, &= [\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{2}\phi +a_{\theta\theta}\partial_{2}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{22}\phi\\
+\text{also}\ &\left \{ \begin{array}{lllll}
+\partial_{1} \theta = 2\frac{x^1}{\rho}& \partial_{2} \theta =2\frac{x^2}{\rho}&\partial^2_{11} \theta = 2\frac{\rho^2 -(x^1)^2}{\rho ^3}& \partial^2_{12} \theta = 2\frac{x^1x^2}{\rho^3}  & \partial^2_{22} \theta = 2\frac{\rho^2 -(x^2)^2}{\rho ^3}\\\\
+\partial_{1} \phi = -\frac{x^2}{\rho^2}& \partial_{2} \phi = -\frac{x^1}{\rho^2}&\partial^2_{11} \phi = 4\frac{x^1 x^2}{\rho ^3}& \partial^2_{12} \phi = -\frac{\rho -(x^1)^2}{\rho ^3} & \partial^2_{22} \phi = -4\frac{x^1 x^2}{\rho ^3} \\
+\end{array}\right.\\
+\text{with} \quad \rho &= \sqrt{(x^1)^2+(x^2)^2} \ \text{and} \quad \tau = (x^1)^2-(x^2)^2\\
+\ & \left \{ \begin{array}{l}
+\partial_{1}\theta\partial_{1}\phi\partial_{1}\phi = 2\frac{x^1}{\rho}(-\frac{x^2}{\rho ^2})^2  = 2\frac{x^1 (x^2)^2}{\rho^3}\\
+\partial_{1}\theta\partial_{2}\phi\partial_{1}\phi = 2\frac{x^1}{\rho}(-\frac{x^1}{\rho ^2})(-\frac{x^2}{\rho ^2})= 2\frac{(x^1)^2x^2}{\rho^5}\\
+\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi =2\frac{x^2}{\rho}(-\frac{x^1}{\rho ^2})(-\frac{x^2}{\rho ^2})=2\frac{x^1(x^2)^2}{\rho^5}\\
+\partial_{2}\phi\partial_{2}\phi\partial_{1}\theta =2(-\frac{x^1}{\rho ^2})^2 \frac{x^1}{\rho }= 2\frac{(x^1)^3}{\rho^3}\\
+\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi = 2\frac{x^1}{\rho}(-\frac{x^2}{\rho ^2})(-\frac{x^1}{\rho ^2})=2\frac{(x^1)^2x^2}{\rho^5} \\
+\partial_{1}\phi\partial_{1}\phi\partial_{2}\theta = 2 (-\frac{x^2}{\rho ^2})^2\frac{x^2}{\rho}= 2\frac{(x^2)^3}{\rho^5}\\
+\partial_{1}\theta\partial_{2}\phi\partial_{2}\phi =2\frac{x^1}{\rho}(-\frac{x^1}{\rho ^2})(-\frac{x^1}{\rho ^2})= 2\frac{(x^1)^3}{\rho^5}\\
+\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta= 2 (-\frac{x^2}{\rho ^2})(-\frac{x^1}{\rho ^2}) \frac{x^2}{\rho}= 2\frac{x^1(x^2)^2}{\rho^5}\\
+\partial_{2}\theta\partial_{2}\phi\partial_{2}\phi = 2\frac{x^2}{\rho }(-\frac{x^1}{\rho ^2})^2 = 2\frac{(x^1)^2 x^2}{\rho^5}
+\end{array} \right.\\
+\end{align}
+\begin{align}
+\ & \left \{ \begin{array}{l}
+\partial_{1}\theta\partial_{1}\phi\partial_{1}\phi =   2\frac{x^1 (x^2)^2}{\rho^5}\\\\
+\partial_{1}\theta\partial_{2}\phi\partial_{1}\phi =  2\frac{(x^1)^2x^2}{\rho^5}\\\\
+\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi =2\frac{x^1(x^2)^2}{\rho^5}\\\\
+\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi = 2\frac{(x^1)^2x^2}{\rho^5} \\\\
+\partial_{1}\phi\partial_{1}\phi\partial_{2}\theta =  2\frac{(x^2)^3}{\rho^5}\\\\
+\partial_{1}\theta\partial_{2}\phi\partial_{2}\phi =2\frac{(x^1)^3}{\rho^5}\\\\
+\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta=2\frac{x^1(x^2)^2}{\rho^5}\\\\
+\partial_{2}\theta\partial_{2}\phi\partial_{2}\phi =2\frac{(x^1)^2 x^2}{\rho^5}
+\end{array} \right.
+\Rightarrow \quad  \left \{ \begin{array}{l}
+\ A = \partial_{1}\theta\partial_{1}\phi\partial_{1}\phi =\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi =\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta\\
+\ B = \partial_{1}\theta\partial_{2}\phi\partial_{1}\phi =\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi= \partial_{2}\theta\partial_{2}\phi\partial_{2}\phi\\
+\ C = \partial_{1}\phi\partial_{1}\phi\partial_{2}\theta\\
+\ D = \partial_{1}\theta\partial_{2}\phi\partial_{2}\phi 
+\end{array} \right.\\
+\text{so:}\quad [11,1]^, &= [\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{1}\phi +a_{\theta\theta}\partial_{1}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{11}\phi\\
+\ [12,1]^, &= [\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{1}\phi  +a_{\theta\theta}\partial_{1}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{12}\phi\\
+\ [22,1]^, &= 2[\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{1}\phi - [\theta\phi,\phi]\partial_{2}\phi\partial_{2}\phi\partial_{1}\theta+a_{\theta\theta}\partial_{1}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{22}\phi\\
+\ [11,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{1}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{1}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{11}\phi\\
+\ [12,2]^, &= 2[\theta\phi,\phi]\partial_{1}\theta\partial_{2}\phi\partial_{2}\phi - [\theta\phi,\phi]\partial_{1}\phi\partial_{2}\phi\partial_{2}\theta+a_{\theta\theta}\partial_{2}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{12}\phi\\
+\ [22,2]^, &= [\theta\phi,\phi]\partial_{2}\theta\partial_{2}\phi\partial_{2}\phi +a_{\theta\theta}\partial_{2}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{22}\phi\\
+\text{so:}\quad [11,1]^, &= A[\theta\phi,\phi]+a_{\theta\theta}\partial_{1}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{11}\phi\\
+\ [12,1]^, &= B[\theta\phi,\phi] +a_{\theta\theta}\partial_{1}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{12}\phi\\
+\ [22,1]^, &= 2A[\theta\phi,\phi]- D[\theta\phi,\phi]+a_{\theta\theta}\partial_{1}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{1}\phi\partial^2_{22}\phi\\
+\ [11,2]^, &= 2B[\theta\phi,\phi] - C[\theta\phi,\phi]+a_{\theta\theta}\partial_{2}\theta\partial^2_{11}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{11}\phi\\
+\ [12,2]^, &= 2D[\theta\phi,\phi]\partial_{1} - A[\theta\phi,\phi]+a_{\theta\theta}\partial_{2}\theta\partial^2_{12}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{12}\phi\\
+\ [22,2]^, &= B[\theta\phi,\phi]\partial_{2}+a_{\theta\theta}\partial_{2}\theta\partial^2_{22}\theta+a_{\phi\phi}\partial_{2}\phi\partial^2_{22}\phi\\
+\end{align}
 $$\medblackdiamond$$
 \newpage
