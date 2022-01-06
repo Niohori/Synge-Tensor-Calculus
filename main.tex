@@ -1,5 +1,6 @@
 \documentclass{ut-thesis}
 \usepackage{mathtools}
+\usepackage{xcolor,cancel}
 \usepackage[utf8]{inputenc} 
 \usepackage{fdsymbol}
 %\usepackage{txfonts}
@@ -8,7 +9,12 @@
 %\usepackage{physics}
 \usepackage[italicdiff]{physics}
 %\usepackage{mathtools}
-
+\usepackage{calc}
+\newsavebox\CBox
+\newcommand\hcancel[2][0.5pt]{%
+  \ifmmode\sbox\CBox{$#2$}\else\sbox\CBox{#2}\fi%
+  \makebox[0pt][l]{\usebox\CBox}%  
+  \rule[0.5\ht\CBox-#1/2]{\wd\CBox}{#1}}
 \usepackage{tcolorbox}
 \usepackage{chngcntr}
 \usepackage{titlesec}
@@ -36,7 +42,7 @@
 
 \author{Bernard Carrette}
 \gradyear{2020}
-\title{Tensor Calculus\\J.L. Synge and A.Shild (Dover Publication)\\ Solutions to exercises}
+\title{Tensor Calculus\\J.L. Synge and A.Schild (Dover Publication)\\ Solutions to exercises}
 \begin{document}
 \maketitle
 
@@ -44,7 +50,7 @@
 \section*{Some notation conventions}
 \begin{center}
 \begin{tabular}{ c c  }
-$\partial_ra_{mn}\equiv \pdv{a_{m n}}{x^r}$ & \\\\
+$\partial_r \equiv \pdv{}{x^r}$ & \\\\
 $\Gamma^r_{mn} \equiv 
 \begin{Bmatrix}
 r\\
