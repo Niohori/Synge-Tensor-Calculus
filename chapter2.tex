@@ -1495,7 +1495,6 @@ Is the form $dx^2+3dxdy+4dy^2+dz^2$ positive definite?
 \end{align}
 So, by (6) we can't get a $a \in \mathbb{R}_*$, so that (1) can be $0$ or negative. Hence,
 $$\text{The form}\quad \Phi \quad \text{is positive definite}$$
-
 $$\medblackdiamond$$
 \newpage
 
@@ -1954,5 +1953,161 @@ Does $\boldsymbol{\Gamma_{11}^{,1}}$ vanish for $\theta \rightarrow0$ ? \\The pr
 \text{(14) and ((20)}\quad \Rightarrow L_{+}& =0
 \end{align} 
 Considering that $$L_{-} = \lim_{\theta \to 0_{-}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$$ is equivalent to  $$L_{+}^{\alpha} = \lim_{\alpha \to 0_{+}}-(2\cot\alpha -\frac{1}{\alpha}-\frac{\sin\alpha\cos\alpha}{\alpha^2})$$ (substitute $\theta = -\alpha$) we conclude that   $$L_{-} =  -L_{+}=0$$. And so $$\left.\Gamma_{11}^{,1}\right|_{\theta=0} =\left.(2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2})\cos\phi\sin^2\phi\right|_{\theta=0} = 0$$
+$$\medblackdiamond$$
+\newpage
+
+\section{p79-exercise 11}
+\begin{tcolorbox}
+If vectors $T^r$ and $S_r$ undergo parallel propagation along a curve, show that $T^nS_n$ is constant along the curve.
+\end{tcolorbox}
+Parallel propagation of $T^r$ and $S_r$  along a curve means
+\begin{align}
+\frac{\delta T^r}{\delta u} &\equiv \dv{T^r}{u} + \Gamma^r_{mn}T^m \dv{x^n}{u} = 0\\
+\frac{\delta S_r}{\delta u} &\equiv \dv{S_r}{u} - \Gamma^m_{rn}S_m \dv{x^n}{u} = 0\\
+\text{Hence}\quad \dv{T^rS_r}{u} &= S_r\left(-\Gamma^r_{mn}T^m\dv{x^n}{u}\right) + T^r\left(\Gamma^m_{rn}S_m \dv{x^n}{u} \right)\\
+\ &= \dv{x^n}{u}\left(\Gamma^m_{rn}S_mT^r -  \Gamma^m_{rn}T^rS_m\right)\\
+\ &=0\\
+\Rightarrow \spatie T^rS_r &= C^{st}
+\end{align} 
+$$\medblackdiamond$$
+\newpage
+
+\section{p79-exercise 12}
+\begin{tcolorbox}
+Deduce from 2.201 that the determinant $a= \left | a_{mn} \right |$ transforms according to $$a^, = aJ^2 \quad , \quad J = \left | \pdv{x^r}{x^{,s}}\right|$$
+\end{tcolorbox}
+\begin{align}
+\ a^,_{rs} &= a_{mk} \pdv{x^{m}}{x^{,r}} \pdv{x^{k}}{x^{,s}}\\
+\text{Be}\spatie \left(J_{mr} \right )&= \left (\pdv{x^{m}}{x^{,r}}\right )\\
+\text{In (1) put  }\spatie c_{kr} &= a_{mk} \pdv{x^{m}}{x^{,r}}= a_{km} \pdv{x^{m}}{x^{,r}} \\
+\Rightarrow\spatie a^,_{rs} &= c_{kr} \pdv{x^{k}}{x^{,s}}\\
+\text{or in matrix form  } \spatie A^, &= C^T J\quad \text{with}\quad C = AJ\\
+\Rightarrow\spatie \left |A^, \right| &= \left | (AJ)^T J\right |\\
+\Leftrightarrow\spatie \left |A^, \right| &= \left | J^T A^T J\right |\\
+\Leftrightarrow\spatie \left |A^, \right| &= \left | A\right | \left |J\right |\left |J\right |\\
+\Leftrightarrow\spatie \left |A^, \right| &= \left | A\right | \left |J\right | ^2
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p79-exercise 13}
+\begin{tcolorbox}
+Using local Cartesians and applying the result of the previous exercise (N° 12), prove that, if the metric form is positive-definite, then the determinant $a= \left | a_{mn} \right |$ is always positive.
+\end{tcolorbox}
+Using local Cartesian coordinates we have:
+\begin{align}
+\Phi &= \epsilon_i (dy^i)^2 \quad \text{with} \quad \Phi > 0\\
+\text{so}\quad \left | a_{mn} \right |  &= \left | \begin{array}{cccc}  
+\epsilon_1&0&\dots & 0\\
+\ 0&\epsilon_2&\dots & 0\\
+\vdots&\vdots&\vdots & \vdots\\
+\ 0&0&\dots & \epsilon_N\\
+\end{array} \right | = \prod_{i=1}^{N}\epsilon_i >0\\
+\end{align}
+Going from $\left( a_{mn} \right)$ to any arbitrary coordinate system, we have (see exercise 12 page 79) 
+\begin{align}
+\left | a^,_{mn} \right | &= \underbrace{\left | a_{mn} \right |}_{>0}\underbrace{J^2}_{>0}\\
+\Rightarrow \quad\left | a^,_{mn} \right | &>0
+\end{align}
+$$\medblackdiamond$$
+\newpage
+
+\section{p79-exercise 13}
+\begin{tcolorbox}
+In a plane, let $x^1, \  x^2$ be the distances of a general point from the point with rectangular coordinates $(1,0)$, $(-1,0)$, respectively. (These are bipolar coordinates.) Find the line element for these coordinates, and find the conjugate tensor $a^{mn}$.
+\end{tcolorbox}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{.5\textwidth}
+%\centering
+\vspace{0pt}
+\includegraphics[scale=.4]{Bipolar.jpg}
+\end{minipage}\hfill
+\end{figure}
+\begin{align}
+\ (x^1)^2 &= \left( y^1-1\right) ^2 + \left(y^2\right)^2\\
+\ (x^2)^2 &= \left( y^1+1\right) ^2 + \left(y^2\right)^2\\
+\partial_1 (1) \quad\Rightarrow \quad x^1 &= \left( y^1-1\right)\partial_1 y^1  + \left(y^2\right)\partial_1 y^2\\
+\partial_2 (2) \quad\Rightarrow \quad\ x^2 &= \left( y^1+1\right)\partial_2 y^1  + \left(y^2\right)\partial_2 y^2\\
+\partial_2 (1) \quad\Rightarrow \quad 0 &= \left( y^1-1\right)\partial_2 y^1  + \left(y^2\right)\partial_2 y^2\\
+\partial_1 (2) \quad\Rightarrow \quad\ 0 &= \left( y^1+1\right)\partial_1 y^1  + \left(y^2\right)\partial_1 y^2\\
+\Rightarrow \quad & \left\{\begin{array}{ll}
+\text{(3)-(6):}& \partial_1 y^1 = -\frac{x^1}{2}\\\\
+\text{(4)-(5):}& \partial_2 y^1 = \frac{x^2}{2}\\\\
+\text{(6):}& \partial_1 y^2 = \frac{y^1+1}{2y^2}x^1\\\\
+\text{(5):}& \partial_2 y^2 = -\frac{y^1-1}{2y^2}x^2\\
+\end{array}\right.\\
+\text{Hence,}\quad J &= \left(\pdv{y^m}{x^n} \right) = \begin{pmatrix}
+-\frac{x^1}{2} &\frac{x^2}{2}  \\
+\frac{y^1+1}{2y^2}x^1 & -\frac{y^1-1}{2y^2}x^2 \\
+\end{pmatrix}
+\end{align}
+\newpage
+Be $A$ the metric tensor in Cartesian coordinate system. Then, going to a arbitrary coordinate system gives a metric tensor according to  
+\begin{align}
+\ & A^, = J^TAJ =J^TJ \quad \text{as}\quad A = \begin{pmatrix}
+1 &0 \\
+0& 1 \\
+\end{pmatrix}\\
+\Rightarrow\quad & A^, = \begin{pmatrix}
+-\frac{x^1}{2} & \frac{y^1+1}{2y^2}x^1 \\
+\frac{x^2}{2} & -\frac{y^1-1}{2y^2}x^2 \\
+\end{pmatrix}\begin{pmatrix}
+-\frac{x^1}{2} &\frac{x^2}{2}  \\
+\frac{y^1+1}{2y^2}x^1 & -\frac{y^1-1}{2y^2}x^2 \\
+\end{pmatrix}\\
+\Rightarrow\quad & A^, =\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
+\ & \\
+x^1x^2 &-\left[(y^1)^2 +(y^2)^2-1)\right] \\\\
+-\left[(y^1)^2 +(y^2)^2-1)\right]  &x^1x^2\\
+\ & 
+\end{pmatrix}
+\end{align}
+We use plane geometry to express expression (11) as  a function of only $(x^1,x^2)$. For the triangle $APB$ in the figure below, we have
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{.5\textwidth}
+%\centering
+\vspace{0pt}
+\includegraphics[scale=.4]{Bipolar2.jpg}
+\end{minipage}\hfill
+\end{figure}
+\begin{align}
+\ \left |  OP \right |^2 &= \frac{(x^1)^2+(x^2)^2}{2} - \underbrace{\frac{\left | AB \right|^2}{4}}_{=1}\\
+\Rightarrow\quad (y^1)^2 +(y^2)^2 &= \frac{(x^1)^2+(x^2)^2}{2} - 1
+\end{align}
+The area $K$ of the triangle can be expressed in two ways
+\begin{align}
+\ K &= \half y^2\left | AB \right| = y^2\\
+\text{and} \quad K &= \sqrt{s(s-x^1)(s-x^2)(s-2)}\\
+\text{with}\quad s &= \half (x^1+x^2+2)\\
+\text{hence}\quad (y^2)^2 &= \frac{1}{16}(x^1+x^2+2)(x^1+2)(x^2+2)(x^1+x^2)
+\end{align}
+So we get from (11):
+\begin{align}
+A^, =\frac{4x^1x^2}{(x^1+x^2+2)(x^1+2)(x^2+2)(x^1+x^2)} \begin{pmatrix}
+\ & \\
+x^1x^2 &2-\frac{(x^1)^2+(x^2)^2}{2} \\\\
+2-\frac{(x^1)^2+(x^2)^2}{2}  &x^1x^2\\
+\ & 
+\end{pmatrix}
+\end{align}
+For the conjugate metric tensor we start from expression (11) and invert the metric tensor
+\begin{align}
+\left| A^,\right| &= \frac{x^1x^2}{4(y^2)^2}\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]\\
+\text{hence}\quad \left(a^{,mn}\right) &= \frac{1}{\left| A^,\right|}\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
+\ & \\
+x^1x^2 &\left[(y^1)^2 +(y^2)^2-1\right] \\\\
+\left[(y^1)^2 +(y^2)^2-1\right]  &x^1x^2\\
+\ & 
+\end{pmatrix}\\
+\ &= \frac{\begin{pmatrix}
+\ & \\
+x^1x^2 &\left[(y^1)^2 +(y^2)^2-1\right] \\\\
+\left[(y^1)^2 +(y^2)^2-1\right]  &x^1x^2\\
+\ & 
+\end{pmatrix}}{\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]} \\
+\text{with} \quad x^1x^2&= \sqrt{\left[(y^1-1)^2 +(y^2)^2\right]\left[(y^1+1)^2 +(y^2)^2\right]}
+\end{align}
 $$\medblackdiamond$$
 \newpage
