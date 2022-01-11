@@ -2012,7 +2012,7 @@ Going from $\left( a_{mn} \right)$ to any arbitrary coordinate system, we have (
 $$\medblackdiamond$$
 \newpage
 
-\section{p79-exercise 13}
+\section{p79-exercise 14}
 \begin{tcolorbox}
 In a plane, let $x^1, \  x^2$ be the distances of a general point from the point with rectangular coordinates $(1,0)$, $(-1,0)$, respectively. (These are bipolar coordinates.) Find the line element for these coordinates, and find the conjugate tensor $a^{mn}$.
 \end{tcolorbox}
@@ -2094,20 +2094,247 @@ x^1x^2 &2-\frac{(x^1)^2+(x^2)^2}{2} \\\\
 \end{align}
 For the conjugate metric tensor we start from expression (11) and invert the metric tensor
 \begin{align}
-\left| A^,\right| &= \frac{x^1x^2}{4(y^2)^2}\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]\\
+\left| A^,\right| &= \left[ \frac{x^1x^2}{4(y^2)^2}\right]^2\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]\\
 \text{hence}\quad \left(a^{,mn}\right) &= \frac{1}{\left| A^,\right|}\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
 \ & \\
 x^1x^2 &\left[(y^1)^2 +(y^2)^2-1\right] \\\\
 \left[(y^1)^2 +(y^2)^2-1\right]  &x^1x^2\\
 \ & 
 \end{pmatrix}\\
-\ &= \frac{\begin{pmatrix}
+\ &= \frac{4(y^2)^2\begin{pmatrix}
 \ & \\
 x^1x^2 &\left[(y^1)^2 +(y^2)^2-1\right] \\\\
 \left[(y^1)^2 +(y^2)^2-1\right]  &x^1x^2\\
 \ & 
-\end{pmatrix}}{\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]} \\
+\end{pmatrix}}{x^1x^2\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]} \\
 \text{with} \quad x^1x^2&= \sqrt{\left[(y^1-1)^2 +(y^2)^2\right]\left[(y^1+1)^2 +(y^2)^2\right]}
 \end{align}
 $$\medblackdiamond$$
 \newpage
+
+\section{p79-exercise 15}
+\begin{tcolorbox}
+Given $\Phi = a_{mn}dx^m dx^n$, with $a_{11} = a_{22}= 0$ but $a_{12} \ne 0$, show that $\Phi$ may be written in the form $$ \Phi = \epsilon\Psi^2_1- \epsilon\Psi^2_2 + \Phi_2$$ where $\Phi_2$ is a homogeneous quadratic form in $ dx^3, dx^4, \dots ,dx^N $, $\epsilon = \pm 1$ , and where 
+$$\Psi_1 = \frac{1}{\sqrt(2 \epsilon a_{12})}\left[ a_{12}(dx^1+dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right]$$
+$$\Psi_2 = \frac{1}{\sqrt(2 \epsilon a_{12})}\left[ a_{12}(-dx^1+dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right]$$
+\end{tcolorbox}
+Using local Cartesian coordinates we have:
+Be 
+\begin{align}
+\Phi &= a_{mn}dx^mdx^n\\ 
+\end{align}
+and consider the following sequences of terms: 
+\begin{align}
+\Psi_1 =  b_{11}dx^1+b_{12}dx^2 + b_{13}dx^3+ \dots +b_{1N}dx^N \\
+\Psi_2 =  b_{21}dx^1+b_{22}dx^2 + b_{23}dx^3+ \dots +b_{2N}dx^N 
+\end{align}
+The expressions (3) and (4) contain all the terms of $\Phi$ with $(dx^1)^2,(dx^2)^2$ and $dx^1dx^2$. So, $\Phi$ can be expressed as 
+\begin{align}
+\Phi =\Psi_1^2 -\Psi_2^2 + \Phi_2 
+\end{align}
+With $\Phi_2 $ being a homogeneous form containing only terms in $dx^i dx^j \quad i,j > 2$.\\
+We can express $\Psi_1^2 - \Psi_2^2$ as
+\begin{align}
+\Psi_1^2 - \Psi_2^2 &= \left \{ \begin{array}{l}(b_{11}^2 - b_{21}^2)(dx^1)^2 +(b_{12}^2 - b_{22}^2)(dx^2)^2 +(b_{13}^2 - b_{23}^2)(dx^3 )^2 + \dots +(b_{1N}^2 - b_{2N}^2)(dx^N)^2 +\\
+ 2( b_{11} b_{12}-b_{21} b_{22})dx^1dx^2+2( b_{11} b_{13}-b_{21} b_{23})dx^1dx^3+\dots + 2( b_{11} b_{1N}-b_{21} b_{2N})dx^1dx^N+\\
+ 2( b_{12} b_{13}-b_{22} b_{23})dx^2dx^3+2( b_{12} b_{14}-b_{22} b_{24})dx^2dx^4+\dots + 2( b_{12} b_{1N}-b_{21} b_{2N})dx^2dx^N+\\
+ + \dots 2( b_{1j} b_{1k}-b_{2j} b_{2k})dx^kdx^j+\dots\quad j>2, \ k\ne j
+\end{array} \right.
+\end{align}
+Equating the terms in (1) and (6) and taking into account (=given) $a_{11}=a_{22}=0$ and $a_{12} \ne0$ 
+\begin{align}
+\ &\left \{ \begin{array}{l}
+ b_{11}^2 - b_{21}^2 =0\\
+ b_{12}^2 - b_{22}^2 =0\\
+ 2\left(b_{11}b_{12} - b_{21}b_{22} \right) = a_{12}+a_{21}
+\end{array}\right.\\
+\Rightarrow \quad \ &\left \{ \begin{array}{l}
+ b_{11}^2 = b_{21}^2 \\
+ b_{12}^2 = b_{22}^2 \\
+ \left(b_{11}b_{12} - b_{21}b_{22} \right) =a_{12}
+\end{array}\right.\\
+\Rightarrow\quad b_{11} = \pm b_{21}  &\quad b_{22} =\pm b_{12}\\ 
+\Rightarrow\quad  &\left \{ \begin{array}{l} 
+ \pm b_{11}b_{22} \mp b_{11}b_{22}  =a_{12}\\ 
+\text{or}\\
+\pm b_{12}b_{21} \mp b_{12}b_{21}  =a_{12}
+\end{array}\right.\\
+\end{align}
+As $a_{12} \ne0$, the signs in the above expressions must be the same. Hence,
+\begin{align}
+&\left \{ \begin{array}{c} 
+ 2b_{11}b_{22} =\pm a_{12}\\ 
+2 b_{12}b_{21} =\pm a_{12} 
+\end{array}\right.
+\end{align}
+(12) can be satisfied with an infinite combination of $b_{11},b_{12},b_{21}, b_{22}$. Choose,
+\begin{align} 
+\ b_{11} = \sqrt{\frac{\epsilon a_{12}}{2 }}\quad b_{22} = \sqrt{\frac{\epsilon a_{12}}{2 }}\quad & b_{12} = \sqrt{\frac{\epsilon a_{12}}{2 }}\quad b_{21} = - \sqrt{\frac{\epsilon a_{12}}{2 }}\\
+\text{with} \quad  \epsilon &= \pm 1\quad\text{so that}\quad \epsilon a_{12} \geq 0
+\end{align}
+Put $\xi = \sqrt{\frac{\epsilon a_{12}}{2 }}$. Then, (3) and (4) can be expressed as 
+\begin{align}
+\Psi_1 =  \xi dx^1+\xi dx^2 + b_{13}dx^3+ \dots +b_{1N}dx^1dx^N \\
+\Psi_2 =  -\xi dx^1+\xi dx^2 + b_{23}dx^3+ \dots +b_{2N}dx^1dx^N 
+\end{align}
+What are the $b_{.j}\quad (j>2)$? \\From (6), e.g. for $j=3$,  identifying the terms in $dx^1dx^3$ and $dx^2dx^3$ we see that
+\begin{align}
+&\left \{ \begin{array}{l} 
+ \xi b_{13}+\xi b_{23} =a_{13}\\ 
+\xi b_{13}-\xi b_{23} =a_{23}\\ 
+\end{array}\right.\\
+\Rightarrow \quad &\left \{ \begin{array}{l} 
+ b_{13}=\frac{a_{13}+a_{23}}{2\xi}\\ 
+ b_{23}=\frac{a_{13}-a_{23}}{2\xi}
+\end{array}\right.\\
+\text{or, in general} \quad &\left \{ \begin{array}{ll} 
+ b_{1j}=\frac{a_{1j}+a_{2j}}{2\xi}\\
+ \ &\ (j>2)\\ 
+ b_{2j}=\frac{a_{1j}-a_{2j}}{2\xi}
+\end{array}\right.
+\end{align}
+Bring $\frac{1}{\xi}$ out in $\Psi_1, \Psi_2$. This gives
+\begin{align}
+\Psi_1 &= \frac{1}{\xi}\left( \xi^2( dx^1+ dx^2) + \frac{a_{13}+a_{23}}{2}dx^3+ \dots +\frac{a_{1N}+a_{2N}}{2}dx^N \right) \\
+\Psi_2 &= \frac{1}{\xi}\left( \xi^2(- dx^1+ dx^2) + \frac{a_{13}-a_{23}}{2}dx^3+ \dots +\frac{a_{1N}-a_{2N}}{2}dx^N \right) \\
+\Rightarrow \quad &\left \{ \begin{array}{l} 
+\Psi_1 = \frac{\sqrt{2}}{\sqrt{\epsilon a_{12}}}\left( \frac{\epsilon a_{12}}{2 } (dx^1+ dx^2) + \frac{a_{13}+a_{23}}{2}dx^3+ \dots +\frac{a_{1N}+a_{2N}}{2}dx^N \right) \\\\
+\Psi_2 = \frac{\sqrt{2}}{\epsilon\sqrt{\epsilon a_{12}}}\left( \frac{\epsilon a_{12}}{2 } (-dx^1+ dx^2) + \frac{a_{13}-a_{23}}{2}dx^3+ \dots +\frac{a_{1N}-a_{2N}}{2}dx^N \right) \\
+\end{array}\right.\\
+\Leftrightarrow \quad &\left \{ \begin{array}{l} \\
+\Psi_1 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left(\epsilon a_{12}(dx^1+ dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right) \\\\
+\Psi_2 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left( \epsilon a_{12}(- dx^1+ dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right) \\
+\end{array}\right.
+\end{align}
+What about the factor $\epsilon = \pm1$ in the terms $\epsilon a_{12}(dx^1+ dx^2)$ and $\epsilon a_{12}(-dx^1+ dx^2)$ ? Consider the alternate form
+\begin{align}
+\ &\left \{ \begin{array}{l} \\
+\Psi^,_1 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left( a_{12}(dx^1+ dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right) \\\\
+\Psi^,_2 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left(  a_{12}(- dx^1+ dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right) \\
+\end{array}\right.
+\end{align}
+Let's have a look at the terms in $dx^idx^j$ in $\Psi_1^{,2}-\Psi^{,2}_2$\\
+\begin{align}
+\ x_{11}(dx^1)^2+ 2x_{12}dx^1dx^2+x_{22}(dx^2)^2&= \frac{1}{2 \epsilon a_{12}}\left(( a_{12})^2(dx^1 + dx^2)^2 - ( a_{12})^2(-dx^1 + dx^2)^2\right)  \\
+&= \frac{\epsilon a_{12}}{2}\left((dx^1 +  dx^2)^2 - (- dx^1 + dx^2)^2\right)  \\
+&= \frac{\epsilon a_{12}}{2}\left((dx^1)^2 + 2 dx^1dx^2+  (dx^2)^2 - (dx^1)^2 + 2 dx^1dx^2-  (dx^2)^2\right)  \\
+&= 2 \epsilon a_{12}dx^1dx^2 \\
+\ 2x_{13}dx^1dx^3&= \frac{1}{2 \epsilon a_{12}}(2 a_{12}(a_{13}+a_{23})dx^1dx^3 - 2a_{12}(a_{13}-a_{23})dx^1dx^3) \\
+\ &= \frac{1}{2 \epsilon a_{12}}(4 a_{12}a_{23})dx^1dx^3 \\
+ & =  2\epsilon a_{23}dx^1dx^3\\
+ \ 2x_{23}dx^2dx^3&= \frac{1}{2 \epsilon a_{12}}(2 a_{12}(a_{13}+a_{23})dx^1dx^3 - 2 a_{12}(a_{13}-a_{23})dx^1dx^3) \\
+\ &= \frac{1}{2 \epsilon a_{12}}(4 a_{12}a_{23})dx^1dx^3 \\
+ & =  2\epsilon a_{23}dx^1dx^3\\
+\ 2x_{34}dx^3dx^4&=  \frac{1}{2 \epsilon a_{12}}\left(\begin{array}{l} 2 (a_{13}+ a_{23})(a_{14}+ a_{24}\\ - 2 (a_{13}- a_{23})(a_{14}- a_{24}) \end{array} \right)dx^3dx^4 \\
+\ &= \frac{2\epsilon}{ a_{12}}\left(a_{23}a_{14}+a_{13}a_{24}\right)
+\end{align}
+We rewrite now the metric form $\Phi$ as 
+$$\Phi =\epsilon \Psi_1^{,2}- \epsilon \Psi^{,2}_2 + \Phi_2 $$
+From (28), (31) and (34) we see that the terms in $dx^1, dx^2$ in $\Phi =\epsilon \Psi_1^{,2}- \epsilon \Psi^{,2}_2 + \Phi_2$ correspond to the expected  metric form and that the other terms in $dx^j, dx^k, \ j,k \neq 1,2$ can be corrected in the remaining term $\Phi_2$.
+\newpage
+
+\section{p80-exercise 16}
+\begin{tcolorbox}
+Find the null geodesics of a 4-space with line element
+$$ds^2=\epsilon \gamma\left(dx^2 +dy^2+dz^2-dt^2\right)$$ where $\gamma$ is an arbitrary function of $x,\ y,\ z,\ t$.
+\end{tcolorbox}
+We have:
+\begin{align}
+\left(a_{mn}\right) = \gamma\begin{pmatrix}
+ 1&0  & 0 & 0 \\
+ 0&  1& 0 & 0 \\
+ 0&0  & 1 &  0\\
+ 0& 0 & 0 & -1 \\
+\end{pmatrix} \quad \left(a^{mn}\right) = \frac{1}{\gamma}\begin{pmatrix}
+ 1&0  & 0 & 0 \\
+ 0&  1& 0 & 0 \\
+ 0&0  & 1 &  0\\
+ 0& 0 & 0 & -1 \\
+\end{pmatrix}\\
+\end{align}
+Be $(x^1,x^2,x^3,x4) \equiv (x,y,z,t)$.\\
+The general conditions for a null geodesic are
+\begin{align}
+\left \{ \begin {array}{l}
+\dv[2]{x^r}{v} + \Gamma^r_{mn}\dv{x^m}{v}\dv{x^n}{v} = 0\\\\
+\ a_{mn}dx^mdx^n =0
+\end{array}\right.
+\end{align}
+When calculating $[mn,r] = \half\left(\partial_n a_{mr}+\partial_m a_{nr}-\partial_r a_{mn} \right) $ we note that $\left(a_{mn}\right)$ is a diagonal matrix, ans so is also $\left(a^{mn}\right)$. Hence $\Gamma^r_{mn}$ will contain only one term:
+\begin{align}
+\ & \Gamma^r_{mn} = a^{RR}[mn,R]\\
+\Rightarrow \quad & \left \{ \begin{array}{llll}
+\ i)& m,n \neq R \ \wedge \ m \neq n&:& [mn,R]=0\\\\
+\ ii)& m \neq n = R \ \vee \  n \neq m = R&:& [mn,R]=\half \partial_m a_{RR}\\\\
+\ iii)& m =n \neq R &:& [mn,R]=-\half \partial_R a_{mn}\\\\
+\ iv)& m =n= R &:& [mn,R]=\half \partial_R a_{RR}\\\\
+\end{array}\right.
+\end{align}\\
+and for the $\Gamma^r_{mn}$:\\
+\begin{align}
+\Rightarrow \quad & \left \{ \begin{array}{llll}
+\ i)& m,n \neq R \ \wedge \ m \neq n &:& \Gamma^R_{mn}=0\\\\
+\ ii)& m \neq n = R \ \vee \  n \neq m = R &:& \Gamma^R_{nR}=\frac{1}{2 \gamma} \partial_n \gamma \\\\
+\ iii)& m =n \neq R = \ 1,2,3 &:& \Gamma^R_{kk}=-\frac{1}{2 \gamma}  \partial_R \gamma\\
+\ & m =n \neq R =4 &:& \Gamma^4_{kk}=\frac{1}{2 \gamma}  \partial_R \gamma\\\\
+\ iv)& m =n= R &:& \Gamma^R_{RR}=\frac{1}{2 \gamma}  \partial_R \gamma\\\\
+\end{array}\right.
+\end{align}
+Let's compute 
+\begin{align}
+\ A_r \equiv \dv[2]{x^r}{v} + \Gamma^r_{mn}\dv{x^m}{v}\dv{x^n}{v}
+\end{align}
+and take $v = x^4$, so $x^1, \  x^2,  \ x^3 = f(x^4)$. (In the following $d_kx^j \equiv \dv{x^j}{{(x^{k})}}\ , \ d^2_kx^j \equiv \dv[2]{x^j}{{(x^{k})}}$)
+\begin{align}
+\left \{ \begin{array}{ll}
+\ A_1 = &  d^2_4x^1+ \Gamma^1_{mn}d_4x^md_4x^n\\
+\ A_2 = &  d^2_4x^2+ \Gamma^2_{mn}d_4x^md_4x^n\\
+\ A_3 = &  d^2_4x^3+ \Gamma^3_{mn}d_4x^md_4x^n\\
+\ A_4 = &   \Gamma^4_{mn}d_4x^md_4x^n
+\end{array} \right.
+\end{align}
+and get from (8) and (6):
+\begin{align}
+\ A_1 -d^2_4x^1 &= \left \{ \begin{array}{l}\frac{1}{\gamma}  \partial_2 \gamma \ d_4x^1d_4x^2  + \frac{1}{\gamma}  \partial_3 \gamma \ d_4x^1 d_4x^3+\frac{1}{\gamma}  \partial_4 \gamma \ d_4x^1 d_4x^4\\\\
+\ + \underbrace{\frac{1}{2\gamma}\partial_1 \gamma (d_4x^1)^2}_{= \left \{ \begin{array}{l} \frac{1}{\gamma} \partial_1 \gamma (d_4x^1) (d_4x^1)\\
+\  - \frac{1}{2\gamma} \partial_1 \gamma (d_4x^1)^2 \end{array} \right.} - \frac{1}{2\gamma}\partial_1 \gamma (d_4x^2)^2- \frac{1}{2\gamma}\partial_1 \gamma (d_4x^3)^2+ \frac{1}{2\gamma}\partial_1 \gamma (d_4x^4)^2
+ \end{array} \right.\\
+ &= \left \{ \begin{array}{l}\frac{1}{\gamma} \partial_1 \gamma d_4x^1 d_4x^1 + \frac{1}{\gamma}  \partial_2 \gamma \ d_4x^1d_4x^2  + \frac{1}{\gamma}  \partial_3 \gamma \ d_4x^1 d_4x^3+\frac{1}{\gamma}  \partial_4 \gamma \ d_4x^1 d_4x^4\\\\
+\ - \frac{1}{2\gamma}\partial_1 \gamma (d_4x^1)^2 - \frac{1}{2\gamma}\partial_1 \gamma (d_4x^2)^2- \frac{1}{2\gamma}\partial_1 \gamma (d_4x^3)^2+ \frac{1}{2\gamma}\partial_1 \gamma (d_4x^4)^2
+ \end{array} \right.\\\\
+  &= \left \{ \begin{array}{l}\frac{1}{\gamma}d_4x^1 \left(\partial_1 \gamma  d_4x^1  + \partial_2 \gamma \ d_4x^2  + \partial_3 \gamma \  d_4x^3+ \partial_4 \gamma \ d_4x^4 \right)\\\\
+\ - \frac{1}{2\gamma}\partial_1 \gamma \left(\underbrace{(d_4x^1)^2 +(d_4x^2)^2+(d_4x^3)^2- (d_4x^4)^2}_{= a_{mn}dx^m dx^n = 0 }\right)
+ \end{array} \right.\\
+ \Rightarrow \quad A_1 &= d^2_4x^1+ \frac{1}{\gamma}d_4x^1 < \overline{\bigtriangledown} \gamma|\partial_4 \overline{x} >
+\end{align}
+with $\overline{\bigtriangledown} \gamma =  (\partial_x \gamma,\ \partial_y \gamma, \ \partial_z \gamma, \ \partial_t \gamma)$ and $ \partial_1 \overline{x} =  (\partial_t x, \ \partial_t y , \ \partial_t z, \ \partial_t t)$.\\
+So for the geodesic with get for the first coordinate $$d^2_4x^1+ \frac{1}{\gamma}d_4x^1 < \overline{\bigtriangledown} \gamma|\partial_4 \overline{x} > = 0 $$
+Doing analogous calculations give the following set of equations
+\begin{align}
+\ d^2_4x^k+ \frac{1}{\gamma}d_4x^k < \overline{\bigtriangledown} \gamma|\partial_4 \overline{x} > = 0 
+\end{align}
+Note that for $k=4$ we have as $\ d_4x^4 = 1$ and $\ d^2_4x^4 = 0$:
+\begin{align}
+ \frac{1}{\gamma}< \overline{\bigtriangledown} \gamma|\partial_4 \overline{x} > = 0 \\
+ \Rightarrow \quad < \overline{\bigtriangledown} \gamma|\partial_4 \overline{x} > = 0 
+\end{align}
+Note that this means that $\overline{\bigtriangledown} \gamma$ and $\partial_4 \overline{x}$ are orthogonal 4-vectors.\\
+So the set of equations in (14) reduce to the following set of $2^{nd}$ order differential equations:
+\begin{align}
+\ & \left  \{ \begin{array}{l}
+\ x^{,,} = 0\\
+\ y^{,,} = 0\\
+\ z^{,,} = 0\\
+\ t = t\\
+\end{array} \right.
+\Rightarrow  \left  \{ \begin{array}{l}
+\ x = x_1t+x_0\\
+\ y =y_1t+y_0\\
+\ z = z_1t+z_0\\
+\ t = t\\
+\end{array} \right.
+\end{align}
+This is the equations of 4-space cone, which was expected as the metric is localy a Minkowksi-like metric.
+$$\medblackdiamond$$
+\newpage
+
