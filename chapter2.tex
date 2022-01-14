@@ -2446,6 +2446,56 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Consider a $V_N$ with indefinite metric form. For all points $P$ lying on the cone of  geodesic null lines drawn from  $O$, the definition 2.611 for Riemannian coordinates apparently breaks down. Revise the definition of Riemannian coordinates so as to include such points.
 \end{tcolorbox}
-
+For geodesic null lines we have (2.445 page 46)
+\begin{align}
+\left \{ \begin{array}{l}
+\dv[2]{x^r}{u} + \Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0\\
+\ a_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0
+\end{array}\right.
+\end{align}
+or (2.448 page 46)
+\begin{align}
+\left \{ \begin{array}{l}
+\dv[2]{x^r}{v} + \Gamma^r_{mn}\dv{x^m}{v}\dv{x^n}{v} = \lambda(v) \dv{x^r}{v}\\
+\ a_{mn}\dv{x^m}{v}\dv{x^n}{v} = 0
+\end{array}\right.
+\end{align}
+where by suitable choice of the parameter $v$ , $\lambda(v) $ can be made any preassigned function of $v$.
+\begin{align}
+\text{(2)} \RAr \dv[2]{x^r}{v} &=   \lambda \dv{x^r}{v}-\Gamma^r_{mn}\dv{x^m}{v}\dv{x^n}{v} \\
+\RAr \dv[3]{x^r}{v} &=   \dv{\lambda }{v}\dv{x^r}{v}+ \lambda \dv[2]{x^r}{v}+ A^r_{.mns}\dv{x^m}{v}\dv{x^n}{v}\dv{x^s}{v} \\
+\text{with}\RAr A^r_{.mns} &= - \partial_s \Gamma^r_{mn} + 2 \Gamma^r_{sp}\Gamma^p_{mn}
+\end{align}
+Expanding $x^r$ in a Taylor series around a point $O(a^r)$ we get (for ease of notation we put $p^r \coloneqq \dv{x^r}{v}$)
+\begin{align}
+\ x^r &= a^r + v p^r + \half v^2\lambda  p^r -  \half v^2\Gamma^r_{mn}p^mp^n+\frac{1}{6}v^3\dv{\lambda  }{v}p^r + \frac{1}{6}v^3\lambda  \dv{p^r}{v} + \frac{1}{6}v^3A^r_{.mns}p^mp^np^s+\dots\\
+&= a^r + \left(v  + \half v^2\lambda  +\frac{1}{6}v^3\dv{\lambda  }{v}\right)p^r -  \half v^2\Gamma^r_{mn}p^mp^n + \frac{1}{6}v^3\lambda  \dv{p^r}{v} + \frac{1}{6}v^3A^r_{.mns}p^mp^np^s+\dots
+\end{align}
+Put $x^{'r} \coloneqq   v\xi(v) p^r$ with $\xi(v) = \left(1  + \half v\lambda  +\frac{1}{6}v^2\dv{\lambda  }{v}\right)$. Hence (7) becomes
+\begin{align}
+\ x^r &= a^r + x^{'r} -  \frac{1}{2\xi ^2}\Gamma^r_{mn}x^{'m}x^{'n} + \frac{1}{6}v^3\lambda  \left( \frac{p^{'r}}{v\xi} - \frac{\xi + v\xi^{'}}{v^2\xi^2}x^{'r}\right) + \frac{1}{6\xi ^3}A^r_{.mns}x^{'m}x^{'n}x^{'s}+\dots\\
+\ & = a^r + \tau(v) x^{'r}+ \frac{v^2\lambda  }{6\xi}p^{'r} -  \frac{1}{2\xi ^2}\Gamma^r_{mn}x^{'m}x^{'n}   + \frac{1}{6\xi ^3}A^r_{.mns}x^{'m}x^{'n}x^{'s}+\dots\\
+\text{with}\spatie & \tau(v)  \coloneqq 1-\frac{v\lambda  }{6\xi^2}\left( \xi + v\xi^{,}\right)
+\end{align}\\
+Is the Jacobian non-zero?
+\begin{align}
+\pdv{x^r}{x^{'q}}  & = \tau(v)\delta^r_q+ \frac{v^2\lambda  }{6\xi}\dv{\delta^r_q}{v} -  \frac{1}{\xi ^2}\Gamma^r_{mq}x^{'m}   + \frac{1}{2\xi ^3}A^r_{.mnq}x^{'m}x^{'n}+\dots
+\end{align}
+In the infinitesimal neighbourhood of $O$ we have \\
+\begin{align}\left \{ \begin{array}{l} 
+v \rightarrow 0\\  
+\xi \rightarrow 1\\
+\xi^{'} \rightarrow \frac{\lambda }{2}\\ 
+x^{'m} \rightarrow 0\\
+\tau \rightarrow 1 
+\end{array} \right.\\
+\end{align}
+so that the Jacobian determinant becomes
+\begin{align}
+\left| \pdv{x^r}{x^{'q}} \right| &= \left| \tau\delta^r_q \right| =\tau ^N = 1
+\end{align}
+$\textbf{Conclusion:}$\\
+So in order to define a Riemannian coordinates system which is still valid on the null geodesics, it is sufficient to define the Riemannian coordinates around $O$ as $$ x^{'r} \coloneqq   v\xi(v) p^r$$ with $$\xi(v) = \left(1  + \half v\lambda +\frac{1}{6}v^2\dv{\lambda }{v}\right) $$
+and $\lambda $, by suitable choice of $v$, being any pre-defined function of $v$.
 $$\blacklozenge$$
 \newpage
