@@ -556,48 +556,6 @@ By definition
 $$\blacklozenge$$
 \newpage
 
-\section{p46-"geodesic null lines", some personal thoughts}
-\begin{tcolorbox}
-Can we grasp intuitively the notion of "geodesic null lines"? To understand this, here are two example of "geodesic null lines"
-\end{tcolorbox}
-We consider two examples, a classic one (Minkowski space) and a weird space.\\\\
-i) on dimensional Minkowski space\\\\
-For this space the metric is in normalized coordinates $$ ds^2 = dx^2 - dt^2$$
-It is easy to see that the equations of a geodesic null line (taking $t$ as parameter for the curve), reduce to \\
-\begin{align}
-\left. \begin{array}{c}
-\dv[2]{x}{t} = 0\\\\
-\ dx^2-dt^2 = 0
-\end{array} \right \}\\
-\Rightarrow x = at+b \quad \text{ and } \quad x = \pm t + g
-\end{align}
-If we choose $x=t$ at $t=0$ we see that the geodesic null lines are the bisectors of the x-t axes.\\\\
-ii) We consider a $V_2$ space equipped with a polar coordinate system and with a metric tensor defined as 
-\begin{align}
-\ ds^2 = (1-r)dr^2 + \sin(\theta)d \theta ^2
-\end{align}
-Giving as geodesic null line equations
-\begin{align}
-\left. \begin{array}{c}
-\dv[2]{r}{u} +\frac{1}{2(r-1)}(\dv{r}{u})^2 = 0\\\\
-\dv[2]{\theta}{u} +\frac{1}{2}\cot(\theta)(\dv{\theta}{u})^2 = 0\\\\
-\ (1-r)(\dv{r}{u})^2+ \sin(\theta)(\dv{\theta}{u})^2 = 0
-\end{array} \right \}
-\end{align}
-We see immediately that for $r \rightarrow 1$ and $ \theta\rightarrow k\frac{\pi}{2} \quad (k= 0, \pm 1, \pm2, \dots)$, some problems will occur and that no solutions might be found. On the next page some geodesic null lines are showed (equations solved numerically with Python Scipy library)
-\newpage
-\begin{figure}[htp] 
-    \centering
-\includegraphics[scale=.2]{nullgeodesics_theta.jpg}
-\includegraphics[scale=.25]{nullgeodesics_R.jpg}
-\includegraphics[scale=.25]{nullgeodesics_theta_p.jpg}
-\end{figure}
-The first row shows the results for points at 2 different distance from the origin while changing the angle $\theta$. \\
-The second row shows the results for points at 2 different angles  while changing the distance from the origin. \\
-The second row shows the results for  a specific point while changing the the $\dv{\theta}{u}$ value in the initial condition when solving the system of differential equations. \\
-Conclusion: with non-trivial metrics, getting an intuitive idea about the geodesic null lines gets very hard.
-$$\blacklozenge$$
-\newpage
 
 \section{p47-exercise }
 \begin{tcolorbox}
@@ -623,7 +581,6 @@ We can state that $\dv{\overline{u}}{u}\ne 0$ as $\overline{u}$ can't be a const
 \end{align}
 $$\blacklozenge$$
 \newpage
-
 
 \section{p47-exercise }
 \begin{tcolorbox}
@@ -2473,13 +2430,13 @@ Expanding $x^r$ in a Taylor series around a point $O(a^r)$ we get (for ease of n
 \end{align}
 Put $x^{'r} \coloneqq   v\xi(v) p^r$ with $\xi(v) = \left(1  + \half v\lambda  +\frac{1}{6}v^2\dv{\lambda  }{v}\right)$. Hence (7) becomes
 \begin{align}
-\ x^r &= a^r + x^{'r} -  \frac{1}{2\xi ^2}\Gamma^r_{mn}x^{'m}x^{'n} + \frac{1}{6}v^3\lambda  \left( \frac{p^{'r}}{v\xi} - \frac{\xi + v\xi^{'}}{v^2\xi^2}x^{'r}\right) + \frac{1}{6\xi ^3}A^r_{.mns}x^{'m}x^{'n}x^{'s}+\dots\\
-\ & = a^r + \tau(v) x^{'r}+ \frac{v^2\lambda  }{6\xi}p^{'r} -  \frac{1}{2\xi ^2}\Gamma^r_{mn}x^{'m}x^{'n}   + \frac{1}{6\xi ^3}A^r_{.mns}x^{'m}x^{'n}x^{'s}+\dots\\
-\text{with}\spatie & \tau(v)  \coloneqq 1-\frac{v\lambda  }{6\xi^2}\left( \xi + v\xi^{,}\right)
+\ x^r &= a^r + x^{'r} + \frac{\lambda v^3}{6}  \left( \frac{p^{'r}}{v\xi} - \frac{\xi + v\xi^{'}}{v^2\xi^2}x^{'r}\right)  -  \frac{\Gamma^r_{mn}}{2\xi ^2}x^{'m}x^{'n} + \frac{A^r_{.mns}}{6\xi ^3}x^{'m}x^{'n}x^{'s}+\dots\\
+\ & = a^r + \tau(v) x^{'r}+ \frac{\lambda v^2 }{6\xi}p^{'r} -  \frac{\Gamma^r_{mn}}{2\xi ^2}x^{'m}x^{'n}   + \frac{A^r_{.mns}}{6\xi ^3}x^{'m}x^{'n}x^{'s}+\dots\\
+\text{with}\spatie & \tau(v)  \coloneqq 1-\frac{\lambda v}{6\xi^2}\left( \xi + v\xi^{,}\right)
 \end{align}\\
 Is the Jacobian non-zero?
 \begin{align}
-\pdv{x^r}{x^{'q}}  & = \tau(v)\delta^r_q+ \frac{v^2\lambda  }{6\xi}\dv{\delta^r_q}{v} -  \frac{1}{\xi ^2}\Gamma^r_{mq}x^{'m}   + \frac{1}{2\xi ^3}A^r_{.mnq}x^{'m}x^{'n}+\dots
+\pdv{x^r}{x^{'q}}  & = \tau\delta^r_q+ \frac{\lambda  v^2}{6\xi}\dv{\delta^r_q}{v} -  \frac{\Gamma^r_{mq}}{\xi ^2}x^{'m}   + \frac{A^r_{.mnq}}{2\xi ^3}x^{'m}x^{'n}+\dots
 \end{align}
 In the infinitesimal neighbourhood of $O$ we have \\
 \begin{align}\left \{ \begin{array}{l} 
@@ -2495,7 +2452,7 @@ so that the Jacobian determinant becomes
 \left| \pdv{x^r}{x^{'q}} \right| &= \left| \tau\delta^r_q \right| =\tau ^N = 1
 \end{align}
 $\textbf{Conclusion:}$\\
-So in order to define a Riemannian coordinates system which is still valid on the null geodesics, it is sufficient to define the Riemannian coordinates around $O$ as $$ x^{'r} \coloneqq   v\xi(v) p^r$$ with $$\xi(v) = \left(1  + \half v\lambda +\frac{1}{6}v^2\dv{\lambda }{v}\right) $$
+So in order to define a Riemannian coordinates system which is still valid on the null geodesics, it is sufficient to define the Riemannian coordinates around $O$ as $$ x^{'r} \coloneqq   v\xi p^r$$ with $$\xi(v) = \left(1  + \frac{\lambda}{2} v +\frac{1}{6}\dv{\lambda }{v} v^2\right) $$
 and $\lambda $, by suitable choice of $v$, being any pre-defined function of $v$.
 $$\blacklozenge$$
 \newpage
