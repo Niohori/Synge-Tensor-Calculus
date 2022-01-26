@@ -1,0 +1,13 @@
+\begin{tikzpicture}[yscale=-0.3,xscale=0.3]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+\coordinate [label=left:$A$] (A) at (12.116,21.364);
+\coordinate [label=above right:$B$] (B) at (32.688,1.187);
+\coordinate  [label=above right:$C$] (C) at (34.06,14.021);
+
+%\draw (A) --(C) node[midway,below] {$X_r $};
+%\draw (A) --(B) node[midway,above,left] {$X_r+dX_r \quad$};
+\draw[ -stealth,line width = 0.25mm] (A) --(C) node[midway,below] {$X_r $};
+\draw[ -stealth,line width = 0.25mm] (A) --(B) node[midway,above,left] {$X_r+dX_r \quad$};
+\draw (A)  circle[radius=4pt];
+\draw pic[draw,angle radius=2cm,"$\theta$" shift={(3mm,3mm)}] {angle=C--A--B};
+\end{tikzpicture}\\

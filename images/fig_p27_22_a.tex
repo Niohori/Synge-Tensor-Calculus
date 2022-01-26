@@ -1,0 +1,77 @@
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}
+	[scale=10,
+		tdplot_main_coords,
+		axis/.style={->,black,thick},
+		vector/.style={-stealth,black, thick},
+		vector guide/.style={dashed,black,thick},
+		angle/.style={black,thick}]
+
+	%standard tikz coordinate definition using x, y, z coords
+	
+	\coordinate (O) at (0,0,0);
+	\coordinate (K) at (0.183,0.68297,0.34202);
+
+	
+	%tikz-3dplot coordinate definition using r, theta, phi coords
+	\tdplotsetcoord{E}{1}{70}{45} 
+	\tdplotsetcoord{J}{1.1}{40}{75}
+	\tdplotsetcoord{R}{1.1*cos(40)}{0}{0}
+	\tdplotsetcoord{G}{1.*cos(70)}{0}{0}
+	\tdplotsetcoord{S}{sqrt(1.}{70}{75}
+	
+	%labeling points
+	\node[tdplot_main_coords,{anchor=south east}] at (O){$O$};
+	\node[tdplot_main_coords,above,right] at (E){$E$};
+	\node[tdplot_main_coords,above,right] at (J){$J$};
+	\node[tdplot_main_coords,above,left] at (R){$R$};
+	\node[tdplot_main_coords,above,left] at (G){$G$};
+	\node[tdplot_main_coords,above,right] at (S){$S$};
+	\node[tdplot_main_coords,{anchor=north east}] at (K){$K$};
+	\foreach \v in {G,K,R,S}  \draw[fill=gray] (\v) circle (0.2pt);
+	
+	%draw axes
+	\draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+	\draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+	\draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+	
+	%draw a vector from O to P
+	\draw[vector] (O) -- (E);
+	\draw[vector] (O) -- (J)  ;
+	%\draw[vector] (G) -- (K)  ;
+	%\draw[vector] (G) -- (E)  ;
+	
+	%draw guide lines to components
+	\draw[vector guide] (O) -- (Exy);
+	\draw[vector guide] (Exy) -- (E);
+	
+	\draw[vector guide] (O) -- (Jxy);
+	\draw[vector guide] (Jxy) -- (J);
+	
+	
+	%draw guiding lines
+	\draw[dashed,tdplot_main_coords] (J)-- (R)  ;
+	\draw[dashed,tdplot_main_coords] (E)-- (G)  ;
+	%\draw[dashed,tdplot_main_coords] (S)-- (O)  ;
+	\draw[dashed,tdplot_main_coords] (K)-- (G)  ;
+	\draw[dashed,tdplot_main_coords] (S)-- (G)  ;
+
+	\node[tdplot_main_coords,above,right] at (E){$E$};
+	
+	%draw an arc illustrating the angle defining the orientation
+	\tdplotdrawarc[angle,,-stealth]{(O)}{.25}{0}{45}{anchor=north}{$\phi$}
+	\tdplotdrawarc[angle,,-stealth]{(O)}{.25}{45}{75}{anchor=north}{$d\phi$}
+
+	\tdplotdefinepoints(0,0,cos(70))(sin(70)*cos(45),sin(70)*sin(45),cos(70))(sin(70)*cos(75),sin(70)*sin(75),cos(70))
+	\tdplotdrawpolytopearc[dashed,-{Stealth[length=3mm, width=3mm]}]{0.93969}{}{}%0.93969 = sin(70)
+
+	%define the rotated coordinate frame to lie in the "theta plane"
+	\tdplotsetthetaplanecoords{45}
+	\tdplotdrawarc[tdplot_rotated_coords,angle,-stealth]{(O)}{.25}{0}{70} {anchor=north east}{$\theta$}
+	
+	
+	%define the rotated coordinate frame to lie in the "theta plane"
+	\tdplotsetthetaplanecoords{75}
+	\tdplotdrawarc[tdplot_rotated_coords,angle,-stealth]{(O)}{.25}{0}{40} {anchor=south west}{$\theta + d\theta$}
+
+\end{tikzpicture}\\

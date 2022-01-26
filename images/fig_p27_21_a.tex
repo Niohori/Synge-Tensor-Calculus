@@ -1,0 +1,18 @@
+\begin{tikzpicture}[yscale=-0.3,xscale=0.3]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+\coordinate [label=left:$O$] (O) at (12.116,21.364);
+\coordinate [label=above right:$B$] (B) at (32.688,1.187);
+\coordinate  [label=above right:$A$] (A) at (34.06,14.021);
+\coordinate [label=above left:$C$] (C) at (26.48,7.501);
+%Straight Lines [id:da6700803884313797] 
+\draw (O) --(A) node[midway,below] {$r$};
+\draw (O) --(C) node[midway,above] {$r$};
+\draw (C) --(B) node[midway,above,left] {$dr$};
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (A) -- (C) ;
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (B) -- (A) ;
+\fill (O) circle[radius=4pt];
+ \fill (A)  circle[radius=4pt];
+ \fill (B)  circle[radius=4pt];
+ \draw (C)  circle[radius=4pt];
+\draw pic[draw,angle radius=1cm,"$\alpha$" shift={(6mm,3mm)}] {angle=A--O--C};
+\end{tikzpicture}\\

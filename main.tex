@@ -3,15 +3,14 @@
 \usepackage{xcolor,cancel}
 \usepackage[utf8]{inputenc} 
 \usepackage{amssymb}
-%\usepackage{bm}
-%\usepackage{fdsymbol}
-%\usepackage{txfonts}
 \usepackage{ntheorem}
 \usepackage{tensor}
 %\usepackage{physics}
 \usepackage[italicdiff]{physics}
 %\usepackage{mathtools}
 \usepackage{calc}
+\usepackage{caption}
+%\usepackage{subcaption}
 \newsavebox\CBox
 \newcommand\hcancel[2][0.5pt]{%
   \ifmmode\sbox\CBox{$#2$}\else\sbox\CBox{#2}\fi%
@@ -21,6 +20,40 @@
 \usepackage{chngcntr}
 \usepackage{titlesec}
 \usepackage {graphicx,float} 
+\usepackage{subfig}
+\graphicspath{ {D:/MathLatex/images/} }
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,arrows.meta}
+\usetikzlibrary{calc}% needed for BB
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{etoolbox} %ifthen
+\usepackage[outline]{contour} % glow around text
+%\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{math} % for \tikzmath
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+
+\usetikzlibrary{decorations.pathreplacing} % for curly braces
+\usepackage{tikz-3dplot}
+\begin{comment}
+\tikzset{
+    circ/.style={draw, circle,inner sep=0pt,minimum size=8mm, font=\scriptsize},
+    triangle/.tip={Computer Modern Rightarrow[open,angle=120:3pt]}
+}
+\tikzset{
+  every point/.style = {circle, inner sep={.75\pgflinewidth}, opacity=1, draw, solid, fill=white},
+  point/.style={insert path={node[every point, #1]{}}}, point/.default={},
+  colored point/.style = {point={fill=#1}},
+  point name/.style = {insert path={coordinate (#1)}},
+  inherit/.style = {point/.style={insert path={node[circle, inner sep={.75\pgflinewidth}, draw, fill, #1]{}}}}
+}
+\end{comment}
+%\usepackage[margin=0cm,nohead]{geometry}
+%\usepackage[active,tightpage]{preview}
+
+%\usepackage[pdf]{pstricks}
 %\newcommand{\edal}{\end{align}}
 %\newcommand{\bgal}{\begin{align}\end{align}}
 \newcommand{\Lagr}{\mathcal{L}}
@@ -65,10 +98,11 @@ m n\\
 \end{center}
 
 \tableofcontents
-
+\listoffigures
 \include{chapter1}
 \include{chapter2}
-%\include{chapter3}
+\include{chapter3}
 %\include{chapter4}
 %\include{chapter5}
+
 \end{document}

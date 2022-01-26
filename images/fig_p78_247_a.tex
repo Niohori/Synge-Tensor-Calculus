@@ -1,0 +1,81 @@
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}
+	[scale=9,
+		tdplot_main_coords,
+		axis/.style={->,black,thick},
+		vector/.style={-stealth,black, thick},
+		vector guide/.style={dashed,black,thick},
+		angle/.style={black,thick}]
+
+	%standard tikz coordinate definition using x, y, z coords
+	
+	\coordinate (O) at (0,0,0);
+	\coordinate (P1) at (0.183,0.68297,0.34202);
+	\coordinate (P) at (0.183,0.68297,0);
+	
+	%tikz-3dplot coordinate definition using r, theta, phi coords
+	\tdplotsetcoord{S0}{1}{70}{45} 
+	\tdplotsetcoord{S}{sin(70)}{90}{45}
+	\tdplotsetcoord{S1}{sin(70)}{90}{75}
+	\tdplotsetcoord{S2}{1}{70}{75} 
+	\tdplotsetcoord{J}{1.1}{40}{75}
+	\tdplotsetcoord{H}{1.1*cos(40)}{0}{0}
+	\tdplotsetcoord{G}{1.*cos(70)}{0}{0}
+
+	
+	%labeling points
+	\node[tdplot_main_coords,{anchor=south east}] at (O){$O$};
+	\node[tdplot_main_coords,anchor=north  west] at (S){$S$};
+	\node[tdplot_main_coords,anchor=north  west] at (S1){$S'$};
+	\node[tdplot_main_coords,anchor=south west] at (S0){$S^0$};
+	\node[tdplot_main_coords,anchor=north  west] at (S2){$S"$};
+	
+	\node[tdplot_main_coords,above,right] at (J){$J$};
+	\node[tdplot_main_coords,{anchor=south east}] at (H){$H$};
+	\node[tdplot_main_coords,{anchor=south east}] at (G){$G$};
+
+	\node[tdplot_main_coords,{anchor=south west}] at (P1){$P'$};
+	\node[tdplot_main_coords,{anchor=south west}] at (P){$P$};
+	
+	
+	\foreach \v in {G,P1,P,H,S1,S2,S}  \draw[fill=gray] (\v) circle (0.2pt);
+	
+	%draw axes
+	\draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+	\draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+	\draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+	
+	%draw a vector from O to P
+	\draw[vector] (O) -- (S0);
+	\draw[vector] (O) -- (J)  ;
+	
+	%draw guiding lines
+	\draw[dashed,tdplot_main_coords] (S2)-- (S1)  ;
+	\draw[dashed,tdplot_main_coords] (J)-- (H)  ;
+	\draw[dashed,tdplot_main_coords] (S2)-- (P1)  ;
+	\draw[dashed,tdplot_main_coords] (P1)-- (G)  ;
+	\draw[dashed,tdplot_main_coords] (S0)-- (G)  ;
+
+	
+	%draw guiding lines with labels to lines
+	\draw [dashed,tdplot_main_coords](P1) --(J) node[midway,right] {$dz$};
+	\draw [dashed,tdplot_main_coords](P) --(P1) node[midway,right] {$z$};
+	\draw [dashed,tdplot_main_coords](S0) --(S) node[midway,right] {$z$};
+	\draw [dashed,tdplot_main_coords](P) --(P1) node[midway,right] {$z$};
+	\draw [dashed,tdplot_main_coords](O) --(S) node[midway,right] {$\quad r$};
+	\draw [dashed,tdplot_main_coords](O) --(S1) node[midway,right] {$\quad r+dr$};
+
+	
+	%draw an arc illustrating the angle defining the orientation
+	\tdplotdrawarc[angle,,-stealth]{(O)}{.25}{0}{45}{anchor=north}{$\theta$}
+	\tdplotdrawarc[angle,,-stealth]{(O)}{.25}{45}{75}{anchor=north}{$d\theta$}
+	
+	\tdplotdrawarc[angle,,-stealth]{(G)}{.25}{45}{75}{anchor=north}{$d\theta$}
+	%draw arc illustrating the rotation of first vector
+	\tdplotdefinepoints(0,0,cos(70))(sin(70)*cos(45),sin(70)*sin(45),cos(70))(sin(70)*cos(75),sin(70)*sin(75),cos(70))
+	\tdplotdrawpolytopearc[dashed,-{Stealth[length=3mm, width=3mm]}]{0.93969}{}{}%0.93969 = sin(70)
+	\tdplotdefinepoints(0,0,0)(sin(70)*cos(45),sin(70)*sin(45),0)(sin(70)*cos(75),sin(70)*sin(75),0)
+	\tdplotdrawpolytopearc[dashed,-{Stealth[length=3mm, width=3mm]}]{0.93969}{}{}%0.93969 = sin(70)
+
+
+\end{tikzpicture}\\

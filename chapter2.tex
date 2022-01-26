@@ -4,10 +4,12 @@
 \section{p27-exercise}
 
 \begin{tcolorbox}
-Take polar coordinates $r, \theta$ in a plane. Draw the infinitesimal triangle with vertices $(r,\theta)$, $(r+dr,\theta)$, $(r,\theta + d\theta)$. Evaluate the square on the hypotenuse of this infinitisimal triangle, and so obtain the metric tensor for the plan for the coordinates$(r, \theta)$.\end{tcolorbox}
+Take polar coordinates $r, \theta$ in a plane. Draw the infinitesimal triangle with vertices $(r,\theta)$, $(r+dr,\theta)$, $(r,\theta + d\theta)$. Evaluate the square on the hypotenuse of this infinitesimal triangle, and so obtain the metric tensor for the plan for the coordinates$(r, \theta)$.\end{tcolorbox}
 \begin{figure}[htp] 
     \centering
-\includegraphics[scale=.5]{polar.jpg}
+%\includegraphics[scale=.5]{polar.jpg}
+\input{D:/MathLatex/images/fig_p27_21_a.tex}
+\caption{Metric tensor in polar coordinate system}
 \end{figure}
 \begin{align} 
 \ ds^2 &= |AB|^2\\
@@ -28,7 +30,12 @@ $$\blacklozenge$$
 Show that if $x^1 = r, x^2 = \theta, x^3 = \phi$, in the usual notation of spherical polar coordinates, then $$ a_{11} =1, a_{22} = r^2, a_{33} = r^2\sin^2\theta$$ and the other components vanish.
 \end{tcolorbox}
 One can choose to start from $ds^2 = dx^2+dy^2+dz^2$ and then expanding the $dx^i$ along $(r,\theta,\phi)$ but this a rather tedious way. So we use a more geometrical way of deriving the metric\\
-\includegraphics[scale=.6]{sphericalmetric.jpg}\\\\
+\begin{figure}[htp] 
+    \centering
+\input{D:/MathLatex/images/fig_p27_22_a.tex}
+\caption{Metric tensor in spherical coordinate system}
+\end{figure}
+%\includegraphics[scale=.6]{sphericalmetric.jpg}\\\\
 Consider an infinitesimal displacement of point E to J with $(dr,d\theta, d\phi )$.
 \begin{align}
 \ ds^2 &= |EJ|^2
@@ -321,9 +328,13 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Show that the small angle between unit vectors $X^r$ and $X^r + dX^r$ (these increments being infenitesimal) is given by $$ \theta^2 = a_{mn}X^mX^n$$
 \end{tcolorbox}
-\begin{figure}[htp] 
+\begin{figure}[htp]  
+
     \centering
-\includegraphics[scale=.5]{Exp37_1.jpg}
+ 
+%\includegraphics[scale=.5]{Exp37_1.jpg}
+\input{D:/MathLatex/images/fig_p37_213_a.tex}
+\caption{Small angle expression}
 \end{figure}
 By definition (2.302 page 33)
 \begin{align} 
@@ -884,6 +895,27 @@ and by the previous result of this exercise
 $$\blacklozenge$$
 \newpage
 
+\section{p60 - clarification for 2.609}
+\begin{tcolorbox}
+$$A^r_{.mns} = - \partial_s \Gamma^r_{mn} + 2 \Gamma^r_{sp}\Gamma^p_{mn}$$
+\end{tcolorbox}
+We have (2.608):
+\begin{align}
+\dv[2] {x^r}{s} &= - \Gamma^r_{mn}p^m p^n\\
+\RAr \dv[3] {x^r}{s} &= - \dv{\Gamma^r_{mn}}{s}p^m p^n- \Gamma^r_{mn}\left(p^m \dv{p^n}{s}+p^n \dv{p^m}{s} \right)\\
+\ & = - \partial_k \Gamma^r_{mn}\underbrace{\dv{x^k}{u}}_{= p^k}p^m p^n- \Gamma^r_{mn}\left(p^m \dv{p^n}{s}+p^n \dv{p^m}{s} \right)\\
+\text{as}\quad \dv{p^g}{s} = \dv[2] {x^g}{s} = - \Gamma^g_{ik}p^i p^k \RAr  & = - \partial_k \Gamma^r_{mn}\underbrace{\dv{x^k}{s}}_{= p^k}p^m p^n + \Gamma^r_{mn}p^m \Gamma^n_{ik}p^i p^k+ \Gamma^r_{mn}p^n \Gamma^m_{ki}p^k p^i 
+\end{align}
+In the second and third terms, rename the dummy indices : $ m \leftrightarrow k,  n \leftrightarrow i\ $  and $ m \leftrightarrow i,  n \leftrightarrow k\ $.\\
+So (4) becomes
+\begin{align}
+\dv[3] {x^r}{s} &=  - \partial_k \Gamma^r_{mn} p^m p^np^k +\Gamma^r_{ki}p^k \Gamma^i_{nm}p^n p^m+ \Gamma^r_{ik}p^k \Gamma^i_{nm}p^n p^m\\
+\ &=  \left( - \partial_k \Gamma^r_{mn}  +\Gamma^r_{ik} \Gamma^i_{mn}+ \Gamma^r_{ik} \Gamma^i_{nm} \right)p^m p^np^k\\
+\ &=  \left( - \partial_k \Gamma^r_{mn}  +2\Gamma^r_{ik} \Gamma^i_{mn}\right)p^m p^np^k
+\end{align}
+$$\blacklozenge$$
+\newpage
+
 \section{p62-exercise}
 \begin{tcolorbox}
 Prove that if a pair of vectors are unit orthogonal vectors at a point on a curve, and if they are both propagated parallelly along the curve, then they remain unit orthogonal vectors along the curve.
@@ -973,31 +1005,36 @@ Considering (5) and (15) we conclude:
 and as $\partial_s \lambda_n = \lambda_{n|s} $ and $\partial_s \lambda^n = \lambda^n_{\ |s} $ at the origin of the considered coordinate system, we have:
 \begin{align}
 \lambda^m \lambda_{n|s} &= \lambda_m \lambda^n_{\ |s} = 0
-\end{align}\\
+\end{align}
 $$\diamond$$
 Is the relation $\lambda^r_{|s}\lambda_s = 0$ true for a general unit vector field?\\
 The answer is NO. Let's consider the following unit vector field in a Cartesian Coordinate system:
 \begin{figure}[H]
+
 \centering
 \begin{minipage}[H]{.4\textwidth}
+
 %\centering
 \vspace{0pt}
-\includegraphics[scale=.3]{unitvectorfield1.jpg}
+\input{D:/MathLatex/images/fig_p62_236_a.tex}
+%\includegraphics[scale=.3]{unitvectorfield1.jpg}
 \end{minipage}\hfill
 \begin{minipage}[H]{0.4\textwidth}
 %\centering
 \vspace{50pt}
 $$V:\mathbb{R}_*^2\rightarrow \mathbb{R}^2|V(x,y) = \left< \frac{x}{\sqrt{x^2+y^2}},-\frac{y}{\sqrt{x^2+y^2}} \right>$$
 \end{minipage}
+\caption{Vector field for which $\lambda^r_{|s}\lambda_s = 0$ does not hold}
 \end{figure}
-Put $ r = \sqrt{x^2+y^2}$, we get (as we have a Cartesian Coordinate system, the calculation simplify as the Christoffel symbols vanish and the covariant components of the vectors are equal to their contravariant part):
+Put $ r = \sqrt{x^2+y^2}$, we get (as we have a Cartesian Coordinate system, the  Christoffel symbols vanish and the covariant components of the vectors are equal to their contravariant part):
+\newpage
 \begin{align}
 \ & \left \{ \begin{array}{c}
 \ V^1 = V_1 = +\frac{x}{r}\\
 \ V^2 = V_2 = -\frac{y}{r}\\
 \end{array}\right.\\
 \ & \left \{ \begin{array}{cc}
-\ V^1_{\ |1} =  V_{1|1} = \frac{y^2}{r^3}&V^1_{\ |2} =  V_{1|2} = -\frac{xy}{r^3}\\
+\ V^1_{\ |1} =  V_{1|1} = \frac{y^2}{r^3}&V^1_{\ |2} =  V_{1|2} = -\frac{xy}{r^3}\\A
 \ V^2_{\ |1} =  V_{2|1} = \frac{xy}{r^3}&V^2_{\ |2} =  V_{2|2} = -\frac{x^2}{r^3}\\
 \end{array}\right.\\
 \Rightarrow \quad\quad &\left \{ \begin{array}{c} \  V^1_{\ |s}V_s = V^1_{\ |1}V_1+V^1_{\ |2}V_2 = \frac{y^2}{r^3}\frac{x}{r}+ (-\frac{xy}{r^3})(-\frac{y}{r}) = \frac{xy^2}{r^4} \ne 0\\
@@ -1012,17 +1049,20 @@ Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
 \end{align}\\\\
 Now, let's consider another unit vector field in a Cartesian Coordinate system:
 \begin{figure}[H]
+
 \centering
 \begin{minipage}[H]{.4\textwidth}
 %\centering
 \vspace{0pt}
-\includegraphics[scale=.3]{unitvectorfield2.jpg}
+%\includegraphics[scale=.3]{unitvectorfield2.jpg}
+\input{D:/MathLatex/images/fig_p62_236_b.tex}
 \end{minipage}\hfill
 \begin{minipage}[H]{0.4\textwidth}
 %\centering
 \vspace{50pt}
 $$V:\mathbb{R}_*^2\rightarrow \mathbb{R}^2|V(x,y) = \left< \frac{x}{\sqrt{x^2+y^2}},\frac{y}{\sqrt{x^2+y^2}} \right>$$
 \end{minipage}
+\caption{Vector field for which $\lambda^r_{|s}\lambda_s = 0$ hold}
 \end{figure}
 \begin{align}
 \ & \left \{ \begin{array}{c}
@@ -1376,14 +1416,12 @@ $$\blacklozenge$$
 For cylindrical coordinates in Euclidean 3-space, write down the metric form by inspection of a diagram showing a general infinitesimal displacement, and calculate all the Christoffel symbols of both kinds.
 \end{tcolorbox}
 \begin{figure}[h]
-\centering
-\begin{minipage}[t]{.5\textwidth}
-%\centering
-\vspace{0pt}
-\includegraphics[scale=.4]{polar3d.jpg}
-\end{minipage}\hfill
+
+%\includegraphics[scale=.4]{polar3d.jpg}
+\input{D:/MathLatex/images/fig_p78_247_a.tex}
+
 \end{figure}
-From the figure we get (assuming an infinitesimal displacement, we may approximate $\left| \overrightarrow{SS^{,}} \right|$ with the arclength $r d\theta$ and assume $\left|  \overrightarrow{S°S^{,,}} \right| \perp \left|  \overrightarrow{GS^{,}} \right|$) Hence, the infinitesimal displacement from S
+From the figure we may (assuming an infinitesimal displacement), we may approximate $\left| \overrightarrow{SS^{,}} \right|$ with the arclength $r d\theta$ and assume $\left|  \overrightarrow{S°S^{,,}} \right| \perp \left|  \overrightarrow{GS^{,}} \right|$) Hence, the infinitesimal displacement from S
 \begin{align}
 \ ds^2 &= \left| \overrightarrow{SS^{,}} \right|^2 + \left| \overrightarrow{S^{,,}P^{,}} \right|^2+\left| \overrightarrow{P^{,}J} \right|^2\\
 \ &= dr^2 + ((r+dr)d\theta)^2 + dz^2\\
@@ -1974,12 +2012,9 @@ $$\blacklozenge$$
 In a plane, let $x^1, \  x^2$ be the distances of a general point from the point with rectangular coordinates $(1,0)$, $(-1,0)$, respectively. (These are bipolar coordinates.) Find the line element for these coordinates, and find the conjugate tensor $a^{mn}$.
 \end{tcolorbox}
 \begin{figure}[h]
-\centering
-\begin{minipage}[t]{.5\textwidth}
-%\centering
-\vspace{0pt}
-\includegraphics[scale=.4]{Bipolar.jpg}
-\end{minipage}\hfill
+%\includegraphics[scale=.4]{Bipolar.jpg}
+\input{D:/MathLatex/images/fig_p79_260_a.tex}
+
 \end{figure}
 \begin{align}
 \ (x^1)^2 &= \left( y^1-1\right) ^2 + \left(y^2\right)^2\\
@@ -2022,12 +2057,9 @@ x^1x^2 &-\left[(y^1)^2 +(y^2)^2-1)\right] \\\\
 \end{align}
 We use plane geometry to express expression (11) as  a function of only $(x^1,x^2)$. For the triangle $APB$ in the figure below, we have
 \begin{figure}[h]
-\centering
-\begin{minipage}[t]{.5\textwidth}
-%\centering
-\vspace{0pt}
-\includegraphics[scale=.4]{Bipolar2.jpg}
-\end{minipage}\hfill
+%\includegraphics[scale=.4]{Bipolar2.jpg}
+\input{D:/MathLatex/images/fig_p79_260_b.tex}
+
 \end{figure}
 \begin{align}
 \ \left |  OP \right |^2 &= \frac{(x^1)^2+(x^2)^2}{2} - \underbrace{\frac{\left | AB \right|^2}{4}}_{=1}\\

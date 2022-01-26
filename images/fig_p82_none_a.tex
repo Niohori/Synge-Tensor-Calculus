@@ -1,0 +1,138 @@
+\tdplotsetmaincoords{0}{10};
+\pgfplotsset{every axis/.append style={
+		view={-10*1}{-30*1},
+		%view={-90}{-30*0},
+		scale=3,
+		%axis lines=center,
+		axis on top,
+		xlabel={$y$},
+		ylabel={$x$},
+		zlabel={$z$},
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+                axis z line=middle,    % put the z axis in the middle
+               axis line style={-stealth}, % arrows on the axis
+            }}
+\begin{tikzpicture}
+
+  \def\r{0.5};
+    \def\H{10};
+    \pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+
+    	
+	\begin{axis}
+		[
+		xmin=-1.5,
+		xmax=1.5,
+		ymin=-1.5,
+		ymax=1.5,
+		zmin=0.0,
+		zmax=10.0,
+		]
+		%draw the cylinder
+		\addplot3 [surf,	dashed,thick,domain=0:10,	mesh/interior colormap=
+		{bw}{color=(gray!10) color=(gray!50)},
+		colormap= {bw}{color=(white!10) color=(white!10)},
+		y domain=0:1*pi,samples=10,
+		samples y=40,z buffer=sort,]
+		({\r*cos(deg(y))},{\r*sin(deg(y))},{x});
+						%draw the curves
+				%base cylinder
+		
+		\addplot3 +[no markers,dotted,thick, black,samples=51,	samples y=0,	domain=-pi/2+0.16666667:pi/2+0.16666667,variable=\t]
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{0 });
+		\addplot3 +[no markers,dotted,gray,thick, black,samples=51,	samples y=0,	domain=0:2*pi,variable=\t]
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{10 });		
+		\addplot3 +[no markers,dotted,gray,thick, black,samples=51,	samples y=0,	domain=-pi/2+0.16666667:pi/2+0.16666667,variable=\t]
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{5 });	
+		
+		
+				%curve1
+		\addplot3 [ultra thick, black,samples=51,	samples y=0,	domain=0:pi/2+0.16666667,variable=\t]
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{\t });
+		
+		\addplot3 [thick, dashed,thick,black,samples=51,	samples y=0,	domain=pi/2+0.16666667:3*pi/2+0.17776667,variable=\t]
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{\t });
+		
+			\addplot3 [ultra thick, black,samples=51,	samples y=0,	domain=3*pi/2+0.17776667:2*pi,variable=\t]	
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{\t });
+		
+
+		
+		%curve2
+			\addplot3 [ultra thick, black,samples=51,	samples y=0,	domain=0:pi/2+0.16666667,variable=\t]
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{\t*1.5 });
+		
+		\addplot3 [dashed,thick,black, samples=51,	samples y=0,	domain=pi/2+0.16666667:3*pi/2+0.17776667,variable=\t]	
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{\t*1.5});
+		
+		\addplot3 [ultra thick, black,samples=51,	samples y=0,	domain=3*pi/2+0.17776667:2*pi,variable=\t]	
+		({0.5*sin(deg(\t))},{0.5*cos(deg(\t))},{\t*1.5 });
+		
+		%2D graph
+	    	\coordinate (P) at (0.7,0,6);
+		\coordinate (O) at (0.7,0,3);
+		\coordinate (Q) at (0.7+0.6,0,6);
+		\coordinate (R) at (0.7+0.6,0,3);
+		\coordinate (xO) atat (0.7+0.05,0,3+0.2);
+		\coordinate (xY) at (0.7+0.05,0,3+2.5);
+		\coordinate (xZ) at (0.7+10*0.05,0,3+0.2);
+		
+		%labeling points
+		\node[tdplot_main_coords,{anchor=south west}] at (xY){$z$};
+		\node[tdplot_main_coords,{anchor=south west}] at (xZ){$s$};
+		
+		%drawing the lines
+		%region
+		\draw (O)--(P);
+		\draw (Q)--(P);
+		\draw (Q)--(R);
+		\draw (R)--(O);
+		%axes
+		\draw[-stealth,thick] (xO)--(xY);
+		\draw [-stealth,thick](xO)--(xZ);
+		%curves
+		\coordinate (p1) at (0.75+10*0.05,0,3+1.5);
+		\coordinate (p2)  at (0.7+10*0.05,0,3+1.1);
+		\draw (xO)--(p1);
+		\draw(xO)--(p2);
+		%point on cylinder
+		\coordinate (q1) at ({0.5*sin(360},{0.5*cos(360)},{9.4});
+		\coordinate (r1) at ({0.5*sin(360},{0.5*cos(360)},{6.3});
+		\draw[] (q1) circle (5pt);
+		\draw[] (r1) circle (5pt);
+
+		%point in graph
+		\coordinate (q2) at ({1.12},{0},{4.4});
+		\coordinate (r2) at ({1.12},{0},{4.0});
+		%arrows
+		  \draw[dotted, -stealth,thick, postaction={decorate}] (q1) .. controls (0.5, 0,10) .. (q2) ;
+		  \draw[dotted, -stealth, thick, postaction={decorate}] (r1) .. controls (0.5, 0,7) .. (r2) ;
+		  %initial conditions
+		  %vectors points
+		 \coordinate (icO) at ({0},{0.5},{0});
+		\coordinate (iC1) at ({0.5*1.1},{0.5},{1.1});
+		\coordinate (iC2) at ({0.5},{0.5},{1.5});
+		%arrows
+		  \draw[ -stealth,gray, very thick,postaction={decorate}] (icO) -- (iC1) ;
+		  \draw[ -stealth, ,gray, very thick,postaction={decorate}] (icO) --(iC2) ;
+		  %angles
+		  
+		  
+	% draw arc using the three points and a radius
+	  % arcs
+  	%\tdplotdefinepoints (0,0.,0)(0.5*1.1,0.5,1.1)(0.5,0.5,1.5);
+  	  	%\tdplotdefinepoints (0,0.,0)  (0,1,1.1)(0.5,0.5,1.5);
+  	  	%\tdplotdefinepoints (0.55,0.5,1.1)(0.5,0.5,1.5)(0,0.5,0);
+  	%\tdplotdrawpolytopearc[<->]{3}{anchor=north west}{$\theta$}
+  	
+  	%arrows
+		  \draw[ stealth-stealth,thick, postaction={decorate}] (iC1) .. controls (0.45, 0,0.5) .. (iC2) node[midway,right] {$\theta$};;
+		  %\draw[dotted, -stealth, thick, postaction={decorate}] (p2) .. controls (0.5, 0,0.5) .. (r2) ;
+		  
+		  \draw[ stealth-stealth,thick, postaction={decorate}] (p1) .. controls (1.25, 0,4.2) .. (p2) node[midway,right] {$\theta$};;
+		  
+\end{axis}
+
+\end{tikzpicture}\\

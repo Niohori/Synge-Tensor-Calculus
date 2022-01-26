@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=2.5]
+	\coordinate  (O) at (0,0);
+	\coordinate [label=right:$x$] (Xr) at (2.5,0);
+	\coordinate [label=left:$K$] (K) at (0,2);
+	\coordinate (L) at (2.,0);
+	\coordinate  (Xl) at (-2.5,0);
+	\coordinate [label=above:$y$] (Y) at (0,2.5);
+		\coordinate (A) at (-1,-0);
+		\coordinate  (B) at (1,0);
+		\coordinate [label=above:$P \left( y^1\text{,} \  y^2 \right)$] (P) at (2,2);
+		\node at ($(A) + (0,-0.3)$)    {$A \text{(-1,0 )}$};
+		\node at ($(B) + (0,-0.3)$)    {$$B \text{(1,0 )}$$};
+		\node at ($(L) + (0,-0.3)$)    {$$L$$};
+    % Draw axes
+   	 \draw[ -stealth,line width = 0.25mm] (Xl) --(Xr) ;
+   	 \draw[ -stealth,line width = 0.25mm] (O) --(Y) ;
+   	 \draw[dashed,line width = 0.25mm] (A) --(P)node[midway,left] {$x^2$}; 
+   	  \draw[dashed,line width = 0.25mm] (B) --(P) node[midway,right] {$x^1$};
+   	   \draw[dotted,line width = 0.25mm] (O) --(P) ;
+   	      	   \draw[dotted,line width = 0.25mm] (K) --(P)node[midway,above] {$y^1$}; 
+   	      	      	   \draw[dotted,line width = 0.25mm] (L) --(P) node[midway,right] {$y^2$};;
+	\draw[fill=gray](A) circle(1.2pt);
+	\draw[fill=gray](B) circle(1.2pt);
+	\draw (P)  circle[radius=1.2pt];
+	\draw (K)  circle[radius=1.2pt];
+	\draw (L)  circle[radius=1.2pt];
+\end{tikzpicture}
