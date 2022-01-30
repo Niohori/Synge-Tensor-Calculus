@@ -1,0 +1,79 @@
+\tdplotsetmaincoords{0}{10}
+\pgfplotsset{every axis/.append style={
+		scale=1,
+		%axis lines=center,
+		axis on top,
+		xlabel={$x$},
+		%ylabel={$z$},
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+               %x axis line style={-latex, ultra thin}, % arrows on the axis
+               y axis line style={-,draw opacity=0},
+                x axis line style={draw opacity=0},
+            },}
+            
+
+            
+\begin{tikzpicture}    [spy using outlines=	{circle, magnification=6, connect spies},] 
+					
+	\tikzmath{\u= 0.9;\w=-1.71;\v=1.0;\q= (2.0/ \w)*0.9994;\n=1;}
+	\u,  \w, \v, \q, \n;
+    \pgfplotsset{ticks=none};
+    
+    \pgfplotsset{compat=1.12};
+		\def\r{0.5};
+		\def\H{1.0};  
+		\def\s{0.123};
+	\begin{axis}
+		[
+		xmin=-0.7,
+		xmax=0.7,
+		ymin=-1.4,
+		ymax=1.4,
+		]
+		%\addplot [black,thick,samples=1000,	samples y=0,	domain=-\r:\r,variable=\g]({ \r*(cos(\n*deg(2*ln(1-(\g)*\w/2))))},{(\u*(1-0.5*\g *\w)});
+		%positve plane
+
+		\addplot [decoration={markings,mark=at position 0.5 with {\arrow[scale=1,=>latex]{<}}},postaction={decorate}, black,thick,samples=60,	samples y=0,	domain=-\r:\r,variable=\g]({\g},{\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-0.0))))});
+
+		\addplot [black,dashed,thin,samples=40,	samples y=0,	domain=-\r:\r,variable=\g]({-\g},{\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-0.5))))});
+		%negative plane
+		\addplot [decoration={markings,mark=at position 0.5 with {\arrow[scale=1.0,=>latex]{<}}},postaction={decorate},black,thick,samples=60,	samples y=0,	domain=-\r:\r,variable=\g]({\g},{-\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-0.0))))});
+		\addplot [black,dashed,thin,samples=40,	samples y=0,	domain=-\r:\r,variable=\g]({-\g},{-\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-0.5))))});
+		
+		\foreach \k in {1,...,4}
+{
+%positve plane
+  \addplot [black,very thick,samples=40,	samples y=0,	domain=-\r:\r,variable=\g]({\g},{\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-\k ))))});
+   \addplot [black,dashed,thin,samples=40,	samples y=0,	domain=-\r:\r,variable=\g]({-\g},{\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-3*\k /2.))))});
+  %negative plane
+     \addplot [black,thick,samples=40,	samples y=0,	domain=-\r:\r,variable=\g]({\g},{-\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-\k ))))});
+   \addplot [black,dashed,thin,samples=40,	samples y=0,	domain=-\r:\r,variable=\g]({-\g},{-\u*(exp(0.5*(3.141593*(asin(\g/ \r)/360.-3*\k /2.))))});
+}
+
+      \coordinate (g1) at (axis cs:{\r*0.9},{\u*(exp(0.5*(3.141593*(asin(-\r/ \r)/360. +0.4))))});
+      \coordinate (g2) at (axis cs:{\r*0.9},{-\u*(exp(0.5*(3.141593*(asin(-\r/ \r)/360.+0.4 ))))});
+\node[tdplot_main_coords,{anchor=south east}] at (g1){$g_{1}$};
+\node[tdplot_main_coords,{anchor=south east}] at (g2){$g_{2}$};
+
+\foreach \j in {1,..,3}
+{
+%\draw (\j,0) -- (\j,\H*1.3);
+}
+\draw[very thin,] (\r,-\H*1.3) -- (\r,\H*1.3);
+\draw[very thin,] (-\r,-\H*1.3) -- (-\r,\H*1.3);
+\draw[thick,gray!60] (-\r,0) -- (\r,0);
+\draw[very thin,black] (-\r,0) -- (\r,0);
+\draw[very thin,black] (-\r*1.2,0) -- (-\r,0);
+\draw[very thin,black,- stealth] (\r,0) -- (\r*1.42,0);
+
+
+		%using the 'spy' to magnify a piece of the picture
+  % now we can draw the magnifying glass:
+    %\spy [black] on (2.84,2.87) in node [left] at (2.25,1.6);
+      \coordinate (spypoint) at (axis cs:-0.493,0);
+  \coordinate (magnifyglass) at (axis cs:-0.8,0.6);
+\end{axis}
+\spy [black, size=2.5cm] on (spypoint)   in node[fill=white] at (magnifyglass);
+
+\end{tikzpicture}

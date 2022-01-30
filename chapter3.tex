@@ -11,10 +11,12 @@ The reason is because those surfaces can be "unwrapped" like the figure below sh
 \begin{minipage}[t]{.4\textwidth}
 %\centering
 \vspace{0pt}
-\includegraphics[scale=.5]{Conemapping.jpg}
+%\includegraphics[scale=.5]{Conemapping.jpg}
+\input{D:/MathLatex/images/fig_p82_21_a.tex}
 \end{minipage}\hfill
+\caption{Unwrapping of a cone}
 \end{figure}\\
-For the cone, we can for each point $\ P $ on the cone, lying on a distance $\ r $ from the apex and making an angle $\Psi $,  associate on a plane,  a  point $ P^* $ lying at the same  distance $ r $ from the apex, taken as origin for the coordinate system, and making an angle $\theta =  k\Psi $ with $ k $ a constant depending on the shape of the cone. This pair of coordinates are polar coordinates with $ r \in (-\infty, + \infty)$ and $\theta \in [0, 2k\pi)$. 
+For the cone, we can for each point $\ P $ on the cone, lying on a distance $\ h $ from the apex and making an angle $\Psi $,  associate on a plane,  a  point $ P^* $ lying at the same  distance $ h $ from the apex, taken as origin for the coordinate system, and making an angle $\theta =  k\Psi $ with $ k $ a constant depending on the shape of the cone. This pair of coordinates are polar coordinates with $ r \in (-\infty, + \infty)$ and $\theta \in [0, 2k\pi)$. 
 The same reasoning can be applied to a cylinder which is a cone with the apex at $\infty$. In that case the coordinate system becomes a Cartesian coordinate system. \\
 As a continuous mapping exist from polar to orthogonal Cartesian coordinates both  coordinate system can be written under the required form (3.101) and so can be called "flat".
 
@@ -114,9 +116,44 @@ $$\blacklozenge$$
 
 \section{p82 - Exercise}
 \begin{tcolorbox}
-Cylindar
+Would the study of geodesic deviation enable us to distinguish between a plane and a right circular cylinder?
 \end{tcolorbox}
-\begin{figure}[h]
+For geodesic lines we have
+\begin{align}
+\dv[2]{x^r}{u} + \Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0\\
+\end{align}
+with the fundamental tensor for a cylindar (see exercise page 27)
+\begin{align} 
+(a_{mn}) = \begin{pmatrix}
+ 1& 0 \\
+0 & r^2 \\
+\end{pmatrix}
+\end{align}
+As no element of this tesnor is a function of the coordinates, it is clear that all Christoffel symbols vanish and the geodesic curve are solutions of the simple system of $2^{nd}$ order differential equations
+\begin{align}
+\dv[2]{x^r}{u}  = 0
+\end{align}
+Hence
+\begin{align}
+x^r  &= \kappa u + \mu\\
+\text{or}\quad x^r &= \kappa^r u
+\end{align}
+by choosing the origin of the coordinates system with the initial condition position of the point.
+Choosing polar coordinates $\phi, z$ as coordinates, the distance one walks when following a geodesic is given by
+\begin{align}
+ s= \int_{u_0}^{u_1}\sqrt{(r^2(d\phi)^2 + (dz)^2)}
+\end{align}
+and if we take $u=\phi$ as independent a parameter, by (6) we get 
+\begin{align}
+ s-s_0 &= \int_{\psi_0}^{\psi_1}\sqrt{(r^2 + \kappa^2)}d\psi \equiv g(\psi - \psi_0)\\
+ \text{or}\quad s&= \int_{\psi_0}^{\psi_1}\sqrt{(r^2 + \kappa^2)}d\psi \equiv g\psi
+\end{align}
+by introducing transformed coordinates $s^{'}= s-s_0$ and $\psi^{'} =\psi - \psi_0$.\\
+and thus we get 
+\begin{align}
+ z = m s^{'}
+\end{align}
+\begin{figure}[H]
 %\centering
 \begin{minipage}[t]{.4\textwidth}
 %\centering
@@ -124,21 +161,35 @@ Cylindar
 %\includegraphics[scale=.5]{p85_ex1.png}
 \input{D:/MathLatex/images/fig_p82_none_a.tex}
 \end{minipage}\hfill
+\caption{Geodesics on a cylinder}
 \end{figure}
+The above figure illustrates what an observer sees when walking along geodesics on the cylinder.  He only can measure the distance $s^{'}$ and the displacement along $z$ and by (10) can only draw a chart like the one seen on the right of the cylinder. A "flatlander" would see the same chart when walking along geodesics in his plane.\\\\
+\textbf{Conclusion:} No, studying the geodesic deviation on a right circular cylinder does not enable us to say on which surface we are.
 $$\blacklozenge$$
 \newpage
 
 \section{p83 - clarification}
 \begin{tcolorbox}
-$V_2$ from fammily of geodesics
+$V_2$ from family of geodesics
 \end{tcolorbox}
+\begin{comment}
 \begin{figure}[h]%
     \centering
     \subfloat[]{{\includegraphics[width=6cm]{p87_a} }}%
     \qquad
     \subfloat[]{{\includegraphics[width=6cm]{p87_c} }}%
+        \qquad
+    \subfloat[]{{\includegraphics[width=8cm]{p87_d} }}%
     %\caption{2 Figures side by side}%
     \label{fig:example}%
+\caption{$V_2$ manifold of a family of geodesics}
+\end{figure}
+\end{comment}
+
+\begin{figure}[h]%
+    \centering
+\input{D:/MathLatex/images/fig_p91_3301_a.tex}
+\caption{$V_2$ Misner cylinder family of geodesics}
 \end{figure}
 $$\blacklozenge$$
 \newpage

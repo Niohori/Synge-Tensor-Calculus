@@ -1,0 +1,104 @@
+%\tdplotsetmaincoords{0}{10};
+\pgfplotsset{every axis/.append style={
+		view={-30}{-30*1},
+		%view={-90}{-30*0},
+		scale=3.5,
+		%axis lines=center,
+		axis on top,
+		%xlabel={$y$},
+		%ylabel={$x$},
+		%zlabel={$z$},
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+                axis z line=middle,    % put the z axis in the middle
+               %axis line style={-stealth}, % arrows on the axis
+               axis line style={draw=none}
+            }}
+            
+
+
+            
+\begin{tikzpicture}[angle/.style={black,thick}]
+\tikzmath{\r=1.5;\h=5;\q=asin((\r/\h)); \p=-\q*1 ; \k= \r/\h;};
+\q, \h,\p, \k;
+    \pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+	\begin{axis}
+		[
+		axis equal=true,
+		xmin=-\h*1.2,
+		xmax=\h*1.2,
+		ymin=-\h*0.2,
+		ymax=\h*1.2,
+		zmin=-\h*0,
+		zmax=\r*1.1,
+		]
+		%draw the cylinder
+		\addplot3 [surf,	dashed,thick,	mesh/interior colormap=
+		{bw}{color=(gray!10) color=(gray!50)},
+		colormap= {bw}{color=(black!10) color=(white!10)},
+		domain=0:360,
+		y domain=0:\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+	({\y*cos(\p)+1*\y*tan(\q)*sin(x)*sin(\p)},{1*y*tan(\q)*cos(x)},{-\y*sin(\p)+1*\y*tan(\q)*sin(x)*cos(\p)});
+	
+	
+		\addplot3 [black,thick,dashed,samples=40,	samples y=0,	domain=0.0:360,]({\h*cos(\p)+1*\h*tan(\q)*sin(x)*sin(\p)},{1*\h*tan(\q)*cos(x)},{-\h*sin(\p)+1*\h*tan(\q)*sin(x)*cos(\p)});
+		\addplot3 [black,thick,-latex,samples=40,	samples y=0,	domain=60:-90,]({\h*cos(\p)+1*\h*tan(\q)*sin(x)*sin(\p)},{1*\h*tan(\q)*cos(x)},{-\h*sin(\p)+1*\h*tan(\q)*sin(x)*cos(\p)});
+	
+		\coordinate (O) at ({ 0},{0},{0});
+		\coordinate (P) at ({ \h*1},{\h*0},{0});
+		\coordinate (C) at ({1.2* \h*cos(\p)},{\h*0},{1.2*\h*sin(-\p)});
+		\coordinate (A) at ({1.* \h*cos(\p)},{\h*0},{1.*\h*sin(-\p)});
+		\coordinate (Q) at ({1.* \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+
+		%\node[tdplot_main_coords,{anchor=south west},red] at (P){$o$};
+		%\draw[dashed,line width = 0.25mm] (O) --(P) ;%node[midway,right] {$x^1$};
+		\draw[dashdotted,- latex,line width = 0.25mm] (O) --(C) ;%node[midway,right] {$x^1$};
+		%\draw[dashdotted,line width = 0.25mm] (Q) --(A) ;%node[midway,right] {$x^1$};
+		\draw[fill=black](A) circle(1.5pt);%node[{anchor=north west}] {$A$};
+		\draw[fill=black](Q) circle(1.5pt);
+		\coordinate (Y) at ({\h*cos(\p)+\h*tan(\q)*sin(60)*sin(\p)},{\h*tan(\q)*cos(60)},{-\h*sin(\p)+\h*tan(\q)*sin(60)*cos(\p)});
+		\draw[fill=black](Y) circle(1.5pt);%node[{anchor=north west}] {$Y$};
+		%draw point on cone
+		\coordinate (W) at ({ \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		\coordinate (N) at ({1.2 *\h},{\h*0},{0.*\h*sin(-\p)});
+		\coordinate (R) at ({2/3* \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		\coordinate (S) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(60)*sin(\p)},{2*\h/3*tan(\q)*cos(60)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(60)*cos(\p)});
+		\coordinate (T) at ({2*\h/3*cos(\p)+0*\h/3*tan(\q)*sin(60)*sin(\p)},{0},{-2*\h/3*sin(\p)+0*\h/3*tan(\q)*sin(60)*cos(\p)});
+		\draw[fill=black](W) circle(1.5pt)node[{anchor=north west}] {$R$};;
+		\draw[fill=black](R) circle(1.5pt)node[{anchor=south west}] {$V$};;
+		\draw[fill=black](S) circle(1.5pt)node[{anchor=south west}] {$P$};
+		\draw[fill=black](T) circle(1.5pt)node[{anchor=south west}] {$Q$};
+		\draw[dashdotted,- latex,line width = 0.25mm] (O) --(N) ;%node[midway,right] {$x^1$};
+		\draw[dashdotted,line width = 0.25mm] (T) --(R) ;%node[midway,right] {$x^1$};
+		\draw[dashdotted,line width = 0.25mm] (T) --(S) ;%node[midway,right] {$x^1$};
+		
+		\draw[dashdotted,line width = 0.25mm] (Y) --(A) ;%node[midway,right] {$x^1$};
+		\draw[dashdotted,line width = 0.25mm] (Y) --(S) ;%node[midway,right] {$x^1$};
+		\draw[dashdotted,line width = 0.25mm] (W) --(A) ;%node[midway,right] {$x^1$};
+
+
+		\addplot3 [-latex,black,thick,samples=40,	samples y=0,	domain=60.0:-90,]({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(x)*sin(\p)},{2*\h/3*tan(\q)*cos(x)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(x)*cos(\p)});
+		%projection onthe xy-plane
+		\coordinate (U) at ({2/3*\h/cos(\q)*cos(150*sin(\q))},{2/3*\h/cos(\q)*sin(150*sin(\q))},{0});
+		\draw[fill=black](U) circle(1.5pt)node[{anchor=south west}] {$P^{*}$};
+		\addplot3 [-latex,black,thick,samples=40,	samples y=0,	domain=0:150,]({2/3*\h/cos(\q)*cos(x*sin(\q))},{2/3*\h/cos(\q)*sin(x*sin(\q))},{0});
+		\addplot3 [-latex,black,thick,samples=40,	samples y=0,	domain=0:360,]({\h/cos(\q)*cos(x*sin(\q))},{\h/cos(\q)*sin(x*sin(\q))},{0});
+		\coordinate (V) at ({\h/cos(\q)*cos(360*sin(\q))},{\h/cos(\q)*sin(360*sin(\q))},{0});
+		\draw[fill=black](V) circle(1.5pt)node[{anchor=south east}] {$R^{*}$};
+		\draw[dashdotted,line width = 0.25mm] (O) --(U) ;%node[midway,right] {$x^1$};
+		\draw[dashdotted,line width = 0.25mm] (O) --(V) ;%node[midway,right] {$x^1$};
+		%draw an arc illustrating the angle defining the orientation
+	%\addplot3 [black,thick,samples=40,	samples y=0,	domain=60.0:-90,]({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(x)*sin(\p)},{2*\h/3*tan(\q)*cos(x)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(x)*cos(\p)});
+% Command for the angle
+		 \coordinate (F) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(20)*sin(\p)},{2*\h/3*tan(\q)*cos(20)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(20)*cos(\p)});
+ 		\draw[](F) node[{anchor=north west}] {$\Psi$};
+ 				 \coordinate (G) at({2/3*\h/cos(\q)*cos(90*sin(\q))},{2/3*\h/cos(\q)*sin(90*sin(\q))},{0});
+ 		\draw[](G) node[{anchor=south east}] {$\theta$};
+ 		 		\coordinate (M) at ({\h*cos(\p)+\h*tan(\q)*sin(20)*sin(\p)},{\h*tan(\q)*cos(20)},{-\h*sin(\p)+\h*tan(\q)*sin(20)*cos(\p)});
+ 		\draw[](M) node[{anchor=north west}] {$\Psi$};
+\end{axis}
+\end{tikzpicture}\\

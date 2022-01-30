@@ -23,7 +23,7 @@
 \usepackage{subfig}
 \graphicspath{ {D:/MathLatex/images/} }
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows,arrows.meta}
+\usetikzlibrary{shapes,arrows,arrows.meta,spy}
 \usetikzlibrary{calc}% needed for BB
 \usepackage{pgfplots}
 \usepackage{siunitx}
@@ -34,8 +34,9 @@
 %\usetikzlibrary{arrows,arrows.meta}
 \usetikzlibrary{math} % for \tikzmath
 \usetikzlibrary{angles,quotes} % for pic (angle labels)
-
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
 \usetikzlibrary{decorations.pathreplacing} % for curly braces
+\usetikzlibrary {decorations.markings,shapes.arrows}
 \usepackage{tikz-3dplot}
 \begin{comment}
 \tikzset{
@@ -99,8 +100,8 @@ m n\\
 
 \tableofcontents
 \listoffigures
-\include{chapter1}
-\include{chapter2}
+%\include{chapter1}
+%\include{chapter2}
 \include{chapter3}
 %\include{chapter4}
 %\include{chapter5}
