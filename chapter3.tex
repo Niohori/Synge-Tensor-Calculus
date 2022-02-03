@@ -7,13 +7,8 @@ Explain why the surfaces of an ordinary cylinder and an ordinary cone are to be 
 \end{tcolorbox}
 The reason is because those surfaces can be "unwrapped" like the figure below shows. 
 \begin{figure}[h]
-%\centering
-\begin{minipage}[t]{.4\textwidth}
-%\centering
-\vspace{0pt}
 %\includegraphics[scale=.5]{Conemapping.jpg}
 \input{D:/MathLatex/images/fig_p82_21_a.tex}
-\end{minipage}\hfill
 \caption{Unwrapping of a cone}
 \end{figure}\\
 For the cone, we can for each point $\ P $ on the cone, lying on a distance $\ h $ from the apex and making an angle $\Psi $,  associate on a plane,  a  point $ P^* $ lying at the same  distance $ h $ from the apex, taken as origin for the coordinate system, and making an angle $\theta =  k\Psi $ with $ k $ a constant depending on the shape of the cone. This pair of coordinates are polar coordinates with $ r \in (-\infty, + \infty)$ and $\theta \in [0, 2k\pi)$. 
@@ -129,7 +124,7 @@ with the fundamental tensor for a cylindar (see exercise page 27)
 0 & r^2 \\
 \end{pmatrix}
 \end{align}
-As no element of this tesnor is a function of the coordinates, it is clear that all Christoffel symbols vanish and the geodesic curve are solutions of the simple system of $2^{nd}$ order differential equations
+As no element of this tensor is a function of the coordinates, it is clear that all Christoffel symbols vanish and the geodesic curve are solutions of the simple system of $2^{nd}$ order differential equations
 \begin{align}
 \dv[2]{x^r}{u}  = 0
 \end{align}
@@ -168,11 +163,35 @@ The above figure illustrates what an observer sees when walking along geodesics 
 $$\blacklozenge$$
 \newpage
 
+\section{p93 - Exercise}
+\begin{tcolorbox}
+For rectangular cartesians in Euclidean 3-space, show that the general solution of 3.311 is $\eta^r = A^r s+B^r $, where $A^, \ B^r$ are constants. verify this by elementary geometry. 
+\end{tcolorbox}
+We have equation 3.111
+\begin{align}
+\fdv[2]{\eta^r}{s}+ R^r_{.smn} p^s \eta^m p^n=0
+\end{align}
+From exercise on page 83 we know that $R^r_{.smn}=0$ in an Euclidean space. Also, in such spaces, the Christoffels symbols vanish and equation (1) reduces to $ \dv[2]{\eta}{s} = 0$. And so, $$\eta^r = A^r s+B^r $$
+
+This is also easily deducted from a geometrical point of view. In an Euclidean space, the geodesics are straight lines. For an infinitesimal change in the geodesic family parameter $v$, we can assume that a vector, going perpendicular from 1 point from one geodesic with parameter $v$  to another infinitesimal close  geodesic with parameter $v+dv$,  will also be perpendicular on this geodesic. This situation is depicted in figure (a). We conclude that $\overrightarrow{AA^{'}} \ \parallel \ \overrightarrow{PP^{'}}$. This can also be deducted from Thales theorem (see fig. (b)). 
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p93_16_a.tex}}
+	\qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p93_16_b.tex}}
+\caption{Geometrical deduction of the geodesical deviation equation in an Euclidean space.}
+\end{figure}
+Hence, we than can say that,
+$$ \frac{\left|AA^{'}\right|}{u_0}=\frac{\left|PP^{'}\right|}{u}  $$
+or, $$ \eta^r = A^r u + B^r $$ as the reference point $A$ can be chosen arbitrarily on the line $AP$.
+$$\blacklozenge$$
+\newpage
+
+\begin{comment}
 \section{p83 - clarification}
 \begin{tcolorbox}
 $V_2$ from family of geodesics
 \end{tcolorbox}
-\begin{comment}
 \begin{figure}[h]%
     \centering
     \subfloat[]{{\includegraphics[width=6cm]{p87_a} }}%
@@ -184,8 +203,6 @@ $V_2$ from family of geodesics
     \label{fig:example}%
 \caption{$V_2$ manifold of a family of geodesics}
 \end{figure}
-\end{comment}
-
 \begin{figure}[h]%
     \centering
 \input{D:/MathLatex/images/fig_p91_3301_a.tex}
@@ -193,3 +210,5 @@ $V_2$ from family of geodesics
 \end{figure}
 $$\blacklozenge$$
 \newpage
+
+\end{comment}

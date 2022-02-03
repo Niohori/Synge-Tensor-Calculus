@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+\tikzstyle{point}=[circle,thick,draw=black,fill=black,inner sep=0pt,minimum width=4pt,minimum height=4pt]
+    \node (P)[point,label={[label distance=-1cm]210:$O$}] at (0,0) {};
+    \node (B)[point,label={[label distance=0cm]-90:$B$}] at (2.5,0) {};
+    \node (Q)[point,label={[label distance=0cm]-90:$Q$}] at (4,0) {};
+    \node (C)[point,label={[label distance=0cm]90:$C$}] at (1.5*0.8,1.5*0.8) {};
+    \node (R)[point,label={[label distance=0cm]90:$R$}] at (2.5,2.5) {};
+
+    \node (A)[label={[label distance=0cm]:$\frac{\left|RC\right|}{\left|CO\right|}=\frac{\left|QB\right|}{\left|BO\right|} \ \Leftrightarrow CB \parallel RQ  $}] at(2,-2) {};
+
+    \draw[] (P) edge node  {} (B);
+    \draw[] (B) edge node  {} (Q);
+    \draw[] (P) edge node  {} (C);
+    \draw[] (C) edge node  {} (R);
+
+    \draw[] (B) edge node  {} (C);
+    %\draw[] (C) edge node  {} (A);
+
+    \draw[] (Q) edge node  {} (R);
+
+    \draw[] ($(P)!-1cm!(Q)$) -- ($(Q)!-1cm!(P)$);
+    \draw[] ($(P)!-1cm!(R)$) -- ($(R)!-1cm!(P)$);
+    \draw[] ($(C)!-1cm!(B)$) -- ($(B)!-1cm!(C)$);
+    \draw[] ($(R)!-1cm!(Q)$) -- ($(Q)!-1cm!(R)$);
+\end{tikzpicture} 
