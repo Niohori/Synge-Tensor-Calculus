@@ -1,0 +1,332 @@
+            
+\tikzmath{\dR=1.9;\da=-10.0;\dT=-0.59;\dD=-27.; \dV=-9.00;
+\ra=7.5; \rb = \ra+\dR;
+\rc=10.4; \rd = \rc+\dR;
+\re=15.2; \rf = \re+0.1*\dR;
+\rg=9.5; \rh = \rg+\dR;
+\LNwee=0.5;
+\LTree=1.3;
+}
+
+\begin{tikzpicture}[angle/.style={black,thick},]
+\tdplotsetmaincoords{0}{10};
+\pgfplotsset{every axis/.append style={
+		view={-30*(0*1)}{-30*(-3)},
+		%view={-90}{-30*0},
+		scale=10/4,
+		axis lines=center,
+		%axis on top,
+		%xlabel={$y$},
+		%ylabel={$x$},
+		%zlabel={$z$},
+               %axis x line=middle,    % put the x axis in the middle
+               %axis y line=middle,    % put the y axis in the middle
+                %axis z line=middle,    % put the z axis in the middle
+               %axis line style={-stealth}, % arrows on the axis
+               axis line style={draw=none},
+               axis equal image,
+,
+            }}
+    \pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+	\begin{axis}[]
+			
+		%*******************************    first geodesics  ***********************************
+		\addplot3 [thin,decoration={markings, mark = at position 0.39 with {\arrow[scale = 2.5]{latex[reversed]}}},postaction ={decorate},samples=40,	samples y=0,	domain=90.0+10:0-10]
+		({-4.5+\ra*cos(x)},{-4.5+\ra*sin(x)},{0})node[above,left] {$\gamma_{1}$};
+		
+		
+      		\def \f{19.6}%********************************************
+      		
+		\draw[fill=black]({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0) circle (3pt)node[{anchor=south west}] {$S$};;
+     		\draw[very thick, -Latex]({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0) -- ({-4.5+\rb*cos(\f+\da)},{-4.5+\rb*sin(\f+\da)},0)node[below,right] {$\overrightarrow{u_{0}}$};
+     		
+      		\draw[-Latex,black] let
+   		 \p0 = ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0),
+    		\p1 =  ({-4.5+\ra*cos(\f+\da)},{-4.5+\ra*sin(\f+\da)},0),
+    		\p2 =  ({-4.5+\rb*cos(\f+\da)},{-4.5+\rb*sin(\f+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.0cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[{anchor=north east}] {};;
+  		
+  		  \draw[black] let
+   		\p0 = ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0),
+    		\p1 =  ( {-4.5+\ra*cos(\f-\da)},{-4.5+\ra*sin(\f-\da)},0) ,
+    		\p2 =( {-4.5+\ra*cos(\f+\da)},{-4.5+\ra*sin(\f+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.0cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0) +(\n1:\n3) arc[radius = -\n3, start angle = \n2, end angle = \n1]node[midway,below,left] {$\theta_{1}$};;
+  		
+  		\def \ff{45}%********************************************
+		\draw[very thick, -Latex]({-4.5+\ra*cos(\ff)},{-4.5+\ra*sin(\ff)},0) -- ({-4.5+\rb*cos(\ff+\da)},{-4.5+\rb*sin(\ff+\da)},0);
+
+      		\draw[-Latex,black] let
+   		 \p0 = ({-4.5+\ra*cos(\ff)},{-4.5+\ra*sin(\ff)},0),
+    		\p1 =  ({-4.5+\ra*cos(\ff+\da)},{-4.5+\ra*sin(\ff+\da)},0),
+    		\p2 =  ({-4.5+\rb*cos(\ff+\da)},{-4.5+\rb*sin(\ff+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.6cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\ff)},{-4.5+\ra*sin(\ff)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {};;
+  		
+  		 \draw[black] let
+   		\p0 = ({-4.5+\ra*cos(\ff)},{-4.5+\ra*sin(\ff)},0),
+    		\p1 =  ( {-4.5+\ra*cos(\ff-\da)},{-4.5+\ra*sin(\ff-\da)},0) ,
+    		\p2 =( {-4.5+\ra*cos(\ff+\da)},{-4.5+\ra*sin(\ff+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.6cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\ff)},{-4.5+\ra*sin(\ff)},0) +(\n1:\n3) arc[radius = -\n3, start angle = \n2, end angle = \n1]node[midway,below] {$\theta_{1} \ \ $};;
+      		
+      		\def \fff{77.2}%********************************************
+		\draw[very thick, -Latex]({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0) -- ({-4.5+\rb*cos(\fff+\da)},{-4.5+\rb*sin(\fff+\da)},0);
+
+		\draw[-Latex,black] let
+   		\p0 = ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0),
+    		\p1 =   ( {-4.5+\ra*cos(\fff+\da)},{-4.5+\ra*sin(\fff+\da)},0),
+    		\p2 = ({-4.5+\rb*cos(\fff+\da)},{-4.5+\rb*sin(\fff+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.6cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {};;
+  		
+  		\draw[black] let
+   		\p0 = ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0),
+    		\p1 =  ( {-4.5+\ra*cos(\fff-\da)},{-4.5+\ra*sin(\fff-\da)},0) ,
+    		\p2 =( {-4.5+\ra*cos(\fff+\da)},{-4.5+\ra*sin(\fff+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.6cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0) +(\n1:\n3) arc[radius = -\n3, start angle = \n2, end angle = \n1]node[midway,below] {$\theta_{1} \ \ $};;
+ 		
+ 		 		
+  		
+  		%second geodesics **************************************
+  			
+		\addplot3 [thin,decoration={markings, mark = at position 0.4 with  {\arrow[scale = 2.5]{latex[reversed]}}},postaction ={decorate},samples=40,	samples y=0,	domain=300+80:295]({-9.1+\rg*cos(x)},{10+\rg*sin(x)},{0})node[below,left] {$\gamma_{2}$};
+		
+		\def\qt{2.55};
+
+    		 \draw[-Latex,black] let
+   		\p0 = ({-9.1+\rg*cos(\qt)},{10+\rg*sin(\qt)},0) ,
+    		\p1 =   ({-9.1+\rg*cos(\qt+\dD)},{10+10.3*\rg*sin(\qt+\dD)},0) ,
+    		\p2 =({-9.1+\rh*cos(\qt-\dD)},{10+\rh*sin(\qt-\dD)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in ({-9.1+\rg*cos(\qt)},{10+\rg*sin(\qt)},0) +(\n1:\n3) arc[radius =- \n3, start angle = \n2, end angle = \n1]node[midway,{anchor=south east}] {$\theta_{2} \  $};;
+      		
+      		
+      		\def\mt{-25};%***************************************************
+ 		
+      		\draw[very thick, -Latex]({-9.1+\rg*cos(\mt)},{10+\rg*sin(\mt)},0) -- ({ (1-\LNwee)*(-9.1+\rg*cos(\mt))+\LNwee*(-9.1+(\rh*cos(\mt-\dD)))},{(1-\LNwee)*(10+\rg*sin(\mt))+\LNwee*(10+(\rh*sin(\mt-\dD)))},0)node[above,right] {};
+      		
+    		 \draw[-Latex,black] let
+   		\p0 = ({-9.1+\rg*cos(\mt)},{10+\rg*sin(\mt)},0) ,
+    		\p1 =   ({-9.1+\rg*cos(\mt+\dD)},{10+1.19*\rg*sin(\mt+\dD)},0) ,
+    		\p2 =({-9.1+\rh*cos(\mt-\dD)},{10+\rh*sin(\mt-\dD)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in ({-9.1+\rg*cos(\mt)},{10+\rg*sin(\mt)},0) +(\n1:\n3) arc[radius =- \n3, start angle = \n2, end angle = \n1]node[midway,above,left] {$\theta_{2} \ \ $};;     		
+  		
+  		
+  		\def\mbt{-49};
+  		
+    		 \draw[-Latex,black] let
+   		\p0 = ({-9.1+\rg*cos(\mbt)},{10+\rg*sin(\mbt)},0) ,
+    		\p1 =   ({-9.1+\rg*cos(\mbt+\dD)},{10+1.1*\rg*sin(\mbt+\dD)},0) ,
+    		\p2 =({-9.1+\rh*cos(\mbt-\dD)},{10+\rh*sin(\mbt-\dD)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.9cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in ({-9.1+\rg*cos(\mbt)},{10+\rg*sin(\mbt)},0) +(\n1:\n3) arc[radius =- \n3, start angle = \n2, end angle = \n1]node[midway,above] {$\theta_{2} \ \ $};;
+
+ 		
+ 		
+ 		%***************************                           third geodesics                 *********************************
+ 		
+		\addplot3 [thin,decoration={markings, mark = at position 0.5 with {\arrow[scale = 2.5]{latex[reversed]}}},postaction ={decorate},samples=40,	samples y=0,	domain=0-35:70.0+45]({\rc*cos(x)},{\rc*sin(x)},{0})node[below,left] {$\gamma_{3}$};
+		
+		\def\w{-15};
+		\draw[very thick, -Latex]({\rc*cos(\w)},{\rc*sin(\w)},0) -- ({ (1-\LTree)*(\rc*cos(\w))+\LTree*((\rd*cos(\w+\dT)))},{(1-\LTree)*(\rc*sin(\w))+\LTree*(\rd*sin(\w+\dT))},0);
+      		 \draw[-Latex,black] let
+   		 \p0 = ({\rc*cos(\w)},{\rc*sin(\w)},0),
+    		\p1 =  ({\rc*cos(\w+\dT)},{\rc*sin(\w+\dT)},0),
+    		\p2 =  ({\rd*cos(\w+\dT)},{\rd*sin(\w+\dT)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.2cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\w)},{\rc*sin(\w)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below ] {$\ \ \theta_{3}$};
+		
+		\def \Tf{10}
+		
+		\draw[very thick, -Latex]({\rc*cos(\Tf)},{\rc*sin(\Tf)},0) -- ({ (1-\LTree)*(\rc*cos(\Tf))+\LTree*((\rd*cos(\Tf+\dT)))},{(1-\LTree)*(\rc*sin(\Tf))+\LTree*(\rd*sin(\Tf+\dT))},0);
+      		\draw[-Latex,black] let
+   		 \p0 = ({\rc*cos(\Tf)},{\rc*sin(\Tf)},0),
+    		\p1 =  ({\rc*cos(\Tf+\dT)},{\rc*sin(\Tf+\dT)},0),
+    		\p2 =  ({\rd*cos(\Tf+\dT)},{\rd*sin(\Tf+\dT)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\Tf)},{\rc*sin(\Tf)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$\ \ \theta_{3}$};;
+  
+		\def \Ts{35}
+      		\draw[very thick, -Latex]({\rc*cos(\Ts)},{\rc*sin(\Ts)},0) -- ({ (1-\LTree)*(\rc*cos(\Ts))+\LTree*((\rd*cos(\Ts+\dT)))},{(1-\LTree)*(\rc*sin(\Ts))+\LTree*(\rd*sin(\Ts+\dT))},0);
+      		 \draw[-Latex,black] let
+   		 \p0 = ({\rc*cos(\Ts)},{\rc*sin(\Ts)},0),
+    		\p1 =  ({\rc*cos(\Ts+\dT)},{\rc*sin(\Ts+\dT)},0),
+    		\p2 =  ({\rd*cos(\Ts+\dT)},{\rd*sin(\Ts+\dT)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\Ts)},{\rc*sin(\Ts)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right] {$\ \ \theta_{3}$};
+      		
+		\def \Tt{70}
+      		\draw[very thick, -Latex]({\rc*cos(\Tt)},{\rc*sin(\Tt)},0) -- ({ (1-\LTree)*(\rc*cos(\Tt))+\LTree*((\rd*cos(\Tt+\dT)))},{(1-\LTree)*(\rc*sin(\Tt))+\LTree*(\rd*sin(\Tt+\dT))},0);
+      		 \draw[-Latex,black] let
+   		 \p0 = ({\rc*cos(\Tt)},{\rc*sin(\Tt)},0),
+    		\p1 =  ({\rc*cos(\Tt+\dT)},{\rc*sin(\Tt+\dT)},0),
+    		\p2 =  ({\rd*cos(\Tt+\dT)},{\rd*sin(\Tt+\dT)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\Tt)},{\rc*sin(\Tt)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right] {$  \ \ \theta_{3}$};
+  		
+  		
+  		
+  		\def\ww{88};
+		\draw[very thick, -Latex]({\rc*cos(\ww)},{\rc*sin(\ww)},0) -- ({ (1-\LTree)*(\rc*cos(\ww))+\LTree*((\rd*cos(\ww+\dT)))},{(1-\LTree)*(\rc*sin(\ww))+\LTree*(\rd*sin(\ww+\dT))},0);
+      		 \draw[-Latex,black] let
+   		 \p0 = ({\rc*cos(\ww)},{\rc*sin(\ww)},0),
+    		\p1 =  ({\rc*cos(\ww+\dT)},{\rc*sin(\ww+\dT)},0),
+    		\p2 =  ({\rd*cos(\ww+\dT)},{\rd*sin(\ww+\dT)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\ww)},{\rc*sin(\ww)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right ] {$\ \ \theta_{3}$};
+   
+  				
+  		%************************************************ fourth geodesics **************************************
+  				
+		\addplot3 [thin,decoration={markings, mark = at position 0.45 with {\arrow[scale = 2.5]{latex[reversed]}}},postaction ={decorate},samples=40,	samples y=0,	domain=270.0+20:270.0-30]({5-\re*cos(x)},{-17-\re*sin(x)},{0})node[below,left]  {$ \gamma_{4} \ $};
+		
+		\def\q{109.5};
+
+    		 \draw[-Latex,black] let
+   		\p0 = ({5-\re*cos(\q)},{-17+\re*sin(\q)},0) ,
+    		\p1 =   ({5-\re*cos(\q+\dV)},{-17+\re*sin(\q+\dV)},0) ,
+    		\p2 =({5-\rf*cos(\q-\dV)},{-17+\rf*sin(\q-\dV)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.6cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in ({5-\re*cos(\q)},{-17+\re*sin(\q)},0) +(\n1:\n3) arc[radius =- \n3, start angle = \n2, end angle = \n1]node[midway,left,below] {$\ \ \ \theta_{4} $};;
+      		
+      		
+      		\def\m{95};%***************************************************
+		
+      		\draw[very thick, -Latex]({5-\re*cos(\m)},{-17+\re*sin(\m)},0) -- ({1*(5-\rf*cos(\m-\dV))},{1*(-17+\rf*sin(\m-\dV))},0)node[right] {};;
+
+    		 \draw[-Latex,black] let
+   		\p0 = ({5-\re*cos(\m)},{-17+\re*sin(\m)},0) ,
+    		\p1 =   ({5-\re*cos(\m+\dV)},{-17+\re*sin(\m+\dV)},0) ,
+    		\p2 =({5-\rf*cos(\m-\dV)},{-17+\rf*sin(\m-\dV)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.4cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in ({5-\re*cos(\m)},{-17+\re*sin(\m)},0) +(\n1:\n3) arc[radius =- \n3, start angle = \n2, end angle = \n1]node[midway,below] {$\theta_{4} \ \ \ $};;
+      		
+  		\def\mb{81};
+		
+      		\draw[very thick, -Latex]({5-\re*cos(\mb)},{-17+\re*sin(\mb)},0) -- ({5-\rf*cos(\mb-\dV)},{-17+\rf*sin(\mb-\dV)},0)node[{anchor=south west}] {$\overrightarrow{u_{t}}$};;
+
+    		 \draw[-Latex,black] let
+   		\p0 = ({5-\re*cos(\mb)},{-17+\re*sin(\mb)},0) ,
+    		\p1 =   ({5-\re*cos(\mb+\dV)},{-17+\re*sin(\mb+\dV)},0) ,
+    		\p2 =({5-\rf*cos(\mb-\dV)},{-17+\rf*sin(\mb-\dV)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.8cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in ({5-\re*cos(\mb)},{-17+\re*sin(\mb)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below,left] {$\theta_{4} \ \ \ \ $};;
+  		
+  %********************* angle between begin and end vector
+
+    		      	\draw[Latex-Latex,black,  thick] let
+   		 \p0 = ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0),
+    		\p1 =   ({5+\re*cos(\mb+\dV)},{-17+1.1*\re*sin(\mb+\dV)},0) ,
+    		\p2 =  ({-4.5+\rb*cos(\f+\da)},{-4.5+\rb*sin(\f+\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.4cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below,right] {$\delta\theta$};;
+
+%********************* angles between the 4 geodesic paths
+				% ***************************** 1 and 4 *************************
+					
+	  	\draw[-Latex,dashed,black,  thick] let
+   		 \p0 = ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0),
+    		\p1 =   ({5+\re*cos(\mb+\dV)},{-17+1.1*\re*sin(\mb+\dV)},0) ,
+    		\p2 =  ({-4.5+\ra*cos(\f-\da)},{-4.5+\ra*sin(\f-\da)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.0cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below,right] {$\ \ \Psi_{4\rightarrow 1}$};;
+				
+				% ***************************** 1 and 2 *************************
+					
+	  	\draw[-Latex,dashed,black,  thick] let
+   		\p0 = ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0),
+    		\p1 =   ( {-4.5+\ra*cos(\fff+\da)},{-4.5+\ra*sin(\fff+\da)},0),
+    		\p2 =({-9.1+\rg*cos(\mbt-\dD)},{10+1.19*\rg*sin(\mbt-\dD)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.2cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right]{$\  \ \Psi_{1\rightarrow 2}$};		
+				
+				% ***************************** 2 and 3  *************************
+		 \draw[-Latex,dashed,black,  thick] let
+   		 \p0 = ({\rc*cos(\ww)},{\rc*sin(\ww)},0),
+    		\p1 =   ({-9.1+1.1*\rg*cos(\qt+\dD)},{10+1.1*\rg*sin(\qt+\dD)},0) ,
+    		\p2 =  ({\rc*cos(\ww+\dT)},{\rc*sin(\ww+\dT)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.8cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\ww)},{\rc*sin(\ww)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right ] {$\  \ \Psi_{2\rightarrow 3}$};	
+			
+			
+						% ***************************** 3 and 4  *************************
+		 \draw[-Latex,dashed,black,  thick] let
+   		 \p0 = ({\rc*cos(\w)},{\rc*sin(\w)},0),
+    		\p1 =  ({\rc*cos(\w+\dT)},{1.04*\rc*sin(\w+\dT)},0),
+    		\p2 =({5-\rf*cos(\q-\dV)},{-17+\rf*sin(\q-\dV)},0),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {-0.8cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({\rc*cos(\w)},{\rc*sin(\w)},0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,above, ] {$ \Psi_{3\rightarrow 4} \ \ \ \ \ $};	
+			
+\end{axis}
+\end{tikzpicture}\\

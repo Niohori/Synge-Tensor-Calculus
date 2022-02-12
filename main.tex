@@ -57,6 +57,8 @@
 \newcommand\maal{\boldsymbol{\times}}
 \newcommand\spatie{\quad\quad\quad\quad}
 \newcommand\RAr{\quad\Rightarrow\quad}
+%\newcommand{\myabsdv}[3]{{\frac{\delta^2 \ensuremath{{#1}}}{{\delta %%\ensuremath{{#2}}}{\delta\ensuremath{{#3}}}}}}
+\newcommand\myabsdv[3][1]{{\frac{{\delta^{2}}{#1}}{\delta {#2} \delta {#3}}}}
 
 %**************************** layout setings *******************************
 \counterwithin*{equation}{chapter}
@@ -111,8 +113,8 @@ m n\\
 
 \tableofcontents
 \listoffigures
-\include{chapter1}
-\include{chapter2}
+%\include{chapter1}
+%\include{chapter2}
 \include{chapter3}
 %\include{chapter4}
 %\include{chapter5}

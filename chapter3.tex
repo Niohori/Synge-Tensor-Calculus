@@ -108,8 +108,36 @@ Putting it all together the number of independent components of $R_{rsmn}$ becom
 $$\blacklozenge$$
 \newpage
 
+\section{p87 - Exercise}
+\begin{tcolorbox}
+Using the fact that the absolute derivative of the fundamental tensor vanishes, prove that 3.107 may be written $$ \frac{\delta^2 T_r}{\delta u \delta v} - \frac{\delta^2 T_r}{\delta v \delta u} = R_{rpmn}T^p\partial_u x^m \partial_v x^n $$
+\end{tcolorbox}
+By 2.519 and 2.619 we have
+\begin{align}
+\fdv{T_r}{u} &= \fdv{(a_{rk}T^k)}{u} 
+ = \underbrace{\fdv{(a_{rk})}{u}}_{=0}T^k+a_{rk}\fdv{(T^k)}{u}\\
+ &= a_{rk}T^k_{|n} \partial_u x^n\\
+ \Rightarrow\quad \frac{\delta^2 T_r}{\delta u \delta v} &= \frac{\delta (a_{rk}T^k_{|n} \partial_u x^n)}{\delta v}\\
+  & = \underbrace{\frac{\delta (a_{rk})}{\delta v}}_{=0}T^k_{|n} \partial_u x^n+a_{rk}\frac{\delta (T^k_{|n} )}{\delta v}\partial_u x^n+a_{rk}T^k_{|n} \delta \frac{(\partial_u x^n)}{\delta v}\\
+   &= a_{rk}\underbrace{\frac{\delta (T^k_{|n} )}{\delta v}}_{=T^k_{|nm}\partial_v x^m} \partial_u x^n+a_{rk}T^k_{|n} \underbrace{\delta \frac{(\partial_u x^n)}{\delta v}}_{=\left(\partial_u x^n \right)_{|m}\partial_v x^m}\\
+   &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n+a_{rk}T^k_{|n} \underbrace{\left(\partial_u x^n \right)_{|m}}_{ = \partial_m \left(\partial_u x^n \right) + \Gamma^n_{pm}\partial_u x^p}\partial_v x^m\\
+   &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n+a_{rk}T^k_{|n} \left( \underbrace{\partial_m \left(\partial_u x^n \right)}_{=\partial_u \left( \delta_m^n \right)=0} + \Gamma^n_{pm}\partial_u x^p \right)\partial_v x^m\\
+   &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n+a_{rk}T^k_{|n} \Gamma^n_{pm}\partial_u x^p \partial_v x^m
+\end{align}
+Hence we have 
+\begin{align}
+\frac{\delta^2 T_r}{\delta v \delta u} &=a_{rk}T^k_{|nm}\partial_u x^m \partial_v x^n+a_{rk}T^k_{|n} \Gamma^n_{pm}\partial_v x^p \partial_u x^m\\
+&=a_{rk}T^k_{|mn}\partial_u x^n \partial_v x^m+a_{rk}T^k_{|n} \Gamma^n_{mp}\partial_v x^m \partial_u x^p\\
+\Rightarrow\quad \frac{\delta^2 T_r}{\delta u \delta v} - \frac{\delta^2 T_r}{\delta v \delta u} &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n - a_{rk}T^k_{|mn}\partial_u x^n \partial_v x^m\\
+&= \left(a_{rk}T^k_{|nm} - a_{rk}T^k_{|mn}\right)\partial_u x^n \partial_v x^m\\
+&= \left(\underbrace{T_{r|nm} - T_{r|mn}}_{= -R_{rpmn}T^p}\right)\partial_u x^n \partial_v x^m\\
+&= -\underbrace{R_{rpmn}}_{=-R_{rpnm}} T^p\partial_u x^n \partial_v x^m = 
+R_{rpmn} T^p\partial_u x^m \partial_v x^n
+\end{align}
+$$\blacklozenge$$
+\newpage
 
-\section{p82 - Exercise}
+\section{p91 - Exercise}
 \begin{tcolorbox}
 Would the study of geodesic deviation enable us to distinguish between a plane and a right circular cylinder?
 \end{tcolorbox}
@@ -117,7 +145,7 @@ For geodesic lines we have
 \begin{align}
 \dv[2]{x^r}{u} + \Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0\\
 \end{align}
-with the fundamental tensor for a cylindar (see exercise page 27)
+with the fundamental tensor for a cylinder (see exercise page 27)
 \begin{align} 
 (a_{mn}) = \begin{pmatrix}
  1& 0 \\
@@ -154,11 +182,11 @@ and thus we get
 %\centering
 \vspace{0pt}
 %\includegraphics[scale=.5]{p85_ex1.png}
-\input{D:/MathLatex/images/fig_p82_none_a.tex}
+\input{D:/MathLatex/images/fig_p91_153_a.tex}
 \end{minipage}\hfill
 \caption{Geodesics on a cylinder}
 \end{figure}
-The above figure illustrates what an observer sees when walking along geodesics on the cylinder.  He only can measure the distance $s^{'}$ and the displacement along $z$ and by (10) can only draw a chart like the one seen on the right of the cylinder. A "flatlander" would see the same chart when walking along geodesics in his plane.\\\\
+The above figure illustrates what an observer living in the manifold $\Omega$ sees when walking along geodesics on the cylinder.  He only can measure the distance $s^{'}$ and the displacement along $z$ and by (10) can only draw a chart like the one seen on the right of the cylinder. A "flatlander" living in the mapped manifold $M(\Omega)$ would see the same chart when walking along geodesics in his plane.\\\\
 \textbf{Conclusion:} No, studying the geodesic deviation on a right circular cylinder does not enable us to say on which surface we are.
 $$\blacklozenge$$
 \newpage
@@ -212,3 +240,61 @@ $$\blacklozenge$$
 \newpage
 
 \end{comment}
+
+\section{p96 - Clarification}
+\begin{tcolorbox}
+... But under parallel propagation along a geodesic, a vector makes a constant angle with the geodesic; following the vector round the small quadrilateral, it is easy to see that the angle through which the vector has turned on completion of the circuit is $E$, the excess of the angle-sum of four right angles...
+\end{tcolorbox}
+\begin{figure}[h]
+\input{D:/MathLatex/images/fig_p96_3415_a.tex}
+\caption{Parallel transportation along a  closed path}
+\end{figure}
+Consider 4 geodesics $\gamma_{1}, \gamma_{2},\gamma_{3},\gamma_{4}$ close to each other so that they form a small quadrilateral. At each intersection they form an angle $\Psi_{i\rightarrow i+1}$. A vector $\overrightarrow{u_{0}}$ is transported parallely along the path starting at the intersection $S$ of $\gamma_{1},\gamma_{4}$ and ends as vector $\overrightarrow{u_{t}}$ at the same point $S$. In general $\overrightarrow{u_{0}}\ne \overrightarrow{u_{t}}$ and will differ by a small angle $\delta\theta$. Let's investigate the relationship between $\delta\theta$ and the $\Psi_{i\rightarrow i+1}$.\\
+\begin{figure}[h]
+\input{D:/MathLatex/images/fig_p96_3415_b.tex}
+\caption{Relationship between parallel transportation along a closed path and the excess of the angle-sum over four right angles of a quadilateral.}
+\end{figure}\\
+Let $\xi_{i}$ and $\xi^{o}_{i} \ (i=1,2,3,4)$ be respectively, tangent unit vectors to the  geodesics at the beginning and at the end of the intersections of the geodesics. Be $\widehat{\xi}_{i}$ and $\widehat{\xi}^{o}_{i} \ (i=1,2,3,4)$ the angles of these vectors relative to an arbitrary reference vector and Be $\widehat{\tau}_{i}$ and $\widehat{\tau}^{o}_{i} \ (i=0,2,3,4)$ the angles of the transported vector (relative to this arbitrary reference vector) at the intersections of the geodesics.
+Then,
+\begin{align}
+\left \{ \begin{array}{ll}
+\widehat{\tau}_{0} = \widehat{\xi}_{1}+\theta_{1}&\\
+\widehat{\tau}_{1} = \widehat{\xi}^{o}_{1}+\theta_{1}&\widehat{\tau}_{1} = \widehat{\xi}_{2}+\theta_{2}\\
+\widehat{\tau}_{2} = \widehat{\xi}^{o}_{2}+\theta_{1}&\widehat{\tau}_{2} = \widehat{\xi}_{3}+\theta_{3}\\
+\widehat{\tau}_{3} = \widehat{\xi}^{o}_{3}+\theta_{3}&\widehat{\tau}_{3} = \widehat{\xi}_{4}+\theta_{4}\\
+\widehat{\tau}_{4} = \widehat{\xi}^{o}_{4}+\theta_{4}&\\
+\end{array} \right.
+\end{align}
+We have also
+\begin{align}
+\left \{ \begin{array}{l}
+\widehat{\xi}_{2}  - \widehat{\xi}^{o}_{1} = \Psi_{1 \rightarrow 2}\\
+\widehat{\xi}_{3}  - \widehat{\xi}^{o}_{2} = \Psi_{2 \rightarrow 3}\\
+\widehat{\xi}_{4}  - \widehat{\xi}^{o}_{3} = \Psi_{3 \rightarrow 4}\\
+\widehat{\xi}_{1}  - \widehat{\xi}^{o}_{4} = \Psi_{4 \rightarrow 1}\\
+\widehat{\tau}_{4}-\widehat{\tau}_{0} = \delta \theta\\ 
+\end{array} \right.
+\end{align}
+Combining (1) and (2)
+\begin{align}
+\left \{ \begin{array}{l}
+\Psi_{1 \rightarrow 2} = \theta_{1}-\theta_{2}\\
+\Psi_{2 \rightarrow 3}= \theta_{2}-\theta_{3}\\
+\Psi_{3 \rightarrow 4}= \theta_{3}-\theta_{4}\\
+\Psi_{4 \rightarrow 1}= \theta_{4}-\theta_{1}- \delta \theta\\
+\end{array} \right.
+\end{align}
+and so 
+\begin{align}
+\delta \theta = -(\Psi_{1 \rightarrow 2}+\Psi_{2 \rightarrow 3}+\Psi_{3 \rightarrow 4}+\Psi_{4 \rightarrow 1})
+\end{align}\\
+\begin{figure}[h]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p96_3415_c.tex}}
+	\qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p96_3415_d.tex}}
+\caption{Relationship between parallel transportation along a closed path and the excess of the angle-sum over four right angles of a quadrilateral.}
+\end{figure}
+
+$$\blacklozenge$$
+\newpage
