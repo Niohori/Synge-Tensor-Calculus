@@ -13,7 +13,7 @@
 \pgfplotsset{every axis/.append style={
 		%view={-30*(0*1)}{-30*(-3)},
 		%view={-90}{-30*0},
-		scale=1.1,
+		scale=1.1*1,
 		axis lines=center,
 		%axis on top,
 		%xlabel={$y$},
@@ -92,7 +92,8 @@
     		\n3 = {0.65cm},
     		\n4 = {(\n1 + \n2) / 2}
   		in ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)}) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right]{$\Psi_{1\rightarrow 2}$};		
-				
+			
+			
 				% ***************************** 2 and 3  *************************
 		 \draw[-Latex,black,  thin] let
    		 \p0 = ({\rc*cos(\ww)},{\rc*sin(\ww)}),
@@ -138,8 +139,26 @@
     		\n3 = {1.7cm},
     		\n4 = {(\n1 + \n2) / 2}
   		in({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)}) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,right ] {$\nu_{2}$};	
-		
-  		
-  		
+
+\draw[Latex-,,black,  thin] let
+   		\p0 = ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)}),
+    		\p1 =   ({\rc*cos(\ww)},{\rc*sin(\ww)}),
+    		\p2 =({-9.1+\rg*cos(\mbt-\dD)},{10+1.19*\rg*sin(\mbt-\dD)}),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.65cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)}) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,{anchor=south east}]{$\epsilon^{+}$};		
+			
+\draw[Latex-,black,  thin] let
+   		\p0 = ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)}),
+    		\p1 =   ( {-4.5+\ra*cos(\fff+\da)},{-4.5+\ra*sin(\fff+\da)}),
+    		\p2 =({-4.5+\ra*cos(\f)},{-4.5+\ra*sin(\f)}),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.65cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in ({-4.5+\ra*cos(\fff)},{-4.5+\ra*sin(\fff)}) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,{anchor=north east}]{$\epsilon^{-}$};	
+			
 \end{axis}
 \end{tikzpicture}

@@ -288,13 +288,64 @@ and so
 \begin{align}
 \delta \theta = -(\Psi_{1 \rightarrow 2}+\Psi_{2 \rightarrow 3}+\Psi_{3 \rightarrow 4}+\Psi_{4 \rightarrow 1})
 \end{align}\\
+Note that these relationships are valid on the (curved) $V_{2}$ manifold. In order to go further we map the quadrilateral, on the manifold, on it's tangent plane (see fig.1.6 a hereunder) - supposing that the quadrilateral is infinitesimally small and that we can find a conformal map from $\gamma$ to $T(\gamma)$.
 \begin{figure}[h]%
     \centering
     \subfloat[]{\input{D:/MathLatex/images/fig_p96_3415_c.tex}}
 	\qquad
     \subfloat[]{\input{D:/MathLatex/images/fig_p96_3415_d.tex}}
 \caption{Relationship between parallel transportation along a closed path and the excess of the angle-sum over four right angles of a quadrilateral.}
-\end{figure}
+\end{figure}\\
+\\ Let's look at the point $p_2$ on $\partial \Omega$. We have $\nu_2 = \epsilon^{-}+\Psi_{1 \rightarrow 2} +\epsilon^{+}= \Psi_{1 \rightarrow 2}+\epsilon$. In general,
+\begin{align}
+\sum_{i=1}^{4} \nu_i &= 2\pi \\
+\underbrace{\sum_{i=1}^{4} \Psi_{i \rightarrow i+1}}_{= - \delta \theta} +\sum_{i=1}^{4} \epsilon_{i} &= \sum_{i=1}^{4} \frac{\pi}{2} \\
+\Rightarrow \quad - \delta \theta &= \sum_{i=1}^{4}(\frac{\pi}{2} - \epsilon _{i})
+\end{align}
+Calling $\frac{\pi}{2} - \epsilon _{i}$ the excess, we get the assertion made.
 
+$$\blacklozenge$$
+\newpage
+
+
+\section{p102 - Clarification}
+\begin{tcolorbox}
+Still using the same notation and Fig. 7, we have at B the three vectors $(T^r)_1,\ (T^r)_2,\ Y_r$ ...  it follows that $$\textbf{3.516.}\quad \quad (\Delta T^r)_A(Y_r)_{A'2}= - (\Delta T^r)_B(Y_r)_B$$
+\end{tcolorbox}
+First we note that for an invariant "propagated parallely" along a curve we have $$\fdv{(T^r Y_r)}{u} = \fdv{T^r} {u}Y_r+T^r\fdv{Y_r}{u}=0$$
+\begin{figure}[h]
+\input{D:/MathLatex/images/fig_p102_3516_a.tex}
+\caption{Parallel transportation along a  closed path}
+\end{figure}
+In Fig. 1.7 we use the following convention:\\
+- a one black arrowed line means a forward propagation from $A$ to $B$ along $C_1$\\
+- a double black arrowed line means a forward propagation from $A$ to $B$ along $C_2$\\
+- a double open arrowed line means a backward propagation from $B$ to $A$ along $C_2$\\\\
+In order to find the angular displacement of the vector $(T^r)_0$ when propagated parallely from $A$ to $B$ and back to $A$ along different paths, we follow  the dash dotted line in Fig. 1.7. Following that path, we end with the vector $(T^r)_0+ (\Delta T^r)_{A})$ in $A$ and have the vector $(T^r)_1$ as intermediate forward propagation from $A$ to $B$ along $C_1$, that vector being transported backwards to $A$ along $C_2$.\\\\
+Note that for a vector the forward and backward propagation along the same curve is a null operation:$$(T^r)_0 \underset{\underset{C_2}{A\rightarrow B}}{\rightarrow} (T^r)_2 \underset{\underset{C_2}{B\rightarrow A}}{\rightarrow} (T^r)_0$$
+Also, we have in Fig.1.7.
+$$(T^r)_0 \underset{\underset{C_1}{A\rightarrow B}}{\rightarrow} (T^r)_1 \underset{\underset{C_2}{B\rightarrow A}}{\rightarrow} (T^r)_0+ (\Delta T^r)_{A}$$
+$$(Y_r)_{B} \underset{\underset{C_2}{B\rightarrow A}}{\rightarrow} (Y_r)_{A,2}$$
+At $A$ we form the following invariants
+\begin{align}
+\left \{ \begin{array}{l}
+ ((T^r)_0+ (\Delta T^r)_{A})\ (Y_r)_{A,2}\\
+ (T^r)_0 \ (Y_r)_{A,2}
+\end{array} \right.
+\end{align}\\
+and at $B$
+\begin{align}
+\left \{ \begin{array}{l}
+ (T^r)_1\ (Y_r)_{B}\\
+ (T^r)_2 \ (Y_r)_{B} = ((T^r)_1+(\Delta T^r)_B )\ (Y_r)_{B}
+\end{array} \right.
+\end{align}\\
+
+Due to the null effect of  parallel propagation on invariants, we  get
+\begin{align}
+ (T^r)_1\ (Y_r)_{B} &= ((T^r)_0+ (\Delta T^r)_{A})\ (Y_r)_{A,2}\\
+ ((T^r)_1+(\Delta T^r)_B )\ (Y_r)_{B}&=(T^r)_0 \ (Y_r)_{A,2}\\
+ \text{(3)-(4)}\quad \Rightarrow \quad -(\Delta T^r)_B )\ (Y_r)_{B}&=(\Delta T^r)_{A})\ (Y_r)_{A,2}
+\end{align}\\
 $$\blacklozenge$$
 \newpage
