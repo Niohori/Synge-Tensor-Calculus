@@ -1,0 +1,135 @@
+\pgfplotsset{every axis/.append style={
+		view={-30}{-30*1},
+		%view={-90}{-30*0},
+		scale=1,
+		axis lines=center,
+		axis on top,
+		%xlabel={$x$},
+		%ylabel={$y$},
+		%zlabel={$z$},
+               axis x line=none,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+                axis z line=middle,    % put the z axis in the middle
+               %axis line style={-stealth}, % arrows on the axis
+               %axis line style={draw=none}
+               %xaxis line style={draw=none}
+            }}
+ \begin{tikzpicture}[angle/.style={black,thick}]
+\tikzmath{\r=1.5;\h=5;\q=asin((\r/\h)); \p=-\q*1 ; \k= \r/\h;};
+\q, \h,\p, \k;
+    \pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+\begin{axis}
+		[
+		axis equal=true,
+		zmin=-\h*0,
+		zmax=\r*1.2,
+		]
+			
+		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
+		\addplot3 [surf,dashed,very thin,	mesh/interior colormap=
+		{bw}{color=(gray!10) color=(gray!5)},
+		colormap= {bw}{color=(black!10) color=(white!10)},
+		domain=115:115+180,
+		y domain=0:\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+		({\y*cos(\p)+1*\y*tan(\q)*sin(x)*sin(\p)},{1*y*tan(\q)*cos(x)},{-\y*sin(\p)+1*\y*tan(\q)*sin(x)*cos(\p)});
+		
+		
+		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
+		\addplot3 [surf,	dashed,thick,	mesh/interior colormap=
+		{bw}{color=(gray!1) color=(gray!5)},
+		colormap= {bw}{color=(black!1) color=(white!1)},
+		domain=-65:115,
+		y domain=0:\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+		({\y*cos(\p)+1*\y*tan(\q)*sin(x)*sin(\p)},{1*y*tan(\q)*cos(x)},{-\y*sin(\p)+1*\y*tan(\q)*sin(x)*cos(\p)});
+
+		%add a base circle to emphasize the cone shape
+		\addplot3 [black,thick,dotted,samples=40,	samples y=0,	domain=0.0:360,]({\h*cos(\p)+1*\h*tan(\q)*sin(x)*sin(\p)},{1*\h*tan(\q)*cos(x)},{-\h*sin(\p)+1*\h*tan(\q)*sin(x)*cos(\p)});
+		% add an arcsegment at 2/3 pf the cone
+		\addplot3 [black,decoration={markings, mark = at position 0.5 with {\arrow[scale = 1.5]{latex[reversed]}}},postaction ={decorate},samples=40,	samples y=0,	domain=-5.0:-90,]({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(x)*sin(\p)},{2*\h/3*tan(\q)*cos(x)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(x)*cos(\p)});%node[midway,right] {$x^1$};
+		
+ 		
+		%relevant points
+		\coordinate (O) at ({ 0},{0},{0});%origin
+		\coordinate (P) at ({ \h*1},{\h*0},{0});%point  P on the cone 
+
+		\coordinate (A) at ({ \h*cos(\p)},{\h*0},{\h*sin(-\p)});
+		\coordinate (Q) at ({1.* \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+
+		%\node[tdplot_main_coords,{anchor=south west},red] at (P){$o$};
+		%\draw[dashed,line width = 0.25mm] (O) --(P) ;%node[midway,right] {$x^1$};
+		
+		%\draw[dashdotted,line width = 0.25mm] (Q) --(A) ;%node[midway,right] {$x^1$};
+		%draw points on cone
+		\coordinate (W) at ({ \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		\coordinate (R) at ({2/3* \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		\coordinate (S) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(-5)*sin(\p)},{2*\h/3*tan(\q)*cos(-5)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(-5)*cos(\p)});
+		\coordinate (T) at ({2*\h/3*cos(\p)+0*\h/3*tan(\q)*sin(-5)*sin(\p)},{0},{-2*\h/3*sin(\p)+0*\h/3*tan(\q)*sin(-5)*cos(\p)});
+		\draw[fill=black](A) circle(0.5pt);%node[{anchor=north west}] {$A$};
+		\draw[fill=black](Q) circle(0.5pt);%node[{anchor=north west}]{$A$};;
+		\coordinate (Y) at ({\h*cos(\p)+\h*tan(\q)*sin(-5)*sin(\p)},{\h*tan(\q)*cos(-5)},{-\h*sin(\p)+\h*tan(\q)*sin(-5)*cos(\p)});
+		\draw[fill=black](Y) circle(0.5pt);%node[{anchor=south east}] {$Y$};
+		\draw[fill=black](W) circle(0.5pt);
+		\draw[fill=black](R) circle(0.5pt)node[{anchor=north }] {$P$};
+		\draw[-latex,dashed](O)--(R);
+		\draw[fill=black](S) circle(0.5pt)node[{anchor=south east}] {$P_t$};
+		\draw[fill=black](T) circle(0.5pt)node[{anchor=south west}] {};
+		
+		\coordinate (N) at ({1.14 *\h},{0},{0});
+		\coordinate (Nt) at ({0.84 *\h},{0},{0});
+		\draw[dotted,line width = 0.2mm] (O) --(Nt) ;
+		\draw[dashdotted,- latex,black,line width = 0.25mm] (Nt) --(N) ;
+		\coordinate (C) at ({1.2* \h*cos(\p)},{\h*0},{1.2*\h*sin(-\p)});
+		\coordinate (Ct) at ({0.79* \h*cos(\p)},{\h*0},{0.79*\h*sin(-\p)});
+		\draw[dotted,,line width = 0.2mm] (O) --(Ct) ;
+		\draw[dashdotted,black,- latex,line width = 0.25mm] (Ct) --(C) ;
+		
+		\draw[- latex,line width = 0.25mm] (O) --(S) ;
+		\draw[dashdotted,line width = 0.1mm] (T) --(R) ;
+		\draw[dashdotted,line width = 0.1mm] (T) --(S) ;
+
+
+
+		
+		%projection onthe xy-plane
+		%arcsegments of points P and R
+		\begin{scope}
+		\addplot3 [black,decoration={markings, mark = at position 0.5 with {\arrow[scale = 1.5]{latex}}},postaction ={decorate},samples=40,samples=40,	samples y=0,	domain=0:150,]
+			({2/3*\h/cos(\q)*cos(x*sin(\q))},{2/3*\h/cos(\q)*sin(x*sin(\q))},{0});%node[midway,right] {$theta$};
+		\end{scope}
+		%projections  R*, P* of points R,P
+		\coordinate (U) at ({2/3*\h/cos(\q)*cos(150*sin(\q))},{2/3*\h/cos(\q)*sin(150*sin(\q))},{0});
+		\coordinate (V) at ({\h/cos(\q)*cos(150*sin(\q))},{\h/cos(\q)*sin(150*sin(\q))},{0});
+		
+
+		%\draw[dashdotted,line width = 0.25mm] (O) --(U) ;
+		\draw[dashdotted,line width = 0.25mm] (O) --(V) ;
+		
+		%dots and labels of P* and R*
+ 		
+ 		\draw[fill=black](U)node[{anchor=north east}] {$P_t^{*}$};
+ 		\draw[- latex,line width = 0.25mm] (O) --(U) ;
+ 		%add labels of angles at a right place
+ 		 \coordinate (G) at({2/3*\h/cos(\q)*cos(90*sin(\q))},{2/3*\h/cos(\q)*sin(90*sin(\q))},{0});
+ 		\draw[](G) node[{anchor=north west}] {$\phi=\sqrt{k}\theta$};
+ 				
+		\draw[dashdotted,line width = 0.1mm] (Y) --(S) ;
+		\draw[dashdotted,line width = 0.1mm] (Y) --(A) ;
+		\draw[dashdotted,line width = 0.1mm] (W) --(A) ;
+ 		\draw[-Latex,black,thin] let
+   		\p0 = (A),
+    		\p1 =  (Y),
+    		\p2 =(W),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.5cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in (A) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$\theta$};;
+\end{axis}
+\end{tikzpicture}

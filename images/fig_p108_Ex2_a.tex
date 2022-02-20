@@ -1,0 +1,78 @@
+\pgfplotsset{every axis/.append style={
+		view={-30*1}{-20*1},
+		%view={-90}{-30*0},
+		scale=1.5,
+		axis lines=center,
+		axis on top,
+		%xlabel={$x$},
+		%ylabel={$y$},
+		%zlabel={$z$},
+		zmax=42,
+		%xmin=-6,
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+                axis z line=middle,    % put the z axis in the middle
+               %axis line style={-stealth}, % arrows on the axis
+               %axis line style={draw=none}
+            }}
+           
+\begin{tikzpicture}[angle/.style={black,thick},]
+\tikzmath{\r=2.5;\h=5;\q=atan((\r/\h)); \kei=sin(\q);\skei=sqrt(\kei);\pr=0.549306/1 ; \pp=1.61557/2.5;};
+\q, \h,\pr, \pp,\kei,\skei;
+    \pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+	\begin{axis}
+		[
+		axis equal=true,
+		]
+		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
+		\addplot3 [surf,	dashed,thick,	mesh/interior colormap=
+		{bw}{color=(gray!10) color=(gray!50)},
+		colormap= {bw}{color=(black!10) color=(white!10)},
+		domain=0:360,
+		y domain=0:8.6*\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+		({\y*tan(\q)*sin(x)},{\y*tan(\q)*cos(x)},{y});
+	
+		%add a base circle to emphasize the cone shape
+		\addplot3 [black,thick,dotted,samples=40,	samples y=0,	domain=0.0:360,]({8.6*\h*tan(\q)*sin(x)},{8.6*\h*tan(\q)*cos(x)},{8.6*\h});
+		\coordinate (O) at (0,0,0);
+		\coordinate (V) at ({32*\kei*cos(30)},{32*\kei*sin(30)},32);
+		\coordinate (Vp) at ({32*\kei*cos(30)},{32*\kei*sin(30)},0);
+		\coordinate (Vp2) at ({50*\kei*cos(30)},{50*\kei*sin(30)},0);
+		\coordinate (Vp3) at ({0},{0},32);
+		\coordinate (Vp4) at ({0},{32*tan(\q)},32);
+		\draw[-latex, thick] (O) -- (V);
+		\draw[dashed] (V) -- (Vp);
+		\draw[dashed] (Vp2) -- (O);
+		\draw[dashed] (Vp3) -- (V);
+		\draw[dashed] (Vp3) -- (Vp4);
+		 \draw[-Latex,black] let
+   		\p0 = (O) ,
+    		\p1 =   (0,5,0) ,
+    		\p2 =(Vp),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.7cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in (O) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$\theta \ \ $};; 
+
+ \draw[-Latex,black] let
+   		\p0 = (Vp3) ,
+    		\p1 =  (Vp4),
+    		\p2 =(V),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.4cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in (Vp3) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {};;  
+		%\draw[fill=black](O) circle(1.5pt)node[{anchor=northwest}] {$O$};  	
+		\draw[fill=black](V) circle(0.5pt)node[{anchor=south west}] {$\mathbf{\overrightarrow{u}}$};  			
+  		%add a  circle to emphasize the vector position
+		\addplot3 [black,dashed,samples=40,	samples y=0,	domain=0.0:360,]({32*tan(\q)*sin(x)},{32*tan(\q)*cos(x)},{32});
+		
+
+\end{axis}
+\end{tikzpicture}\\

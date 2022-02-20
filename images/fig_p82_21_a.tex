@@ -2,8 +2,8 @@
 \pgfplotsset{every axis/.append style={
 		view={-30}{-30*1},
 		%view={-90}{-30*0},
-		scale=3.5,
-		%axis lines=center,
+		scale=1.5,
+		axis lines=center,
 		axis on top,
 		%xlabel={$y$},
 		%ylabel={$x$},
@@ -26,18 +26,26 @@
 \begin{axis}
 		[
 		axis equal=true,
-		xmin=-\h*1.2,
-		xmax=\h*1.2,
-		ymin=-\h*0.2,
-		ymax=\h*1.2,
 		zmin=-\h*0,
-		zmax=\r*1.1,
+		zmax=\r*1.2,
 		]
 		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
-		\addplot3 [surf,	dashed,thick,	mesh/interior colormap=
-		{bw}{color=(gray!10) color=(gray!50)},
+		\addplot3 [surf,dashed,very thin,	mesh/interior colormap=
+		{bw}{color=(gray!10) color=(gray!5)},
 		colormap= {bw}{color=(black!10) color=(white!10)},
-		domain=0:360,
+		domain=115:115+180,
+		y domain=0:\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+		({\y*cos(\p)+1*\y*tan(\q)*sin(x)*sin(\p)},{1*y*tan(\q)*cos(x)},{-\y*sin(\p)+1*\y*tan(\q)*sin(x)*cos(\p)});
+		
+		
+		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
+		\addplot3 [surf,	dashed,thick,	mesh/interior colormap=
+		{bw}{color=(gray!1) color=(gray!5)},
+		colormap= {bw}{color=(black!1) color=(white!1)},
+		domain=-65:115,
 		y domain=0:\h,
 		samples=40,
 		samples y=10,
@@ -54,9 +62,9 @@
 		
 		% labels of arcsegments on the cone
 		 \coordinate (F) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(20)*sin(\p)},{2*\h/3*tan(\q)*cos(20)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(20)*cos(\p)});
- 		\draw[](F) node[{anchor=north west}] {$\Psi$};
+ 		\draw[](F) node[{anchor=north west}] {$\theta$};
  		\coordinate (F2) at ({\h*cos(\p)+\h*tan(\q)*sin(20)*sin(\p)},{\h*tan(\q)*cos(20)},{-\h*sin(\p)+\h*tan(\q)*sin(20)*cos(\p)});
- 		\draw[](F2) node[{anchor=north west}] {$\Psi$};
+ 		\draw[](F2) node[{anchor=north west}] {$\theta$};
  		
 		%relevant points
 		\coordinate (O) at ({ 0},{0},{0});%origin
@@ -115,8 +123,8 @@
 		\draw[fill=black](V) circle(1.5pt)node[{anchor=north east}] {$R^{*}$};
  		%add labels of angles at a right place
  		 \coordinate (G) at({2/3*\h/cos(\q)*cos(90*sin(\q))},{2/3*\h/cos(\q)*sin(90*sin(\q))},{0});
- 		\draw[](G) node[{anchor=south east}] {$\theta$};
+ 		\draw[](G) node[{anchor=south east}] {$\phi$};
  		 \coordinate (M)  at({\h/cos(\q)*cos(90*sin(\q))},{\h/cos(\q)*sin(90*sin(\q))},{0});
- 		\draw[](M) node[{anchor=north west}] {$\theta$};
+ 		\draw[](M) node[{anchor=north west}] {$\phi$};
 \end{axis}
 \end{tikzpicture}\\

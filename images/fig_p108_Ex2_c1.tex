@@ -1,0 +1,159 @@
+\pgfplotsset{every axis/.append style={
+		view={-30*1}{-30*1},
+		%view={-90}{-30*0},
+		scale=1,
+		axis lines=center,
+		%axis on top,
+		%xlabel={$x$},
+		%ylabel={$y$},
+		%zlabel={$z$},
+		zmax=3,
+		%xmin=-6,
+               axis x line=none,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+                axis z line=middle,    % put the z axis in the middle
+               %axis line style={-stealth}, % arrows on the axis
+               %axis line style={draw=none}
+            }}
+            
+
+
+            
+\begin{tikzpicture}[angle/.style={black,thick},]
+
+\tikzmath{\r=1.5;\h=5;\q=atan((\r/\h)); \p=-\q*1 ; \k= \r/\h;\j=9;\fc=1;\fq=2;\kei=sin(\q)*sin(\q);\skei=sqrt(\kei);
+\pr=3.1645595778098805 ; \pp=0.29342513168050477;\prr=0.8247815930272392 ; \ppp=2.9370624328712607;};
+\q, \h,\p, \j,\k, \fc, \fq,\pr, \pp,\prr, \ppp,\kei,\skei;
+
+    \pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+	\begin{axis}
+		[
+		axis equal=true,
+		]
+				
+		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
+		\addplot3 [surf,dashed,very thin,	mesh/interior colormap=
+		{bw}{color=(gray!10) color=(gray!5)},
+		colormap= {bw}{color=(black!10) color=(white!10)},
+		domain=115:115+180,
+		y domain=0:\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+		({\y*cos(\p)+1*\y*tan(\q)*sin(x)*sin(\p)},{1*y*tan(\q)*cos(x)},{-\y*sin(\p)+1*\y*tan(\q)*sin(x)*cos(\p)});
+		
+		
+		%draw the cylinder whiwh is tilted so that it 'rolls' on the x-y plane and oriented along the y-axis
+		\addplot3 [surf,	dashed,thick,	mesh/interior colormap=
+		{bw}{color=(gray!1) color=(gray!5)},
+		colormap= {bw}{color=(black!1) color=(white!1)},
+		domain=-65:115,
+		y domain=0:\h,
+		samples=40,
+		samples y=10,
+		z buffer=sort,]
+		({\y*cos(\p)+1*\y*tan(\q)*sin(x)*sin(\p)},{1*y*tan(\q)*cos(x)},{-\y*sin(\p)+1*\y*tan(\q)*sin(x)*cos(\p)});
+
+		%add a base circle to emphasize the cone shape
+		\addplot3 [black,dotted,samples=40,	samples y=0,	domain=0.0:360,]({\h*cos(\p)+1*\h*tan(\q)*sin(x)*sin(\p)},{1*\h*tan(\q)*cos(x)},{-\h*sin(\p)+1*\h*tan(\q)*sin(x)*cos(\p)});
+		
+		
+		
+		
+		% add an arcsegment at 2/3 pf the cone
+		\addplot3 [thin,decoration={markings, mark = at position 0.5 with {\arrow[scale = 1]{latex[reversed]}}},postaction ={decorate},samples=40,	samples y=0,	domain=0*5.0:5.0*0-\j*5]({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(x)*sin(\p)},{2*\h/3*tan(\q)*cos(x)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(x)*cos(\p)});%node[midway,right] {$x^1$};
+
+
+		% add the green geodesic  "transported vector"
+		\addplot3 [thick,decoration={markings, mark = at position 1 with {\arrow[scale = 1]{latex}}},postaction ={decorate},samples=40,	samples y=0,	domain=0*3.141596/180:60*3.141596/180]
+ 		({(\pp*cosh(\skei*x+\pr)*cos(\q))*cos(\p)+(\pp*cosh(\skei*x+\pr)*sin(deg(x))*sqrt(\kei))*sin(\p)},
+ 		{(\pp*cosh(\skei*x+\pr)*cos(deg(x))*sqrt(\kei))},
+		 {-(\pp*cosh(\skei*x+\pr)*cos(\q)) )*sin(\p)+(\pp*cosh(\skei*x+\pr)*sin(deg(x))*sqrt(\kei)) *cos(\p)});
+ 
+ 		% add the red geodesic  "starting vector"
+		\addplot3 [thick,decoration={markings, mark = at position 1 with {\arrow[scale = 1]{latex}}},postaction ={decorate},samples=40,	samples y=0,	domain=-45*3.141596/180:(60-45)*3.141596/180]
+ 		({(\ppp*cosh(\skei*x+\prr)*cos(\q))*cos(\p)+(\ppp*cosh(\skei*x+\prr)*sin(deg(x))*sqrt(\kei))*sin(\p)},
+ 		{(\ppp*cosh(\skei*x+\prr)*cos(deg(x))*sqrt(\kei))},
+ 		{-(\ppp*cosh(\skei*x+\prr)*cos(\q)) )*sin(\p)+(\ppp*cosh(\skei*x+\prr)*sin(deg(x))*sqrt(\kei)) *cos(\p)});
+ 
+
+		\coordinate (O) at ({ 0},{0},{0});%origin
+		\coordinate (N) at ({1.10 *\h},{0},{0});
+		\coordinate (Nt) at ({0.85 *\h},{0},{0});
+		\draw[dotted,,line width = 0.1mm] (O) --(Nt) ;
+		\draw[dashdotted,- latex,line width = 0.25mm] (Nt) --(N) ;
+		\coordinate (base) at ({\h*cos(\p)},{\r},{-\h*sin(\p)+0*\h*tan(\q)*sin(5)*cos(\p)});
+		\draw[fill=black](base) circle(0.5pt);
+		\draw[dashdotted] (O) --(base) ;%node[midway,right] {$x^1$};
+		
+		
+		% labels of arcsegments on the cone
+		 \coordinate (F) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(5)*sin(\p)},{2*\h/3*tan(\q)*cos(5)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(5)*cos(\p)});
+ 		\coordinate (F2) at ({\h*cos(\p)+\h*tan(\q)*sin(20)*sin(\p)},{\h*tan(\q)*cos(20)},{-\h*sin(\p)+\h*tan(\q)*sin(20)*cos(\p)});
+ 
+ 		
+		%relevant points
+		
+		\coordinate (P) at ({ \h*1},{\h*0},{0});%point  P on the cone 
+		\coordinate (A) at ({1.* \h*cos(\p)},{\h*0},{1.*\h*sin(-\p)});
+		\coordinate (Q) at ({1.* \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		%draw points on cone
+		\coordinate (W) at ({ \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		\coordinate (R) at ({2/3* \h/cos(\p)},{\h*0},{0.*\h*sin(-\p)});
+		
+		\coordinate (T) at ({2*\h/3*cos(\p)+0*\h/3*tan(\q)*sin(60)*sin(\p)},{0},{-2*\h/3*sin(\p)+0*\h/3*tan(\q)*sin(60)*cos(\p)});
+		\draw[fill=black](A) circle(0.5pt);%node[{anchor=north west}] {$A$};
+		\draw[fill=black](Q) circle(0.5pt);%node[{anchor=north west}]{$A$};;
+		
+		
+		%***************************  starting vector **************************
+		%basepoint of starting vector
+		\coordinate (St) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(5.0*0-\j*5)*sin(\p)},{2*\h/3*tan(\q)*cos(5.0*0-\j*5)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(5.0*0-\j*5)*cos(\p)});
+		\draw[fill=white](St) circle(0.5pt)node[{anchor=north east}] {};
+		 %endpoint of starting vector
+		\coordinate (TVec) at ({(\ppp*cosh(\skei*((60-45)*3.141596/180)+\prr)*cos(\q))*cos(\p)+(\ppp*cosh(\skei*((60-45)*3.141596/180)+\prr)*sin(deg((60-45)*3.141596/180))*sqrt(\kei))*sin(\p)},
+ 		{(\ppp*cosh(\skei*((60-45)*3.141596/180)+\prr)*cos(deg((60-45)*3.141596/180))*sqrt(\kei))},
+		 {-(\ppp*cosh(\skei*((60-45)*3.141596/180)+\prr)*cos(\q)) )*sin(\p)+(\ppp*cosh(\skei*((60-45)*3.141596/180)+\prr)*sin(deg((60-45)*3.141596/180))*sqrt(\kei)) *cos(\p)});
+ 		\draw[fill=white](TVec) node[{anchor=west}] {$P$};;
+ 		
+		%**************************** transported vector  (45°) ***********************
+		%basepoint of  transported vector
+		\coordinate (S) at ({2*\h/3*cos(\p)+2*\h/3*tan(\q)*sin(5*0)*sin(\p)},{2*\h/3*tan(\q)*cos(5*0)},{-2*\h/3*sin(\p)+2*\h/3*tan(\q)*sin(5*0)*cos(\p)});
+		\draw[fill=black](S) circle(0.5pt)node[{anchor=south east}] {};
+		%endpoint of transported vector
+		\coordinate (Y) at ({\h*2.7/3*cos(\p)+\h*2.7/3*tan(\q)*sin(65-5)*sin(\p)},{\h*2.7/3*tan(\q)*cos(65-5)},{-\h*2.7/3*sin(\p)+\h*2.7/3*tan(\q)*sin(65-5)*cos(\p)});
+		\draw[fill=black](Y) node[{anchor=west}] {$P_t$};
+		
+		%add circle("transporting curve")
+		\addplot3 [black,thin, dotted,samples=40,	samples y=0,	domain=-90:95,]({\h*2/3*cos(\p)+\h*2/3*tan(\q)*sin(x)*sin(\p)},{\h*2/3*tan(\q)*cos(x)},{-\h*2/3*sin(\p)+\h*2/3*tan(\q)*sin(x)*cos(\p)});
+		
+		%draw some aditonal lines cone axis and cone contact with x-yplane
+		\coordinate (Stt) at ({\h*cos(\p)+\h*tan(\q)*sin(5.0*0-\j*5)*sin(\p)},{\h*tan(\q)*cos(5.0*0-\j*5)},{-\h*sin(\p)+\h*tan(\q)*sin(5.0*0-\j*5)*cos(\p)});
+		\draw[fill=black](Stt) circle(0.5pt)node[{anchor=north east}] {};
+		\coordinate (C) at ({1.1*1.2* \h*cos(\p)},{1.1*\h*0},{1.1*1.2*\h*sin(-\p)});
+		\coordinate (Cc) at ({0.669*1.2* \h*cos(\p)},{0.669*\h*0},{0.669*1.2*\h*sin(-\p)});
+		\draw[fill=black](W) circle(0.5pt);
+		\draw[fill=black](R) circle(0.5pt);
+
+		%\draw[fill=black](T) circle(1.5pt)node[{anchor=south west}] {$o$};
+		\draw[dashdotted,- latex,line width = 0.25mm] (Cc) --(C) ;
+		\draw[dotted,line width = 0.1mm] (O) --(Cc) ;
+		\draw[dashdotted,line width = 0.1mm] (O) --(Stt) ;
+		\draw[dashdotted,line width = 0.1mm] (T) --(S) ;
+		\draw[dashdotted,line width = 0.1mm] (T) --(St) ;
+		%angle on top of cone
+		\draw[dashdotted,line width = 0.1mm] (A) --(Stt) ;
+		\draw[dashdotted,line width = 0.1mm] (A) --(base) ;
+		\draw[-Latex,black,thin] let
+   		\p0 = (A),
+    		\p1 =  (Stt),
+    		\p2 =(base),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {0.6cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in (A) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$\theta$};
+  		\draw (1.6*\h/3,0,\h/2.8)node[{anchor=south west }] {$\gamma$};
+\end{axis}
+\end{tikzpicture}
