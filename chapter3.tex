@@ -379,13 +379,12 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Take as manifold $V_2$ the surface of an ordinary right circular cone, and consider one of the circular sections. A vector in $V_2$ is propagated parallely round this circle. Show that its direction is changed on completion of the circuit. can you reconcile this result with the fact that $V_2$ is flat?
 \end{tcolorbox}
-Before answering the question, we first investigate the geometry of a simple cone with opening angle $\alpha$, by examining the geodesics on such manifold.\\
 \begin{figure}[h]
 \center
 \input{D:/MathLatex/images/fig_p108_Ex2_a.tex}
 \caption{Intrinsic coordinates on  a cone}
 \end{figure}
-We take as coordinate system $\left(u,\theta \right)$, embedded in the manifold, $u$ being the distance of the considered point to the apex of the cone and $\theta$ the angle with a arbitrary vector laying in a plane perpendicular to the axis of the cone.\\
+We take as coordinate system $\left(u,\theta \right)$, embedded in the manifold, $u$ being the distance of the generator of the considered point to the apex of the cone and $\theta$ the angle with a arbitrary vector laying in a plane perpendicular to the axis of the cone.\\
 It is not hard to see that the fundamental form for this manifold is $$ \Phi = du^2+ \underbrace{k}_{= \ \sin^2 \alpha}u^2 d\theta^2 $$ 
 We have 
 \begin{align}
@@ -412,32 +411,23 @@ We have
  0&\frac{1}{u}&0 \\
 \end{pmatrix}
 \end{align}
-and get as geodesic equations by using $\theta$ as parameter for the curve:
+
+Let's calculate the curvature tensor. From the exercise on page 86 we know that for a $V_2$ all components of the curvature tensor can be expressed in terms of $R_{1212}$. We have
 \begin{align}
- \dv[2]{u}{\theta} - k u &=0 \\
- \frac{1}{u}\dv{u}{\theta}&=0
+R_{u\theta u\theta} &= \left \{ \begin{array}{l}
+\frac{1}{2}\left(\partial_{\theta u}a_{u \theta}+\partial_{u \theta}a_{\theta u}-\partial_{\theta \theta}a_{uu}-\partial_{u u}a_{\theta \theta}  \right) \\
+ + a^{pq}\left([u \theta,p][\theta u,q] -[u u,p][\theta \theta,q]  \right)
+\end{array} \right.
+&= \left \{ \begin{array}{l}
+-k \\
+ + a^{uu}\left(\underbrace{[u \theta,u][\theta u,u] -[u u,u][\theta \theta,u]}_{=0}  \right)\\
+ + \underbrace{a^{u \theta}}_{=0}\left([u \theta,u][\theta u,\theta] -[u u,u][\theta \theta,\theta]  \right)\\
+ + \underbrace{a^{\theta u}}_{=0}\left([u \theta,\theta][\theta u,u] -[u u,\theta][\theta \theta,u]  \right)\\
+ + \underbrace{a^{\theta \theta}}_{=\frac{1}{ku^2}}\left(\underbrace{[u \theta,\theta][\theta u,\theta]}_{= k^2u^2} -\underbrace{[u u,\theta][\theta \theta,\theta]}_{=0}  \right)\\
+\end{array} \right.
 \end{align}
-From (5) we have one solution i.e. $u = constant$ and corresponds to a circular section of the cone.
-From equation (4) we get another form of the geodesics
-\begin{align}
- \frac{\ddot{u}}{u}&=k\\
- \Rightarrow \spatie u &= p^{'} k\left( e^{\sqrt{k}\theta + r}+ e^{-\sqrt{k}\theta - r}\right) \quad (p^{'},r = constants)\\
-  &= p k \cosh(\sqrt{k}\theta + r) \quad (p = 2\ p^{'})
-\end{align}
-With the initial condition $\left. u\right|_{\theta=0} = u_0$ and $\left. \dot{u}\right|_{\theta=0} = v_0$ we get
-\begin{align}
-\begin{array}{ll}
-  r = \tanh ^{-1}\left(\sqrt{k}\frac{v_0}{u_0}\right)& \sqrt{k}\frac{v_0}{u_0} \in \left (-1,1\right)\\
-  p = \frac{u_0}{\cosh{b}}&\\
-\end{array}
-\end{align}
-\begin{figure}[H]
-\center
-\input{D:/MathLatex/images/fig_p108_Ex2_b.tex}
-\caption{Geodesic on  a cone}
-\end{figure}
-Note also that we get a third kind of geodesics when we take $u$ as parameter. One of the geodesic differential equation becomes then $k \ u \ \dot{\theta}^2 = 0$ giving $\theta = constant$ as solution which corresponds to a straight line intersecting the apex and  the starting point of the geodesic. 
-\newpage
+So indeed all components of the curvature tensor and hence $V_2$ is flat.
+
 Let's now calculate the parallel transportation of a vector $T^r$ along a circle somewhere on the cone. Taking $\theta$ as the parameter of the curve, the equation of the curve is $(u=u_0,\ \theta) \quad \theta \in \ \left[0, 2\pi \right)$. We have for parallel transportation along that curve $\fdv{T^r}{\theta}=0$ and get
 \begin{align}
  & \left \{ \begin{array}{l}
@@ -486,31 +476,22 @@ The last equation in (19) becomes
 \cos{\phi} &= \cos{\sqrt{k}\theta} \\
 \Rightarrow \quad \phi &= \sqrt{k}\theta + 2m\pi\quad\quad (m= 0,\pm 1,\pm 2, \dots)
 \end{align}
-So for $\theta = 2\pi$ the angle between the starting vector and the transported vector is not $2m\pi$. The transported vector coincides with the initial vector only for $\theta = \frac{2(m-1)\pi}{\sqrt{k}}$.
-\begin{figure}[h]%
+So for $\theta = 2\pi$ the angle between the starting vector and the transported vector is not $2m\pi$. 
+\begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p108_Ex2_c1.tex}}
+    \subfloat[]{\input{D:/MathLatex/images/fig_p108_Ex2_b1.tex}}
 	\qquad
-    \subfloat[]{\input{D:/MathLatex/images/fig_p108_Ex2_c2.tex}}
+    \subfloat[]{\input{D:/MathLatex/images/fig_p108_Ex2_b2.tex}}
 \caption{Relationship between parallel transportation along a closed path and unwrapping a cone .}
-\end{figure}\\
-Fig. 1.11. illustrates the analogy between \\
+\end{figure}
+Fig. 1.10. illustrates the analogy between 
 (a): the $\parallel$ transportation of a vector $P$ along a circular curve $\gamma$ on the cone over an angle $\theta$ giving a vector $P_t$ making an angle $\phi = \sqrt{k}\theta$ with the starting vector, and \\
 (b): the result of "unwrapping" a cone. Be two vectors $\overrightarrow{OP}$ and $\overrightarrow{OP_t}$, $P$ and $P_t$ being two points placed at a distance $r\theta$ along a circle  with radius $r$. Placing the vector $\overrightarrow{OP}$ in the $XY$-plane and unwrapping the cone over an angle $\theta$ will map the vector $\overrightarrow{OP_t}$ in the $XY$-plane to a vector $\overrightarrow{OP_t^{*}}$ making an angle $\phi = \sqrt{k}\theta$ with the vector $\overrightarrow{OP}$.\\
-Finally let's calculate the curvature tensor. From the exercise on page 86 we know that for a $V_2$ all components of the curvature tensor can be expressed in terms of $R_{1212}$. We have
-\begin{align}
-R_{u\theta u\theta} &= \left \{ \begin{array}{l}
-\frac{1}{2}\left(\partial_{\theta u}a_{u \theta}+\partial_{u \theta}a_{\theta u}-\partial_{\theta \theta}a_{uu}-\partial_{u u}a_{\theta \theta}  \right) \\
- + a^{pq}\left([u \theta,p][\theta u,q] -[u u,p][\theta \theta,q]  \right)
-\end{array} \right.
-&= \left \{ \begin{array}{l}
--k \\
- + a^{uu}\left(\underbrace{[u \theta,u][\theta u,u] -[u u,u][\theta \theta,u]}_{=0}  \right)\\
- + \underbrace{a^{u \theta}}_{=0}\left([u \theta,u][\theta u,\theta] -[u u,u][\theta \theta,\theta]  \right)\\
- + \underbrace{a^{\theta u}}_{=0}\left([u \theta,\theta][\theta u,u] -[u u,\theta][\theta \theta,u]  \right)\\
- + \underbrace{a^{\theta \theta}}_{=\frac{1}{ku^2}}\left(\underbrace{[u \theta,\theta][\theta u,\theta]}_{= k^2u^2} -\underbrace{[u u,\theta][\theta \theta,\theta]}_{=0}  \right)\\
-\end{array} \right.
-\end{align}
-So indeed all components of the curvature tensor and hence $V_2$ is flat.
+The transported vector will only coincide with the initial vector for $\sqrt{k}=\sin{\alpha}  = \frac{1}{n}\quad (n= 1, 2, \dots)$. Fig. 1.11. illustrates this in the $X-Y$-plane,  for n=3. Only after a transportation over three periods, will the transported coincide with the initial vector. The dotted area represented the unwrapped cone.
+\begin{figure}[H]%
+    \centering
+{\input{D:/MathLatex/images/fig_p108_Ex2_b3.tex}}
+\caption{Parallel transportation along a closed for a cone with $\sin{\alpha}  = \frac{1}{3}$ .}
+\end{figure}
 $$\blacklozenge$$
 \newpage
