@@ -1,0 +1,53 @@
+\begin{tikzpicture}[scale=0.5]
+\tikzmath{%
+  \r = 5.85;
+}
+\node (O) at (0,0) {};
+
+\node (C1) at ({6*cos(0)},{6*sin(0)}) {};
+\draw[](O)--(C1);
+\node (C2) at ({6*cos(120)},{6*sin(120)}) {};
+\draw[](O)--(C2);
+\node (C3) at ({6*cos(2*120)},{6*sin(2*120)}) {};
+\draw(O)--(C3);
+\node (vC1) at ({4*cos(0)},{4*sin(0)}) {};
+\draw[-latex,thick](O)--(vC1);
+\node (vC2) at ({4*cos(120)},{4*sin(120)}) {};
+\draw[-latex,thick](O)--(vC2);
+\node (vC3) at ({4*cos(2*120)},{4*sin(2*120)}) {};
+\draw[-latex,thick](O)--(vC3);
+\draw  (O) circle (2pt);
+
+
+\draw circle[dashed] [radius=\r];
+\draw [black,pattern=dots, pattern color=gray]   (O) --  (-0.:\r) arc (0:120:\r) ;
+\draw[black, dashed,very thin] circle (5.85cm);
+\draw[black,thin] let
+   \p0 = (O),
+    		\p1 =  (C1),
+    		\p2 =(C2),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {2cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in (O) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,above] {$2\pi $};;
+ 
+  \draw[black,thin] let
+   		\p0 = (O),
+    		\p1 =  (C2),
+    		\p2 =(C3),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {-2cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in (O) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,left,] {$4\pi$};;
+  	\draw[-Latex,black,thin] let
+  		   \p0 = (O),
+    		\p1 =  (C3),
+    		\p2 =(C1),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {2cm},
+    		\n4 = {(\n1 + \n2) / 2}
+  		in (O) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$6\pi$};;
+\end{tikzpicture}

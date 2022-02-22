@@ -57,7 +57,7 @@
     		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
     		\n3 = {0.7cm},
     		\n4 = {(\n1 + \n2) / 3}
-  		in (O) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$\theta \ \ $};; 
+  		in (O) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,above] {$\theta \ \ $};; 
 
  \draw[-Latex,black] let
    		\p0 = (Vp3) ,
@@ -72,6 +72,16 @@
 		\draw[fill=black](V) circle(0.5pt)node[{anchor=south west}] {$\mathbf{\overrightarrow{u}}$};  			
   		%add a  circle to emphasize the vector position
 		\addplot3 [black,dashed,samples=40,	samples y=0,	domain=0.0:360,]({32*tan(\q)*sin(x)},{32*tan(\q)*cos(x)},{32});
+		
+\draw[-Latex,black] let
+   		\p0 = (0,0,0) ,
+    		\p1 =  (Vp3),
+    		\p2 =(V),
+    		\n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    		\n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    		\n3 = {1.4cm},
+    		\n4 = {(\n1 + \n2) / 3}
+  		in (0,0,0) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2]node[midway,below] {$\alpha$};;  
 		
 
 \end{axis}
