@@ -383,6 +383,14 @@ Consider the path $A\rightarrow P \rightarrow P^{'}$, $ P$ being situated at the
 $$\blacklozenge$$
 \newpage
 
+\section{p108 - Exercise 1}
+\begin{tcolorbox}
+Taking polar coordinates on a sphere of radius a, calculate the curvature tensor, the Ricci tensor, and the curvature invariant.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage
+
 \section{p108 - Exercise 2}
 \begin{tcolorbox}
 Take as manifold $V_2$ the surface of an ordinary right circular cone, and consider one of the circular sections. A vector in $V_2$ is propagated parallely round this circle. Show that its direction is changed on completion of the circuit. can you reconcile this result with the fact that $V_2$ is flat?
@@ -491,7 +499,7 @@ So for $\theta = 2\pi$ the angle between the starting vector and the transported
     \subfloat[]{\input{D:/MathLatex/images/fig_p108_Ex2_b1.tex}}
 	\qquad
     \subfloat[]{\input{D:/MathLatex/images/fig_p108_Ex2_b2.tex}}
-\caption{Relationship between parallel transportation along a closed path and unwrapping a cone .}
+\caption{Relationship between parallel transportation along a circle of a cone and unwrapping a cone .}
 \label{fig:fig_p108_Ex2_b2}
 \end{figure}
 Fig. ~\ref{fig:fig_p108_Ex2_b2} illustrates the analogy between 
@@ -501,8 +509,90 @@ The transported vector will only coincide with the initial vector for $\sqrt{k}=
 \begin{figure}[H]%
     \centering
 {\input{D:/MathLatex/images/fig_p108_Ex2_b3.tex}}
-\caption{Parallel transportation along a closed for a cone with $\sin{\alpha}  = \frac{1}{3}$ .}
+\caption{Parallel transportation along a circle of a cone with $\sin{\alpha}  = \frac{1}{3}$ .}
 \label{fig:fig_p108_Ex2_b3}
 \end{figure}
+$$\blacklozenge$$
+\newpage
+
+\section{p109 - Exercise 3 and 4}
+$\mathbf{Exercise 3.}$\\
+\begin{tcolorbox}
+Consider the equations $$ \left( R_{mn} -\theta a_{mn}\right)X^n = 0$$ where $R_{mn}$ is the Ricci tensor in a $V_N \ (N>2)$, $\theta$ an invariant, and $X^n$ a vector. Show that, if these equations are to be consistent, $\theta$ must have one of a certain set of $N$ values, and that the vectors $X^n$ corresponding to different values of $\theta$ are perpendicular to one another. (The directions of these vectors are called the $\mathit{Ricci \ principal \ directions}$).
+\end{tcolorbox}
+
+\begin{align}
+\left( R_{mn} -\theta a_{mn}\right)X^n = 0\\
+ (1)\times (a^{mp}) \quad \Rightarrow \quad a^{mp} R_{mn}X^n  -\theta \underbrace{a^{mp}a_{mn}}_{=\delta^p_n}X^n  =0\\
+ \Rightarrow \quad a^{mp} R_{mn}X^n  -\theta X^p  =0\\
+\end{align}
+Define $T^{p}_{n} =  a^{mp} R_{mn} $, then (3) can be written in matrix form with $\mathbf{T}\equiv (T^{p}_{n})$ , $\mathbf{X}\equiv (X^p)$ and $\mathbf{I} \equiv (\delta^i_j)$
+\begin{align}
+\left(\mathbf{T}-\theta \mathbf{I}\right)\mathbf{X} =0
+\end{align}
+This is an eigenvector equation with $\mathbf{T}$ being Hermitian i.e. $\mathbf{T}^{\dag} =\mathbf{T}$ . Indeed, obviously $\mathbf{\overline{T}} = \textbf{T}$ and  
+\begin{align}
+\mathbf{T}^T &=  \left(\mathbf{AR}\right)^T\\
+ &= \mathbf{R}^T \mathbf{A}^T\\
+ \Leftrightarrow \left(T^{j}_{i}\right)  &= \left(R_{kj}\right)^T\left(a^{ik}\right)^T\\
+ &= \left(R_{jk}\right)\left(a^{ki}\right)
+\end{align}         
+as both $ R_{jk}, \ a^{ki}$ are symmetric we  have
+\begin{align}
+\left(T^{j}_{i}\right) &= \left(R_{kj}\right)\left(a^{ik}\right)\\
+ &= \left(T^{i}_{j}\right)\\
+ \Rightarrow \spatie \mathbf{T}^{\dag} &=\mathbf{T}
+\end{align} 
+This means that the $N$ roots of $det\left(\mathbf{T}-\theta \mathbf{I_n}\right)=0$, which is a necessary condition to have equation (5) consistent, are real. Hence $\theta$ will take $N$ values, being the eigenvalues of the transformation matrix $\textbf{T}$. If all eigenvalues have multiplicity one, then  the N eigenvectors in (5) corresponding to the $N$ eigenvalues will be  orthogonal to each other. But, can eigenvalues with algebraic multiplicity $ m > 1$ occur? The answer is yes. Let's rewrite $P(\theta) = det\left(\mathbf{T}-\theta \mathbf{I_n}\right)$ as $\theta^{N} + q_i \theta^{n-i}  \quad (i= N-1,N-2,\dots, 1)$ with $q_i$ functions of the Ricci tensor components. The condition for eigenvalues with algebraic multiplicity $ m > 1$  to occur is that the determinant of the Sylvester matrix of the two following polynomial should be zero.
+\begin{align}
+\left \{ \begin{array}{l}
+ P(\theta) = \theta^{N} + q_i \theta^{n-i}  \quad (i= N-1,N-2,\dots, 1)\\
+ \dv{P(\theta)}{\theta} = N \theta^{N-1} + (n-i)q_i \theta^{n-i-1}  \quad (i= N-1,N-2,\dots, 1)
+\end{array} \right.
+\end{align}
+The associated Sylvester matrix with these two polynomials will be of the form $$ S \left( P(\theta),\dv{P(\theta)}{\theta}\right) = \left( \begin{array}{cccccccc}
+ 1&q_{N-1}&\dots&q_1&0&0&\dots&0\\
+ 0&1&q_{N-1}&\dots&q_1&0&\dots&0\\
+ \vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+ 0&\dots&0&1&q_{N-1}&\dots &q_2&q_1\\
+ N&(N-1)q_{N-1}&\dots&q_1&0&0&\dots&0\\
+ 0&N&(N-1)q_{N-1}&\dots&q_1&0&\dots&0\\
+ \vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+ 0&\dots&0&N&(N-1)q_{N-1}&\dots &2q_2&q_1\\
+\end{array} \right)
+$$
+If the determinant of this matrix is not zero, then there will be no algebraic multiplicity. In the other case, one has to check whether in the eigenspace, related to the eigenvalues with algebraic multiplicity $ m > 1$, $m$ linear independent eigenvectors can be found.\\\\ 
+$\mathbf{Exercise \ 4.}$\\
+\begin{tcolorbox}
+What becomes of the Ricci principal directions (see above) if $N=2$?
+\end{tcolorbox}
+From $\mathbf{3.208.}$ we have
+\begin{align}
+\frac{R_{11}}{a_{11}} &= \frac{R_{12}}{a_{12}}=\frac{R_{22}}{a_{22}}=-\frac{R_{1212}}{a}\\
+\Rightarrow\quad & \left \{ \begin{array}{l}
+ T^{1}_{1} = a^{11}R_{11} +  a^{12}R_{21}\\
+ T^{1}_{2} = a^{11}R_{12} +  a^{12}R_{22}\\
+ T^{2}_{2} = a^{21}R_{12} +  a^{22}R_{22}\\
+\end{array} \right.\\
+\text{put } K=-\frac{R_{1212}}{a} \quad \Rightarrow\quad & \left \{ \begin{array}{l}
+ T^{1}_{1} = K a^{11}a_{11} +  K a^{12}a_{12}\\
+ T^{1}_{2} = Ka^{11}a_{12} +  Ka^{12}a_{22}\\
+ T^{2}_{2} = Ka^{21}a_{12} +  Ka^{22}a_{22}\\
+\end{array} \right.\\
+\Rightarrow\quad & \left \{ \begin{array}{l}
+ T^{1}_{1} = K\delta^1_1 = K \\
+ T^{1}_{2} = K\delta^1_2 = 0\\
+ T^{2}_{2} = K\delta^2_2 = K\\
+\end{array} \right.
+\end{align}
+hence the characteristic equation $det\left(\mathbf{T}-\theta \mathbf{I_n} \right)=0$ becomes $ (K-\theta)^2=0$ . So only one value of $\theta$ exists as $\theta = K$.  Equation (5) becomes $\mathbf{0}\mathbf{X}=0$. So we can chose any pair of linear independent vectors as eigenvectors and can make them perpendicular to one another.
+$$\blacklozenge$$
+\newpage
+
+\section{p109 - Exercise 5}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
 $$\blacklozenge$$
 \newpage

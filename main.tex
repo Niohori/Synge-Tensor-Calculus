@@ -22,6 +22,12 @@
 \usepackage{etoolbox} %ifthen
 \usepackage[outline]{contour} % glow around text
 
+%**************************** Bibliography management *******************************
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{sample.bib} %Import the bibliography file
+
+
+
 %**************************** Tikz libraries *******************************
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,arrows.meta,spy}
@@ -114,10 +120,10 @@ m n\\
 
 \tableofcontents
 \listoffigures
-\include{chapter1}
-\include{chapter2}
+%\include{chapter1}
+%\include{chapter2}
 \include{chapter3}
 %\include{chapter4}
 %\include{chapter5}
-
+\printbibliography %Prints bibliography
 \end{document}
