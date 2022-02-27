@@ -387,7 +387,21 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Taking polar coordinates on a sphere of radius a, calculate the curvature tensor, the Ricci tensor, and the curvature invariant.
 \end{tcolorbox}
-
+We have 
+\begin{align}
+ \Phi = a^2d\theta^2 + a^2\sin^2 \theta d\phi^2
+\end{align}
+We only have to calculate $R_{1212}$ (see exercise page 86).
+\begin{align}
+ R_{\theta\phi\theta\phi}&= \partial_{\theta}\underbrace{[\phi \phi,\theta]}_{= -a^2\sin\theta\cos\theta} -\partial_{\phi}\underbrace{[\phi \theta,\theta]}_{=0} + \underbrace{\Gamma^{\theta}_{\phi\theta}}_{=0}[\theta\phi,\theta]+ \underbrace{\Gamma^{\phi}_{\phi\theta}[\theta\phi,\phi]}_{=a^2\cos^2\theta} - \underbrace{\Gamma^{\theta}_{\phi\phi}}_{=0}[\theta\theta,\theta]- \underbrace{\Gamma^{\phi}_{\phi\phi}}_{=0}[\theta\theta,\phi]\\
+ &= a^2\sin^2\theta\\
+ \text{3.208. : }& \quad \frac{R_{11}}{a_{11}}=\frac{R_{22}}{a_{22}}=-\frac{R_{\theta\phi\theta\phi}}{det(a_{mn})}\quad\Rightarrow \quad \left \{ \begin{array}{l}
+ R_{11} =  -1\\
+ R_{12} = 0\\
+ R_{22} =  -\sin^2\theta
+\end{array} \right.\\
+\text{3.210. : }& \quad R=-\frac{2}{det(a_{mn})}R_{\theta\phi\theta\phi}\quad\Rightarrow \quad R= -\frac{2}{a^2}
+\end{align}
 $$\blacklozenge$$
 \newpage
 
@@ -443,7 +457,7 @@ R_{u\theta u\theta} &= \left \{ \begin{array}{l}
  + \underbrace{a^{\theta \theta}}_{=\frac{1}{ku^2}}\left(\underbrace{[u \theta,\theta][\theta u,\theta]}_{= k^2u^2} -\underbrace{[u u,\theta][\theta \theta,\theta]}_{=0}  \right)\\
 \end{array} \right.
 \end{align}
-So indeed all components of the curvature tensor and hence $V_2$ is flat.
+So indeed all components of the curvature tensor vanish and hence $V_2$ is flat.
 
 Let's now calculate the parallel transportation of a vector $T^r$ along a circle somewhere on the cone. Taking $\theta$ as the parameter of the curve, the equation of the curve is $(u=u_0,\ \theta) \quad \theta \in \ \left[0, 2\pi \right)$. We have for parallel transportation along that curve $\fdv{T^r}{\theta}=0$ and get
 \begin{align}
@@ -591,8 +605,63 @@ $$\blacklozenge$$
 
 \section{p109 - Exercise 5}
 \begin{tcolorbox}
-
+Suppose that two spaces $V_N$, $V^{'}_N$ have metric tensors $a_{mn}, \ a^{'}_{mn}$ such that $\ a^{'}_{mn}=k\ a_{mn}  $, where $k$ is a constant. Write down the relations between the curvature tensors, the Ricci tensors, and the curvature invariants of the two spaces.
 \end{tcolorbox}
+We have 
+\begin{align}
+ ds^2 &= a_{mn}dx^{m} dx^{n}\\
+ ds^{'2}&= a^{'}_{mn} dx^{'m}dx^{'n}
+\end{align}
+But let's be careful: there is no reason to assume that  $dx^m = dx^{'m}$. Let's embed the two spaces in a space $V_{N+1}$. If an observer in that space sees two dispacements  $ds^2$ and $ds^{'2}$ which for him have the same magnitude, we have
+\begin{figure}[H]
+\centering
+\begin{minipage}[t]{.4\textwidth}
+%\centering
+\vspace{0pt}
+%\includegraphics[scale=.5]{p85_ex1.png}
+\input{D:/MathLatex/images/fig_p109_Ex5_a.tex}
+\end{minipage}\hfill
+\caption{Embedded $V_N$ spaces}
+\label{fig:p109_Ex5_a}
+\end{figure}
+\begin{align}
+ ds^{'2} &= ds^2\\
+ \Rightarrow \spatie a^{'}_{mn} dx^{'m}dx^{'n} &= a_{mn}dx^{m} dx^{n}\\
+ \Rightarrow \spatie k a_{mn} dx^{'m}dx^{'n} &= a_{mn}dx^{m} dx^{n}\\
+ \Rightarrow \spatie dx^{'m} &= \frac{1}{\sqrt{k}}dx^{m}
+\end{align}
+We have also
+\begin{align}
+ a^{'}_{mk}a^{'kn} &= \delta^n_m\\
+ \Rightarrow \spatie ka_{mp}a^{'pn} &= \delta^n_m\\
+ \Rightarrow \spatie a^{'pn} &= \frac{1}{k}a^{pn}
+\end{align}
+And get the following relations
+\begin{align}
+\left \{ \begin{array}{l}
+ [mn,r]^{'} = \sqrt{k}^3[mn,r]\\\\
+ \Gamma^{'r}_{.mn} =\sqrt{k}\Gamma^{r}_{.mn}
+ \end {array}\right.
+ \end{align}
+ \begin{align}
+ \Rightarrow \spatie R^{'s}_{\ .rmn} &= \frac{\partial \Gamma^{'s}_{\ .rn}}{\partial x^{'m}} + \dots\\
+ \Rightarrow \spatie R^{'s}_{\ .rmn} &= \frac{\sqrt{k}\partial \Gamma^{s}_{.rn}}{\partial \left(\frac{x^{m}}{\sqrt{k}}\right)} + \dots\\
+ \Rightarrow \spatie R^{'s}_{\ .rmn} &= k R^{s}_{.rmn}\\
+ \times \ a^{'ks}\spatie \Rightarrow \quad a^{'ks}R^{'s}_{\ .rmn} &= k a^{'ks}R^{s}_{.rmn}\\
+ \Rightarrow \quad R^{'}_{krmn} &= k \frac{1}{k}a^{ks}R^{s}_{.rmn}\\
+ \Rightarrow \quad R^{'}_{krmn} &=R_{krmn}\\
+ R_{rm} = R^n_{.rmn} \spatie \Rightarrow \quad R^{'}_{\ mn} &= k R_{rmn}\\
+ R = a^{mn}R_{mn} \spatie \Rightarrow \quad R^{'} &= a^{'mn}R^{'}_{mn}\\
+ \Rightarrow \spatie  R^{'} &= \frac{1}{k}a^{mn}k R_{mn}\\
+ \Rightarrow \spatie  R^{'} &=  R
+\end{align}\\\\
+$\mathbf{Summary}$\\
+ \begin{align}
+R^{'s}_{\ .rmn} &= k R^{s}_{.rmn}\\
+R^{'}_{krmn} &=R_{krmn}\\
+R^{'}_{ mn} &= k R_{rmn}\\
+R^{'} &=  R
+\end{align}
 
 $$\blacklozenge$$
 \newpage
