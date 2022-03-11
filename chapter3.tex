@@ -654,7 +654,7 @@ We have
 \left(a_{mn}\right)= \begin{pmatrix}
  a_{11}& 0 \\
  0& a_{22} \\
-\end{pmatrix}\quad \left(a_{mn}\right)= \frac{1}{a}\begin{pmatrix}
+\end{pmatrix}\quad \left(a^{mn}\right)= \frac{1}{a}\begin{pmatrix}
  a_{22}& 0 \\
  0& a_{11} \\
 \end{pmatrix}\quad
@@ -878,8 +878,41 @@ $$\blacklozenge$$
 
 \section{p109 - Exercise 8}
 \begin{tcolorbox}
-bla
+In relativity we encounter the metric form $$ \Phi= e^{\alpha} + e^{x^1}\left[ \left( dx^2 \right)^2 + \sin^2 x^2 \left(dx^3 \right)^2 \right] - e^{\gamma}\left(dx^4\right)^2$$ where $\alpha$ and $\gamma$ are functions of $x^1$ and $x^4$ only.\\
+Show that the complete set of non-zero components of the Einstein tensor (see equation (3.214)) for the form given above are as follows
+\begin{align*}
+G^1_{.1} &= e^{-\alpha}\left( -\kwart -\half\gamma_1\right) + e^{-x^1}\\
+G^2_{.2} &= e^{\alpha} \left(-\kwart - \half \gamma_{11} - \kwart \gamma_1^2 -\kwart\gamma_1+\kwart \alpha _1 +\kwart \alpha _1 \gamma_1 \right) \\
+&+e^{\gamma} \left(\half \alpha_{44} + \kwart\alpha_4^2 -\kwart\alpha_4\gamma_4\right)\\
+G^3_{.3} &= G^2_{.2} \\
+G^4_{.4} &= e^{-\alpha}\left( -\frac{3}{4} -\half\alpha_1\right) + e^{-x^1}\\
+ e^{\alpha} G^4_{.1} &= -e^{\gamma} G^4_{.1} = -\half \alpha_4
+\end{align*}
+The subscript on $\alpha$ and $\gamma$ indicate partial derivatives with respect to $x^1$ and $x^4$.
 \end{tcolorbox}
+We have 
+\begin{align}
+\left(a_{mn}\right)= \begin{pmatrix}
+ e^{\alpha}& 0&0&0 \\
+ 0& e^{x^1} &0&0\\
+ 0& 0 &e^{x^1}\sin^2 x^2&0\\
+ 0& 0 &0&-e^{\gamma}\\
+\end{pmatrix}\quad 
+\left(a^{mn}\right)= \begin{pmatrix}
+ {e^{-\alpha}}& 0&0&0 \\
+ 0& {e^{-x^1}} &0&0\\
+ 0& 0 &\frac{e^{-x^1}}{\sin^2 x^2}&0\\
+ 0& 0 &0&-{e^{-\gamma}}\\
+\end{pmatrix}
+\end{align}
+And will use the following definitions:
+\begin{align}
+ G^n_{.t} &= R^n_{.t} - \half \delta^n_t R\\
+ R^n_{.t} &= a^{nk}R_{kt}\\
+ R_{kt} &= a^{sn}R_{sktn}\\
+ R &= a^{kt}R_{kt}
+\end{align}
+Considering that the non-diagonal components of $a_{mn}$ vanish and as $R_{sktn}=0$ when $s=k$ or $t=n$, we can write :
 \begin{align}
 \begin{pmatrix}
  R_{11}\\
@@ -922,6 +955,7 @@ bla
  a^{44}\\
 \end{pmatrix}\\
 \end{align}
+The Christoffel symbols of the first kind are:
 \begin{align}
 \begin{array}{llll}
  \ [11,1]=\half\alpha _1 e^{\alpha}& \ [11,2]=0& \ [11,3]= 0& \ [11,4]=-\half\alpha _4 e^{\alpha} \\
@@ -943,6 +977,8 @@ We use $3.114.$ and considering that $a_{mn}= a^{mn}= 0$ for $m\ne n$: $$R_{rsmn
 + \frac{1}{e^{x^1}\sin^2 x^2}\left( [rn,3][sm,3]-[rm,3][sn,3]  \right)\\
 -\frac{1}{e^{\gamma}}\left( [rn,4][sm,4] -[rm,4][sn,4]  \right)
 \end{array}\right.$$\\
+
+
 %************************************************************
 Giving:
 \begin{align}
@@ -1155,29 +1191,29 @@ R_{4334}&= \left\{\begin{array}{l}
 \end{align}
 \begin{align}
 R_{3123}&= 
-\half\left( \partial^2_{12} a_{33}\right)\\
+\half\left( \partial^2_{12} a_{33}\right)=0\\
 R_{4124}&= 
-\half\left( \partial^2_{12} a_{44}  \right)\\
+\half\left( \partial^2_{12} a_{44}  \right)=0\\
 R_{2132}&= 
-\half\left( \partial^2_{13} a_{22}  \right)\\
+\half\left( \partial^2_{13} a_{22}  \right)=0\\
 R_{4134}&= 
-\half\left( \partial^2_{13} a_{44} \right)\\
+\half\left( \partial^2_{13} a_{44} \right)=0\\
 R_{2142}&= 
-\half\left( \partial^2_{14} a_{22}\right)\\
+ e^{-\alpha}\left([22,1][14,1]\right)\\
 R_{3143}&= 
-\half\left( \partial^2_{14} a_{33}\right)\\
+e^{-\alpha}\left([33,1][14,1]\right)\\
 R_{1231}&= 
-\half\left( \partial^2_{23} a_{11} \right)\\
+\half\left( \partial^2_{23} a_{11} \right)=0\\
 R_{4234}&= 
-\half\left( \partial^2_{23} a_{44}  \right)\\
+\half\left( \partial^2_{23} a_{44}  \right)=0\\
 R_{1241}&= 
-\half\left( \partial^2_{24} a_{11} \right)\\
+\half\left( \partial^2_{24} a_{11} \right)=0\\
 R_{3243}&= 
-\half\left( \partial^2_{24} a_{33}  \right)\\
+\half\left( \partial^2_{24} a_{33}  \right)=0\\
 R_{1341}&= 
-\half\left( \partial^2_{34} a_{11} \right)\\
+\half\left( \partial^2_{34} a_{11} \right)=0\\
 R_{2342}&= 
-\half\left( \partial^2_{34} a_{22} \right)
+\half\left( \partial^2_{34} a_{22} \right)=0
 \end{align}
 
 Giving:
@@ -1197,8 +1233,10 @@ R_{4224}&=
 -\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}}\\
 R_{4334}&=
 -\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}}sin^2 x^2 \\
-R_{3123}&= e^{x^1}\sin x^2 \cos x^2
+R_{2142}&= -\kwart\alpha_4 e^{x^1}\\
+R_{3143}&= -\kwart\alpha_4 e^{x^1}\sin^2 x^2
 \end{align}
+
 As all other curvature components vanish, we get
 \begin{align}
 \begin{pmatrix}
@@ -1208,10 +1246,10 @@ As all other curvature components vanish, we get
  R_{44}\\\\
 \end{pmatrix}&=P
 \begin{pmatrix}
- \frac{1}{e^{\alpha}}\\\\
- \frac{1}{e^{x^1}}\\\\
- \frac{1}{e^{x^1}\sin^2 x^2}\\\\
- -\frac{1}{e^{\gamma}}\\\\
+ {e^{-\alpha}}\\\\
+ {e^{-x^1}}\\\\
+ \frac{e^{-x^1}}{\sin^2 x^2}\\\\
+ -{e^{-\gamma}}\\\\
 \end{pmatrix}
 \end{align}
 With
@@ -1224,11 +1262,12 @@ With
 -  \half \alpha _1\gamma _1  
 \right)
 \end{array}\right. \\\\
-  & 0 &  \left(\kwart\frac{e^{x^1}}{e^{\alpha}}-1 \right)e^{x^1}\sin^2 x^2& -\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}} \\\\
-  &  & 0 & -\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}}sin^2 x^2 \\\\
-  &   & & 0 \\
+  .& 0 &  \left(\kwart\frac{e^{x^1}}{e^{\alpha}}-1 \right)e^{x^1}\sin^2 x^2& -\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}} \\\\
+ . & . & 0 & -\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}}sin^2 x^2 \\\\
+ . &  . &. & 0 \\
 \end{pmatrix}
 \end{align}
+and
 \begin{align}
 \begin{pmatrix}
  R_{12}\\
@@ -1239,13 +1278,57 @@ With
  R_{34}\\
 \end{pmatrix}&=
 \begin{pmatrix}
- \frac{e^{x^1}}{\tan x^2 }\\
- 0\\
- 0 \\
- 0 \\
- 0\\
- 0 \\
+ 0& 0& 0 & 0  \\
+ 0& 0 &  0& 0 \\
+ 0&-\kwart\alpha_4 e^{x^1}  &-\kwart\alpha_4 e^{x^1}\sin^2 x^2 & 0 \\
+ 0& 0 &0& 0 \\
+ 0& 0 &0& 0 \\
+ 0& 0 &0& 0 \\
+\end{pmatrix}\begin{pmatrix}
+ {e^{-\alpha}}\\\\
+ {e^{-x^1}}\\\\
+ \frac{e^{-x^1}}{\sin^2 x^2}\\\\
+ -{e^{-\gamma}}\\\\
 \end{pmatrix}
+\end{align}
+Finally  we can compute the Einstein tensor:
+\begin{align}
+ R &= a^{11}R_{11}+a^{22}R_{22}+a^{33}R_{33}+a^{44}R_{44}\\
+ &= \left\{\begin{array}{l}
+ e^{-\alpha}\left(\gamma_{11} + \half \gamma_1^2 -\half\alpha_1 \gamma_1\right)\\\\
+ e^{-\gamma}\left(\alpha_{44} + \half \alpha_4^2 -\half\alpha_4 \gamma_4\right)\\\\
+ +e^{-\alpha}\left(\frac{3}{2}+\gamma_1-\alpha_1\right)\\\\
+ - 2e^{-x^1}
+ \end{array}\right.
+\end{align}
+\begin{align}
+G^1_{.1} &= e^{-\alpha}R_{11} - \half R\\
+ &= e^{-\alpha}\left(-\kwart - \half \gamma_1\right)+e^{-x^1}
+\end{align}
+\begin{align}
+G^2_{.2} &= e^{-x^1}R_{22} - \half R\\
+ &= \left\{\begin{array}{l}e^{-\alpha}\left(-\kwart - \half \gamma_{11} - \kwart \gamma_{1}^2 -\kwart \gamma_{1} + \kwart\alpha_1\gamma_1 + \kwart \alpha_1\right)\\\\
+ +e^{-\gamma}\left( \half \alpha_{44} +\kwart \alpha_{4}^2 - \kwart\alpha_4\gamma_4 \right)
+ \end{array}\right.
+\end{align}
+\begin{align}
+G^3_{.3} &= \frac{e^{-x^1}}{\sin^2 x^2}R_{33} - \half R\\
+ &= \left\{\begin{array}{l}e^{-\alpha}\left(-\kwart - \half \gamma_{11} - \kwart \gamma_{1}^2 -\kwart \gamma_{1} + \kwart\alpha_1\gamma_1 + \kwart \alpha_1\right)\\\\
+ +e^{-\gamma}\left( \half \alpha_{44} +\kwart \alpha_{4}^2 - \kwart\alpha_4\gamma_4 \right)
+ \end{array}\right.
+\end{align}
+\begin{align}
+G^4_{.4} &= -e^{-\gamma}R_{44} - \half R\\
+ &= e^{-\alpha}\left(-\frac{3}{4} + \half \alpha_1\right)+e^{-x^1}
+\end{align}
+
+\begin{align}
+G^1_{.4} &= e^{-\alpha}R_{14}\\
+ &= -\half e^{-\alpha} \alpha_4
+\end{align}
+\begin{align}
+G^4_{.1} &=- e^{-\gamma}R_{14}\\
+ &= \half e^{-\gamma} \alpha_4
 \end{align}
 $$\blacklozenge$$
 \newpage
