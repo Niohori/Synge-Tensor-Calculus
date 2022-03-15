@@ -287,8 +287,23 @@ Calling $\frac{\pi}{2} - \epsilon _{i}$ the excess, we get the assertion made.
 
 $$\blacklozenge$$
 \newpage
+\end{comment}
+\section{p98 - Clarification}
+\begin{tcolorbox}
+... it is easy to see that the expansion takes the form $$\mathbf{3.425.}\spatie  \eta=\theta\left(s-\frac{1}{6}\epsilon K s^3 + \dots\right)$$
+\end{tcolorbox}
+Expanding $\eta$ in a power series gives
+\begin{align}
+\eta &= \underbrace{\left.\eta\right|_0}_{=0} + \underbrace{\left.\dv{\eta}{s}\right|_0 }_{=\theta}s -\half\underbrace{\left.\dv[2]{\eta}{s}\right|_0}_{=0}s^2 + \frac{1}{6}\left.\dv[3]{\eta}{s}\right|_0s^3 + \dots \\ 
+\dv[2]{(1)}{s} \quad \Rightarrow\quad \dv[2]{\eta}{s} &=\left.\dv[3]{\eta}{s}\right|_0s+ \dots\\
+\text{for } \lim_{ s \to 0} \ \text{ we have } \eta \approx \theta s \quad \text{so (2)} \quad \Rightarrow\quad \dv[2]{\eta}{s} &=\left.\dv[3]{\eta}{s}\right|_0\frac{\eta}{\theta}+ \dots\\
+\lim_{ s \to 0}\quad \Rightarrow \quad \left.\dv[3]{\eta}{s}\right|_0 &= \theta\underbrace{\lim_{ s \to 0}\frac{1}{\eta}\dv[2]{\eta}{s}}_{= -\epsilon K}\\
+\Rightarrow \quad \eta&=\theta\left(s-\frac{1}{6}\epsilon K s^3 + \dots\right)
+\end{align}
+$$\blacklozenge$$
+\newpage
 
-
+\begin{comment}
 \section{p102 - Clarification}
 \begin{tcolorbox}
 Still using the same notation and Fig. 7, we have at B the three vectors $(T^r)_1,\ (T^r)_2,\ Y_r$ ...  it follows that $$\textbf{3.516.}\quad \quad (\Delta T^r)_A(Y_r)_{A'2}= - (\Delta T^r)_B(Y_r)_B$$
@@ -1186,7 +1201,7 @@ R_{4224}&= \left\{\begin{array}{l}
 \begin{align}
 R_{4334}&= \left\{\begin{array}{l}
 \half\left( \partial^2_{33} a_{44} + \partial^2_{44} a_{33} \right)\\\\
--\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}}sin^2 x^2 \\
+-\kwart \gamma _1  \frac{e^{\gamma}e^{x^1}}{e^{\alpha}}\sin^2 x^2 \\
 \end {array}\right.\\
 \end{align}
 \begin{align}
@@ -1330,5 +1345,110 @@ G^1_{.4} &= e^{-\alpha}R_{14}\\
 G^4_{.1} &=- e^{-\gamma}R_{14}\\
  &= \half e^{-\gamma} \alpha_4
 \end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p110 - Exercise 9}
+\begin{tcolorbox}
+If we change the metric tensor  from $a_{mn}$ to $a_{mn}+b_{mn}$  where $b_{mn}$ is small, calculate the principal parts of the increment in the components of the curvature tensor.
+\end{tcolorbox}
+Let's start with one form of the curvature tensor
+\begin{align}
+R_{rsmn} &= \left\{\begin{array}{l}\half\left(\partial^2_{sm} a_{rn}+\partial^2_{rn} a_{sm}-\partial^2_{sn} a_{rm}-\partial^2_{rm} a_{sn}\right) \\
++ a^{pq}\left([rn,p][sm,q] - [rm,p][sn,q]\right)\end{array}\right.
+\end{align}
+Be $R_{rsmn}^{'}$ and $a^{'}_{rn}$ the components of the tensors after changing the metric form to $a_{mn}+b_{mn}$.\\
+Then
+\begin{align}
+R_{rsmn}^{'} &= \left\{\begin{array}{l} \half\left(\partial^2_{sm} a^{'}_{rn}+\partial^2_{rn} a^{'}_{sm}-\partial^2_{sn} a^{'}_{rm}-\partial^2_{rm} a^{'}_{sn}\right) \\
++ a^{'pq}\left([rn,p]^{'}[sm,q]^{'} - [rm,p]^{'}[sn,q]^{'}\right)\end{array}\right.
+\end{align}
+At the point where we want to calculate the increment of the curvature tensor, we can choose Riemannian coordinates related to the metric $a^{'}_{mn}$. Then, the Christoffel symbols vanish at that point as origin  and (2) becomes
+\begin{align}
+R_{rsmn}^{'} &= \half\left(\partial^2_{sm} a^{'}_{rn}+\partial^2_{rn} a^{'}_{sm}-\partial^2_{sn} a^{'}_{rm}-\partial^2_{rm} a^{'}_{sn}\right) \\
+ &= \left\{\begin{array}{l}\half\left(\partial^2_{sm} a^{}_{rn}+\partial^2_{rn} a^{}_{sm}-\partial^2_{sn} a^{}_{rm}-\partial^2_{rm} a^{}_{sn}\right)\\\\+\half\left(\partial^2_{sm} b^{}_{rn}+\partial^2_{rn} b^{}_{sm}-\partial^2_{sn} b^{}_{rm}-\partial^2_{rm} b^{}_{sn}\right) \end{array}\right.\\
+  &= \left\{\begin{array}{l}R_{rsmn}-a^{pq}\left([rn,p][sm,q] - [rm,p][sn,q]\right)\\\\+\half\left(\partial^2_{sm} b^{}_{rn}+\partial^2_{rn} b^{}_{sm}-\partial^2_{sn} b^{}_{rm}-\partial^2_{rm} b^{}_{sn}\right) \end{array}\right.\\
+  \Rightarrow \quad \Delta R_{rsmn}&= \left\{\begin{array}{l}-a^{pq}\left([rn,p][sm,q] - [rm,p][sn,q]\right)\\\\
+  +\half\left(\partial^2_{sm} b^{}_{rn}+\partial^2_{rn} b^{}_{sm}-\partial^2_{sn} b^{}_{rm}-\partial^2_{rm} b^{}_{sn}\right) \end{array}\right.
+\end{align}
+As $[rn,p]^{'}=0$ we have $[rn,p]^{"}=-[rn,p]$ (the suffix $"$ referring to $b_{mn}$).
+So we have for $[rn,s]^{"}$ and $[ms,r]^{"}$
+\begin{align}
+\partial_r b_{sn} + \partial_n b_{rs}-\partial_s b_{rn} &= -\partial_r a_{sn} - \partial_n a_{rs}+\partial_s a_{rn} \\
+\partial_m b_{rs} + \partial_s b_{rm}-\partial_r b_{sm} &= -\partial_m a_{rs} - \partial_s a_{rm}+\partial_r a_{sm} \\
+\partial_m (7) \quad\Rightarrow\quad \partial^2_{rm} b_{sn} + \partial^2_{mn} b_{rs}-\partial^2_{sm} b_{rn} &= -\partial^2_{rm} a_{sn} - \partial^2_{mn} a_{rs}+\partial^2_{sm} a_{rn}\\
+\partial_n (8) \quad\Rightarrow\quad \partial^2_{mn} b_{rs} + \partial^2_{sn} b_{rm}-\partial^2_{rn} b_{sm} &= -\partial^2_{mn} a_{rs} - \partial^2_{sn} a_{rm}+\partial^2_{rn} a_{sm}
+\end{align}
+Combining $(9)$ and $(10)$ in $(6)$, we get
+\begin{align}
+\Delta R_{rsmn}&= \left\{\begin{array}{l}-a^{pq}\left([rn,p][sm,q] - [rm,p][sn,q]\right)\\\\
+  +\half\left(\partial^2_{rm} a_{sn} + \partial^2_{mn} a_{rs}-\partial^2_{sm} a_{rn}\right)\\\\ 
++\half\left(\partial^2_{mn} a_{rs} + \partial^2_{sn} a_{rm}-\partial^2_{rn} a_{sm}\right)\\\\  
++\half\left( \partial^2_{mn} b_{rs}+\partial^2_{mn} b_{rs}\right)\\\\
+  \end{array}\right.\\
+  &= \left\{\begin{array}{l}a^{pq}\left( [rm,p][sn,q]-[rn,p][sm,q]\right)\\\\
+  +\half\left(\partial^2_{rm} a_{sn} + \partial^2_{sn} a_{rm} -\partial^2_{sm} a_{rn}-\partial^2_{rn} a_{sm}\right)\\\\  
+  +\half\left(\partial^2_{mn} a_{rs}+\partial^2_{mn} a_{rs}\right)\\\\
++\half\left( \partial^2_{mn} b_{rs}+\partial^2_{mn} b_{rs}\right)\\\\
+  \end{array}\right.\\
+  &= \left\{\begin{array}{l}R_{rsnm}\\\\  
+  +\half\left(\partial^2_{mn} a_{rs}+\partial^2_{mn} a_{rs}\right)\\\\
++\half\left( \partial^2_{mn} b_{rs}+\partial^2_{mn} b_{rs}\right)\\\\
+  \end{array}\right.\\
+    &= -R_{rsmn}
+  +\partial^2_{mn} a_{rs}+\partial^2_{mn} b_{rs}
+\end{align}
+Can I simplify further ??
+$$\blacklozenge$$
+\newpage
+
+
+\section{p110 - Exercise 10}
+\begin{tcolorbox}
+If we use normal coordinates in a Riemannian $V_n$, the metric form is as in equation $2.630$. For this coordinate system, express the curvature tensor, the Ricci tensor, and the curvature invariant in terms of the corresponding quantities for the $(N-1)-\text{space}$ $x^N = C^{st}$ and certain additional terms. Check these additional terms by nothing that they must have tensor character with respect to transformations of the coordinates $x^1, x^2, \dots, x^{N-1}$.
+\end{tcolorbox}
+$$R_{rsmn} = \partial_m[sn,r]-\partial_n[sm,r] + \Gamma^p_{sm}[rn,p] -\Gamma^p_{sn}[rm,p]$$
+We indicate by $R^{'}_{\dots}$  the quantity generated by the previous definition, but restricted to the subspace $V_{N-1}$. Calculating $R_{\alpha\beta\gamma\delta}$ restricted to the subspace $V_{N-1}$ gives:
+\begin{align}
+ R_{\alpha\beta\gamma\delta}&= \underbrace{\partial_{\gamma}[\beta \delta, \alpha]-\partial_{\delta}[\beta \gamma, \alpha] + \Gamma^{\nu}_{\beta \gamma}[\alpha \delta, \nu] -\Gamma^{\nu}_{\beta \delta}[\alpha \gamma, \nu]}_{= R^{'}_{\alpha\beta\gamma\delta}}+ \Gamma^{N}_{\beta \gamma}[\alpha \delta,N] -\Gamma^{N}_{\beta \delta}[\alpha \gamma,N]\\
+ &= R^{'}_{\alpha\beta\gamma\delta}+ \underbrace{\Gamma^{N}_{\beta \gamma}}_{ -\half\frac{1}{a_{NN}}\partial_N a_{\beta\gamma}}\underbrace{[\alpha \delta,N]}_{  -\half \partial_N a_{\alpha\delta}} -\underbrace{\Gamma^{N}_{\beta \delta}}_{-\half\frac{1}{a_{NN}}\partial_N a_{\beta\delta}  }\underbrace{[\alpha \gamma,N]}_{ -\half \partial_N a_{\alpha\gamma}}\quad \text{(see page 66/67)}\\
+\Rightarrow\spatie R_{\alpha\beta\gamma\delta}&= R^{'}_{\alpha\beta\gamma\delta}+ \kwart\frac{1}{a_{NN}}\left(\partial_N a_{\beta\gamma} \partial_N a_{\alpha\delta}-\partial_N a_{\beta\delta} \partial_N a_{\alpha\gamma}\right)
+\end{align}
+We calculate $R_{\alpha\beta}$:
+\begin{align}
+R_{\alpha\beta} &= a^{sn} R_{s\alpha\beta n}\\
+ &= \underbrace{a^{\nu\mu} R_{\nu\alpha\beta \mu}}_{R^{'}_{\alpha\beta}} + \underbrace{a^{N \mu}}_{=0} R_{N \alpha\beta \mu}+\underbrace{a^{\nu N}}_{=0} R_{\nu\alpha\beta N}+\underbrace{a^{NN}}_{=\frac{1}{a_{NN}}} R_{N \alpha\beta N}\\
+\text{(5)}\Rightarrow \spatie R_{\alpha\beta} &=R^{'}_{\alpha\beta} + \frac{1}{a_{NN}} R_{N\alpha\beta N}\\
+R_{N \alpha\beta N}&=\left\{\begin{array}{l}\partial_{\beta}[\alpha N,N]-\partial_{N}[\alpha\beta,N]\\\\ + \Gamma^{\nu}_{\alpha\beta}[NN,\nu] -\Gamma^{\nu}_{\alpha N}[N \beta,\nu]\\\\
++ \Gamma^{N}_{\alpha\beta}[NN,N] -\Gamma^{N}_{\alpha N}[N \beta,N]
+\end{array}\right.\\
+&=\left\{\begin{array}{l}R^{'}_{N \alpha\beta N}\\\\
++ \underbrace{\Gamma^{N}_{\alpha\beta}}_{-\half\frac{1}{a_{NN}}\partial_N a_{\alpha\beta}}\underbrace{[NN,N]}_{\half\frac{1}{a_{NN}}\partial_N a_{NN}} -\underbrace{\Gamma^{N}_{\alpha N}}_{\half\frac{1}{a_{NN}}\partial_{\alpha} a_{NN}}\underbrace{[N \beta,N]}_{\half\partial_{\beta} a_{NN}}\end{array}\right.\\
+&=R^{'}_{N \alpha\beta N}
+ -\kwart\frac{1}{a_{NN}}\left( \frac{1}{a_{NN}}\partial_N a_{\alpha\beta}\partial_N a_{NN}+\partial_{\alpha} a_{NN}\partial_{\beta} a_{NN}\right)
+\end{align}
+\begin{align}
+ \text{(6) and (9)}\Rightarrow \spatie R_{\alpha\beta} &=\left\{\begin{array}{l}R^{'}_{\alpha\beta} + \frac{1}{a_{NN}}R^{'}_{N \alpha\beta N} \\\\ -\kwart\frac{1}{a_{NN}^2}\left( \frac{1}{a_{NN}}\partial_N a_{\alpha\beta}\partial_N a_{NN}+\partial_{\alpha} a_{NN}\partial_{\beta} a_{NN}\right)\end{array}\right.
+\end{align}
+And the invariant curvature:
+\begin{align}
+R &= a^{mn} R_{mn}\\
+&= \underbrace{a^{\mu\nu} R_{\mu\nu}}_{= R^{'}}+\underbrace{a^{N\nu}}_{=0} R_{N\nu}+\underbrace{a^{\mu N}}_{=0} R_{\mu N}+a^{NN} R_{NN}\\
+&= R^{'}+a^{NN} R_{NN}\\
+R_{NN}&= a_{sn}R_{sNNn}\\
+&= \underbrace{a_{\mu\nu}R_{\mu N N\nu}}_{=R^{'}_{NN}}+\underbrace{a_{N\nu}R_{N N N\nu}}_{=0}+\underbrace{a_{\mu N}R_{\mu N NN}}_{=0}+\underbrace{a_{NN}R_{N N NN}}_{=0}\\
+\text{(13) and (15)}\Rightarrow \spatie R &= R^{'}+\frac{1}{a_{NN}} R^{'}_{NN}
+\end{align}
+We now check the tensor character of the residuals in $(3$), $(10)$ and $(16)$
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p110 - Exercise 11}
+\begin{tcolorbox}
+Prove that $$T^{mn}_{\ \ \ \ |mn} =T^{mn}_{\ \ \ \ |nm}$$ whet $T^{mn}$ is not necessarily symmetric.
+\end{tcolorbox}
+
 $$\blacklozenge$$
 \newpage
