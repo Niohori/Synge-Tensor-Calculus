@@ -868,7 +868,7 @@ The Christoffel symbols:
 \end{align}
 We use $3.113.$ $$R_{rsmn}= \partial_m[sn,r] -\partial_n[sm,r]+\Gamma^p_{sm}[rn,p]-\Gamma^p_{sn}[rm,p]$$\\
 
-Note that we only have to perform the full calculation for two curvature tensors e.g. $R_{1212}$ and $R_{1213}*$  as the others can be retrieved by using adequate indices renaming and use of the identities $3.115.$
+Note that we only have to perform the full calculation for two curvature tensors e.g. $R_{1212}$ and $R_{1213}$  as the others can be retrieved by using adequate indices renaming and use of the identities $3.115.$
 \begin{align}
 R_{1212}&=
 -h_2\partial_{11}^2(h_2)-h_1\partial_{22}^2(h_1)
@@ -1449,6 +1449,43 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove that $$T^{mn}_{\ \ \ \ |mn} =T^{mn}_{\ \ \ \ |nm}$$ whet $T^{mn}$ is not necessarily symmetric.
 \end{tcolorbox}
-
+\begin{align}
+T^{mn}_{\ \ \ \ |s} &= \partial_s T^{mn} + \Gamma^m_{ks}T^{kn} + \Gamma^n_{ks}T^{mk}\\
+T^{mn}_{\ \ \ \ |st} &= (\partial_s T^{mn})_{|t} + (\Gamma^m_{ks})_{|t}T^{kn} + (\Gamma^n_{ks})_{|t}T^{mk}+ \Gamma^m_{ks}(T^{kn})_{|t} + \Gamma^n_{ks}(T^{mk})_{|t})
+\end{align}
+We choose Riemannian coordinates and take as origin the point where we want to check the asked identity. At that point the Christoffel symbols vanish and $(2)$ becomes
+\begin{align}
+T^{mn}_{\ \ \ \ |st} &= (\partial_s T^{mn})_{|t} + (\Gamma^m_{ks})_{|t}T^{kn} + (\Gamma^n_{ks})_{|t}T^{mk}\\
+&= \left\{\begin{array}{l}\partial^2_{st}T^{mn}+\quad \text{terms in}\quad \Gamma\text{'s (=0)}\\\\ + T^{kn} (\Gamma^m_{ks})_{|t}\\\\ + T^{mk} (\Gamma^n_{ks})_{|t}\end{array}\right.\\
+&= \left\{\begin{array}{l}\partial^2_{st}T^{mn}\\\\ + T^{kn} \left[\underbrace{a^{mp}_{\ \ \ |t}}_{=0}[ks,p] + \half a^{mp} \left( (\partial_{k} a_{sp})_{|t} + (\partial_{s} a_{kp})_{|t} - (\partial_{p} a_{ks})_{|t} \right) \right]\\\\  + T^{mk} \left[\underbrace{a^{np}_{\ \ \ |t}}_{=0}[ks,p] + \half a^{np} \left( (\partial_{k} a_{sp})_{|t} + (\partial_{s} a_{kp})_{|t} - (\partial_{p} a_{ks})_{|t} \right) \right]\end{array}\right.\\
+&= \left\{\begin{array}{l}\partial^2_{st}T^{mn}\\\\ +\half a^{mp} \left( \partial^2_{kt} a_{sp} + \partial^2_{st} a_{kp} - \partial^2_{pt} a_{ks} \right) T^{kn}  \\\\  + \half   a^{np} \left( \partial^2_{kt} a_{sp} + \partial^2_{st} a_{kp} - \partial^2_{pt} a_{ks}\right)T^{mk} \end{array}\right.
+\end{align}
+In the same way we get
+\begin{align}
+T^{mn}_{\ \ \ \ |ts} &= \left\{\begin{array}{l}\partial^2_{st}T^{mn}\\\\ +\half a^{mp} \left( \partial^2_{ks} a_{tp} + \partial^2_{st} a_{kp} - \partial^2_{ps} a_{kt} \right) T^{kn}  \\\\  + \half   a^{np} \left( \partial^2_{ks} a_{tp} + \partial^2_{st} a_{kp} - \partial^2_{ps} a_{kt}\right)T^{mk} \end{array}\right.
+\end{align}
+Hence 
+\begin{align}
+2\left(T^{mn}_{\ \ \ \ |st}-T^{mn}_{\ \ \ \ |ts}\right) &= \left\{\begin{array}{l} \ a^{mp} \left( \partial^2_{kt} a_{sp} + \partial^2_{st} a_{kp} - \partial^2_{pt} a_{ks} - \partial^2_{ks} a_{tp} - \partial^2_{st} a_{kp} + \partial^2_{ps} a_{kt}  \right) T^{kn}  \\\\  + a^{np} \left( \partial^2_{kt} a_{sp} + \partial^2_{st} a_{kp} - \partial^2_{pt} a_{ks}- \partial^2_{ks} a_{tp} - \partial^2_{st} a_{kp} + \partial^2_{ps} a_{kt}\right)T^{mk} \end{array}\right.\\
+&= \left\{\begin{array}{l} \ a^{mp} \left( \partial^2_{kt} a_{sp} - \partial^2_{pt} a_{ks} - \partial^2_{ks} a_{tp} + \partial^2_{ps} a_{kt}  \right) T^{kn}  \\\\  + a^{np} \left( \partial^2_{kt} a_{sp}  - \partial^2_{pt} a_{ks}- \partial^2_{ks} a_{tp} + \partial^2_{ps} a_{kt}\right)T^{mk} \end{array}\right.
+\end{align}
+Putting $s=m$ and $t=n$:
+\begin{align}
+2\left(T^{mn}_{\ \ \ \ |mn}-T^{mn}_{\ \ \ \ |nm}\right) 
+&= \left\{\begin{array}{l} \ a^{mp} \left( \partial^2_{kn} a_{mp} - \partial^2_{pn} a_{km} - \partial^2_{km} a_{np} + \partial^2_{pm} a_{kn}  \right) T^{kn}  \\\\  + a^{np} \left( \partial^2_{kn} a_{mp}  - \partial^2_{pn} a_{km}- \partial^2_{km} a_{np} + \partial^2_{pm} a_{kn}\right)T^{mk} \end{array}\right.
+\end{align}
+In the last term of $(10)$ we can swap the indices $m$ and $n$ giving
+\begin{align}
+2\left(T^{mn}_{\ \ \ \ |mn}-T^{mn}_{\ \ \ \ |nm}\right) 
+&= \left\{\begin{array}{l} \ a^{mp} \left( \partial^2_{kn} a_{mp} - \partial^2_{pn} a_{km} - \partial^2_{km} a_{np} + \partial^2_{pm} a_{kn}  \right) T^{kn}  \\\\  + a^{mp} \left( \partial^2_{km} a_{np}  - \partial^2_{pm} a_{kn}- \partial^2_{kn} a_{mp} + \partial^2_{pn} a_{km}\right)T^{nk} \end{array}\right.
+\end{align}
+In the second term of $(11)$ we may again swap the indices $n$ and $k$ giving
+\begin{align}
+2\left(T^{mn}_{\ \ \ \ |mn}-T^{mn}_{\ \ \ \ |nm}\right) 
+&= \left\{\begin{array}{l} \ a^{mp} \left( \cancel{\partial^2_{kn} a_{mp}} - \partial^2_{pn} a_{km} - \partial^2_{km} a_{np} + \bcancel{\partial^2_{pm} a_{kn} } \right) T^{kn}  \\\\  + a^{mp} \left( \partial^2_{nm} a_{kp}  - \bcancel{\partial^2_{pm} a_{kn}}- \cancel{\partial^2_{kn} a_{mp}} + \partial^2_{pk} a_{nm}\right)T^{kn} \end{array}\right.\\\\
+&=  \left( \underbrace{a^{mp}\partial^2_{nm} a_{kp}}_{\text{swap m and p}}  + \underbrace{a^{mp}\partial^2_{pk} a_{nm}}_{\text{swap m and p}} - a^{mp}\partial^2_{pn} a_{km} -a^{mp} \partial^2_{km} a_{np} \right) T^{kn}\\
+&=  \left( a^{mp}\partial^2_{np} a_{km}  + a^{mp}\partial^2_{mk} a_{np} - a^{mp}\partial^2_{pn} a_{km} -a^{mp} \partial^2_{km} a_{np} \right) T^{kn}\\
+&=0
+\end{align}
 $$\blacklozenge$$
 \newpage
