@@ -1,6 +1,5 @@
 \chapter{Curvature of space}
 \pagebreak[4]
-\begin{comment}
 \section{p82 - Exercise}
 \begin{tcolorbox}
 Explain why the surfaces of an ordinary cylinder and an ordinary cone are to be regarded as "flat" in the sense of our definition.
@@ -287,7 +286,7 @@ Calling $\frac{\pi}{2} - \epsilon _{i}$ the excess, we get the assertion made.
 
 $$\blacklozenge$$
 \newpage
-\end{comment}
+
 \section{p98 - Clarification}
 \begin{tcolorbox}
 ... it is easy to see that the expansion takes the form $$\mathbf{3.425.}\spatie  \eta=\theta\left(s-\frac{1}{6}\epsilon K s^3 + \dots\right)$$
@@ -303,7 +302,6 @@ Expanding $\eta$ in a power series gives
 $$\blacklozenge$$
 \newpage
 
-\begin{comment}
 \section{p102 - Clarification}
 \begin{tcolorbox}
 Still using the same notation and Fig. 7, we have at B the three vectors $(T^r)_1,\ (T^r)_2,\ Y_r$ ...  it follows that $$\textbf{3.516.}\quad \quad (\Delta T^r)_A(Y_r)_{A'2}= - (\Delta T^r)_B(Y_r)_B$$
@@ -654,7 +652,7 @@ R^{'} &=  R
 $$\blacklozenge$$
 \newpage
 
-\end{comment}
+
 
 
 
@@ -1440,6 +1438,39 @@ R_{NN}&= a_{sn}R_{sNNn}\\
 \text{(13) and (15)}\Rightarrow \spatie R &= R^{'}+\frac{1}{a_{NN}} R^{'}_{NN}
 \end{align}
 We now check the tensor character of the residuals in $(3$), $(10)$ and $(16)$
+Let's define the following coordinate transformations 
+$a=a(\alpha,\beta,\gamma,\dots), \ b=b(\alpha,\beta,\gamma,\dots),...$ and $N = N$.
+Hence,
+\begin{align}
+a_{\alpha\beta}= a_{ab}\partial_\alpha a \partial_\beta b
+\end{align}
+Now,
+$$i)\spatie \mathbf{R_{\alpha\beta\gamma\delta}= R^{'}_{\alpha\beta\gamma\delta}+ \kwart\frac{1}{a_{NN}}\underbrace{\left(\partial_N a_{\beta\gamma} \partial_N a_{\alpha\delta}-\partial_N a_{\beta\delta} \partial_N a_{\alpha\gamma}\right)}_{T_{\alpha\beta\gamma\delta}=tensor?}}$$
+\begin{align}
+T_{\alpha\beta\gamma\delta}&=\left\{\begin{array}{l}\partial_N\left( a_{ab}\partial_\beta a \partial_\gamma b\right)\partial_N\left( a_{cd}\partial_\alpha c \partial_\delta d\right)\\\\
+-\partial_N \left(a_{ab}\partial_\beta a \partial_\delta b \right)\partial_N\left(a_{cd}\partial_\alpha c \partial_\gamma d\right)
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\partial_N a_{ab}\partial_N a_{cd}\partial_\beta a \partial_\gamma b\partial_\alpha c \partial_\delta d\\\\
+-\partial_N a_{ab}\partial_N a_{cd}\partial_\beta a \partial_\delta b \partial_\alpha c \partial_\gamma d\\\\
++\text{other terms}
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\left(\underbrace{\partial_N a_{cb}\partial_N a_{ad}
+-\partial_N a_{bd}\partial_N a_{ac}}_{\equiv T_{abcd}}\right)\partial_\alpha a\partial_\beta b \partial_\gamma g \partial_\delta d\\\\
++\text{other terms}
+\end{array}\right.
+\end{align}
+So we see that $T_{abcd}$ transforms to $T_{\alpha\beta\gamma\delta}$ as a tensor provided that the other terms in $(20)$ vanish. This is the case as the other terms will all have elements containing factors like $\partial2_{N\nu} x$ which are zero as the $x$ are no explicit function of $N$.
+$$ii)\spatie \mathbf{R_{\alpha\beta} =\left\{\begin{array}{l}R^{'}_{\alpha\beta} + \frac{1}{a_{NN}}R^{'}_{N \alpha\beta N} \\\\ -\kwart\frac{1}{a_{NN}^2}\left(\underbrace{ \frac{1}{a_{NN}}\partial_N a_{\alpha\beta}\partial_N a_{NN}+\partial_{\alpha} a_{NN}\partial_{\beta} a_{NN}}_{\equiv T_{\alpha\beta} = tensor?}\right)\end{array}\right.}$$
+\begin{align}
+T_{\alpha\beta} &= \frac{1}{a_{NN}}\partial_N \left(a_{ab}\partial_\alpha a \partial_\beta b\right)\partial_N a_{NN}+\partial_{a} a_{NN}\partial_{b} a_{NN}\partial_{\alpha}a\partial_{\beta} b\\
+&= \frac{1}{a_{NN}}\partial_N a_{ab}\partial_\alpha a \partial_\beta b\partial_N a_{NN}+\partial_{a} a_{NN}\partial_{b} a_{NN}\partial_{\alpha}a\partial_{\beta} b +\text{ other terms}\\
+&= \left(\underbrace{\frac{1}{a_{NN}}\partial_N a_{ab}\partial_N a_{NN}+\partial_{a} a_{NN}\partial_{b} a_{NN}}_{\equiv T_{ab}}\right)\partial_{\alpha} a\partial_{\beta} b +\text{ other terms}
+\end{align}
+Again the other terms vanish - see previous curvature tensor - and so $T_{ab}$ transforms to $T_{\alpha\beta}$ as a tensor.
+$$iii)\spatie \mathbf{R = R^{'}+\frac{1}{a_{NN}} R^{'}_{NN}}$$
+The last term is an invariant and by definition  at tensor.
 $$\blacklozenge$$
 \newpage
 
@@ -1553,19 +1584,19 @@ R_{pk} = \partial_k \Gamma^t_{pt} - \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}
 With $\mathcal{F}^{pk}$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only. Note that $\mathcal{F}^{pk}$ is a symmetrical object in $p,k$ as $R_{pk}$ is a symmetrical tensor in $p,k$.
 Hence by $(15)$ to $(19)$:
 \begin{align}
-G^{mn} &= a^{nk} R^m_{. \ k}-\half a^{nk}\delta^m_k R \\
-&=  a^{nk} a^{mp} R_{pk}-\half a^{nm}a^{pk}R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\partial_k \Gamma^t_{pt} - \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}\right) \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\partial_k \Gamma^t_{pt} - \partial_t \Gamma^t_{pk} \right)+ \mathcal{H}^{mn}\\
-&= a^{nk} a^{mp}\partial_k \Gamma^t_{pt} -\half a^{nm}a^{pk}\partial_k \Gamma^t_{pt} -  a^{nk} a^{mp}\partial_t \Gamma^t_{pk} +\half a^{nm}a^{pk}\partial_t \Gamma^t_{pk}+ \mathcal{H}^{mn}
+G^{mn} &= a^{nr} R^m_{. \ r}-\half a^{nr}\delta^m_k R \\
+&=  a^{nr} a^{ms} R_{pk}-\half a^{nm}a^{rs}R_{rs} \\
+&=  \left( a^{nr} a^{ms} -\half a^{nm}a^{rs}\right)R_{rs} \\
+&=  \left( a^{nr} a^{ms} -\half a^{nm}a^{rs}\right)\left(\partial_r \Gamma^t_{st} - \partial_t \Gamma^t_{rs} + \mathcal{F}^{rs}\right) \\
+&=  \left( a^{nr} a^{ms} -\half a^{nm}a^{rs}\right)\left(\partial_r \Gamma^t_{st} - \partial_t \Gamma^t_{rs} \right)+ \mathcal{H}^{mn}\\
+&= a^{nr} a^{ms}\partial_r \Gamma^t_{st} -\half a^{nm}a^{rs}\partial_r \Gamma^t_{st} -  a^{nr} a^{ms}\partial_t \Gamma^t_{rs} +\half a^{nm}a^{rs}\partial_t \Gamma^t_{rs}+ \mathcal{H}^{mn}
 \end{align}
 with $\mathcal{H}^{mn}$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
 Note that $\mathcal{H}^{mn}$ is a symmetrical object in $m,n$ . Indeed,
 \begin{align}
-\mathcal{H}^{mn} &= \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\mathcal{F}^{pk}\\
-\Rightarrow\spatie \mathcal{H}^{nm} &= \left( a^{mk} a^{np} -\half a^{mn}a^{pk}\right)\mathcal{F}^{pk}\\
-&= \left( a^{mp} a^{nk} -\half a^{mn}a^{kp}\right)\mathcal{F}^{kp}\\
+\mathcal{H}^{mn} &= \left( a^{nr} a^{ms} -\half a^{nm}a^{rs}\right)\mathcal{F}^{rs}\\
+\Rightarrow\spatie \mathcal{H}^{nm} &= \left( a^{mr} a^{ns} -\half a^{mn}a^{rs}\right)\mathcal{F}^{rs}\\
+&= \left( a^{ms} a^{nr} -\half a^{mn}a^{rs}\right)\mathcal{F}^{rs}\\
 &= \mathcal{H}^{mn}
 \end{align}
  
@@ -1576,11 +1607,11 @@ T^{mn} &= Q^{mn}+\mathcal{L}^{mn}
 with $\mathcal{L}^{mn}$ a symmetrical object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$  and  
 \begin{align}
  Q^{mn} &\equiv \left\{ \begin{array}{l}
-\cancel{a^{nk} a^{mp}\partial_r \Gamma^t_{st}} -\half a^{nm}a^{rs}\partial_r \Gamma^t_{st} \\\\ 
--  a^{nr} a^{ms}\partial_t \Gamma^t_{rs} +\half a^{nm}a^{rs}\partial_t \Gamma^t_{pk}\\\\
-+ a^{mn}a^{rs}\partial_{s}\Gamma^t_{rt}-\cancel{a^{mr}a^{ns}\partial_{s}\Gamma^t_{rt}}\\\\
+\cancel{a^{nr} a^{ms}\partial_r \Gamma^t_{st}} -\underbrace{\half a^{nm}a^{rs}\partial_r \Gamma^t_{st}}_{*} \\\\ 
+-  a^{nr} a^{ms}\partial_t \Gamma^t_{rs} +\half a^{nm}a^{rs}\partial_t \Gamma^t_{rs}\\\\
++ \underbrace{a^{mn}a^{rs}\partial_{s}\Gamma^t_{rt}}_{*}-\cancel{a^{mr}a^{ns}\partial_{s}\Gamma^t_{rt}}\\\\
 \end{array} \right. \\
-&= \half a^{mn}a^{rs}\partial_{s}\Gamma^t_{rt}+\half a^{nm}a^{rs}\partial_t \Gamma^t_{pk}-  a^{nr} a^{ms}\partial_t \Gamma^t_{rs}
+&= \half a^{mn}a^{rs}\left(\partial_{s}\Gamma^t_{rt}+\partial_t \Gamma^t_{rs}\right)-  a^{nr} a^{ms}\partial_t \Gamma^t_{rs}
 \end{align}
 $Q^{mn} $ a symmetrical object in $m,n$
 
@@ -1588,474 +1619,3 @@ $Q^{mn} $ a symmetrical object in $m,n$
 $$\blacklozenge$$
 \newpage
 
-
-
-\section{p110 - Exercise 12}
-\begin{tcolorbox}
-Prove that the quantities $$G^{mn}+ \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]$$ can be expressed in terms of the metric tensor and its first derivatives.
-\end{tcolorbox}
-Let's define 
-\begin{align}
-K^{mn} &\equiv \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]\\
-T^{mn} &\equiv G^{mn}+ K^{mn}
-\end{align}
-The strategy to proof this, is to separate in both terms of the expression, the parts that can be expressed in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ and the parts of higher order differentiation.
-We begin with the second term.\\
-As the covariant derivatives of the metric tensor vanish, we get
-\begin{align}
-K^{mn} &=\frac{1}{2a}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right] _{|rs}\\
-&= \frac{1}{2a}\left[ a_{|r} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)+ a \underbrace{\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)_{|r}}_{=0}\right] _{|s}\\
-&= \frac{1}{2a}\left[ a_{|r} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right] _{|s}\\
-&= \frac{1}{2a}\left[ \underbrace{a_{|rs}}_{=\partial^2_{rs} a} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)+a_{|r} \underbrace{\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)_{|s}}_{=0} \right]
-\end{align}
-Considering, 
-\begin{align}
-\partial^2_{rs} \ln a&= \partial_s \left(\frac{1}{a}\partial_r a\right)\\
-&= \frac{1}{a}\partial^2_{rs}a-\frac{1}{a^2}\partial_r a\partial_s a\\
-\Rightarrow\spatie \frac{1}{a}\partial^2_{rs}a &= \partial^2_{rs} \ln a+ \frac{1}{a^2}\partial_r a\partial_s a
-\end{align}
-\begin{align}
-\Rightarrow \quad K^{mn} &= \half\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\partial^2_{rs}\ln a+\mathcal{E}^{mn} 
-\end{align}
-with $\mathcal{E}^{mn}$ being a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
-Note that $\mathcal{E}^{mn}$ is a symmetrical object in $m,n$. Indeed,
-\begin{align}
-\mathcal{E}^{mn} &= \frac{1}{2a^2}\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\partial_r a\partial_s a\\
-\Rightarrow\spatie \mathcal{E}^{nm} &= \frac{1}{2a^2}\left( a^{nm}a^{rs}-a^{nr}a^{ms} \right)\partial_r a\partial_s a\\
-&= \frac{1}{2a^2}\left( a^{mn}a^{sr}-a^{ns}a^{mr} \right)\partial_s a\partial_r a\\
-&= \mathcal{E}^{mn}
-\end{align}
-
-We now rewrite $G^{mn}$. \\
-We have:
-\begin{align}
-G^{mn} &= a^{nk}G^m_{. \ k}\\
-G^m_{. \ k} &= R^m_{. \ k}-\half\delta^m_k R\\
-R^m_{. \ k} &= a^{mp} R_{pk}\\
-R &= a^{pk}R_{pk}
-\end{align}
-And by $3.205.$
-\begin{align}
-R_{pk} = \half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}
-\end{align}
-With $\mathcal{F}^{pk}$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only. Note that $\mathcal{F}^{pk}$ is a symmetrical object in $p,k$ as $R_{pk}$ is a symmetrical tensor in $p,k$.
-Hence by $(15)$ to $(19)$:
-\begin{align}
-G^{mn} &= a^{nk} R^m_{. \ k}-\half a^{nk}\delta^m_k R \\
-&=  a^{nk} a^{mp} R_{pk}-\half a^{nm}a^{pk}R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}\right) \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} \right)+ \mathcal{H}^{mn}\\
-&= \left[ \half a^{nk}a^{mp}\partial^2_{pk} \ln a -  a^{nk}a^{mp}\partial_t \Gamma^t_{pk} -\kwart a^{nm} a^{pk} \partial^2_{pk} \ln a +\half a^{nm} a^{pk}  \partial_t \Gamma^t_{pk} \right]+ \mathcal{H}^{mn}
-\end{align}
-with $\mathcal{H}^{mn}$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
-Note that $\mathcal{H}^{mn}$ is a symmetrical object in $m,n$ . Indeed,
-\begin{align}
-\mathcal{H}^{mn} &= \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\mathcal{F}^{pk}\\
-\Rightarrow\spatie \mathcal{H}^{nm} &= \left( a^{mk} a^{np} -\half a^{mn}a^{pk}\right)\mathcal{F}^{pk}\\
-&= \left( a^{mp} a^{nk} -\half a^{mn}a^{kp}\right)\mathcal{F}^{kp}\\
-&= \mathcal{H}^{mn}
-\end{align}
- 
-Putting  $(10)$ and $(2)$ together with $\mathcal{L}^{mn}=\mathcal{E}^{mn}+ \mathcal{H}^{mn}$ we get,
-\begin{align}
-T^{mn} &= Q^{mn}+\mathcal{L}^{mn}
-\end{align}
-with $\mathcal{L}^{mn}$ a symmetrical object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$  and  
-\begin{align}
- Q^{mn} &\equiv \left\{ \begin{array}{l}
-\half a^{nr}a^{ms}\partial^2_{rs} \ln a -  a^{nr}a^{ms}\partial_t \Gamma^t_{rs}\\\\ -\kwart a^{nm} a^{rs} \partial^2_{rs} \ln a
-+\half a^{nm} a^{rs}  \partial_t \Gamma^t_{rs}\\\\+\half a^{mn}a^{rs}\partial^2_{rs}\ln a-\half a^{mr}a^{ns} \partial^2_{rs}\ln a\\\\
-\end{array} \right. \\
-&= \kwart a^{mn}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\partial_t \Gamma^t_{rs}
-\end{align}
-Note that 
-\begin{align}
- Q^{nm} &= \kwart a^{nm}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{nm}a^{rs}- a^{ns}a^{mr}\right)\partial_t \Gamma^t_{rs} \\
-&= \kwart a^{mn}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{mn}a^{rs}- a^{nr}a^{ms}\right)\partial_t \Gamma^t_{sr} \\
-&= Q^{mn} 
-\end{align}
-So $Q^{mn} $ is a symmetrical object in $m,n$
-
-Given that by $(2.541.)$,  
-\begin{align}
-\partial^2_{rs} \ln a &= \partial_{s} \partial_r \ln a \\
-&= \partial_{s} \left(a^{kt}\partial_r a_{kt}\right)\\
-&= \partial_{s} a^{kt}\partial_{r} a_{kt}+a^{kt}\partial^2_{rs} a_{kt} 
-\end{align}
-
-$(32)$ can be written as
-
-\begin{align}
-Q^{mn} &= \mathcal{P}^{mn}+ \mathcal{Z}^{mn}
-\end{align}
-with $\mathcal{Z}^{mn} = \kwart a^{mn}a^{rs}\partial_{s} a^{kt}\partial_{r} a_{kt}$ a symmetric object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$
- 
-and 
-\begin{align}
-\mathcal{P}^{mn} = \kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} + \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\partial_t \Gamma^t_{rs}
-\end{align}
-Expanding the Christoffel symbols and playing with the dummy indices, gives
-\begin{align}
-\mathcal{P}^{mn} &= \left\{\begin{array}{l}\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} \\\\
-+ \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\left( [rs,k]\partial_t a^{tk}+ a^{kt}\partial_t[rs,k]\right)
-\end{array}\right.\\
-&= \half \mathcal{V}^{mn}  +\mathcal{A}^{mn}
-\end{align}
-with 
-\begin{align}
-\mathcal{A}^{mn} &= \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right) [rs,k]\partial_t a^{tk}
-\end{align}
-and 
-\begin{align}
-\half \mathcal{V}_{mn} &= \left\{\begin{array}{l}
-\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} \\\\
-+ \left( \kwart a^{mn}a^{rs} a^{kt}- \half a^{ms}a^{nr} a^{kt}\right)\left( \partial^2_{tr}a_{sk}+\partial^2_{ts}a_{rk}-\partial^2_{tk}a_{rs}\right)
-\end{array}\right.\\
-&= \left\{\begin{array}{l}
-\cancel{\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} }
-+ \underbrace{\kwart a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}+ \kwart a^{mn}a^{rs} a^{kt} \partial^2_{ts}a_{rk}}_{= \half a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}}
-- \cancel{\kwart a^{mn}a^{rs} a^{kt} \partial^2_{tk}a_{rs}}\\\\
-- \half a^{ms}a^{nr} a^{kt} \partial^2_{tr}a_{sk}
-- \half a^{ms}a^{nr} a^{kt} \partial^2_{ts}a_{rk}
-+ \half a^{ms}a^{nr} a^{kt} \partial^2_{tk}a_{rs}\\
-\end{array}\right.
-\end{align}
-giving 
-\begin{align}
-\mathcal{V}_{mn} &=
- a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} a^{kt} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} a^{kt} \partial^2_{ts}a_{rk}
-+  a^{ms}a^{nr} a^{kt} \partial^2_{tk}a_{rs}\\
-&=
- \left( a^{mn}a^{rs}  \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} \partial^2_{kr}a_{st}
--  a^{ms}a^{nr}  \partial^2_{ts}a_{rk}
-+  a^{ms}a^{nr} \partial^2_{tk}a_{rs}\right)a^{kt}\\
-&=
- \left( a^{mn}a^{rs}  \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr}  \partial^2_{tr}a_{sk}
-+  a^{ms}a^{nr} \partial^2_{tk}a_{rs}\right)a^{kt}
-\end{align}
-Does $\mathcal{V}_{mn}$ vanish ?!
-
-$$\blacklozenge$$
-\newpage
-
-
-
-
-\section{p110 - Exercise 12}
-\begin{tcolorbox}
-Prove that the quantities $$G^{mn}+ \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]$$ can be expressed in terms of the metric tensor and its first derivatives.
-\end{tcolorbox}
-Let's define 
-\begin{align}
-K^{mn} &\equiv \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]\\
-T^{mn} &\equiv G^{mn}+ K^{mn}
-\end{align}
-The strategy to proof this, is to separate in both terms of the expression, the parts that can be expressed in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ and the parts of higher order differentiation.
-We begin with the second term.\\
-As the covariant derivatives of the metric tensor vanish, we get
-\begin{align}
-K^{mn} &=\frac{1}{2a}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right] _{|rs}\\
-&= \frac{1}{2a}\left[ a_{|r} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)+ a \underbrace{\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)_{|r}}_{=0}\right] _{|s}\\
-&= \frac{1}{2a}\left[ a_{|r} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right] _{|s}\\
-&= \frac{1}{2a}\left[ \underbrace{a_{|rs}}_{=\partial^2_{rs} a+\Gamma^p_{sr} \partial_p a} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)+a_{|r} \underbrace{\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)_{|s}}_{=0} \right]
-\end{align}
-Considering, 
-\begin{align}
-\partial^2_{rs} \ln a&= \partial_s \left(\frac{1}{a}\partial_r a\right)\\
-&= \frac{1}{a}\partial^2_{rs}a-\frac{1}{a^2}\partial_r a\partial_s a\\
-\Rightarrow\spatie \frac{1}{a}\partial^2_{rs}a &= \partial^2_{rs} \ln a+ \frac{1}{a^2}\partial_r a\partial_s a
-\end{align}
-\begin{align}
-\Rightarrow \quad K^{mn} &= \half\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\partial^2_{rs}\ln a+\mathcal{E}^{mn} 
-\end{align}
-with $\mathcal{E}^{mn}$ being a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
-Note that $\mathcal{E}^{mn}$ is a symmetrical object in $m,n$. Indeed,
-\begin{align}
-\mathcal{E}^{mn} &= \frac{1}{2a^2}\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\partial_r a\partial_s a\\
-\Rightarrow\spatie \mathcal{E}^{nm} &= \frac{1}{2a^2}\left( a^{nm}a^{rs}-a^{nr}a^{ms} \right)\partial_r a\partial_s a\\
-&= \frac{1}{2a^2}\left( a^{mn}a^{sr}-a^{ns}a^{mr} \right)\partial_s a\partial_r a\\
-&= \mathcal{E}^{mn}
-\end{align}
-
-We now rewrite $G^{mn}$. \\
-We have:
-\begin{align}
-G^{mn} &= a^{nk}G^m_{. \ k}\\
-G^m_{. \ k} &= R^m_{. \ k}-\half\delta^m_k R\\
-R^m_{. \ k} &= a^{mp} R_{pk}\\
-R &= a^{pk}R_{pk}
-\end{align}
-And by $3.205.$
-\begin{align}
-R_{pk} = \half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}
-\end{align}
-With $\mathcal{F}^{pk}= \Gamma^i_{pj}\Gamma^j_{kj}-\half\Gamma^i_{pk}\partial_i\ln a$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only. Note that $\mathcal{F}^{pk}$ is a symmetrical object in $p,k$ as $R_{pk}$ is a symmetrical tensor in $p,k$.
-Hence by $(15)$ to $(19)$:
-\begin{align}
-G^{mn} &= a^{nk} R^m_{. \ k}-\half a^{nk}\delta^m_k R \\
-&=  a^{nk} a^{mp} R_{pk}-\half a^{nm}a^{pk}R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}\right) \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} \right)+ \mathcal{H}^{mn}\\
-&= \left[ \half a^{nk}a^{mp}\partial^2_{pk} \ln a -  a^{nk}a^{mp}\partial_t \Gamma^t_{pk} -\kwart a^{nm} a^{pk} \partial^2_{pk} \ln a +\half a^{nm} a^{pk}  \partial_t \Gamma^t_{pk} \right]+ \mathcal{H}^{mn}
-\end{align}
-with $\mathcal{H}^{mn}$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
-Note that $\mathcal{H}^{mn}$ is a symmetrical object in $m,n$ . Indeed,
-\begin{align}
-\mathcal{H}^{mn} &= \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\mathcal{F}^{pk}\\
-\Rightarrow\spatie \mathcal{H}^{nm} &= \left( a^{mk} a^{np} -\half a^{mn}a^{pk}\right)\mathcal{F}^{pk}\\
-&= \left( a^{mp} a^{nk} -\half a^{mn}a^{kp}\right)\mathcal{F}^{kp}\\
-&= \mathcal{H}^{mn}
-\end{align}
- 
-Putting  $(10)$ and $(2)$ together with $\mathcal{L}^{mn}=\mathcal{E}^{mn}+ \mathcal{H}^{mn}$ we get,
-\begin{align}
-T^{mn} &= Q^{mn}+\mathcal{L}^{mn}
-\end{align}
-with $\mathcal{L}^{mn}$ a symmetrical object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$  and  
-\begin{align}
- Q^{mn} &\equiv \left\{ \begin{array}{l}
-\cancel{\half a^{nr}a^{ms}\partial^2_{rs} \ln a} -  a^{nr}a^{ms}\partial_t \Gamma^t_{rs}\\\\ -\kwart a^{nm} a^{rs} \partial^2_{rs} \ln a
-+\half a^{nm} a^{rs}  \partial_t \Gamma^t_{rs}\\\\+\half a^{mn}a^{rs}\partial^2_{rs}\ln a-\cancel{\half a^{mr}a^{ns} \partial^2_{rs}\ln a}\\\\
-\end{array} \right. \\
-&= \kwart a^{mn}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\partial_t \Gamma^t_{rs}
-\end{align}
-Note that 
-\begin{align}
- Q^{nm} &= \kwart a^{nm}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{nm}a^{rs}- a^{ns}a^{mr}\right)\partial_t \Gamma^t_{rs} \\
-&= \kwart a^{mn}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{mn}a^{rs}- a^{nr}a^{ms}\right)\partial_t \Gamma^t_{sr} \\
-&= Q^{mn} 
-\end{align}
-So $Q^{mn} $ is a symmetrical object in $m,n$
-
-Given that by $(2.216.)$,  
-\begin{align}
-\partial^2_{rs} \ln a &= \partial_{s} \partial_r \ln a \\
-&= \partial_{s} \left(a^{kt}\partial_r a_{kt}\right)\\
-&= \partial_{s} a^{kt}\partial_{r} a_{kt}+a^{kt}\partial^2_{rs} a_{kt} 
-\end{align}
-
-$(32)$ can be written as
-
-\begin{align}
-Q^{mn} &= \mathcal{P}^{mn}+ \mathcal{Z}^{mn}
-\end{align}
-with $\mathcal{Z}^{mn} = \kwart a^{mn}a^{rs}\partial_{s} a^{kt}\partial_{r} a_{kt}$ a symmetric object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$
- 
-and 
-\begin{align}
-\mathcal{P}^{mn} = \kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} + \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\partial_t \Gamma^t_{rs}
-\end{align}
-Expanding the Christoffel symbols and playing with the dummy indices, gives
-\begin{align}
-\mathcal{P}^{mn} &= \left\{\begin{array}{l}\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} \\\\
-+ \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\left( [rs,k]\partial_t a^{tk}+ a^{kt}\partial_t[rs,k]\right)
-\end{array}\right.\\
-&= \half \mathcal{V}^{mn}  +\mathcal{A}^{mn}
-\end{align}
-with 
-\begin{align}
-\mathcal{A}^{mn} &= \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right) [rs,k]\partial_t a^{tk}
-\end{align}
-and 
-\begin{align}
-\half \mathcal{V}^{mn} &= \left\{\begin{array}{l}
-\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} \\\\
-+ \left( \kwart a^{mn}a^{rs} a^{kt}- \half a^{ms}a^{nr} a^{kt}\right)\left( \partial^2_{tr}a_{sk}+\partial^2_{ts}a_{rk}-\partial^2_{tk}a_{rs}\right)
-\end{array}\right.\\
-&= \left\{\begin{array}{l}
-\cancel{\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} }\\\\
-+ \underbrace{\kwart a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}+ \kwart a^{mn}a^{rs} a^{kt} \partial^2_{ts}a_{rk}}_{= \half a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}}
-- \cancel{\kwart a^{mn}a^{rs} a^{kt} \partial^2_{tk}a_{rs}}\\\\
-- \half a^{ms}a^{nr} a^{kt} \partial^2_{tr}a_{sk}
-- \half a^{ms}a^{nr} a^{kt} \partial^2_{ts}a_{rk}
-+ \half a^{ms}a^{nr} a^{kt} \partial^2_{tk}a_{rs}\\
-\end{array}\right.
-\end{align}
-giving 
-\begin{align}
-\mathcal{V}^{mn} &=
- a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} a^{kt} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} a^{kt} \partial^2_{ts}a_{rk}
-+  a^{ms}a^{nr} a^{kt} \partial^2_{tk}a_{rs}\\
- &=
- \left(
-   a^{mn}a^{rs} a^{kt} 
--  a^{ms}a^{nr} a^{kt}
--  a^{mr}a^{ns} a^{kt} 
-+  a^{ms}a^{nk} a^{rt} \right)\partial^2_{rt}a_{ks}\\
-&=
- \left(
-   a^{mn}a^{rs} a^{kt} 
--  a^{mk}a^{nr} a^{st}
--  a^{mt}a^{ns} a^{kr} 
-+  a^{ms}a^{nk} a^{rt} \right)\partial^2_{rt}a_{ks}\\
-\end{align}
-Does $\mathcal{V}_{mn}$ vanish ?!
-
-$$\blacklozenge$$
-\newpage
-
-
-
-\section{p110 - Exercise 12}
-\begin{tcolorbox}
-Prove that the quantities $$G^{mn}+ \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]$$ can be expressed in terms of the metric tensor and its first derivatives.
-\end{tcolorbox}
-Let's define 
-\begin{align}
-K^{mn} &\equiv \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]\\
-T^{mn} &\equiv G^{mn}+ K^{mn}
-\end{align}
-The strategy to proof this, is to separate in both terms of the expression, the parts that can be expressed in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ and the parts of higher order differentiation.
-We begin with the second term.\\
-As the covariant derivatives of the metric tensor vanish, we get
-\begin{align}
-K^{mn} &=\frac{1}{2a}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right] _{|rs}\\
-&= \frac{1}{2a}\left[ a_{|r} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)+ a \underbrace{\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)_{|r}}_{=0}\right] _{|s}\\
-&= \frac{1}{2a}\left[ a_{|r} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right] _{|s}\\
-&= \frac{1}{2a}\left[ \underbrace{a_{|rs}}_{=\partial^2_{rs} a+\Gamma^p_{sr} \partial_p a} \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)+a_{|r} \underbrace{\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)_{|s}}_{=0} \right]
-\end{align}
-Considering, 
-\begin{align}
-\partial^2_{rs} \ln a&= \partial_s \left(\frac{1}{a}\partial_r a\right)\\
-&= \frac{1}{a}\partial^2_{rs}a-\frac{1}{a^2}\partial_r a\partial_s a\\
-\Rightarrow\spatie \frac{1}{a}\partial^2_{rs}a &= \partial^2_{rs} \ln a+ \frac{1}{a^2}\partial_r a\partial_s a
-\end{align}
-\begin{align}
-\Rightarrow \quad K^{mn} &= \half\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\partial^2_{rs}\ln a+\mathcal{E}^{mn} 
-\end{align}
-with $\mathcal{E}^{mn}$ being a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
-Note that $\mathcal{E}^{mn}$ is a symmetrical object in $m,n$. Indeed,
-\begin{align}
-\mathcal{E}^{mn} &= \frac{1}{2a^2}\left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\partial_r a\partial_s a\\
-\Rightarrow\spatie \mathcal{E}^{nm} &= \frac{1}{2a^2}\left( a^{nm}a^{rs}-a^{nr}a^{ms} \right)\partial_r a\partial_s a\\
-&= \frac{1}{2a^2}\left( a^{mn}a^{sr}-a^{ns}a^{mr} \right)\partial_s a\partial_r a\\
-&= \mathcal{E}^{mn}
-\end{align}
-
-We now rewrite $G^{mn}$. \\
-We have:
-\begin{align}
-G^{mn} &= a^{nk}a^{mp}G_{pk}\\
-G_{pk} &= R_{pk}-\half a_{pk}R\\
-R &= a^{pk}R_{pk}
-\end{align}
-And by $3.205.$
-\begin{align}
-R_{pk} = \half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}
-\end{align}
-With $\mathcal{F}^{pk}= \Gamma^i_{pj}\Gamma^j_{kj}-\half\Gamma^i_{pk}\partial_i\ln a$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only. Note that $\mathcal{F}^{pk}$ is a symmetrical object in $p,k$ as $R_{pk}$ is a symmetrical tensor in $p,k$.
-Hence by $(15)$ to $(19)$:
-\begin{align}
-G^{mn} &= a^{nk}a^{mp}R_{pk}-\half a^{nk}a^{mp} a_{pk}R \\
-&=  a^{nk} a^{mp} R_{pk}-\half a^{nm}a^{pk}R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)R_{pk} \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} + \mathcal{F}^{pk}\right) \\
-&=  \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\left(\half \partial^2_{pk} \ln a -  \partial_t \Gamma^t_{pk} \right)+ \mathcal{H}^{mn}\\
-&= \left[ \half a^{nk}a^{mp}\partial^2_{pk} \ln a -  a^{nk}a^{mp}\partial_t \Gamma^t_{pk} -\kwart a^{nm} a^{pk} \partial^2_{pk} \ln a +\half a^{nm} a^{pk}  \partial_t \Gamma^t_{pk} \right]+ \mathcal{H}^{mn}
-\end{align}
-with $\mathcal{H}^{mn}$ a function in  $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$ only.\\
-Note that $\mathcal{H}^{mn}$ is a symmetrical object in $m,n$ . Indeed,
-\begin{align}
-\mathcal{H}^{mn} &= \left( a^{nk} a^{mp} -\half a^{nm}a^{pk}\right)\mathcal{F}^{pk}\\
-\Rightarrow\spatie \mathcal{H}^{nm} &= \left( a^{mk} a^{np} -\half a^{mn}a^{pk}\right)\mathcal{F}^{pk}\\
-&= \left( a^{mp} a^{nk} -\half a^{mn}a^{kp}\right)\mathcal{F}^{kp}\\
-&= \mathcal{H}^{mn}
-\end{align}
- 
-Putting  $(10)$ and $(2)$ together with $\mathcal{L}^{mn}=\mathcal{E}^{mn}+ \mathcal{H}^{mn}$ we get,
-\begin{align}
-T^{mn} &= Q^{mn}+\mathcal{L}^{mn}
-\end{align}
-with $\mathcal{L}^{mn}$ a symmetrical object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$  and  
-\begin{align}
- Q^{mn} &\equiv \left\{ \begin{array}{l}
-\cancel{\half a^{nr}a^{ms}\partial^2_{rs} \ln a} -  a^{nr}a^{ms}\partial_t \Gamma^t_{rs}\\\\ -\kwart a^{nm} a^{rs} \partial^2_{rs} \ln a
-+\half a^{nm} a^{rs}  \partial_t \Gamma^t_{rs}\\\\+\half a^{mn}a^{rs}\partial^2_{rs}\ln a-\cancel{\half a^{mr}a^{ns} \partial^2_{rs}\ln a}\\\\
-\end{array} \right. \\
-&= \kwart a^{mn}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\partial_t \Gamma^t_{rs}
-\end{align}
-Note that 
-\begin{align}
- Q^{nm} &= \kwart a^{nm}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{nm}a^{rs}- a^{ns}a^{mr}\right)\partial_t \Gamma^t_{rs} \\
-&= \kwart a^{mn}a^{rs}\partial^2_{rs}\ln a + \left( \half a^{mn}a^{rs}- a^{nr}a^{ms}\right)\partial_t \Gamma^t_{sr} \\
-&= Q^{mn} 
-\end{align}
-So $Q^{mn} $ is a symmetrical object in $m,n$
-
-Given that by $(2.216.)$,  
-\begin{align}
-\partial^2_{rs} \ln a &= \partial_{s} \partial_r \ln a \\
-&= \partial_{s} \left(a^{kt}\partial_r a_{kt}\right)\\
-&= \partial_{s} a^{kt}\partial_{r} a_{kt}+a^{kt}\partial^2_{rs} a_{kt} 
-\end{align}
-
-$(32)$ can be written as
-
-\begin{align}
-Q^{mn} &= \mathcal{P}^{mn}+ \mathcal{Z}^{mn}
-\end{align}
-with $\mathcal{Z}^{mn} = \kwart a^{mn}a^{rs}\partial_{s} a^{kt}\partial_{r} a_{kt}$ a symmetric object in $m,n$ and depending only on terms in $a_{ij}, a^{ij}, \partial_k a_{ij}, \partial_k a^{ij}$
- 
-and 
-\begin{align}
-\mathcal{P}^{mn} = \kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} + \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\partial_t \Gamma^t_{rs}
-\end{align}
-Expanding the Christoffel symbols and playing with the dummy indices, gives
-\begin{align}
-\mathcal{P}^{mn} &= \left\{\begin{array}{l}\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} \\\\
-+ \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right)\left( [rs,k]\partial_t a^{tk}+ a^{kt}\partial_t[rs,k]\right)
-\end{array}\right.\\
-&= \half \mathcal{V}^{mn}  +\mathcal{A}^{mn}
-\end{align}
-with 
-\begin{align}
-\mathcal{A}^{mn} &= \left( \half a^{mn}a^{rs}- a^{ms}a^{nr}\right) [rs,k]\partial_t a^{tk}
-\end{align}
-and 
-\begin{align}
-\half \mathcal{V}^{mn} &= \left\{\begin{array}{l}
-\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} \\\\
-+ \left( \kwart a^{mn}a^{rs} a^{kt}- \half a^{ms}a^{nr} a^{kt}\right)\left( \partial^2_{tr}a_{sk}+\partial^2_{ts}a_{rk}-\partial^2_{tk}a_{rs}\right)
-\end{array}\right.\\
-&= \left\{\begin{array}{l}
-\cancel{\kwart a^{mn}a^{rs}a^{kt}\partial^2_{rs} a_{kt} }\\\\
-+ \underbrace{\kwart a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}+ \kwart a^{mn}a^{rs} a^{kt} \partial^2_{ts}a_{rk}}_{= \half a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}}
-- \cancel{\kwart a^{mn}a^{rs} a^{kt} \partial^2_{tk}a_{rs}}\\\\
-- \half a^{ms}a^{nr} a^{kt} \partial^2_{tr}a_{sk}
-- \half a^{ms}a^{nr} a^{kt} \partial^2_{ts}a_{rk}
-+ \half a^{ms}a^{nr} a^{kt} \partial^2_{tk}a_{rs}\\
-\end{array}\right.
-\end{align}
-giving 
-\begin{align}
-\mathcal{V}^{mn} &=
- a^{mn}a^{rs} a^{kt} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} a^{kt} \partial^2_{tr}a_{sk}
--  a^{ms}a^{nr} a^{kt} \partial^2_{ts}a_{rk}
-+  a^{ms}a^{nr} a^{kt} \partial^2_{tk}a_{rs}\\
- &=
- \left(
-   a^{mn}a^{rs} a^{kt} 
--  a^{ms}a^{nr} a^{kt}
--  a^{mr}a^{ns} a^{kt} 
-+  a^{ms}a^{nk} a^{rt} \right)\partial^2_{rt}a_{ks}\\
-&=
- \left(
-   a^{mn}a^{rs} a^{kt} 
--  a^{mk}a^{nr} a^{st}
--  a^{mt}a^{ns} a^{kr} 
-+  a^{ms}a^{nk} a^{rt} \right)\partial^2_{rt}a_{ks}\\
-\end{align}
-Does $\mathcal{V}_{mn}$ vanish ?!
-
-$$\blacklozenge$$
-\newpage
