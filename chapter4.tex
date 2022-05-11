@@ -1,9 +1,537 @@
 \chapter{Special types of space}
 \pagebreak[4]
-\section{p.. - Clarification}
+\section{p112 - Exercise}
 \begin{tcolorbox}
+Deduce from $4.110.$ that the Gaussian curvature of a $V_2$ positive-definite metric is given by $$ G = \frac{R_{1212}}{a_{11}a_{22}-a_{12}^2}$$
 \end{tcolorbox}
-a continuous mapping exist from polar to orthogonal Cartesian coordinates both  coordinate system can be written under the required form (3.101) and so can be called "flat".
+From p. 86 (exercise) we know that all the components of $R_{mnrs}$ can be expressed as terms of $R_{1212}$ (or vanish). \\
+So by $4.110.$, 
+\begin{align}
+K\left({a_{11}a_{22}-a_{12}a_{21}}\right) = R_{1212}
+\end{align}
+and from page 96 $3.415.$ we know that for $V_2$, $K=G$. Hence,
+\begin{align}
+G = \frac{R_{1212}}{\left(a_{11}a_{22}-a_{12}a_{21}\right)}
+\end{align}
+$$\blacklozenge$$
+\newpage
 
+\section{p113 - Exercise}
+\begin{tcolorbox}
+Prove that, in a space $V_N$ of constant curvature $K$,$$\mathbf{4.115.}\spatie R_{mn} = -\left(N-1\right)Ka_{mn}, \quad R = -N\left(N-1\right)K$$
+\end{tcolorbox}
+We have
+\begin{align}
+R_{mn} = R^s_{.mns} = a^{sk}R_{kmns}
+\end{align}
+From $4.114.$
+\begin{align}
+R_{kmns} &= K\left(a_{kn}a_{ms}-a_{ks}a_{mn}\right)\\
+&= K \left(\underbrace{\delta^s_n a_{ms}}_{a{mn}}-Na_{mn}\right)\\
+&= K\left(1-N\right)a_{mn}
+\end{align}
+and 
+\begin{align}
+R &= R^n_{.n}\\
+&= a^{kn}R{kn}\\
+&= -\underbrace{a^{kn}a_{kn}}_{N}\left( N-1 \right)K\\
+&= -N\left( N-1 \right)K
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p113 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{4.117.}\spatie \frac{\delta^2 \eta^r}{\delta s^2} + \epsilon K\eta^r =0$$
+\end{tcolorbox}
+We have
+\begin{align}
+R^r_{.smn} &= a^{rk} R_{ksmn}\\
+\text{(4.114)}\Rightarrow \spatie &= a^{rk} K\left(a_{km}a_{sn}-a_{kn}a_{sm}\right)\\
+&= K\left(\delta^r_m a_{sn}-\delta^r_n a_{sm}\right)
+\end{align}
+\begin{align}
+\text{(3.311) and (3)}\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\left(\delta^r_m a_{sn}-\delta^r_n a_{sm}\right)p^s\eta^m p^n\\
+\Leftrightarrow\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\left(\delta^r_m \eta^m \underbrace{a_{sn}p^s p^n}_{=\epsilon}-\delta^r_n \underbrace{a_{sm}p^s\eta^m}_{=0} p^n\right)\\
+\Leftrightarrow\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\epsilon\underbrace{\delta^r_m \eta^m}_{=\eta^r} \\
+\Leftrightarrow\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\epsilon\eta^r
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p114 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{4.118.}\spatie \dv[2]{\left(X_r\eta^r\right)}{s} + \epsilon K\left(X_r\eta^r\right) =0$$
+\end{tcolorbox}
+We know that $\frac{\delta X_r}{\delta s} = 0$ (parallel transport)
+\begin{align}
+\frac{\delta \left(X_r\eta^r\right)}{\delta s}&= \eta^r\underbrace{\frac{\delta X_r}{\delta s}}_{=0}+X_r\frac{\delta \eta^r}{\delta s}\\
+\Rightarrow\spatie \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s}&= \underbrace{\frac{\delta X_r}{\delta s}}_{=0}\frac{\delta \eta^r}{\delta s}+X_r\frac{\delta^2 \eta^r}{\delta s^2}\\
+\Rightarrow\spatie X_r\frac{\delta^2 \eta^r}{\delta s^2}&= \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s^2}\\
+\text{but}\spatie \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s^2} &=  \dv[2]{X_r\eta^r}{s} \quad \text{ as } X_r\eta^r \text{ is an invariant}\\
+\Rightarrow X_r\frac{\delta^2 \eta^r}{\delta s^2}&=\dv[2]{X_r\eta^r}{s}\\
+\text{and so}\spatie \frac{\delta^2 \left(\eta^r\right)}{\delta s^2}X_r + \epsilon K\left(X_r\eta^r\right) &= \dv[2]{X_r\eta^r}{s}+ \epsilon K\left(X_r\eta^r\right) = 0
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p115 - Exercise}
+\begin{tcolorbox}
+By taking an orthonormal set of $N$ unit vectors propagated parallely along the geodesic, deduce from $4.120a$ that the magnitude $\eta$ of the vector $\eta^r$ is given by $$ \eta = C\left|\sin \left(s\sqrt{\epsilon K}\right)\right|$$ where $C$ is a constant.
+\end{tcolorbox}
+We have by $4.120a$
+\begin{align}
+X_r \eta^r &= A\sin \left(s\sqrt{\epsilon K}\right)
+\end{align}
+We choose $N$ different $X^{(k)}_r$ $(k= 1,2,\dots, N)$ which are orthonormal.
+Applying $(1)$ $N$ times with the different $X^{(k)}_r$ $(k= 1,2,\dots, N)$, we get
+\begin{align}
+X^{(k)}_r \eta^r &= A^{(k)}\sin \left(s\sqrt{\epsilon K}\right)
+\end{align}
+But as the $X^{(k)}_r$ are orthonormal and are used as a basis at the considered point of the geodesic we have 
+\begin{align}
+X^{(k)}_r &= \delta^k_r
+\end{align}
+So, $(2)$ becomes
+\begin{align}
+\eta^k &= A^{(k)}\sin \left(s\sqrt{\epsilon K}\right)
+\end{align}
+which are the components of the displacement vector in the orthonormal basis. By $\mathbf{2.301.}$ :
+\begin{align}
+Y^2 &= \epsilon a_{mn} Y^m Y^n\\
+\Rightarrow \spatie \eta^2 &= \epsilon a_{mn} A^{(m)} A^{(n)}\sin^2 \left(s\sqrt{\epsilon K}\right)\\
+\Rightarrow \spatie \eta &= C\left|\sin \left(s\sqrt{\epsilon K}\right)\right|\\
+\text{with}\spatie C&= \sqrt{\left|\epsilon a_{mn} A^{(m)} A^{(n)}\right|}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p118 - Exercise}
+\begin{tcolorbox}
+Examine the limit of the form $\mathbf{4.130}$ as $R$ tends to infinity, and interpet the result.
+\end{tcolorbox}
+We have $$\mathbf{4.130.}\spatie ds^2 = dr^2+R^2\sin^2\left(\frac{r}{R}\right)\left(d\theta^2 + \sin^2\theta d\phi^2\right)$$
+But $\sin \epsilon \approx \epsilon$ for $\epsilon  \ll 1$. So
+\begin{align}
+ \lim_{R\rightarrow \infty} ds^2 &= dr^2+R^2\left(\frac{r}{R}\right)^2\left(d\theta^2 + \sin^2\theta d\phi^2\right)\\
+ &= dr^2+\left(r d\theta^2 \right) + \left(r\sin\theta d\phi\right)^2
+ \end{align}
+ This is the metric form for an Euclidean 3-space with spherical polar coordinates (see $\mathbf{2.532.}$ page 54).
+$$\blacklozenge$$
+\newpage
+
+\section{p119 - Exercise}
+\begin{tcolorbox}
+Show that a transformation of a homogeneous coordinate system  into another homogeneous system is necessarily linear. (Use the transformation equation $\mathbf{2.507}$ for Christoffel symbols, noting that all Christoffel symbols vanish  when the coordinates are homogeneous).
+\end{tcolorbox}
+By $2.507$ we have the transformation rule 
+\begin{align}
+\Gamma^{'a}_{bc} = \Gamma^{r}_{mn}\partial_r z^a\partial_b z^m \partial_c z^n + \partial_r z^a\frac{\partial^2 z^r}{\partial z^b \partial z^c} 
+\end{align}
+But, as both coordinate system are homogeneous, all Christoffel symbols vanish and so
+\begin{align}
+\Gamma^{'a}_{bc} = \partial_r z^a\frac{\partial^2 z^r}{\partial z^b \partial z^c} &=0\\
+\Rightarrow \spatie \partial_r z^a\frac{\partial^2 z^r}{\partial z^b \partial z^c} &=0
+\end{align}
+As the Jacobian can't vanish the possibility of having $\partial_r z^a=0$ $\forall a, r$ is excluded. Hence we must have $\frac{\partial^2 z^r}{\partial z^b \partial z^c} =0$. And have a linear solution of the form
+\begin{align}
+z^r = A_k z^{'k}+C
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p120 - Exercise}
+\begin{tcolorbox}
+If $z_r, z^{'}_r$ are two systems of rectangular Cartesian coordinates in Euclidean 3-space, what is the geometrical interpretation of the constants in $\mathbf{4.204}$ and of the orthogonality conditions $\mathbf{4.209}$ ?
+\end{tcolorbox}
+We have 
+\begin{align}
+z^{'}_m &= A_{mn}z_n+A_m 
+\end{align}
+As we assume that the Jacobian of the transformation does not vanish and thus the mapping is bijective, in an Euclidean 3-space $A_m$ will perform a $\mathit{translation}$ while $A_{mn}$ can be interpreted as a combination rotation/reflection/stretching/contraction/shearing. I.e. the mapping is an $\mathit{affine}$ transformation.\\
+The condition $\mathbf{4.209}$ restricts the action of $A_{mn}$ to a combination of rotation/reflection. Indeed, a rotation/reflection can be represented by $R= R_x\left(\gamma\right) \circ R_y\left(\beta\right)\circ  R_z\left(\alpha\right)$ with 
+\begin{align}
+R_x = \begin{pmatrix}
+\pm 1&0  &0  \\
+0&\cos\gamma & -\sin\gamma \\
+ 0&\sin\gamma & \cos\gamma   \\
+\end{pmatrix}
+R_y = \begin{pmatrix}
+\cos\beta & 0& -\sin\beta \\
+ 0& \pm 1&0 \\
+ \sin\beta & 0& \cos\beta\\
+\end{pmatrix}
+R_z = \begin{pmatrix}
+\cos\alpha & -\sin\alpha  & 0 \\
+ \sin\alpha & \cos\alpha  & 0 \\
+  0&0  & \pm 1 \\
+\end{pmatrix}
+\end{align}
+Note that for every axis, $R_k^{T} R_k^{} = \mathbb{I}_3$.\\
+Be $A_{mn} = R_x\left(\gamma\right) \circ R_y\left(\beta\right)\circ  R_z\left(\alpha\right)$
+We have by $\mathbf{4.209}$, $A_{mq}A_{mq}= \delta_{pq}$ which can be expressed as 
+\begin{align}
+A^{T}A &= \mathbb{I}_3\\
+\Rightarrow \spatie \mathbb{I}_3 &= \left( R_x R_y R_z\right)^T R_xR_yR_z\\
+&=  \underbrace{R_z^T \underbrace{R_y^T\underbrace{R_x^TR_x}_{= \mathbb{I}} R_y}_{= \mathbb{I}}R_z}_{= \mathbb{I}_3}
+\end{align}
+The identity yields, and interpret the coefficients of the orthogonal transformation as an Euclidean orthogonal transformation. 
+$$\blacklozenge$$
+\newpage
+
+\section{p123 - Clarification}
+\begin{tcolorbox}
+If $A_{n}A_{n} =0$ it follows from $\mathbf{2.445}$ and $\mathbf{2.446}$ that the straight line is a geodesic null line.
+\end{tcolorbox}
+We have 
+\begin{align}
+\text{(2.446)}\spatie & a_{mn}\dv{x^m}{u}\dv{x^n}{u}=0 \spatie \dv{x^m}{u}= \dv{z_m}{u} = A_m\\
+\text{(4.215)}\spatie & a_{mn}=\delta_{mn}\\
+\text{(1),(2) \ }\Rightarrow \spatie &\delta_{mn}\dv{z_m}{u}\dv{z_n}{u}=0\\
+\Rightarrow \spatie &A_nA_n=0
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p123 - Clarification}
+\begin{tcolorbox}
+It is easy to see ... viz., $$\mathit{the \ straight \ line \ joining \ any \ two \ points \ in \ a \ plane \ lies \ entirely \ in \ the \ plane.}$$ 
+\end{tcolorbox}
+The plane is identified by 
+\begin{align}
+A_n z_n+B=0
+\end{align}
+and a line by
+\begin{align}
+z_n = C_nu+D_n
+\end{align}
+Take two points at $u=0$ and $u=p$ lying in the plane:
+\begin{align}
+& \left\{ \begin{array}{l}
+A_nC_np+A_nD_n+B=0\\
+A_nD_n+B=0
+\end{array} \right.\\
+\Rightarrow\spatie & \left\{ \begin{array}{l}
+A_nC_np=0\\
+A_nD_n+B=0
+\end{array} \right.
+\end{align}
+And as $p\neq 0 \ \Rightarrow A_nC_n = 0$. So for any arbitrary $u$ of this line we have
+\begin{align}
+\underbrace{A_nC_n}_{=0}u+\underbrace{A_nD_n}_{=0}+B=0
+\end{align}
+hence, all points of the line lie in the plane.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p123 - Exercise}
+\begin{tcolorbox}
+Show that a one-flat is a straight line.
+\end{tcolorbox}
+A one-flat means $(N-1)$ equations 
+\begin{align}
+A^{(k)}_nz_n + B^{(k)} =0 \quad k=1,\dots,N-1\quad n= 1,\dots,N
+\end{align}
+This is a set of $(N-1)$ linear equation in $N$ unknown $z_n$. So we have one degree of freedom.\\
+E.g. put $z_N=u$ with u the free parameter. then,
+\begin{align}
+A^{(k)}_{\alpha}z_{\alpha}+ A^{(k)}_{N}u+ B^{(k)} =0 \quad \alpha=1,\dots,N-1
+\end{align}
+If $detA^{(k)}_{\alpha} \neq0$ we get a solution of the et of equation
+\begin{align}
+Az&=B \quad\text{with}\quad B \text{ a linear function in } u\\
+\Rightarrow\spatie z_m&= \left(A^{-1}B\right)_m
+\end{align}
+with $\left(A^{-1}B\right)_m$ of the form $C_mu+D_m$
+$$\blacklozenge$$
+\newpage
+
+\section{p126 - Exercise}
+\begin{tcolorbox}
+Show that the null cone with vertex at the origin in space-time has the equation $$\mathbf\spatie y^2_1+y^2_2+y^2_3-y^2_4=0$$
+Prove that this null cone divides space-time into three regions such that \\
+$\mathit{a.}$ Any two points (events) both lying in one region can be joined by a continuous curve which does not cut the null cone.\\
+$\mathit{b.}$ All continuous curves joining two given points (events) which lie in different regions, cut the null cone.\\
+Show further that the three regions may be further classified into past, present, and future as follows: If $A$ and $B$ are any two points in the past, then the straight segment $AB$ lies entirely in the past. If $A$ and $B$ are any two points in the future, then the straight segment $AB$ lies entirely in the future. If $A$ is any point in the present, there exist at least one point $B$ in the present that the straight segment $AB$ cuts the null cone.
+\end{tcolorbox}
+
+We first prove 
+$$\mathbf\spatie y^2_1+y^2_2+y^2_3-y^2_4=0$$
+The null geodesic equations:
+\begin{align}
+& \left\{ \begin{array}{l}
+\frac{\delta^2 x^r}{\delta u^2} = \dv[2]{x_r}{u} =0 \quad \text{ as we use homogeneous coordinates}\\\\
+a_{mn} \dv{x_m}{u}\dv{x_n}{u}=0\\
+\end{array} \right.\\
+\Rightarrow \spatie & \left\{ \begin{array}{l}
+x_r = A_ru+B_r\quad \text{( put } B_r=0 \text{ by aqequate choice of the origin )} \\\\
+A_1^2+A_2^2+A_1^2+A_3^2-A_4^2=0\\
+\end{array} \right.\\
+\Rightarrow \spatie &\frac{\left((x_1)^2+(x_2)^2+(x_3)^2-(x_4)^2\right)}{u^2} = 0\quad \text{ for } u\neq 0\\
+\Rightarrow \spatie &(x_1)^2+(x_2)^2+(x_3)^2-(x_4)^2 = 0
+\end{align}
+$$\lozenge$$
+About the existence of three regions. First let's investigate the case in a $V_3$ space-time manifold in order to have a more intuitive grasp.\\
+Consider a family of events $(p_1,p_2,u)$ with $u\in\left(-\infty,\infty\right)$ (see the line $P^{'}P^{"}$ in figure 1.1.)
+\begin{figure}[H]
+\input{D:/MathLatex/images/fig_p126_Ex1_a.tex}
+\caption{Regions delimited by the light cone in a $V_3$ space-time manifold}
+\label{fig:fig_p96_3415_a}
+\end{figure}
+Be $R^2 = y_1^2 +y_2^2$. The light cone has the the equation $R^2- y_3^2=0$. Only the events at $ u_0 = \pm R(p_1,p_2)$ will lie on the light-cone.\\
+We can distinguish three regions:\\
+Region I where $u > u_0 = R$: the events $(p_1,p_2,u)$ will lie on the line above point $P^{'}$.\\
+Region II where $ u < -u_0 = -R$: the events $(p_1,p_2,u)$ will lie on the line below point $P^{"}$.\\
+Region III where $ -R= -u_0 < u < u_0 = R$: the events $(p_1,p_2,u)$ will lie on the segment $P^{'}P^{"}$.\\
+Let's generalize this now for a $V_4$ space-time manifold.\\
+Put $R^2 = (y_1)^2+(y_2)^2+(y_3)^2$ and consider $\phi(y_1,y_2,y_3,y_4)= (y_1)^2+(y_2)^2+(y_3)^2-(y_4)^2$ so $\phi(y_1,y_2,y_3,y_4)= R^2-(y_4)^2$.\\
+For $\phi=0$ we lie on the light-cone.\\
+For $\phi>0 \quad\Rightarrow R^2 > y_4^2$ and so $-R<y_4<R$ defines one region (region III).\\
+For $\phi<0 \quad\Rightarrow R^2 < y_4^2$ and so   $y_4>R$ and $y_4<-R$ define two  regions (region I and II).\\$$\lozenge$$\\\\
+\textbf{We now show statement $\mathit{a.}$ of the exercise.}\\
+Consider $2$ events $P_0,\ P_1$ with coordinates $(y_1^{(0)},y_2^{(0)},y_3^{(0)},y_4^{(0)})$ and $(y_1^{(1)},y_2^{(1)},y_3^{(1)},y_4^{(1)})$  and a curve defined by 
+\begin{align}y_i= \pm\sqrt{\left(\left(y_i^{(1)}\right)^2-\left(y_i^{(0)}\right)^2\right)u + \left(y_i^{(0)}\right)^2}\spatie u\in \left[0,1\right]
+\end{align}
+where the $\pm$ is chosen so that $y_i(0) = y_i^{(0)}$ and $y_i(1) = y_i^{(1)}$ and that the sign only changes when $y_i(u)=0$ and $sign\left(y_i^{(0)}\right) \neq sign\left(y_i^{(1)}\right)$. Such curve will be continuous.
+Put
+\begin{align}
+R^2&= \left(y_1\right)^2+\left(y_2\right)^2+\left(y_3\right)^2\\
+{R_{0}}^2&= \left(y^0_1\right)^2+\left(y^0_2\right)^2+\left(y^0_3\right)^2\\
+{R_{1}}^2&= \left(y^1_1\right)^2+\left(y^1_2\right)^2+\left(y^1_3\right)^2
+\end{align}
+For the points on the curve defined by  (5), $R^2$ can then be written as 
+\begin{align}
+R^2&= \left(R_1^2-R_0^2\right)u+R_0^2
+\end{align}
+Be $\phi(u)= R^2-y_4^2$.\\
+\textbf{Case a1: $P_0, P_1$ both lie in region I or both in region II.} Then,\\
+\begin{align}
+\phi(u) & < 0\quad \forall \ u\in \left[0,1\right]\\
+\Rightarrow\quad R_0^2 < (y_4^{0})^2 \quad &\wedge \quad  R_1^2 < (y_4^{1})^2 \\ \text{ with }   (y_4^{0}>0 \  \wedge \ y_4^{1}>0)\text{ in Region I}\quad &\vee \quad (y_4^{0}<0\quad \wedge \quad y_4^{1}<0)  \text{ in Region II}
+\end{align}
+Then, $$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$
+Indeed,
+\begin{align}
+\phi(u) &= \left(R_1^2-R_0^2\right)u+R_0^2 + \left(\left(y_4^{(0)}\right)^2   -\left(y_4^{(0)}\right)^2 \right)u -\left(y_4^{(0)}\right)^2\\
+\phi(u)=0\spatie \Rightarrow u&= -\frac{R_0^2- \left(y_4^{(0)}\right)^2}{R_1^2-R_0^2  -\left(y_4^{(1)}\right)^2  +\left(y_4^{(0)}\right)^2}
+\end{align}
+Let's simplify notationally the last equation. Put $R_0^2- \left(y_4^{(0)}\right)^2=-\tau $ and $R_1^2- \left(y_4^{(1)}\right)^2=-\sigma$ with both $\tau, \sigma > 0$. $(14)$ can be written as
+\begin{align}
+u&=\frac{\tau}{\tau-\sigma}\\
+ &=\frac{1}{1-\frac{\sigma}{\tau}}\\
+\Rightarrow\spatie \left|u\right| & > 1 \spatie \text{ as } \frac{\sigma}{\tau} >0
+\end{align}
+Note, that in the case $\tau=\sigma$ we have $\phi(u)= \tau = \text{ constant}$ and can't reach $0$.
+So, there exist no $u\in\left[0,1\right]$ for which $\phi(u)=0$ and the curve does not intersect the null cone.\\\\
+\textbf{Case a2: $P_0, P_1$ both lie in region III.} Then,\\
+\begin{align}
+\phi(u) & > 0\quad \forall \ u\in \left[0,1\right]\\
+\Rightarrow\quad R_0^2 > (y_4^{0})^2 \quad &\wedge \quad  R_1^2 > (y_4^{1})^2 
+\end{align}
+Then, $$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$
+Indeed,
+Let's simplify  notationally the  equation (14) by now by puting $R_0^2- \left(y_4^{(0)}\right)^2=\tau $ and $R_1^2- \left(y_4^{(1)}\right)^2=\sigma$ with both $\tau, \sigma > 0$. $(14)$ can be written again as
+\begin{align}
+u& =\frac{1}{1-\frac{\sigma}{\tau}}
+\end{align}
+and follow the same reasoning as in case 1.
+So, there exist no $u\in\left[0,1\right]$ for which $\phi(u)=0$ and the curve does not intersect the null cone.\\\\
+\\$$\lozenge$$\\\\
+\textbf{We now show statement $\mathit{b.}$ of the exercise.}\\\\
+
+\textbf{Case b1: $P_0$ lies in region I, $P_1$  lies in region II.} \\
+Those two regions are separated by the $3$-flat (plane) $y_4=0$. So it's suffice that $R^2=0$ for $\phi(u)$ being zero. Hence $y_i=0$, $  i=1,2,3$, and the cruve will cut the cone at it's apex.
+\\\\
+\textbf{Case b2: $P_0$ lies in region I or II, $P_1$  lies in region III.} \\
+We have 
+\begin{align}
+R_0^2 > (y_4^{0})^2\quad R_1^2 < (y_4^{1})^2
+\end{align}
+Put $R_0^2 - (y_4^{0})^2= \tau$ and $R_1^2 - (y_4^{1})^2 =-\sigma$ with $\tau,\sigma >0$. We get
+\begin{align}
+\phi(u)&=0\\
+\Rightarrow \spatie u&=-\frac{\tau}{-\sigma-\tau}\\
+&= \frac{1}{1+\frac{\sigma}{\tau}}
+\end{align}
+So, there is a solution $u\in \left[0,1\right]$ for which $\phi(u)=0$ and the curve intersects the null cone.
+\\$$\lozenge$$\\\\
+
+\textbf{We now investigate the straight segment questions.} \\
+Case 1: $A$ and $B$ both lie in the the present (region I) or in the past (region II)\\
+Consider $2$ events $P_0,\ P_1$ with coordinates $(y_1^{(0)},y_2^{(0)},y_3^{(0)},y_4^{(0)})$ and $(y_1^{(1)},y_2^{(1)},y_3^{(1)},y_4^{(1)})$  and a segment  defined by 
+\begin{align}y_i= \left(y_i^{(1)}-y_i^{(0)}\right)u + y_i^{(0)}\spatie u\in \left[0,1\right]
+\end{align}
+Be $\phi(u)= y_1^2+y_2^2+y_3^2-y_4^2$.\\
+Then,
+ \begin{align}
+\phi(u) &= \left\{\begin{array}{l} \ \ \left[\left(y_1^{(1)}-y_1^{(0)}\right)u + y_1^{(0)}\right]^2\\
++\left[\left(y_2^{(1)}-y_2^{(0)}\right)u + y_2^{(0)}\right]^2\\
++\left[\left(y_3^{(1)}-y_3^{(0)}\right)u + y_3^{(0)}\right]^2\\
+-\left[\left(y_4^{(1)}-y_4^{(0)}\right)u + y_4^{(0)}\right]^2\\
+\end{array}\right.\\
+&= \left\{\begin{array}{l} \ \ 
+\left(y_1^{(1)}\right)^2 u^2+\left(y_1^{(0)}\right)^2 u^2 - 2y_1^{(1)}y_1^{(0)}u^2 + 2y_1^{(1)}y_1^{(0)}u-  2\left(y_1^{(0)}\right)^2 u+ \left(y_1^{(0)}\right)^2\\
++\left(y_2^{(1)}\right)^2 u^2+\left(y_2^{(0)}\right)^2 u^2 - 2y_2^{(1)}y_2^{(0)}u^2 + 2y_2^{(1)}y_2^{(0)}u-  2\left(y_2^{(0)}\right)^2 u+ \left(y_2^{(0)}\right)^2\\
++\left(y_3^{(1)}\right)^2 u^2+\left(y_3^{(0)}\right)^2 u^2 - 2y_3^{(1)}y_3^{(0)}u^2 + 2y_3^{(1)}y_3^{(0)}u-  2\left(y_3^{(0)}\right)^2 u+ \left(y_3^{(0)}\right)^2\\
+-\left(y_4^{(1)}\right)^2 u^2-\left(y_4^{(0)}\right)^2 u^2 + 2y_4^{(1)}y_4^{(0)}u^2 - 2y_4^{(1)}y_4^{(0)}u+  2\left(y_4^{(0)}\right)^2 u- \left(y_4^{(0)}\right)^2\\
+\end{array}\right.
+\end{align}
+Put $\phi_0 = \left(y_1^{(0)}\right)^2+\left(y_2^{(0)}\right)^2+\left(y_3^{(0)}\right)^2-\left(y_4^{(0)}\right)^2$ and $\phi_1 = \left(y_1^{(1)}\right)^2+\left(y_2^{(1)}\right)^2+\left(y_3^{(1)}\right)^2-\left(y_4^{(1)}\right)^2$. \\
+Then,
+\begin{align}
+\phi(u)= \left\{\begin{array}{l} \ \ 
+\phi_1u^2+\phi_0u^2-2\left(y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}\right)u^2 \\
+-2\phi_0 u + 2 \left(y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}\right)u\\
++\phi_0
+\end{array}\right.
+\end{align}
+Let's put $\kappa = y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}$, we get the expression
+\begin{align}
+\phi(u)&= 
+\left(\phi_1 +\phi_0-2\kappa\right) u^2 + 2 \left(\kappa- \phi_0\right)u
++\phi_0
+\end{align}
+
+
+The function $\phi(u)$ is a parabola. 
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c1.tex}}
+	\qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c2.tex}}
+    \qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c3.tex}}
+\caption{Non problematic null cone parametric functions.}
+\label{fig:fig_p126_1a}
+\end{figure}
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c4.tex}}
+\caption{Problematic null cone parametric functions.}
+\label{fig:fig_p126_1b}
+\end{figure}From the parabola's in figure $1.2.$ it is clear that the function can't reach $0$ in $u\in(0,1)$  and hence that the segment will not intersect the null cone.\\
+One problematic could occur as represented in figure $1.3$.
+For such a parabola, we have :
+\begin{align}
+\left\{\begin{array}{l} \ \ 
+\phi(u)= au^2+bu+c\\\\
+a = \left(\phi_1 +\phi_0-2\kappa\right) <0\\\\
+b=2 \left(\kappa- \phi_0\right)\\\\
+c=\phi_0\\\\
+a+b=\phi_1-\phi_0\\\\
+\phi_0<0\\\\
+\phi_1 < 0
+\end{array}\right.
+\end{align}
+From the $3$ known inequalities 
+\begin{align}
+\left\{\begin{array}{l} \ \ 
+a < 0\\\\
+\phi_0<0\\\\
+\phi_1 < 0
+\end{array}\right.
+\end{align}
+we get
+\begin{align}
+\left\{\begin{array}{l} \ \ 
+a < 0\quad\Rightarrow\quad \kappa > \frac{\phi_1+\phi_0}{2} \\\\ b=2 \left(\kappa- \phi_0\right)\quad \Rightarrow\quad b > \phi_1-\phi_0\\\\
+\end{array}\right.
+\end{align}
+Note that there is nothing special in the choice of $\phi_1, \ \phi_0$ as the segment is not oriented and as $\phi_1,\phi_0 <0$ we can put arbitrarily $b \geq0$ with $\phi_1 \geq \phi_0$.\\ 
+Let's examine if there is a value $u_{max} \in (0,1)$ such that $\phi(u_{max})\geq 0$ and let us investigate whether the relation between the coefficients $a,b$ does not lead to a contradiction for such value of $u_{max} \in (0,1)$.  
+\begin{align}
+\dv{\phi(u)}{u}&=0\\
+\Rightarrow\spatie u_{max} &= -\frac{b}{2a}\quad\text{ with } 0<b < -2a\\
+\phi(u_{max}) &= -\frac{b^2}{4a}+\phi_0
+\end{align}
+Is it possible to have $\phi(u_{max}) \geq 0$ with $u_{max} \in (0,1)$? One straightforward condition to have this possible is that the discriminant of the quadratic equation os $b^2-4ac>=0$.
+Hence,
+\begin{align}
+D &= \left[2 \left(\kappa- \phi_0\right)\right]^2-4\left(\phi_1 +\phi_0-2\kappa\right)\phi_0\\
+&= 4\kappa^2+ 4\phi_0^2-8\kappa\phi_0-4\phi_1\phi_0 -4\phi_0^2+8\kappa\phi_0\\
+&= 4\left(\kappa^2-\phi_1\phi_0\right)\\
+&= \left\{\begin{array}{l} \ \ 
+4\left[\left(y_1^{(0)}y_4^{(1)}-y_4^{(0)}y_1^{(1)}\right)^2
++\left(y_4^{(0)}y_2^{(1)}-y_2^{(0)}y_4^{(1)}\right)^2
++\left(y_4^{(0)}y_3^{(1)}-y_3^{(0)}y_4^{(1)}\right)^2\right]\\\\
+-4\left[\left(y_2^{(0)}y_1^{(1)}-y_1^{(0)}y_2^{(1)}\right)^2
++\left(y_3^{(0)}y_1^{(1)}-y_1^{(0)}y_3^{(1)}\right)^2
++\left(y_3^{(0)}y_2^{(1)}-y_2^{(0)}y_3^{(1)}\right)^2\right]\\\\
+\end{array}\right.
+\end{align}
+Obviously, this path of proving leads to nothing as $D$ can be positive even for a segment lying entirely in zone $I$ or $II$. To see that, take two events, stationary in  the space  at the point $P\left(0,0,y_3^{(0)}\right)$. The negative term in (39) disappears and obviously $D>0$.\\'
+WHAT IS THE ANALYTICAL WAY TO PROVE THIS? IS $a>0$ A CONDITION?
+\begin{comment}
+\begin{figure}[H]
+\input{D:/MathLatex/images/fig_p126_Ex1_b.tex}
+\caption{Travelling between two points in region III (present) in a  $V_3$ space-time manifold}
+\label{fig:fig_p96_3415_b}
+\end{figure}
+\end{comment}
+$$\blacklozenge$$
+\newpage
+
+\section{p133 - Exercise}
+\begin{tcolorbox}
+In a space of two dimensions prove the relation
+$$\mathbf{4.318.}\spatie \in_{mp}\in_{mq} = \delta_{pq}$$
+\end{tcolorbox}
+Suppose $p=q$, then in the summation the term is $0$ if $m=p=q$ and the remaining term is $1\times 1$ or $-1\times -1$ giving indeed $\delta_{pq}=1$.\\ 
+If  $p\neq q$ we get either $m=p$ or $m=q$ in each term of the summation and hence all terms vanish.
+$$\blacklozenge$$
+\newpage
+
+\section{p135 - Exercise}
+\begin{tcolorbox}
+Write out the six independent non-zero components of $P_{mn}$ as given by $\mathbf{4.324.}$
+\end{tcolorbox}
+We have 
+\begin{align}
+\mathbf{4.324.}\spatie P_{mn}= \in_{mnrs}X^rY^s\\
+\text{with}\quad \spatie m=n \quad \Rightarrow \quad P_{mn}= 0
+\end{align}
+So, the six independent components are in the set $\{mn\}= \left\{12,13,14,23,24,34 \right\}$ as $P_{nm}=-P_{mn}$.
+\begin{align}
+&\left\{\begin{array}{l}\\
+P_{12} = \in_{1234}X^3Y^4+\in_{1243}X^4Y^3\\\\
+P_{13} = \in_{1324}X^2Y^4+\in_{1342}X^4Y^2\\\\
+P_{14} = \in_{1423}X^2Y^3+\in_{1432}X^3Y^2\\\\
+P_{23} = \in_{2314}X^1Y^4+\in_{2341}X^4Y^1\\\\
+P_{24} = \in_{2413}X^1Y^3+\in_{2431}X^3Y^1\\\\
+P_{34} = \in_{3412}X^1Y^2+\in_{3421}X^2Y^1\\\\
+\end{array}\right.\\
+&\left\{\begin{array}{l}\\
+P_{12} = X^3Y^4-X^4Y^3\\\\
+P_{13} = -X^2Y^4+X^4Y^2\\\\
+P_{14} = X^2Y^3-X^3Y^2\\\\
+P_{23} = X^1Y^4-X^4Y^1\\\\
+P_{24} = -X^1Y^3+X^3Y^1\\\\
+P_{34} = X^1Y^2-X^2Y^1\\\\
+\end{array}\right.
+\end {align}
+$$\blacklozenge$$
+\newpage
+
+\section{p135 - Exercise}
+\begin{tcolorbox}
+Translate the well-known vector relations
+$$A\times (B\times C)= B(A.  C)-C(A.B)$$
+$$\nabla \times (\nabla \times V)= \nabla (\nabla .  V )-\nabla^2V$$
+into Cartesian tesnor form, and prove the by use of $4.329$.
+\end{tcolorbox}
+We have 
+\begin{align}
+\mathbf{4.329.}\spatie \in_{mrs}\in_{mpq} = \delta_{rp}\delta_{sq}-\delta_{rq}\delta_{sp}
+\end{align}
+The first identity
+\begin{align}
+A\times (B\times C)= B(A.  C)-C(A.B)
+\end{align}
+The second identity
+\begin{align}
+\nabla \times (\nabla \times V)= \nabla (\nabla .  V )-\nabla^2V
+\end{align}
 $$\blacklozenge$$
 \newpage

@@ -1,0 +1,143 @@
+\documentclass[margin=10pt]{standalone}
+\usepackage{tikz}
+
+\usetikzlibrary{arrows.meta}
+\usepackage {graphicx,float} 
+\usepackage{subfig}
+%\usepackage[top=0.25in, bottom=0.25in]{geometry}
+
+\usepackage{tikz}
+
+%\usetikzlibrary{shapes,arrows}
+% needed for BB
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+%\usepackage[pdf]{pstricks}
+\usetikzlibrary{calc}
+\usetikzlibrary{math} % for \tikzmath
+\usepackage{tikz}
+
+\tikzset{>=latex} % for LaTeX arrow head
+
+\usepackage{xcolor}
+\colorlet{myblue}{black!40!blue}
+\colorlet{myred}{black!40!red}
+
+%\usetikzlibrary{shapes,arrows}
+% needed for BB
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+%\usepackage[pdf]{pstricks}
+\usetikzlibrary{calc}
+\tikzset{
+    circ/.style={draw, circle,inner sep=0pt,minimum size=8mm, font=\scriptsize},
+    triangle/.tip={Computer Modern Rightarrow[open,angle=120:3pt]}
+}
+\tikzset{
+  every point/.style = {circle, inner sep={.75\pgflinewidth}, opacity=1, draw, solid, fill=white},
+  point/.style={insert path={node[every point, #1]{}}}, point/.default={},
+  colored point/.style = {point={fill=#1}},
+  point name/.style = {insert path={coordinate (#1)}},
+  inherit/.style = {point/.style={insert path={node[circle, inner sep={.75\pgflinewidth}, draw, fill, #1]{}}}}
+}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{etoolbox} %ifthen
+\usepackage[outline]{contour} % glow around text
+%\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{math} % for \tikzmath
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+
+\usetikzlibrary{decorations.pathreplacing} % for curly braces
+ \usetikzlibrary{shapes.geometric}
+\usepackage{tikz}
+\usetikzlibrary{spy}
+%\usepackage{pgf}
+\usepackage{circuitikz}
+\usetikzlibrary {decorations.markings,shapes.arrows}
+
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\tdplotsetmaincoords{0}{10};
+\pgfplotsset{every axis/.append style={
+		scale=1,
+		axis lines=center,
+		axis on top,
+		xlabel={$u$},
+		ylabel={$\phi(u)$},
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+               %x axis line style={-latex, ultra thin}, % arrows on the axis
+               y axis line style={draw opacity=1},
+                x axis line style={draw opacity=1},
+            }}
+            
+
+
+            
+\begin{tikzpicture} [scale=0.5,c/.style={insert path={circle[radius=3pt]}}] 
+					
+	\tikzmath{\u=5;\a=0.2;\b=2*\a;\d=-1;}
+	 \u,\a, \b,\d;
+    \pgfplotsset{ };
+    
+    \pgfplotsset{compat=1.12};
+		\def\r{3};
+		\def\H{1.0};  
+		\def\s{0.123};
+	\begin{axis}
+		[
+		xmin=-3,
+		xmax=3,
+		ymin=-1.4,
+		ymax=1.4,
+		xminorticks=true,
+		yminorticks=false,
+		ytick=\empty,
+		xtick=\empty,
+		]
+
+		\addplot [black,thick,samples=40,samples y=0,	domain=-\r:\r,variable=\u]({\u},{\a*\u^2+\b*\u+\d});
+		\addplot [black,thick,samples=40,samples y=0,	domain=-\r:\r,variable=\u]({\u},{10*\a*\u^2+\b*\u+\d});
+
+	\coordinate (x0) at ({0},{0});
+	\coordinate (x1) at ({1},{0});
+	\coordinate (p1) at ({1},{\a+\b+\d});
+	\coordinate (p1y) at ({0},{\a+\b+\d});
+	\coordinate (p1x) at ({1},{0});
+	\coordinate (p2) at ({1},{10*\a+\b+\d});
+	\coordinate (p2y) at ({0},{10*\a+\b+\d});
+	\coordinate (p2x) at ({1},{0});
+	\coordinate (p0) at ({0},{\d});
+	\coordinate (phi0) at (axis cs:{0},{-0.1});
+	\coordinate (phi1) at (axis cs:{0},{-0.5});
+	\draw  (p0) [c];
+	\draw  (p1) [c];
+	\draw  (p1y) [c];
+	\draw [dashed] (p1y)--(p1);
+	\draw  (p1x) [c];
+	\draw [dashed] (p1x)--(p1);
+		\draw  (p2) [c];
+	\draw  (p2y) [c];
+	\draw [dashed] (p2y)--(p2);
+	\draw  (p2x) [c];
+	\draw [dashed] (p2x)--(p2);
+   	%\node[tdplot_main_coords,{anchor=south east}] at (p1){$g_{0}$};
+	\node[tdplot_main_coords,{anchor=south east}] at (p0){$\phi_0$};
+	\node[tdplot_main_coords,{anchor=south east}] at (phi1){$\phi_1$};
+	\node[tdplot_main_coords,{anchor=south east}] at (phi1){$\phi_1$};
+	\node[tdplot_main_coords,{anchor=south east }] at (x0){$0$};
+	\node[tdplot_main_coords,{anchor=south east}] at (x1){$1$};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document} 

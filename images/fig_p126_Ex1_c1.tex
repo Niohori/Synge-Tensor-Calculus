@@ -1,0 +1,76 @@
+
+       
+
+
+            
+\begin{tikzpicture} [scale=0.5,c/.style={insert path={circle[radius=3pt]}}] 
+\pgfplotsset{every axis/.append style={
+		scale=1,
+		axis lines=center,
+		axis on top,
+		xlabel={$u$},
+		ylabel={$\phi(u)$},
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+               %x axis line style={-latex, ultra thin}, % arrows on the axis
+               y axis line style={draw opacity=1},
+                x axis line style={draw opacity=1},
+            }}
+     
+					
+	\tikzmath{\u=5;\a=0.2;\b=2*\a;\d=-1;}
+	 \u,\a, \b,\d;
+    \pgfplotsset{ };
+    
+    \pgfplotsset{compat=1.12};
+		\def\r{3};
+		\def\H{1.0};  
+		\def\s{0.123};
+	\begin{axis}
+		[
+		xmin=-3,
+		xmax=3,
+		ymin=-1.4,
+		ymax=1.4,
+		xminorticks=true,
+		yminorticks=false,
+		ytick=\empty,
+		xtick=\empty,
+		]
+
+		\addplot [black,thick,samples=40,samples y=0,	domain=-\r:\r,variable=\u]({\u},{\a*\u^2+\b*\u+\d});
+		%\addplot [black,thick,samples=40,samples y=0,	domain=-\r:\r,variable=\u]({\u},{10*\a*\u^2+\b*\u+\d});
+
+	\coordinate (x0) at ({0},{0});
+	\coordinate (x1) at ({1},{0});
+	\coordinate (p1) at ({1},{\a+\b+\d});
+	\coordinate (p1y) at ({0},{\a+\b+\d});
+	\coordinate (p1x) at ({1},{0});
+	\coordinate (p2) at ({1},{10*\a+\b+\d});
+	\coordinate (p2y) at ({0},{10*\a+\b+\d});
+	\coordinate (p2x) at ({1},{0});
+	\coordinate (p0) at ({0},{\d});
+	\coordinate (phi0) at (axis cs:{0},{-0.1});
+	\coordinate (phi1) at (axis cs:{0},{-0.5});
+	\draw  (p0) [c];
+	\draw  (p1) [c];
+	\draw  (p1y) [c];
+	\draw [dashed] (p1y)--(p1);
+	\draw  (p1x) [c];
+	\draw [dashed] (p1x)--(p1);
+	\begin{comment}
+	\draw  (p2) [c];
+	\draw  (p2y) [c];
+	\draw [dashed] (p2y)--(p2);
+	\draw  (p2x) [c];
+	\draw [dashed] (p2x)--(p2);
+	\end{comment}
+   	%\node[tdplot_main_coords,{anchor=south east}] at (p1){$g_{0}$};
+	\node[{anchor=south east}] at (p0){$\phi_0$};
+	\node[{anchor=south east}] at (phi1){$\phi_1$};
+	\node[{anchor=south east}] at (phi1){$\phi_1$};
+	\node[{anchor=south east }] at (x0){$0$};
+	\node[{anchor=south east}] at (x1){$1$};
+\end{axis}
+\end{tikzpicture}
+ 
