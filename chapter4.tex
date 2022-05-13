@@ -572,6 +572,245 @@ $$\blacklozenge$$
 
 \section{p139 - Exercise 1.}
 \begin{tcolorbox}
+Show that, in a 3-space of constant curvature $-\frac{1}{R^2}$ and positive definite metric form, the line element in polar coordinate is 
+$$ds^2= dr^2+R^2\sinh^2\left(\frac{r}{R}\right)\left(d\theta^2+\sin^2\theta d\phi^2\right)$$
+\end{tcolorbox}
+We have by $4.120c$
+\begin{align}
+X_r \eta^r &= A\sinh \left(s\sqrt{-\epsilon K}\right)
+\end{align}
+We choose $N$ different $X^{(k)}_r$ $(k= 1,2,\dots, N)$ which are orthonormal.
+Applying $(1)$ $N$ times with the different $X^{(k)}_r$ $(k= 1,2,\dots, N)$, we get
+\begin{align}
+X^{(k)}_r \eta^r &= A^{(k)}\sinh \left(s\sqrt{-\epsilon K}\right)
+\end{align}
+But as the $X^{(k)}_r$ are orthonormal and are used as a basis at the considered point of the geodesic we have 
+\begin{align}
+X^{(k)}_r &= \delta^k_r
+\end{align}
+So, $(2)$ becomes
+\begin{align}
+\eta^k &= A^{(k)}\sinh \left(s\sqrt{-\epsilon K}\right)
+\end{align}
+which are the components of the displacement vector in the orthonormal basis. By $\mathbf{2.301.}$ :
+\begin{align}
+Y^2 &= \epsilon a_{mn} Y^m Y^n\\
+\Rightarrow \spatie \eta^2 &= \epsilon a_{mn} A^{(m)} A^{(n)}\sinh^2 \left(s\sqrt{-\epsilon K}\right)\\
+\Rightarrow \spatie \eta &= C\left|\sinh \left(s\sqrt{-\epsilon K}\right)\right|\\
+\text{with}\spatie C&= \sqrt{\left|\epsilon a_{mn} A^{(m)} A^{(n)}\right|}
+\end{align}
+As $\epsilon =1$ (positive-definite metric) and $K=-\frac{1}{R^2}$
+we have
+\begin{align}
+\eta &= C\left|\sinh \left(\frac{s}{R}\right)\right|
+\end{align}
+From this and using the very same reasoning from $4.126.$ to $4.130.$ (pages 117-119) we get 
+$$ds^2= dr^2+R^2\sinh^2\left(\frac{r}{R}\right)\left(d\theta^2+\sin^2\theta d\phi^2\right)$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p139 - Exercise 2.}
+\begin{tcolorbox}
+Show that the volume of an antipodal 3-space of positive-definite metric form and positive constant curvature $\frac{1}{R^2}$ is $2\pi^2R^3$. (Use the equation 4.130. to find the area of a sphere $r= \text{constant}$ in polar coordinates. Multiply by $dr$ and integrate for $0\leq r \leq \pi R$ to get the volume). What is the volume if the space is polar?
+\end{tcolorbox}
+We have  $4.130$
+\begin{align}
+ds^2= dr^2+R^2\sin^2\left(\frac{r}{R}\right)\left(d\theta^2+\sin^2\theta d\phi^2\right)
+\end{align}
+Having a positive-definite metric form, the space can be locally considered as Euclidean and an elementary area of a  surface with constant $r (\rightarrow dr=0)$ can be calculated as $dS=ds_{d\theta=0}ds_{d\phi=0}$ and get by (1)
+\begin{align}
+dS &= R^2\sin^2\left(\frac{r}{R}\right)\sin\theta d\phi d\theta\\
+\Rightarrow\spatie\frac{S}{8} &= R^2\sin^2\left(\frac{r}{R}\right)\int^{\frac{\pi}{2}}_{0}\int^{\frac{\pi}{2}}_{0} \sin\theta d\phi d\theta\\ 
+&= R^2\sin^2\left(\frac{r}{R}\right)\frac{\pi}{2} \left.\left(-\cos\theta \right)\right|^{\frac{\pi}{2}}_{0}\\
+\Rightarrow\spatie S&= 4\pi R^2\sin^2\left(\frac{r}{R}\right)
+\end{align}
+We see that the area is a cyclic function of $r$ having zeros' at $r= k\frac{\pi}{R }, k=1,2,\dots$
+\begin{figure}[H]
+\begin{center}
+\input{D:/MathLatex/images/fig_p138_Ex2.tex}
+\caption{Area of an antipodal 3-space of positive-definite metric form}
+\label{fig:fig_p138_Ex2}
+\end{center}
+\end{figure}
+So, there are good reasons to restrict $r$ to $[0,\pi R]$ as otherwise all space of that type would have infinite volume, whatever it's curvature. So, we get as volume 
+\begin{align}
+V &= 4\pi R^2\int^{\pi R}_{0}\sin^2\left(\frac{r}{R}\right)dr\\
+&= 4\pi R^3\int^{\pi R}_0\sin^2\left(\frac{r}{R}\right)d\left(\frac{r}{R}\right)\\
+&= 4\pi R^3\left.\left( \half x - \frac{1}{4}\sin2x \right)\right|^{\pi}_0\\
+&= 2\pi^2 R^3
+\end{align}
+Fo a polar space, the volume would be half of that of an antipodal one (with same curvature of course) as in (3) we would consider only 4 quadrants instead of 8.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p139 - Exercise 3.}
+\begin{tcolorbox}
+By direct calculation of the tensor $R_{rsmn}$ verify that $\mathbf{4.130.}$ is the metric form of a space of constant curvature.
+\end{tcolorbox}
+We have  $4.130$
+\begin{align}
+ds^2&= dr^2+R^2\sin^2\left(\frac{r}{R}\right)\left(d\theta^2+\sin^2\theta d\phi^2\right)\\
+\Rightarrow\spatie &
+\ (a_{mn}) = \begin{pmatrix}
+ 1& 0 & 0\\
+0 & R^2\sin^2\left(\frac{r}{R}\right) & 0 \\
+0 & 0 & R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta \\
+\end{pmatrix}
+\end{align}
+Now for $R_{rsmn}$ we refer to exercise 7 page 109 of chapter 3, where the curvature tensor was calculated for a general case of the form 
+$$ ds^2= (h_1dx^1)^2+(h_2dx^2)^2+(h_3dx^3)^2$$ where $h_1, h_2, h_3$ are functions of the three coordinates.
+We have then for our case
+\begin{align}
+\left\{\begin{array}{l}
+h_1 = 1\\\\
+h_2 = R\sin\left(\frac{r}{R}\right)\\\\
+h_3 = R\sin\left(\frac{r}{R}\right)\sin\theta\\\\
+\end{array}\right.
+\end{align}
+In the exercise we got for the non-vanishing curvature tensors
+\begin{align}
+R_{1212}&=
+-h_2\partial_{11}^2(h_2)-h_1\partial_{22}^2(h_1)
++\frac{h_2}{h_1}\partial_1 h_1\partial_1 h_2+\frac{h_1}{h_2}\partial_2 h_1\partial_2 h_2-\frac{h_1 h_2}{h_3^2}\partial_3 h_1\partial_3 h_2\\
+R_{2323}&=
+-h_3\partial_{22}^2(h_3)-h_2\partial_{33}^2(h_2)
++\frac{h_3}{h_2}\partial_2 h_2\partial_2 h_3+\frac{h_2}{h_3}\partial_3 h_2\partial_3 h_3-\frac{h_2 h_3}{h_1^2}\partial_1 h_2\partial_1 h_3\\
+R_{1313}&=
+-h_3\partial_{11}^2(h_3)-h_1\partial_{33}^2(h_1)
++\frac{h_3}{h_1}\partial_1 h_1\partial_1 h_3+\frac{h_1}{h_3}\partial_3 h_1\partial_3 h_3-\frac{h_1 h_3}{h_2^2}\partial_2 h_1\partial_2 h_3
+\end{align}
+\begin{align}
+R_{1213}&=-h_1\partial_{32}^2(h_1)+\frac{h_1}{h_3}\partial_2 h_3\partial_3 h_1+\frac{h_1}{h_2}\partial_2 h_1\partial_3 h_2\\
+R_{1223}&=h_2\partial_{31}^2(h_2)-\frac{h_2}{h_1}\partial_1 h_2\partial_3 h_1-\frac{h_2}{h_3}\partial_3 h_2\partial_1 h_3\\
+R_{1323}&=
+-h_3\partial_{21}^2(h_3)+\frac{h_3}{h_1}\partial_1 h_3\partial_3 h_1+\frac{h_3}{h_2}\partial_2 h_3\partial_1 h_2
+\end{align}
+Clearly $\partial_{k}^2(h_1)=0$ and $\partial_{mn}^2(h_1)=0$ and considering $h_2 = h_2(r), \ h_3 = h_3(r,\theta)$
+we can simplify 
+\begin{align}
+R_{1212}&=
+-h_2\partial_{11}^2(h_2)\\
+R_{2323}&=
+-h_3\partial_{22}^2(h_3)
+-\frac{h_2 h_3}{h_1^2}\partial_1 h_2\partial_1 h_3\\
+R_{1313}&=
+-h_3\partial_{11}^2(h_3)
+\end{align}
+\begin{align}
+R_{1213}&=0\\
+R_{1223}&=0\\
+R_{1323}&=
+-h_3\partial_{21}^2(h_3)+\frac{h_3}{h_2}\partial_2 h_3\partial_1 h_2
+\end{align}
+with 
+\begin{align}
+\left\{\begin{array}{l}
+\partial_1 h_2=\cos\left(\frac{r}{R}\right)\\\\
+\partial_1 h_3=\cos\left(\frac{r}{R}\right)\sin\theta\\\\
+\partial_2 h_3=R\sin\left(\frac{r}{R}\right)\cos\theta\\\\
+\partial^2_{11} h_2=-\frac{1}{R}\sin\left(\frac{r}{R}\right)\\\\
+\partial^2_{11} h_3=-\frac{1}{R}\sin\left(\frac{r}{R}\right)\sin\theta\\\\
+\partial^2_{21} h_3=\cos\left(\frac{r}{R}\right)\cos\theta\\\\
+\partial^2_{22} h_3=-R\sin\left(\frac{r}{R}\right)\sin\theta\\\\
+\end{array}\right.
+\end{align}
+giving
+\begin{align}
+R_{1212}&=
+\sin^2\left(\frac{r}{R}\right)\\
+R_{2323}&=
+R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta 
+-R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta\cos^2\left(\frac{r}{R}\right)\\
+&= R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta\\
+R_{1313}&=\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\
+R_{1213}&=0\\
+R_{1223}&=0\\
+R_{1323}&=
+-R\sin\left(\frac{r}{R}\right)\sin\theta\cos\left(\frac{r}{R}\right)\cos\theta+\sin\theta R\sin\left(\frac{r}{R}\right)\cos\theta\cos\left(\frac{r}{R}\right)\\&=0
+\end{align}
+and considering the symmetries
+\begin{align}
+R_{1212}&=-R_{1221}=-R_{2112}=
+\sin^2\left(\frac{r}{R}\right)\\
+R_{2323}&=-R_{2332}=-R_{3223}= R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta\\
+R_{1313}&=-R_{1331}=-R_{3113}=\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\
+\end{align}
+By $\mathbf{4.114.}$
+\begin{align}
+R_{rsmn}&= K\left(a_{rm}a_{sn}-a_{rn}a_{sm}\right)\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+R_{1212}= K\left(a_{11}a_{22}-a_{12}a_{21}\right)\\
+R_{2323}= K\left(a_{22}a_{33}-a_{23}a_{32}\right)\\
+R_{1313}= K\left(a_{11}a_{33}-a_{13}a_{31}\right)
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+R_{1212}= K R^2\sin^2\left(\frac{r}{R}\right)\\
+R_{2323}= K R^2\sin^2\left(\frac{r}{R}\right)R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\
+R_{1313}= K R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+R_{1212}= K R^2\sin^2\left(\frac{r}{R}\right)\\
+R_{2323}= K R^4\sin^4\left(\frac{r}{R}\right)\sin^2\theta\\
+R_{1313}= K R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\
+\end{array}\right.
+\end{align}
+ replacing (25), (26) and (27) in (32) we get
+ \begin{align}
+\left\{\begin{array}{l}
+\sin^2\left(\frac{r}{R}\right)= K R^2\sin^2\left(\frac{r}{R}\right)\\
+R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta= K R^4\sin^4\left(\frac{r}{R}\right)\sin^2\theta\\
+\sin^2\left(\frac{r}{R}\right)\sin^2\theta= K R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\
+\end{array}\right.
+\end{align}
+giving indeed for the three curvature tensors $K=\frac{1}{R^2}$\\
+With this, the question of the  exercise is answered but we go a little bit further and investigate for this practical case the equations of $\mathbf{4.115.}$ and  calculate $R=a^{mn}R_{mn}$. With $R$, the curvature invariant. To avoid confusion with the curvature $R$ itself we use $\mathfrak{R}$ for the curvature invariant.\\
+As the metric tensor is diagonal:
+
+\begin{align}
+\mathfrak{R}=a^{11}R_{11}+a^{22}R_{22}+a^{33}R_{33}\\
+\end{align}
+and 
+\begin{align}
+R_{mn}&= a^{sn}R_{srmn}\\
+\Rightarrow\spatie &
+\left\{\begin{array}{l}
+R_{11} = a^{11}R_{1111}+a^{22}R_{2112}+a^{33}R_{3113}\\\\
+R_{22} = a^{11}R_{1221}+a^{22}R_{2222}+a^{33}R_{3223}\\\\
+R_{33} = a^{11}R_{1331}+a^{22}R_{2332}+a^{33}R_{3333}\\\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+R_{11} = -a^{22}\sin^2\left(\frac{r}{R}\right)-a^{33}\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\\\
+R_{22} = -a^{11}\sin^2\left(\frac{r}{R}\right)-a^{33}R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta\\\\
+R_{33} = -a^{11}\sin^2\left(\frac{r}{R}\right)\sin^2\theta-a^{22}R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta\\\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+R_{11} = -\frac{\sin^2\left(\frac{r}{R}\right)}{R^2\sin^2\left(\frac{r}{R}\right)}-\frac{\sin^2\left(\frac{r}{R}\right)\sin^2\theta}{R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta}\\\\
+R_{22} = -\sin^2\left(\frac{r}{R}\right)-\frac{R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta}{R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta}\\\\
+R_{33} = -\sin^2\left(\frac{r}{R}\right)\sin^2\theta-\frac{R^2\sin^4\left(\frac{r}{R}\right)\sin^2\theta}{R^2\sin^2\left(\frac{r}{R}\right)}\\\\
+\end{array}\right.
+\end{align}
+giving
+\begin{align}
+\left\{\begin{array}{l}
+R_{11} = -\frac{2}{R^2}\\\\
+R_{22} = -2\sin^2\left(\frac{r}{R}\right)\\\\
+R_{33} = -2\sin^2\left(\frac{r}{R}\right)\sin^2\theta\\\\
+\end{array}\right.
+\end{align}
+hence
+\begin{align}
+\mathfrak{R}&=a^{11}R_{11}+a^{22}R_{22}+a^{33}R_{33}\\
+\Rightarrow\spatie R&= -\frac{2}{R^2}-2\frac{\sin^2\left(\frac{r}{R}\right)}{R^2\sin^2\left(\frac{r}{R}\right)}-2\frac{\sin^2\left(\frac{r}{R}\right)\sin^2\theta}{R^2\sin^2\left(\frac{r}{R}\right)\sin^2\theta }\\
+\mathfrak{R}&= -\frac{6}{R^2}
+\end{align}
+The equations in (40) and (43) are indeed in accordance with $\mathbf{4.115}$ .
+$$\blacklozenge$$
+\newpage
+
+\section{p139 - Exercise 4}
+\begin{tcolorbox}
 
 \end{tcolorbox}
 
