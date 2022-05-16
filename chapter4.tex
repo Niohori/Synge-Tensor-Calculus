@@ -811,8 +811,78 @@ $$\blacklozenge$$
 
 \section{p139 - Exercise 4}
 \begin{tcolorbox}
-
+Show that if $V_N$ has positive-definite metric form and constant positive curvature $K$, then coordinates $y^r$ exist so that
+$$ds^2=\frac{dy^m dy^m}{\left(1+\kwart y^n y^n\right)^2}$$
+(Starting with a coordinate system $x^r$ which is locally Cartesian at $O$, take at any point $P$ the coordinates
+$$y^r=p^r\frac{2}{\sqrt{K}}\tan\left(\half r \sqrt{K}\right)$$
+where $p^r$ ar the the components of the unit tangent vector $\left(\dv{x^r}{s}\right)$ at $O$ to the geodesic $OP$ and $r$ is the geodesic distance $OP$.)
 \end{tcolorbox}
+Let us first understand what happens. Fig.1.5 for a $V_3$ will help us understand.
+Let $P$ and $P+dP$ be two points separated by an infinitesimal distance. Consider the two geodesics initiated from the origin and joining these two points. Be $X$ and $X^{'}$ the two tangents unit vectors  to these geodesics. Those vectors have components $p^r=\dv{x^r}{s}$ taken along their respective geodesics.  By the considered transformation the points $P$ and $P+dP$ are mapped on the  points  $\tau (P)$ and $\tau (P+dP)$ with $\left|O\tau (P)\right|$ and $\left|O\tau (P+dP)\right|$ collinear with the  two tangents unit vectors  $X$ and $X^{'}$ . \\
+Observe also the segment $PN$ which corresponds to the geodesic displacement $\eta$ for the geodesic distance $r=OP$. As the metric form is positive-definite, we can consider that the infinitesimal triangle $\left|\widehat{PNP+dP}\right|$ lies in an infinitesimally Euclidean space and  we can express $ds^2=\eta^2+ dr^2$ as $\left|NP+dP\right| = dr$. Observe now, the triangle $\left|\widehat{\tau(P)\tau(N)\tau(P+dP)}\right|$. There also we have $\left|\tau(P+dP)\tau(P)\right|^2 = \left|\tau(P)\tau(N)\right|^2+\left|\tau(P+dP)\tau(N)\right|^2$. Can we find a relationship between these two triangle?\\
+\begin{figure}[H]
+\begin{center}
+\input{D:/MathLatex/images/fig_p139_Ex4.tex}
+\caption{Coordinate system in constant curvature space}
+\label{fig:fig_p139_Ex4}
+\end{center}
+\end{figure}
 
+Let's define $\alpha (r) = \frac{2}{\sqrt{K}}\tan\left(\half r \sqrt{K}\right)$ so that $y^k = \alpha (r)p^k$
+We have 
+\begin{align}
+\left\{\begin{array}{l}
+\left|OX^{'}\right|= \left|OX^{}\right|=1\\\\
+\left|O\tau (N)\right|= \left|O\tau (P)\right|=\alpha (r)\\\\
+ \left|O\tau (P+dP)\right|=\alpha (r+dr)\\\\
+\end{array}
+\right.
+\end{align}
+Expanding the last equation in a Taylor series we get as first order term
+\begin{align}
+\left|\tau (N)\tau (P+dP)\right|= \frac{1}{\cos^2(\half r \sqrt{K})}dr
+\end{align}
+Also,
+\begin{align}
+\left|\tau (N)\tau (P)\right|= 2\alpha (r)\sin \frac{\chi}{2}  \approx \alpha (r) \chi 
+\end{align}
+From $\mathbf{4.124}$ we have $\chi=\left(\dv{\eta}{r}\right)_{r=0}= C\sqrt{K}$  .
+But note also that from $\mathbf{4.122}$ we have for the geodesic displacement $\eta = C\left|\sin r\sqrt{K}\right|$. 
+\begin{align}
+C&= \frac{\eta }{\left|\sin r\sqrt{K}\right|}\\
+\Rightarrow \spatie \chi&=\frac{\eta }{\left|\sin r\sqrt{K}\right|}\sqrt{K}\\
+\Rightarrow \spatie \left|\tau (N)\tau (P)\right|&=\eta\frac{\sqrt{K} }{\left|\sin r\sqrt{K}\right|}\alpha (r) 
+\end{align}
+Let's put $\left|\tau (N)\tau (P)\right|=\hat{\eta}$.
+\begin{align}
+\hat{\eta}&=\eta\frac{\sqrt{K} }{\left|\sin r\sqrt{K}\right|}\alpha (r) 
+\end{align}
+At the point $P$ we have $\left|PN\right| = \eta$ and so
+\begin{align}
+ds^2=\eta^2+ dr^2
+\end{align}
+Let's put $\left|\tau(P+dP)\tau(P)\right|^2=d\hat{s}^2$.
+\begin{align}
+d\hat{s}^2 &= \hat{\eta}^2+\left|\tau(P+dP)\tau(N)\right|^2\\
+\text{(2) and (7) }\Rightarrow\spatie &= \eta^2\frac{K }{\sin^2 (r\sqrt{K})}\frac{4}{K}\frac{\sin^2 (\half r \sqrt{K})}{\cos^2 (\half r \sqrt{K})}+ \frac{1}{\cos^4(\half r \sqrt{K})}dr^2\\
+\sin r\sqrt{K} &= 2\sin (\half r\sqrt{K})\cos (\half r\sqrt{K})\\
+\Rightarrow\spatie  d\hat{s}^2 &= \eta^2\frac{1}{\cos^4 (\half r \sqrt{K})}+ \frac{1}{\cos^4(\half r \sqrt{K})}dr^2\\
+\Rightarrow\spatie \eta^2+dr^2 &= d \hat{s}^2 \cos^4(\half r \sqrt{K})\\
+\Rightarrow\spatie ds^2 &= d \hat{s}^2 \cos^4(\half r \sqrt{K})
+\end{align}
+It is easy to see that $d \hat{s}^2 =  dy^k dy^k$ and also
+\begin{align}
+\cos^4(\half r \sqrt{K}) &= \left(\cos^2(\half r \sqrt{K})\right)^2\\
+\Leftrightarrow\spatie  &= \left(\frac{\cos^2(\half r \sqrt{K})}{\cos^2(\half r \sqrt{K})+\sin^2(\half r  \sqrt{K})}\right)^2\\
+\Leftrightarrow\spatie &= \left(\frac{1}{1+\tan^2(\half r  \sqrt{K})}\right)^2
+\end{align}
+We note that $\frac{2}{\sqrt{K}}\tan(\half r  \sqrt{K})$ is the size of the vector $\left|O\tau(P)\right|$ and can express this as (as we use local Cartesian coordinates at the origin) $\left|O\tau(P)\right|^2 = y^ky^k$ and thus $\tan^2(\half r  \sqrt{K}) =\frac{K}{4}y^ky^k$. Combining this with (14) and (17) gives:
+\begin{align}
+ds^2 &= d \hat{s}^2\left(\frac{1}{1+\frac{K}{4}y^ky^k}\right)^2
+\end{align} 
+which gives as final expression 
+\begin{align}
+ds^2 &= \frac{dy^k dy^k}{\left(1+\frac{K}{4}y^ky^k\right)^2}
+\end{align}
 $$\blacklozenge$$
 \newpage

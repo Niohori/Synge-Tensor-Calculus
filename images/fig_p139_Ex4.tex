@@ -1,0 +1,103 @@
+\usetikzlibrary {arrows.meta}
+\begin{tikzpicture}
+
+\coordinate (v1) at (-0.5,0) {};
+\coordinate  (v2) at (-0.5,10.5) {} {};
+\coordinate  (v4) at (-5,-3.5) {};
+\coordinate  (v3) at (11,0) {};
+\draw [-{Latex[length=3mm]}] (v1) -- (v2);
+\draw  [-{Latex[length=3mm]}] (v1)-- (v3);
+\draw   [-{Latex[length=3mm]}](v1) -- (v4);
+
+\coordinate  (c1) at (7,2) {};
+\coordinate  (c2) at (8,4.5) {};
+\draw[ultra thick]  plot[,smooth, tension=.7] coordinates {(v1) (3.5,1.4) (c1)};
+\draw [ultra thick]  plot[smooth, tension=.7] coordinates {(v1) (1.5,2.5) (c2)};
+
+\coordinate  (v5) at (1,3.5) {};
+\coordinate  (v5b) at (2*1.25,2*3.5) {};
+\draw  [dotted, very thick](v5) -- (v5b);
+\coordinate  (v6) at (3,2) {};
+\coordinate  (v6b) at (1.5*3.28,1.5*2) {};
+\draw  [dotted, very thick](v6) -- (v6b);
+\draw  [-{Latex[length=3mm]},thick](v1) -- (v6);
+\draw [-{Latex[length=3mm]}, thick] (v1) -- (v5);
+\draw[thin,dashdotted,-{Latex[length=3mm]}]   plot[smooth, tension=.7] coordinates {(c2) (6.5,8) (v5b)};
+\draw[thin,dashdotted,-{Latex[length=3mm]}]  plot[smooth, tension=.7] coordinates {(c1) (6.2,3.5) (v6b)};
+\coordinate (v8) at (2.5,-1.5) {};
+\coordinate (v7) at (-2.4,-1.5) {};
+\coordinate (v9) at (4.5,0) {};
+\coordinate (v10)at  (-0.5,8.5) {};
+\draw  [dashed](v7) -- (v8);
+\draw  [dashed](v5b)-- (v8);
+\draw  [dashed](v5b)-- (v10);
+\draw  [dashed](v8)-- (v9);
+\draw  [dashed](v1)-- (v8);
+
+\coordinate (w1) at (5,-2) {};
+\coordinate (w2) at (7.5,0) {} {};
+\coordinate (w3) at (-3.1,-2) {};
+\coordinate (w4) at (-0.5,5.5) {};
+\draw  [dashed](w1) -- (v6b);
+\draw  [dashed](w1)-- (w2);
+\draw  [dashed](w1)-- (w3);
+\draw  [dashed](v6b)-- (w4);
+\draw  [dashed](v1)-- (w1);
+
+\draw[fill] (c1) circle (3pt);
+\draw[fill] (c2) circle (3pt);
+\draw[fill] (v5b) circle (3pt);
+\draw[fill] (v6b) circle (3pt);
+
+\draw[fill] (v7) circle (2pt);
+
+\draw[fill] (v8) circle (2pt);
+\draw[fill] (v9) circle (2pt);
+\draw[fill] (v10) circle (2pt);
+
+\draw[fill] (w1) circle (2pt);
+\draw[fill] (w2) circle (2pt);
+\draw[fill] (w3) circle (2pt);
+\draw[fill] (w4) circle (2pt);
+
+\node[label= east:$P$] at (c1) {};
+\node[label=north east:$P+dP$] at (c2) {};
+\node[label= east:$\tau(P+dP)$] at (v5b) {};
+\node[label= east:$\tau(P)$] at (v6b) {};
+
+\node[label=north west:$\tau(P)^2$] at (w2) {};
+\node[label= west:$\tau(P)^1$] at (w3) {};
+\node[label=west:$\tau(P)^3$] at (w4) {};
+
+
+\node[label=north west :$\tau(P+dP)^2$] at (v9) {};
+\node[label=west:$\tau(P+dP)^3$] at (v10) {};
+\node[label=west:$\tau(P+dP)^1$] at (v7) {};
+\node[label=west:$X^{'}$] at (v5) {};
+\node[label=north :$X^{}$] at (v6) {};
+\node[label=west :$O$] at (v1) {};
+
+
+\coordinate (q1) at (6.5,4.15) {};
+\draw[fill] (q1) circle (2pt);
+\node[label=north  :$N$] at (q1) {};
+\draw  [dashed,thick,red](c1)-- (q1);
+\draw  [dashed,thick,red](c1)-- (c2);
+
+\coordinate (q2) at (1.4*1.25,1.5*3.5) {};
+\draw[fill] (q2) circle (2pt);
+\node[label=north west :$\tau(N)$] at (q2) {};
+\draw  [dashed,thick,red](v6b)-- (q2);
+
+\draw  [dashed,thick,red](v6b)-- (v5b);
+\draw[thin,dashdotted,-{Latex[length=3mm]}]  plot[smooth, tension=.7] coordinates {(q1) (4.2,6) (q2)};
+ \draw[-Latex,red] let
+    \p0 = (v1),
+    \p1 = (v6),
+    \p2 = (v5),
+    \n1 = {atan2(\y1 - \y0,\x1 - \x0)},
+    \n2 = {atan2(\y2 - \y0,\x2 - \x0)},
+    \n3 = {1cm},
+    \n4 = {(\n1 + \n2) / 2}
+  in (v1) +(\n1:\n3) arc[radius = \n3, start angle = \n1, end angle = \n2] node [midway,above right]{$\chi$};
+\end{tikzpicture}
