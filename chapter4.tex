@@ -930,6 +930,166 @@ z^{'}_4 = -iz_1\sinh \phi +  z_4\cosh \phi
 \end{array}$$
 is orthogonal, $\phi$ being any constant. Putting $z_1=x,\ z_2 =y, \ z_3 = z, \ z_4 = ict, \ \phi = \frac{v}{c}$, obtain the transformation connecting $(x^{'},y^{'},z^{'},t^{'})$ and $(x^{},y^{},z^{},t^{})$. This is the $\mathit{Lorentz \ transformation} $ of the special theory of relativity.
 \end{tcolorbox}
+We can represent the transformation with the matrix
+\begin{align}
+\left(A_{mn}\right) &=
+\begin{pmatrix}
+ \cosh \phi&  0& 0 & i \sinh \phi \\
+ 0& 1 & 0 &0  \\
+ 0& 0 &  1&  0\\
+ -i\sinh \phi&  0& 0 &  \cosh \phi \\
+\end{pmatrix}
+\end{align}
+We use $\mathbf{4.210.}$ i.e. $A_{pm}A_{qm} = \delta _{pq}$ as a condition for the orthogonality of a transformation. This can be written in matrix form
+\begin{align}
+\left(A_{mn}\right)\left(A_{mn}\right)^{T}= \mathbf{I}
+\end{align}
+and get
 
+\begin{align}
+\left(A_{mn}\right)\left(A_{mn}\right)^{T}&=
+\begin{pmatrix}
+ \cosh \phi&  0& 0 & i \sinh \phi \\
+ 0& 1 & 0 &0  \\
+ 0& 0 &  1&  0\\
+ -i\sinh \phi&  0& 0 &  \cosh \phi \\
+\end{pmatrix}\begin{pmatrix}
+ \cosh \phi&  0& 0 & -i \sinh \phi \\
+ 0& 1 & 0 &0  \\
+ 0& 0 &  1&  0\\
+ i\sinh \phi&  0& 0 &  \cosh \phi \\
+\end{pmatrix}\\
+&= \begin{pmatrix}
+ \cosh^2 \phi- \sinh ^2\phi &  0& 0 & -i \cosh \phi\sinh \phi +i \cosh \phi\sinh \phi  \\
+ 0& 1 & 0 &0  \\
+ 0& 0 &  1&  0\\
+ i \cosh \phi\sinh \phi -i \cosh \phi\sinh \phi  &  0& 0 &  -\sinh^2 \phi + \cosh^2 \phi \\
+\end{pmatrix}\\
+&= \mathbf{I}
+\end{align}
+We now calculate the Lorentz transformation.\\
+First note that 
+\begin{align}
+&\left \{\begin{array}{l}
+\cosh y = \frac{e^y+e^{-y}}{2}\\
+\sinh y = \frac{e^y-e^{-y}}{2}\\
+\tanh^{-1}  x = \half \log \left(\frac{1+x}{1-x}\right)\\
+\end{array}\right.\\
+\Rightarrow\spatie  &\left \{ \begin{array}{l}
+\cosh\left(\tanh^{-1}  x \right) = \frac{1}{\sqrt{1-x^2}}\\
+\sinh\left(\tanh^{-1}  x \right) = \frac{x}{\sqrt{1-x^2}}
+\end{array}\right.
+\end{align}
+Replacing $x$ with $\tanh \phi = \frac{v}{c}$ gives
+\begin{align}
+\left \{ \begin{array}{l}
+\cosh \phi = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\\
+\sinh \phi = \frac{v}{c\sqrt{1-\frac{v^2}{c^2}}}
+\end{array}\right.
+\end{align}
+and the transformation becomes
+$$\begin{array}{l}
+x^{'} = \frac{x- vt}{\sqrt{1-\frac{v^2}{c^2}}}\\
+y{'} = y\\
+z^{'} = z\\
+t^{'} = \frac{t-\frac{vx}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}} 
+\end{array}$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p140 - Exercise 7}
+\begin{tcolorbox}
+Prove that in a flat space a plane, defined by $\mathbf{4.22}$, is itself a flat space f $N-1$ dimensions.
+\end{tcolorbox}
+For a $N-1$-flat we have $\mathbf{4.22}$
+\begin{align}
+A^{'}_r z_r+B^{'}=0
+\end{align}
+Suppose that $A_N \ne 0$ then we can express $Z_N$, by dividing the equation $(1)$ by $A_N$ as 
+\begin{align}
+z_N = A_{\gamma} z_{\gamma}+B \spatie \text{ with } \gamma = 1,2, \dots, N-1
+\end{align}
+Then $\phi = z_nz_n$ becomes
+\begin{align}
+\phi &= d z_{\gamma}dz_{\gamma}+ dz_N dz_N\\
+&=d z_{\gamma}dz_{\gamma} + \left(A_{\gamma} dz_{\gamma}\right)\left(A_{\tau} dz_{\tau}\right)\\
+&=d z_{\gamma}dz_{\gamma} + A_{\gamma \tau} dz_{\gamma} dz_{\tau}
+\end{align}
+So $\phi$ can be expressed as $\phi = a_{\gamma \tau}dz_{\gamma}dz_{\tau}$.\\
+But as $a_{\gamma \tau}$ are constants, the Christoffel symbols vanish and so does the curvature tensor $R^{\alpha}_{\beta \gamma \delta}$ in the $N-1$ space. Hence, the $V_{N-1}$ space delimited by equation (1) is flat.\\
+Question: can we find the right orthogonal transformation so that the metric form in (5) can be made homogeneous?\\
+The metric form in (5) can be represented as
+\begin{align}
+\left(a_{mn}\right) &= \begin{pmatrix}
+ 1-A_1^2& \half A_1A_{2} & \dots &  \half A_1A_{N-1}\\
+ \half A_1A_{2}&  1-A_2^2&  \dots& \half A_2A_{N-1}\\
+ \vdots& \vdots &  \ddots& \vdots\\
+ \half A_1A_{N-1}&\half A_2A_{N-1}  & \dots & 1-A_{N-1}^2 \\
+\end{pmatrix}
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+\section{p140 - Exercise 8}
+\begin{tcolorbox}
+Show that in a flat space of positive-definite metric form, a sphere of zero radius consists of a single point, but that if the metric form is indefinite, a sphere of zero radius extends to infinity.
+\end{tcolorbox}
+A sphere is determined by $ z_kz_k= \pm R^2$ with $+$ for a positive definite metric and $\pm$ if the metric is indefinite.\\
+For a positive definite metric a zero radius sphere has the equation $ z_n z_n= 0$. It is obvious that as $z_n= \sqrt{\epsilon}y_k = y_k$, each term in the summation is non-negative , and so only $z_k=0 \ \forall n$ holds this equation.\\
+In an indefinite metric form space, at least two $\epsilon_n$ differ so the zero sphere can be written as $y_py_p=y_ny_n$, the indices $p, n$ regrouped in a way the left side has positive $\epsilon$ and the right side negative $\epsilon$. So the $y_k$ can span the whole real line.\\
+Note that the case where all $\epsilon$ are negative means that  the metric form is positive definite. Indeed, from the definition $\mathbf{2.105.}$, page 29   we have $ds^2= \epsilon \phi =\epsilon a_{mn}dx^m dx^s, ds >0$. So the epsilons are in fact an artefact to get $ds^2$ positive in any case and if all $\epsilon_n$ are $-1$ we can multiply them straight away with the $\epsilon$ of $\mathbf{2.105.}$ ensuring that $ds^2 >0$. 
+$$\blacklozenge$$
+\newpage
+
+\section{p140 - Exercise 9}
+\begin{tcolorbox}
+Prove that in two dimensions
+$$\epsilon_{mn}\epsilon_{pq}= \delta_{mp}\delta_{nq}-\delta_{mq}\delta_{np}$$
+\end{tcolorbox}
+Suppose first  that $m=n$ or $p=q$ : the left side will vanish but also the right side as we will have an expression $\delta_{Mp}\delta_{Mq}-\delta_{Mq}\delta_{Mp}  = 0$ (we use capital indices to emphasise that no summation occurs with repeated indices).\\
+Suppose now that $m\ne n$ and $p\ne q$.\\
+ If $mn$ and $pq$ are no permutation, the left side will be $1$ but in the right side the negative term will vanish as $m=p$ and $n=q$ so $ m\ne q$ while the left term will be $1$. The same yields with $mn$ and $pq$ are both  permutations as the same reasoning is valid for the right side and the left side is equal to $(-1)(-1)=1$.\\
+ If only one of $mn$ or $pq$ is a  permutation  e.g. $m\ne p$ then the positive term in the right side will vanish while the negative will be $-1$ and the left term will be $(-1)(1)=-1$.
+$$\blacklozenge$$
+\newpage
+
+\section{p140 - Exercise10}
+\begin{tcolorbox}
+If, in a space of four dimensions, $F_{mn}$ is a skew-symmetric Cartesian tensor, and $$\hat{F}_{mn} = \half \epsilon_{rsmn} F_{rs}$$
+prove that the differential equations $$ F_{mn,r}+F_{nr,m}+F_{rm,n}=0$$ may be written $$\hat{F}_{mn,n} =0$$
+\end{tcolorbox}
+Let's us express $F_{mn}$ as the result of expression $\mathbf{4.324.} $ i.e $$F_{mn} = \epsilon_{mnks} X_kY_s$$ or simplified $$F_{mn} = \epsilon_{mnks} Z_{ks}$$
+ We have (this expression gives indeed skew-symmetric tensors):
+\begin{align}
+&\left\{\begin{array}{l}
+F_{mn} = \epsilon_{mnks} Z_{ks}\\\\
+F_{nr} = \epsilon_{nrks} Z_{ks}\\\\
+F_{rm} = \epsilon_{rmks} Z_{ks}\\\\
+\end{array}\right.
+\end{align}
+And so, 
+\begin{align}
+F_{mn,r}+F_{nr,m}+F_{rm,n}&=\left\{\begin{array}{l}
+\ \epsilon_{mnks} Z_{ks,r}\\\\
++\epsilon_{nrks} Z_{ks,m}\\\\
++\epsilon_{rmks} Z_{ks,n}\\\\
+\end{array}\right.
+\end{align}
+
+Multiplying (5) with $\epsilon_{mnrt}$ 
+\begin{align}
+\left(F_{mn,r}+F_{nr,m}+F_{rm,n}\right)\epsilon_{mnrt}&=\left\{\begin{array}{l}
+\ \epsilon_{mnks} \epsilon_{mnrt} Z_{ks,r}\\\\
++\epsilon_{nrks} \epsilon_{mnrt} Z_{ks,m}\\\\
++\epsilon_{rmks}\epsilon_{mnrt} Z_{ks,n}\\\\
+\end{array}\right.\\
+&=3\epsilon_{rmks}\epsilon_{rmnt} Z_{ks,n}\\
+&=3\epsilon_{rmnt} \left(\underbrace{\epsilon_{rmks}Z_{ks}}_{=F_{rm}} \right)_{,n}\\
+&=3\left(\underbrace{\epsilon_{rmnt} F_{rm}}_{=2\hat{F}_{nt}}  \right)_{,n}\\
+&=-6\hat{F}_{tn,n}
+\end{align}
+As $\left(F_{mn,r}+F_{nr,m}+F_{rm,n}\right)\epsilon_{mnrt}=0$ we have indeed $$\hat{F}_{tn,n}=0$$
 $$\blacklozenge$$
 \newpage
