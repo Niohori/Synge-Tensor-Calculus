@@ -476,10 +476,60 @@ $$\blacklozenge$$
 \section{p133 - Exercise}
 \begin{tcolorbox}
 In a space of two dimensions prove the relation
-$$\mathbf{4.318.}\spatie \in_{mp}\in_{mq} = \delta_{pq}$$
+$$\mathbf{4.318.}\spatie \epsilon_{mp}\epsilon_{mq} = \delta_{pq}$$
 \end{tcolorbox}
 Suppose $p=q$, then in the summation the term is $0$ if $m=p=q$ and the remaining term is $1\times 1$ or $-1\times -1$ giving indeed $\delta_{pq}=1$.\\ 
 If  $p\neq q$ we get either $m=p$ or $m=q$ in each term of the summation and hence all terms vanish.
+$$\blacklozenge$$
+\newpage
+
+\section{p135 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{4.324.}\spatie P_{mn}= \epsilon_{mnrs}X_rY_s$$
+In 4.323 a skew-symmetric tensor is formed.
+\end{tcolorbox}
+Let's check whether $P_{mn}$ is indeed a tensor and if it is an oriented one.
+Be an orthogonal transformation (proper or not)
+\begin{align}
+X^{'}_r = A_{rm}X_m+A_r
+\end{align}
+and let's check how the expression $P^{'}_{mn}= P_{rs}\partial_m X_r \partial_n X_s$ behaves.
+
+\begin{align}
+P^{'}_{mn}&= P_{rs}\partial_m z_r \partial_n z_s\\
+\mathbf{(4.303.)\ }\Rightarrow \spatie &= \epsilon_{rspq}X_pY_q A_{mr}A_{ns}
+\end{align}
+From (4.302.) we have
+\begin{align}
+X_p = A_{kp}X^{'}_k -  A_{kp}A_k
+\end{align}
+Replacing this in (3)
+\begin{align}
+P^{'}_{mn}&=  \epsilon_{rspq}\left(A_{kp}X^{'}_k -  A_{kp}A_k\right)\left(A_{tq}Y^{'}_t -  A_{tq}A_t\right) A_{mr}A_{ns}\\
+&=\left\{\begin{array}{l}
+\epsilon_{rspq}A_{mr}A_{ns}A_{kp}A_{tq}X^{'}_kY^{'}_t \\\\
+-\epsilon_{rspq}A_{mr}A_{ns}A_{kp}A_{tq}X^{'}_kA_t \\\\
+-\epsilon_{rspq}A_{mr}A_{ns}A_{kp}A_{tq}Y^{'}_tA_k \\\\
++\epsilon_{rspq}A_{mr}A_{ns}A_{kp}A_{tq}A_kA_t 
+\end{array}\right.\\
+&= \epsilon_{rspq}A_{mr}A_{ns}A_{kp}A_{tq}\left(X^{'}_k-A_k\right)\left(Y^{'}_t-A_t\right)
+\end{align}
+A analogous reasoning as in (4.316.) gives us $\epsilon_{mnkt}\left|A_{mr}\right|=\epsilon_{rspq}A_{mr}A_{ns}A_{kp}A_{tq}$ and so 
+\begin{align}
+P^{'}_{mn}&= \epsilon_{mnkt}\left|A_{mr}\right| \left(X^{'}_k-A_k\right)\left(Y^{'}_t-A_t\right)
+\end{align}
+Apparently, even with $\left|A_{mr}\right| =1$ , $P_{mn}$ does not behave like a tensor due to the $ \left(X^{'}_k-A_k\right)\left(Y^{'}_t-A_t\right)$ components. But of course, this is consequence of the sloppy use of the transformation equation: equation (1) is the transformation rule for a point in the $V_4$ space but the object $P_{mn}$ takes two vectors as input. If we consider a vector as an object defined by an ordered pair i.e. $X\equiv \left(z^{(1)}_{(X)}, z^{(0)}_{(X)}\right)$ then $P_{mn}$ should be defined as $P_{mn}= \epsilon_{mnrs}\left(z^{(1)}_{(X)r}- z^{(0)}_{(X)r}\right)\left(z^{(1)}_{(Y)s}- z^{(0)}_{(Y)s}\right)$. This means that when using the transformation rule (1) we will get $$X^{'}\equiv \left(z^{'(1)}_{(X)}, z^{'(0)}_{(X)}\right)$$ giving as components 
+\begin{align}X^{'}_r &= z^{'(1)}_{(X)r}- z^{'(0)}_{(X)r}\\&=   A_{rm}z^{(1)}_{(X)m}+A_r-A_{rm}z^{(0)}_{(X)m}-A_r\\
+&= A_{rm}\left(z^{(1)}_{(X)m} -z^{(0)}_{(X)m}\right)
+\end{align}
+Replacing all this we get as a more correct representation of $p_{mn}$ and $P^{'}_{mn}$:
+\begin{align}
+\left\{\begin{array}{l}
+P_{mn}= \epsilon_{mnrs}\left(z^{(1)}_{(X)r}- z^{(0)}_{(X)r}\right)\left(z^{(1)}_{(Y)s}- z^{(0)}_{(Y)s}\right)\\\\
+P^{'}_{mn}= \epsilon_{mnkt}\left|A_{mr}\right| \left(z^{'(1)}_{(X)r}- z^{'(0)}_{(X)r}\right)\left(z^{'(1)}_{(Y)s}- z^{'(0)}_{(Y)s}\right)\\\\
+\end{array}\right.
+\end{align}
+We see that indeed $P_{mn}$ is an oriented Cartesian tensor.
 $$\blacklozenge$$
 \newpage
 
@@ -514,7 +564,7 @@ P_{34} = X^1Y^2-X^2Y^1\\\\
 $$\blacklozenge$$
 \newpage
 
-\section{p135 - Exercise}
+\section{p136 - Exercise}
 \begin{tcolorbox}
 Translate the well-known vector relations
 $$A\times (B\times C)= B(A.  C)-C(A.B)$$
@@ -1055,13 +1105,15 @@ Suppose now that $m\ne n$ and $p\ne q$.\\
 $$\blacklozenge$$
 \newpage
 
-\section{p140 - Exercise10}
+\section{p140 - Exercise 10}
 \begin{tcolorbox}
 If, in a space of four dimensions, $F_{mn}$ is a skew-symmetric Cartesian tensor, and $$\hat{F}_{mn} = \half \epsilon_{rsmn} F_{rs}$$
 prove that the differential equations $$ F_{mn,r}+F_{nr,m}+F_{rm,n}=0$$ may be written $$\hat{F}_{mn,n} =0$$
 \end{tcolorbox}
 Let's us express $F_{mn}$ as the result of expression $\mathbf{4.324.} $ i.e $$F_{mn} = \epsilon_{mnks} X_kY_s$$ or simplified $$F_{mn} = \epsilon_{mnks} Z_{ks}$$
- We have (this expression gives indeed skew-symmetric tensors):
+This expression gives indeed skew-symmetric tensors.\\\\
+\textit{NOTE:  at first glance this way of representation is  a restriction as the  skew-symmetric Cartesian tensor $F_{mn}$ should moreover be an oriented Cartesian tensor. This can be circumvent by the result of clarification 4.14 where we found that the tensor character  of the quantities $F_{mn}$ was only influenced by the determinant of an orthogonal transformation. So if in the case we are dealing with non-proper orthogonal transformation,  we replace the given identity by   $ \left|A_{mn}\right|F_{mn,r}+\left|A_{mn}\right|F_{nr,m}+\left|A_{mn}\right|F_{rm,n}=0$ and define $\hat{F}_{mn} = \half \epsilon_{rsmn}\left|A_{mn}\right| F_{rs}$ the following reasoning will still be valid.}\\\\
+ We have:
 \begin{align}
 &\left\{\begin{array}{l}
 F_{mn} = \epsilon_{mnks} Z_{ks}\\\\
@@ -1091,5 +1143,121 @@ Multiplying (2) with $\epsilon_{mnrt}$
 &=-6\hat{F}_{tn,n}
 \end{align}
 As $\left(F_{mn,r}+F_{nr,m}+F_{rm,n}\right)\epsilon_{mnrt}=0$ we have indeed $$\hat{F}_{tn,n}=0$$
+$$\blacklozenge$$
+\newpage
+
+\section{p140 - Exercise 11}
+\begin{tcolorbox}
+Write out explicitly and simplify the expressions $$F_{mn}F_{mn}, \ \epsilon_{mnrs} F_{mn}F_{rs} $$ where  $F_{mn}$ is a skew-symmetric oriented Cartesian tensor.\\
+What is the tensor character of these expressions?
+\end{tcolorbox}
+\textit{REMARK: although not explicitly stated we assume that we are in a $V_4$-space.}\\
+Let's us express $F_{mn}$ as the result of expression $\mathbf{4.324.} $ i.e $$F_{mn} = \epsilon_{mnks} X_kY_s$$ or simplified $$F_{mn} = \epsilon_{mnks} Z_{ks}$$
+First we note that by a same reasoning for $\mathbf{4.329.}$ we have
+\begin{align}
+\epsilon_{mnrs}\epsilon_{mnpq} &= 2\left(\delta_{rp}\delta_{sq}-\delta_{rq}\delta_{sp}\right)
+\end{align} 
+The factor $2$ arising from the fact that we are dealing in $V_4$ with a sum over the ordered pair $(mn)$.\\
+ We have for the first  expression $F_{mn}F_{mn}$:
+\begin{align}
+\half F_{mn}F_{mn}&=\half\epsilon_{mnrs}\epsilon_{mnpq} Z_{rs} Z_{pq}\\
+&=\delta_{rp}\delta_{sq}Z_{rs} Z_{pq}-\delta_{rq}\delta_{sp}Z_{rs} Z_{pq}\\
+&=\delta_{sq}Z_{rs} Z_{rq}-\delta_{sp}Z_{rs} Z_{pr}\\
+&=Z_{rs} Z_{rs}-Z_{rp} Z_{pr}\\
+\Rightarrow \spatie F_{mn}F_{mn}&=2\left(X_r X_r Y_s Y_s - \left(X_r Y_r\right)^2\right)
+\end{align}
+\textbf{$F_{mn}F_{mn}$ is an oriented Cartesian invariant.}
+
+
+We have for the second  expression $\epsilon_{mnrs} F_{mn}F_{rs}$:
+\begin{align}
+\epsilon_{mnrs} F_{mn}F_{rs}&=\underbrace{\epsilon_{mnrs}\epsilon_{mnpq}}_{2\left(\delta_{rp}\delta_{sq}-\delta_{rq}\delta_{sp}\right) }\epsilon_{rsuv} Z_{pq} Z_{uv}\\
+&=2\left(\delta_{rp}\delta_{sq}\epsilon_{rsuv}-\delta_{rq}\delta_{sp}\epsilon_{rsuv}\right)Z_{pq} Z_{uv}\\
+&=2\left(\epsilon_{pquv}-\epsilon_{qpuv}\right)Z_{pq} Z_{uv}\\
+&=4\epsilon_{pquv}Z_{pq} Z_{uv}\\
+\Rightarrow \spatie \epsilon_{mnrs} F_{mn}F_{rs}&=4\epsilon_{pquv}X_p  Y_q X_uY_v
+\end{align}
+\textbf{$\epsilon_{mnrs} F_{mn}F_{rs}$ is an oriented Cartesian invariant.}
+$$\blacklozenge$$
+\newpage
+
+\section{p141 - Exercise 12}
+\begin{tcolorbox}
+Show that in a flat space with positive-definite metric form all spheres have positive constant curvature. Show that if the metric is indefinite then some spheres have positive constant curvature and some have negative constant curvature. Discuss the Riemannian curvature of the null-cone.
+\end{tcolorbox}
+A sphere is determined by $ z_kz_k= C$ (see $\mathbf{4.224.}$).\\
+For a \textbf{positive definite} metric it is obvious that as $z_k= \sqrt{\epsilon_k}y_k = y_k$, each term in the summation is non-negative , and so only $C>0$ holds for this equation. From chapter $\mathbf{4.4}$ is follows that a sphere has constant curvature $\frac{1}{C} >0$\\
+In an \textbf{indefinite metric} form space, at least two $\epsilon_k$ differ so the zero sphere can be written as $y_py_p=C +y_ny_n$, the indices $p, n$ regrouped in a way the left side has positive $\epsilon {'}s$ and the right side negative $\epsilon {'}s$. So $C$ can be either positive or negative while still representing a sphere in $V_n$.\\
+For the \textbf{null-cone}, we have $C=0$, so the Riemannian curvature becomes infinite as $$K = \lim_{C\to 0}\frac{1}{C}= \infty$$.
+$$\blacklozenge$$
+\newpage
+
+\section{p141 - Exercise 13}
+\begin{tcolorbox}
+Show that in any space of three dimensions the permutation symbols transform according to
+$$\epsilon^{'}_{mnr}= \epsilon^{}_{stu}J^{'}\partial_m x^s\partial_n x^t\partial_r x^u, \spatie J^{'}= \left|\frac{\partial x^{'p}}{\partial x^{q}}\right|$$
+or
+$$\epsilon^{'}_{mnr}= \epsilon^{}_{stu}J^{}\partial_s x^{'m}\partial_t ^{'n}\partial_u x^{'r}, \spatie J^{}= \left|\frac{\partial x^{p}}{\partial x^{'q}}\right|$$
+Using the result of Exercises II, 12, deduce that in a Riemannian 3-space the quantities $\eta_{mnr}$ and $\eta^{mnr}$ defined by 
+$$ \eta_{mnr}= \epsilon^{}_{mnr}\sqrt{a}, \quad \eta^{mnr}= \frac{\epsilon^{}_{mnr}}{\sqrt{a}}, \quad a=\left|a_{pq}\right|$$
+are components of covariant and contravariant oriented tensors .
+\end{tcolorbox}
+First remember that $J^{'}= \frac{1}{J}$.\\
+The reasoning is completely analogous as to the reasoning from $\mathbf{4.312}$ till $\mathbf{4.317}$ except that the $\frac{\partial z^{m}}{\partial z^{'s}}$ are held and not replaced by the $A_{mn}$.\\
+$\mathbf{4.316}$ becomes
+\begin{align}
+\epsilon^{'}_{mnr}J^{}&= \epsilon^{}_{stu}\partial_m x^s\partial_n x^t\partial_r x^u, \spatie J^{}= \left|\frac{\partial x^{p}}{\partial x^{'q}}\right|\\
+J^{}= \frac{1}{J^{'}}\quad \Rightarrow\spatie\epsilon^{'}_{mnr}&= \epsilon^{}_{stu}J^{'}\partial_m x^s\partial_n x^t\partial_r x^u, \spatie J^{'}= \left|\frac{\partial x^{'p}}{\partial x^{q}}\right|
+\end{align}
+Following Exercises II, 12  we have $a^{'} = aJ^2$. So,
+\begin{align}
+\eta^{'}_{mnr} &=\eta^{}_{uvw} \partial_m x^u\partial_n x^v\partial_r x^w\\
+&=\sqrt{a}\ \underbrace{\epsilon^{}_{uvw}\partial_m x^u\partial_n x^v\partial_r x^w}_{= \frac{1}{J^{'}}\epsilon^{'}_{mnr}}\\
+&=\sqrt{a}\ J^{}\epsilon^{'}_{mnr}\\
+\sqrt{a^{'}} = \sqrt{aJ^2}\quad\Rightarrow\spatie&= \sqrt{a^{'}}\ \epsilon^{'}_{mnr}
+\end{align}
+The same reasoning applies to the contravariant counterpart.
+$$\blacklozenge$$
+\newpage
+
+\section{p141 - Exercise 13}
+\begin{tcolorbox}
+Translate into Cartesian tensor form and thus verify the following well known vector relations.
+$$ \nabla .  \left( \phi V \right) = \phi  \nabla . V + V .\nabla \phi $$
+$$ \vdots$$
+\end{tcolorbox}
+$$ \mathbf{\nabla .  \left( \phi V \right) = \phi  \nabla .V + V .\nabla \phi }$$
+\begin{align}
+\nabla .  \left( \phi V \right) &\equiv \partial_k \phi V_k\\
+&= \phi\partial_k V_k+V_k\partial_k\phi\\
+&\equiv \phi\nabla.V+V.\nabla\phi
+\end{align}
+$$\lozenge$$
+$$ \mathbf{\nabla \times  \left( \phi V \right) = \phi  \nabla \times V + V \times \nabla \phi }$$
+\begin{align}
+\left( \nabla \times  \left( \phi V \right)\right)_m &\equiv \epsilon_{mnr}\partial_n \phi V_r\\
+&= \phi\epsilon_{mnr}\partial_n V_r+\epsilon_{mnr}V_r\partial_n\phi\\
+&\equiv \phi\nabla\times V+\nabla\phi \times V\\
+&= \phi\nabla\times V-  V\times\nabla\phi
+\end{align}
+$$\lozenge$$
+$$ \mathbf{\nabla . \left( U\times V \right) = V .\left( \nabla \times U\right) -  U .\left( \nabla \times V\right)}$$
+\begin{align}
+\nabla . \left( U\times V \right) &\equiv \partial_m \left(\epsilon_{mnr}U_n V_r\right)\\
+&=  U_n\epsilon_{mnr} \partial_m  V_r+ V_r\epsilon_{mnr} \partial_mU_n\\
+&=  -U_n\underbrace{\epsilon_{nmr} \partial_m  V_r}_{\equiv \left(\nabla \times V\right)_n}+ V_r\underbrace{\epsilon_{rmn} \partial_m U_n}_{\equiv \left(\nabla \times U\right)_r}\\
+&\equiv V .\left( \nabla \times U\right) -  U .\left( \nabla \times V\right)
+\end{align}
+$$\lozenge$$
+
+$$ \mathbf{\nabla \times  \left( U\times V \right) = V . \nabla U -  U . \nabla V+U\nabla . V-V\nabla.U}$$
+\begin{align}
+\left(\nabla \times  \left( U\times V \right) \right)_k &\equiv \epsilon_{kpm}\partial_p \epsilon_{mnr}U_n V_r\\
+&=  \underbrace{\epsilon_{kpm}}_{= \epsilon_{mkp}}\epsilon_{mnr}V_r\partial_p U_n + \underbrace{\epsilon_{kpm}}_{= \epsilon_{mkp}}\epsilon_{mnr}U_n\partial_p V_r \\
+&= \delta_{kn}\delta_{pr}V_r\partial_p U_n -\delta_{kr}\delta_{pn}V_r\partial_p U_n +\delta_{kn}\delta_{pr}U_n\partial_p V_r-\delta_{kr}\delta_{pn}U_n\partial_p V_r\\
+&= \underbrace{V_p\partial_p U_k}_{\equiv \left(V .\nabla U\right)_k} -\underbrace{V_k\partial_n U_n}_{\equiv \left(V\nabla .U\right)_k} +\underbrace{U_k\partial_r V_r}_{\equiv \left(U\nabla .V\right)_k}-\underbrace{U_p\partial_p V_k}_{\equiv \left(U .\nabla V\right)_k}\\
+&\equiv V .\nabla U-U .\nabla V+U\nabla .V-V\nabla .U
+\end{align}
+$$\lozenge$$
 $$\blacklozenge$$
 \newpage
