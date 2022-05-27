@@ -1220,7 +1220,7 @@ The same reasoning applies to the contravariant counterpart.
 $$\blacklozenge$$
 \newpage
 
-\section{p141 - Exercise 13}
+\section{p141 - Exercise 14}
 \begin{tcolorbox}
 Translate into Cartesian tensor form and thus verify the following well known vector relations.
 $$ \nabla .  \left( \phi V \right) = \phi  \nabla . V + V .\nabla \phi $$
@@ -1259,5 +1259,86 @@ $$ \mathbf{\nabla \times  \left( U\times V \right) = V . \nabla U -  U . \nabla 
 &\equiv V .\nabla U-U .\nabla V+U\nabla .V-V\nabla .U
 \end{align}
 $$\lozenge$$
+
+$$ \mathbf{\nabla \left( U. V \right) = U . \nabla V + V . \nabla U+U\times\left(\nabla \times V\right)+V\times\left(\nabla \times U\right)}$$
+\begin{align}
+\left(\nabla \left( U. V \right) \right)_p &\equiv \partial_p U_k V_k\\
+&=  V_k\partial_p U_k +U_k\partial_p  V_k\\
+\left(U\times\left(\nabla\times V\right)\right)_p &\equiv \epsilon_{pkm} U_k\epsilon_{mnr}\partial_n V_r\\
+&=\epsilon_{mpk} \epsilon_{mnr}U_k\partial_n V_r\\
+&=\delta_{pn}\delta_{kr}U_k\partial_n V_r-\delta_{pr}\delta_{kn}U_k\partial_n V_r\\
+&=U_r\partial_p V_r-U_n\partial_n V_p\\
+\Rightarrow\spatie \left(U\times\left(\nabla\times V\right)\right)_p &\equiv U_r\partial_p V_r-\underbrace{U_n\partial_n V_p}_{\equiv \left(U.\nabla V\right)_p}
+\end{align}
+Plugging (23) in (18) twice (with interchanging U and V) gives
+\begin{align}
+\nabla \left( U. V \right)  =U\times\left(\nabla\times V\right)+U.\nabla V+V\times\left(\nabla\times U\right)+V.\nabla U
+\end{align}
+$$\lozenge$$
+
+$$ \mathbf{\nabla \times \left(\nabla\phi \right) = 0}$$
+\begin{align}
+\left(\nabla \times \left(\nabla\phi \right)\right)_k&\equiv \epsilon_{kmn}\partial_m \partial_n\phi
+\end{align}
+We just have to note that if $m=n$ the terms in the sum are zero and that when $m\ne n$ we will have two terms which add as $\epsilon_{kMN}\partial_M \partial_N\phi + \epsilon_{kNM}\partial_N \partial_M\phi $ which obviously is zero. And so $\nabla \times \left(\nabla\phi \right) = 0$.
+$$\lozenge$$
+
+$$ \mathbf{\nabla . \left(\nabla\times V \right)= 0}$$
+\begin{align}
+\nabla . \left(\nabla\times V \right)&\equiv \partial_p\epsilon_{pmn} \partial_mV_n\\
+&=\epsilon_{npm} \partial_p \partial_m V_n
+\end{align}
+We apply the same reasoning as in the previous identity. And so $\nabla . \left(\nabla\times V \right) = 0$.
+$$\lozenge$$
+
+$$ \mathbf{\nabla \times \left(\nabla\times V \right)= \nabla\nabla.V-\nabla^2V}$$
+\begin{align}
+\left(\nabla \times \left(\nabla\times V \right)\right)_m&\equiv \epsilon_{mkr} \partial_k \epsilon_{ruv} \partial_uV_v\\
+&=\epsilon_{rmk} \epsilon_{ruv}\partial_k  \partial_u V_v\\
+&=\delta_{mu}\delta_{kv}\partial_k  \partial_u V_v-\delta_{mv}\delta_{ku}\partial_k  \partial_u V_v\\
+&=\underbrace{\partial_m  \partial_v V_v}_{\left(\nabla\nabla.V\right)_m}-\underbrace{\partial_k  \partial_k V_m}_{\left(\nabla^2 V\right)_m}
+\end{align}
+$$\lozenge$$
+
+$$ \mathbf{\nabla .r= 3}$$
+where r is the vector with components equal to the Cartesian coordinates $z_1,z_2,z_3$
+\begin{align}
+\nabla .r &\equiv \partial_k z_k\\
+&=\delta_{kk}\\
+&=3
+\end{align}
+$$\lozenge$$
+
+$$ \mathbf{\nabla \times r= 0}$$
+where r is the vector with components equal to the Cartesian coordinates $z_1,z_2,z_3$
+\begin{align}
+\left(\nabla \times r\right)_m &\equiv \epsilon_{mns}\partial_n z_s\\
+&=\epsilon_{mns}\delta_{ns}\\
+\end{align}
+This sum is zero as when $n=s$, $\delta_{ns}=1$ but $\epsilon_{mNN}=0$ and when $n\ne s$, $\delta_{ns}=0$.
+$$\lozenge$$
+
+$$ \mathbf{V .\nabla r= 0}$$
+where r is the vector with components equal to the Cartesian coordinates $z_1,z_2,z_3$
+\begin{align}
+\left(V .\nabla r\right)_m &\equiv V_n \partial_n r_m\\
+&=V_n \delta_{nm}\\
+&=V_m\\
+\end{align}
+$$\lozenge$$
+$$\blacklozenge$$
+\newpage
+
+\section{p141 - Exercise 15}
+\begin{tcolorbox}
+Prove that $$\epsilon_{amn}\epsilon_{ars}+\epsilon_{ams}\epsilon_{anr}=\epsilon_{amr}\epsilon_{ans}$$
+\end{tcolorbox}
+\begin{align}
+\epsilon_{amn}\epsilon_{ars}+\epsilon_{ams}\epsilon_{anr}&=
+\left(\delta_{mr}\delta_{ns}-\delta_{ms}\delta_{nr}\right)
++\left(\delta_{mn}\delta_{sr}-\delta_{mr}\delta_{sn}\right)\\
+&=\delta_{mn}\delta_{sr}-\delta_{ms}\delta_{nr}\\
+&=\epsilon_{amr}\epsilon_{anr}
+\end{align}
 $$\blacklozenge$$
 \newpage
