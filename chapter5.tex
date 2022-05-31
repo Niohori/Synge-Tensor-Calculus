@@ -1,0 +1,135 @@
+\chapter{Applications to Classical Mechanics}
+\pagebreak[4]
+\section{p153 - Exercise}
+\begin{tcolorbox}
+If $\mu^{\alpha}$ are the contravariant components of a unit vector in a surface $S$, show that $\mu^{\alpha}f_{\alpha}$ is the physical component of acceleration in the direction tangent to $S$ defined by $\mu^{\alpha}$.
+\end{tcolorbox}
+As we are in an Euclidean space we can interpret $a_{mn}\mu^{\alpha}f^{\alpha}$ as $\left|\mu\right|\left|f\right|\cos\theta $ with $\theta$ the angle between the two vectors. As $\left|\mu\right|=1$ we have
+\begin{align}
+a_{mn}\mu^{\alpha}f^{\alpha}&= \mu^{\alpha}f_{\alpha}\\
+&= \left|f\right|\cos\theta 
+\end{align}
+which is the projection of the vector $f$ on the unit vector $\mu$.
+$$\blacklozenge$$
+\newpage
+
+\section{p154 - Clarification to 5.226.}
+\begin{tcolorbox}
+$$\mathbf{\text{5.226.}\spatie v\dv{v}{s}=0,\quad \overline{\kappa}v^2=0}$$
+Assuming that the particle is not at rest $v\ne 0$, and therefore $\overline{\kappa}=0$. \textit{\textbf{Since this implies that the curve is a geodesic}...}
+\end{tcolorbox}
+The assertion in bold is a direct consequence $$\mathbf{\text{2.513.}}\spatie \frac{\delta \dv{x^r}{s}}{\delta s}=0$$ 
+As in $ \mathbf{5.233}$ we have $\frac{\delta \lambda^{\alpha}}{\delta s}=\frac{\delta \dv{x^{\alpha}}{s}}{\delta s}=0$, the considered curve follows the geodesic curve.
+$$\blacklozenge$$
+\newpage
+
+\section{p155 - Exercise}
+\begin{tcolorbox}
+Show that in relativity the force $4$-vector $X^r$ lies along the first normal of the trajectory in space-time. Express the first curvature in terms of the proper mass $m$ of the particle and the magnitude $X$ of $ X^r$.
+\end{tcolorbox}
+Let us recall the first Frenet formula $\mathbf{2.705}$ without forgetting that the metric form is not positive-definite, $$\frac{\delta \lambda^r}{\delta s}=\kappa\nu^r,\quad \epsilon_{(1)}\nu_n\nu^n=1$$ As $\mathbf{5.299}$ $$m\frac{\delta \lambda^r}{\delta s}=X^r$$ it is clear that $X^r = m\kappa\nu^r$ and is collinear with the first normal.
+\begin{align}
+X^r &= m\kappa\nu^r\\
+\times \quad a_{mr}X^m\quad\Rightarrow\spatie \underbrace{a_{mr}X^mX^r}_{=\left(X^1\right)^2+\left(X^2\right)^2+\left(X^3\right)^2-\left(X^4\right)^2} &= m\kappa \underbrace{a_{mr}\nu^m\nu^r}_{= \epsilon_{(1)}}
+\end{align}
+\textbf{$$\Rightarrow\spatie \kappa = \epsilon_{(1)}\frac{\left(X^1\right)^2+\left(X^2\right)^2+\left(X^3\right)^2-\left(X^4\right)^2}{m}
+$$}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p156 - Clarification}
+\begin{tcolorbox}
+Interpretation of 
+$$\mathbf{5.231.}\spatie M_{rs}=\epsilon_{rsn}M_n=z_rF_s-z_sF_r$$
+\end{tcolorbox}
+What do the $M_{rs}$ represent?
+\begin{figure}[H]
+\input{D:/MathLatex/images/fig_p156_5320.tex}
+\caption{Interpretation of the tensor moment $M_{12}$}
+\label{fig:fig_p156_5320}
+\end{figure}
+Let's consider a mass point $P$ on which a force $\overrightarrow{F}$ is acting. The force has components $\left(F_x,F_y,F_z\right)$ in the  space $V^{'}_3$ (which is by the way not the space $V_3$ of the considered mass point).\\
+Let's investigate the element $M_{12}$ of the \textit{tensor moment}.\\
+$P_1F_2\overrightarrow{e_3}$ is the vector product $\overrightarrow{P_1}\times\overrightarrow{F_2}$ and is as such the torsion of the component $F_2$ of $\overrightarrow{F}$ acting on the mass point situated at $P_1$. The origin being fixed, $\overrightarrow{F_1}$ tries to move $P_1$, clockwise along the $z_3$ axis. The same is true for the component $\overrightarrow{F_1}$ acting on the mass point situated at $P_2$, and is represented here by the vector $- \overrightarrow{P_2}\times\overrightarrow{F_1}$ ($\overrightarrow{F_1}$ tries to move  $P_2$, counter clockwise along the $z_3$ axis). \\
+Hence, $P_1F_2-P_2F_1$ is the net force trying to move the point $P$ along the $z_3$ axis (i.e. in the plane $\parallel$ with the $z_3=0$ plane).
+$$\blacklozenge$$
+\newpage
+
+
+\section{p156 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{5.234.}\spatie \dv{h_r}{t}= M_r$$
+\end{tcolorbox}
+\begin{align}
+h_r &= m\epsilon_{rmn}z_mv_n\\
+\Rightarrow \spatie \dv{h_r}{t} &= m\epsilon_{rmn}\dv{z_m}{t} v_n+m\epsilon_{rmn}z_m\dv{v_n}{t}\\
+&= m\underbrace{\epsilon_{rmn}v_m v_n}_{=0}+\underbrace{\epsilon_{rmn}z_mF_n}_{=M_r}\\
+&=M_r
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p158-159 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{5.313.}\spatie \omega_{rs}= -\omega_{sr}$$ From 5.310 and the vector character of $v_r$ and $z_r$ (for transformations which do not change the origin), \textbf{it follows that $\omega_{rs} $ is a Cartesian tensor of second order}.
+\end{tcolorbox}
+Be 
+\begin{align}
+v^{}_r = -\omega^{}_{rn}z^{}_n
+\end{align}
+Considering orthogonal transformation in a flat space $z^{'}_m = A_{mr}z^{}_r+B_m$ with  $B_m=0$ as we consider only transformations which do not change the origin. Differentiation with the parameter $t$ gives 
+\begin{align}
+v^{'}_m &= A_{mr}v^{}_r\\
+&= -\omega^{}_{rn}A_{mr}z^{}_n\\
+\end{align}
+But $z^{'}_q = A_{qr}z^{}_r\quad\Rightarrow \quad A_{qn}z^{'}_q = A_{qn}A_{qr}z^{}_r\quad\Rightarrow \quad A_{qn}z^{'}_q = z^{}_n$ 
+Hence
+\begin{align}
+v^{'}_m &= -\omega^{}_{rn}A_{mr}z^{}_n\\
+&= -\underbrace{\omega^{}_{rn}A_{mr}A_{qn}}_{\overset{\underset{\mathrm{def}}{}}{=}\omega_{mq}^{'}}z^{'}_q\\
+v^{'}_m &= -\omega_{mq}^{'}z^{'}_q
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p159 - Exercise}
+\begin{tcolorbox}
+Show that if a rigid body rotates about the point $z_r=b_r$ as fixed point, the velociy of a general point of the body is given by $$v_r=-\omega_{rm}\left(z_m-b_m\right)$$
+\end{tcolorbox}
+By $\mathbf{5.302. }$:
+\begin{align}
+\left(z^{(1)}_m-z^{(2)}_m\right)\left(dz^{(1)}_m-dz^{(2)}_m\right)=0
+\end{align}
+At the fixed point we have $z^{(2)}_m=b_m$ and $dz^{(2)}_m=0$, hence
+\begin{align}
+\left(z^{(1)}_m-b_m\right)\left(dz^{(1)}_m\right)=0\\
+\Rightarrow\spatie z^{(1)}_mdz^{(1)}_m =b_mdz^{(1)}_m
+\end{align}
+As this is true for any point of the rigid mass, expanding (1) and using (3) we get when dividing by $dt$
+\begin{align}
+\left(z^{(2)}_m-b_m\right)v^{(1)}_m+\left(z^{(1)}_m-b_m\right)v^{(2)}_m=0
+\end{align}
+Taking twice the partial derivative $\frac{\partial^2}{\partial z^{(1)}_p\partial z^{(1)}_q}$ we get
+\begin{align}
+\left(z^{(2)}_m-b_m\right)\frac{\partial^2 v_m}{\partial z^{(1)}_p\partial z^{(1)}_q}=0
+\end{align}
+As this is true for any arbitrary point in the rigid body we get
+\begin{align}
+\frac{\partial^2 v_m}{\partial z^{(1)}_p\partial z^{(1)}_q}=0\\
+\Rightarrow\spatie v_m= K_{mr}z_r+B_m
+\end{align}
+At the fixed point we have 
+\begin{align}
+ K_{mr}b_r+B_m =0
+\end{align}
+Plugging this in (7)
+\begin{align}
+ v_m= K_{mr}\left(z_r-b_m\right)
+\end{align}
+Putting $K_{mr}=-\omega_{mr}$ gives us indeed the asked expression.
+$$\blacklozenge$$
+\newpage

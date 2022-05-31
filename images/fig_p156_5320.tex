@@ -1,0 +1,90 @@
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{bending}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary{bending}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+
+\begin{tikzpicture}[scale=0.8]
+\tikzstyle{left-hand-mirror} = [
+    draw,
+    postaction=decorate, 
+    decoration={
+        markings,
+        mark=between positions 0.015 and 0.98 step 0.1072 with {\draw (0,0)--(60:3pt);}
+    }
+]  
+\coordinate (O) at (0,0);
+\coordinate (X) at (-6,-6);
+\coordinate (Y) at (10,0);
+\coordinate (Z) at (0,10);
+\draw [-{Latex[length=3mm]}] (O) -- (X);
+\draw [-{Latex[length=3mm]}] (O) -- (Y);
+\draw [-{Latex[length=3mm]}] (O) -- (Z);
+\node[label=north west:$z_1$] at (X) {};
+\node[label=north east:$z_2$] at (Y) {};
+\node[label=north west:$z_3$] at (Z) {};
+\coordinate (P) at (5,3);
+\draw [-{Latex[length=3mm]},ultra thick] (O) -- (P);
+\node[label=north west:$P$] at (P) {};
+\coordinate (F) at (8,7) {};
+\draw [-{Latex[length=3mm]}, ultra thick] (P) -- (F);
+\node[above right] at (F) {$\overrightarrow{F}$};
+\coordinate (Fp) at (8-5,7-3) {};
+\draw [-{Latex[length=3mm]},dashdotted,ultra thick] (O) -- (Fp);
+\node[above right,] at (Fp) {$\overrightarrow{F^{'}}$};
+\coordinate (Px) at (-2,-2) {};
+\coordinate (Py) at (6.8,0) {};
+\node[label=north west:$P1$] at (Px) {};
+\node[label=north west:$P1$] at (Py) {};
+\coordinate (Pp) at (5,-2) {};
+\draw [dashed] (Pp) -- (P);
+\draw [dashed] (Pp) -- (Px);
+\draw [dashed] (Pp) -- (Py);
+\coordinate (Fpp) at (3,-1) {};
+\coordinate (Fx) at (-1,-1) {} {};
+\coordinate (Fy) at (4,0) {} {};
+\node[label=north west:$F1$] at (Fx) {};
+\node[label=north west:$F1$] at (Fy) {};
+\draw [dashed] (Fp) -- (Fpp);
+\draw [dashed] (Fpp) -- (Fx);
+\draw [dashed] (Fpp) -- (Fy);
+
+\coordinate (Fppp) at (6,-1) {} {};
+\coordinate (Pppp) at (2,-2) {} {} {};
+\node[{anchor=north west }] at (Fppp) {$\overrightarrow{F_1}$};
+\node[{anchor=south east }] at (Pppp) {$\overrightarrow{F_2}$};
+\draw [-{Latex[length=3mm]}, ultra thick] (O) -- (Px);
+\draw [-{Latex[length=3mm]},ultra thick] (O) -- (Py);
+\draw [-{Latex[length=3mm]}, ultra thick] (Px) -- (Pppp);
+\draw [-{Latex[length=3mm]},ultra thick] (Py) -- (Fppp);
+%\node[label=north west:$K$] at (Fppp) {};
+%\node[label=north west:$S$] at (Pppp) {};
+\draw [dashed] (Fp) -- (Fpp);
+\draw [dashed] (Fppp) -- (Fx);
+\draw [dashed] (Pppp) -- (Fy);
+%\filldraw[ultra thick, gray!10] (Px) -- (Pppp) -- (Fy) -- (O) -- (Px) -- cycle;
+%\filldraw[ultra thick,gray!20] (Fx) -- (Fppp) -- (Py) -- (O) -- (Px) -- cycle;
+%\draw[ultra thick, gray!80] (Px) -- (Pppp) -- (Fy) -- (O) -- (Px) -- cycle;
+%\draw[ultra thick,gray!80] (Fx) -- (Fppp) -- (Py) -- (O) -- (Px) -- cycle;
+\coordinate (Vp1) at (0,6) {} {};
+\coordinate (Vp2) at (0,9) {} {} {};
+\draw [-{Latex[length=3mm]}, ultra thick] (O) -- (Vp1);
+\draw [-{Latex[length=3mm]}, ultra thick] (O) -- (Vp2);
+\node[{anchor=north west }] at (Vp1) {$\overrightarrow{P_1}\times\overrightarrow{F_2}$};
+\node[{anchor=north west }] at (Vp2) {-$\overrightarrow{P_2}\times\overrightarrow{F_1}$};
+\draw[fill=white]  (Py) circle (0.1);
+\draw[fill=white]  (Px) circle (0.1);
+\draw[fill=white]  (P) circle (0.1);
+\draw[decoration={markings, mark=at position 0.1 with {\arrow[scale = 1.5]{latex[]}}},
+    postaction={decorate}](0,4.3) ellipse (1 and 0.2);
+    \draw[decoration={markings, mark=at position 0.1 with {\arrow[scale = 1.5]{latex[reversed]}}},
+    postaction={decorate}](0,7.3) ellipse (1 and 0.2);
+ \coordinate (Qx) at (3.9,1.7) {} {};
+\coordinate (Qy) at (8,3) {} {} {};
+\draw [-{Latex[length=3mm]},dotted, ultra thick] (P) -- (Qx);
+\draw [-{Latex[length=3mm]},dotted, ultra thick] (P) -- (Qy);
+\node[{anchor=north west }] at (Qx) {$\overrightarrow{F_1}$};
+\node[{anchor=north west }] at (Qy) {$\overrightarrow{F_2}$};
+\end{tikzpicture}
