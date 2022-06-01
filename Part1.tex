@@ -1,0 +1,133 @@
+\documentclass{ut-thesis}
+
+%**************************** General libraries *******************************
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage[utf8]{inputenc} 
+\usepackage{amssymb}
+\usepackage{ntheorem}
+\usepackage{tensor}
+%\usepackage{physics}
+\usepackage[italicdiff]{physics}
+\usepackage{calc}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{tcolorbox}
+\usepackage{chngcntr}
+\usepackage{titlesec}
+\usepackage {graphicx,float} 
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{etoolbox} %ifthen
+\usepackage[outline]{contour} % glow around text
+
+%**************************** Bibliography management *******************************
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{sample.bib} %Import the bibliography file
+
+
+
+%**************************** Tikz libraries *******************************
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,arrows.meta,spy}
+\usetikzlibrary{calc}% needed for BB
+\usepackage{pgfplots}
+\usetikzlibrary{math} % for \tikzmath
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
+\usetikzlibrary{decorations.pathreplacing} % for curly braces
+\usetikzlibrary {decorations.markings,shapes.arrows}
+\usetikzlibrary{patterns}
+\usepackage{tikz-3dplot}
+
+%\usepackage[margin=0cm,nohead]{geometry}
+%\usepackage[active,tightpage]{preview}
+%\usepackage[pdf]{pstricks}
+
+%**************************** custom macro's *******************************
+\newsavebox\CBox
+\newcommand\hcancel[2][0.5pt]{%
+  \ifmmode\sbox\CBox{$#2$}\else\sbox\CBox{#2}\fi%
+  \makebox[0pt][l]{\usebox\CBox}%  
+  \rule[0.5\ht\CBox-#1/2]{\wd\CBox}{#1}}
+%\newcommand{\edal}{\end{align}}
+%\newcommand{\bgal}{\begin{align}\end{align}}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\questeq}{\overset{?}{=}}
+%\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\renewcommand\thelemma{\unskip}
+\newcommand{\christ}[3]{\ensuremath{\Gamma^{#1}_{#2#3}}}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\kwart}{\ensuremath{\frac{1}{4}}}
+\newcommand\del{\overline{\boldsymbol{{\triangledown}}}}
+\newcommand\maal{\boldsymbol{\times}}
+\newcommand\spatie{\quad\quad\quad\quad}
+\newcommand\RAr{\quad\Rightarrow\quad}
+%\newcommand{\myabsdv}[3]{{\frac{\delta^2 \ensuremath{{#1}}}{{\delta %%\ensuremath{{#2}}}{\delta\ensuremath{{#3}}}}}}
+\newcommand\myabsdv[3][1]{{\frac{{\delta^{2}}{#1}}{\delta {#2} \delta {#3}}}}
+
+%**************************** layout setings *******************************
+\counterwithin*{equation}{chapter}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\renewcommand{\theequation}{\arabic{equation}}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{50pt}{*2}
+\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
+
+%**************************** Tikz  setings *******************************
+\begin{comment}
+\tikzset{
+    circ/.style={draw, circle,inner sep=0pt,minimum size=8mm, font=\scriptsize},
+    triangle/.tip={Computer Modern Rightarrow[open,angle=120:3pt]}}
+    
+\tikzset{
+  every point/.style = {circle, inner sep={.75\pgflinewidth}, opacity=1, draw, solid, fill=white},
+  point/.style={insert path={node[every point, #1]{}}}, point/.default={},
+  colored point/.style = {point={fill=#1}},
+  point name/.style = {insert path={coordinate (#1)}},
+  inherit/.style = {point/.style={insert path={node[circle, inner sep={.75\pgflinewidth}, draw, fill, #1]{}}}}
+}
+\end{comment}
+
+%**************************** Where to find images *****************************
+\graphicspath{ {D:/MathLatex/images/} }
+
+
+%**************************** Document itself *******************************
+\author{Bernard Carrette}
+\gradyear{2020}
+\title{Tensor Calculus\\J.L. Synge and A.Schild (Dover Publication)\\ Solutions to exercises\\Part \RomanNumeralCaps{1}\\
+Chapters \RomanNumeralCaps{1} to \RomanNumeralCaps{4}}
+\begin{document}
+\maketitle
+
+\section*{Remarks and warnings}
+You're welcome to use these notes, but they may contain errors, so proceed with caution. If you do find an error, however, I'd be happy to receive bug reports, suggestions, and the like through Github.
+An overview of the material covered in the book can be found in the separate document "Synge overview.pdf".
+\section*{Some notation conventions}
+\begin{center}
+\begin{tabular}{ c c  }
+$\partial_r \equiv \pdv{}{x^r}$ & \\\\
+$\Gamma^r_{mn} \equiv 
+\begin{Bmatrix}
+r\\
+m n\\
+\end{Bmatrix}$ & Christoffel symbol of the second kind\\\\
+
+\end{tabular}
+\end{center}
+
+\tableofcontents
+\listoffigures
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+%\include{chapter5}
+\printbibliography %Prints bibliography
+\end{document}

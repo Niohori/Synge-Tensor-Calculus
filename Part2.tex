@@ -77,6 +77,7 @@
 \titleformat{\chapter}[display]
   {\normalfont\bfseries}{}{0pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{50pt}{*2}
+\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
 
 %**************************** Tikz  setings *******************************
 \begin{comment}
@@ -100,12 +101,14 @@
 %**************************** Document itself *******************************
 \author{Bernard Carrette}
 \gradyear{2020}
-\title{Tensor Calculus\\J.L. Synge and A.Schild (Dover Publication)\\ Solutions to exercises}
+\title{Tensor Calculus\\J.L. Synge and A.Schild (Dover Publication)\\ Solutions to exercises\\Part II\\
+Chapters \RomanNumeralCaps{5} to \RomanNumeralCaps{8}}
 \begin{document}
 \maketitle
 
 \section*{Remarks and warnings}
 You're welcome to use these notes, but they may contain errors, so proceed with caution. If you do find an error, however, I'd be happy to receive bug reports, suggestions, and the like through Github.
+An overview of the material covered in the book can be found in the separate document "Synge overview.pdf".
 \section*{Some notation conventions}
 \begin{center}
 \begin{tabular}{ c c  }
@@ -121,10 +124,14 @@ m n\\
 
 \tableofcontents
 \listoffigures
-\include{chapter1}
-\include{chapter2}
-\include{chapter3}
-\include{chapter4}
-%\include{chapter5}
+%\include{chapter1}
+%\include{chapter2}
+%\include{chapter3}
+%\include{chapter4}
+\include{chapter5}
+%\include{chapter6}
+%\include{chapter7}
+%\include{chapter8}
+%\include{Appendices}
 \printbibliography %Prints bibliography
 \end{document}

@@ -1,3 +1,4 @@
+\setcounter{chapter}{4}
 \chapter{Applications to Classical Mechanics}
 \pagebreak[4]
 \section{p153 - Exercise}
@@ -51,7 +52,7 @@ What do the $M_{rs}$ represent?
 \end{figure}
 Let's consider a mass point $P$ on which a force $\overrightarrow{F}$ is acting. The force has components $\left(F_x,F_y,F_z\right)$ in the  space $V^{'}_3$ (which is by the way not the space $V_3$ of the considered mass point).\\
 Let's investigate the element $M_{12}$ of the \textit{tensor moment}.\\
-$P_1F_2\overrightarrow{e_3}$ is the vector product $\overrightarrow{P_1}\times\overrightarrow{F_2}$ and is as such the torsion of the component $F_2$ of $\overrightarrow{F}$ acting on the mass point situated at $P_1$. The origin being fixed, $\overrightarrow{F_1}$ tries to move $P_1$, clockwise along the $z_3$ axis. The same is true for the component $\overrightarrow{F_1}$ acting on the mass point situated at $P_2$, and is represented here by the vector $- \overrightarrow{P_2}\times\overrightarrow{F_1}$ ($\overrightarrow{F_1}$ tries to move  $P_2$, counter clockwise along the $z_3$ axis). \\
+$P_1F_2\overrightarrow{e_3}$ is the vector product $\overrightarrow{P_1}\times\overrightarrow{F_2}$ and is as such the torque of the component $F_2$ of $\overrightarrow{F}$ acting on the mass point situated at $P_1$. The origin being fixed, $\overrightarrow{F_2}$ tries to move $P_1$, clockwise along the $z_3$ axis. The same is true for the component $\overrightarrow{F_1}$ acting on the mass point situated at $P_2$, and is represented here by the vector $- \overrightarrow{P_2}\times\overrightarrow{F_1}$ ($\overrightarrow{F_1}$ tries to move  $P_2$, counter clockwise along the $z_3$ axis). \\
 Hence, $P_1F_2-P_2F_1$ is the net force trying to move the point $P$ along the $z_3$ axis (i.e. in the plane $\parallel$ with the $z_3=0$ plane).
 $$\blacklozenge$$
 \newpage
@@ -131,5 +132,40 @@ Plugging this in (7)
  v_m= K_{mr}\left(z_r-b_m\right)
 \end{align}
 Putting $K_{mr}=-\omega_{mr}$ gives us indeed the asked expression.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p161 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{5.325.}\spatie \Omega_{np}\sum \left(mf_nz_p\right)= \Omega_{np}\sum F_nz_p $$
+and hence, since $\Omega_{np}$ is arbitrary,
+$$\mathbf{5.326.}\spatie \sum m\left(f_nz_p-f_pz_n\right)= \sum \left(F_nz_p-F_pz_n \right)$$
+\end{tcolorbox}
+To be complete the following step should be inserted
+
+\begin{align}
+\Omega_{np}\sum \left(mf_nz_p\right)&= \Omega_{np}\sum F_nz_p \\
+\text{As }\Omega_{np}\text{ is skew-symmetric:}\spatie -\Omega_{np}\sum \left(mf_pz_n\right)&= -\Omega_{np}\sum F_pz_n \\
+\text{(1)+(2) }\spatie \Omega_{np}\sum m\left(f_nz_p-f_pz_n\right)&= \Omega_{np}\sum\left( F_nz_p -F_pz_n\right)
+\end{align}
+and hence, since $\Omega_{np}$ is arbitrary,
+$$\mathbf{5.326.}\spatie \sum m\left(f_nz_p-f_pz_n\right)= \sum \left(F_nz_p-F_pz_n \right)$$
+$$\blacklozenge$$
+\newpage
+
+\section{p161 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{5.329.}\spatie h_{np}=\sum m\left(\omega_{nq} z_q z_p -\omega_{pq} z_qz_n\right)$$
+$$= J_{npqr}\omega_{rq}$$
+where
+$$\mathbf{5.330.}\spatie J_{npqr}= \sum m\left(\delta_{nr}z_qz_p-\delta_{pr}z_nz_q \right)$$
+\end{tcolorbox}
+\begin{align}
+h_{np}&=\sum m\left(\omega_{nq} z_q z_p -\omega_{pq} z_qz_n\right)\\
+&=\sum m\left(\omega_{rq}\delta_{rn} z_q z_p -\omega_{rq} \delta_{rp}z_qz_n\right)\\
+&=\omega_{rq}\sum m\left(\delta_{rn} z_q z_p -\delta_{rp}z_qz_n\right)\\
+&=J_{npqr}\omega_{rq}
+\end{align}
 $$\blacklozenge$$
 \newpage
