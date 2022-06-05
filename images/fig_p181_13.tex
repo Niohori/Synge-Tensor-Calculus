@@ -1,0 +1,72 @@
+\begin{tikzpicture}[scale=0.25]
+\coordinate (O) at (0,0);
+\node[label=south :$O$] at (O) {};
+\coordinate (X) at (-9.5,-8) {} {};
+\coordinate (Y) at (17,0) {} {};
+\coordinate (Z) at (0,16.5) {} {};
+
+\coordinate (X0) at (-5.35,-4.5) {} {} ;
+\coordinate (Y0) at (9,0) {} ;
+\coordinate (Z0) at (0,9) {} {} {} ;
+\coordinate (XY) at (5,-4.5) {} {} {} ;
+\coordinate (YZ) at (9,9) {} {} ;
+\coordinate (XZ) at (-5.35,4.5) {} {};
+\coordinate (XYZ) at (5,4.5) {} {} {};
+
+
+\coordinate (HXY1) at (-0.64,-4.5) {} {} {};
+\coordinate (HXY2) at (-0.64,4.5) {} {} {};
+\coordinate (HZY1) at (4.5,9) {} {} {};
+\coordinate (HZY2) at (4.5,0) {} {} {};
+
+
+\draw [-{Latex[length=2mm]}] (O) -- (X);
+\draw [-{Latex[length=2mm]}] (O) -- (Y);
+\draw [-{Latex[length=2mm]}] (O) -- (Z);
+\node[label=south east:$\theta$] at (X) {};
+\node[label=south west:$\phi$] at (Y) {};
+\node[label=south east:$\psi$] at (Z) {};
+\node[label=north west:$\pi$] at (X0) {};
+\node[label=south :$2\pi$] at (Y0) {};
+\node[label=north east:$2\pi$] at (Z0) {};
+%\node (Sb) [rectangle, minimum width=3cm, minimum height=1cm,draw=black, pattern color=black, pattern = north east lines]{} ;
+
+\draw [] (X0) -- (XY);
+\draw [] (Y0) -- (YZ);
+\draw [] (Z0) -- (XZ);
+\draw [] (X0) -- (XZ);
+\draw [] (Y0) -- (XY);
+\draw [] (XY) -- (XYZ);
+\draw [] (XZ) -- (XYZ);
+\draw [] (YZ) -- (XYZ);
+\draw [] (YZ) -- (Z0);
+\draw [] (O) -- (Z0);
+\draw [] (O) -- (X0);
+\draw [] (O) -- (Y0);
+
+\draw[fill=white]  (X0) circle (0.1);
+\draw[fill=white]  (Y0) circle (0.1);
+\draw[fill=white]  (Z0) circle (0.1);
+
+\draw[fill=white]  (XZ) circle (0.1);
+\draw[fill=white]  (YZ) circle (0.1);
+\draw[fill=white]  (XZ) circle (0.1);
+\draw[fill=white]  (O) circle (0.1);
+\draw[fill=white]  (XYZ) circle (0.1);
+
+%\draw[pattern color=black, pattern = dots]  (O) rectangle (YZ) node (v0) {};
+%\draw[pattern color=black, pattern = dots]  (X0) rectangle (XYZ) node (v1) {};
+\coordinate (plane0) at (7.1,2.2) {};
+\coordinate (plane1) at (-2.7,2.2) {};
+\draw[fill=white]  (plane1) circle (0.1);
+\draw[fill=white]  (plane0) circle (0.1);
+%\draw[ decoration={markings, mark=at position 0.75 with {\arrow[scale = 1.]{Latex[length=3mm,reversed]}}},    postaction={decorate}](plane0) .. controls (29.5,-2) and (-28,-4) .. (plane1);
+\draw[pattern color=black, pattern = dots]  (HXY1) node (v2) {} -- (HXY2) -- (HZY1) -- (HZY2) -- (HZY2) -- cycle;
+\draw  (YZ) edge (XY);
+\draw  (XYZ) edge (Y0);
+\draw  (XZ) edge (O);
+\draw  (Z0) edge (X0);
+\node[label=north:$\mathbf{\Phi_{2\pi}}$] at (plane0) {};
+\node[label=south:$\mathbf{\Phi_{0}}$] at (plane1) {};
+\draw [ dashed,decoration={markings, mark=at position 0.55 with {\arrow[scale = 1.]{Latex[length=2mm]}}},    postaction={decorate}](plane1) arc(-70:261:-20cm and -5cm);
+\end{tikzpicture}

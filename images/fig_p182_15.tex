@@ -1,0 +1,54 @@
+\begin{tikzpicture}[scale=0.5]
+\coordinate (O1) at (0,0);
+\draw  (O1) ellipse (6 and 3.6);
+\coordinate (t1l) at (-3,1.0);
+\coordinate (t1r) at (3,1.0);
+\coordinate (t1c1) at  (-4.5,-1.5);
+\coordinate (t1c2) at (4.5,-1.5);
+\draw (t1l) .. controls  (t1c1)  and (t1c2)  .. (t1r);
+
+\coordinate (t2l) at (-2.7,-0.3) {};
+\coordinate (t2r) at (2.7,-0.3) {};
+\coordinate (t2c1) at (-4,2) {};
+\coordinate (t2c2) at (4,2) {};
+\draw (t2l) .. controls  (t2c1)  and (t2c2)  .. (t2r);
+\draw[fill=white]  (O1) circle (0.1);
+\coordinate (a0) at (0,2) {};
+\coordinate (a1) at (2,1.5) {} {};
+\draw [] (O1) -- (a0);
+\draw [] (O1) -- (a1);
+\coordinate (ac1) at (1,2) {} {};
+\coordinate (ac2) at (1,2) {} {};
+
+\draw [dashed] (a0) .. controls  (ac1)  and (ac2)  .. (a1);
+\coordinate (b0) at (0,1.) {};
+\coordinate (b1) at (0.9,0.7) {} {};
+\coordinate (bc1) at (0.5,1) {} {} {};
+\coordinate (bc2) at (0.5,1) {} {} {};
+\coordinate (bc3) at (0,0.5) {} {} {} {};
+\draw [-{Latex[length=2mm]}]  (b0) .. controls  (bc1)  and (bc2)  .. (b1);
+\coordinate (ac3) at (0.5,0.7) {} {} {};
+\node[label=north east:$\mathbf{\psi_{}}$] at (ac3) {};
+\coordinate (C1) at (-4.35,-.4);
+\draw [dashed] (C1) ellipse (1.55 and 1.4);
+\draw [dashed,pattern color=gray!60, pattern = dots] (C1) ellipse (0.75 and 0.65);
+\draw [dotted] (C1) ellipse (2.8 and 2.6);
+
+\coordinate (C2a) at (-4.38,0.25) {};
+\coordinate (C2b) at (-4.4,1) {};
+\coordinate (C3b) at (-5.5,0.5) {};
+\coordinate (C3a) at (-5,0) {} {};
+\draw [dashed] (C1) -- (C2a);
+\draw [-{Latex[length=2mm]}] (C2a) -- (C2b);
+\draw [dashed] (C1) -- (C3b);
+\draw[fill=black]  (C2a) circle (0.051);
+%\draw[fill=black]  (C3a) circle (0.051);
+\draw[fill=white]  (C1) circle (0.051);
+\draw [-{Latex[length=2mm]}] (C2b) .. controls  (-5.1,0.9)  and (-5.1,0.9)  .. (C3b);
+\node[label=south east:$\mathbf{\theta}$] at (C2b) {};
+\node[label=north east:$\mathbf{\phi}$] at (C3b) {};
+\node at (-7,-2.5) {};
+\node[label=south east:$\mathbf{\theta = 2\pi}$] at (-7.5,-2) {};
+\node at (-3,-1.5) {};
+\node[label=south east:$\mathbf{\theta = \pi}$] at (-5,-1.5) {};
+\end{tikzpicture}
