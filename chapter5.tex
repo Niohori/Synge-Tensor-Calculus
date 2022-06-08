@@ -168,8 +168,124 @@ h_{np}&=\sum m\left(\omega_{nq} z_q z_p -\omega_{pq} z_qz_n\right)\\
 &=J_{npqr}\omega_{rq}
 \end{align}
 $$\blacklozenge$$
+$$J^{-1}={\begin{pmatrix}{\dfrac {x}{r}}&{\dfrac {y}{r}}&{\dfrac {z}{r}}\\\\{\dfrac {xz}{r^{2}{\sqrt {x^{2}+y^{2}}}}}&{\dfrac {yz}{r^{2}{\sqrt {x^{2}+y^{2}}}}}&{\dfrac {-(x^{2}+y^{2})}{r^{2}{\sqrt {x^{2}+y^{2}}}}}\\\\{\dfrac {-y}{x^{2}+y^{2}}}&{\dfrac {x}{x^{2}+y^{2}}}&0\end{pmatrix}}$$
 \newpage
 
+
+\section{p186 - Exercise 1}
+\begin{tcolorbox}
+If a vector at the point with coordinates $\left(1,1,1\right)$ in Euclidean $3$-space has components $\left(3,-1,2\right)$, find the contravariant, covariant and physical components in spherical polar coordinates.
+\end{tcolorbox}
+The tensor $T_n$ to consider is $\left(3,-1,2\right) - \left(1,1,1\right)= \left(2,-2,1\right)$.\\
+The Jacobian matrix for the transformation $z^n \rightarrow x^k$, evaluated at the point $\left(1,1,1\right)$ is 
+\begin{align}
+J_{\left(1,1,1\right)}&={\begin{pmatrix}{\dfrac {x}{r}}&{\dfrac {y}{r}}&{\dfrac {z}{r}}\\\\{\dfrac {xz}{r^{2}{\sqrt {x^{2}+y^{2}}}}}&{\dfrac {yz}{r^{2}{\sqrt {x^{2}+y^{2}}}}}&{\dfrac {-(x^{2}+y^{2})}{r^{2}{\sqrt {x^{2}+y^{2}}}}}\\\\{\dfrac {-y}{x^{2}+y^{2}}}&{\dfrac {x}{x^{2}+y^{2}}}&0\end{pmatrix}}\\
+&=\begin{pmatrix}\dfrac {1}{\sqrt{3}}&\dfrac {1}{\sqrt{3}}&\dfrac {1}{\sqrt{3}}\\\\ \dfrac {1}{3\sqrt{2}}& \dfrac {1}{3\sqrt{2}}&-\dfrac {\sqrt{2}}{3}\\\\ -\dfrac {1}{2}&\dfrac {1}{2}&0\end{pmatrix}\\
+\Rightarrow \spatie 
+\begin{pmatrix}
+r\\
+\theta\\
+\phi
+\end{pmatrix}_{T^{'n}}&=\begin{pmatrix}\dfrac {1}{\sqrt{3}}&\dfrac {1}{\sqrt{3}}&\dfrac {1}{\sqrt{3}}\\\\ \dfrac {1}{3\sqrt{2}}& \dfrac {1}{3\sqrt{2}}&-\dfrac {\sqrt{2}}{3}\\\\ -\dfrac {1}{2}&\dfrac {1}{2}&0\end{pmatrix}\begin{pmatrix}
+2\\
+-2\\
+1
+\end{pmatrix}\\
+&=\begin{pmatrix}
+\dfrac {1}{\sqrt{3}}\\
+-\dfrac {\sqrt{2}}{3}\\
+-2
+\end{pmatrix}
+\end{align}
+We have the metric tensor evaluated at $\left(1,1,1\right)$
+\begin{align}
+a_{mn} &= \begin{pmatrix}
+1&0&0\\\\
+0&r^2&0\\\\
+0&0&r^2\sin^2\theta\\\\
+\end{pmatrix}=\begin{pmatrix}
+1&0&0\\\\
+0&3&0\\\\
+0&0&2\\\\
+\end{pmatrix}\\
+\Rightarrow \spatie 
+\begin{pmatrix}
+r\\
+\theta\\
+\phi
+\end{pmatrix}_{T^{'}_n}&=\begin{pmatrix}
+1&0&0\\\\
+0&3&0\\\\
+0&0&2\\\\
+\end{pmatrix}\begin{pmatrix}
+\dfrac {1}{\sqrt{3}}\\
+-\dfrac {\sqrt{2}}{3}\\
+-2
+\end{pmatrix}\\
+&=\begin{pmatrix}
+\dfrac {1}{\sqrt{3}}\\
+-\sqrt{2}\\
+-4
+\end{pmatrix}
+\end{align}
+And the physical components 
+\begin{align}
+\begin{pmatrix}
+r\\
+\theta\\
+\phi
+\end{pmatrix}_{T^{'}_{ph.}}&=\begin{pmatrix}
+1&0&0\\\\
+0&\frac{1}{\sqrt{3}}&0\\\\
+0&0&\frac{1}{\sqrt{2}}\\\\
+\end{pmatrix}\begin{pmatrix}
+\dfrac {1}{\sqrt{3}}\\
+-\sqrt{2}\\
+-4
+\end{pmatrix}\\
+&=\begin{pmatrix}
+\dfrac {1}{\sqrt{3}}\\
+-\sqrt{\dfrac {{2}}{{3}}}\\
+-2\sqrt{2}
+\end{pmatrix}
+\end{align}
+Another way to find the physical components is to project orthogonally the tensor on the unit vectors of a local Cartesian coordinate system, oriented along the unit vectors $\overline{e}_r,\overline{e}_{\theta},\overline{e}_{\phi}$ corresponding to the vector $P \left(1,1,1\right)$ with modulus $\left|P \right|=\sqrt{3}$. 
+We have for the tensor $T_n (2,-2,1)$ with modulus $\left|T_n \right|=3$ as component along $\overline{e}_r$:
+\begin{align}
+\left|T_n \right|\cos \alpha &= \left|T_n \right|\frac{\left<T_n,P  \right>}{\left|T_n \right|\left|P \right|}\\
+&= \left|T_n \right|\frac{2-2+1}{\left|T_n \right|\left|P \right|}\\
+&= \frac{1}{\sqrt{3}}
+\end{align}
+For the component along $\overline{e}_{\theta}$ we first have to determine the vector $\overline{e}_{\theta}$. As first equation we have the orthogonality condition with $\overline{e}_r$ and putting $\overline{e}_{\theta} = (a,b,c)$, get $\left<\overline{e}_r,\overline{e}_{\theta}  \right>=  a+b+c=0$. As $\overline{e}_{\theta}$ lies in the plane $(1,1,0)-(0,0,0)-(0,0,1)$ we can put $a=b$ and get $\overline{e}_{\theta} =  \frac{1}{\sqrt{6}}\left(1,1,-2\right)$ and get for the tensor $T_n (2,-2,1)$  as component along $\overline{e}_{\theta}$:
+\begin{align}
+\left|T_n \right|\cos \beta &= \left|T_n \right|\frac{\left<T_n,\overline{e}_{\theta}  \right>}{\left|T_n \right|}\\
+&= \left|T_n \right|\frac{2-2-2}{\left|T_n \right|\sqrt{6}}\\
+&= -\frac{\sqrt{2}}{\sqrt{3}}
+\end{align}
+For the component along $\overline{e}_{\phi}$ we first have to determine the vector $\overline{e}_{\phi}$. As first equation we have the orthogonality condition with the pair $\overline{e}_r,\overline{e}_{\theta}$  and  get $\overline{e}_{\phi} = \overline{e}_r \times \overline{e}_{\theta}  =  \frac{1}{\sqrt{3}\sqrt{6}}\left( -3,3,0\right)= \left( -\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},0\right)$.\\
+For the tensor $T_n (2,-2,1)$  as component along $\overline{e}_{\phi}$:
+\begin{align}
+\left|T_n \right|\cos \gamma &= \left|T_n \right|\frac{\left<T_n,\overline{e}_{\phi}  \right>}{\left|T_n \right|}\\
+&= \left|T_n \right|\frac{-2-2}{\left|T_n \right|\sqrt{2}}\\
+&= -\frac{4}{\sqrt{2}}\\
+&= -2\sqrt{2}
+\end{align}
+giving
+\begin{align}
+\begin{pmatrix}
+r\\
+\theta\\
+\phi
+\end{pmatrix}_{T^{'}_{ph.}}
+&=\begin{pmatrix}
+\dfrac {1}{\sqrt{3}}\\
+-\sqrt{\dfrac {{2}}{{3}}}\\
+-2\sqrt{2}
+\end{pmatrix}
+\end{align}
+as in (9).
+$$\blacklozenge$$
+\newpage
 
 \section{p181 and p182 - Clarification Figures 13., 14. and 15.}
 \begin{tcolorbox}
@@ -185,5 +301,9 @@ There are several ways to show the homeomorphism of the configuration space of a
 \caption{Homeomorphism of the configuration space of a rigid body with fixed point.}
 \label{fig:fig_p181}
 \end{figure}
+Consider figure $5.2 (a)$. We can stretch like an accordion the cuboid along the $\phi$ axis and bent it so that the planes $\phi=0$ and $\phi=2\pi$ join. We get $(b)$,  a torus with square sections. The dimension $\phi$ is dealt with as a point $P\left( \theta \phi \psi \right)$ in the configuration space  returns to the same point when varying $\phi$ to $\phi+2k\pi$.\\
+We can apply the same procedure of stretching and bending for the $psi$ dimension so that the planes $\Psi=0$ and $\Psi=2\pi$ join.
+We get $(c)$,  a torus-like object.\\
+The only dimension left is $\theta$ which our multi-dimensional crippled mind can't find a way to reshape this pseudo-torus so that when varying $\theta$ we can come back to the same point as started.
 $$\blacklozenge$$
 \newpage
