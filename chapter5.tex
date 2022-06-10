@@ -286,6 +286,154 @@ as in (9).
 $$\blacklozenge$$
 \newpage
 
+
+
+\section{p186 - Exercise 2}
+\begin{tcolorbox}
+In cylindrical coordinates $\left(r, \phi,z\right)$ in Euclidean $3$-space, a vector field is such that the vector at each point points along the parametric line of $\phi$, in the sense of $\phi$ increasing, and its magnitude is $kr$, where $k$ is a constant. Find the contravariant, covariant and physical components of this vector field.
+\end{tcolorbox}
+We can work backwards, with the physical components as starting point. Indeed, at a point $P\left(r,\phi,z\right)$ the tensor of this vector field will have $\left(0,kr,0\right)$ as physical components in the cylindrical coordinates $\left( r, \phi,z \right)$ system.\\
+We have the metric tensor 
+\begin{align}
+a_{mn} &= \begin{pmatrix}
+1&0&0\\\\
+0&r^2&0\\\\
+0&0&1\\\\
+\end{pmatrix}
+\end{align}
+Giving
+\begin{align}
+\left\{\begin{array}{lll}
+X_1 = &h_1 X_{1}^{phys.}&=0\\\\
+X_2 = &h_2 X_{2}^{phys.}&=kr^2\\\\
+X_3 = &h_3 X_{3}^{phys.}&=0\\\\
+\end{array}\right.
+\end{align}
+and 
+\begin{align}
+\left\{\begin{array}{lll}
+X^1 = &\frac {X_{1}^{phys.}}{h_1}&=0\\\\
+X^2 = &\frac {X_{2}^{phys.}}{h_2}&=k\\\\
+X^3 = &\frac {X_{3}^{phys.}}{h_3}&=0\\\\
+\end{array}\right.
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p186 - Exercise 3}
+\begin{tcolorbox}
+Find the physical components of velocity and acceleration along the parametric lines of cylindrical coordinates in terms of the  and their derivatives with respect to time.
+\end{tcolorbox}
+We have the metric tensor 
+\begin{align}
+a_{mn} &= \begin{pmatrix}
+1&0&0\\\\
+0&r^2&0\\\\
+0&0&1\\\\
+\end{pmatrix}
+\end{align}
+and the contravariant velocities
+
+\begin{align}
+\left\{\begin{array}{lll}
+v^1= &\dv{r}{t}\\\\
+v^2= &\dv{\phi}{t}\\\\
+v^3= &\dv{z}{t}\\\\
+\end{array}\right.
+\end{align}
+giving by $v_{K}^{phys.} = h_K v^K$
+\begin{align}
+\left\{\begin{array}{lll}
+v_r= &\dv{r}{t}\\\\
+v_{\phi}= &r\dv{\phi}{t}\\\\
+v_z= &\dv{z}{t}\\\\
+\end{array}\right.
+\end{align}
+For the acceleration using $f^r=\fdv{v^r}{t} $
+and the Christoffel symbols being 
+\begin{align}
+\left \{ \begin{array}{c}
+\Gamma^m_{nk} = 0 \quad\forall\quad (nk) \ne (r, \theta), (\theta, \theta)\\\\
+\Gamma^{\theta}_{r\theta} = \frac{1}{r} \quad\text{and}\quad \Gamma^r_{\theta\theta} = -r
+\end{array}\right.\
+\end{align}
+we have
+\begin{align}
+\left\{\begin{array}{lll}
+f^1= &\dv{v^1}{t}-r\underbrace{v^2\dv{x^2}{t}}_{=\left(v^2\right)^2}\\\\
+f^2= &\dv{v^2}{t}+\underbrace{\frac{1}{r}v^1\dv{x^2}{t}+\frac{1}{r}v^2\dv{x^21}{t}}_{=\frac{2}{r}v^1 v^2}\\\\
+f^3= &\dv{v^3}{t}\\\\
+\end{array}\right.
+\end{align}
+giving by $f_{K}^{phys.} = h_K f^K$
+\begin{align}
+&\left\{\begin{array}{lll}
+f_r= &\dv{v^1}{t}-r\left(v^2\right)^2\\\\
+f_{phi}= &r\dv{v^2}{t}+r\frac{2}{r}v^1 v^2\\\\
+f_z= &\dv{v^3}{t}\\\\
+\end{array}\right.\\
+\Rightarrow \spatie &\left\{\begin{array}{lll}
+f_r= &\dv[2]{r}{t}-r\left(\dv{\phi}{t}\right)^2\\\\
+f_{phi}= &r\dv[2]{\phi}{t}+2\dv{r}{t} \dv{\phi}{t}\\\\
+f_z= &\dv[2]{z}{t}\\\\
+\end{array}\right.
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p186 - Exercise 4}
+\begin{tcolorbox}
+A particle moves on a sphere under the action of gravity. Find the contravariant an covaraiant components of the force, using colatitude and azimuth, and write down the equation of motion.
+\end{tcolorbox}
+We determine first the physical components of the force.
+\begin{figure}[H]
+\input{D:/MathLatex/images/fig_p186_Ex4.tex}
+\caption{Physical components of the gravitational force tensor acting on a mass $\mathbf{m}$ on a sphere }
+\label{fig:fig_p186_Ex2}
+\end{figure}
+We note first that the unit vector $\overline{1}_{\phi}$ is perpendicular to the place formed by the vectors  $\overline{1}_{\theta},\overline{F}$ and s the force has no components projected on this vector. The vector $\overline{F}$ is parallel with the axis of reference of the sphere with radius $R$ and so the physical components become
+\begin{align}
+&\left\{\begin{array}{l}
+F_{\phi}^{phys}= 0\\\\
+F_{\theta}^{phys}= mg\sin{\theta}\\\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{ll}
+F_{\phi}= 0&F_{\phi}= 0\\\\
+F^{\theta}= \frac{1}{R}mg\sin{\theta}&F_{\theta}= R m g\sin{\theta}\\\\
+\end{array}\right.
+\end{align}
+We use equation $\mathbf{5.212.}$
+\begin{align}
+&\left\{\begin{array}{l}
+\dv{}{t}\frac{\partial T}{\partial \dot{x}^s} - \frac{\partial T}{\partial x^s} = F_{s}\\\\
+T = \half m a_{pq}\dot{x}^p\dot{x}^q, \ \dot{x}^s=\dv{x^s}{t}\\\\
+\end{array}\right.
+\end{align}
+with for our case
+\begin{align}
+T = \half m R^2\left(\dot{\theta}^2+ \sin^2 \theta \ \dot{\phi} \right)
+\end{align}
+and get the set of equation of motion (the second column gives the dimensional analysis as a check for consistency)
+
+\begin{align}
+&\left\{\begin{array}{lll}
+\frac{\ddot{\phi}}{\dot{\phi}}=  -2\cot\theta \  \dot{\theta}&:&\frac{[T]^{-2}}{[T]^{-1}}\cong [T]^{-1}\\\\
+\ddot{\theta} - \left(\dot{\phi}\right)^2\sin\theta \cos\theta= \frac{g}{R}\sin{\theta}&:&[T]^{-2}+\left([T]^{-1}\right)^2 \cong \frac{[L][T]^{-2}}{[L]^{}}\\\
+\end{array}\right.
+\end{align}
+Let's check the special case when $\dot{\phi} = 0$.\\
+The first equation can be rewritten and gives of course $\phi=C$ while the second equation becomes $$\ddot{\theta} = \frac{g}{R}\sin{\theta}$$
+which is similar to the equation of  the simple gravity pendulum.
+$$\blacklozenge$$
+\newpage
+
+
 \section{p181 and p182 - Clarification Figures 13., 14. and 15.}
 \begin{tcolorbox}
 There are several ways to get a homeomorphism of the configuration space of a rigid body with fixed point.
