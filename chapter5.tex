@@ -417,7 +417,7 @@ T = \half m a_{pq}\dot{x}^p\dot{x}^q, \ \dot{x}^s=\dv{x^s}{t}\\\\
 \end{align}
 with for our case
 \begin{align}
-T = \half m R^2\left(\dot{\theta}^2+ \sin^2 \theta \ \dot{\phi} \right)
+T = \half m R^2\left(\dot{\theta}^2+ \sin^2 \theta \ \dot{\phi}^2 \right)
 \end{align}
 and get the set of equation of motion (the second column gives the dimensional analysis as a check for consistency)
 
@@ -433,6 +433,59 @@ which is similar to the equation of  the simple gravity pendulum.
 $$\blacklozenge$$
 \newpage
 
+\section{p186 - Exercise 5}
+\begin{tcolorbox}
+Consider the motion of a particle on a smooth torus under no forces except normal reaction. The geometrical line element may be written $$ ds^2=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2$$ where $\phi$ is an azimuthal angle and $\theta$ an angular displacement from the equatorial plane. Show that  the path of a particle satisfies the following two differential equations in which $h$ is a constant 
+$$(a)\spatie \left(a-b\cos\theta\right)^2\dv{\phi}{s} = h$$
+$$(b)\spatie b^2\left(\dv{\theta}{\phi}\right)^2= \frac{\left(a-b\cos\theta\right)^4}{h^2}-\left(a-b\cos\theta\right)^2$$
+\end{tcolorbox}
+We use equation $\mathbf{5.212.}$
+\begin{align}
+&\left\{\begin{array}{l}
+\dv{}{t}\frac{\partial T}{\partial \dot{x}^s} - \frac{\partial T}{\partial x^s} = F_{s}\\\\
+T = \half m a_{pq}\dot{x}^p\dot{x}^q, \ \dot{x}^s=\dv{x^s}{t}\\\\
+\end{array}\right.
+\end{align}
+with for our case
+\begin{align}
+T = \half m \left(b^2\dot{\theta}^2+ \left(a-b\cos \theta \right)^2  \ \dot{\phi}^2 \right)
+\end{align}giving
+\begin{align}
+&\left\{\begin{array}{ll}
+\frac{\partial T}{\partial \dot{\phi}}= m \left(a-b\cos \theta \right)^2   \dot{\phi}&\frac{\partial T}{\partial {\phi}}= 0\\\\
+\frac{\partial T}{\partial \dot{\theta}}=  mb^2\dot{\theta}&\frac{\partial T}{\partial {\theta}}=  mb\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta\\\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+\left(a-b\cos \theta \right)^2   \ddot{\phi}+2b\left(a-b\cos \theta \right)\dot{\theta} \dot{\phi}\sin \theta  =0\\\\
+b^2\ddot{\theta}-b\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta=0\\\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+\left(a-b\cos \theta \right)   \ddot{\phi}=-2b\dot{\theta} \dot{\phi}\sin \theta  \\\\
+b^2\ddot{\theta}-b\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta=0\\\\
+\end{array}\right.
+\end{align}
+In the first equation, put $y \equiv \dot{\phi}$ giving for the first equation:
+\begin{align}
+\frac{dy}{y}&=-2b \frac{\sin \theta d\theta} {\left(a-b\cos \theta \right)}  \\
+\Leftrightarrow\spatie\frac{dy}{y}&=-2 \frac{d\left(a-b\cos \theta \right)} {\left(a-b\cos \theta \right)}\\
+\Rightarrow \spatie \log y&=-2 C \log \left(a-b\cos \theta \right)\\
+\Rightarrow \spatie \dot{\phi}&= C \left(a-b\cos \theta \right)^{-2}
+\end{align}
+Note that $\dot{\phi}$ is a time derivative. But as we are on a geodesic, $\mathbf{5.226.}$ stands and so $v$ is constant as $\dv{v}{s} =0$. Using $v = \dv{s}{t}$, (9) can be written as 
+\begin{align}
+\left(a-b\cos \theta \right)^{2}\dv{\phi}{t}&= C \\
+\Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}\underbrace{\dv{s}{t}}_{=v}&= C \\
+\Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}&= h \quad \text{with } h=\frac{C}{v}
+\end{align}
+We don't use the second equation in (5) but the line element equation instead
+\begin{align}
+ds^2&=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2\\
+\Rightarrow\spatie \left(\dv{s}{\phi}\right)^2 &= \left(a-b\cos \theta \right)^2 +b^2 \left(\dv{\theta}{\phi}\right)^2\\
+\Rightarrow\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \left(\dv{\phi}{s}\right)^{-2 }- \left(a-b\cos \theta \right)^2 \\
+\left(12\right)\quad \text{: }\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \frac{\left(a-b\cos \theta \right)^4}{h^2}- \left(a-b\cos \theta \right)^2
+\end{align}
+$$\blacklozenge$$
+\newpage
 
 \section{p181 and p182 - Clarification Figures 13., 14. and 15.}
 \begin{tcolorbox}
