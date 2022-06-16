@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+
+\coordinate (p1) at (-0.5,2.5) {};
+\draw[fill=white]  (p1) circle (0.1);
+\coordinate (p2) at (-2.5,-2) {} {};
+\draw[fill=white]  (p2) circle (0.1);
+\coordinate (p12) at (-1.5,0) {} {} {};
+
+\draw []  (p1) -- (p2);
+\draw [dashed](-4.3302,-0.6) arc (-140.0002:-80:5);
+\coordinate (p3) at (-0.5,-3.5) {} {};
+\draw [dashdotted]  (p1) -- (p3);
+\coordinate (v1) at (1.5,0.5) {} {} {};
+\coordinate (v2) at (0.5,-3.5) {} {} {};
+\coordinate (v3) at(-0.5,-4) {} {} {};
+\coordinate (v4) at(-0.5+3,-4-1.5) {} {} {};
+\draw [-{Latex[length=2mm]},very thick]  (p1) -- (v1);
+\draw [-{Latex[length=2mm]},very thick]  (p2) -- (v2);
+\draw [-{Latex[length=2mm]},very thick, dashed]  (p2) -- (v3);
+\draw [-{Latex[length=2mm]},, dashed]  (p2) -- (v4);
+\draw [ dotted]  (v2) -- (v4);
+\draw [ dotted]  (v3) -- (v4);
+\draw [dashed, decoration={markings, mark=at position 0.52 with {\arrow[scale = 1.]{Latex[length=2mm]}}},    postaction={decorate}](p12) arc [start angle=65,
+        end angle=90,
+        x radius=-2cm,
+        y radius =-2cm];
+\node[label=north east:$m_{k-1}$] at (p1) {};
+\node[label=south west:$m_{k}$] at (p2) {};
+\node[label=north east :$\theta_k$] at (p12) {};
+\node[label=north west :$L_k$] at (p12) {};
+\node[label=north east :$\overline{v}_{k-1}$] at (v1) {};
+\node[label=south :$\overline{v}_{k-1}$] at (v3) {};
+\node[label=south :$\overline{v}_{k} {=}\overline{v}_{k-1}+\overline{\nu}_k$] at (v4) {};
+\node[label=north east :$\overline{\nu}_k {=} L_k\dot{\theta}_k$] at (v2) {};
+\end{tikzpicture}
