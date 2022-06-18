@@ -222,6 +222,33 @@ No need here for fancy general coordinates: the $V_2$ coordinate system in the p
 Indeed $\left|v\right|^2 = a_{mn}v_mv_n$ and for a $V_2$
 $$ds^2 =\left(a_{11}\left(v^1\right)^2+2a_{12}v^1v^2+a_{22}\left(v^2\right)^2 \right)dt^2$$ and if the space is Euclidean and the plane smooth, we can choose an orthogonal system where $a_{12}$ will vanish.\\\\  
 \textbf{$(b)$ a rigid body which can turn about a fixed point, as in the preceding section $(N=3)$}\\
+For a rigid body we can choose a coordinate system $S^{'}$ fixed to the body to describe the geometry of the rigid body. The kinetic energy  referenced to a 'non-moving' (abuse of language) coordinate system $S$ is 
+\begin{align}
+T = \half\mathbf{\sum}\rho v^{'}_n(S)v^{'}_n(S)\spatie\text{(summation over all masses in the rigid body)}
+\end{align}
+We know by $\mathbf{5.409}$: $v^{'}_n(S)= v^{'}_n(S^{'})+ \omega^{'}_{mn}(S^{'},S)z^{'}_m$. As the $v^{'}_n(S^{'})$ are fixed, we have $v^{'}_n(S^{'})=0$ giving 
+\begin{align}
+T = \half\mathbf{\sum}\rho z^{'}_mz^{'}_k\omega^{'}_{mn}(S^{'},S)\omega^{'}_{kn}(S^{'},S)
+\end{align}
+Note in (2) that we bring $\omega^{'}_{mn}(S^{'},S)$ out of the summation as this expression  is the same for all masses in the body.
+\begin{align}
+\omega_{mn}(S^{'},S)&= \epsilon_{mnt}\omega^{'}_{t}(S^{'},S)\\
+\Rightarrow\quad  
+T &= \half\mathbf{\sum}\rho \epsilon_{mnt}\epsilon_{kns}z^{'}_mz^{'}_k\omega^{'}_{t}(S^{'},S)\omega^{'}_{s}(S^{'},S)\\
+&= \half\mathbf{\sum}\rho \left(\delta_{mk}\delta_{ts}-\delta_{ms}\delta_{kt}\right)z^{'}_mz^{'}_k\omega^{'}_{t}(S^{'},S)\omega^{'}_{s}(S^{'},S)\\
+&= \half\mathbf{\sum}\rho \left(z^{'}_mz^{'}_m\omega^{'}_{t}(S^{'},S)\omega^{'}_{t}(S^{'},S)-z^{'}_sz^{'}_t\omega^{'}_{t}(S^{'},S)\omega^{'}_{s}(S^{'},S)\right)\\
+&= \half\mathbf{\sum}\rho \left(\delta_{st}z^{'}_mz^{'}_m\omega^{'}_{s}(S^{'},S)\omega^{'}_{t}(S^{'},S)-z^{'}_sz^{'}_t\omega^{'}_{t}(S^{'},S)\omega^{'}_{s}(S^{'},S)\right)\\
+&= \half\mathbf{\sum}\rho \left(\delta_{st}z^{'}_mz^{'}_m-z^{'}_sz^{'}_t\right)\omega^{'}_{s}(S^{'},S)\omega^{'}_{t}(S^{'},S)
+\end{align}
+By $\mathbf{5.335.}$ we have $ I_{st} = \delta_{st}\mathbf{\sum}\rho z_mz_m-\mathbf{\sum}\rho z_sz_t$ and so (8) can be written as
+\begin{align}
+T&=\half I_{st}\omega^{'}_{s}(S^{'},S)\omega^{'}_{t}(S^{'},S)
+\end{align} 
+So we can choose the three angles $\Omega^{'}_{s}(S^{'},S)$  with ($\omega^{'}_{s}(S^{'},S)= \dv{\Omega^{'}_{s}(S^{'},S)}{t}$) as generalized coordinates and define $$ds^2=I_{st}d\Omega^{'}_{s}(S^{'},S)d\Omega^{'}_{t}(S^{'},S)$$ with  $$a_{mn} = I_{mn}$$ having constants as elements.
+Some check on consistency of the metric tensor defined by $(14)$:\\
+\textbf{Positive definite ?} : Yes, as $T$ is positive by construction.\\
+\textbf{Symmetric ?} : Yes, as $a_{mn} = I_{km}$ and $I_{km}$ is symmetric.  \\
+\begin{comment}
 For a rigid body we can choose a coordinate system fixed to the body to describe the geometry of the rigid body. The kinetic energy is referenced to a 'fixed' coordinate system 
 \begin{align}
 T = \half\mathbf{\sum}\rho v_nv_n\spatie\text{summation over all masses in the rigid body}
@@ -261,6 +288,7 @@ The metric tensor $a_{mn}$ contains elements depending on the $\omega_k$ chosen 
 Some check on consistency of the metric tensor defined by $(14)$:\\
 \textbf{Positive definite ?} : Yes, as $dT^2$ is positive.\\
 \textbf{Symmetric ?} : Yes, as $a_{mn} = I_{km}I_{rn}\omega_k \omega_r = I_{rn}I_{km}\omega_k \omega_r= a_{nm}$\\
+\end{comment}
 \\\\ \textbf{$(c)$ a chain of six rods smoothly hinged together, with one end fixed and all moving on a smooth plane $(N=6)$}\\
 
 To simplify the notation we will assume that the mass $m_k$ of each rod (with length $L_k$) is concentrated at it's endpoint .\\
