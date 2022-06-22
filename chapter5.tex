@@ -213,6 +213,146 @@ P&= m\omega^{'}_n(S^{'},S)\omega^{'}_n(S^{'},S)z^{'}_s\omega^{'}_s(S^{'},S) - \u
 $$\blacklozenge$$
 \newpage
 
+\section{p168 - Exercise}
+\begin{tcolorbox}
+Taking $N=3$, show that $\mathbf{5.424}$ may be reduced to the usual Euler equations:
+$$ I_{11}\dv{\omega^{'}_1(S^{'},S)}{t}-\left(I_{22}-I^{'}_{33}\right)\omega^{}_2(S^{'},S)\omega^{'}_3(S^{'},S)=M^{'}_1$$ and two similar equations.
+\end{tcolorbox}
+$\mathbf{5.424}$:
+\begin{align}
+M^{'}_{ab}&=J^{'}_{abrq}\dv{\omega^{'}_{rq}(S^{'},S)}{t}+J^{'}_{cdrq}\left(\delta_{ac}\delta_{du}\delta_{bv}+\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{rq}(S^{'},S)\omega^{'}_{uv}(S^{'},S) =\\
+\times \epsilon_{sab} \text{: }\quad 2M^{'}_{s}&=\epsilon_{sab }J^{'}_{abrq}\dv{\omega^{'}_{rq}(S^{'},S)}{t}+\epsilon_{sab}J^{'}_{cdrq}\left(\delta_{ac}\delta_{du}\delta_{bv}+\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{rq}(S^{'},S)\omega^{'}_{uv}(S^{'},S) 
+\end{align}
+Using $ \omega^{'}_{rq}(S^{'},S)= \epsilon_{rqt}\omega^{'}_{t}(S^{'},S)$ and $I_{st}=\half J^{'}_{abrq}\epsilon_{abs}\epsilon_{rqt}$
+\begin{align}
+2M^{'}_{s}&=2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}+\epsilon_{sab}\epsilon_{rqi}\epsilon_{uvj}J^{'}_{cdrq}\left(\delta_{ac}\delta_{du}\delta_{bv}+\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) \\
+&=\left\{\begin{array}{l}
+2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}\\\\ + \left(\epsilon_{sab}\epsilon_{rqi}\epsilon_{uvj}J^{'}_{cdrq}\delta_{ac}\delta_{du}\delta_{bv}+\epsilon_{sab}\epsilon_{rqi}\epsilon_{uvj}J^{'}_{cdrq}\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) 
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}\\\\ + \left(\epsilon_{scb}\epsilon_{rqi}\epsilon_{dbj}J^{'}_{cdrq}+\epsilon_{sad}\epsilon_{rqi}\epsilon_{caj}J^{'}_{cdrq}\right)\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) 
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}\\\\ + \left(\epsilon_{bcs}\epsilon_{bdj}\right)\epsilon_{rqi}J^{'}_{cdrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) \\\\+\left(\epsilon_{asd}\epsilon_{acj}\right)\epsilon_{rqi}J^{'}_{cdrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) 
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}\\\\ + \left(\delta_{cd}\delta_{sj}-\delta_{cj}\delta_{sd}\right)\epsilon_{rqi}J^{'}_{cdrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) \\\\+\left(\delta_{sc}\delta_{dj}-\delta_{sj}\delta_{dc}\right)\epsilon_{rqi}J^{'}_{cdrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) 
+\end{array}\right.
+\end{align}
+\begin{align}
+&=\left\{\begin{array}{l}
+2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}\\\\ +\epsilon_{rqi}J^{'}_{ccrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{s}(S^{'},S) \\\\
+-\epsilon_{rqi}J^{'}_{jsrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) \\\\+\epsilon_{rqi}J^{'}_{sjrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S) 
+\\\\-\epsilon_{rqi}J^{'}_{ccrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{s}(S^{'},S)
+\end{array}\right.
+\end{align}
+giving
+\begin{align}
+2M^{'}_{s}&=\left\{\begin{array}{l}
+2I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t} 
+\\\\+\epsilon_{rqi}J^{'}_{sjrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S)
+\\\\
+-\epsilon_{rqi}J^{'}_{jsrq}\omega^{'}_{i}(S^{'},S)\omega^{'}_{j}(S^{'},S)  
+\end{array}\right.
+\end{align}
+For $s=1$:
+\begin{table}[H]
+\centering
+ \begin{tabular}{||c | | c  | c||} 
+ \hline
+  & $+\epsilon_{rqi}J^{}_{1jrq}\omega^{}_{i}\omega^{}_{j}$ & $-\epsilon_{rqi}J^{}_{j1rq}\omega^{}_{i}\omega^{}_{j}   $\\ [1.5ex] 
+ \hline\hline
+ $\epsilon_{123}$ & $+J^{}_{1112}\omega^{}_{3}\omega^{}_{1}+J^{}_{1212}\omega^{}_{3}\omega^{}_{2}+J^{}_{1312}\omega^{}_{3}\omega^{}_{3}$ & $-J^{}_{1112}\omega^{}_{3}\omega^{}_{1}-J^{}_{2112}\omega^{}_{3}\omega^{}_{2}-J^{}_{3112}\omega^{}_{3}\omega^{}_{3}   $\\  
+ $\epsilon_{132}$ & $-J^{}_{1113}\omega^{}_{2}\omega^{}_{1}-J^{}_{1213}\omega^{}_{2}\omega^{}_{2}-J^{}_{1313}\omega^{}_{2}\omega^{}_{3}$ & $+J^{}_{1113}\omega^{}_{2}\omega^{}_{1} +J^{}_{2113}\omega^{}_{2}\omega^{}_{2} +J^{}_{3113}\omega^{}_{2}\omega^{}_{3}   $\\
+ $\epsilon_{213}$ & $-J^{}_{1121}\omega^{}_{3}\omega^{}_{1}-J^{}_{1221}\omega^{}_{3}\omega^{}_{2}-J^{}_{1321}\omega^{}_{3}\omega^{}_{3}$ & $+J^{}_{1121}\omega^{}_{3}\omega^{}_{1}+J^{}_{2121}\omega^{}_{3}\omega^{}_{2}+J^{}_{3121}\omega^{}_{3}\omega^{}_{3}   $\\
+ $\epsilon_{231}$ & $+J^{}_{1123}\omega^{}_{1}\omega^{}_{1}+J^{}_{1223}\omega^{}_{1}\omega^{}_{2}+J^{}_{1323}\omega^{}_{1}\omega^{}_{3}$ & $-J^{}_{1123}\omega^{}_{1}\omega^{}_{1}-J^{}_{2123}\omega^{}_{1}\omega^{}_{2}-J^{}_{3123}\omega^{}_{1}\omega^{}_{3}   $\\
+ $\epsilon_{321}$ & $-J^{}_{1132}\omega^{}_{1}\omega^{}_{1}-J^{}_{1232}\omega^{}_{1}\omega^{}_{2}-J^{}_{1332}\omega^{}_{1}\omega^{}_{3}$ & $+J^{}_{1132}\omega^{}_{1}\omega^{}_{1}  +J^{}_{2132}\omega^{}_{1}\omega^{}_{2}  +J^{}_{3132}\omega^{}_{1}\omega^{}_{3}   $\\
+ $\epsilon_{312}$ & $+J^{}_{1131}\omega^{}_{2}\omega^{}_{1}+J^{}_{1231}\omega^{}_{2}\omega^{}_{2}+J^{}_{1331}\omega^{}_{2}\omega^{}_{3}$ & $-J^{}_{1131}\omega^{}_{2}\omega^{}_{1} -J^{}_{2131}\omega^{}_{2}\omega^{}_{2} -J^{}_{3131}\omega^{}_{2}\omega^{}_{3}   $\\   [1ex] 
+ \hline
+ \end{tabular}
+\end{table}
+
+Taking into account that $J^{}_{abcd}=0$ for $a\ne c  \wedge b\ne d$
+
+\begin{table}[H]
+\centering
+ \begin{tabular}{||c | | c  | c||} 
+ \hline
+  & $+\epsilon_{rqi}J^{}_{1jrq}\omega^{}_{i}\omega^{}_{j}$ & $-\epsilon_{rqi}J^{}_{j1rq}\omega^{}_{i}\omega^{}_{j}   $\\ [1.5ex] 
+ \hline\hline
+ $\epsilon_{123}$ & $+\cancel{J^{}_{1112}\omega^{}_{3}\omega^{}_{1}}+J^{}_{1212}\omega^{}_{3}\omega^{}_{2}+J^{}_{1312}\omega^{}_{3}\omega^{}_{3}$ & $-\cancel{J^{}_{1112}\omega^{}_{3}\omega^{}_{1}} $\\  
+ $\epsilon_{132}$ & $-\cancel{J^{}_{1113}\omega^{}_{2}\omega^{}_{1}}-J^{}_{1213}\omega^{}_{2}\omega^{}_{2}-J^{}_{1313}\omega^{}_{2}\omega^{}_{3}$ & $+\cancel{J^{}_{1113}\omega^{}_{2}\omega^{}_{1} } $\\
+ $\epsilon_{213}$ & $-\cancel{J^{}_{1121}\omega^{}_{3}\omega^{}_{1}}$ & $+\cancel{J^{}_{1121}\omega^{}_{3}\omega^{}_{1}}+J^{}_{2121}\omega^{}_{3}\omega^{}_{2}+J^{}_{3121}\omega^{}_{3}\omega^{}_{3}   $\\
+ $\epsilon_{231}$ & $+J^{}_{1323}\omega^{}_{1}\omega^{}_{3}$ & $-J^{}_{2123}\omega^{}_{1}\omega^{}_{2}$\\
+ $\epsilon_{321}$ & $-J^{}_{1232}\omega^{}_{1}\omega^{}_{2}$ & $+J^{}_{3132}\omega^{}_{1}\omega^{}_{3}   $\\
+ $\epsilon_{312}$ & $+\cancel{J^{}_{1131}\omega^{}_{2}\omega^{}_{1}}$ & $-\cancel{J^{}_{1131}\omega^{}_{2}\omega^{}_{1}} -J^{}_{2131}\omega^{}_{2}\omega^{}_{2} -J^{}_{3131}\omega^{}_{2}\omega^{}_{3}   $\\   [1ex] 
+ \hline
+ \end{tabular}
+\end{table}
+Opposite sign terms vanish, giving
+\begin{table}[H]
+\centering
+ \begin{tabular}{||c | | c  | c||} 
+ \hline
+  & $+\epsilon_{rqi}J^{}_{1jrq}\omega^{}_{i}\omega^{}_{j}$ & $-\epsilon_{rqi}J^{}_{j1rq}\omega^{}_{i}\omega^{}_{j}   $\\ [1.5ex] 
+ \hline\hline
+ $\epsilon_{123}$ & $+J^{}_{1212}\omega^{}_{3}\omega^{}_{2}+J^{}_{1312}\omega^{}_{3}\omega^{}_{3}$ & $ $\\  
+ $\epsilon_{132}$ & $-J^{}_{1213}\omega^{}_{2}\omega^{}_{2}-J^{}_{1313}\omega^{}_{2}\omega^{}_{3}$ & $ $\\
+ $\epsilon_{213}$ & $ $ & $+J^{}_{2121}\omega^{}_{3}\omega^{}_{2}+J^{}_{3121}\omega^{}_{3}\omega^{}_{3}   $\\
+ $\epsilon_{231}$ & $+J^{}_{1323}\omega^{}_{1}\omega^{}_{3}$ & $-J^{}_{2123}\omega^{}_{1}\omega^{}_{2}$\\
+ $\epsilon_{321}$ & $-J^{}_{1232}\omega^{}_{1}\omega^{}_{2}$ & $+J^{}_{3132}\omega^{}_{1}\omega^{}_{3}   $\\
+ $\epsilon_{312}$ & $ $ & $-J^{}_{2131}\omega^{}_{2}\omega^{}_{2} -J^{}_{3131}\omega^{}_{2}\omega^{}_{3}   $\\   [1ex] 
+ \hline
+ \end{tabular}
+\end{table}
+Considering $J_{abcd}= -J_{badc}$
+\begin{table}[H]
+\centering
+ \begin{tabular}{||c | | c  | c||} 
+ \hline
+  & $+\epsilon_{rqi}J^{}_{1jrq}\omega^{}_{i}\omega^{}_{j}$ & $-\epsilon_{rqi}J^{}_{j1rq}\omega^{}_{i}\omega^{}_{j}   $\\ [1.5ex] 
+ \hline\hline
+ $\epsilon_{123}$ & $+\cancel{J^{}_{1212}}\omega^{}_{3}\omega^{}_{2}+\cancel{J^{}_{1312}}\omega^{}_{3}\omega^{}_{3}$ & $ $\\  
+ $\epsilon_{132}$ & $-\cancel{J^{}_{1213}}\omega^{}_{2}\omega^{}_{2}-\cancel{J^{}_{1313}}\omega^{}_{2}\omega^{}_{3}$ & $ $\\
+ $\epsilon_{213}$ & $ $ & $+\cancel{J^{}_{2121}}\omega^{}_{3}\omega^{}_{2}+\cancel{J^{}_{3121}}\omega^{}_{3}\omega^{}_{3}   $\\
+ $\epsilon_{231}$ & $+\cancel{J^{}_{1323}}\omega^{}_{1}\omega^{}_{3}$ & $-\cancel{J^{}_{2123}}\omega^{}_{1}\omega^{}_{2}$\\
+ $\epsilon_{321}$ & $-\cancel{J^{}_{1232}}\omega^{}_{1}\omega^{}_{2}$ & $+\cancel{J^{}_{3132}}\omega^{}_{1}\omega^{}_{3}   $\\
+ $\epsilon_{312}$ & $ $ & $-\cancel{J^{}_{2131}}\omega^{}_{2}\omega^{}_{2} -\cancel{J^{}_{3131}}\omega^{}_{2}\omega^{}_{3}   $\\   [1ex] 
+ \hline
+ \end{tabular}
+\end{table}
+??
+We get $$ m^{'}_s = I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}$$?????\\
+\newpage
+Let's try another approach. Start with $\mathbf{5.332.}$: $\dv{}{t}\left(I_{st}\omega_{t}\right)= M_s$
+\begin{align}
+\dv{}{t}\left(I_{st}(S^{'},S)\omega_{t}(S^{'},S)\right)= M_s(S^{'},S)
+\end{align}
+Cf. $\mathbf{5.408.}$
+\begin{align}
+\omega^{'}_{u}(S^{'},S)&=A_{uq}\omega^{}_{q}(S^{'},S)\\
+\times A_{ut}\quad \rightarrow \spatie A_{ut}\omega^{'}_{u}(S^{'},S)&=A_{ut}A_{uq}\omega^{}_{q}(S^{'},S)\\
+&=\omega^{}_{t}(S^{'},S)\\
+\spatie \omega^{}_{t}(S^{'},S) &=  A_{ut}\omega^{'}_{u}(S^{'},S)\\
+\textbf{(10)}\quad\Rightarrow\spatie M_s(S^{'},S) &=\dv{}{t}\left(I_{st}(S^{'},S)A_{ut}\omega^{'}_{u}(S^{'},S)\right)\\
+\times A_{ps}\quad \Rightarrow M^{'}_p(S^{'},S) &=A_{ps}\dv{}{t}\left(I_{st}(S^{'},S)A_{ut}\omega^{'}_{u}(S^{'},S)\right)\\
+I_{st}(S^{'},S)&= A_{as}A_{bt}I^{'}_{ab}(S^{'},S)\\
+\textbf{(16)}\quad\Rightarrow \spatie M^{'}_p(S^{'},S) &=A_{ps}\dv{}{t}\left(A_{as}A_{bt}I^{'}_{ab}(S^{'},S)A_{ut}\omega^{'}_{u}(S^{'},S)\right)\\
+&=A_{ps}\dv{}{t}\left(A_{as}I^{'}_{ak}(S^{'},S)\omega^{'}_{k}(S^{'},S)\right)\\
+\end{align}
+As we transformed $I_{st}(S^{'},S)$ to a coordinate system fixed to the body we have that the elements of $I^{'}_{ab}(S^{'},S)$ are constants.\\
+Hence,
+\begin{align}
+ M^{'}_p(S^{'},S) &=I^{'}_{ak}S^{'},S)A_{ps}\dv{}{t}\left( A_{as}\omega^{'}_{k}(S^{'},S)\right)\\
+ &=I^{'}_{ak}(S^{'},S)A_{ps}\left(\dot{A}_{as}\omega^{'}_{k}(S^{'},S)+A_{as} \dot{\omega}^{'}_{k}(S^{'},S)\right)\\
+ &=I^{'}_{ak}(S^{'},S)A_{ps}A_{as} \dot{\omega}^{'}_{k}(S^{'},S)+ I^{'}_{ak}(S^{'},S)A_{ps}\dot{A}_{as}\omega^{'}_{k}(S^{'},S)\\
+ &=I^{'}_{pk}(S^{'},S) \dot{\omega}^{'}_{k}(S^{'},S)+ I^{'}_{ak}(S^{'},S)A_{ps}\dot{A}_{as}\omega^{'}_{k}(S^{'},S)\\
+\textbf{5.408.}\quad\Rightarrow \spatie  A_{ps}\dot{A}_{as} &= \omega^{'}_{ap}(S^{'},S)\\
+\textbf{(24)}\quad\Rightarrow \spatie  M^{'}_p(S^{'},S) &=I^{'}_{pk}(S^{'},S) \dot{\omega}^{'}_{k}(S^{'},S)+ I^{'}_{ak}(S^{'},S)A_{ps}\dot{A}_{as}\omega^{'}_{k}(S^{'},S)\\
+\end{align}
+
+$$\blacklozenge$$
+\newpage
 \section{p169 - Exercise}
 \begin{tcolorbox}
 Assign convenient generalized coordinates for the three systems $(a), \ (b),\text{ and } (c)$ mentioned at the beginning of this section, and calculate the kinematical metric form in each case
@@ -350,9 +490,9 @@ Giving for $T$
 +2\left(m_5+m_6\right)L_2L_{5}\dot{\theta}_2\dot{\theta}_{5}\cos\left(\theta_2 -\theta_{5}\right)\\
 +2\left(m_5+m_6\right)L_3L_{5}\dot{\theta}_3\dot{\theta}_{5}\cos\left(\theta_3 -\theta_{5}\right)\\
 +2\left(m_5+m_6\right)L_4L_{5}\dot{\theta}_4\dot{\theta}_{5}\cos\left(\theta_4 -\theta_{5}\right)\\
-+2\left(m_6\right)L_1L_{6}\dot{\theta}_1\dot{\theta}_{6}\cos\left(\theta_1 -\theta_{5}\right)\\
-+2\left(m_6\right)L_2L_{6}\dot{\theta}_2\dot{\theta}_{6}\cos\left(\theta_2 -\theta_{5}\right)\\
-+2\left(m_6\right)L_3L_{6}\dot{\theta}_3\dot{\theta}_{6}\cos\left(\theta_3 -\theta_{5}\right)\\
++2\left(m_6\right)L_1L_{6}\dot{\theta}_1\dot{\theta}_{6}\cos\left(\theta_1 -\theta_{6}\right)\\
++2\left(m_6\right)L_2L_{6}\dot{\theta}_2\dot{\theta}_{6}\cos\left(\theta_2 -\theta_{6}\right)\\
++2\left(m_6\right)L_3L_{6}\dot{\theta}_3\dot{\theta}_{6}\cos\left(\theta_3 -\theta_{6}\right)\\
 +2\left(m_6\right)L_4L_{6}\dot{\theta}_4\dot{\theta}_{6}\cos\left(\theta_4 -\theta_{6}\right)\\
 +2\left(m_6\right)L_5L_{6}\dot{\theta}_5\dot{\theta}_{6}\cos\left(\theta_5 -\theta_{6}\right)
 \end{array}\right.
@@ -375,7 +515,7 @@ $$\blacklozenge$$
 
 \section{p181 and p182 - Clarification Figures 13., 14. and 15.}
 \begin{tcolorbox}
-There are several ways to get a homeomorphism of the configuration space of a rigid body with fixed point.
+There are several ways to perform  a map of the configuration space of a rigid body with fixed point.
 \end{tcolorbox}
 \begin{figure}[H]
     \centering
@@ -384,7 +524,7 @@ There are several ways to get a homeomorphism of the configuration space of a ri
     \subfloat[]{\input{D:/MathLatex/images/fig_p182_14.tex}}
     \qquad
     \subfloat[]{\input{D:/MathLatex/images/fig_p182_15.tex}}
-\caption{Homeomorphism of the configuration space of a rigid body with fixed point.}
+\caption{Map of the configuration space of a rigid body with fixed point.}
 \label{fig:fig_p181}
 \end{figure}
 Consider figure $5.2 (a)$. We can stretch like an accordion the cuboid along the $\phi$ axis and bent it so that the planes $\phi=0$ and $\phi=2\pi$ join. We get $(b)$,  a torus with square sections. The dimension $\phi$ is dealt with as a point $P\left( \theta, \phi, \psi \right)$ in the configuration space  returns to the same point when varying $\phi$ to $\phi+2k\pi$.\\
