@@ -367,6 +367,8 @@ M^{'}_1(S^{'},S) &= I^{'}_{11}(S^{'},S) \dot{\omega}^{'}_{1}(S^{'},S)-\left( I^{
 \end{align}
 $$\blacklozenge$$
 \newpage
+
+
 \section{p169 - Exercise}
 \begin{tcolorbox}
 Assign convenient generalized coordinates for the three systems $(a), \ (b),\text{ and } (c)$ mentioned at the beginning of this section, and calculate the kinematical metric form in each case
@@ -521,8 +523,36 @@ Some check on consistency of the metric tensor defined by $(8)$:\\
 \textbf{Positive definite ?} : Yes, as $T$ is positive by definition\\
 \textbf{Symmetric ?} : Yes, as the non-diagonal term $a_{ij}$ contains $\cos\left(\theta_i-\theta_j\right) = \cos\left(\theta_j-\theta_i\right)$ \\
 \textbf{Number of elements} : the metric tensor $a_{mn}$ for $N=6$ should contain $6$ diagonal elements and $\frac{6\times 6 -6}{2} = 15$ independent non-diagonal elements. Checking $(8)$, one can find that the numbers yield.
+$$\blacklozenge$$
+\newpage
 
 
+
+\section{p174 - Exercise}
+\begin{tcolorbox}
+Establish the general result
+$$v\dv{v}{s}=X_r\lambda^r, \quad \kappa v^2=X_r\nu^r$$
+Deduce that, if no forces at on the system, the trajectory is a geodesic in configuration space and the magnitude of the velocity is constant.
+\end{tcolorbox}
+In configuration space $f_r=X_r$. Hence by $\mathbf{5,515}$
+
+\begin{align}
+X^r&=v\dv{v}{s}\lambda^r+\kappa v^2\nu^r\\
+\Rightarrow \spatie X^r \lambda_r &=X_r\lambda^r = v\dv{v}{s} \quad \text{as } \lambda^r \perp \nu^r\\
+\text{and} \spatie X^r \nu_r &=X_r\nu^r = \kappa v^2\quad \text{as } \lambda^r \perp \nu^r\\
+\end{align}
+The trajectory is a geodesic if $\kappa = 0$ which is the case as $X_r=0$ and $$v\dv{v}{s} =0 \Rightarrow \dv{v}{s} =0 \Rightarrow v= C^{t}$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p174 - Clarification}
+\begin{tcolorbox}
+It is easy to see thet the lines of force are the orthogonal trajectories of the equipotential surface $V=C^{t}$
+\end{tcolorbox}
+Consider a curve given by $x^r=x^r\left(u\right)$. \\Along that line we have $V= V\left(x^r\left(u\right)\right)$. Take $u=s$ as parameter and let's impose that $V\left(s\right)= C^{t}$.\\ We have
+$\dv{V}{s} = \frac{\partial{V}}{\partial{x^r}}\dv{x^r}{s} =\frac{\partial{V}}{\partial{x^r}}\lambda^r =0$ with $\lambda^r=\dv{x^r}{s}$ the tangent vector along that curve.\\ But $X_r = \frac{\partial{V}}{\partial{x^r}}$. \\
+So, $X_r\lambda^r=0$ and as $X_r$ is collinear with $dx^r$ (the infinitesimal line element of the line of force) we have $dx_n \lambda^n = a_{mn}dx^m \lambda^n=0$ proving the perpendicularity of both curves.
 $$\blacklozenge$$
 \newpage
 
