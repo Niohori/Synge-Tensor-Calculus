@@ -556,6 +556,45 @@ So, $X_r\lambda^r=0$ and as $X_r$ is collinear with $dx^r$ (the infinitesimal li
 $$\blacklozenge$$
 \newpage
 
+\section{p176 - Exercise}
+\begin{tcolorbox}
+For a spherical pendulum, show that the lines of force are geodesics on the sphere on which the particle is constrained to move. What does the theorem stated above tell us in this case?
+\end{tcolorbox}
+For the spherical pendulum we have the following situation
+\begin{figure}[H]
+\input{C:/MathLatex/images/fig_p186_Ex4.tex}
+\caption{Physical components of the gravitational force tensor acting on a mass $\mathbf{m}$ on a sphere }
+\label{fig:fig_p176_Ex1}
+\end{figure}
+From the figure it is clear that the only component of the gravitational force acting on the mass is restricted along the $\overline{1}_{\theta}$ vector which, with varying $\theta$ lays along a great circle of the sphere which is a geodesic. Hnce the lines of force are great circle on the sphere. \\
+For the theorem stated this means that as a mass is launched along a great circle, it will stay on this great circle.
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p176 - Exercise (PARTLY SOLVED}
+\begin{tcolorbox}
+A system starts from rest at a configuration $O$. Prove that the trajectory at $O$ is tangent to the line of force through $O$, and that the first curvature of the trajectory is one-third of the first curvature of the line of force.
+\end{tcolorbox}
+From $\mathbf{5.533}$ we have 
+\begin{align}
+v\dv{v}{s}= X_r\lambda^r, \quad \kappa v^2=X_r\nu^r
+\end{align}
+From the second expression we have as $v=0$ at $O$ that $X_r\nu^r=0$, meaning that $X_r$ is perpendicular to $\nu^r$.
+Also by $\mathbf{5.516}$
+\begin{align}
+f^r = \dv{v}{t}\lambda^r + \kappa v^2 \nu^r
+\end{align}
+we know that the acceleration lies in the elementary two-space containing the tangent and the first normal to the trajectory implying by the previous result that $X_r$ and $\lambda^r$ are collinear.
+Note that from $(1)$ we can not conclude (because $v=0$) from the first expression  that $X_r\lambda^r=0$ . Indeed, $v\dv{v}{s}$ is a derived expression form of $\dv{v}{t}$. As $\dv{v}{t}$ is not necessarily $0$ (otherwise the system would for ever  stay on the configuration at $O$ meaning that $ds=0$, making the expression $v\dv{v}{s}$ meaningless.)
+\\\\
+SECOND PART?
+
+
+$$\blacklozenge$$
+\newpage
+
 
 \section{p181 and p182 - Clarification Figures 13., 14. and 15.}
 \begin{tcolorbox}
@@ -581,7 +620,7 @@ $$\blacklozenge$$
 
 
 
-\section{p183-5.561 - Clarification}
+\section{p183 - Clarification for 5.561}
 \begin{tcolorbox}
 The kinetic energy is 
 $$\mathbf{5.561.}\spatie T=\half I\left(\dot{\theta}^2+\dot{\phi}^2+\dot{\psi}^2+2\dot{\phi}\dot{\psi}\cos{\theta} \right)$$ 
