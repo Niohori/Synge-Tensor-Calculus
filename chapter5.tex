@@ -578,6 +578,84 @@ The only dimension left is $\theta$ which our multi-dimensional crippled mind ca
 $$\blacklozenge$$
 \newpage
 
+
+
+
+\section{p183-5.561 - Clarification}
+\begin{tcolorbox}
+The kinetic energy is 
+$$\mathbf{5.561.}\spatie T=\half I\left(\dot{\theta}^2+\dot{\phi}^2+\dot{\psi}^2+2\dot{\phi}\dot{\psi}\cos{\theta} \right)$$ 
+\end{tcolorbox}
+We first determine the general form of the kinetic energy for a rigid body rotating around a fixed point.
+From $\mathbf{5,310}$ we have
+\begin{align}
+v_r&= - \omega_{rm}z_m= -\epsilon_{rst}\omega_s z_t\\
+T&= \half\sum m v_r v_r\\
+\Rightarrow\spatie T&= \half\sum m \epsilon_{rst}\omega_s z_t\epsilon_{ruv}\omega_u z_v\\
+&=\half \sum m \left(\delta_{su}\delta_{tv}\omega_s \omega_u z_tz_v - \delta_{sv}\delta_{tu}\omega_s \omega_u z_tz_v  \right)
+\end{align}
+For the case $N=3$ we get from $(4)$:
+\begin{align}
+T&= \half\sum m  \left[ \omega_1^2 \left( z_2^2+z_3^2 \right)+\omega_2^2\left( z_1^2+z_3^2 \right)+\omega_3^2 \left( z_1^2+z_2^2 \right)
+-2\omega_1 \omega_2 z_1 z_2 -2\omega_1 \omega_3 z_1 z_3 -2\omega_2 \omega_3 z_2 z_3 \right]
+\end{align}
+Using the result from $\mathbf{5.336}$ this can be written as 
+\begin{align}
+T&= \half \left[ I_{11}\omega_1^2 +I_{22}\omega_2^2+I_{33}\omega_3^2 
++2I_{12}\omega_1 \omega_2+2I_{13}\omega_1 \omega_3 +2I_{23}\omega_2 \omega_3  \right]
+\end{align}
+Considering that the matrix $I_{ij}$ is symmetric, one can always find an appropriate basis so that the matrix becomes diagonal. Hence $(6)$ can be simplified to
+\begin{align}
+T&= \half \left[ I_{11}\omega_1^2 +I_{22}\omega_2^2+I_{33}\omega_3^2 
+ \right]
+\end{align}
+Of course the $\omega_i$ in $(7)$ are not the Euler angles and we have to express the $\omega_i$ as functions of the Euler angles.
+
+\begin{figure}[H]
+\begin{center}
+\input{C:/MathLatex/images/fig_p183_5561_a.tex}
+\caption{Euler angles}
+\label{fig:fig_p183_5.561}
+\end{center}
+\end{figure}
+
+Consider the Euler angles as in figure 5.5.The resulting angular velocity of the rigid body can be expressed as 
+\begin{align}
+\overline{\omega}&= \dot{\psi}\overline{z}+\dot{\theta}\overline{N}+\dot{\phi}\overline{z}_1
+\end{align}
+The projection of $\overline{\omega}$ on the basis $\overline{x}_1,\overline{y}_1,\overline{z}_1$ (which we choose fixed to the rigid body) will then coincide with the $\omega_i$.\\
+We determine the components of $\overline{z},\overline{N},\overline{z}_1$ with $\overline{x}_1,\overline{y}_1,\overline{z}_1$ as basis.\\
+We have
+\begin{align}
+& \left\{\begin{array}{l}
+\overline{N}=\cos{\phi} \ \overline{y}_1+\sin{\phi} \ \overline{x}_1\\
+\overline{z}= \cos{\theta} \ \overline{z}_1-\sin{\theta}\ \overline{x}_0\\
+\overline{x}_0=\cos{\phi} \ \overline{x}_1-\sin{\phi} \ \overline{y}_1
+\end{array}\right.\\
+\Rightarrow \spatie &\left\{\begin{array}{l}
+\overline{N}=\cos{\phi} \ \overline{y}_1+\sin{\phi} \ \overline{x}_1\\
+\overline{z}= \cos{\theta} \ \overline{z}_1-\sin{\theta}\ \cos{\phi} \ \overline{x}_1 +\sin{\theta}\ \sin{\phi} \ \overline{y}_1
+\end{array}\right.
+\end{align}
+Hence,
+\begin{align}
+ \overline{\omega}&= \dot{\psi}\cos{\theta} \ \overline{z}_1-\dot{\psi}\sin{\theta}\ \cos{\phi} \ \overline{x}_1 +\dot{\psi}\sin{\theta}\ \sin{\phi} \ \overline{y}_1+\dot{\theta}\cos{\phi} \ \overline{y}_1+\dot{\theta}\sin{\phi} \ \overline{x}_1+\dot{\phi}\overline{z}_1
+\end{align}
+giving
+\begin{align}
+\left\{\begin{array}{l}
+\omega_1= \dot{\theta}\sin{\phi} -\dot{\psi}\sin{\theta}\ \cos{\phi}\\
+\omega_2= \dot{\psi}\sin{\theta}\ \sin{\phi}+\dot{\theta}\cos{\phi}\\
+\omega_3= \dot{\psi}\cos{\theta} +\dot{\phi}\\
+\end{array}\right.
+\end{align}
+In the case  considered $I_{11}=I_{22}=I_{33}=I$. Plugging $(12)$ in $(7)$ gives indeed
+$$T=\half I\left(\dot{\theta}^2+\dot{\phi}^2+\dot{\psi}^2+2\dot{\phi}\dot{\psi}\cos{\theta} \right)$$
+
+
+$$\blacklozenge$$
+\newpage
+
 \section{p186 - Exercise 1}
 \begin{tcolorbox}
 If a vector at the point with coordinates $\left(1,1,1\right)$ in Euclidean $3$-space has components $\left(3,-1,2\right)$, find the contravariant, covariant and physical components in spherical polar coordinates.
@@ -893,3 +971,5 @@ ds^2&=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2\\
 \end{align}
 $$\blacklozenge$$
 \newpage
+
+
