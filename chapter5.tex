@@ -963,7 +963,7 @@ Consider the motion of a particle on a smooth torus under no forces except norma
 $$(a)\spatie \left(a-b\cos\theta\right)^2\dv{\phi}{s} = h$$
 $$(b)\spatie b^2\left(\dv{\theta}{\phi}\right)^2= \frac{\left(a-b\cos\theta\right)^4}{h^2}-\left(a-b\cos\theta\right)^2$$
 \end{tcolorbox}
-We use equation $\mathbf{5.212.}$
+We use equation $\mathbf{5.212.}$ and  $\mathbf{5.212.}$
 \begin{align}
 &\left\{\begin{array}{l}
 \dv{}{t}\frac{\partial T}{\partial \dot{x}^s} - \frac{\partial T}{\partial x^s} = F_{s}\\\\
@@ -973,13 +973,15 @@ T = \half m a_{pq}\dot{x}^p\dot{x}^q, \ \dot{x}^s=\dv{x^s}{t}\\\\
 with for our case
 \begin{align}
 T = \half m \left(b^2\dot{\theta}^2+ \left(a-b\cos \theta \right)^2  \ \dot{\phi}^2 \right)
-\end{align}giving
+\end{align}
 \begin{align}
 &\left\{\begin{array}{ll}
 \frac{\partial T}{\partial \dot{\phi}}= m \left(a-b\cos \theta \right)^2   \dot{\phi}&\frac{\partial T}{\partial {\phi}}= 0\\\\
 \frac{\partial T}{\partial \dot{\theta}}=  mb^2\dot{\theta}&\frac{\partial T}{\partial {\theta}}=  mb\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta\\\\
-\end{array}\right.\\
-\Rightarrow\spatie &\left\{\begin{array}{l}
+\end{array}\right.
+\end{align}giving
+\begin{align} 
+&\left\{\begin{array}{l}
 \left(a-b\cos \theta \right)^2   \ddot{\phi}+2b\left(a-b\cos \theta \right)\dot{\theta} \dot{\phi}\sin \theta  =0\\\\
 b^2\ddot{\theta}-b\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta=0\\\\
 \end{array}\right.\\
@@ -1001,7 +1003,7 @@ Note that $\dot{\phi}$ is a time derivative. But as we are on a geodesic, $\math
 \Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}\underbrace{\dv{s}{t}}_{=v}&= C \\
 \Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}&= h \quad \text{with } h=\frac{C}{v}
 \end{align}
-We don't use the second equation in (5) but the line element equation instead
+Next, we don't use the second equation in (5) but the line element equation instead
 \begin{align}
 ds^2&=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2\\
 \Rightarrow\spatie \left(\dv{s}{\phi}\right)^2 &= \left(a-b\cos \theta \right)^2 +b^2 \left(\dv{\theta}{\phi}\right)^2\\
@@ -1012,3 +1014,174 @@ $$\blacklozenge$$
 \newpage
 
 
+
+\section{p186 - Exercise 6}
+\begin{tcolorbox}
+Consider the motion of a particle under gravity on the smooth torus o the previous problem, the equatorial plane of the torus being horizontal. Taking the mass of the particle to unity, so that $V= bg\sin{\theta}$, show that the path of the paticle satisfies the following two differential equations. 
+$$(a)\spatie \left(E-V\right)\left(a-b\cos\theta\right)^2\dv{\phi}{s} = h$$
+$$(b)\spatie b^2\left(\dv{\theta}{\phi}\right)^2=  \left(E-V\right)\frac{\left(a-b\cos\theta\right)^4}{h^2}-\left(a-b\cos\theta\right)^2$$
+where $E$ is the total energy,  $h$ is a constant and $d\sigma$ is the action line element.
+\end{tcolorbox}
+The line of reasoning is quite the same as problem $(5)$.
+We use equation $\mathbf{5.212.}$ and  $\mathbf{5.212.}$
+\begin{align}
+&\left\{\begin{array}{l}
+\dv{}{t}\frac{\partial T}{\partial \dot{x}^s} - \frac{\partial T}{\partial x^s} = F_{s}\\\\
+T = \half m a_{pq}\dot{x}^p\dot{x}^q, \ \dot{x}^s=\dv{x^s}{t}\\\\
+\end{array}\right.
+\end{align}
+with for our case
+\begin{align}
+T = \half m \left(b^2\dot{\theta}^2+ \left(a-b\cos \theta \right)^2  \ \dot{\phi}^2 \right)
+\end{align}
+\begin{align}
+&\left\{\begin{array}{ll}
+\frac{\partial T}{\partial \dot{\phi}}= m \left(a-b\cos \theta \right)^2   \dot{\phi}&\frac{\partial T}{\partial {\phi}}= 0\\\\
+\frac{\partial T}{\partial \dot{\theta}}=  mb^2\dot{\theta}&\frac{\partial T}{\partial {\theta}}=  mb\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta\\\\
+\end{array}\right.
+\end{align}giving (as $F_{\phi} = -\partial_{\phi} V = 0$ and $F_{\theta} = -\partial_{\theta} V = -bg\cos{\theta}$)
+\begin{align} 
+&\left\{\begin{array}{l}
+\left(a-b\cos \theta \right)^2   \ddot{\phi}+2b\left(a-b\cos \theta \right)\dot{\theta} \dot{\phi}\sin \theta  =0\\\\
+b^2\ddot{\theta}-b\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta=-bg\cos{\theta}\\\\
+\end{array}\right.\\
+\Rightarrow\spatie &\left\{\begin{array}{l}
+\left(a-b\cos \theta \right)   \ddot{\phi}=-2b\dot{\theta} \dot{\phi}\sin \theta  \\\\
+b^2\ddot{\theta}-b\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta=-bg\cos{\theta}\\\\
+\end{array}\right.
+\end{align}
+In the first equation, put $y \equiv \dot{\phi}$ giving for the first equation:
+\begin{align}
+\frac{dy}{y}&=-2b \frac{\sin \theta d\theta} {\left(a-b\cos \theta \right)}  \\
+\Leftrightarrow\spatie\frac{dy}{y}&=-2 \frac{d\left(a-b\cos \theta \right)} {\left(a-b\cos \theta \right)}\\
+\Rightarrow \spatie \log y&=-2 \log \left(a-b\cos \theta \right)+\log C^{}\\
+\Rightarrow \spatie \dot{\phi}&= C \left(a-b\cos \theta \right)^{-2}
+\end{align}
+Note that $\dot{\phi}$ is a time derivative. Using  $\dv{s}{t}=v = \sqrt{2T} = \sqrt{2}\sqrt{E-V}$, (9) can be written as 
+\begin{align}
+\left(a-b\cos \theta \right)^{2}\dv{\phi}{t}&= C \\
+\Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{\sigma}\underbrace{\dv{\sigma}{s}}_{= \sqrt{E-V}}\underbrace{\dv{s}{t}}_{=\sqrt{2}\sqrt{E-V}}&= C \\
+\Leftrightarrow\spatie \left(E-V\right)\left(a-b\cos \theta \right)^{2}\dv{\phi}{\sigma}(E-V)&= h
+\end{align}
+with $h=\frac{C}{\sqrt{2}}$.\\
+Next, we don't use the second equation in (5) but the line element equation instead
+\begin{align}
+ds^2&=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2\\
+\Rightarrow\spatie \left(\dv{s}{\phi}\right)^2 &= \left(a-b\cos \theta \right)^2 +b^2 \left(\dv{\theta}{\phi}\right)^2\\
+\Rightarrow\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \left(\dv{\phi}{s}\right)^{-2 }- \left(a-b\cos \theta \right)^2 \\
+\Leftrightarrow\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \left(\dv{\phi}{\sigma}\right)^{-2 }\left(\dv{\sigma}{s}\right)^{-2 }- \left(a-b\cos \theta \right)^2 \\
+\left(12\right)\quad \text{: }\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \left( E-V \right)^2\frac{1}{\left(E-V\right)}\frac{\left(a-b\cos \theta \right)^4}{h^2}- \left(a-b\cos \theta \right)^2\\
+\Rightarrow\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \left( E-V \right)\frac{\left(a-b\cos \theta \right)^4}{h^2}- \left(a-b\cos \theta \right)^2
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p187 - Exercise 7}
+\begin{tcolorbox}
+A dynamical system consists of a thin straight smooth tube which can rotate in a horizontal plan about one end $O$, together with a bead$B$ inside the tube connected to $O$ by a spring. Taking as coordinates $r=OB$ and $\theta = $ angle of rotation of the tube about $O$, the potential energy $V$ is a function of $r$ only. Show that in configuration space , all the lines of force are geodesics for the kinematical line element.
+\end{tcolorbox}
+Well understanding the question is of course paramount:
+\begin{itemize}
+  \item  The tube mentioned plays only a functional role to hold the spring "stiff" along the line $OB$ as its mass can be neglected.It  will play  no further role in the dynamics of the system. 
+  \item Nothing is said that the system contains any force that keeps the angular velocity at a constant speed $\omega$. 
+\end{itemize}  
+That being clarified, one can expect that the system will behave as a harmonic oscillator along the line  $OB$ and that ,given an initial rotational momentum, the angular momentum will be a constant during the trajectory of the bead.
+This means that the bead will oscillate along $OB$ but as the angular momentum is a constant and  given $m \omega r^2 =C$($m$ = mass of the bead), the  instant radial speed will vary.\\
+The only conservative force acting on the bead will be that of the spring and will be $V=\half k \left( r-r_0 \right)^2$, $r_0$ being the point along $OB$ where the spring is not stretched. The generalized forces are $F_r = - k\left( r-r_0 \right)$ and $F_{\theta}= 0$ meaning the lines of force are straight lines pointing to the origin $O$.\\
+About the geodesics. Clearly the instantaneous velocity of the bead is $\overrightarrow{v} = \dot{r}\overrightarrow{1}_r+ \dot{\theta}r\overrightarrow{1}_{\theta}$ giving as kinetic energy $T=\half\left(\dot{r}^2+\dot{\theta}^2 r^2\right)$ giving as kinematic line element
+$$ds^2= 2Tdt = dr^2+r^2d\theta^2$$
+Referring to $\mathbf{3.101}$, the configuration space is flat and the geodesics are straight lines. As the line forces are straight lines towards the origin $O$, these line of force are also geodesics in the configuration space equipped with the kinematical line element.
+
+$$\blacklozenge$$
+\newpage
+
+
+\section{p187 - Exercise 8}
+\begin{tcolorbox}
+Show that if a line of force is a geodesic         for the kinematical line element, it is also a geodesic for the action line element.
+\end{tcolorbox}
+From $\mathbf{5.516}$ and  $\mathbf{5.529}$ we have
+\begin{align}
+X^r = v\dv{v}{s}\lambda^r +\kappa v^2\nu^r
+\end{align}
+As the line of force is a geodesic, we can start with a velocity tangent to the line of force, ensuring that the trajectory of the dynamical system will lie on the geodesic line of force (see page 175) and thus $\kappa=0$ for the trajectory. Hence,
+\begin{align}
+X^r = v\dv{v}{s}\lambda^r
+\end{align}
+expressing now the function of the action line element $d \sigma = \sqrt{E-V}ds $ we have 
+\begin{align}
+X^r &= v\dv{v}{s}\lambda^r\\
+&= v\dv{v}{s}\dv{x^r}{\sigma}\dv{\sigma}{s}\\
+&= v\dv{v}{s}\dv{x^r}{\sigma}\sqrt{E-V}\\
+&= \sqrt{E-V}v\dv{v}{s}\lambda^{'r}
+\end{align}
+As stated page 177, this dynamical system will describe in configuration space a geodesic for the action metric, meaning that $\lambda^{'r}$ is tangent to this geodesic and that $X^r$, being collinear with $\lambda^{'r}$ (with the factor $\sqrt{E-V}v\dv{v}{s}$), is also tangent to this geodesic. Hence, this  line of force is also a geodesic for the action line element.
+$$\blacklozenge$$
+\newpage
+
+\section{p187 - Exercise 9}
+\begin{tcolorbox}
+Using the methods of Chapter II and $\mathbf{5.532}$, show that the trajectories of a dynamical system with kinetic energy $T$ and potential energy $V$ satisfy the variational equation $$\delta \int_{t_1}^{t_2}\left(T-V\right)dt = 0$$
+\end{tcolorbox}
+Let's start with a function $L$ defined by 
+\begin{align}
+dL=(T-V)du\\
+\end{align}
+As in figure $2$ page 38 we will make $L$ a function of two parameters, $u$ and $v$ , the latter defining a family of curves between the begin  point $u_1$ and the endpoint $u_2$.
+\begin{align}
+L&= L(u,v)
+\end{align}
+with 
+\begin{align}
+(T-V)(u_1,v)=(T-V)_1 \quad (T-V)(u_2,v)=(T-V)_2 \quad \forall v  
+\end{align}
+We will try to minimize (with respect to $v$) the following functional
+\begin{align}
+L &= = \int_{u_1}^{u_2}(T-V)(u,v)du
+\end{align}
+It's derivative with respect to $v$
+\begin{align}
+\dv{L}{v} &= \int_{u_1}^{u_2}\frac{\partial (T-V)(u,v)}{\partial v}du
+\end{align}
+We express $(T-V)(u,v)$ as a function of the generalized coordinates $x^r$ and their derivatives. Then,
+\begin{align}
+\frac{\partial (T-V)(u,v)}{\partial v}&= \frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial \dot{x^r}}{\partial v}+\frac{\partial (T-V)(u,v)}{\partial x^r}\frac{\partial x^r}{\partial v}
+\end{align}
+where $\dot{x^r}= \frac{\partial x^r}{\partial u}$.\\
+We have 
+\begin{align}
+\frac{\partial \dot{x^r}}{\partial v} &= \frac{\partial}{\partial v} \frac{\partial x^r}{\partial u}= \frac{\partial}{ \partial u} \frac{\partial x^r}{\partial v}
+\end{align}
+So, 
+\begin{align}
+\frac{\partial (T-V)(u,v)}{\partial v}&= \frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial}{ \partial u} \frac{\partial x^r}{\partial v}+\frac{\partial (T-V)(u,v)}{\partial x^r}\frac{\partial x^r}{\partial v}
+\end{align}
+Consider the expression
+\begin{align}
+\int_{u_1}^{u_2}d(AB) &= \int_{u_1}^{u_2}Ad(B) + \int_{u_1}^{u_2}Bd(A)\\
+\Rightarrow \spatie \int_{u_1}^{u_2}Ad(B)&=\int_{u_1}^{u_2}d(AB) -\int_{u_1}^{u_2}Bd(A)
+\end{align}
+Put $B= \frac{\partial x^r}{\partial v}$ and $A=  \frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}$ and putting this inside (9) and (6):
+\begin{align}
+\dv{L}{v} &= \int_{u_1}^{u_2}d\left(\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial x^r}{\partial v} \right)-\int_{u_1}^{u_2}\frac{\partial x^r}{\partial v} d \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)+\int_{u_1}^{u_2}\frac{\partial (T-V)(u,v)}{\partial x^r}\frac{\partial x^r}{\partial v}du\\
+&=\left.\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial x^r}{\partial v} \right|_{u_1}^{u_2}-\left[\int_{u_1}^{u_2}\left(\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u,v)}{\partial x^r}\right)\frac{\partial x^r}{\partial v} du \right]
+\end{align}
+We express now the results in term of infinitesimals. A change in "length" $\delta L$ when we pas from a curve $v$ to a curve $v+dv$ is
+\begin{align}
+\delta L &= \dv{L}{v}\delta v\\
+&= \left.\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial x^r}{\partial v} \delta v\right|_{u_1}^{u_2}-\int_{u_1}^{u_2}\left(\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u,v)}{\partial x^r}\right)\frac{\partial x^r}{\partial v}\delta v du\\
+&= \left.\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\delta x^r\right|_{u_1}^{u_2}-\int_{u_1}^{u_2}\left(\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u,v)}{\partial x^r}\right)\delta x^r du
+\end{align}
+The first term vanish as at the endpoints  the $\delta x^r$ are zero and hence we get
+\begin{align}
+\delta L &= -\int_{u_1}^{u_2}\left(\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u,v)}{\partial x^r}\right)\delta x^r du
+\end{align}
+As the $\delta x^r$ are arbitrary, we must have for $\delta L =0$
+\begin{align}
+\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u)}{\partial x^r}&=0
+\end{align}
+This is the same equation as $\mathbf{5.532}$ which describe the motion of a system with a conservative force. 
+$$\blacklozenge$$
+\newpage
