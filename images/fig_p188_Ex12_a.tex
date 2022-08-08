@@ -1,0 +1,49 @@
+\begin{tikzpicture}[scale=0.8]
+\coordinate (O) at (0,0);
+\coordinate (z1) at (-3,-3);
+\coordinate (z2) at (5,0);
+\coordinate (z3) at (0,5);
+\coordinate (Op) at (10,0);
+\coordinate (z2p) at (7,-3);
+\coordinate (z1p) at (15,0);
+\coordinate (z3p) at (10,5);
+
+\draw [-{Latex[length=2mm]},, ]  (O) -- (z1);
+\node[label=south east:$z_1$] at (z1) {};
+\draw [-{Latex[length=2mm]},]  (O) -- (z2);
+\node[label=south east:$z_2$] at (z2) {};
+\draw [-{Latex[length=2mm]} ]  (O) -- (z3);
+\node[label=south east:$z_3$] at (z3) {};
+\draw [-{Latex[length=2mm]}, ]  (Op) -- (z1p);
+\node[label=south east:$z_1^{'}$] at (z1p) {};
+\draw [-{Latex[length=2mm]},, ]  (Op) -- (z2p);
+\node[label=south east:$z_2^{'}$] at (z2p) {};
+\draw [-{Latex[length=2mm]}, ]  (Op) -- (z3p);
+\node[label=south east:$z_3^{'}$] at (z3p) {};
+
+\coordinate (O1a) at (-1,0);
+\coordinate (O1b) at (-2,-1);
+\draw [-{Latex[length=2mm]},very thick, ]  (O1a) -- (O1b);
+\node[label=south west:$\omega_1$] at (O1b) {};
+\coordinate (O2a) at (1,1);
+\coordinate (O2b) at (3,1);
+\draw [-{Latex[length=2mm]},very thick, ]  (O2a) -- (O2b);
+\node[label=south east:$\omega_2$] at (O2b) {};
+\coordinate (O3a) at (-1,1);
+\coordinate (O3b) at (-1,3);
+\draw [-{Latex[length=2mm]},very thick, ]  (O3a) -- (O3b);
+\node[label=south east:$\omega_3$] at (O3b) {};
+
+\coordinate (O1bp) at (11,1);
+\coordinate (O1ap) at (13,1);
+\draw [-{Latex[length=2mm]},very thick, ]  (O1ap) -- (O1bp);
+\node[label=south east:$\omega_1^{'}$] at (O1bp) {};
+\coordinate (O2ap) at (9,0);
+\coordinate (O2bp) at (8,-1);
+\draw [-{Latex[length=2mm]},very thick, ]  (O2ap) -- (O2bp);
+\node[label=south west:$\omega_2^{'}$] at (O2bp) {};
+\coordinate (O3ap) at (9,1);
+\coordinate (O3bp) at (9,3);
+\draw [-{Latex[length=2mm]},very thick, ]  (O3ap) -- (O3bp);
+\node[label=south east:$\omega_3^{'}$] at (O3bp) {};
+\end{tikzpicture}
