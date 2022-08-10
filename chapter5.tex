@@ -1230,9 +1230,9 @@ The last term $\delta_{rs}\sum m  b_qb_q- \sum mb_rb_s$ can be interpreted as a 
 The other two terms can also be seen as a rigid body of particles distributed in a plane perpendicular to one of the axis i.e. all particles are transported perpendicularity to a plane. We note that $\delta_{rs}\sum m b_qz_q - \sum m  b_rz_s = \delta_{rs}\sum m b_qz_q - \sum m  b_sz_r$. This follows immediately from the symmetric character of $I_{rs}^{'},I_{rs}^{},\tilde{I}_{rs}$. \\ Denoting $\overline{I}_{rs}= \delta_{rs}\sum m b_qz_q - \sum m  b_rz_s +\delta_{rs}\sum m b_qz_q - \sum m  b_sz_r$ giving
 $$ K_{rs} = I_{rs}+\overline{I}_{rs}+\tilde{I}_{rs}$$
 $$\blacklozenge$$
+\newpage
 
-
-\section{p189 - Exercise 12}
+\section{p188 - Exercise 12}
 \begin{tcolorbox}
 A rigid body is turning about a fixed point. Referred to right-handed axes $Oz_1z_2z_3$, its angular velocity tensor has components
 $$\omega_{23}=1, \quad \omega_{31}=2, \quad\omega_{12}=3$$
@@ -1294,3 +1294,140 @@ Now with $\mathbf{5.316}$ we get
 \end{align}
  
 $$\blacklozenge$$
+\newpage
+
+\section{p188 - Exercise 13}
+\begin{tcolorbox}
+Consider three rigid bodies, $S,S^{'}, S^{"}$, turning about a common point. If all angular velocities are referred to common axes, show that the angular velocity tensors of $S^{"}$ relative to $S$ is the sum of the angular velocity tensors of $S^{'}$ relative to $S$ and of  $S^{"}$ relative to $S^{'}$.
+\end{tcolorbox} 
+
+Consider the following three transformation from one axes system to another 
+\begin{align}
+\left\{\begin{array}{llll}
+z^{'}_r= A_{rm}z^{}_m&z^{}_r= A_{mr}z^{'}_m& A_{mp} A_{mq}=\delta_{pq}&A_{pm} A_{qm}=\delta_{pq}\\
+z^{"}_r= B_{rm}z^{'}_m&z^{'}_r=B_{mr}z^{"}_m& B_{mp} B_{mq}=\delta_{pq}&B_{pm} B_{qm}=\delta_{pq}\\
+z^{"}_r= C_{rm}z^{}_m&z^{}_r=C_{mr}z^{"}_m& C_{mp} C_{mq}=\delta_{pq}&C_{pm} C_{qm}=\delta_{pq}
+\end{array}\right.
+\end{align}
+We then have,
+\begin{align}
+\left\{\begin{array}{l}
+\omega^{'}_{pq}\left(S^{'},S^{}\right)= -A_{pm}\dot{A_{qm}}\\
+\omega^{"}_{pq}\left(S^{"},S^{'}\right)= -B_{pm}\dot{B_{qm}}\\
+\omega^{"}_{pq}\left(S^{"},S^{}\right)= -C_{pm}\dot{C_{qm}}
+\end{array}\right.
+ \end{align}
+ From (1) we see that 
+ \begin{align}
+ C_{rq}= B_{rm}A_{mq}
+ \end{align}
+ And thus 
+ \begin{align}
+ \omega^{"}_{pq}\left(S^{"},S^{}\right)&= -B_{pk}A_{km}\dot{\left(B_{qn}A_{nm}\right)}\\
+\Rightarrow\spatie &= \underbrace{-A_{km}\dot{A_{nm}}}_{= \omega^{'}_{kn}\left(S^{'},S^{}\right)}B_{pk}B_{qn}-\underbrace{A_{km}A_{nm}}_{=\delta_{kn}}B_{pk}\dot{B_{qn}}\\
+\Rightarrow\spatie &=  \omega^{'}_{kn}\left(S^{'},S^{}\right)B_{pk}B_{qn}-\underbrace{B_{pn}\dot{B_{qn}}}_{=-\omega^{"}_{pq}\left(S^{"},S^{'}\right)}
+ \end{align}
+ The fist term of the right side expression is a bilinear map of the tensor $\omega^{'}_{kn}\left(S^{'},S^{}\right)$ from the reference axis $S^{'}$ to $S^{"}$. Hence we get 
+\begin{align}
+\omega^{"}_{pq}\left(S^{"},S^{}\right)=\omega^{"}_{pq}\left(S^{"},S^{'}\right)+\omega^{"}_{pq}\left(S^{'},S^{}\right)
+\end{align}
+$$\blacklozenge$$
+
+\newpage
+\section{p188 - Exercise 14}
+\begin{tcolorbox}
+A freely moving particle is observed from a platform which rotates with angular velocity $\omega_r = n\delta_{r3}$, where $n$ is constant, relative to a Newtonian frame $S$ in which $z_r$ are rectangular Cartesians. Use $\mathbf{5.421}$ to find the equations of motion relative to $S^{'}$ in terms of coordinates  $z^{'}_r$ in $S^{'}$, such that the axis of $z^{'}_3$ coincides permanently with the axis of $z_3$.
+\end{tcolorbox} 
+$\mathbf{5.421}$ gives (where the equation is expressed in term of the $z^{'}_r$
+\begin{align}
+\left\{\begin{array}{l}
+mf_s = F^{'}_s + C^{'}_s + G^{'}_s\\
+C^{'}_s= m\left[\dot{\omega}^{'}_{sn}\left(S^{'},S\right) + \omega^{'}_{sm}\left(S^{'},S\right)\omega^{'}_{nm}\left(S^{'},S\right)\right]z^{'}_n\\
+C^{'}_s = 2m\omega^{'}_{sm}v^{'}_m\left(S^{'}\right)
+\end{array}\right.
+\end{align}
+We note the particle is free, so $F^{'}_s=0$ and the angular velocity is a constant, so $\dot{\omega}^{'}_{sn}\left(S^{'},S\right)=0$, and the equation simplify to 
+\begin{align}
+\left\{\begin{array}{l}
+f^{'}_s = K^{'}_s + J^{'}_s\\
+K^{'}_s= \left[ \omega^{'}_{sm}\left(S^{'},S\right)\omega^{'}_{nm}\left(S^{'},S\right)\right]z^{'}_n\\
+J^{'}_s = 2\omega^{'}_{sm}v^{'}_m\left(S^{'}\right)
+\end{array}\right.
+\end{align}
+As $\omega_s= n\delta_{s3}$ and by the requirement that the that the axis of $z^{'}_3$ coincides permanently with the axis of $z_3$, it is not hard to see that
+\begin{align}
+\left\{\begin{array}{llll}
+\omega^{}_{12}\left(S^{'},S\right) = n\\
+\omega^{'}_{12}\left(S^{'},S\right) = n\\
+\omega^{}_{12}\left(S^{},S^{'}\right) = -n\\
+\omega^{'}_{12}\left(S^{},S^{'}\right) = -n
+\end{array}\right.
+\end{align}
+while all other elements vanish.\\
+We get 
+\begin{align}
+&\left\{\begin{array}{l}
+K^{'}_1 = \omega^{'}_{12}\left(S^{'},S\right)\omega^{'}_{12}\left(S^{'},S\right)z^{'}_1 = n^2 z_1^{'}\\
+K^{'}_1 = \omega^{'}_{21}\left(S^{'},S\right)\omega^{'}_{21}\left(S^{'},S\right)z^{'}_1 = n^2 z_1^{'}\\
+K^{'}_3 = 0
+\end{array}\right.\\
+&\left\{\begin{array}{l}
+J^{'}_1= 2\omega^{'}_{12}\left(S^{'},S\right)v^{'}_2\left(S^{'}\right)=2 n v_2^{'}\left(S^{'}\right)\\
+J^{'}_2= 2\omega^{'}_{21}\left(S^{'},S\right)v^{'}_1\left(S^{'}\right)=-2 n v_1^{'}\left(S^{'}\right)\\
+J^{'}_3 = 0
+\end{array}\right.
+\end{align}
+and get as equations of motion
+\begin{align}
+\left\{\begin{array}{l}
+f^{'}_1= n^2z_1^{'} +2nv^{'}_2\left(S^{'}\right)\\
+f^{'}_2= n^2z_1^{'} -2nv^{'}_1\left(S^{'}\right)\\
+f^{'}_3= 0
+\end{array}\right.
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p188 - Exercise 15}
+\begin{tcolorbox}
+If the tensor $I_{st}$ is defined by $\mathbf{5.335}$ for N dimensions, and $J_{nprq}$ is defined by $\mathbf{5.330}$, establish the following relations:
+$$J_{nprq}= \left(N-1\right)^{-1}I_{ss}\left(\delta_{nr}\delta_{pq}- \delta_{nq}\delta_{pr}\right) - \delta_{nr}I_{pq}+\delta_{pr}I_{nq}$$
+$$J_{nppq}=I_{ss}$$
+$$I_{nq}= \left(N-1\right)^{-1}\left(J_{nprq}-\delta_{nq}J_{nprq}\right) $$
+\end{tcolorbox} 
+$\mathbf{5.421}$ and $\mathbf{5.421}$:
+\begin{align}
+\left\{\begin{array}{l}
+I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
+J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
+\end{array}\right.
+\end{align}
+The first equation can be expressed as $ \sum m z_p z_q=  \delta_{pq}\sum m z_k z_k-I_{pq}$ and $ \sum m z_n z_q=  \delta_{st}\sum m z_k z_k-I_{nq}$ 
+
+giving 
+\begin{align}
+J_{nprq}& =  \delta_{nr} \delta_{pq}\sum m z_k z_k-\delta_{nr}I_{pq} - \delta_{pr} \delta_{st}\sum m z_k z_k+\delta_{pr}I_{nq} \\
+&= \sum m z_k z_k\left( \delta_{nr} \delta_{pq}- \delta_{nr}I_{pq}\right)-\delta_{nr}I_{pq} +\delta_{pr}I_{nq}
+\end{align}
+Now, consider the expressions 
+\begin{align}
+\left\{\begin{array}{l}
+I_{11}= \sum m z_q z_q - \sum m z_1 z_1\\
+I_{11}= \sum m z_q z_q - \sum m z_1 z_1\\
+\vdots\\
+I_{NN} = \sum m z_q z_q - \sum m z_N z_N\\
+\end{array}\right.
+\end{align}
+Summin up these $N$ expressions we have
+\begin{align}
+I_{ss} &= N\left( \sum m z_q z_q \right) - \sum m z_q z_q\\
+&= \left( N-1  \right)\sum m z_q z_q \\
+\Rightarrow\spatie \sum m z_q z_q &= I_{ss} \left( N-1  \right)^{-1}
+\end{align}
+Plugging this in $(3)$ we get
+\begin{align}
+J_{nprq}
+&= I_{ss} \left( N-1  \right)^{-1}\left( \delta_{nr} \delta_{pq}- \delta_{nr}I_{pq}\right)-\delta_{nr}I_{pq} +\delta_{pr}I_{nq}
+\end{align}
+$$\blacklozenge$$
+\newpage
