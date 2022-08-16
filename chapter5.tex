@@ -1431,3 +1431,174 @@ J_{nprq}
 \end{align}
 $$\blacklozenge$$
 \newpage
+
+
+\section{p188 - Exercise 16}
+\begin{tcolorbox}
+The motion of a dynamical system is represented by a curve in configuration-space. Using the kinematical line element, express the curvature as a function of its total energy $E$, and deduce that as $E$ tends to infinity, the trajectorry tends to become a geodesic . Illustrate by considering a particle moving under gravity on a smooth sphere.
+\end{tcolorbox} 
+$\mathbf{5.421}$ and $\mathbf{5.421}$:
+\begin{align}
+\left\{\begin{array}{l}
+I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
+J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
+\end{array}\right.
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+\section{p189 - Exercise 17}
+\begin{tcolorbox}
+A particle moves on a smooth sphere under action of gravity. Using he action line element, calculate the Gaussian curvature of configuration-space as a function of total energy $E$ and height $z$ above the centre of the sphere. Show that if the total energy is not sufficient to raise the particle to the top of the sphere, but only to a level $z=h$, then the Gaussian curvature tends to infinity as $z$ approaches $h$ from below.
+\end{tcolorbox} 
+$\mathbf{5.421}$ and $\mathbf{5.421}$:
+\begin{align}
+\left\{\begin{array}{l}
+I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
+J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
+\end{array}\right.
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+
+\section{p189 - Exercise 18}
+\begin{tcolorbox}
+Show that the equations of motion of a rigid body with a fixed point may be written in either of the forms\\
+$(a)\spatie \dot{h}^{'}_r+\omega^{'}_{mr}\left(S^{'},S^{}\right)h^{'}_m = M^{'}_{rs},\\
+(b)\spatie  \spatie \dot{h}^{'}_r-K^{'}_{rmn}h^{'}_m h^{'}_n= M^{'}_{rs},$\\
+where $h^{'}_r$ are the components on $z^{'}$-axes (moving with the body) of angular moment as given in $\mathbf{5.338}$ and $K^{'}_{rmn}$ is a certain moment of inertia tensor. Evaluate the components  $K^{'}_{rmn}$ in terms of the moments and products of inertia.
+\end{tcolorbox} 
+$\mathbf{5.421}$ and $\mathbf{5.421}$:
+\begin{align}
+\left\{\begin{array}{l}
+I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
+J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
+\end{array}\right.
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+
+\section{p189 - Exercise 19}
+\begin{tcolorbox}
+A rigid body turns about a fixed point $O$in a flat space of $N$ dimensions. prove that if $N$ is odd, there exists at any instant a line $OP$ of particles instantaneously at rest, but that, if $N$ is even, no point other than $O$ is, in general, instantaneously at rest. Show that if $N=4$, there are are points oher than $O$ instantaneously at rest if, and only if,
+$$\omega_{23}\omega_{14}+\omega_{31}\omega_{24}+\omega_{12}\omega_{34}=0$$
+\end{tcolorbox} 
+Suppose $N$ is odd. Let's define the following vector
+\begin{align}
+\omega_{i_1}= \epsilon_{i_{1} i_{2} \dots i_{N}}\prod_{k=1}^{\frac{N-1}{2}}\omega_{i_{2k} i_{2k+1}}
+\end{align}
+and a line
+\begin{align}
+z_{i_1} = \theta \omega_{i_1}\quad (\theta \in \mathbb{R})
+\end{align}
+First we note that $\omega_{i_1}$ (and hence $z_{i_1}$) is not a null-vector:\\
+Let's consider in $(1)$ the terms consisting of the permutation of the sequence of pairs $$\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$$ This sequence contains $\frac{N-1}{2}$ pairs and so can be arranged in $\frac{N-1}{2}!$ ways. As for each pair we have two valid possibilities e.g. $\left( i_2,i_3 \right)$ and $\left( i_3,i_2 \right)$ and as a sequence contains $\frac{N-1}{2}$ pairs, we will have for a given order of pairs $2^{\frac{N-1}{2}}$ possibilities. So in $(1)$ there will be $2^{\frac{N-1}{2}}\frac{N-1}{2}!$ terms consisting of the permutation of the sequence of pairs $\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$.\\
+Without loss of generality, suppose that $\epsilon_{i_{1} i_{2} \dots i_{N}}$ is positive and also all $\omega_{i_{2k} i_{2k+1}}$ are positive.
+Let's first consider a permutation of two pairs in the sequence $\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$. Obviously, this does not change the product of the $\omega_{i_{2k} i_{2k+1}}$. Also $\epsilon_{i_{1} i_{2} \dots i_{N}}$ will hold it's initial sign as the considered permutation needs two permutation of indices.\\
+Next consider a permutation in one of the pairs of the sequence. Obviously $\epsilon_{i_{1} i_{2} \dots i_{N}}$ will change sign but also the picked $\omega_{i_{2k} i_{2k+1}}$(skew-symmetric). \\
+Conclusion, all $2^{\frac{N-1}{2}}\frac{N-1}{2}!$ terms can be reduced to the sum of $2^{\frac{N-1}{2}}\frac{N-1}{2}!$ of a same quantity and the  $\omega_{i_1}$ will not trivially be zero.\\
+Let's consider now $\mathbf{5.310}$
+\begin{align}
+v_p &= - \omega_{pi_{1}}z_{i_{1}}\\
+\text{(2):}\spatie v_p &= -\theta \epsilon_{i_{1} i_{2} \dots i_{N}}\omega_{pi_{1}}\prod_{k=1}^{\frac{N-1}{2}}\omega_{i_{2k} i_{2k+1}}
+\end{align}
+On the right side, for having a non-zero term, we need that $p\ne i_{1}$ ( $\omega_{st}$ skew-symmetric ). This leaves us with only $N-1$ possible choices in the indices but as $\epsilon_{i_{1} i_{2} \dots i_{N}}$ needs $N$ mutual different indices it is obvious that each term in $(4)$ will have a $\epsilon_{i_{1} i_{2} \dots i_{N}}= 0$ \\
+Conclusion, all $v_p$are zero and hence the defined line in $(2)$ is an instantaneous line of rotation.
+\\
+What about $N$is even?\\
+Obviously we can't construct a vector the way we did for the odd case.
+$$\blacklozenge$$
+\newpage 
+
+
+
+\section{p189 - Exercise 20}
+\begin{tcolorbox}
+The equations $\mathbf{5.329}$ do not determine $J_{nprq}$ uniquely. Why? As an alternative to $\mathbf{5.330}$, we can require $J_{npqr}$ to be skew-symmetric in the last two suffixes. Show that this defines $J_{nprq}$ uniquely as follows:
+$$J_{nprq}= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)$$
+Prove that$J_{nprq}$, as defined here, has the same symmetries as the covariant curvature tensor (cf. $\mathbf{3.115}$, $\mathbf{3.116}$) and that, for $N=3$, we have
+$$ I_{st} = \half\epsilon_{snp}\epsilon_{trq}J_{nprq}, \quad  J_{nprq}=  \half\epsilon_{snp}\epsilon_{trq} I_{st}$$
+\end{tcolorbox} 
+The equations $\mathbf{5.329}$ , $h_{np}=J_{nprq}\omega_{rq}$ do not determine $J_{nprq}$ uniquely because $\omega_{rq}$ is skew symmetric, so all elements at the positions $J_{np(rr)}$ can be chosen arbitrarily and still comply with the equation.\\
+Consider now the expression
+\begin{align}
+J^{'}_{nprq}&= \half\left(  J^{}_{nprq}-J^{'}_{npqr}\right)\\
+\Rightarrow \spatie h^{'}_{np}&=J^{'}_{nprq}\omega_{rq}\\
+&=  \half\left(  J^{}_{nprq}\omega_{rq}-J^{}_{npqr}\omega_{rq}\right)\\
+&= \half\left(  J^{}_{nprq}\omega_{rq}+J^{}_{npqr}\omega_{qr}\right)\\
+&= \half\left(  J^{}_{nprq}\omega_{rq}+J^{}_{nprq}\omega_{rq}\right)\\
+&=h_{np}
+\end{align}
+So this expression $J_{nprq}= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)$ still describes the dynamical system and we note that this expression is skew-symmetric in the two last suffixes:
+\begin{align}
+J_{np(rr)}&= \half\sum m \left(\delta_{nr}z_pz_r +\delta_{pr}z_nz_r-\delta_{nr}z_pz_r-\delta_{pr}z_nz_r \right)=0\\
+J_{npqr}&= \half\sum m \left(\delta_{nq}z_pz_r +\delta_{pr}z_nz_q-\delta_{nr}z_pz_q-\delta_{pq}z_nz_r \right)\\
+&=-\half\sum m \left(-\delta_{nq}z_pz_r -\delta_{pr}z_nz_q+\delta_{nr}z_pz_q+\delta_{pq}z_nz_r \right)\\
+&= - J_{nprq}
+\end{align}
+
+\textbf{Symmetries to prove:}
+\begin{align}
+\left\{\begin{array}{l}
+J_{nprq} = -J_{pnrq}, \quad J_{nprq} = -J_{npqr},\quad J_{nprq} = J_{rqnp}\\
+J_{nprq}+J_{nrqp}+J_{nqpr}=0
+\end{array}\right.
+\end{align}
+The second identity of $(11)$ is already proven as $J_{nprq}$ is skew-symmetric in the last two suffixes. For the rest:
+\begin{align}
+J_{nprq}&= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)\\
+&=- \half\sum m \left(-\delta_{nr}z_pz_q -\delta_{pq}z_nz_r+\delta_{nq}z_pz_r+\delta_{pr}z_nz_q \right)\\
+&= J_{pnrq}
+\end{align}
+and
+\begin{align}
+J_{nprq}&= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)\\
+J_{rqnp}&= \half\sum m \left(\delta_{rn}z_qz_p +\delta_{qp}z_rz_n-\delta_{rp}z_qz_n-\delta_{qn}z_rz_p \right)\\
+&= J_{pnrq}
+\end{align}
+and
+\begin{align}
+J_{nprq}+J_{nrqp}+J_{nqpr}&=\left\{\begin{array}{l}
++\half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)\\
++\half\sum m \left(\delta_{nq}z_pz_r +\delta_{rp}z_nz_q-\delta_{np}z_qz_r-\delta_{rq}z_nz_p \right)\\
++\half\sum m \left(\delta_{np}z_rz_q +\delta_{qr}z_nz_p-\delta_{nr}z_qz_p-\delta_{qp}z_nz_r \right)
+\end{array}\right.
+&=0
+\end{align}
+For the last part:
+From $\mathbf{5.33}$,  ($J^{'}_{nprq}$ being a not necessarily skew-symmetric tensor)
+\begin{align}
+I_{st} = \half J^{'}_{nprq} \epsilon_{rqt}\epsilon_{snp}
+\end{align}
+or 
+\begin{align}
+I_{st} &= \half J^{'}_{npqr} \epsilon_{qrt}\epsilon_{snp}\\
+&= -\half J{'}_{npqr} \epsilon_{rqt}\epsilon_{snp}
+\end{align}
+Adding $(19)$ and $(21)$ gives
+\begin{align}
+2I_{st} &= \underbrace{\half \left(J^{'}_{npqr} - J{'}_{npqr} \right)}_{= J^{}_{npqr}}\epsilon_{rqt}\epsilon_{snp}\\
+\Rightarrow\spatie I_{st} &=\half J^{}_{npqr}\epsilon_{rqt}\epsilon_{snp}\
+\end{align}
+And
+\begin{align}
+I_{st}\epsilon_{trq}\epsilon_{snp} &= \half J^{'}_{kjuv} \underbrace{\epsilon_{tuv}\epsilon_{trq}}_{= \delta_{ur}\delta_{vq}-\delta_{uq}\delta_{vr}}\underbrace{\epsilon_{skj}\epsilon_{snp}}_{= \delta_{kn}\delta_{jp}-\delta_{kp}\delta_{jn}}\\
+&= -\half J{'}_{npqr} \epsilon_{rqt}\epsilon_{snp}
+\end{align}
+expending the right product we get
+\begin{align}
+I_{st}\epsilon_{trq}\epsilon_{snp} &= \half \left( J{}_{nprq} +J{}_{pnqr}-J{}_{npqr}-J{}_{pnrq}\right)
+\end{align}
+And considering the symmetries described previously we get
+\begin{align}
+I_{st}\epsilon_{trq}\epsilon_{snp} &= \half 4 J{}_{nprq}\\
+&= 2 J{}_{nprq}\\
+\Rightarrow \spatie J{}_{nprq}&= \half I_{st}\epsilon_{trq}\epsilon_{snp} 
+\end{align}
+$$\blacklozenge$$
+\newpage
