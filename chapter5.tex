@@ -1471,13 +1471,80 @@ $(a)\spatie \dot{h}^{'}_r+\omega^{'}_{mr}\left(S^{'},S^{}\right)h^{'}_m = M^{'}_
 (b)\spatie  \spatie \dot{h}^{'}_r-K^{'}_{rmn}h^{'}_m h^{'}_n= M^{'}_{rs},$\\
 where $h^{'}_r$ are the components on $z^{'}$-axes (moving with the body) of angular moment as given in $\mathbf{5.338}$ and $K^{'}_{rmn}$ is a certain moment of inertia tensor. Evaluate the components  $K^{'}_{rmn}$ in terms of the moments and products of inertia.
 \end{tcolorbox} 
-$\mathbf{5.421}$ and $\mathbf{5.421}$:
+We use $\mathbf{5.329}$ ,$\mathbf{5.231}$,$\mathbf{5.233}$ and $\mathbf{5.424}$:
 \begin{align}
-\left\{\begin{array}{l}
-I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
-J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
+M^{'}_{rs}&= \epsilon_{rsn}M^{'}_{n}\\
+h^{'}_{rs}&= \epsilon_{rsn}h^{'}_{n}\\
+h^{'}_{np}&= J^{'}_{nprq} \omega^{'}_{rq}\\
+ M^{'}_{ab}&=J^{'}_{abrq} \dot{\omega}^{'}_{rq}\left(S^{'},S\right)+J^{'}_{cdrq}\left(\delta_{ac}\delta_{du}\delta_{bv}+\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{uv}\left(S^{'},S\right) \omega^{'}_{rq}\left(S^{'},S\right)
+\end{align}
+Then, using $(1),(2),(3)$ in $(4)$ and contracting the terms in $\delta_{ij}$
+\begin{align}
+M{'}_{ab}&= \dot{h_{ab}}^{'}+h^{'}_{au}\omega^{'}_{ub}\left(S^{'},S\right) +h^{'}_{ub}\omega^{'}_{ua}\left(S^{'},S\right)\\
+\Leftrightarrow \spatie \epsilon_{abn}M{'}_{n}&= \epsilon_{abn}\dot{h_{n}}^{'}+\epsilon_{aun}h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\epsilon_{ubn}h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
+\times \epsilon_{abt}\quad \Rightarrow \quad \epsilon_{abt}\epsilon_{abn}M{'}_{n}&= \epsilon_{abt}\epsilon_{abn}\dot{h_{n}}^{'}+\epsilon_{abt}\epsilon_{aun}h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\epsilon_{bat}\epsilon_{bun}h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
+\Rightarrow \quad 2 M{'}_{t}&= 2\dot{h_{t}}^{'}+\left(\delta_{bu}\delta_{tn} -\delta_{bn}\delta_{tu}\right)h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\left(\delta_{au}\delta_{tn} -\delta_{an}\delta_{tu}\right)h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
+&= 2\dot{h_{t}}^{'}+h^{'}_{t}\omega^{'}_{bb}\left(S^{'},S\right) -h^{'}_{b}\omega^{'}_{tb}\left(S^{'},S\right) +h^{'}_{t}\omega^{'}_{uu}\left(S^{'},S\right) -h^{'}_{a}\omega^{'}_{ta}\left(S^{'},S\right)\end{align}
+And so, 
+\begin{align}
+M{'}_{r}&=\dot{h_{r}}^{'}+\omega^{'}_{mr}\left(S^{'},S\right)h^{'}_{m}
+\end{align}
+$$\lozenge$$
+Let's try to express equation $(4)$ but with the inertia tensor $I_{ij}$ as parameter.
+We have $\mathbf{5.332}$:
+\begin{align}
+\dv{\left(I_{st}\omega_t\left(S^{'},S\right)\right)}{t} = M_s
+\end{align}
+Let's express this in the coordinate system $S^{'}$ so that $I^{'}_{sr}$ will not depend of the time. Be $A_{ij}$ the map from $S^{'}$ to $S^{}$. Then:
+\begin{align}
+\dv{\left(A_{ks}I^{'}_{st}\omega^{'}_t\left(S^{'},S\right)\right)}{t} &= M_s\\
+\times\quad A_{ps}\spatie A_{ps}\dv{\left(A_{ks}I^{'}_{st}\omega^{'}_t\left(S^{'},S\right)\right)}{t} &= M^{'}_p\\
+A_{ps}\dot{A_{ks}}I^{'}_{kt}\omega^{'}_t\left(S^{'},S\right) + A_{ps}A_{ks}I^{'}_{kt}\dot{\omega}^{'}_t\left(S^{'},S\right)&= M^{'}_p
+\end{align}
+We have
+\begin{align}
+\left\{\begin{array}{lll}
+\textbf{5.408}&\omega^{'}_{ts}\left(S^{'},S\right)= A_{tm}\dot{A}_{sm}&\\
+\textbf{5.401}& A_{mp}A_{mq}= \delta_{pq}& A_{pm}A_{qm}= \delta_{pq}
 \end{array}\right.
 \end{align}
+So, $(14)$ becomes 
+\begin{align}
+\omega^{'}_{pk}\left(S^{'},S\right)I^{'}_{kt}\omega^{'}_t\left(S^{'},S\right)+I^{'}_{pt}\dot{\omega}^{'}_t\left(S^{'},S\right)&= M^{'}_p
+\end{align}
+We use 
+\begin{align}
+\omega^{'}_{pk}\left(S^{'},S\right) &= \epsilon_{pkm}\omega^{'}_{m}\left(S^{'},S\right)
+\end{align}
+and get for $(16)$:
+\begin{align}
+I^{'}_{pt}\dot{\omega}^{'}_t\left(S^{'},S\right)+\epsilon_{pkm}\omega^{'}_{m}\left(S^{'},S\right)I^{'}_{kt}\omega^{'}_t\left(S^{'},S\right)&= M^{'}_p
+\end{align}
+Note also that $h^{'}_s =I_{sr}\omega^{'}_{r}\left(S^{'},S\right)$. Indeed,
+\begin{align}
+h^{'}_{np} &=J^{'}_{npqr}\omega^{'}_{rq}\left(S^{'},S\right)\\
+&= J^{'}_{npqr}\epsilon_{rqm}\omega^{'}_{m}\left(S^{'},S\right)\\
+\times\quad\half\epsilon_{snp}\spatie h^{'}_{s} &= \underbrace{\half J^{'}_{npqr}\epsilon_{snp}\epsilon_{rqm}}_{=I_{sm}^{'}}\omega^{'}_{m}\left(S^{'},S\right)\\
+\Rightarrow\spatie h^{'}_{s} &=I_{sm}^{'}\omega^{'}_{m}\left(S^{'},S\right)
+\end{align}
+and $(18)$ becomes 
+\begin{align}
+\dot{h}^{'}_p\left(S^{'},S\right)+\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)&= M^{'}_p
+\end{align}
+Let's examine the term $\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)$ and let's write tentatively
+\begin{align}
+K¨{'}_{pqn}h^{'}_qh^{'}_n&=\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)
+\end{align}
+using $h^{'}_{r} = I^{'}_{rv}\omega^{'}_{v}\left(S^{'},S\right)$ in $(24)$ we get
+\begin{align}
+K^{'}_{pkn}I^{'}_{kt}I^{'}_{nm}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_{t}\left(S^{'},S\right)&=\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)\\
+\Rightarrow\spatie K^{'}_{pkn}I^{'}_{kt}I^{'}_{nm}&=\epsilon_{pkm}I^{'}_{kt}\\
+\Rightarrow\spatie K^{'}_{pkn}I^{'}_{nm}&=\epsilon_{pkm}\\
+\times\quad\epsilon_{pkt}\Rightarrow \spatie \epsilon_{pkt}K^{'}_{pkn}I^{'}_{nm}&= \delta_{mt}
+\end{align}
+Let's write $$ I^{'-1}_{tn}=\epsilon_{pkt}K^{'}_{pkn}$$We can truly consider $I^{'-1}_{tn}$ as the inverse of $I^{'}_{tn}$ due to $(28)$ and the fact that $I^{'}_{tm}$ is represented as a symmetric square matrix with real numbers as elements and hence has a non-zero determinant and has indeed an inverse. Multiplying $(27)$ by $I^{'-1}_{mt}$ gives us finally
+
+ $$\mathbf{K^{'}_{pkt}=\epsilon_{pkm}I^{'-1}_{mt}}$$
 
 $$\blacklozenge$$
 \newpage
@@ -1485,7 +1552,7 @@ $$\blacklozenge$$
 
 \section{p189 - Exercise 19}
 \begin{tcolorbox}
-A rigid body turns about a fixed point $O$in a flat space of $N$ dimensions. prove that if $N$ is odd, there exists at any instant a line $OP$ of particles instantaneously at rest, but that, if $N$ is even, no point other than $O$ is, in general, instantaneously at rest. Show that if $N=4$, there are are points oher than $O$ instantaneously at rest if, and only if,
+A rigid body turns about a fixed point $O$in a flat space of $N$ dimensions. prove that if $N$ is odd, there exists at any instant a line $OP$ of particles instantaneously at rest, but that, if $N$ is even, no point other than $O$ is, in general, instantaneously at rest. Show that if $N=4$, there are are points other than $O$ instantaneously at rest if, and only if,
 $$\omega_{23}\omega_{14}+\omega_{31}\omega_{24}+\omega_{12}\omega_{34}=0$$
 \end{tcolorbox} 
 Consider $\mathbf{5.310}$
