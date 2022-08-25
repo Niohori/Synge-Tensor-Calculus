@@ -1435,7 +1435,7 @@ $$\blacklozenge$$
 
 \section{p188 - Exercise 16}
 \begin{tcolorbox}
-The motion of a dynamical system is represented by a curve in configuration-space. Using the kinematical line element, express the curvature as a function of its total energy $E$, and deduce that as $E$ tends to infinity, the trajectorry tends to become a geodesic . Illustrate by considering a particle moving under gravity on a smooth sphere.
+The motion of a dynamical system is represented by a curve in configuration-space. Using the kinematical line element, express the curvature as a function of its total energy $E$, and deduce that as $E$ tends to infinity, the trajectory tends to become a geodesic . Illustrate by considering a particle moving under gravity on a smooth sphere.
 \end{tcolorbox} 
 $\mathbf{5.421}$ and $\mathbf{5.421}$:
 \begin{align}
@@ -1452,14 +1452,100 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 A particle moves on a smooth sphere under action of gravity. Using he action line element, calculate the Gaussian curvature of configuration-space as a function of total energy $E$ and height $z$ above the centre of the sphere. Show that if the total energy is not sufficient to raise the particle to the top of the sphere, but only to a level $z=h$, then the Gaussian curvature tends to infinity as $z$ approaches $h$ from below.
 \end{tcolorbox} 
-$\mathbf{5.421}$ and $\mathbf{5.421}$:
+Using polar spherical coordinates, the line element on the sphere is 
+\begin{align}
+ds^2= R^2d\theta^2 + R^2\sin^2 \theta d\phi^2
+\end{align}
+For the potential energy, we use the lowest point (along the axis of the gravitational filed) as reference. Hence the potential is given by
+\begin{align}
+V&= mgR + mgz\\
+&= R\left(1+mg\cos\theta\right)
+\end{align}
+Giving for the action line element (with a total energy of the system $E_0$)
+\begin{align}
+d\sigma^2 = \left(E_0-mgR-mgR\cos\theta\right)ds^2
+\end{align}
+Be $E=E_0-mgR$
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{cc}
+R^2\left(E-mgR\cos\theta\right)&0\\
+0&R^2\left(E-mgR\cos\theta\right)\sin^2 \theta 
+\end{array}\right)
+\end{align}
+$\mathbf{3.114}$ and the exercise (Riemann curvature of a 2-space) on page 112 gives:
 \begin{align}
 \left\{\begin{array}{l}
-I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
-J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
+G= \frac{R_{1212}}{a_{11}a_{22}}\\\\
+R_{1212}= -\half\partial_{11}^2a_{22}-\frac{1}{4}a^{11}\partial_1 a_{11}\partial_1 a_{22}+\frac{1}{4}a^{22}\partial_1 a_{22}\partial_1 a_{22}
 \end{array}\right.
 \end{align}
-
+With
+\begin{align}
+\left\{\begin{array}{l}
+\partial_1 a_{11} = mgR^3\sin\theta\\\\
+\partial_1 a_{22} = 2ER^2\sin\theta\cos\theta+ R^3mg\left(\sin^3\theta-2\sin\theta\cos^2\theta\right)  \\\\
+\partial^2_{11} a_{22} =   2ER^2\left(\cos^2\theta- \sin^2\theta\right)+ R^3mg\left(3\cos\theta\sin^2\theta-2\left(\cos^3\theta-2\sin^2\theta\cos\theta\right)  \right)\\
+\quad=   2ER^2\left(\cos^2\theta- \sin^2\theta\right)+ R^3mg\left(7\cos\theta\sin^2\theta-2\cos^3\theta  \right)\\\\
+a^{11}=\frac{1}{R^2\left(E-mgR\cos\theta\right)}\\\\
+a^{22}=\frac{1}{R^2\left(E-mgR\cos\theta\right)\sin^2 \theta }
+\end{array}\right.
+\end{align}
+We first try now to replace the expressions in $\theta$ with expressions in $R\cos\theta=z$ and $R\sin \theta = \sqrt{R^2-z^2}$
+\begin{align}
+ &
+\left\{\begin{array}{l}
+\partial_1 a_{11} = mgR^2\sqrt{R^2-z^2}\\\\
+\partial_1 a_{22} = 2Ez\sqrt{R^2-z^2}+ mg\left(\left(R^2-z^2\right)\sqrt{R^2-z^2}-2z^2\sqrt{R^2-z^2}\right)\\\\
+\partial^2_{11} a_{22} =   2E\left(2z^2-R^2\right)+ mg\left(7z\left(R^2-z^2\right)-2z^3  \right)\\\\
+a^{11}=\frac{1}{R^2\left(E-mgz\right)}\\\\
+a^{22}=\frac{1}{\left(E-mgz\right)\left(R^2-z^2\right)}
+\end{array}\right.\\
+\Rightarrow&\left\{\begin{array}{ll}
+\partial_1 a_{11} = mgR^2\sqrt{R^2-z^2}&ML^{4}T^{-2}\\\\
+\partial_1 a_{22} = \left( mgR^2 +2Ez-3 mgz^2\right) \sqrt{R^2-z^2}&ML^{4}T^{-2}\\\\
+\partial^2_{11} a_{22} =   2E\left(2z^2- R^2\right)+ mgz\left(7R^2-9z^2  \right)&ML^{4}T^{-2}\\\\
+a^{11}=\frac{1}{R^2\left(E-mgz\right)}&M^{-1}L^{-4}T^{2}\\\\
+a^{22}=\frac{1}{\left(E-mgz\right)\left(R^2-z^2\right)}&M^{-1}L^{-4}T^{2}\\\\
+a_{11}=R^2\left(E-mgz\right)&ML^{4}T^{-2}\\\\
+a_{22}=\left(E-mgz\right)\left(R^2-z^2\right)&ML^{4}T^{-2}
+\end{array}\right.
+\end{align}
+giving
+\begin{align}
+R_{1212}&= -\half\partial_{11}^2a_{22}-\frac{1}{4}a^{11}\partial_1 a_{11}\partial_1 a_{22}+\frac{1}{4}a^{22}\partial_1 a_{22}\partial_1 a_{22}\\
+ &=\left\{\begin{array}{l}
+ -E\left(2z^2-R^2\right)-\half mgz\left(7R^2-9z^2  \right)\\\\
+ -\frac{1}{4}\frac{1}{\left(E-mgz\right)}mg\left(R^2-z^2\right) \left( mgR^2 +2Ez-3 mgz^2\right) \\\\
+ +\frac{1}{4}\frac{1}{\left(E-mgz\right)}\left( mgR^2 +2Ez-3 mgz^2\right)^2 
+\end{array}\right.\\
+ &=\left\{\begin{array}{l}
+ \frac{1}{4}\frac{1}{\left(E-mgz\right)}\left[ \left(E-mgz\right)\left(-E\left(2z^2-R^2\right)-\half mgz\left(7R^2-9z^2  \right)\right)\right.\\\\
+ -mg\left(R^2-z^2\right) \left( mgR^2 +2Ez-3 mgz^2\right) \\\\
+ \left.+\left( mgR^2 +2Ez-3 mgz^2\right)^2 \right]
+\end{array}\right.\\
+ &=
+ \frac{R^2-z^2}{\left(E-mgz\right)}\left[ 3m^2g^2z^2 -4Emgz + E^2\right]\\
+ &=
+ \frac{R^2-z^2}{\left(E-mgz\right)}\left(E-mgz\right)\left[ E-3mgz\right]\\
+ &=
+ \left(R^2-z^2\right)\left[ E-3mgz\right]
+\end{align}
+For the Gauss curvature we get then 
+\begin{align}
+G&= \frac{R_{1212}}{R^2\left(E-mgz\right)^2\left(R^2-z^2\right)}
+\end{align}
+and so 
+\begin{align}
+G&= \frac{ E-3mgz}{R^2\left(E-mgz\right)^2}
+\end{align}
+Be $h= \frac{E}{mg}$. From $(17)$ we see that as long $z<\frac{h}{3}$, G is defined and positive. It becomes $0$ for $z=\frac{h}{3}$ and negative for $z>\frac{h}{3}$ to become $-\infty$ for $z\rightarrow h$.\\
+Remember that $E=E_0-mgR$ with $E_0$ the total energy of the system and that the maximum potential energy is $V_{max}= 2mgR$. In order to reach the top, a particle starting from the bottom of the sphere $(V=0)$, should have at least a total energy $E_0= 2mgR$.\\
+Suppose now, that we configure the system so that the particle starts from the bottom and gets zero velocity at a point $z=h$. Then $E_0= mg\left(R+h \right)<2mgR$ and so $E= E_0-mgR= mgh$.\\
+ $(17)$ becomes
+\begin{align}
+G&= \frac{ h-3z}{mgR^2\left(h-z\right)^2}\\
+\Rightarrow\spatie &\lim_{ z\to h}G=-\infty
+\end{align}
 $$\blacklozenge$$
 \newpage
 
@@ -1545,7 +1631,42 @@ K^{'}_{pkn}I^{'}_{kt}I^{'}_{nm}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_{t}\
 Let's write $$ I^{'-1}_{tn}=\epsilon_{pkt}K^{'}_{pkn}$$We can truly consider $I^{'-1}_{tn}$ as the inverse of $I^{'}_{tn}$ due to $(28)$ and the fact that $I^{'}_{tm}$ is represented as a symmetric square matrix with real numbers as elements and hence has a non-zero determinant and has indeed an inverse. Multiplying $(27)$ by $I^{'-1}_{mt}$ gives us finally
 
  $$\mathbf{K^{'}_{pkt}=\epsilon_{pkm}I^{'-1}_{mt}}$$
-
+\textbf{Q: Why the minus sign in the question?\\}
+Let's now calculate $I^{'-1}_{tn}$
+\begin{align}
+I^{'}_{tn} &= \left(\begin{matrix}
+I^{'}_{11}&I^{'}_{12}&I^{'}_{13}\\
+I^{'}_{12}&I^{'}_{22}&I^{'}_{23}\\
+I^{'}_{13}&I^{'}_{23}&I^{'}_{33}
+\end{matrix}\right)
+\end{align}
+The determinant
+\begin{align}
+\Delta= I^{'}_{12}I^{'}_{22}I^{'}_{33}+2I^{'}_{12}I^{'}_{13}I^{'}_{23}-I^{'}_{11}I^{'2}_{23}-I^{'}_{22}I^{'2}_{13}-I^{'}_{33}I^{'2}_{12}
+\end{align}
+giving
+\begin{align}
+I^{'-1}_{tn} &= \frac{1}{\Delta}\left(\begin{matrix}
+I^{'}_{22}I^{'}_{33}-I^{'2}_{23}&-I^{'}_{12}I^{'}_{33}+I^{'}_{13}I^{'}_{23}&I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13}\\
+-I^{'}_{12}I^{'}_{33}+I^{'}_{13}I^{'}_{23}&I^{'}_{11}I^{'}_{33}-I^{'2}_{13}&-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}\\
+I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13}&-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}&I^{'}_{11}I^{'}_{22}-I^{'2}_{12}
+\end{matrix}\right)
+\end{align}
+giving for $\mathbf{K^{'}_{pkt}=\epsilon_{pkm}I^{'-1}_{mt}}$
+\begin{align}
+\left\{\begin{array}{l}
+K^{'}_{121} = \frac{1}{\Delta}\left(I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13} \right)\\
+K^{'}_{122} = \frac{1}{\Delta}\left(-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}\right)\\
+K^{'}_{123} = \frac{1}{\Delta}\left(I^{'}_{11}I^{'}_{22}-I^{'2}_{12}\right)\\
+K^{'}_{131} = -\frac{1}{\Delta}\left(-I^{'}_{12}I^{'}_{33}+I^{'}_{13}I^{'}_{23} \right)\\
+K^{'}_{132} = \frac{1}{\Delta}\left(I^{'}_{11}I^{'}_{33}-I^{'2}_{13} \right)\\
+K^{'}_{133} = -\frac{1}{\Delta}\left(-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}\right)\\
+K^{'}_{231} = -\frac{1}{\Delta}\left(I^{'}_{22}I^{'}_{33}-I^{'2}_{23}\right)\\
+K^{'}_{232} = \frac{1}{\Delta}\left(-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13} \right)\\
+K^{'}_{233} = \frac{1}{\Delta}\left(I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13}\right)
+\end{array}\right.
+\end{align}
+all others can be found by symmetry considerations.
 $$\blacklozenge$$
 \newpage
 
