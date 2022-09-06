@@ -218,7 +218,7 @@ $$\blacklozenge$$
 Taking $N=3$, show that $\mathbf{5.424}$ may be reduced to the usual Euler equations:
 $$ I_{11}\dv{\omega^{'}_1(S^{'},S)}{t}-\left(I_{22}-I^{'}_{33}\right)\omega^{}_2(S^{'},S)\omega^{'}_3(S^{'},S)=M^{'}_1$$ and two similar equations.
 \end{tcolorbox}
-We first begin with an approach which leads to nothing. I probably made a reasoning error. I give here the whole calculation as this was interesting and also to, later, find my mistake. After this buggy solution, I will give a second version, which works.
+We first begin with an approach which leads to nothing. I probably made a reasoning error. I give here the whole calculation as this was interesting and also to, later, find my mistake. After this buggy solution, I will give a second version, which works.\\\\
 $\mathbf{5.424}$:
 \begin{align}
 M^{'}_{ab}&=J^{'}_{abrq}\dv{\omega^{'}_{rq}(S^{'},S)}{t}+J^{'}_{cdrq}\left(\delta_{ac}\delta_{du}\delta_{bv}+\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{rq}(S^{'},S)\omega^{'}_{uv}(S^{'},S) =\\
@@ -322,7 +322,7 @@ Considering $J_{abcd}= -J_{badc}$
  \hline
  \end{tabular}
 \end{table}
-??
+
 We get $$ m^{'}_s = I_{st}\dv{\omega^{'}_{t}(S^{'},S)}{t}$$?????\\
 $$\lozenge$$\\
 \newpage
@@ -519,7 +519,7 @@ $$ds^2= 2Tdt^2$$
 and see that $ds^2$ is of the required form 
 $$ds^2= a_{mn}d\theta^md\theta^n$$
 The metric tensor $a_{mn}$ contains elements depending on the $\theta_k$ chosen as general coordinates of the system and is a good candidate as metric tensor.
-Some check on consistency of the metric tensor defined by $(8)$:\\
+Some check on consistency of the metric tensor defined by $(14)$:\\
 \textbf{Positive definite ?} : Yes, as $T$ is positive by definition\\
 \textbf{Symmetric ?} : Yes, as the non-diagonal term $a_{ij}$ contains $\cos\left(\theta_i-\theta_j\right) = \cos\left(\theta_j-\theta_i\right)$ \\
 \textbf{Number of elements} : the metric tensor $a_{mn}$ for $N=6$ should contain $6$ diagonal elements and $\frac{6\times 6 -6}{2} = 15$ independent non-diagonal elements. Checking $(8)$, one can find that the numbers yield.
@@ -950,7 +950,7 @@ F_{\phi}^{phys}= 0\\\\
 F_{\theta}^{phys}= mg\sin{\theta}\\\\
 \end{array}\right.\\
 \Rightarrow\spatie &\left\{\begin{array}{ll}
-F_{\phi}= 0&F_{\phi}= 0\\\\
+F^{\phi}= 0&F_{\phi}= 0\\\\
 F^{\theta}= \frac{1}{R}mg\sin{\theta}&F_{\theta}= R m g\sin{\theta}\\\\
 \end{array}\right.
 \end{align}
@@ -1455,7 +1455,7 @@ $$\blacklozenge$$
 \newpage
 
 
-\section{p188 - Exercise 16}
+\section{p188 - Exercise 16 $\dagger$}
 \begin{tcolorbox}
 The motion of a dynamical system is represented by a curve in configuration-space. Using the kinematical line element, express the curvature as a function of its total energy $E$, and deduce that as $E$ tends to infinity, the trajectory tends to become a geodesic . Illustrate by considering a particle moving under gravity on a smooth sphere.
 \end{tcolorbox} 
@@ -1474,10 +1474,38 @@ dW = X_r dx^r
 From this we can express $T$ as
 \begin{align}
 T\left(s\right) &= T_0 + \int_{0}^{s}dW\\
-&= T_0 + \int_{0}^{s}X_r dx^r\\
+&= T_0 + \int_{0}^{s}X_r dx^r
 \end{align}
-where $T_0$ is the kinetic energy at the initial configuration $s=0$.\\
-Suppose now that the for $ s\rightarrow +\infty, \quad \int_{0}^{s}dW\rightarrow +\infty$. In that case, the kinetical energy will represent the total energy of the system, $T\rightarrow E$ and $\kappa \rightarrow 0$ for $E\rightarrow +\infty$ provided that $X_r\nu^r\cancel{\rightarrow}\pm \infty$. Consider $\mathbf{5.535}\quad dW=X ds\cos \phi$ where $X$ is the magnitude of the generalized force and $\phi$ the angle between the line of force and the trajectory.
+where $T_0$ is the kinetic energy at the initial configuration $s=0$.\\\\
+$\mathbf{\dagger}$\\ \textit{Suppose now that the for $ s\rightarrow +\infty, \quad \int_{0}^{s}dW\rightarrow +\infty$. In that case, the kinematical energy will represent the total energy of the system, $T\rightarrow E$ and $\kappa \rightarrow 0$ for $E\rightarrow +\infty$ provided that $X_r\nu^r\cancel{\rightarrow}\pm \infty$ which we will assume . }\\$\mathbf{\dagger}$
+\begin{comment}
+Consider $\mathbf{5.535}\quad dW=X ds\cos \phi$ where $X$ is the magnitude of the generalized force and $\phi$ the angle between the line of force and the trajectory. Suppose that $X\rightarrow \pm \infty$. In order to still have $\mathbf{5.535}$ an infinitesimal expression we need that $\cos\phi \rightarrow 0$ , which means that the generalized force is perpendicular to the tangent of the trajectory. This would mean that from $(1)$, $\kappa$ would be indefinite, unless $X_r\nu^r< 2T$.
+\end{comment}
+$$\lozenge$$
+Let's illustrate this with a particle on a smooth sphere moving under gravity.
+\begin{figure}[H]
+\input{D:/MathLatex/images/fig_p186_Ex4.tex}
+\caption{Physical components of the gravitational force tensor acting on a mass $\mathbf{m}$ on a sphere }
+\label{fig:fig_p186_Ex2}
+\end{figure}
+We have as physical components:
+\begin{align}
+&\left\{\begin{array}{l}
+F_{\phi}^{phys}= 0\\\\
+F_{\theta}^{phys}= mg\sin{\theta}\\\\
+\end{array}\right.
+\end{align}
+Using $\mathbf{5.109}$ and $\mathbf{5.110}$ we get for the kinematical fundamental form, $ds^2= 2Tdt^2 = \left(\sqrt{m}R\right)^2d\theta^2 + \left(\sqrt{m}R\sin\theta\right)^2d\phi^2 $
+\begin{align}
+\left\{\begin{array}{ll}
+X^{\phi}= 0&X_{\phi}= 0\\\\
+X^{\theta}= \frac{\sqrt{m}}{R}g\sin{\theta}&X_{\theta}= m{^\frac{3}{2}}R  g\sin{\theta}\\\\
+\end{array}\right.
+\end{align}
+assuming that the gravitational force is conservative, we get as potential energy:
+\begin{align}
+V = -R m{^\frac{3}{2}} g\cos{\theta}
+\end{align}
 $$\blacklozenge$$
 \newpage
 
