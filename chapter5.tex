@@ -1440,7 +1440,7 @@ I_{11}= \sum m z_q z_q - \sum m z_1 z_1\\
 I_{NN} = \sum m z_q z_q - \sum m z_N z_N\\
 \end{array}\right.
 \end{align}
-Summin up these $N$ expressions we have
+Summing up these $N$ expressions we have
 \begin{align}
 I_{ss} &= N\left( \sum m z_q z_q \right) - \sum m z_q z_q\\
 &= \left( N-1  \right)\sum m z_q z_q \\
@@ -1488,6 +1488,8 @@ Let's illustrate this with a particle on a smooth sphere moving under gravity.
 \caption{Physical components of the gravitational force tensor acting on a mass $\mathbf{m}$ on a sphere }
 \label{fig:fig_p186_Ex2}
 \end{figure}
+\textbf{INTERMEZZO}:\\
+The next calculation are showed how careful we have to be when applying blindly some formulas. The aim is to find the equation of motion in the configuration space equipped with the kinematical fundamental form, starting from the physical components of the force field.\\\\
 We have as physical components:
 \begin{align}
 &\left\{\begin{array}{l}
@@ -1495,16 +1497,153 @@ F_{\phi}^{phys}= 0\\\\
 F_{\theta}^{phys}= mg\sin{\theta}\\\\
 \end{array}\right.
 \end{align}
-Using $\mathbf{5.109}$ and $\mathbf{5.110}$ we get for the kinematical fundamental form, $ds^2= 2Tdt^2 = \left(\sqrt{m}R\right)^2d\theta^2 + \left(\sqrt{m}R\sin\theta\right)^2d\phi^2 $
+Using $\mathbf{5.109}$ and $\mathbf{5.110}$ combined with the kinematical fundamental form, $ds^2= 2Tdt^2 = \left(\sqrt{m}R\right)^2d\theta^2 + \left(\sqrt{m}R\sin\theta\right)^2d\phi^2 $
 \begin{align}
-\left\{\begin{array}{ll}
-X^{\phi}= 0&X_{\phi}= 0\\\\
-X^{\theta}= \frac{\sqrt{m}}{R}g\sin{\theta}&X_{\theta}= m{^\frac{3}{2}}R  g\sin{\theta}\\\\
+(a_{mn}) = \left(\begin{matrix}
+mR^2&0\\
+0&mR^2\sin^2\theta
+\end{matrix}\right)
+\end{align}
+\begin{align}
+&\left\{\begin{array}{ll}
+h_1 = \sqrt{m}R&[M]^{\half}[L]\\
+h_2 = \sqrt{m}R\sin\theta&[M]^{\half}[L]\\
+F_{\phi}^{phys}= 0&[M]^{}[L][T]^{-2}\\
+F_{\theta}^{phys}= mg\sin{\theta}&[M]^{}[L][T]^{-2}\\
+v_{\phi}^{phys}= R\sin\theta \dot{\phi}&[L][T]^{-1}\\
+v_{\theta}^{phys}= R \dot{\theta}&[L][T]^{-1}\\
 \end{array}\right.
 \end{align}
+we have 
+\begin{align}
+&\left\{\begin{array}{ll}
+X^{\phi}= 0&X_{\phi}= 0\\\\
+X_{\theta} = F_{\theta}^{phys}{h_1} = m^{\frac{3}{2}}gR\sin{\theta}&[M]^{\frac{3}{2}}[L]^2[T]^{-2}\\\\
+X^{\theta} = \frac{F_{\theta}^{phys}}{h_1} = \frac{mg\sin{\theta}}{\sqrt{m}R}=\frac{\sqrt{m}g\sin{\theta}}{R}&[M]^{\half}[T]^{-2}\\\\
+v_{\theta} = v_{\theta}^{phys}{h_1} = \sqrt{m}R^2 \dot{\theta}&[M]^{\frac{1}{2}}[L]^2[T]^{-1}\\\\
+v^{\theta} = \frac{v_{\theta}^{phys}}{h_1} = \frac{ R \dot{\theta}}{\sqrt{m}R}=\frac{1}{\sqrt{m}}\dot{\theta}&[M]^{-\half}[T]^{-1}\\\\
+v_{\phi} = v_{\phi}^{phys}{h_1} = \sqrt{m}R^2\sin\theta \  \dot{\phi}&[M]^{\frac{1}{2}}[L]^2[T]^{-1}\\\\
+v^{\phi} = \frac{v_{\phi}^{phys}}{h_1} = \frac{ R \sin\theta \ \dot{\phi}}{\sqrt{m}R}=\frac{1}{\sqrt{m}}\dot{\phi}&[M]^{-\half}[T]^{-1}\\\\
+\end{array}\right.
+\end{align}
+Check 1:
+\begin{align}
+X_{\theta} &= a_{11}X^{\theta}\\
+&= mR^2\frac{\sqrt{m}g\sin{\theta}}{R}\\
+&= m^{\frac{3}{2}}gR\sin{\theta}
+\end{align}
+Check 2:
+\begin{align}
+v_{\theta} &= a_{11}v^{\theta}+ a_{12}v^{\phi}\\
+&= mR^2\frac{1}{\sqrt{m}}\dot{\theta}\\
+&= \sqrt{m}R^2\dot{\theta}
+\end{align}
+Check 3:
+\begin{align}
+\underbrace{f^{\theta} = X^{\theta}}_{\sim [M]^{\half}[T]^{-2}}&= \underbrace{\frac{\delta v^{\theta}}{\delta t}}_{\sim [M]^{-\half}[T]^{-2}}\\
+[M]^{\half}[T]^{-2}&\neq[M]^{-\half}[T]^{-2} 
+\end{align}
+
+So, obviously, we ran into a problem.\\
+The reason is due  to the fact that the physical components and the generalized coordinates are not equipped with the same metric. Indeed, consider a system with only one mass. Then there is no fundamental difference in the geometry of the two spaces ('physical' and 'generalized coordinates space' )but , if $ds$ is a distance in the physical space and $ds^{'}$ a distance in the 'generalized coordinates space' (abuse of language), then $ds^{'}\neq ds$ as $ds^{'}= \sqrt{m} ds$. So, the same physical object will be 'seen' stretched by a factor $\sqrt{m}$ when observed in the generalized configuration space.\\
+So let's begin again but with adapted conversion factors $h_i$.
+
+\begin{align}
+&\left\{\begin{array}{ll}
+h_1 = R&[M]^{\half}[L]\\
+h_2 = R\sin\theta&[M]^{\half}[L]\\
+F_{\phi}^{phys}= 0&[M]^{}[L][T]^{-2}\\
+F_{\theta}^{phys}= mg\sin{\theta}&[M]^{}[L][T]^{-2}\\
+v_{\phi}^{phys}= R\sin\theta \dot{\phi}&[L][T]^{-1}\\
+v_{\theta}^{phys}= R \dot{\theta}&[L][T]^{-1}\\
+\end{array}\right.
+\end{align}
+we have 
+\begin{align}
+&\left\{\begin{array}{ll}
+X^{\phi}= 0&X_{\phi}= 0\\\\
+X_{\theta} = F_{\theta}^{phys}{h_1} = m^{}gR\sin{\theta}&[M]^{}[L]^2[T]^{-2}\\\\
+X^{\theta} = \frac{F_{\theta}^{phys}}{h_1} = \frac{mg\sin{\theta}}{R}=\frac{mg\sin{\theta}}{R}&[M]^{}[T]^{-2}\\\\
+v_{\theta} = v_{\theta}^{phys}{h_1} = R^2 \dot{\theta}&[L]^2[T]^{-1}\\\\
+v^{\theta} = \frac{v_{\theta}^{phys}}{h_1} = \frac{ R \dot{\theta}}{R}=\dot{\theta}&[T]^{-1}\\\\
+v_{\phi} = v_{\phi}^{phys}{h_2} = R^2\sin^2\theta \  \dot{\phi}&[L]^2[T]^{-1}\\\\
+v^{\phi} = \frac{v_{\phi}^{phys}}{h_2} = \frac{ R \sin\theta \ \dot{\phi}}{R\sin\theta}=\dot{\phi}&[T]^{-1}\\\\
+\end{array}\right.
+\end{align}
+Check 1:
+\begin{align}
+X_{\theta} &= a_{11}X^{\theta}\\
+&= mR^2\frac{{m}g\sin{\theta}}{R}\\
+&= m^{2}gR\sin{\theta}\\
+&\neq m^{}gR\sin{\theta}
+\end{align}
+Check 2:
+\begin{align}
+v_{\theta} &= a_{11}v^{\theta}+ a_{12}v^{\phi}\\
+&= mR^2\dot{\theta}\\
+&\neq R^2\dot{\theta}
+\end{align}
+Check 3:
+\begin{align}
+\underbrace{f^{\theta} = X^{\theta}}_{\sim [M]^{}[T]^{-2}}&= \underbrace{\frac{\delta v^{\theta}}{\delta t}}_{\sim [T]^{-2}}\\
+[M]^{}[T]^{-2}&\neq[T]^{-2} 
+\end{align}
+Again, we ran into problems.\\
+In fact, the idea of going from the physical space into the configuration space, by some transformation rule is wrong because, in configuration space equipped with the kinematical fundamental form, velocity and generalized forces have their very own, specific  definition: 
+\begin{align}
+&\left\{\begin{array}{ll}
+\text{velocity:}& v^r = \dv{x^r}{t}\\
+\text{generalized forces:}&dW = X_rdx^r
+\end{array}\right.
+\end{align}
+and get for the velocities
+\begin{align}
+v^{\theta} = \dot{\theta}\\ 
+v^{\phi} = \dot{\phi}
+\end{align}
+
+and for the generalized forces
+\begin{align}
+&\left\{\begin{array}{ll}
+dW = F_{\theta}^{phys}Rd\theta&\text{in the physical space}\\
+dW = X_{\theta}d\theta&\text{in the configurartion space}\\
+\end{array}\right.
+\end{align}
+and by the invariance of $dW$ we get
+\begin{align}
+X_{\theta}&=  mgR\sin{\theta}\\
+\Rightarrow\quad X^{\theta}&=  a^{11}mgR\sin{\theta}\\
+&= \frac{mgR\sin{\theta}}{mR^2}\\
+&= \frac{g\sin{\theta}}{R}
+\end{align}
+and get for check 3:
+\begin{align}
+\underbrace{f^{\theta} = X^{\theta}}_{\sim [T]^{-2}}&= \underbrace{\frac{\delta v^{\theta}}{\delta t}}_{\sim [T]^{-2}}\\
+[T]^{-2}&=[T]^{-2} 
+\end{align}
+and get what we wanted.
+\newpage
+Let's go on with the equations of motion in the configuration space:
 assuming that the gravitational force is conservative, we get as potential energy:
 \begin{align}
-V = -R m{^\frac{3}{2}} g\cos{\theta}
+V = -mgR \cos{\theta}
+\end{align}
+
+We use equation $\mathbf{5.531.}$
+\begin{align}
+\dv{}{t}\frac{\partial L}{\partial \dot{x}^s} - \frac{\partial L}{\partial x^s} =0
+\end{align}
+with for our case
+\begin{align}
+L=  \half m R^2\dot{\theta}^2 + \half m R^2\sin^2\theta\dot{\phi}^2 +mgR \cos{\theta}
+\end{align}
+and get the set of equations of motion (the second column gives the dimensional analysis as a check for consistency)
+
+\begin{align}
+&\left\{\begin{array}{lll}
+\frac{\ddot{\phi}}{\dot{\phi}}=  -2\cot\theta \  \dot{\theta}&:&\frac{[T]^{-2}}{[T]^{-1}}\cong [T]^{-1}\\\\
+\ddot{\theta} - \left(\dot{\phi}\right)^2\sin\theta \cos\theta= -\frac{g}{R}\sin{\theta}&:&[T]^{-2}+\left([T]^{-1}\right)^2 \cong \frac{[L][T]^{-2}}{[L]^{}}\\\
+\end{array}\right.
 \end{align}
 $$\blacklozenge$$
 \newpage
