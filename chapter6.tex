@@ -1,0 +1,118 @@
+\setcounter{chapter}{4}
+\chapter{Applications to Hydrodynamics, Elasticity, and Electromagnetic radiation}
+\pagebreak[4]
+\section{p191 - Exercise}
+\begin{tcolorbox}
+A fluid rotates as a rigid body about the axis of $z_3$ with variable angular velocity $\omega(t)$. Write out explicitly the three Lagrangian equations $\mathbf{6.101}$ and the three Eulerian equations $\mathbf{6.103}$.
+\end{tcolorbox}
+The motion described reduces to a motion in a $V_2$ plane with $z_3$ a constant for a definite particle.\\\\\\
+\textbf{Lagrangian}\\
+
+A particular particle with starting coordinates $\left(z^{(*)}_1,z^{(*)}_2, z^{(*)}_3\right)$ will describe a  circle with radius $\sqrt{z^{(*)2}_1+z^{(*)2}_2}$ in the  plane $V_2$ parallel with the $1,2$ axes.
+Taking axis $1$ as reference to determine the instantaneous angle $\theta$ of the vertex $OP$ (origin and particle) we get
+\begin{align}
+\left\{\begin{array}{l}
+z_1 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\cos\left(\theta(t) + \phi_0\right)\\
+z_2 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\sin\left(\theta(t) + \phi_0\right)\\
+z_3 = z^{(*)}_3
+\end{array}\right.
+\end{align}
+with 
+\begin{align}
+\phi_0 & = \arctan\frac{z^{(*)}_2}{z^{(*)}_1}
+\end{align}
+Note that $\omega(t)$ is not a constant, so
+\begin{align}
+\theta(t)&= \int_{0}^{t}\omega(\tau)d\tau
+\end{align}
+and get 
+\begin{align}
+\left\{\begin{array}{l}
+z_1 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\cos\left(\int_{0}^{t}\omega(\tau)d\tau + \phi_0\right)\\\\
+z_2 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\sin\left(\int_{0}^{t}\omega(\tau)d\tau + \phi_0\right)\\\\
+z_3 = z^{(*)}_3\\\\
+\phi_0 = \arctan\frac{z^{(*)}_2}{z^{(*)}_1}
+\end{array}\right.
+\end{align}
+$$\lozenge$$\\
+\newpage
+\textbf{Eulerian}\\
+The equations get simplified and reduce to a motion of a particle on a circle.
+\begin{figure}[H]
+\centering
+\input{D:/MathLatex/images/fig_p191_Exa.tex}
+\caption{Eulerian viewpoint of a spinning fluid}
+\label{fig:fig_p191_Exa}
+\end{figure}
+
+\begin{align}
+\left\{\begin{array}{l}
+v_1 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_2 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_3 = 0
+\end{array}\right.
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p191 - Exercise}
+\begin{tcolorbox}
+Compute the components of acceleration for the motion described in the preceding exercise.
+\end{tcolorbox}
+We have
+\begin{align}
+\left\{\begin{array}{l}
+v_1 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_2 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_3 = 0
+\end{array}\right.
+\end{align}
+and 
+\begin{align}
+f_r &= \partial_tv_r + v_{r,s}v_s
+\end{align}
+\begin{align}
+&\left\{\begin{array}{l}
+\partial_t v_1 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+\partial_t v_2 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_{1,1}= \omega(t)\left[\frac{z_1}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{z_2}{z_1^2}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
+v_{1,2}= \omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{1}{z^{}_1}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
+v_{2,1}= \omega(t)\left[\frac{z_1}{\sqrt{z^{2}_1+z^{2}_2}}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{z_2}{z_1^2}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
+v_{2,2}= \omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{1}{z^{}_1}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
+\end{array}\right.
+\end{align}
+\begin{align}
+&=\left\{\begin{array}{l}
+\partial_t v_1 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+\partial_t v_2 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_{1,1}= \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+v_{1,2}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+v_{2,1}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+v_{2,2}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z^{}_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+\end{array}\right.
+\end{align}
+and get
+\begin{align}
+v_{1,s}v_s &= \left\{\begin{array}{l}
+\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
++\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]
+\end{array}\right.\\
+&=z_1\omega^2(t)\\
+\end{align}
+\begin{align}
+v_{2,s}v_s &= \left\{\begin{array}{l}
+\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
++\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z^{}_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+\end{array}\right.\\
+&= z_2\omega^2(t)\\
+\end{align}
+giving with the second derivative term
+\begin{align}
+&=\left\{\begin{array}{l}
+f_1 = \dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)+z_1\omega^2(t)\\\\\\
+f_2 = \dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)+z_2\omega^2(t)\\\\
+f_3=0
+\end{array}\right.
+\end{align}
+$$\blacklozenge$$
+\newpage
