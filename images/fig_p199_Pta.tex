@@ -1,0 +1,32 @@
+\tdplotsetmaincoords{60}{160}
+\begin{tikzpicture}[tdplot_main_coords, >=Latex]
+\tikzmath{\aax=3;\bby=4;\ccz=3;\a = (\bby+\bby)/4;};
+\aax, \bby,\ccz;
+\coordinate (a0) at (0,0,0);
+\coordinate (a5) at (\aax,0,0);
+\coordinate (a3) at (0,\bby,0);
+\coordinate (a1) at (0,0,\ccz);
+\coordinate (a4) at (\aax,\bby,0);
+\coordinate (a6) at  (\aax,0,\ccz);
+\coordinate (a2) at  (0,\bby,\ccz);
+\coordinate (a7) at  (\aax,\bby,\ccz);
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (0,0,\ccz);
+\coordinate (C) at (\aax,\bby,\ccz);
+\coordinate (D) at (\aax,\bby,0);
+
+
+\draw[dashed,ultra thick,fill= gray!10](A)--(B)--(C)--(D)--cycle;
+\draw[](a0)--(a1);
+\draw[](a0)--(a5);
+\draw[](a0)--(a3);
+\draw[](a5)--(a6)node[midway,thick,left] {$c$};
+\draw[](a5)--(a4)node[midway,thick,below] {$b$};
+\draw[](a6)--(a1)node[midway,very thick,above] {$a$};;
+\draw[](a4)--(a3);
+\draw[](a7)--(a4);
+\draw[](a7)--(a6);
+\draw[](a7)--(a2);
+\draw[](a2)--(a3);
+\draw[](a2)--(a1);
+\end{tikzpicture}     

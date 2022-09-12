@@ -47,7 +47,7 @@ The equations get simplified and reduce to a motion of a particle on a circle.
 
 \begin{align}
 \left\{\begin{array}{l}
-v_1 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_1 = -\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_2 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_3 = 0
 \end{array}\right.
@@ -62,7 +62,7 @@ Compute the components of acceleration for the motion described in the preceding
 We have
 \begin{align}
 \left\{\begin{array}{l}
-v_1 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+v_1 = -\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_2 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_3 = 0
 \end{array}\right.
@@ -73,20 +73,20 @@ f_r &= \partial_tv_r + v_{r,s}v_s
 \end{align}
 \begin{align}
 &\left\{\begin{array}{l}
-\partial_t v_1 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+\partial_t v_1 = -\sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 \partial_t v_2 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
-v_{1,1}= \omega(t)\left[\frac{z_1}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{z_2}{z_1^2}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
-v_{1,2}= \omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{1}{z^{}_1}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
+v_{1,1}= -\omega(t)\left[\frac{z_1}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{z_2}{z_1^2}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
+v_{1,2}= -\omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{1}{z^{}_1}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
 v_{2,1}= \omega(t)\left[\frac{z_1}{\sqrt{z^{2}_1+z^{2}_2}}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{z_2}{z_1^2}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
 v_{2,2}= \omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{1}{z^{}_1}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
 \end{array}\right.
 \end{align}
 \begin{align}
 &=\left\{\begin{array}{l}
-\partial_t v_1 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
+\partial_t v_1 = -\sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 \partial_t v_2 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
-v_{1,1}= \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
-v_{1,2}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+v_{1,1}= -\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+v_{1,2}=  -\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 v_{2,1}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 v_{2,2}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z^{}_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 \end{array}\right.
@@ -94,25 +94,175 @@ v_{2,2}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\fra
 and get
 \begin{align}
 v_{1,s}v_s &= \left\{\begin{array}{l}
-\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
-+\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]
+-\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
+-\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]
 \end{array}\right.\\
-&=z_1\omega^2(t)\\
+&=-z_1\omega^2(t)
 \end{align}
 \begin{align}
 v_{2,s}v_s &= \left\{\begin{array}{l}
 \sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 +\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z^{}_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 \end{array}\right.\\
-&= z_2\omega^2(t)\\
+&= z_2\omega^2(t)
 \end{align}
 giving with the second derivative term
 \begin{align}
 &=\left\{\begin{array}{l}
-f_1 = \dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)+z_1\omega^2(t)\\\\\\
+f_1 = -\dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)-z_1\omega^2(t)\\\\\\
 f_2 = \dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)+z_2\omega^2(t)\\\\
 f_3=0
 \end{array}\right.
 \end{align}
 $$\blacklozenge$$
+\newpage
+
+
+\section{p193 - Exercise}
+\begin{tcolorbox}
+Verify that the operator $\frac{\partial}{\partial t}$ does not alter tensor character.
+\end{tcolorbox}
+Be $X^r$ and $Y^r$, two tensors so that $I=X_rY^r$ is an invariant. Obviously, $\frac{\partial I}{\partial t}$ will also be invariant and 
+\begin{align}
+\frac{\partial I}{\partial t}= \frac{\partial X_r}{\partial t}Y^r+X_r\frac{\partial Y^r}{\partial t}
+\end{align}
+Meaning that the right side is a sum of two invariants, from which we conclude (see page 20, $\mathbf{1.607}$) that $\frac{\partial X_r}{\partial t}$ and $\frac{\partial Y^r}{\partial t}$ are tensors.
+$$\blacklozenge$$
+\newpage
+
+\section{p193 - Clarification to 6.112}
+\begin{tcolorbox}
+$$\mathbf{6.112.}\spatie \int Fn_rdS = \int F_{,r}dV$$
+\end{tcolorbox}
+Green's theorem is generally presented in the form
+$$\int\overline{F}.\overline{n}dS = \int \overline{\nabla}. \overline{F}dV$$or
+$$\int F_rn_rdS = \int F_{r,r}dV$$
+We can define $$\overline{F} = F\overline{1}_r$$
+ $\overline{F}.\overline{n}$  will then become $Fn_r$ while $\overline{\nabla}. \overline{F}$ will become $\partial_r F$, giving the expression $\mathbf{6.112.}$.
+ $$\blacklozenge$$
+\newpage
+
+
+
+\section{p196 - Exercise}
+\begin{tcolorbox}
+Write out $\mathbf{6.126}$ and $\mathbf{6.127b}$ explicitly for spherical polar coordinates.
+\end{tcolorbox}
+For spherical polar coordinates we have 
+\begin{align}
+(v^r) = \left(\begin{matrix}\dot{r}\\r\dot{\theta}\\r\sin\theta\dot{\phi} \end{matrix}\right)
+\end{align}
+and (see $\mathbf{2.546}$ page 58):
+\begin{align}
+v^r_{|r} &= \frac{1}{r^2}\partial_r\left(r^2v^1\right)+\frac{1}{\sin\theta}\partial_{\theta}\left(\sin\theta v^2\right)+\partial_{\phi} v^3\\
+&=  \frac{1}{r^2}\left(2rv^1+r^2\partial_rv^1\right)+\frac{1}{\sin\theta}\left(v^2\cos\theta + \sin\theta\partial_{\theta}v^2\right)\\
+&= \frac{2}{r}\dot{r}+r\dot{\theta}\cot \theta 
+\end{align}
+and 
+\begin{align}
+&\partial_t \rho+ \left(\rho v^r\right)_{|r} =0\\
+\Leftrightarrow\spatie &\partial_t\rho+ \rho_{|r}v^r+\rho v^r_{|r} =0\\
+\Leftrightarrow\spatie &\dv{\rho}{t}+\rho \left(\frac{2}{r}\dot{r}+r\dot{\theta}\cot \theta \right) =0
+\end{align}
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p198 - Exercise}
+\begin{tcolorbox}
+If $\epsilon^{rmn}$ is defined in precisely the same way as $\epsilon_{rmn}$, prove that $$ \epsilon^{'uvw}= J\epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}$$
+\end{tcolorbox}
+We follow the pretty same line of reasoning as for $\epsilon_{rst}$. Going from $x^{'r}$ to $x^{s}$ we have (expanding the determinant of the inverse Jacobian along the rows instead of the columns):
+\begin{align}
+J^{-1}=\left|\frac{\partial x^{'p}}{\partial x^{q}}\right|&= \epsilon^{rmn}\frac{\partial x^{'1}}{\partial x^r}\frac{\partial x^{'2}}{\partial x^m}\frac{\partial x^{'3}}{\partial x^n}\\
+\times \epsilon^{uvw}\spatie J^{-1}\epsilon^{uvw}&= \epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}\\
+\times J\spatie\epsilon^{uvw}&= J\epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}\\ 
+\end{align}
+ $$\blacklozenge$$
+\newpage
+
+
+
+\section{p198 - Exercise}
+\begin{tcolorbox}
+Prove that  $\frac{\epsilon^{rmn}}{\sqrt{a}}$ is an (absolute) contravariant tensor of the third order.
+\end{tcolorbox}
+\begin{align} 
+\sqrt{a^{'}} &= J\sqrt{a}\\
+\epsilon^{'uvw}&= J\epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}\\
+\text{(1)  in (2)} \spatie \epsilon^{'uvw}&= \frac{\sqrt{a^{'}}}{\sqrt{a^{}}}\epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}\\
+\Rightarrow \spatie \frac{\epsilon^{'uvw}}{\sqrt{a^{'}}}&= \frac{\epsilon^{rmn}}{\sqrt{a}}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}
+\end{align}
+which is the required transformation rule for a "normal" (absolute) tensor.
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p199 - Clarification to pressure anisotropy}
+\begin{tcolorbox}
+Pressure is independent of the direction
+\end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p199_Pta.tex}}
+	\qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p199_Ptb.tex}}
+\caption{Volume of a tetrahedron}
+\label{fig:fig_p126_1a}
+\end{figure}
+First remark that the volume of a rectangular tetrahedron $OABC$, as described in figure $5.2(b)$, is 
+$$ V= \frac{1}{4}abc$$ 
+This can easily verified by slicing, as described in figure $5.2$, a cuboid with sides $a,b,c$ through 2 planes.
+ $$\blacklozenge$$
+\newpage
+\section{p201 - Exercise}
+\begin{tcolorbox}
+Write down the contravariant form of $\mathbf{6.147}$
+$$\mathbf{6.147} \spatie \partial_t v_r + v_s v_{r|s} = X_r - \rho^{-1} p_{,r}$$
+\end{tcolorbox}
+\begin{align}
+\mathbf{6.147} \spatie \partial_t v_r + v_s v_{r|s} &= X_r - \rho^{-1} p_{,r}\\
+\times a^{mr}\spatie \partial_t a^{mr} v_r + v_s a^{mr}v_{r|s} &= a^{mr}X_r - \rho^{-1} a^{mr}p_{,r}
+\end{align}
+By $\mathbf{2.527}$ page 53 we  have $a^{rs}_{|t}=0$ and thus 
+\begin{align}
+v^{r}_{|s}= \left(a^{mr}v_{r}\right)_{|s} &= \left(a^{mr}\right)_{|n}v_{r}+a^{mr}v_{r|s}= a^{mr}v_{r|s} \\
+(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{|s} &= X^m - \rho^{-1} a^{mr}p_{,r}\\
+(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{|s} &= X^m - \rho^{-1} p^{'}_{,r}
+\end{align}
+Note that $p_{,r}$ in $(1)$ and $(5)$ are not the same vector function as $p_{,r}$ can be written as $\overline{\nabla}p$ which is coordinate system  dependent.
+ $$\blacklozenge$$
+\newpage
+
+\section{p202 - Exercise}
+\begin{tcolorbox}
+Verify by means of  $\mathbf{3.204}$ that $\mathbf{6.157}$ and $\mathbf{6.156}$  are the same equation.
+\end{tcolorbox}
+\begin{align}
+\left\{\begin{array}{lll}
+\mathbf{3.204}&\spatie&\Gamma^{n}_{rn} = \half\partial_r\log a = \partial_r\log \sqrt{a}\\
+\mathbf{6.157}&\spatie&\left(\sqrt{a}a^{mn}\phi_{,m}\right)_{,n}=0\\
+\mathbf{6.156}&\spatie&a^{mn}\phi_{|mn}=0
+\end{array}\right.
+\end{align}
+Considering also
+\begin{align}
+\left\{\begin{array}{l}
+a^{mn}_{|k}=0\\
+T^m_{|n}= \partial_n T_m+\Gamma^{m}_{kn}T_k
+\end{array}\right.
+\end{align}
+So $\mathbf{6.156}$ can written as
+\begin{align}
+& a^{mn}\phi_{|mn}=0\\
+\Leftrightarrow\spatie & \left(a^{mn}\phi_{|m}\right)_{|n}=0\\
+T^n = a^{mn}\phi_{|m}\spatie\Rightarrow\spatie &\partial_n T^n+\Gamma^{n}_{kn}T^k=0\\
+\Rightarrow\spatie &\partial_n \left(a^{mn}\phi_{|m}\right)+\Gamma^{n}_{kn}a^{pk}\phi_{|p}=0\\
+\Leftrightarrow\spatie &\partial_n \left(a^{mn}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\Gamma^{n}_{kn}a^{pk}\phi_{,p}=0\\
+\text{(2)}\quad \Rightarrow\spatie &\partial_n \left(a^{mn}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\partial_k\log \sqrt{a}a^{pk}\phi_{,p}=0\\
+\Leftrightarrow\spatie &\left(a^{mn}_{,n}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\frac{1}{\sqrt{a}}\left(\sqrt{a}a^{pk}\right)_{,k}\phi_{,p}=0\\
+\Leftrightarrow\spatie &\sqrt{a} \phi_{,m}\left(a^{mn}\right)_{,n}+\sqrt{a}a^{mn}\phi_{,mn}+a^{mn}\phi_{,m}\left(\sqrt{a}\right)_{,n}=0\\
+\Leftrightarrow\spatie &\left(\sqrt{a}a^{mn}\phi_{,m}\right)_{,n}=0
+\end{align}
+ $$\blacklozenge$$
 \newpage
