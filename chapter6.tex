@@ -198,21 +198,31 @@ which is the required transformation rule for a "normal" (absolute) tensor.
 \newpage
 
 
-\section{p199 - Clarification to pressure anisotropy}
+\section{p199 - Clarification to pressure invariance to direction of the surface element.}
 \begin{tcolorbox}
 Pressure is independent of the direction
 \end{tcolorbox}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p199_Pta.tex}}
-	\qquad
-    \subfloat[]{\input{D:/MathLatex/images/fig_p199_Ptb.tex}}
-\caption{Volume of a tetrahedron}
-\label{fig:fig_p126_1a}
+    \subfloat[]{\input{D:/MathLatex/images/fig_p199_P.tex}}
+    \quad
+        \subfloat[]{\input{D:/MathLatex/images/fig_p199_Pb.tex}}
+    \quad
+        \subfloat[]{\input{D:/MathLatex/images/fig_p199_Pc.tex}}
+    \quad
+\caption{Pressure on a trirectangular tetrahedron}
+\label{fig:fig_p199}
 \end{figure}
-First remark that the volume of a rectangular tetrahedron $OABC$, as described in figure $5.2(b)$, is 
-$$ V= \frac{1}{4}abc$$ 
-This can easily verified by slicing, as described in figure $5.2$, a cuboid with sides $a,b,c$ through 2 planes.
+To see that the pressure is independent of the direction of the surface element on which we measure it, let's consider a trirectangular tetrahedron $OABC$ as  depicted in figure $5.2(a)$. Let's define $P_x,P_y,P_z, P_t$ the pressure measured on the $4$ surfaces with normal vectors $dS_x,dS_y,dS_z,dS_t$. Let's neglect second order terms due to acceleration and external forces. For the forces along axis $z$ (the same reasoning is valid for the two others) we will have $P_zdS_z= P_tdS_t\gamma_z$ where $\gamma_z$ is the cosine of the angle formed by  normal on $dS_t$ and the z-axis.\\
+Let's investigate the relationship between $dS_t$ and $dS_x,dS_y,dS_z$.\\
+ Be $hA$ the line element lying in the plane $ABC$ (see figure $5.2(b)$) and $hO$ the line element lying in the plane $OBC$. As the area of a triangle $=\half\times base \times perpendicular \ height$ we get $dS_z = \half |hO||BC|$. But $|hO|= |hA|\cos\alpha$  (see figure $5.2(c)$) and so $dS_z = \half |BC||hA|\cos\alpha = dS_t\gamma_z$
+ and get 
+\begin{align}
+&P_zdS_z= P_tdS_t\gamma_z\\ 
+\Rightarrow \spatie & P_z dS_t\gamma_z= P_tdS_t\gamma_z\\ 
+\Rightarrow \spatie & P_z = P_t
+\end{align}
+
  $$\blacklozenge$$
 \newpage
 \section{p201 - Exercise}

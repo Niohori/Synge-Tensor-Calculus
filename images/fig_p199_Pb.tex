@@ -1,0 +1,71 @@
+\tdplotsetmaincoords{80}{160}
+\begin{tikzpicture}[scale = 0.8,tdplot_main_coords, >=Latex]
+\tikzmath{\aax=3.84;\bby=6;\ccz=4;\a = (\bby+\bby)/4;\d=-8.5;\e=4;};
+\aax, \bby,\ccz;
+\coordinate (O) at (0,0,0);
+\coordinate (A) at (0,0,\ccz);
+\coordinate (B) at (0,\bby,0);
+\coordinate (C) at (\aax,0,0);
+\coordinate (x) at (1.5*\aax,0,0);
+\coordinate (y) at (0,1.5*\bby,0);
+\coordinate (z) at (0,0,1.5*\ccz);
+
+\coordinate (xyz) at (\aax/3,\bby/3,\ccz/3);
+\draw [fill=gray] (xyz) circle (2pt) node[above right] (n1) {$$};
+
+
+\coordinate (nxyz) at (3*\aax/3,3*\bby/3,3*\ccz/3);
+\draw[-Latex, very thick](xyz)--(nxyz);
+\node[anchor = south east] at (nxyz){$dS_t$};
+
+\coordinate (yzp) at (3*\aax/3,\bby/3,\ccz/3);
+\draw[-Latex,](xyz)--(yzp);
+\node[anchor = south east] at (yzp){$$};
+
+\coordinate (xyp) at (\aax/3,\bby/3,3.1*\ccz/3);
+\draw[-Latex,](xyz)--(xyp);
+\node[anchor = south east] at (xyp){$$};
+
+\coordinate (xzp) at (\aax/3,3*\bby/3,\ccz/3);
+\draw[-Latex, ](xyz)--(xzp);
+\node[anchor = north west] at (xzp){$$};
+\node[anchor = north east] at (xyz){$q_{t}$};
+
+\coordinate (pz) at (\aax/3,\bby/3,3.1*\ccz/3);
+
+\draw [fill=white] (pz) circle (1pt)node[above left] (pz) {$\gamma_z$};
+
+\coordinate (pxy) at (3.*\aax/3,3*\bby/3,\ccz/3);
+
+
+\coordinate (px) at (3*\aax/3,\bby/3,\ccz/3);
+
+\draw [fill=white] (px) circle (1pt) node[above left] (px) {$\gamma_x$};
+\coordinate (py) at (\aax/3,3*\bby/3,\ccz/3);
+
+\draw [fill=white] (py) circle (1pt)node[above right] (py) {$\gamma_y$};
+
+
+\draw[-Latex](O)--(x);
+\node[anchor = south east] at (x){x};
+\draw[-Latex](O)--(y);
+\node[anchor = south east] at (y){y};
+\draw[-Latex](O)--(z);
+\node[anchor = south east] at (z){z};
+
+\draw[,](A)--(B)--(C)--cycle;
+\draw[](A)--(O)--(C)--cycle;
+\draw[](A)--(O)--(B)--cycle;
+\draw[](O)--(B)--(C)--cycle;
+
+\node[anchor = south west] at (A){A};
+\node[anchor = south west] at (O){o};
+\node[anchor = north east] at (C){C};
+\node[anchor = south west ] at (B){B};
+%\draw[-Latex, ultra thick](xyz)--(A);
+\coordinate (Ht) at (\aax/2,\bby/2,0);
+\draw[dashed,ultra thick](A)--(Ht);
+\draw [fill=white] (Ht) circle (1pt)node[below left] (Ht) {$h$};
+\draw[dashed,ultra thick](O)--(Ht);
+
+\end{tikzpicture}    

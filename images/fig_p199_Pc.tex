@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale = 0.8]
+\coordinate (O) at (0,0);
+\node[anchor = north east ] at (O){$h$};
+\coordinate (ds) at (-2,3);
+\draw[-Latex,thick] (O)--(ds);
+\node[anchor = south west ] at (ds){$dS_t$};
+\coordinate (A) at (4,3.5) {};
+\draw[-Latex,thick] (O)--(A);
+\node[anchor = south west ] at (A){$A$};
+\coordinate (gamma) at (0,4.5) {};
+\draw[-Latex,thick] (O)--(gamma);
+\node[anchor = south west ] at (gamma){$\gamma_z$};
+ \draw pic[draw,,angle radius=3cm,"$\frac{\pi}{2}-\alpha$"] {angle=A--O--gamma};
+  \draw pic[draw,,angle radius=2cm,"$\alpha$"] {angle=gamma--O--ds};
+  \coordinate (P) at (5,0);
+  \draw[dashed] (O)--(P);
+  \draw pic[draw,,angle radius=2cm,"$\alpha$"] {angle=P--O--A};
+\end{tikzpicture}
