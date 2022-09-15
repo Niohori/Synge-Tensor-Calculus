@@ -276,3 +276,111 @@ T^n = a^{mn}\phi_{|m}\spatie\Rightarrow\spatie &\partial_n T^n+\Gamma^{n}_{kn}T^
 \end{align}
  $$\blacklozenge$$
 \newpage
+
+
+\section{p205 - Exercise}
+\begin{tcolorbox}
+Show that a small strain is a rigid body displacement if, and only if, $e_{rs}=0$. In the case of finite strain, deduce form $\mathbf{6.206}$ the conditions which must be satisfied by the partial derivatives of the displacement in order that it may b a rigid body displacement.
+\end{tcolorbox}
+\textbf{Suppose we deal with  a rigid body.} Then the position of two particles of the rigid body are given by
+
+\begin{align}
+\left\{\begin{array}{l}
+p_r=z_r+u_r(z)\\
+p^{'}_r=z^{'}_r+u_r(z^{'})\\
+\end{array}\right.
+\end{align}
+and
+\begin{align}
+\left\{\begin{array}{l}
+L_0= z_r-z^{'}_r \\
+L_1 = z^{'}_r+u_r(z^{'})-z_r-u_r(z)  
+\end{array}\right.
+\end{align}
+A rigid body means $L_1=L_0$, giving $u_r(z^{'})=u_r(z^{})$ i.e $u_r(z^{})$ is a constant and thus $u_{r,s}(z^{})=0$.\\
+As $e_{rs}=\half\left(u_{r,s}(z^{})+u_{s,r}(z^{})\right)$ we get $e_{rs}=0$\\\\
+\textbf{Suppose now that $e_{rs}=0$}\\
+We have $e= e_{rs}\lambda_r\lambda_s = 0$ and $e= u_{r,s}(z^{})\lambda_r\lambda_s $
+As the $\lambda_r$ are arbitrary, in the sense that we are free to choose whatever curve to approach the initial point, we conclude that $u_{r,s}(z^{})=0$ . So$u_{r}(z^{})$ is a constant, meaning that the mutual distance between two arbitrary points, do not change. The body is a rigid body.
+ $$\lozenge$$
+ For a finite strain we have $\mathbf{6.206}$:
+ \begin{align}
+ \lim \frac{L_1^2-L_0^2}{L_0^2}=2 u_{r,s}(z^{})\lambda_r\lambda_s + u_{m,r}(z^{})u_{m,s}(z^{})\lambda_r\lambda_s
+ \end{align}
+ This limit is $0$ and so we get as condition
+  \begin{align}
+ \left(2 u_{r,s}(z^{}) + u_{m,r}(z^{})u_{m,s}(z^{})\right)\lambda_r\lambda_s=0
+ \end{align}
+ As the $\lambda_r$ are arbitrary, in the sense that we are free to choose whatever curve to approach the initial point, we conclude that $2 u_{r,s}(z^{}) + u_{m,r}(z^{})u_{m,s}(z^{})$ must be zero.
+ $$2 u_{r,s}(z^{}) + u_{m,r}(z^{})u_{m,s}(z^{})=0$$
+ $$\blacklozenge$$
+\newpage
+
+\section{p207 - Clarification}
+\begin{tcolorbox}
+Then, clearly, since the the volume of the tetrahedron is less than $a^3$,\\\\
+$\mathbf{6.217}\spatie \displaystyle \lim_{a \to 0} \frac{1}{a^2} \dv{M_r}{t}=0,\quad \displaystyle \lim_{a \to 0} \frac{1}{a^2} \int X_rdV=0$
+$$\vdots$$
+But  $\displaystyle \lim_{a \to 0} \frac{S}{a^2}$ is not zero,...
+\end{tcolorbox}
+First, note that the volume of  a trirectangular tetrahedron is $V=\frac{1}{6}abc$ with $a,b,c$ the bases of the 3 rectangular triangles (see clarification for page 199), so if $a\ge b,c$ we have  $V< a^3$.\\
+There is no assurance that $\displaystyle \lim_{a \to 0} \frac{1}{a^3} \dv{M_r}{t}=0$. Indeed, consider $\mathbf{5.334}$. For a continuous medium, this equation can be written as
+\begin{align}
+I_{st} &= \int_{V}\rho\epsilon_{ptq}\epsilon_{psn}z_sz_tdV
+\end{align} 
+If $V$ goes to zero, the quantities under the integral can be approximated by constant values and hence, the dynamics of the tetrahedron are govern by
+\begin{align}
+&\displaystyle \lim_{V \to 0}I_{st} = \rho\epsilon_{ptq}\epsilon_{psn}z_sz_t V\\
+\mathbf{5.332}\text{:}\spatie &\dv{I_{st}\omega_t}{t}= M_s\\
+\Rightarrow\spatie &\lim_{V \to 0} \dv{M_s}{t} = \lim_{V \to 0}V\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
+\Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^3}\dv{M_s}{t} = \lim_{a \to 0}\frac{1}{a^3}V\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
+\Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^3}\dv{M_s}{t} < \lim_{a \to 0}\frac{1}{a^3}a^3\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
+\Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^3}\dv{M_s}{t} < \lim_{a \to 0}\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t}
+\end{align}
+but there is no reason to admit that $\displaystyle \lim_{V \to 0}\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t}=0$. \\
+On the other hand, replacing $a_3$ with $a^2$ in $(5)$ gives 
+\begin{align}
+&\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} = \lim_{a \to 0}\frac{1}{a^2}V\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
+\Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} < \lim_{a \to 0}\frac{1}{a^2}a^3\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
+\Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} < \lim_{a \to 0}a\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t}\\
+\Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} =0
+\end{align}
+For $ \displaystyle \lim_{a \to 0} \frac{1}{a^2} \int X_rdV=0$ the reasoning is even simpler as for a volume going to zero , we can consider $X_r$ as constant and thus 
+\begin{align}
+ \displaystyle \lim_{a \to 0} \frac{1}{a^2} \int X_rdV=\displaystyle \lim_{a \to 0} \frac{1}{a^2}  X_r \int dV < \displaystyle \lim_{a \to 0} \frac{1}{a^2}  X_r a^3 = 0
+\end{align}
+$$\lozenge$$
+\textbf{But  $\displaystyle \lim_{a \to 0} \frac{S}{a^2}$ is not zero,...}\\\\
+Be $S_t$ the area of the "sloped" triangle in the tetrahedron. Then, the total area of the tetrahedron is:
+\begin{align}
+&S= \half\left(ab + bc + ac \right) + S_t\\
+&S_t > \half ab\text{,   }S_t > \half bc\text{,   }S_t > \half ac\\
+\Rightarrow \spatie & S>  \half\left(ab + bc + ac \right) + \half ab\\
+\Rightarrow \spatie & \frac{S}{a^2}>  \half\left( \frac{bc}{a^2} + \frac{c}{a} \right) + b
+\end{align}
+If we shrink the tetrahedron uniformly and put $a=\epsilon a_0, b=\epsilon b_0, c=\epsilon c_0$ then $(16)$ can be written as 
+\begin{align}
+\lim_{\epsilon \to 0}\frac{S}{a^2}>   \half\left( \frac{b_0c_0}{a_0^2} + \frac{c_0}{a_0} \right) + b_0\lim_{\epsilon \to 0}\epsilon 
+\end{align}
+which is indeed not zero.
+ $$\blacklozenge$$
+\newpage
+
+\section{p208 - Exercise}
+\begin{tcolorbox}
+Show that the stress across a plane $z_1 = \text{const.}$ has the components $E_{11}, \ E_{21}, \ E_{31}$. What are the components across planes $z_2 = \text{const.}$ and $z_3 = \text{const.}$?
+\end{tcolorbox}
+\begin{align}
+\mathbf{6.223} \spatie T_r = E_{rs}n_s
+\end{align}
+So for the the stress across a plane $z_1 = \text{const.}$, we have $n_1=1, \ n_2=0, \ n_3 = 0$ and so 
+\begin{align}
+T_r\left(z_1 = \text{const.}\right) = \left(\begin{matrix}E_{11}\\E_{21}\\E_{31}\end{matrix}\right)
+\end{align}
+For the the stress across a plane $z_2 = \text{const.}$, we have $n_1=0, \ n_2=1, \ n_3 = 0$ and for the the stress across a plane $z_3 = \text{const.}$, we have $n_1=0, \ n_2=0, \ n_3 = 1$ and so
+\begin{align}
+&T_r\left(z_2 = \text{const.}\right) = \left(\begin{matrix}E_{12}\\E_{22}\\E_{32}\end{matrix}\right)\\
+&T_r\left(z_3 = \text{const.}\right) = \left(\begin{matrix}E_{13}\\E_{23}\\E_{33}\end{matrix}\right)\
+\end{align}
+ $$\blacklozenge$$
+\newpage
