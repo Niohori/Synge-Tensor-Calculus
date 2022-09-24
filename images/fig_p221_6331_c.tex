@@ -1,0 +1,90 @@
+\begin{tikzpicture}[x=(15:0.5), y=(90:0.6), z=(-20:2.2)]
+\tikzset{>=latex} % for LaTeX arrow head
+\newcommand*\lateraleye{%
+       \scalebox{0.25}{
+    \tikzset{every picture/.style={line width=0.75pt}} 
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    \draw  [line width=1.5]  (300,100.33) .. controls (326,122) and (352,135) .. (378,139.33) .. controls (352,143.67) and (326,156.67) .. (300,178.33) ;
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (308.94,116.33) .. controls (313.87,116.33) and (317.86,125.51) .. (317.85,136.83) .. controls (317.84,148.15) and (313.84,157.33) .. (308.91,157.33) .. controls (303.99,157.32) and (300,148.14) .. (300.01,136.82) .. controls (300.02,125.5) and (304.02,116.32) .. (308.94,116.33) -- cycle ;
+    \draw  [draw opacity=0][line width=1.5]  (314.84,166.6) .. controls (311.87,164.64) and (309.14,162.18) .. (306.76,159.24) .. controls (295.12,144.82) and (296.6,124.33) .. (310.07,113.45) .. controls (311.48,112.32) and (312.96,111.33) .. (314.5,110.49) -- (331.14,139.55) -- cycle ; \draw  [line width=1.5]  (314.84,166.6) .. controls (311.87,164.64) and (309.14,162.18) .. (306.76,159.24) .. controls (295.12,144.82) and (296.6,124.33) .. (310.07,113.45) .. controls (311.48,112.32) and (312.96,111.33) .. (314.5,110.49) ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (304.43,124.2) .. controls (306.09,124.25) and (307.32,128.01) .. (307.18,132.6) .. controls (307.05,137.19) and (305.59,140.88) .. (303.93,140.83) .. controls (302.27,140.78) and (301.03,137.02) .. (301.17,132.43) .. controls (301.31,127.83) and (302.76,124.15) .. (304.43,124.2) -- cycle ;
+    \end{tikzpicture}
+    }\,}
+\tikzstyle{platecol}=[gray!20!black!20,opacity=0.8]
+\tikzstyle{platetopcol}=[gray!20!black!20,opacity=0.8]
+\tikzstyle{platesidEcol}=[gray!20!black!20,opacity=0.8]
+\tikzstyle{mydashed}=[dash pattern=on 1.2 off 0.7,line width=0.3]
+% POLARIZER
+\def\W{3.5}  % width polarizer
+\def\w{0.05} % width slit
+\def\l{2.9}  % length slit
+\def\t{0.05}
+\def\N{7}    % number of slits
+  \tikzset{
+  plate/.pic={
+    \ifnumless{45}{#1}{
+      \def\topang{#1}
+    }{
+      \def\topang{#1+90}
+    }
+    \fill[platetopcol]
+      (\topang:\W/2)++(\topang-90:\W/2) --++ (0,0,-\t) --++ (\topang+90:\W) --++ (0,0,\t) -- cycle;
+    \fill[platesidEcol]
+      (\topang+90:\W/2)++(\topang:\W/2) --++ (0,0,-\t) --++ (\topang+180:\W) --++ (0,0,\t) -- cycle;
+    \fill[platecol]
+      (#1:\W/2)++(#1-90:\W/2) --++ (#1-180:\W) --++ (#1+90:\W) --++ (#1:\W) -- cycle
+      \foreach \i [evaluate={\x=-\W/2+\i*\W/(\N+1);}] in {1,...,\N}{
+        (#1:\l/2)++(#1+90:\x+\w/2) --++ (#1-180:\l) --++ (#1-90:\w) --++ (#1:\l) -- cycle
+      };
+  }
+}
+  \def\A{1.4}
+  \def\L{3.2}
+  \def\M{4.5}
+  \def\nwave{4}
+  \def\k{(360*\nwave/\M)} % 2pi*n / L = 360*n / L
+  %\def\dx{90/\k}
+  \def\nvec{40} % per wavelength
+  
+  % SECTION 1
+  \draw[thin,dashed] (1*\L,1*\L,0.4*\L) -- (1*\L,-1*\L,0.4*\L)--  (-1*\L,-1*\L,0.4*\L)-- (-1*\L,1*\L,0.4*\L)-- (1*\L,1*\L,0.4*\L);
+   \draw[thick,-Latex] (0,0,0) -- (0,0,8);
+  \draw[thick] (0,0,0) -- (0,0,0.4*\L);
+  %\foreach \ang in {45,90,...,360}{
+    %\draw[<->,very thick,Ecol] (0,0,0.4*\L)++(\ang:\A) --++ (\ang+180:2*\A);
+ % }
+  \draw[->,very thick,] (0,0,0.4*\L)++(0:0) --++ (0+180:1.2*\A);
+  \draw[->,very thick,] (0,0,0.4*\L)++(90:0) --++ (90+180:2*\A);
+  \draw[->,very thick,] (0,0,0.4*\L)++(90+180:0) --++ (90+0:2*\A);
+  \draw[->,very thick,] (0,0,0.4*\L)++(180:0) --++ (180+180:1.2*\A);
+  \draw[->,very thick,] (0,0,0.4*\L)++(45:0) --++ (45:0.85*\A);
+  \draw[->,very thick,] (0,0,0.4*\L)++(45:0) --++ (45+180:0.85*\A);
+   \draw[->,very thick,] (0,0,0.4*\L)++(135:0) --++ (135+180:2*\A);
+    \draw[->,very thick,] (0,0,0.4*\L)++(135:0) --++ (135:2*\A);
+
+  \draw[thick] (0,0,0.4*\L) -- (0,0,\L);
+  \draw[->,very thick,] (0,0,0.4*\L)++(60:1.1*\A) --++ (0,0,0.2*\L) node[right] {$\vb{v}$};
+  \node[scale=0.9,yslant=tan(0)] at (-0.8*\L,-0.8*\L,0.4*\L) {P };
+  \node[scale=0.9,yslant=tan(-10)] at (0.8,-0.75*\A,0.0*\L) { $E_0$};
+  \node[scale=0.9,yslant=tan(-10)] at (0,0,9) { $ \lateraleye$};
+  
+  % SECTION 2
+  \begin{scope}[shift={(0,0,\L)}]
+    \pic at (0,0) {plate={90}};
+    \node[scale=0.9,yslant=tan(-10),right=7,below] at (-135:0.7*\W) {Q};
+    \draw[thick] (0,0,0) -- (0,0,\M/2);
+    \draw[<->,very thick,] (0,0,\M/2)++(90:\A) --++ (-90:2*\A); %-\dx
+    \draw[,samples=100,smooth,variable=\z,domain=0:\M]
+      plot(0,{\A*cos(\k*\z)},\z);
+    \foreach \i [evaluate={\z=\i*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
+      \ifnum\c=1
+        \draw[] (0,0,\z) --++ (90:{\A*cos(\k*\z)});
+      \fi
+    }
+    \draw[thick] (0,0,\M/2) -- (0,0,\M);
+    \node[scale=0.9,yslant=tan(-10),below=-7,align=center] at (0,-1.4*\A,0.45*\M)
+      {plane-polarized};
+  \end{scope}
+  
+ 
+\end{tikzpicture}

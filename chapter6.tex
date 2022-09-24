@@ -237,8 +237,8 @@ $$\mathbf{6.147} \spatie \partial_t v_r + v_s v_{r|s} = X_r - \rho^{-1} p_{,r}$$
 By $\mathbf{2.527}$ page 53 we  have $a^{rs}_{|t}=0$ and thus 
 \begin{align}
 v^{r}_{|s}= \left(a^{mr}v_{r}\right)_{|s} &= \left(a^{mr}\right)_{|n}v_{r}+a^{mr}v_{r|s}= a^{mr}v_{r|s} \\
-(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{|s} &= X^m - \rho^{-1} a^{mr}p_{,r}\\
-(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{|s} &= X^m - \rho^{-1} p^{'}_{,r}
+(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{\ \ |s} &= X^m - \rho^{-1} a^{mr}p_{,r}\\
+(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{\ \ |s} &= X^m - \rho^{-1} p^{'}_{,r}
 \end{align}
 Note that $p_{,r}$ in $(1)$ and $(5)$ are not the same vector function as $p_{,r}$ can be written as $\overline{\nabla}p$ which is coordinate system  dependent.
  $$\blacklozenge$$
@@ -383,4 +383,182 @@ For the the stress across a plane $z_2 = \text{const.}$, we have $n_1=0, \ n_2=1
 &T_r\left(z_3 = \text{const.}\right) = \left(\begin{matrix}E_{13}\\E_{23}\\E_{33}\end{matrix}\right)\
 \end{align}
  $$\blacklozenge$$
+\newpage
+
+\section{p210 - Exercise}
+\begin{tcolorbox}
+Show that the if $\mathbf{6.233}$ is solved for strain, so as to read
+$$\mathbf{6.237} \spatie e_{rs}= C_{rsmn}E_{mn}$$
+then the symmetry conditions $\mathbf{6.234}, \  \mathbf{6.235}, \text{ and } \mathbf{6.236} $ imply similar conditions on $C_{rsmn}$. (The tensor $C_{rsmn}$ is he second elasticity tensor).
+\end{tcolorbox}
+\textbf{a) $C_{rsnm}= C_{rsmn}$ and $C_{srmn}= C_{rsmn}$\\}
+This is a direct consequence of the symmetries $E_{nm}= E_{mn}$ and $e_{nm}= e_{mn}$. \\E.g.:
+\begin{align}
+e_{nm}&= e_{mn}\\
+\Leftrightarrow\spatie C_{nmrs}E_{rs}&=C_{mnrs}E_{rs}\\
+\Rightarrow\spatie C_{nmrs}&=C_{mnrs}
+\end{align}\\
+\textbf{b) $C_{rsnm}= C_{mnrs}$ \\}
+We simplify the notation by using 'compactified' indices (e.g.):
+$$e_{a}= C_{ab}E_{b} \quad \Leftrightarrow \quad e_{rs}= C_{rsmn}E_{mn}$$
+Let's form the invariant $E_ae_a$, then :
+\begin{align}
+E_ae_a &=  c_{au}e_{u}C_{av}E_{v}\\
+&=  c_{ua}e_{a}C_{uv}E_{v}\quad\text{(renaming dummy indices)}\\
+&=  C_{uv}E_u E_{v}\\
+&=  C_{vu}E_u E_{v}\quad\text{(renaming dummy indices)}
+\end{align}
+From $(6)$ and $(7)$ we can conclude 
+$$C_{vu}=C_{uv}$$
+ $$\blacklozenge$$
+\newpage
+
+\section{p212 - Exercise}
+\begin{tcolorbox}
+Deduce from  $\mathbf{6.250}$ that if an isotropic elastic body is in equilibrium under no body forces, then the expansion $\theta$ is an harmonic function $\left(\mathbf{\Delta}\theta = 0\right)$
+\end{tcolorbox}
+$$\mathbf{6.250}: \spatie \rho f_r= \rho X_r+\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r$$
+In equilibrium under no body forces means $f_r=0$ and $X_r=0$. So,
+\begin{align}
+\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r&=0\\
+\partial_r \quad \Rightarrow \spatie \left( \lambda+ \mu \right)\underbrace{\theta_{,rr}}_{= \mathbf{\Delta}\theta} +\mu\underbrace{\left(\mathbf{\Delta}u_r \right)_{,r}}_{=\mathbf{\Delta}u_{r,r}} &=0\\
+u_{r,r}=\theta\quad\Rightarrow\spatie \left( \lambda+ \mu \right)\mathbf{\Delta}\theta +\mu\mathbf{\Delta}\theta &=0\\
+\Rightarrow\spatie\spatie\spatie \mathbf{\Delta}\theta &=0
+\end{align}
+ $$\blacklozenge$$
+\newpage
+
+\section{p213 - Exercise}
+\begin{tcolorbox}
+Express the equations of motion   $\mathbf{6.250}$ in curvilinear coordinates.
+\end{tcolorbox}
+$$\mathbf{6.250}: \spatie \rho f_r= \rho X_r+\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r$$
+We start from $\mathbf{6.252}: \spatie \rho f^r= \rho X^r+E^{rs}_{\ \ |s}$
+\begin{align}
+& \rho f^r= \rho X^r+E^{rs}_{\ \ |s}\\
+\mathbf{6.245}\text{:}\quad\Rightarrow\spatie & E^{rs} = \lambda \delta_{rs} \theta + 2 \mu e^{rs}\\
+\Rightarrow\spatie & \rho f^r= \rho X^r+\lambda \delta_{rs} \theta _{ |s} + 2 \mu e^{rs}_{\ \ |s}\\
+\Leftrightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + 2 \mu e^{rs}_{\ \ |s}\\
+\mathbf{6.245}\text{: }\spatie \spatie & e^{rs} = \half\left(u^r_{\ |s}+u^s_{\ |r}\right)\\
+\Leftrightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + 2 \mu \half\left(u^r_{\ |ss}+u^s_{\ |rs}\right)\\
+\mathbf{6.246}\text{: }\spatie \spatie &\theta = e^{nn} = \half\left(u^n_{\ |n}+u^n_{\ |n}\right) = u^n_{\ |n}\\
+\text{(6)}\Rightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + \mu \left(u^r_{\ |ss}+\theta_{\ |r}\right)\\
+\Rightarrow\spatie & \rho f^r= \rho X^r+\left(\lambda +\mu\right) \theta _{,r} + \mu u^r_{\ |ss}
+\end{align}
+So, $$f^r= \rho X^r+\left(\lambda +\mu\right) \theta _{,r} + \mu \mathbf {\Delta}u^r$$
+where we define the Laplacian differential operator as $$\mathbf{\Delta}\left({\cdot}\right) \overset{\underset{\mathrm{def}}{}}{=} \left({\cdot}\right)_{|nn}$$
+ $$\blacklozenge$$
+\newpage
+
+\section{p215 - Exercise}
+\begin{tcolorbox}
+Verify that $E_r=z_r, \ H_r=0$ satisfy the wave equation but not Maxwell's equations
+\end{tcolorbox}
+$$\mathbf{6.306}: \spatie \ \frac{1}{c^2}\frac{\partial^2E_r}{\partial t^2} -E_{r,mn} = 0$$
+$$\mathbf{6.307}: \spatie \ \frac{1}{c^2}\frac{\partial^2H_r}{\partial t^2} -H_{r,mn} = 0$$
+Obviously, $\mathbf{6.307}$ is trivial as $H_r=0$ is a constant $=0$, and so are the derivatives.\\
+For $\mathbf{6.306}$, $ \frac{\partial^2E_r}{\partial t^2}= 0$ as $E_r$ is no function of time.\\
+So, the defined field satisfy the wave equation.\\
+\begin{align}
+\left\{ \begin{array}{ll}
+\mathbf{6.301}: &\frac{1}{c}\frac{\partial E_r}{\partial t} = \epsilon_{rmn}H_{n,m}, \quad  \frac{1}{c}\frac{\partial H_r}{\partial t}= -\epsilon_{rmn}E_{n,m}\\
+\mathbf{6.302}: & E_{n,n}=0, \spatie \quad H_{n,n}=0
+\end{array}\right.
+\end{align}
+The first equation of $\mathbf{6.302}$ is not satisfied as $E_{n,n}= N$ with $N$ the space dimension.
+ $$\blacklozenge$$
+\newpage
+
+\section{p220 - Exercise}
+\begin{tcolorbox}
+Prove a similar statement for the electric and magnetic vectors of the complementary electromagnetic field.
+\end{tcolorbox}
+$$\mathbf{6.306}: \spatie \ \frac{1}{c^2}\frac{\partial^2E_r}{\partial t^2} -E_{r,mn} = 0$$
+ $$\blacklozenge$$
+\newpage
+
+\section{p221 - Clarification}
+\begin{tcolorbox}
+Some thoughts about polarization
+\end{tcolorbox}
+
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p221_6331_a.tex}}
+    \quad
+        \subfloat[]{\input{D:/MathLatex/images/fig_p221_6331_b.tex}}
+    \quad
+        \subfloat[]{\input{D:/MathLatex/images/fig_p221_6331_c.tex}}
+    \quad
+\caption{Polarization of light}
+\label{fig:fig_p221}
+\end{figure}
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p221 - Exercise}
+\begin{tcolorbox}
+What conditions must be imposed on the fixed complex vectors $E^{(0)}_r$ and $H^{(0)}_r$ in order that the wave may be plane-polarized
+\end{tcolorbox}
+As stated a plane-polarized wave will have  its vectors $E^{*}_r$ and $E^{**}_r$ have the same directions and moreover the $E^{*}_r$ vector maintains a fixed directions.\\
+This means that $E^{*}_r$ can be written as $E^{*}_r =  \alpha\left(z,t\right) E^{(0)*}_r$ and $E^{**}_r =  \beta\left(z,t\right) E^{(0)*}_r$ with $\alpha, \ \beta$  real valued functions and $E^{(0)*}_r$ a constant. 
+Note that from the definition of $E^{*}_r$ and $E^{**}_r$ we have
+\begin{align}
+E^{}_r &= E^{*}_r+iE^{**}_r
+\end{align}
+and 
+\begin{align}
+ \begin{array}{l}
+\text{ 6.330}\\\\
+\text{  6.331}\\
+\end{array}
+\quad &\left\{ \begin{array}{l}
+\frac{\partial E^{*}_r}{\partial t} = -\frac{2\pi c}{\lambda} E^{**}_r\\\\
+\frac{\partial E^{**}_r}{\partial t} = \frac{2\pi c}{\lambda}  E^{*}_r\\
+\end{array}\right.\\
+\Rightarrow &\left\{\begin{array}{l}
+\frac{\partial \alpha}{\partial t} = -\frac{2\pi c}{\lambda} \beta\\\\
+\frac{\partial \beta}{\partial t} = \frac{2\pi c}{\lambda}  \alpha\\
+\end{array}\right.\\
+\Rightarrow &\left\{\begin{array}{l}
+\frac{\partial^2 \alpha}{\partial t^2} = -\left(\frac{2\pi c}{\lambda}\right) ^2 \alpha\\\\
+\frac{\partial^2 \beta}{\partial t^2} = \left(\frac{2\pi c}{\lambda}\right) ^2 \beta\\\\
+\end{array}\right.\\
+\Rightarrow &\left\{\begin{array}{l}
+\alpha = A\left(z\right)\cos \left(\frac{2\pi c}{\lambda}\right) ^2 t + B\left(z\right)\sin \left(\frac{2\pi c}{\lambda}\right) ^2 t \\\\
+\beta = C\left(z\right)e^{ \left(\frac{2\pi c}{\lambda}\right) ^2 t} + D\left(z\right)e^{- \left(\frac{2\pi c}{\lambda}\right) ^2 t}  
+\end{array}\right.\\
+\Rightarrow \quad & E^{}_r=A\cos \left(\frac{2\pi c}{\lambda}\right) ^2 t + B\sin \left(\frac{2\pi c}{\lambda}\right) ^2 t+i\left(Ce^{ \left(\frac{2\pi c}{\lambda}\right) ^2 t} + De^{- \left(\frac{2\pi c}{\lambda}\right) ^2 t}\right)
+\end{align}
+Let's write $E^{(0)}_r$ as $E^{(0)}_r = a+bi$ with $a, b$ real valued functions depending on the position only.
+Then, $\textbf{6.308}$ can be rewritten as
+\begin{align}
+E^{}_r &= \left(a+bi\right)\left(\cos S+i\sin S\right)\\
+&= a\cos S-b\sin S+i\left(b\cos S+a\sin S\right)
+\end{align}
+We have, with $S= \frac{2\pi V}{\lambda}-\frac{2\pi c}{\lambda}t$
+\begin{align}
+&\left\{\begin{array}{l}
+\cos S= \cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t\\\\
+\sin S= \cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t\\
+\end{array}\right.\\
+\text{(8)}\Rightarrow \quad E^{}_r =& \left\{\begin{array}{l}a\cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+a\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-b\cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t+b\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t\\\\
++i\left(
+b\cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+b\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t + a\cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-a\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t
+\right)
+\end{array}\right.\\
+=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}+b\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(a\sin \frac{2\pi V}{\lambda}-b\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t\\\\
++i\left[
+\left(b\cos \frac{2\pi V}{\lambda}-a\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(b\sin \frac{2\pi V}{\lambda} + a\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t
+\right]\\\\
+\end{array}\right.\\
+=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}+b\sin \frac{2\pi V}{\lambda}\right)\left(\cos \frac{2\pi c}{\lambda}t+ i\sin \frac{2\pi c}{\lambda}t\right)\\\\+\left(a\sin \frac{2\pi V}{\lambda}-b\cos \frac{2\pi V}{\lambda}\right)\left(\sin \frac{2\pi c}{\lambda}t -i\cos \frac{2\pi c}{\lambda}t \right)\\\\
+\end{array}\right.\\
+=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}+b\sin \frac{2\pi V}{\lambda}\right)e^{ \frac{2\pi c}{\lambda}t}\\\\-i\left(a\sin \frac{2\pi V}{\lambda}-b\cos \frac{2\pi V}{\lambda}\right)e^{ \frac{2\pi c}{\lambda}t}\\\\
+\end{array}\right.
+\end{align}
+
+$$\blacklozenge$$
 \newpage
