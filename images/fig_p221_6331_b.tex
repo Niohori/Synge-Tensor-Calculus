@@ -39,9 +39,10 @@
 	\draw[very thick,  variable=\t, domain=1:6, samples=300] plot (\t, {0.8*sin(deg(\t*4+90))}, {0.6*cos(deg(\t*4+90))});
 	
 	% Vectors from Axis to Red Line
-	\foreach \i [evaluate={\k = \i*4; \ii = \i;}] in {1,1.05,...,6}
+% Vectors from Axis to Red Line
+	\foreach \i [evaluate={\k = \i*4; \ii = \i;}] in {1,1.10,...,6}
 	{
-		\draw[very thin] (\ii,0,0) -- +(0, {0.8*sin(deg(\k+90))}, {0.6*cos(deg(\k+90))});
+		\draw[very thin,gray!50] (\ii,0,0) -- +(0, {0.8*sin(deg(\k+90))}, {0.6*cos(deg(\k+90))});
 	}
 	\begin{scope}[canvas is yz plane at x=9]
 	\node[scale=0.9,xslant = tan(-30),yslant =tan(-0)] at  (0,0,6) { $ \lateraleye$};

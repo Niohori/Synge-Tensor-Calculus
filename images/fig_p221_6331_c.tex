@@ -1,5 +1,4 @@
 \begin{tikzpicture}[x=(15:0.5), y=(90:0.6), z=(-20:2.2)]
-\tikzset{>=latex} % for LaTeX arrow head
 \newcommand*\lateraleye{%
        \scalebox{0.25}{
     \tikzset{every picture/.style={line width=0.75pt}} 
@@ -53,19 +52,19 @@
   %\foreach \ang in {45,90,...,360}{
     %\draw[<->,very thick,Ecol] (0,0,0.4*\L)++(\ang:\A) --++ (\ang+180:2*\A);
  % }
-  \draw[->,very thick,] (0,0,0.4*\L)++(0:0) --++ (0+180:1.2*\A);
-  \draw[->,very thick,] (0,0,0.4*\L)++(90:0) --++ (90+180:2*\A);
-  \draw[->,very thick,] (0,0,0.4*\L)++(90+180:0) --++ (90+0:2*\A);
-  \draw[->,very thick,] (0,0,0.4*\L)++(180:0) --++ (180+180:1.2*\A);
-  \draw[->,very thick,] (0,0,0.4*\L)++(45:0) --++ (45:0.85*\A);
-  \draw[->,very thick,] (0,0,0.4*\L)++(45:0) --++ (45+180:0.85*\A);
-   \draw[->,very thick,] (0,0,0.4*\L)++(135:0) --++ (135+180:2*\A);
-    \draw[->,very thick,] (0,0,0.4*\L)++(135:0) --++ (135:2*\A);
+  \draw[-Latex,very thick,] (0,0,0.4*\L)++(0:0) --++ (0+180:1.2*\A);
+  \draw[-Latex,very thick,] (0,0,0.4*\L)++(90:0) --++ (90+180:2*\A);
+  \draw[-Latex,very thick,] (0,0,0.4*\L)++(90+180:0) --++ (90+0:2*\A);
+  \draw[-Latex,very thick,] (0,0,0.4*\L)++(180:0) --++ (180+180:1.2*\A);
+  \draw[-Latex,very thick,] (0,0,0.4*\L)++(45:0) --++ (45:0.85*\A);
+  \draw[-Latex,very thick,] (0,0,0.4*\L)++(45:0) --++ (45+180:0.85*\A);
+   \draw[-Latex,very thick,] (0,0,0.4*\L)++(135:0) --++ (135+180:2*\A);
+    \draw[-Latex,very thick,] (0,0,0.4*\L)++(135:0) --++ (135:2*\A);
 
   \draw[thick] (0,0,0.4*\L) -- (0,0,\L);
-  \draw[->,very thick,] (0,0,0.4*\L)++(60:1.1*\A) --++ (0,0,0.2*\L) node[right] {$\vb{v}$};
+  \draw[-Latex,very thick,] (0,0,1.6*\L)++(60:1.1*\A) --++ (0,0,0.2*\L) node[right] {$\vb{v}$};
   \node[scale=0.9,yslant=tan(0)] at (-0.8*\L,-0.8*\L,0.4*\L) {P };
-  \node[scale=0.9,yslant=tan(-10)] at (0.8,-0.75*\A,0.0*\L) { $E_0$};
+  \node[scale=0.9,yslant=tan(10)] at (0.6,-0.75*\A,0.0*\L) { $E$};
   \node[scale=0.9,yslant=tan(-10)] at (0,0,9) { $ \lateraleye$};
   
   % SECTION 2
@@ -73,17 +72,17 @@
     \pic at (0,0) {plate={90}};
     \node[scale=0.9,yslant=tan(-10),right=7,below] at (-135:0.7*\W) {Q};
     \draw[thick] (0,0,0) -- (0,0,\M/2);
-    \draw[<->,very thick,] (0,0,\M/2)++(90:\A) --++ (-90:2*\A); %-\dx
-    \draw[,samples=100,smooth,variable=\z,domain=0:\M]
+    \draw[Latex-Latex,very thick,] (0,0,\M/2)++(90:\A) --++ (-90:2*\A); %-\dx
+    \draw[thick,samples=100,smooth,variable=\z,domain=0:\M]
       plot(0,{\A*cos(\k*\z)},\z);
     \foreach \i [evaluate={\z=\i*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
       \ifnum\c=1
-        \draw[] (0,0,\z) --++ (90:{\A*cos(\k*\z)});
+        \draw[very thin, gray!50] (0,0,\z) --++ (90:{\A*cos(\k*\z)});
       \fi
     }
     \draw[thick] (0,0,\M/2) -- (0,0,\M);
     \node[scale=0.9,yslant=tan(-10),below=-7,align=center] at (0,-1.4*\A,0.45*\M)
-      {plane-polarized};
+      {};
   \end{scope}
   
  

@@ -503,7 +503,7 @@ Some thoughts about polarization
 What conditions must be imposed on the fixed complex vectors $E^{(0)}_r$ and $H^{(0)}_r$ in order that the wave may be plane-polarized
 \end{tcolorbox}
 As stated a plane-polarized wave will have  its vectors $E^{*}_r$ and $E^{**}_r$ have the same directions and moreover the $E^{*}_r$ vector maintains a fixed directions.\\
-This means that $E^{*}_r$ can be written as $E^{*}_r =  \alpha\left(z,t\right) E^{(0)*}_r$ and $E^{**}_r =  \beta\left(z,t\right) E^{(0)*}_r$ with $\alpha, \ \beta$  real valued functions and $E^{(0)*}_r$ a constant. 
+This means that $E^{*}_r$ can be written as $E^{*}_r =  \alpha\left(z,t\right) \mathcal{E}_r$ and $E^{**}_r =  \beta\left(z,t\right) \mathcal{E}_r$ with $\alpha, \ \beta$  real valued functions and $\mathcal{E}_r$ a constant. 
 Note that from the definition of $E^{*}_r$ and $E^{**}_r$ we have
 \begin{align}
 E^{}_r &= E^{*}_r+iE^{**}_r
@@ -524,41 +524,59 @@ and
 \end{array}\right.\\
 \Rightarrow &\left\{\begin{array}{l}
 \frac{\partial^2 \alpha}{\partial t^2} = -\left(\frac{2\pi c}{\lambda}\right) ^2 \alpha\\\\
-\frac{\partial^2 \beta}{\partial t^2} = \left(\frac{2\pi c}{\lambda}\right) ^2 \beta\\\\
+\frac{\partial^2 \beta}{\partial t^2} = -\left(\frac{2\pi c}{\lambda}\right) ^2 \beta\\\\
 \end{array}\right.\\
 \Rightarrow &\left\{\begin{array}{l}
-\alpha = A\left(z\right)\cos \left(\frac{2\pi c}{\lambda}\right) ^2 t + B\left(z\right)\sin \left(\frac{2\pi c}{\lambda}\right) ^2 t \\\\
-\beta = C\left(z\right)e^{ \left(\frac{2\pi c}{\lambda}\right) ^2 t} + D\left(z\right)e^{- \left(\frac{2\pi c}{\lambda}\right) ^2 t}  
+\alpha = A\left(z\right)\cos \frac{2\pi c}{\lambda}  t + B\left(z\right)\sin \frac{2\pi c}{\lambda}  t \\\\
+\beta = C\left(z\right)\cos \frac{2\pi c}{\lambda}  t + D\left(z\right)\sin \frac{2\pi c}{\lambda}  t   
 \end{array}\right.\\
-\Rightarrow \quad & E^{}_r=A\cos \left(\frac{2\pi c}{\lambda}\right) ^2 t + B\sin \left(\frac{2\pi c}{\lambda}\right) ^2 t+i\left(Ce^{ \left(\frac{2\pi c}{\lambda}\right) ^2 t} + De^{- \left(\frac{2\pi c}{\lambda}\right) ^2 t}\right)
+\Rightarrow \quad & \frac{E^{}_r}{\mathcal{E}_r}=A\cos \frac{2\pi c}{\lambda} t + B\sin \frac{2\pi c}{\lambda} t+i\left(C\left(z\right)\cos \frac{2\pi c}{\lambda}  t + D\left(z\right)\sin \frac{2\pi c}{\lambda}  t \right)
 \end{align}
-Let's write $E^{(0)}_r$ as $E^{(0)}_r = a+bi$ with $a, b$ real valued functions depending on the position only.
+With $A,B,C,D:\mathbb{R}^3\rightarrow \mathbb{R}$.\\
+Let's write $E^{(0)}_r$ as $E^{(0)}_r = a+ib$ with $a, b$ real valued functions depending on the position only.
 Then, $\textbf{6.308}$ can be rewritten as
 \begin{align}
-E^{}_r &= \left(a+bi\right)\left(\cos S+i\sin S\right)\\
+E^{}_r &= \left(a+ib\right)\left(\cos S+i\sin S\right)\\
 &= a\cos S-b\sin S+i\left(b\cos S+a\sin S\right)
 \end{align}
 We have, with $S= \frac{2\pi V}{\lambda}-\frac{2\pi c}{\lambda}t$
 \begin{align}
 &\left\{\begin{array}{l}
 \cos S= \cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t\\\\
-\sin S= \cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t\\
+\sin S= \sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t-\cos \frac{2\pi V}{\lambda}\sin\frac{2\pi c}{\lambda}t\\
 \end{array}\right.\\
-\text{(8)}\Rightarrow \quad E^{}_r =& \left\{\begin{array}{l}a\cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+a\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-b\cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t+b\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t\\\\
+\text{(8)}\Rightarrow \quad E^{}_r =& \left\{\begin{array}{l}a\cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+a\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t+b\cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-b\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t\\\\
 +i\left(
-b\cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+b\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t + a\cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t-a\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t
+b\cos \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t+b\sin \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t - a\cos \frac{2\pi V}{\lambda}\sin \frac{2\pi c}{\lambda}t+a\sin \frac{2\pi V}{\lambda}\cos \frac{2\pi c}{\lambda}t
 \right)
 \end{array}\right.\\
-=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}+b\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(a\sin \frac{2\pi V}{\lambda}-b\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t\\\\
+=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}-b\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(a\sin \frac{2\pi V}{\lambda}+b\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t\\\\
 +i\left[
-\left(b\cos \frac{2\pi V}{\lambda}-a\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(b\sin \frac{2\pi V}{\lambda} + a\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t
+\left(b\cos \frac{2\pi V}{\lambda}+a\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(b\sin \frac{2\pi V}{\lambda} - a\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t
 \right]\\\\
-\end{array}\right.\\
-=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}+b\sin \frac{2\pi V}{\lambda}\right)\left(\cos \frac{2\pi c}{\lambda}t+ i\sin \frac{2\pi c}{\lambda}t\right)\\\\+\left(a\sin \frac{2\pi V}{\lambda}-b\cos \frac{2\pi V}{\lambda}\right)\left(\sin \frac{2\pi c}{\lambda}t -i\cos \frac{2\pi c}{\lambda}t \right)\\\\
-\end{array}\right.\\
-=& \left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}+b\sin \frac{2\pi V}{\lambda}\right)e^{ \frac{2\pi c}{\lambda}t}\\\\-i\left(a\sin \frac{2\pi V}{\lambda}-b\cos \frac{2\pi V}{\lambda}\right)e^{ \frac{2\pi c}{\lambda}t}\\\\
 \end{array}\right.
 \end{align}
-
+Let's now compare equations $(6)$ and $(11)$
+\begin{align}
+&E^{}_r=A\mathcal{E}_r\cos \frac{2\pi c}{\lambda} t + B\mathcal{E}_r\sin \frac{2\pi c}{\lambda} t+i\left(C\mathcal{E}_r\cos \frac{2\pi c}{\lambda}  t + D\mathcal{E}_r\sin \frac{2\pi c}{\lambda}  t \right)\\
+&E^{}_r=\left\{\begin{array}{l}\left(a\cos \frac{2\pi V}{\lambda}-b\sin \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t+\left(a\sin \frac{2\pi V}{\lambda}+b\cos \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t\\\\
++i\left[
+\left(a\sin \frac{2\pi V}{\lambda}+b\cos \frac{2\pi V}{\lambda}\right)\cos \frac{2\pi c}{\lambda}t-\left(a\cos \frac{2\pi V}{\lambda}-b\sin \frac{2\pi V}{\lambda}\right)\sin \frac{2\pi c}{\lambda}t
+\right]\\\\
+\end{array}\right.
+\end{align}
+We see that 
+\begin{align}
+&A\mathcal{E}_r= a\cos \frac{2\pi V}{\lambda}-b\sin \frac{2\pi V}{\lambda}\\
+&B\mathcal{E}_r= a\sin \frac{2\pi V}{\lambda}+b\cos \frac{2\pi V}{\lambda}\\
+&C=B\\
+&D=-A\\
+\text{(14), (15)}\quad\Rightarrow \quad &\left\{\begin{array}{l}a= A\mathcal{E}_r\cos \frac{2\pi V}{\lambda}+B\mathcal{E}_r\sin \frac{2\pi V}{\lambda}\\
+b= -A\mathcal{E}_r\sin \frac{2\pi V}{\lambda}+B\mathcal{E}_r\cos \frac{2\pi V}{\lambda}\\
+\end{array}\right.\\
+\Rightarrow \quad E^{(0)}_r&= a+ib\\
+&=\mathcal{E}_r\left(A\left(z\right)+iB\left(z\right)\right)e^{-\frac{2\pi V}{\lambda}}
+\end{align}
+So, $E^{(0)}_r$ varies with the position but in such a way that the effect of $V$ on the direction of $E_r$ is annihilated.
 $$\blacklozenge$$
 \newpage

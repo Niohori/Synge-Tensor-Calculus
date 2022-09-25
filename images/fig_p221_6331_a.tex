@@ -15,12 +15,17 @@
   \def\nwave{4}
   \def\k{(360*\nwave/\M)} % 2pi*n / L = 360*n / L
   \def\nvec{40} % vectors per wavelength
-  % SECTION 1
- 
+ % SECTION 1
+  
    \draw[thick,-Latex] (0,0,0) -- (0,0,1.2*\M);
   \draw[thick] (0,0,0) -- (0,0,0.4*\L);
+  %\foreach \ang in {45,90,...,360}{
+    %\draw[<->,very thick] (0,0,0.4*\L)++(\ang:\A) --++ (\ang+180:2*\A);
+ % }
+ 
+
   \draw[thick] (0,0,0.4*\L) -- (0,0,\L);
-  \draw[->] (0,0,1.*\L)++(60:1.1*\A) --++ (0,0,0.2*\L) node[right] {$\vb{v}$};
+  \draw[->,] (0,0,1.*\L)++(60:1.1*\A) --++ (0,0,0.2*\L) node[right] {$\vb{v}$};
   \node[scale=0.9,yslant=tan(0)] at (-0.8*\L,-0.8*\L,0.4*\L) {P };
   \node[scale=0.9,yslant=tan(0)] at (0,0.6*\L,0.4*\L) { $E_1$};
    \node[scale=0.9,yslant=tan(0)] at (-2.0,-0.50,0.4*\L) { $E_2$};
@@ -28,52 +33,48 @@
  
   
   % SECTION 2
+        \draw[fill=white,] (2.2,0,0.4*\L) --++ (0:0) circle (1.5pt);
+    \draw[fill=gray!50,] (0,-0.88,0.4*\L) --++ (0:0) circle (1.5pt);
+  \draw[thin,dashed,] (1*\L,1*\L,0.4*\L) -- (1*\L,-1*\L,0.4*\L)--  (-1*\L,-1*\L,0.4*\L)-- (-1*\L,1*\L,0.4*\L)-- cycle;
+   \draw[->, thin,] (0,0,0.4*\L)++(0:0) --++ (0+180:2*\A);
+  \draw[->, thin,] (0,0,0.4*\L)++(90:0) --++ (90+180:\A);
+  \draw[->, thin,] (0,0,0.4*\L)++(90+180:0) --++ (90+0:\A);
+  \draw[->,thin,] (0,0,0.4*\L)++(180:0) --++ (180+180:2*\A);
+  \begin{scope}[canvas is xy plane at z=0.4*\L]
+    \draw[thick,dashed] {(0,0) ellipse (2*1.4 and 1.4)};
+  \end{scope}
   %Vertical components
   \begin{scope}[shift={(0,0,0*\L/2)}]
-    \draw[samples=100,smooth,variable=\z,domain=0.4*\L:1.*\M,very thick]
-      plot(0,{\A*cos(\k*\z)},\z);
-    \foreach \i [evaluate={\z=\i*1.*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
-      \ifnum\c=1
-        \draw[very thin] (0,0,\z) --++ (90:{\A*cos(\k*\z)});
-      \fi
-    }
-    \draw[samples=100,smooth,variable=\z,domain=0:0.4*\L,,gray!50,thin]
-      plot(0,{\A*cos(\k*\z)},\z);
-    \foreach \i [evaluate={\z=\i*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
+   
+    \foreach \i [evaluate={\z=\i*\M/\nvec; \c=int(\i!=\nvec);}] in {0,...,\nvec}{
       \ifnum\c=1
         \draw[gray!30,thin] (0,0,\z) --++ (90:{\A*cos(\k*\z)});
       \fi
     }
-        \foreach \i [evaluate={\z=\i*\M/\nwave/2}] in {0,...,8}{
-         \draw[fill=white]  (0,0,\z) --++ (0:0) circle (1.5pt);
-    }
-    \foreach \i [evaluate={\p=\i*\M/\nwave/2+\M/\nwave/4}] in {0,...,7}{
-         \draw[fill=gray]  (0,0,\p) --++ (0:0) circle (1.5pt);
-    }
-   
+ 
+    \draw[samples=100,smooth,variable=\z,domain=0.4*\L:1.*\M,very thick]
+      plot(0,{\A*cos(\k*\z)},\z);
+
+    \draw[,samples=100,smooth,variable=\z,domain=0:0.4*\L,,gray!50,thin]
+      plot(0,{\A*cos(\k*\z)},\z);
     %Horizontal components
-  \draw[samples=100,smooth,variable=\z,domain=0.4*\L:1.*\M,,very thick]
-      plot({2*\A*cos(\k*\z+90)},0,\z);
-    \foreach \i [evaluate={\z=\i*1.*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
+     \foreach \i [evaluate={\z=\i*1.*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
       \ifnum\c=1
         \draw[gray!30,thin] (0,0,\z) --++ (0:{2*\A*cos(\k*\z+90)});
       \fi
     }
-     \draw[samples=100,smooth,variable=\z,domain=0:0.4*\L,gray!50,thin]
+  \draw[,samples=100,smooth,variable=\z,domain=0.4*\L:1.*\M,,very thick]
       plot({2*\A*cos(\k*\z+90)},0,\z);
-    \foreach \i [evaluate={\z=\i*\M/\nvec; \c=int(\i!=\nvec/2);}] in {0,...,\nvec}{
-      \ifnum\c=1
-        \draw[gray!30,very thin] (0,0,\z) --++ (90:{\A*cos(\k*\z+90)});
-      \fi
+   
+     \draw[,samples=100,smooth,variable=\z,domain=0:0.4*\L,gray!50,thin]
+      plot({2*\A*cos(\k*\z+90)},0,\z);
+           \foreach \i [evaluate={\z=\i*\M/\nwave/2}] in {2,...,8}{
+         \draw[fill=white]  (0,0,\z) --++ (0:0) circle (1.5pt);
     }
+    \foreach \i [evaluate={\p=\i*\M/\nwave/2+\M/\nwave/4}] in {1,...,7}{
+         \draw[fill=gray]  (0,0,\p) --++ (0:0) circle (1.5pt);
+    }
+
   \end{scope}
-  
-  \draw[thin,dashed,] (1*\L,1*\L,0.4*\L) -- (1*\L,-1*\L,0.4*\L)--  (-1*\L,-1*\L,0.4*\L)-- (-1*\L,1*\L,0.4*\L)-- cycle;
-   \draw[->, thin] (0,0,0.4*\L)++(0:0) --++ (0+180:2*\A);
-  \draw[->, thin] (0,0,0.4*\L)++(90:0) --++ (90+180:\A);
-  \draw[->, thin,] (0,0,0.4*\L)++(90+180:0) --++ (90+0:\A);
-  \draw[->,thin] (0,0,0.4*\L)++(180:0) --++ (180+180:2*\A);
-  \begin{scope}[canvas is xy plane at z=0.4*\L]
-    \draw[thick,dashed] {(0,0) ellipse (2*1.4 and 1.4)};
-  \end{scope}
+
 \end{tikzpicture}    
