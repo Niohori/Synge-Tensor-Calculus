@@ -473,7 +473,15 @@ The first equation of $\mathbf{6.302}$ is not satisfied as $E_{n,n}= N$ with $N$
 \begin{tcolorbox}
 Prove a similar statement for the electric and magnetic vectors of the complementary electromagnetic field.
 \end{tcolorbox}
-$$\mathbf{6.306}: \spatie \ \frac{1}{c^2}\frac{\partial^2E_r}{\partial t^2} -E_{r,mn} = 0$$
+If we take the complex conjugate of $\mathbf{6.324}$ and subtract, we obtain after multiplying by $i$:
+\begin{align}
+E^{**}_r = -\epsilon_{rmn}H^{**}_nV_{,m}, \quad H^{**}_r = \epsilon_{rmn}E^{**}_nV_{,m}, 
+\end{align} 
+
+Hence, the vectors $V_{,r}, E^{**}_r$ and $ H^{**}_r$ form a right-handed orthogonal triad, and we obtain the relation
+\begin{align}
+E^{**}_rE^{**}_r=H^{**}_nH^{**}_n
+\end{align}
  $$\blacklozenge$$
 \newpage
 
@@ -494,6 +502,9 @@ Some thoughts about polarization
 \caption{Polarization of light}
 \label{fig:fig_p221}
 \end{figure}
+In the above figures, only the electric field is represented (the magnetic field has to be imagined perpendicular to the $E_r$ vector).\\
+In figure (a) we see an elliptical polarization which occurs when the EMW can be split into two perpendicular components. When $\left|\overline{E_1}\right|= \left|\overline{E_2}\right|$, one can speak about circular polarization. Figure (b) gives a view at a certain time $t$ of the result of $\overline{E_1}+\overline{E_2}$.//
+In figure (c) an observer 'sees' in the phase wave situated at $P$, an unpolarized EMV. After passing a linear polarizing material at $Q$ the observer will 'see' the EMV oscillating only in the vertical plane along $\mathbf{v}$ 
  $$\blacklozenge$$
 \newpage
 
@@ -577,6 +588,103 @@ b= -A\mathcal{E}_r\sin \frac{2\pi V}{\lambda}+B\mathcal{E}_r\cos \frac{2\pi V}{\
 \Rightarrow \quad E^{(0)}_r&= a+ib\\
 &=\mathcal{E}_r\left(A\left(z\right)+iB\left(z\right)\right)e^{-\frac{2\pi V}{\lambda}}
 \end{align}
-So, $E^{(0)}_r$ varies with the position but in such a way that the effect of $V$ on the direction of $E_r$ is annihilated.
+So, the direction of $E^{(0)}_r$ does not change as $\frac{E^{(0)}_r}{E^{(0)}_s} = \frac{\mathcal{E}_r}{\mathcal{E}_s}$  and the magnitude varies with the position but in such a way that the effect of $V$ is annihilated.
 $$\blacklozenge$$
+\newpage
+
+\section{p223 - Clarification}
+\begin{tcolorbox}
+Interrelationship between the identities $\mathbf{6.337}$ to $\mathbf{6.340}$
+\end{tcolorbox}
+\begin{align}
+\mathbf{6.337} \spatie &\frac{1}{c^2}\frac{\partial^2 \phi_r}{\partial t^2}+ \frac{1}{c} \pdv{\psi_{,r}}{t} = \phi_{r,mm}-\phi_{m,mr}\\
+\mathbf{6.338} \spatie &\frac{1}{c}\frac{\partial}{\partial t} \phi_{m,m}+ \psi_{,mm}=0\\
+\mathbf{6.339(a)} \spatie &\frac{1}{c^2}\frac{\partial^2 \phi_r}{\partial t^2}-  \phi_{r,mm}=0\\
+\mathbf{6.339(b)} \spatie &\frac{1}{c^2}\frac{\partial^2 \psi}{\partial t^2}-  \psi_{,mm}=0\\
+\mathbf{6.340} \spatie &\frac{1}{c}\frac{\partial \psi}{\partial t}+ \phi_{m,m}=0
+\end{align}
+then
+\begin{align}
+\text{(3) in (1)}\spatie & \frac{1}{c} \pdv{\psi_{,r}}{t} =-\phi_{m,mr}\\
+\pdv{\text{(5)}}{z_r}\spatie &\frac{1}{c}\frac{\partial \psi_{,r}}{\partial t}+ \phi_{m,mr}=0\quad \Leftrightarrow \quad \text{(6)}
+\end{align}
+What about $\text{(4)}$ ?\\
+\begin{align}
+\text{(4) in (2)}\spatie & \frac{1}{c}\frac{\partial}{\partial t} \phi_{m,m}=-\frac{1}{c^2}\frac{\partial^2 \psi}{\partial t^2}\\
+\int_{t} \text{(8)}\Rightarrow\spatie &\frac{1}{c}\frac{\partial \psi}{\partial t}+ \phi_{m,m}=C
+\end{align}
+In $\text{(9)}$, $C$ is a function, constant in $t$. Imposing $C=0$ gives still a valid solution and is equivalent with $\text{(5)}$.
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p223 - Clarification}
+\begin{tcolorbox}
+ $$\mathbf{6.342}\spatie \frac{1}{c^2}\frac{\partial^2 \Pi_r}{\partial t^2}- \Pi_{r,mm}=0$$
+\end{tcolorbox}
+\begin{align}
+\mathbf{6.341(a)} \spatie &\mathbf{E_n= \Pi_{m,mn}-\frac{1}{c^2}\frac{\partial^2 \Pi_n}{\partial t^2}}\\
+\mathbf{6.341(b)} \spatie &\mathbf{H_n= \frac{1}{c}\epsilon_{npq}\frac{\partial}{\partial t}\Pi_{q,p}}
+\end{align}
+We first check, under which conditions $\text{(1) and (2)}$ satisfy the Maxwell equations 
+\begin{align}\left\{ \begin{array}{ll}
+\text{6.301(a),(b)}&E_{m,m}=0,\spatie H_{m,m}=0\\\\
+\text{6.302(a)}&\frac{1}{c}\frac{\partial E_r}{\partial t}= \epsilon_{rmn}H_{n,m}\\\\
+\text{6.302(b)}&\frac{1}{c}\frac{\partial H_r}{\partial t}= -\epsilon_{rmn}E_{n,m}
+\end{array}\right.
+\end{align}
+and the wave equations 
+\begin{align}\left\{ \begin{array}{ll}
+\text{6.306}&\frac{1}{c^2}\frac{\partial^2 E_r}{\partial t^2}- E_{r,mm}=0\\\\
+\text{6.307}&\frac{1}{c^2}\frac{\partial^2 H_r}{\partial t^2}- H_{r,mm}=0
+\end{array}\right.
+\end{align}
+We have for $\mathbf{6.301(b)}$:
+\begin{align}
+\text{(2)}_{,n}\spatie H_{n,n} &= \frac{1}{c}\epsilon_{npq}\frac{\partial \Pi_{q,pn}}{\partial t}\\&= 0 \quad \left(  \Pi_{q,pn}=\Pi_{q,np } \text{ and }\epsilon_{npq}=-\epsilon_{pnq} \right)\end{align}
+So, $\mathbf{6.301(b)}$ is satisfied.\\\\
+For $\mathbf{6.302(b)}$ we have:
+\begin{align}               
+\text{6.302(b)}\spatie \frac{1}{c}\frac{\partial H_r}{\partial t}&= -\epsilon_{rmn}E_{n,m}\\
+\text{(1)}\quad \Rightarrow\spatie &= -\underbrace{\epsilon_{rmn}\Pi_{q,qnm}}_{=0}+\epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}\\
+&= \epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}
+\end{align}
+also for $\mathbf{6.301(a)}$:
+\begin{align}
+\text{(1)}_{,n}\spatie E_{n,n} &= \Pi_{m,mnn}-\frac{1}{c^2}\frac{\partial^2 \Pi_{n,n}}{\partial t^2}
+\end{align}
+and for $\mathbf{6.302(a)}$:
+\begin{align}
+\text{6.302(a)}\spatie \frac{1}{c}\frac{\partial E_r}{\partial t}&= \epsilon_{rmn}H_{n,m}\\
+\text{(2)}\quad \Rightarrow\spatie&= \epsilon_{rmn}\frac{1}{c}\epsilon_{npq}\frac{\partial}{\partial t}\Pi_{q,pm}\\
+\Rightarrow\spatie \frac{\partial E_r}{\partial t}&= \epsilon_{rmn}\epsilon_{npq}\frac{\partial}{\partial t}\Pi_{q,pm}\\
+&= \left(\delta_{rp}\delta_{mq}-\delta_{rq}\delta_{mp}\right)\frac{\partial}{\partial t}\Pi_{q,pm}\\
+&= \partial_t\Pi_{m,rm}-\partial_t\Pi_{r,mm}
+\end{align}
+Let's impose the condition on $\Pi_n$:
+\begin{align}
+\mathbf{6.342} \spatie &\mathbf{\Pi_{r,mm}=\frac{1}{c^2}\frac{\partial^2 \Pi_r}{\partial t^2}}
+\end{align}
+From $(1)$ we have
+\begin{align}
+\frac{1}{c^2}\frac{\partial^2 \Pi_n}{\partial t^2}&=\Pi_{m,mn}-E_n\\
+\text{(16) becomes}\spatie  \Pi_{r,mm}&=\Pi_{m,mn}-E_n\\
+\Rightarrow\spatie E_n &= \Pi_{m,mn}-\Pi_{r,mm}\\
+\Rightarrow\spatie \partial_tE_n &=\partial_t\Pi_{m,mn}- \partial_t\Pi_{r,mm}
+\end{align}
+Which is consistent with $\mathbf{6.302(a)}$ following $\text{(15)}$.\\\\
+We still have to prove that the expression $\text{(1) and (2)}$ are consistent with $\text{6.301(a)}$ and $\text{6.302(b)}$\\\\
+For $\mathbf{6.301(a)}$ we have
+\begin{align}
+\text{(16)}_{,n}\quad\Rightarrow\spatie \frac{1}{c^2}\frac{\partial^2 \Pi_{n,n}}{\partial t^2}&=\Pi_{n,mmn}\\
+\text{(10)}\quad\Rightarrow\spatie E_{n,n} &= \Pi_{m,mnn}-\Pi_{n,mmn}\\
+&=0
+\end{align}
+Which is consistent with $\mathbf{6.301(a)}$\\\\
+For $ \text{6.302(b)}$ we have $\text{(9)}$
+\begin{align}
+\frac{1}{c}\frac{\partial H_r}{\partial t}&=\epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}\\
+\text{(16)}_{,m}\quad\Rightarrow \spatie\frac{1}{c}\frac{\partial H_r}{\partial t}&=\epsilon_{rmn}\Pi_{n,qqm}
+\end{align}
+ $$\blacklozenge$$
 \newpage
