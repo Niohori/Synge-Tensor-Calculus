@@ -1,0 +1,61 @@
+\begin{tikzpicture}
+\coordinate (O) at (-2,-2);
+\coordinate (X) at (-0.4-2,-0.4-2);
+\coordinate (Y) at (1-2,0-2);
+\coordinate (Z) at (0-2,1-2);
+\draw [-](O)--(X);
+\draw [-](O)--(Y);
+\draw [-](O)--(Z);
+\coordinate (P) at (1,1);
+
+%First volume
+\node[right] at (P) {$z_m$};
+\draw  [fill= white](P)circle (1pt);
+\coordinate (ksi1) at (1.5,2.5) {} {};
+\coordinate (ksi2) at (1,3) {} {};
+\coordinate (ksi3) at (3,3) {} {};
+\coordinate (ksi4)  at (3.5,2.5) {};
+\coordinate (ksi5)  at (3,1.5) {};
+
+\node[above] at (ksi1) {$\zeta^{'(1)}$};
+\node[above] at (ksi2) {$\zeta^{'(2)}$};
+\node[above] at (ksi3) {$\zeta^{'(3)}$};
+\node[below] at (ksi4) {$\zeta^{'(..)}$};
+\node[below] at (ksi5) {$\zeta^{'(...)}$};
+\draw [-Latex, dotted](P)--(ksi1);
+\draw  [-Latex, dotted](P)--(ksi2);
+\draw  [-Latex, dotted](P)--(ksi3);
+\draw  [-Latex, dotted](P)--(ksi4);
+\draw  [-Latex, dotted](P)--(ksi5);
+\draw  [fill= white](ksi1)circle (1pt);
+\draw  [fill= white](ksi2)circle (1pt);
+\draw  [fill= white](ksi3)circle (1pt);
+v\draw  [fill= white](ksi4)circle (1pt);
+\draw  [fill= white](ksi5)circle (1pt);
+\draw  plot[smooth cycle, tension=.7] coordinates {(0.5,3) (0.5,2.5) (1,2) (2,1.5) (3,0.5) (3.5,1) (4,1.5) (4,2)  (3.5,3.5) (3,4) (2,4)   (1,4) };
+\node[below] at (3,0.5){$V^{'}_{\zeta}$};
+%second volume
+\coordinate (xksi1) at (-0.5,0.5) {} {} {};
+\coordinate (xksi2) at (-0.5,-1) {} {} {};
+\coordinate (xksi3) at (-1.5,-0.5) {} {} {};
+\coordinate (xksi4) at (0.5,-1) {} {};
+\coordinate (xksi5) at (0,-1.5) {} {};
+
+\node[above] at (xksi1) {$\zeta^{{"}(1)}$};
+\node[above] at (xksi2) {$\zeta^{{"}(2)}$};
+\node[above] at (xksi3) {$\zeta^{{"}(3)}$};
+\node[below] at (xksi4) {$\zeta^{{"}(..)}$};
+\node[below] at (xksi5) {$\zeta^{{"}(...)}$};
+\draw [-Latex, dotted](P)--(xksi1);
+\draw  [-Latex, dotted](P)--(xksi2);
+\draw  [-Latex, dotted](P)--(xksi3);
+\draw  [-Latex, dotted](P)--(xksi4);
+\draw  [-Latex, dotted](P)--(xksi5);
+\draw  [fill= white](xksi1)circle (1pt);
+\draw  [fill= white](xksi2)circle (1pt);
+\draw  [fill= white](xksi3)circle (1pt);
+\draw  [fill= white](xksi4)circle (1pt);
+\draw  [fill= white](xksi5)circle (1pt);
+\draw  plot[smooth cycle, tension=.7] coordinates {(-2,-0.5) (-1,-1)  (-0.5,-2) (0,-2.5)  (1,-1.5) (1,-1)  (1,0)  (0,0.5) (-0.5,1.5)  (-1.5,1) (-2,0.5) (-2,0) };
+\node[below] at(0,-2.5){$V^{"}_{\zeta}$};
+\end{tikzpicture}

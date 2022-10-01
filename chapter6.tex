@@ -687,3 +687,65 @@ Which is consistent with $\mathbf{6.301(a)}$\\\\
 
  $$\blacklozenge$$
 \newpage
+
+
+
+\section{p226 - Clarification}
+\begin{tcolorbox}
+ $$\mathbf{6.361}\spatie \Pi^{(0)}_r\left(z\right)= \int_{V_{\zeta}}P_r\left(\zeta\right)F\left(z, \zeta\right)dV_{\zeta}$$
+\end{tcolorbox}
+The reason why we can find a solution in the form $\mathbf{6.361}$ is because the condition $\mathbf{6.358}: \quad \Pi^{(0)}_{r,mm}+ k^2 \Pi^{(0)}_r = 0$ is a linear homogeneous differential equation. So any linear combination of solutions of this equation will also be a solution:\\
+Be
+\begin{align}
+\Pi^{(0)}_r = \overset{N}{\sum} C_n\overset{n}{\Pi}^{(0)}_r
+\end{align}
+where the $\overset{n}{\Pi}^{(0)}_r$ satisfy the condition  $\overset{n}{\Pi}^{(0)}_{r,mm}+ k^2 \overset{n}{\Pi}^{(0)}_r = 0$ an are evaluated at the same point $z_r$ but at different $zeta_n$.\\
+This is the situation as illustrated in the figure $(a)$ below.
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p227_6361_a.tex}}
+    \quad
+     \subfloat[]{\input{D:/MathLatex/images/fig_p227_6361_b.tex}}
+\caption{Integral form of Hertz vectors }
+\label{fig:fig_p221}
+\end{figure}
+If we take more and more points $\zeta_r$ and take the $C_k$ as an averaging factor $\frac{1}{N}$ then in the limit, we get $\Pi^{(0)}_r\left(z\right)= \int_{V_{\zeta}}P_r\left(\zeta\right)F\left(z, \zeta\right)dV_{\zeta}$ where $P_r\left(\zeta\right)$ is a kind of density vector field.
+On page $227$, it is mentioned that the vector field $P_r\left(\zeta\right)$ does not need to be continuous. This situation is illustrated in the figure $(b)$  where $V_{\zeta} =  V^{'}_{\zeta}\oplus V^{"}_{\zeta}$
+ $$\blacklozenge$$
+\newpage
+
+
+
+\section{p227 - Exercise}
+\begin{tcolorbox}
+Show that Maxwell's equation in the form $\mathbf{6.356}$ are satisfied by 
+ $$\begin{array}{ll}& E^{(0)}_r= ik\epsilon_{rpq}\int_{V_{\zeta}}Q_q\left(\zeta\right)F_{,p}dV_{\zeta}\\
+ \mathbf{6.363}&\\
+ &H^{(0)}_r= \int_{V_{\zeta}}Q_m\left(\zeta\right)\left(F_{,mr}+k^2F\delta_{mr}\right) dV_{\zeta}
+ \end{array}$$
+ where $Q_r\left(\zeta\right)$ is an arbitrary vector field, and $F$ is as in $\mathbf{6.344}$
+\end{tcolorbox}
+Let's first look at this with a discrete point and define 
+\begin{align}
+ E^{(0)}_r&= ik\epsilon_{rpq}\Pi^{(0)}_{q,p}\\
+ H^{(0)}_r&= \Pi^{(0)}_{m,mr}+k^2\Pi^{(0)}_r
+\end{align}
+We check whether that Maxwell's equation in the form $\mathbf{6.356}$ are satisfied:
+\begin{align}
+&-ikE^{(0)}_r= \epsilon_{rmn}H^{(0)}_{n,m}\\
+\text{(1) and (2)}\quad\Rightarrow \spatie &-ikik\epsilon_{rpq}\Pi^{(0)}_{q,p}= \underbrace{\epsilon_{rmn}\Pi^{(0)}_{q,qmn}}_{=0}+\epsilon_{rmn}k^2\Pi^{(0)}_{n,m}\\
+\Rightarrow\spatie &k^2\epsilon_{rpq}\Pi^{(0)}_{q,p}= \epsilon_{rmn}k^2\Pi^{(0)}_{n,m}
+\end{align}
+So the first Maxwell equation is satisfied.\\
+For the second
+\begin{align}
+&ikH^{(0)}_r= \epsilon_{rmn}E^{(0)}_{n,m}\\
+\text{(1) and (2)}\quad\Rightarrow \spatie &ik\Pi^{(0)}_{m,mr}+ik^3\Pi^{(0)}_r= \epsilon_{rmn}ik\epsilon_{npq}\Pi^{(0)}_{q,pm}\\
+\Rightarrow\spatie &\Pi^{(0)}_{m,mr}+k^2\Pi^{(0)}_r= \left(\delta_{rp}\delta_{mq}-\delta_{rq}\delta_{mp}\right)\Pi^{(0)}_{q,pm}\\
+\Rightarrow\spatie &\Pi^{(0)}_{m,mr}+k^2\Pi^{(0)}_r= \Pi^{(0)}_{m,mr}-\Pi^{(0)}_{r,mm}\\
+\Rightarrow\spatie &\Pi^{(0)}_{r,mm}+k^2\Pi^{(0)}_r= \Pi^{(0)}_{m,mr}-\Pi^{(0)}_{m,mr}=0
+\end{align}
+Conclusion, $(1)$ and $(2)$ are valid expressions of a EMW provided that the condition (10) is respected.
+The rest of the reasoning is identical as for  the previous form for $E^{(0)}_r$ and $H^{(0)}_r$ when we take a linear combination of $\overset{n}{\Pi}^{(0)}_r$, each satisfying (10) and taking the limit on volume $V_{\zeta}$ while expressing $\Pi^{(0)}_{r}$ as $Q_{r}\left(\zeta \right)F\left(z,\zeta\right)$.
+ $$\blacklozenge$$
+\newpage
