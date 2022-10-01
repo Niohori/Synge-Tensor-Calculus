@@ -633,7 +633,7 @@ We first check, under which conditions $\text{(1) and (2)}$ satisfy the Maxwell 
 \text{6.302(b)}&\frac{1}{c}\frac{\partial H_r}{\partial t}= -\epsilon_{rmn}E_{n,m}
 \end{array}\right.
 \end{align}
-and the wave equations 
+with the wave equations: 
 \begin{align}\left\{ \begin{array}{ll}
 \text{6.306}&\frac{1}{c^2}\frac{\partial^2 E_r}{\partial t^2}- E_{r,mm}=0\\\\
 \text{6.307}&\frac{1}{c^2}\frac{\partial^2 H_r}{\partial t^2}- H_{r,mm}=0
@@ -645,10 +645,13 @@ We have for $\mathbf{6.301(b)}$:
 So, $\mathbf{6.301(b)}$ is satisfied.\\\\
 For $\mathbf{6.302(b)}$ we have:
 \begin{align}               
-\text{6.302(b)}\spatie \frac{1}{c}\frac{\partial H_r}{\partial t}&= -\epsilon_{rmn}E_{n,m}\\
-\text{(1)}\quad \Rightarrow\spatie &= -\underbrace{\epsilon_{rmn}\Pi_{q,qnm}}_{=0}+\epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}\\
-&= \epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}
+\text{6.302(b)}\spatie &\frac{1}{c}\frac{\partial H_r}{\partial t}= -\epsilon_{rmn}E_{n,m}\\
+\text{(2)}_{,t}\quad \Rightarrow\spatie &\frac{1}{c}\epsilon_{npq}\frac{\partial^2}{\partial t^2}\Pi_{q,p}= -\epsilon_{rmn}E_{n,m}\\
+\text{(1) in (8)}\quad \Rightarrow\spatie &\frac{1}{c}\epsilon_{npq}\frac{\partial^2}{\partial t^2}\Pi_{q,p}= -\underbrace{\epsilon_{rmn}\Pi_{q,qnm}}_{=0}+\epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}\\
+\Rightarrow\spatie &\frac{1}{c}\epsilon_{npq}\frac{\partial^2}{\partial t^2}\Pi_{q,p}= \epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}
 \end{align}
+So, $\mathbf{6.302(b)}$ is satisfied.\\\\
+We still have to prove that the expression $\text{(1) and (2)}$ are consistent with $\text{6.301(a)}$ and $\text{6.302(a)}$\\\\
 also for $\mathbf{6.301(a)}$:
 \begin{align}
 \text{(1)}_{,n}\spatie E_{n,n} &= \Pi_{m,mnn}-\frac{1}{c^2}\frac{\partial^2 \Pi_{n,n}}{\partial t^2}
@@ -668,23 +671,19 @@ Let's impose the condition on $\Pi_n$:
 From $(1)$ we have
 \begin{align}
 \frac{1}{c^2}\frac{\partial^2 \Pi_n}{\partial t^2}&=\Pi_{m,mn}-E_n\\
-\text{(16) becomes}\spatie  \Pi_{r,mm}&=\Pi_{m,mn}-E_n\\
+\text{(17) becomes}\spatie  \Pi_{r,mm}&=\Pi_{m,mn}-E_n\\
 \Rightarrow\spatie E_n &= \Pi_{m,mn}-\Pi_{r,mm}\\
 \Rightarrow\spatie \partial_tE_n &=\partial_t\Pi_{m,mn}- \partial_t\Pi_{r,mm}
 \end{align}
-Which is consistent with $\mathbf{6.302(a)}$ following $\text{(15)}$.\\\\
-We still have to prove that the expression $\text{(1) and (2)}$ are consistent with $\text{6.301(a)}$ and $\text{6.302(b)}$\\\\
+Which is consistent with $\mathbf{6.302(a)}$ following $\text{(16)}$.\\\\
+
 For $\mathbf{6.301(a)}$ we have
 \begin{align}
 \text{(16)}_{,n}\quad\Rightarrow\spatie \frac{1}{c^2}\frac{\partial^2 \Pi_{n,n}}{\partial t^2}&=\Pi_{n,mmn}\\
-\text{(10)}\quad\Rightarrow\spatie E_{n,n} &= \Pi_{m,mnn}-\Pi_{n,mmn}\\
+\text{(11)}\quad\Rightarrow\spatie E_{n,n} &= \Pi_{m,mnn}-\Pi_{n,mmn}\\
 &=0
 \end{align}
 Which is consistent with $\mathbf{6.301(a)}$\\\\
-For $ \text{6.302(b)}$ we have $\text{(9)}$
-\begin{align}
-\frac{1}{c}\frac{\partial H_r}{\partial t}&=\epsilon_{rmn}\frac{1}{c^2}\frac{\partial^2 \Pi_{n,m}}{\partial t^2}\\
-\text{(16)}_{,m}\quad\Rightarrow \spatie\frac{1}{c}\frac{\partial H_r}{\partial t}&=\epsilon_{rmn}\Pi_{n,qqm}
-\end{align}
+
  $$\blacklozenge$$
 \newpage
