@@ -709,7 +709,7 @@ This is the situation as illustrated in the figure $(a)$ below.
 \caption{Integral form of Hertz vectors }
 \label{fig:fig_p221}
 \end{figure}
-If we take more and more points $\zeta_r$ and take the $C_k$ as an averaging factor $\frac{1}{N}$ then in the limit, we get $\Pi^{(0)}_r\left(z\right)= \int_{V_{\zeta}}P_r\left(\zeta\right)F\left(z, \zeta\right)dV_{\zeta}$ where $P_r\left(\zeta\right)$ is a kind of density vector field.
+If we take more and more points $\zeta_r$ and take the $C_k$ as a weight  factor, then in the limit, we get $\Pi^{(0)}_r\left(z\right)= \int_{V_{\zeta}}P_r\left(\zeta\right)F\left(z, \zeta\right)dV_{\zeta}$ where $P_r\left(\zeta\right)$ is a kind of density vector field.
 On page $227$, it is mentioned that the vector field $P_r\left(\zeta\right)$ does not need to be continuous. This situation is illustrated in the figure $(b)$  where $V_{\zeta} =  V^{'}_{\zeta}\oplus V^{"}_{\zeta}$
  $$\blacklozenge$$
 \newpage
@@ -747,5 +747,187 @@ For the second
 \end{align}
 Conclusion, $(1)$ and $(2)$ are valid expressions of a EMW provided that the condition (10) is respected.
 The rest of the reasoning is identical as for  the previous form for $E^{(0)}_r$ and $H^{(0)}_r$ when we take a linear combination of $\overset{n}{\Pi}^{(0)}_r$, each satisfying (10) and taking the limit on volume $V_{\zeta}$ while expressing $\Pi^{(0)}_{r}$ as $Q_{r}\left(\zeta \right)F\left(z,\zeta\right)$.
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p228 - Exercise}
+\begin{tcolorbox}
+Write out Maxwell's equations in terms of a magnetic vector and a skew-symmetric electric tensor.
+\end{tcolorbox}
+Let's  define 
+\begin{align}
+ &E_{rm}= \epsilon_{rmn}E_n\\
+ \Rightarrow\spatie &E_r = \half \epsilon_{rmn}E_{mn}
+\end{align}
+Maxwell's equation :
+\begin{align}\left\{ \begin{array}{ll}
+\text{6.301(a),(b)}&E_{m,m}=0,\spatie H_{m,m}=0\\\\
+\text{6.302(a)}&\frac{1}{c}\frac{\partial E_r}{\partial t}= \epsilon_{rmn}H_{n,m}\\\\
+\text{6.302(b)}&\frac{1}{c}\frac{\partial H_r}{\partial t}= -\epsilon_{rmn}E_{n,m}
+\end{array}\right.
+\end{align}\\\\
+$\mathbf{6.302(a)}$:
+\begin{align}
+\text{6.302(a)}\times\epsilon_{rmn}\Rightarrow\spatie \frac{1}{c}\frac{\partial E_{rm}}{\partial t}&= -\epsilon_{rmn}\epsilon_{npq}H_{q,p}\\
+&= \left(\delta{mp}\delta{rq}-\delta{mq}-\delta{rp}\right)H_{q,p}\\
+&= H_{r,m}-H_{m,r}
+\end{align}\\
+So,
+$$\mathbf{\frac{\partial E_{rm}}{\partial t}=H_{r,m}-H_{m,r}}$$\\
+$\mathbf{6.302(b)}$:\\
+\begin{align}
+\text{(2) in 6.302(b)}\Rightarrow\spatie \frac{1}{c}\frac{\partial H_r}{\partial t}&= \half \epsilon_{rmn}\epsilon_{npq}E_{pq,m}\\
+&= \half \left( \delta_{rp}\delta_{mq}-\delta_{rq}\delta_{pm}\right)E_{pq,m}\\
+&= \half \left( E_{rm,m} -E_{mr,m}\right)\\
+&= E_{rm,m} \quad\text{(}E_{rm}\text{ is skew-symmetric)}
+\end{align}\\
+So,
+$$\mathbf{\frac{1}{c}\frac{\partial H_r}{\partial t}= E_{rm,m}}$$\\
+\\\\
+$\mathbf{6.301(a)}$:\\
+\begin{align}
+\text{(2) in 6.301(a)}\quad\Rightarrow \spatie \epsilon_{rmn}E_{mn,r}=0
+\end{align}
+As this equation is homogeneous, we can permute the indices in $E_{mn,r}$ and write $\epsilon_{rmn}E_{rn,m}=0$ and $\epsilon_{rmn}E_{mr,n}=0$.\\
+Adding this three equation together we get 
+$$\mathbf{E_{mn,r}+E_{rn,m}+E_{mr,n}=0}$$\\
+\\\\
+$\mathbf{6.302(b)}$:\\
+As in this case, nothing changes for $H_r$ we have\\
+$$\mathbf{H_{n,n}=0}$$\\
+ $$\blacklozenge$$
+ \newpage
+ 
+
+\section{p229 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{6.371}\spatie F_{\alpha\beta} = H_{\alpha\beta}, \ =-F_{4\alpha}=E_{\alpha}, \ F_{44}=0$$
+$$\mathbf{6.374}\spatie g_{\alpha\beta} = a_{\alpha\beta}, \ g_{\alpha4}=0, \ g_{44}=-1$$
+\end{tcolorbox}
+For clarity this give in matrix form
+\begin{align}
+\left(F_{mn}\right)=\left(\begin{matrix}
+0&H_3&H_2&E_1\\
+-H_3&0&H_1&E_2\\
+H_2&-H_1&0&E_3\\
+-E_1&-E_2&-E_3&0\\
+\end{matrix}\right)
+\end{align}
+\begin{align}
+\left(g_{mn}\right)=\left(\begin{matrix}
+a_{11}&a_{12}&a_{13}&0\\
+a_{12}&a_{22}&a_{23}&0\\
+a_{13}&a_{23}&a_{33}&0\\
+0&0&0&-1\\
+\end{matrix}\right)
+\end{align}
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p231 - Exercise}
+\begin{tcolorbox}
+Show that with homogeneous coordinates $z-r$ ($z_1,z_2,z_3$ being rectangular Cartesians in space and $z_4= ict=ix^4$ ) Maxwell's equations read
+$$ F_{rm,n}+F_{mn,r}+F_{nr,m}=0, \ F_{rm,m}=0$$
+Write out the components of $F_{mn}$ in terms of the real electric and magnetic vectors, noting which components are real and which are imaginary.
+\end{tcolorbox}
+We use the same convention as in the book: Greek indices are restricted to the space manifold. Extending this manifold to a $4$ dimensional manifold, latin suffixes will be used.
+We have $\mathbf{6.369}$:
+\begin{align}
+\left\{\begin{array}{ll}
+\text{(a}&\frac{1}{c}\frac{\partial E_r}{\partial t}= a^{mn}H_{rm|n}\\\\
+\text{(b)}&\frac{1}{c}\frac{\partial H_{rm}}{\partial t}= E_{r,m}-E_{m,r}\\\\
+\text{(c)}&a^{mn}E_{n|m}=0\\\\
+\text{(d)}&H_{rm,n}+H_{mn,r}+H_{nr,m}=0
+\end{array}\right.
+\end{align}
+We rewrite (1):
+\begin{align}
+\left\{\begin{array}{ll}
+\text{(a)}&\frac{\partial E_{\alpha}}{\partial (ict)}= -a^{\beta\gamma}H_{\alpha\beta|\gamma}\\\\
+\text{(b)}&i\frac{\partial H_{\alpha\beta}}{\partial (ict)}= E_{\alpha,\beta}-E_{\beta,\alpha}\\\\
+\text{(c)}&a^{\alpha\beta}E_{\beta|\alpha}=0\\\\
+\text{(d)}&H_{\alpha\beta,\gamma}+H_{\beta\gamma,\alpha}+H_{\gamma\alpha,\beta}=0
+\end{array}\right.
+\end{align}
+instead of  $\mathbf{6.371}$ let's define:
+\begin{align}
+&F_{\alpha\beta} =H_{\alpha\beta} , \  F_{\alpha4} =-F_{4\alpha} =-iE_{\alpha}, \ F_{44}=0\\
+\Rightarrow \spatie &E_{\alpha}= iF_{\alpha4} =-iF_{4\alpha}
+\end{align}
+
+Using $(4)$, (2) becomes
+\begin{align}
+\left\{\begin{array}{ll}
+\text{(a)}&-\frac{\partial F_{\alpha4}}{\partial (ict)}= a^{\beta\gamma}F_{\alpha\beta|\gamma}\\\\
+\text{(b)}&i\frac{\partial F_{\alpha\beta}}{\partial (ict)}= iF_{\alpha4,\beta}-iF_{\beta4,\alpha}\\\\
+\text{(c)}&a^{\alpha\beta}F_{\beta4,\alpha}=0\\\\
+\text{(d)}&F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}=0
+\end{array}\right.
+\end{align}
+For homogeneous coordinates we have $a^{\alpha\beta}=1$ and $a^{\alpha4}=1$ so:
+\begin{align}
+\left\{\begin{array}{ll}
+\text{(a)}&F_{\alpha4,4}= -F_{\alpha\beta|\beta}\\\\
+\text{(b)}& F_{\alpha\beta,4}= F_{\alpha4,\beta}-F_{\beta4,\alpha}\\\\
+\text{(c)}&F_{\beta4,\beta}=0\\\\
+\text{(d)}&F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}=0
+\end{array}\right.
+\end{align}
+
+Let's look what happens when we extend the range  $\alpha,\beta,\gamma$ to $4$. First let's extend  $\gamma$ to $4$. The left part of equation (6d) can be written as 
+\begin{align}
+F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}+ F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}
+\end{align}
+Consider 
+\begin{align}
+P= F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}
+\end{align}
+Let's extend $\alpha$ to $4$:
+\begin{align}
+P^{'}&= F_{4\beta,4}+F_{\beta4,4}+\underbrace{F_{44,\beta}}_{=0}\\
+&= \underbrace{F_{4\beta,4}+F_{\beta4,4}}_{=0}\quad \text{(}F_{mn} \text{ is skew-symmetric)}
+\end{align}
+Extend $\beta$ to $4$:
+\begin{align}
+P^{"}&= F_{44,4}+F_{44,4}+F_{44,4}\\
+&=0\quad \text{(}F_{mn} \text{ is skew-symmetric)}
+\end{align}
+So, we only have to prove that $P= F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}=0$.\\
+From $(6b)$ we get:
+\begin{align}
+P&= F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}\\
+&= F_{\alpha4,\beta}-F_{\beta4,\alpha}+F_{\beta4,\alpha}-F_{\alpha4,\beta}\\
+&=0
+\end{align}
+We get so,
+\begin{align}
+F_{rm,n}+F_{mn,r}+F_{nr,m}=0
+\end{align}
+Consider now equation $(6c)$ and extend the suffixes from $3$ to $4$.\\
+What is the value of the following expression?
+\begin{align}
+Q&=F_{4m,m}=F_{4\beta,\beta} + F_{44,4}
+\end{align}
+Obviously, $F_{mn}$ being skew-symmetric we have $F_{44}=0\quad\Rightarrow\quad F_{44,4}=0 \quad \Rightarrow\quad Q=0$.\\
+So, the Maxwell equations reduce to 
+\begin{align}\left\{\begin{array}{l}
+F_{rm,n}+F_{mn,r}+F_{nr,m}=0\\
+F_{rm,m}=0
+\end{array}\right.
+\end{align}
+For the explicit expression of $F_{mn}$ we get from $(3)$ and $(4)$:
+\begin{align}
+F_{mn}=
+\left(
+\begin{matrix}
+0&H_3&-H_1&-iE_1\\
+H_3&0&H_2&-iE_2\\
+H_1&-H_2&0&-iE_3\\
+iE_1&iE_2&iE_3&0\\
+\end{matrix}
+\right)
+\end{align}
  $$\blacklozenge$$
 \newpage
