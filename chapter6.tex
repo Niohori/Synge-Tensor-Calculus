@@ -236,9 +236,9 @@ $$\mathbf{6.147} \spatie \partial_t v_r + v_s v_{r|s} = X_r - \rho^{-1} p_{,r}$$
 \end{align}
 By $\mathbf{2.527}$ page 53 we  have $a^{rs}_{|t}=0$ and thus 
 \begin{align}
-v^{r}_{|s}= \left(a^{mr}v_{r}\right)_{|s} &= \left(a^{mr}\right)_{|n}v_{r}+a^{mr}v_{r|s}= a^{mr}v_{r|s} \\
+v^{m}_{\ |s}= \left(a^{mr}v_{r}\right)_{|s} &= \left(a^{mr}\right)_{|n}v_{r}+a^{mr}v_{r|s}= a^{mr}v_{r|s} \\
 (2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{\ \ |s} &= X^m - \rho^{-1} a^{mr}p_{,r}\\
-(2) \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{\ \ |s} &= X^m - \rho^{-1} p^{'}_{,r}
+ \Rightarrow \spatie \partial_t  v^m + v_s v^{m}_{\ \ |s} &= X^m - \rho^{-1} p^{'}_{,r}
 \end{align}
 Note that $p_{,r}$ in $(1)$ and $(5)$ are not the same vector function as $p_{,r}$ can be written as $\overline{\nabla}p$ which is coordinate system  dependent.
  $$\blacklozenge$$
@@ -836,7 +836,7 @@ We use the same convention as in the book: Greek indices are restricted to the s
 We have $\mathbf{6.369}$:
 \begin{align}
 \left\{\begin{array}{ll}
-\text{(a}&\frac{1}{c}\frac{\partial E_r}{\partial t}= a^{mn}H_{rm|n}\\\\
+\text{(a)}&\frac{1}{c}\frac{\partial E_r}{\partial t}= a^{mn}H_{rm|n}\\\\
 \text{(b)}&\frac{1}{c}\frac{\partial H_{rm}}{\partial t}= E_{r,m}-E_{m,r}\\\\
 \text{(c)}&a^{mn}E_{n|m}=0\\\\
 \text{(d)}&H_{rm,n}+H_{mn,r}+H_{nr,m}=0
@@ -928,6 +928,85 @@ H_1&-H_2&0&-iE_3\\
 iE_1&iE_2&iE_3&0\\
 \end{matrix}
 \right)
+\end{align}
+ $$\blacklozenge$$
+\newpage
+
+
+
+\section{p234 - Exercise 1}
+\begin{tcolorbox}
+For a fluid in motion referred to curvilinear coordinates, the kinetic energy of the fluid in any region $R$ is
+$$T=\half\int_R\rho v_rv^rdV$$
+Use the equation of motion $\mathbf{6.147}$ to show that, if we follow the particles which compose $R$, we have 
+$$\dv{T}{t}= -\int_S p n_r v^rdS + \int_R \theta pdV + \int_R\rho v_rX^rdV$$
+where $S$ is the bounding surface to $R$, and $n_r$ the unit vector normal to $S$ and drawn outward. Show further that if, instead of following the particles, we calculate the rate of change of $T$ for a fixed portion of space, we get the above expression with the following additional term $$ -\half\int_S\rho n_rv^rv_sv^sdS$$
+\end{tcolorbox}
+Let's remember that 
+\begin{align}
+\theta = v^r_{\ |r}\spatie  \mathbf{(6.126}\text{ page 196.)}
+\end{align}
+and
+\begin{align}
+\left\{\begin{array}{lll}
+\text{6.147}&\frac{\partial v_r}{\partial t}+v^s v_{r|s} = X_r-\rho^{-1}p_{,r}&\text{(a)}\\\\
+\text{exercise page 201}&\frac{\partial v^r}{\partial t} + v_s v^{r}_{\ \ |s} = X^r - \rho^{-1} a^{rm}p_{,m}&\text{(b)}
+\end{array}\right.
+\end{align}
+First let us note that, for the first part of the question, we move with the particles which means that for the considered region the mass contained in this region will remain unchanged and hence $\rho dV$ can be considered as a constant when bringing the derivation operator inside the volume integral.\\
+So,
+\begin{align}
+T=\half\int_R\rho v_rv^rdV
+\end{align}
+\begin{align}
+\Rightarrow\spatie\dv{T}{t} &=\half\int_R \left(\fdv{v_r}{t}v^r+\fdv{v_r}{t}v^r\right) \rho dV\\
+&=\half\int_R \left[\left(\partial_t v_r+v^s v_{r|s}\right)v^r+v_r\left( \partial_t v^r + v_s v^{r}_{\ \ |s} \right)\right] \rho dV\\
+&=\half\int_R \left[\left(X_r-\rho^{-1}p_{,r}\right)v^r+v_r\left(X^r - \rho^{-1} a^{rm}p_{,m}\right)\right] \rho dV\\
+&=\half\int_R \left(\underbrace{X_rv^r}_{=X^rv_r}-\rho^{-1}p_{,r}v^r+X^rv_r - \rho^{-1} a^{rm}v_r p_{,m}\right) \rho dV\\
+&=-\half\int_R \left(p_{,r}v^r + \underbrace{a^{rm}v_r}_{= v^m} p_{,m}\right)  dV+\int_R\rho X^rv_r dV\\
+&=-\int_R p_{,r}v^r dV+\int_R \rho X^rv_r dV
+\end{align}
+Let's look at the expression $p_{,r}v^r$ in the first integral in (9).\\
+Obviously:
+\begin{align}
+&\left(pv^r\right)_{,r} = p_{,r}v^r+pv^r_{,r}\\
+\Rightarrow \spatie&p_{,r}v^r = \left(pv^r\right)_{,r} -pv^r_{,r}
+\end{align}
+Let's note also that
+\begin{align}
+\left(pv^r\right)_{|r} -pv^r_{\ |r} &=  \left(pv^r\right)_{,r} +\Gamma^{r}_{mr}\left(pv^m\right)-pv^r_{,r}-p\Gamma^{r}_{mr}v^m \\
+&=  \left(pv^r\right)_{,r}-pv^r_{,r} \\
+\text{(11) becomes}\spatie p_{,r}v^r&=\left(pv^r\right)_{|r} -pv^r_{\ |r}
+\end{align}
+Substituting in (9):
+\begin{align}
+\dv{T}{t} &=-\int_R \left(pv^r\right)_{|r} dV+\int_R pv^r_{\ |r} dV+\int_R \rho X^rv_r dV 
+\end{align}
+Using Green's theorem $ \int F_rn^rdS = \int F^r_{\ |r}dV$, and putting $ F^r=pv^r$:  
+\begin{align}
+\dv{T}{t} &=-\int_S p\underbrace{v_r n^r}_{=v^r n_r } dS+\int_R p\underbrace{v^r_{\ |r}}_{=\theta} dV+\int_R \rho X^rv_r dV 
+\end{align}
+giving
+\begin{align}
+\dv{T}{t} &=-\int_S p v^r n_rdS+\int_R p\theta dV+\int_R \rho X^rv_r dV 
+\end{align}
+$$\lozenge$$\\\\
+What if we look at the rate of change of $T$ in a fixed region?\\
+Then $\rho dV$ can't be considered as a constant and bringing the derivative operator under the integral will generate an additional term
+\begin{align}
+\half\int_R v_rv^r \fdv{\rho}{t} dV
+\end{align}
+As we fix the spatial coordinates, we have $\fdv{\rho}{t}= \partial_t \rho$ and by $\mathbf{6.127b}$ we have 
+\begin{align}
+\partial_t \rho= -\left(\rho v^r\right)_{|r}
+\end{align}
+So $(18)$ becomes
+\begin{align}
+\text{(18)}=-\half\int_R v_sv^s \left(\rho v^r\right)_{|r} dV
+\end{align}
+Using again Green's theorem $ \int F_rn^rdS = \int F^r_{\ |r}dV$ with   $ F^r=\rho v^r$ and nothing that $v_sv^s$ is an invariant: 
+\begin{align}
+\text{(18)}=-\half\int_S v_sv^s \rho v^rn_r dV
 \end{align}
  $$\blacklozenge$$
 \newpage
