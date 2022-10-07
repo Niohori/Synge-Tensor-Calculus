@@ -699,7 +699,7 @@ Be
 \begin{align}
 \Pi^{(0)}_r = \overset{N}{\sum} C_n\overset{n}{\Pi}^{(0)}_r
 \end{align}
-where the $\overset{n}{\Pi}^{(0)}_r$ satisfy the condition  $\overset{n}{\Pi}^{(0)}_{r,mm}+ k^2 \overset{n}{\Pi}^{(0)}_r = 0$ an are evaluated at the same point $z_r$ but at different $zeta_n$.\\
+where the $\overset{n}{\Pi}^{(0)}_r$ satisfy the condition  $\overset{n}{\Pi}^{(0)}_{r,mm}+ k^2 \overset{n}{\Pi}^{(0)}_r = 0$ an are evaluated at the same point $z_r$ but at different $\zeta_n$.\\
 This is the situation as illustrated in the figure $(a)$ below.
 \begin{figure}[H]%
     \centering
@@ -923,7 +923,7 @@ F_{mn}=
 \left(
 \begin{matrix}
 0&H_3&-H_1&-iE_1\\
-H_3&0&H_2&-iE_2\\
+-H_3&0&H_2&-iE_2\\
 H_1&-H_2&0&-iE_3\\
 iE_1&iE_2&iE_3&0\\
 \end{matrix}
@@ -942,15 +942,15 @@ Use the equation of motion $\mathbf{6.147}$ to show that, if we follow the parti
 $$\dv{T}{t}= -\int_S p n_r v^rdS + \int_R \theta pdV + \int_R\rho v_rX^rdV$$
 where $S$ is the bounding surface to $R$, and $n_r$ the unit vector normal to $S$ and drawn outward. Show further that if, instead of following the particles, we calculate the rate of change of $T$ for a fixed portion of space, we get the above expression with the following additional term $$ -\half\int_S\rho n_rv^rv_sv^sdS$$
 \end{tcolorbox}
-Let's remember that 
+Let's recall that 
 \begin{align}
 \theta = v^r_{\ |r}\spatie  \mathbf{(6.126}\text{ page 196.)}
 \end{align}
 and
 \begin{align}
 \left\{\begin{array}{lll}
-\text{6.147}&\frac{\partial v_r}{\partial t}+v^s v_{r|s} = X_r-\rho^{-1}p_{,r}&\text{(a)}\\\\
-\text{exercise page 201}&\frac{\partial v^r}{\partial t} + v_s v^{r}_{\ \ |s} = X^r - \rho^{-1} a^{rm}p_{,m}&\text{(b)}
+\text{(a)}&\frac{\partial v_r}{\partial t}+v^s v_{r|s} = X_r-\rho^{-1}p_{,r}&\quad \text{see (6.147)}\\\\
+\text{(b)}&\frac{\partial v^r}{\partial t} + v_s v^{r}_{\ \ |s} = X^r - \rho^{-1} a^{rm}p_{,m}&\quad \text{ see exercise page 201}
 \end{array}\right.
 \end{align}
 First let us note that, for the first part of the question, we move with the particles which means that for the considered region the mass contained in this region will remain unchanged and hence $\rho dV$ can be considered as a constant when bringing the derivation operator inside the volume integral.\\
@@ -988,7 +988,7 @@ Using Green's theorem $ \int F_rn^rdS = \int F^r_{\ |r}dV$, and putting $ F^r=pv
 \end{align}
 giving
 \begin{align}
-\dv{T}{t} &=-\int_S p v^r n_rdS+\int_R p\theta dV+\int_R \rho X^rv_r dV 
+\mathbf{\dv{T}{t} =-\int_S p v^r n_rdS+\int_R p\theta dV+\int_R \rho X^rv_r dV} 
 \end{align}
 $$\lozenge$$\\\\
 What if we look at the rate of change of $T$ in a fixed region?\\
@@ -1008,5 +1008,62 @@ Using again Green's theorem $ \int F_rn^rdS = \int F^r_{\ |r}dV$ with   $ F^r=\r
 \begin{align}
 \text{(18)}=-\half\int_S v_sv^s \rho v^rn_r dV
 \end{align}
+ $$\blacklozenge$$
+\newpage
+
+
+
+\section{p235 - Exercise 2}
+\begin{tcolorbox}
+Consider a fluid in which $\rho$ is a function of $p$, moving under a conservative body force. Show that if the motion is steady, but not necessarily irrotational, then the following quantity is constant along each stream line:
+$$\half v_rv^r+P+U$$
+(a stream line is a curve which, at each point , has the direction of the velocity vector $v^r$).
+Compare and contrast this result with $\mathbf{6.154}$.
+\end{tcolorbox}
+What is given:
+
+\begin{align}
+\left\{\begin{array}{lll}
+\text{(a)}&\partial_t v_r + v^sv_{r|s} = X_r- \rho^{-1} p_{,r}&\quad \text{see (6.147)}\\\\
+\text{(b)}&P_{,r}= \rho^{-1} p_{,r}&\quad \text{ see (6.150)}\\\\
+\text{(c)}&X_{r}= -U_{,r}&\quad \text{ see (6.151)}
+\end{array}\right.
+\end{align}
+As the motion is stationary: $ \partial_t v_r =0$ and so .
+\begin{align}
+v^sv_{r|s} + U_{,r}+P_{,r}= 0
+\end{align}
+
+Let's consider a stream line given by the set of equations $x^r = x^r(u)$, where $u$ is a parameter. Then, by definition of a streamline, and considering a steady flow, we have $\dv{x^r}{u} = kv^r$. Considering $(2)$ we have 
+\begin{align}
+&v^sv_{r|s} + U_{,r}+P_{,r}= 0\\
+\times \dv{x^r}{u} \spatie &v^sv_{r|s}\dv{x^r}{u} + U_{,r}\dv{x^r}{u}+P_{,r}\dv{x^r}{u}= 0\\
+\spatie &v^sv_{r|s}\dv{x^r}{u} + \dv{U}{u}+\dv{P}{u}= 0
+\end{align}
+Let's look at the first term:
+\begin{align}
+v^sv_{r|s}\dv{x^r}{u}&=kv^sv_{r|s}v^r\\
+&=kv^s\left(a_{rm}v^m\right)_{|s}v^r\\
+&=kv^sv^m_{\  |s}a_{rm}v^r\\
+&=kv^sv^m_{\ |s}v_m\\
+&=kv^sv^r_{\ |s}v_r
+\end{align}
+So (5) can be equivalently written as $kv^sv_{r|s}v^r + \dv{U}{u}+\dv{P}{u}= 0$ and $kv^sv^r_{\  |s}v_r+ \dv{U}{u}+\dv{P}{u}= 0$. Summing these two gives
+\begin{align}
+&kv^s\left(v_{r|s}v^r+ v^r_{\  |s}v_r\right) + 2\dv{U}{u}+2\dv{P}{u}= 0\\
+\Leftrightarrow\spatie &kv^s\left(v_{r}v^r\right)_{|s} + 2\dv{U}{u}+2\dv{P}{u}= 0\\
+\Leftrightarrow\spatie &kv^s\left(v_{r}v^r\right)_{,s} + 2\dv{U}{u}+2\dv{P}{u}= 0\spatie v_{r}v^r \text{ is an invariant}\\
+\Leftrightarrow\spatie &\dv{x^s}{u}\left(v_{r}v^r\right)_{,s} + 2\dv{U}{u}+2\dv{P}{u}= 0\\
+\Leftrightarrow\spatie &\dv{\left(v_{r}v^r\right)}{u} + 2\dv{U}{u}+2\dv{P}{u}= 0
+\end{align}
+Integrating expression (15) gives 
+$$\mathbf{\half v_{r}v^r + U+P= C}$$
+with $C$ a constant along a streamline.
+$$\lozenge$$
+Compare and contrast this result with $\mathbf{6.154}$ (irrotational motion).
+$$-\partial_t\phi + \half a^{mn}\phi_{,m}\phi_{,n}+P+U=F(t)$$
+For a stationary motion ($\partial_t\phi=0, \ F(t)=constant$) the expression reduces to 
+$$\mathbf{\half a^{mn}\phi_{,m}\phi_{,n}+P+U=C}$$
+Replacing in the general expression $\half v_{r}v^r + U+P= C$, $v_{r}v^r $ by $v_r = -\phi_{,r}$ and $v^r = -a^{rm}\phi_{,m}$ gives obviously $\half a^{mn}\phi_{,m}\phi_{,n}+P+U=C$.
  $$\blacklozenge$$
 \newpage
