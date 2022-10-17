@@ -1067,3 +1067,54 @@ $$\mathbf{\half a^{mn}\phi_{,m}\phi_{,n}+P+U=C}$$
 Replacing in the general expression $\half v_{r}v^r + U+P= C$, $v_{r}v^r $ by $v_r = -\phi_{,r}$ and $v^r = -a^{rm}\phi_{,m}$ gives obviously $\half a^{mn}\phi_{,m}\phi_{,n}+P+U=C$.
  $$\blacklozenge$$
 \newpage
+
+
+
+\section{p235 - Exercise 3}
+\begin{tcolorbox}
+For the general motion of the fluid described in Exercise 2, prove that $$\dv{}{t}\int_C v_rdx^r =0$$
+where the integral is take round any closed curve, and $\dv{}{t}$ is the co-moving time derivative.
+\end{tcolorbox}
+
+\begin{figure}[H]%
+    \centering
+\input{D:/MathLatex/images/fig_p235_Ex3b.tex}
+\caption{Evolution of a closed co-moving curve }
+\label{fig:fig_p2235}
+\end{figure}
+Let's see what happens when a closed  curve moves during a time $dt$. All the particles along that curve $\partial\Sigma_t$ will move along stream lines and will form a new closed curve $\partial\Sigma_{t+dt}$. Also all particles lying on a surface $\Sigma_t$ enclosed by the closed curve will end on the surface $\Sigma_{t+dt}$.
+So we can use the Kelvin-Stokes theorem and form
+\begin{align}
+\oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rkj}v_{k,j}(n^r)dS
+\end{align}
+
+Consider now the surface formed by the envelope of the stream lines starting from the curve $\partial\Sigma_t$.
+
+What we try to achieve is to go from a curve integral to a volume integral using first the Kelvin-Stokes theorem followed by the divergence theorem and adding a term which we have to prove it is equal to zero
+\begin{align}
+\oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rkj}v_{k,j}(-n^r)dS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
+&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{t}}\epsilon_{rkj}v_{k,j}n^rdS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
+&= \iiint_V \epsilon_{rjk}v_{k,jr}dV\\
+&=0
+\end{align}
+Note that in the second term of the right expression, we changed the sign of the normal vector $\hat{n}$ as we want the normal vector on the surface point outward of the considered volume.\\\\
+
+So we have to prove that indeed,
+
+\begin{align}\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS=0\end{align}
+Nothing that $n^rdS$ can be expressed as the cross product of $\overline{v}dt$ and $d\overline{l}$ (the last being the line segment along the curve $\partial_t\Sigma$), we have  
+\begin{align}
+n^rdS&= \epsilon_{rpq}v^pdx^qdt
+\end{align}
+And get
+\begin{align}
+\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS&= \iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}\epsilon_{rpq}v^pdx^qdt\\
+&= \iint_{\Sigma_{s}}\left(\delta_{jp}\delta_{kq}-\delta_{jq}\delta_{kp}\right)v_{k,j}v^pdx^qdt\\
+&= \iint_{\Sigma_{s}}\left(v_{q,p}v^pdx^q-v_{p,q}v^pdx^q\right)dt\\\left(v_pdt = dx^p\right)\quad\Rightarrow\spatie
+&= \iint_{\Sigma_{s}}\left(v_{q,p}dx^pdx^q-v_{p,q}dx^pdx^q\right)\\
+&=0
+\end{align}
+So $(5)$ is proven and get $d\oint_{\partial\Sigma_{t}} v_rdx^r=0$ during an infinitesimal time $dt$ giving 
+$$\dv{}{t}\oint_{\partial\Sigma_{t}} v_rdx^r=0$$
+ $$\blacklozenge$$
+\newpage
