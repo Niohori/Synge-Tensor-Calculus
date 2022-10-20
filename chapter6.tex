@@ -1085,15 +1085,15 @@ where the integral is take round any closed curve, and $\dv{}{t}$ is the co-movi
 Let's see what happens when a closed  curve moves during a time $dt$. All the particles along that curve $\partial\Sigma_t$ will move along stream lines and will form a new closed curve $\partial\Sigma_{t+dt}$. Also all particles lying on a surface $\Sigma_t$ enclosed by the closed curve will end on the surface $\Sigma_{t+dt}$.
 So we can use the Kelvin-Stokes theorem and form
 \begin{align}
-\oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rkj}v_{k,j}(n^r)dS
+\oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rjk}v_{k,j}(n^r)dS
 \end{align}
 
 Consider now the surface formed by the envelope of the stream lines starting from the curve $\partial\Sigma_t$.
 
 What we try to achieve is to go from a curve integral to a volume integral using first the Kelvin-Stokes theorem followed by the divergence theorem and adding a term which we have to prove it is equal to zero
 \begin{align}
-\oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rkj}v_{k,j}(-n^r)dS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
-&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{t}}\epsilon_{rkj}v_{k,j}n^rdS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
+\oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rjk}v_{k,j}(-n^r)dS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
+&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{t}}\epsilon_{rjk}v_{k,j}n^rdS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
 &= \iiint_V \epsilon_{rjk}v_{k,jr}dV\\
 &=0
 \end{align}
@@ -1116,5 +1116,142 @@ And get
 \end{align}
 So $(5)$ is proven and get $d\oint_{\partial\Sigma_{t}} v_rdx^r=0$ during an infinitesimal time $dt$ giving 
 $$\dv{}{t}\oint_{\partial\Sigma_{t}} v_rdx^r=0$$
+ $$\blacklozenge$$
+\newpage
+
+
+\section{p235 - Exercise 4}
+\begin{tcolorbox}
+Curves having at each point the direction of the vorticity vector $\omega^r$ are called "vortex lines". Prove that $\int_{C} v_rdx^r$ has the same value for all closed curves $C$ which lie on the surface of the tube of vortex lines, and go once around the tube in the same sense. (Use Stokes' theorem; cf. 7.502.).
+\end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+\input{D:/MathLatex/images/fig_p235_Ex4a.tex}
+\caption{Vortex line tube }
+\label{fig:fig_p2235}
+\end{figure}
+We have in rectangular Cartesian coordinates
+\begin{align}
+\textbf{(6.128)}\quad\spatie &\omega_{jk}=\half\left(v_{k,j}-v_{j,k}\right)\\
+\textbf{(6.129)}\quad\spatie &\omega_r=\half\epsilon_{rjk}\omega_{jk}
+\end{align}
+So we can use the Kelvin-Stokes theorem and form
+\begin{align}
+\oint_{\partial\Sigma_{C^{'}}} {v_rdx^r }-\oint_{\partial\Sigma_{C}} v_rdx^r&= \iint_{\Sigma_{C^{'}}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{C}}\epsilon_{rjk}v_{k,j}n^rdS
+\end{align}
+Obviously, we have on the surface $\Sigma_{\omega}$ of the tube,  $\hat{\omega}\cdot\hat{n}_{\omega}=0$ and thus $\iint_{\Sigma_{\omega}}\omega_rn^rdS=0$.
+Expanding the terms under the integral gives (by $(6.129)$ and $(6.128)$)
+\begin{align}
+\iint_{\Sigma_{\omega}}\omega_rn^rdS&=\frac{1}{4}\iint_{\Sigma_{\omega}}\epsilon_{rjk}\left(v_{k,j}-v_{j,k}\right)n^rdS
+\end{align}
+As $\iint_{\Sigma_{\omega}}\omega_rn^rdS=0$ we can put 
+\begin{align}
+\iint_{\Sigma_{\omega}}\omega_rn^rdS&=\frac{1}{2}\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS-\frac{1}{2}\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{j,k}n^rdS\\
+&=\frac{1}{2}\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS-\frac{1}{2}\iint_{\Sigma_{\omega}}\epsilon_{rkj}v_{k,j}n^rdS\\
+&=\frac{1}{2}\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS+\frac{1}{2}\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS\\
+&=\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS\quad\left(=0\right)
+\end{align}
+Adding $(8)$ in $(3)$ we get 
+\begin{align}
+\oint_{\partial\Sigma_{C^{'}}} {v_rdx^r }-\oint_{\partial\Sigma_{C}} v_rdx^r&= \iint_{\Sigma_{C^{'}}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{C}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS
+\end{align}
+Note that in the second term of the right expression, we changed the sign of the normal vector $\hat{n}$ as we want the normal vector on the surface point outward of the considered volume.\\
+Using Green's theorem:
+\begin{align}
+\oint_{\partial\Sigma_{C^{'}}} {v_rdx^r }-\oint_{\partial\Sigma_{C}} v_rdx^r&= \iint_{\Sigma_{C^{'}}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{C}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{\omega}}\epsilon_{rjk}v_{k,j}n^rdS\\
+ &= \iiint_V \epsilon_{rjk}v_{k,jr}dV\\
+ &=0
+\end{align}
+where $V$ is the volume enclosed by the surfaces $\Sigma_{C}$, $\Sigma_{C^{'}}$ and $\Sigma_{\omega}$.\\
+And get $d\oint_{\partial\Sigma_{t}} v_rdx^r=0$ along  an infinitesimal displacement along the vortex line  giving 
+$$\dv{}{s}\oint_{\partial\Sigma_{t}} v_rdx^r=0$$ where $s$ is a parameter upon which a vortex line can be expressed. \\
+Hence $\oint_{\partial\Sigma_{t}} v_rdx^r$ is constant along a vortex line.
+
+ $$\blacklozenge$$
+\newpage
+
+
+
+\section{p235 - Exercise 5}
+\begin{tcolorbox}
+Prove that for the type of fluid described in Exercise 2, the voricity tensor satisfies the differential equations
+$$\dv{}{t}\omega_{rs} = \omega_{pr}v_{p,s} - \omega_{ps}v_{p,r}$$
+the coordinates being rectangular Cartesians. Write these equations for curvilinear coordinates.\\
+Deduce from these equations that, if $\omega_{rs}=0$ initially at some point $P$ in the fluid, these quantities will remain zero permanently for the particle which was initially at $P$.
+\end{tcolorbox}
+
+We have in rectangular Cartesian coordinates
+\begin{align}
+\textbf{(6.128)}\quad\spatie &\omega_{jk}=\half\left(v_{k,j}-v_{j,k}\right)\\
+\textbf{(6.129)}\quad\spatie &\omega_r=\half\epsilon_{rjk}\omega_{jk}\\
+\Rightarrow\spatie \omega_r&=\half\half\epsilon_{rjk}\left(v_{k,j}-v_{j,k}\right)\\
+&=\half\half\epsilon_{rjk}v_{k,j}-\half\half\epsilon_{rjk}v_{j,k}\\
+&=\half\half\epsilon_{rjk}v_{k,j}+\half\half\epsilon_{rjk}v_{k,j}\\
+&=\half\epsilon_{rjk}v_{k,j}
+\end{align}
+So we have, as the flow is steady
+\begin{align}
+\dv{}{t}\omega_{rs}&= \omega_{rs,p}v_p\\
+\text{(1)}\quad \Rightarrow\spatie &= \half \left(v_{s,rp}-v_{r,sp}\right)v_p\\
+\end{align}
+
+*******************************************\\\\
+
+We have 
+\begin{align}
+\textbf{(6.146)}\spatie \partial_t v_r +v_sv_{r,s} &= X_r - \rho^{-1}p_{,r}
+\end{align}
+In the fluid considered here ($\partial_t v_r=0$; $\rho=\rho(p)\Rightarrow \rho^{-1}p_{,r}\coloneqq P_{,r}$; $X_r= -U_{,r}$) we get
+\begin{align}
+ v_sv_{r,s} + U_{,r} + P_{,r}=0
+\end{align}
+
+Consider the following expression $\epsilon_{nmr}\epsilon_{nst}v_mv_{t,s}$
+This can be expressed as 
+\begin{align}
+\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s}&=\left(\delta_{rs}\delta_{mt}-\delta_{rt}\delta_{ms}\right)v_mv_{t,s}\\
+&=v_mv_{m,r}-v_mv_{r,m}
+\end{align}
+giving
+\begin{align}
+v_sv_{r,s}&= v_sv_{s,r}-\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s}
+\end{align}
+So (14) can be expressed as 
+\begin{align}
+&v_sv_{s,r}-\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s} + U_{,r} + P_{,r}=0\\
+\text{(6)}\quad\Rightarrow\spatie &v_sv_{s,r}-2\epsilon_{nrm}\omega_nv_m + U_{,r} + P_{,r}=0\\
+&v_sv_{s,r}+2\epsilon_{rnm}\omega_nv_m + U_{,r} + P_{,r}=0
+\end{align}
+Let's take the curl of $(17)$:
+\begin{align}
+&\epsilon_{pkr}\left(v_sv_{s,r}\right)_{,k}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} + \epsilon_{pkr}U_{,r} + \epsilon_{pkr}P_{,r}=0
+\end{align}
+The terms with $U$ and $P$ are of the kind $\nabla\times\nabla(G)$ with $G$ a scalar function $G:\mathbb{R}^3\rightarrow \mathbb{R}$. These terms are equal to zero.\\ 
+So, $(18)$ becomes 
+\begin{align}
+&\epsilon_{pkr}v_{s,k}v_{s,r}+\underbrace{\epsilon_{pkr}v_sv_{s,kr}}_{=0}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} =0
+\end{align}
+From exercise 14 page 141 (see section 4.30 in part I):
+$$ \mathbf{\nabla \times  \left( U\times V \right) = V . \nabla U -  U . \nabla V+U\nabla . V-V\nabla.U}$$
+\begin{align}
+\left(\nabla \times  \left( U\times V \right) \right)_p &\equiv \epsilon_{pkr}\epsilon_{rnm}\left(U_n V_m\right)_{,k}\\
+&= V_s U_{s,k} -V_k U_{s,s}+U_k V_{s,s}-U_sV_{k,s}\\
+&\equiv V .\nabla U-U .\nabla V+U\nabla .V-V\nabla .U
+\end{align}
+Putting $U= \overline{\omega}$ and $V= \overline{v}$ :
+\begin{align}
+ \epsilon_{pkr}\epsilon_{rnm}\left(\omega_n v_m\right)_{,k}
+&= v_s \omega_{s,k} -v_k \omega_{s,s}+\omega_k v_{s,s}-\omega_sv_{k,s}
+\end{align}
+Note that the divergence of the vorticity is zero, so 
+\begin{align}
+ \epsilon_{pkr}\epsilon_{rnm}\left(\omega_n v_m\right)_{,k}
+&= v_s \omega_{s,k}+\omega_k v_{s,s}-\omega_sv_{k,s}
+\end{align}
+$(24)$ in $(19)$ gives 
+\begin{align}
+&\epsilon_{pkr}v_{s,k}v_{s,r}+2v_s \omega_{s,k}+2\omega_k v_{s,s}-2\omega_sv_{k,s} =0
+\end{align}
+We have $\text{(7): } \dv{}{t}\omega_{rs}= \omega_{rs,p}v_p$
  $$\blacklozenge$$
 \newpage
