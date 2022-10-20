@@ -1187,7 +1187,9 @@ We have in rectangular Cartesian coordinates
 \Rightarrow\spatie \omega_r&=\half\half\epsilon_{rjk}\left(v_{k,j}-v_{j,k}\right)\\
 &=\half\half\epsilon_{rjk}v_{k,j}-\half\half\epsilon_{rjk}v_{j,k}\\
 &=\half\half\epsilon_{rjk}v_{k,j}+\half\half\epsilon_{rjk}v_{k,j}\\
-&=\half\epsilon_{rjk}v_{k,j}
+&=\half\epsilon_{rjk}v_{k,j}\\
+\Rightarrow\spatie \omega_{r,r}&=\half\epsilon_{rjk}v_{k,jr}\\
+&=0
 \end{align}
 So we have, as the flow is steady
 \begin{align}
@@ -1216,7 +1218,7 @@ giving
 \begin{align}
 v_sv_{r,s}&= v_sv_{s,r}-\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s}
 \end{align}
-So (14) can be expressed as 
+So (11) can be expressed as 
 \begin{align}
 &v_sv_{s,r}-\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s} + U_{,r} + P_{,r}=0\\
 \text{(6)}\quad\Rightarrow\spatie &v_sv_{s,r}-2\epsilon_{nrm}\omega_nv_m + U_{,r} + P_{,r}=0\\
@@ -1229,28 +1231,30 @@ Let's take the curl of $(17)$:
 The terms with $U$ and $P$ are of the kind $\nabla\times\nabla(G)$ with $G$ a scalar function $G:\mathbb{R}^3\rightarrow \mathbb{R}$. These terms are equal to zero.\\ 
 So, $(18)$ becomes 
 \begin{align}
-&\epsilon_{pkr}v_{s,k}v_{s,r}+\underbrace{\epsilon_{pkr}v_sv_{s,kr}}_{=0}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} =0
+&\underbrace{\epsilon_{pkr}v_{s,k}v_{s,r}}_{=0}+\underbrace{\epsilon_{pkr}v_sv_{s,kr}}_{=0}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} =0
 \end{align}
-From exercise 14 page 141 (see section 4.30 in part I):
-$$ \mathbf{\nabla \times  \left( U\times V \right) = V . \nabla U -  U . \nabla V+U\nabla . V-V\nabla.U}$$
+and 
 \begin{align}
-\left(\nabla \times  \left( U\times V \right) \right)_p &\equiv \epsilon_{pkr}\epsilon_{rnm}\left(U_n V_m\right)_{,k}\\
-&= V_s U_{s,k} -V_k U_{s,s}+U_k V_{s,s}-U_sV_{k,s}\\
-&\equiv V .\nabla U-U .\nabla V+U\nabla .V-V\nabla .U
+\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} 
+&=\epsilon_{rpk}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k}\\
+&=\delta_{pn}\delta_{km}\left(\omega_nv_m\right)_{,k}-\delta_{pm}\delta_{kn}\left(\omega_nv_m\right)_{,k}\\
+&=\left(\omega_pv_k\right)_{,k}-\left(\omega_kv_p\right)_{,k}\\
+&=\omega_{p,k}v_k+\omega_pv_{k,k}-\omega_{k,k}v_p-\omega_kv_{p,k}
 \end{align}
-Putting $U= \overline{\omega}$ and $V= \overline{v}$ :
-\begin{align}
- \epsilon_{pkr}\epsilon_{rnm}\left(\omega_n v_m\right)_{,k}
-&= v_s \omega_{s,k} -v_k \omega_{s,s}+\omega_k v_{s,s}-\omega_sv_{k,s}
-\end{align}
-Note that the divergence of the vorticity is zero, so 
+
+Note that the divergence of the vorticity is zero (see $(8)$), so 
 \begin{align}
  \epsilon_{pkr}\epsilon_{rnm}\left(\omega_n v_m\right)_{,k}
-&= v_s \omega_{s,k}+\omega_k v_{s,s}-\omega_sv_{k,s}
+&= \omega_{p,k}v_k+\omega_pv_{k,k}-\omega_kv_{p,k}
 \end{align}
 $(24)$ in $(19)$ gives 
 \begin{align}
-&\epsilon_{pkr}v_{s,k}v_{s,r}+2v_s \omega_{s,k}+2\omega_k v_{s,s}-2\omega_sv_{k,s} =0
+&\omega_{p,k}v_k+\omega_pv_{k,k}-\omega_kv_{p,k} =0
+\end{align}
+We have $\text{(2): } \omega_p=\half\epsilon_{pmn}\omega_{mn}$
+ giving
+\begin{align}
+&\epsilon_{pmn}\omega_{mn,k}v_k+\epsilon_{pmn}\omega_{mn}v_{k,k}-\epsilon_{kmn}\omega_{mn}v_{p,k} =0
 \end{align}
 We have $\text{(7): } \dv{}{t}\omega_{rs}= \omega_{rs,p}v_p$
  $$\blacklozenge$$
