@@ -1174,12 +1174,12 @@ Hence $\oint_{\partial\Sigma_{t}} v_rdx^r$ is constant along a vortex line.
 
 \section{p235 - Exercise 5}
 \begin{tcolorbox}
-Prove that for the type of fluid described in Exercise 2, the voricity tensor satisfies the differential equations
+Prove that for the type of fluid described in Exercise 2, the vorticity tensor satisfies the differential equations
 $$\dv{}{t}\omega_{rs} = \omega_{pr}v_{p,s} - \omega_{ps}v_{p,r}$$
 the coordinates being rectangular Cartesians. Write these equations for curvilinear coordinates.\\
 Deduce from these equations that, if $\omega_{rs}=0$ initially at some point $P$ in the fluid, these quantities will remain zero permanently for the particle which was initially at $P$.
 \end{tcolorbox}
-
+Let's first write down some useful expressions:\\\\
 We have in rectangular Cartesian coordinates
 \begin{align}
 \textbf{(6.128)}\quad\spatie &\omega_{jk}=\half\left(v_{k,j}-v_{j,k}\right)\\
@@ -1194,19 +1194,18 @@ We have in rectangular Cartesian coordinates
 So we have, as the flow is steady
 \begin{align}
 \dv{}{t}\omega_{rs}&= \omega_{rs,p}v_p\\
-\text{(1)}\quad \Rightarrow\spatie &= \half \left(v_{s,rp}-v_{r,sp}\right)v_p\\
+\text{(1):}\spatie &= \half \left(v_{s,rp}-v_{r,sp}\right)v_p
 \end{align}
 
-*******************************************\\\\
-
-We have 
+We have also
 \begin{align}
 \textbf{(6.146)}\spatie \partial_t v_r +v_sv_{r,s} &= X_r - \rho^{-1}p_{,r}
 \end{align}
-In the fluid considered here ($\partial_t v_r=0$; $\rho=\rho(p)\Rightarrow \rho^{-1}p_{,r}\coloneqq P_{,r}$; $X_r= -U_{,r}$) we get
+In the fluid considered here ($\partial_t v_r=0$; $\rho=\rho(p)\Rightarrow \rho^{-1}p_{,r}\coloneqq P_{,r}$; $X_r= -U_{,r}$) and  get
 \begin{align}
  v_sv_{r,s} + U_{,r} + P_{,r}=0
-\end{align}
+\end{align}\\\\
+We are now able to deduce the asked expression.\\\\
 
 Consider the following expression $\epsilon_{nmr}\epsilon_{nst}v_mv_{t,s}$
 This can be expressed as 
@@ -1214,26 +1213,27 @@ This can be expressed as
 \epsilon_{nrm}\epsilon_{nst}v_mv_{t,s}&=\left(\delta_{rs}\delta_{mt}-\delta_{rt}\delta_{ms}\right)v_mv_{t,s}\\
 &=v_mv_{m,r}-v_mv_{r,m}
 \end{align}
+
 giving
 \begin{align}
 v_sv_{r,s}&= v_sv_{s,r}-\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s}
 \end{align}
-So (11) can be expressed as 
+So (12) can be expressed as 
 \begin{align}
 &v_sv_{s,r}-\epsilon_{nrm}\epsilon_{nst}v_mv_{t,s} + U_{,r} + P_{,r}=0\\
 \text{(6)}\quad\Rightarrow\spatie &v_sv_{s,r}-2\epsilon_{nrm}\omega_nv_m + U_{,r} + P_{,r}=0\\
 &v_sv_{s,r}+2\epsilon_{rnm}\omega_nv_m + U_{,r} + P_{,r}=0
 \end{align}
-Let's take the curl of $(17)$:
+Let's take the curl of $(18)$:
 \begin{align}
-&\epsilon_{pkr}\left(v_sv_{s,r}\right)_{,k}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} + \epsilon_{pkr}U_{,r} + \epsilon_{pkr}P_{,r}=0
+&\epsilon_{pkr}\left(v_sv_{s,r}\right)_{,k}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} + \epsilon_{pkr}U_{,rk} + \epsilon_{pkr}P_{,rk}=0
 \end{align}
 The terms with $U$ and $P$ are of the kind $\nabla\times\nabla(G)$ with $G$ a scalar function $G:\mathbb{R}^3\rightarrow \mathbb{R}$. These terms are equal to zero.\\ 
-So, $(18)$ becomes 
+So, $(19)$ becomes 
 \begin{align}
 &\underbrace{\epsilon_{pkr}v_{s,k}v_{s,r}}_{=0}+\underbrace{\epsilon_{pkr}v_sv_{s,kr}}_{=0}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} =0
 \end{align}
-and 
+Nothing that, 
 \begin{align}
 \epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} 
 &=\epsilon_{rpk}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k}\\
@@ -1242,20 +1242,77 @@ and
 &=\omega_{p,k}v_k+\omega_pv_{k,k}-\omega_{k,k}v_p-\omega_kv_{p,k}
 \end{align}
 
-Note that the divergence of the vorticity is zero (see $(8)$), so 
+Note that the divergence of the vorticity is zero, see $(8)$, so 
 \begin{align}
  \epsilon_{pkr}\epsilon_{rnm}\left(\omega_n v_m\right)_{,k}
 &= \omega_{p,k}v_k+\omega_pv_{k,k}-\omega_kv_{p,k}
 \end{align}
-$(24)$ in $(19)$ gives 
+$(25)$ in $(20)$ gives 
 \begin{align}
 &\omega_{p,k}v_k+\omega_pv_{k,k}-\omega_kv_{p,k} =0
 \end{align}
-We have $\text{(2): } \omega_p=\half\epsilon_{pmn}\omega_{mn}$
- giving
+We have $\text{(6): } \omega_p=\half\epsilon_{pmn}v_{n,m},\quad \omega_k=\half\epsilon_{kmn}v_{n,m}$
+ giving for $(26)$:
 \begin{align}
-&\epsilon_{pmn}\omega_{mn,k}v_k+\epsilon_{pmn}\omega_{mn}v_{k,k}-\epsilon_{kmn}\omega_{mn}v_{p,k} =0
+\epsilon_{pmn}v_{n,mk}v_k+\epsilon_{pmn}v_{n,m}v_{k,k}-\epsilon_{kmn}v_{n,m}v_{p,k} =0
 \end{align}
-We have $\text{(7): } \dv{}{t}\omega_{rs}= \omega_{rs,p}v_p$
+this can also be expressed as 
+\begin{align}
+\epsilon_{pnm}v_{m,nk}v_k+\epsilon_{pnm}v_{m,n}v_{k,k}-\epsilon_{knm}v_{m,n}v_{p,k} =0
+\end{align}
+adding $(27)$ and $(28)$ gives 
+\begin{align}
+&\epsilon_{pnm}\left(v_{m,nk}-v_{n,mk}\right)v_k+\epsilon_{pnm}\left(v_{m,n}-v_{n,m}\right)v_{k,k}-\epsilon_{knm}\left(v_{m,n}-v_{n,m}\right)v_{p,k} =0
+\end{align}
+
+\begin{align}
+\text{(1),(10):}\quad &\epsilon_{pmn}\dv{\omega_{mn}}{t}+\epsilon_{pmn}\omega_{mn}v_{k,k}-\epsilon_{kmn}\omega_{mn}v_{p,k} =0\\
+\times \epsilon_{prs}\quad\Rightarrow\quad &\left(\delta_{rm}\delta_{sn}-\delta_{rn}\delta_{ms}\right)\dv{\omega_{mn}}{t}+\left(\delta_{rm}\delta_{sn}-\delta_{rn}\delta_{ms}\right)\omega_{mn}v_{k,k}-\epsilon_{kmn}\omega_{mn}\epsilon_{prs}v_{p,k} =0\\
+\Rightarrow\quad &\dv{\omega_{rs}}{t}-\dv{\omega_{sr}}{t}+\left(\omega_{rs}-\omega_{sr}\right)v_{k,k}-\epsilon_{kmn}\omega_{mn}\epsilon_{prs}v_{p,k} =0
+\end{align}
+and as $\omega_{rs}$ is skew-symmetric
+\begin{align}
+\dv{\omega_{rs}}{t}+\omega_{rs}v_{k,k}-\half\epsilon_{kmn}\omega_{mn}\epsilon_{prs}v_{p,k} =0
+\end{align}
+Let's look at the term $\epsilon_{kmn}\omega_{mn}\epsilon_{prs}v_{p,k} $\\
+Suppose $k=p$; then in order to have the term in $\epsilon_{(p)mn}\epsilon_{(p)rs}$ not equal to zero we need
+ $$\left(m=r \wedge n=s\right) \vee \left(m=s  \wedge  n=r \right)\quad \text{with } r\neq s$$
+
+and get 
+\begin{align}
+\half\sum_{(p)}\epsilon_{(p)mn}\omega_{mn}\epsilon_{(p)rs}v_{(p),(p)}&= \half\sum_{(p)}\epsilon_{(p)rs}\omega_{mn}\epsilon_{(p)rs}v_{(p),(p)}\\
+&= \half\sum_{(p)}\left(\underbrace{\delta_{(p)(p)}}_{=1}\underbrace{\delta_{ss}}_{=2} -\underbrace{\delta_{(p)s}}_{=0}\delta_{(p)s}\right) \omega_{mn}v_{(p),(p)}\\
+&= \sum_{(p)}\omega_{rs}v_{(p),(p)} =\omega_{rs}v_{k,k} 
+\end{align}
+($\delta_{ss}=2$ as $s$ can not take the value of $(p)$ and so can only span two dimensions.)\\
+Hence, the term $\omega_{rs}v_{k,k}$ in $(33)$ vanishes.\\\\
+
+Suppose now that $k\ne p$. We rewrite $\half\epsilon_{kmn}\omega_{mn}\epsilon_{prs}v_{p,k}$ as 
+
+\begin{align}
+\half\sum_{(p)}^{p\neq k}\sum_{(k)}^{k\neq p}\epsilon_{(k)mn}\omega_{mn}\epsilon_{(p)rs}v_{(p),(k)} 
+\end{align}
+nothing that the explicit summation symbol only span two dimensions.\\
+In $(37)$ as $k\ne p$ we need that $m=p$ or $n= p$ and rewrite $(37)$ as
+\begin{align}
+\half\sum_{(p)}^{p\neq k}\sum_{(k)}^{k\neq p}\epsilon_{(k)mn}\omega_{mn}\epsilon_{(p)rs}v_{(p),(k)} =&\left\{\begin{array}{l}\quad\half\sum_{(p)}\sum_{(k)}\epsilon_{(k)(p)n}\omega_{(p)n}\epsilon_{(p)rs}v_{(p),(k)} \\\\
++\half\sum_{(p)}\sum_{(k)}\epsilon_{(k)m(p)}\omega_{m(p)}\epsilon_{(p)rs}v_{(p),(k)} \end{array}\right.\\
+=&\left\{\begin{array}{l}\quad\half\sum_{(p)}\sum_{(k)}\epsilon_{(p)n(k)}\epsilon_{(p)rs}\omega_{(p)n}v_{(p),(k)} \\\\
++\half\sum_{(p)}\sum_{(k)}\epsilon_{(p)m (k)}\epsilon_{(p)rs}\omega_{(p)m}v_{(p),(k)} \end{array}\right.
+\\=&\left\{\begin{array}{l}\quad \half\sum_{(p)}\sum_{(k)}\left(\delta_{nr}\delta_{(k)s}-\delta_{ns}\delta_{(k)r}\right)\omega_{(p)n}v_{(p),(k)} \\\\
++\half\sum_{(p)}\sum_{(k)}\left(\delta_{mr}\delta_{(k)s}-\delta_{(k)r}\delta_{ms}\right)\omega_{(p)m}v_{(p),(k)} 
+\end{array}\right.
+\\= &\sum_{(p)}\omega_{(p)r}v_{(p),s} - \sum_{(p)}\omega_{(p)s}v_{(p),r}
+\end{align}
+$(41)$ can now again be written as $\omega_{pr}v_{p,s} - \omega_{ps}v_{p,r}$ (this is possible because, although $p$ only spans two dimensions, the skew-symmetricity of $\omega_{ps}$ permits us to expand $(p)$ to the three dimensions.)\\
+Hence, $(33)$ becomes 
+$$\dv{\omega_{rs}}{t}-\left( \omega_{pr}v_{p,s} - \omega_{ps}v_{p,r}\right)=0$$
+which is the expected expression.
+$$\lozenge$$\\
+In curvilinear coordinates the expression becomes
+$$\fdv{\omega_{rs}}{t}= \omega_{pr}v_{p|s} - \omega_{ps}v_{p|r}$$\\
+$$\lozenge$$\\
+Suppose that initially at a certain point $\omega_{rs}=0$, then obviously $\fdv{\omega_{rs}}{t}= \omega_{pr}v_{p|s} - \omega_{ps}v_{p|r}=0$ and thus $\omega_{rs} =C$, a constant, which must be zero as the initial condiation was that $\omega_{rs}(t=0)=0$.
+$$\lozenge$$
  $$\blacklozenge$$
 \newpage
