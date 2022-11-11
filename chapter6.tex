@@ -1316,3 +1316,180 @@ Suppose that initially at a certain point $\omega_{rs}=0$, then obviously $\fdv{
 $$\lozenge$$
  $$\blacklozenge$$
 \newpage
+
+
+\section{p236 - Exercise 6}
+\begin{tcolorbox}
+By eliminating the three components of displacement $u_r$ from the six equations $\mathbf{6.210}$, obtain the following Cartesian equations of compatibility 
+$$ e_{rs,mn}+e_{mn,rs}-e_{rm,sn}-e_{sn,rm}=0$$
+Show that there are only six independent equations here. Write the equations of compatibility in general tensor form.
+\end{tcolorbox}
+We have $\mathbf{6.210}$
+\begin{align}
+e_{rs}= \half\left(u_{r,s}+u_{s,r}\right)
+\end{align}
+and thus
+\begin{align}
+\begin{array}{ll}
+(a)&e_{rs,mn}= \half\left(u_{r,smn}+u_{s,rmn}\right)\\\\
+(b)&e_{mn,rs}= \half\left(u_{m,nrs}+u_{n,mrs}\right)\\\\
+(c)&e_{rm,sn}= \half\left(u_{r,msn}+u_{m,rsn}\right)\\\\
+(d)&e_{sn,rm}= \half\left(u_{s,nrm}+u_{n,srm}\right)\\\\
+\end{array}
+\end{align}
+giving $e_{rs,mn}+e_{mn,rs}-e_{rm,sn}-e_{sn,rm}= (a)+(b)-(c)-(d)=0$
+$$\lozenge$$
+Consider the set $(rs)$. Considering the symmetries induced by the symmetry of $e_{rs}$, the number of possible combinations is one of type "repeated combination", i.e.   $\left(\begin{matrix}n+m-1\\m\end{matrix}\right)=\frac{4!}{2!} = 6$. The same is true for the  set $(mn)$, so the total of possible combinations is $36$. But we notice that half of the combinations make the equation indiscernible of the other half; indeed when $(mn)=(rs)$, $e_{rs,mn}+e_{mn,rs}-e_{rm,sn}-e_{sn,rm}=e_{mn,rs}+e_{rs,mn}-e_{mr,ns}-e_{ns,mr}=0$. This reduces the number of combinations to $\frac{36}{2}= 18$.\\
+We notice that this is not the total possible number of independent equations yet, as some combinations make the identity trivial. Indeed, consider the case $m=s$. In this case the equation $e_{rs,(s)n}+e_{(s)n,rs}-e_{r(s),sn}-e_{sn,r(s)}=0$ is trivial. The same is true for $n=r$, but also for $m=r$ and $n=s$. Indeed changing $(rs) $ to  $(sr)$ (which is allowed as $e_{rs}$ is symmetric) in  $e_{rs,mn}+e_{mn,rs}-e_{rm,sn}-e_{sn,rm}=0$ we get  $e_{rs,mn}+e_{mn,rs}-e_{sm,rn}-e_{rn,sm}=0$. This expression becomes also trivial when $n=s$ or $m=r$. So the number of independent equations reduces by the number of equations for which yield $ m=r\vee m=s\vee n= r \vee n=s$. This number is $4\times 3=12$ (4 independent events with $3$ possible outcome, each). \\\\
+\textbf{So the total of independent equations is $18-12= 6$.}
+
+$$\lozenge$$
+In general coordinate system we get, 
+$$ e_{rs|mn}+e_{mn|rs}-e_{rm|sn}-e_{sn|rm}=0$$
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p236 - Exercise 7}
+\begin{tcolorbox}
+For a rectangular Cartesian coordinates $z_r$, a state of simple tension is represented as $E_{11}=C$ (a constant), all the other components of stress being zero. Find all six covariant components of stress for spherical polar coordinates. 
+\end{tcolorbox}
+We have $\mathbf{6.223}:$ $T_r=E_{rs}n_s$ so in rectangular Cartesian coordinates we have
+\begin{align}
+T_1= Cn_1 \quad T_2=0\quad T_3=0
+\end{align}
+In general we have when going from the rectangular Cartesian coordinates to a curvilinear coordinate system
+\begin{align}
+T^{'}_r&= T_1x^1_{\ ,'r} \\
+T^{'}_r&=E^{'}_{rs}n^{'}_s\\
+n^{'s}&= n^{i}x^{'s}_{\ ,i}\\
+n^{1}&= n^{'s}x^{1}_{\ ,'s}
+\end{align}
+Putting this all together we can state
+\begin{align}
+&E^{'}_{rs}n^{'s}= Cn_1x^{1}_{\ ,'r}\\
+\spatie &E^{'}_{rs}n^{'s}= Cn^{'s}x^{1}_{\ ,'s}x^{1}_{\ ,'r}
+\end{align}
+From which we deduce
+\begin{align}
+E^{'}_{uv}=Cx^{1}_{\ ,'v}x^{1}_{\ ,'u}
+\end{align}
+For spherical polar coordinates we have
+\begin{align}
+\left\{\begin{array}{l}
+x^1= r\sin\theta\cos\phi\\
+x^1_{,r}= \sin\theta\cos\phi\\
+x^1_{,\theta}= r\cos\theta\cos\phi\\
+x^1_{,\phi}= -r\sin\theta\sin\phi\\
+\end{array}\right.
+\end{align}
+giving for $(8)$
+\begin{align}
+\left\{\begin{array}{l}
+E_{rr}= C\sin^2\theta\cos^2\phi\\
+E_{\theta\theta}= Cr^2\cos^2\theta\cos^2\phi\\
+E_{\phi\phi}= Cr^2\sin^2\theta\sin^2\phi\\
+E_{r\phi}= Cr\sin\theta\cos\theta\cos^2\phi
+\\E_{r\phi}= C\sin^2\theta\cos\phi\sin\phi\\
+E_{\theta\phi}= -Cr^2\cos\theta\sin\theta\cos\phi\sin\phi\\
+\end{array}\right.
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p236 - Exercise 8 $\dagger$}
+\begin{tcolorbox}
+By substitution from $\mathbf{6.247}$ in the Cartesian equations of compatibility  in Exercise 6, deduce that in a homogeneous isotropic body in equilibrium under body forces $X_r$, the invariant $\Theta= E_{nn}$ satisfies the following partial differential equation:
+$$\left(1-\sigma\right)\Theta_{,rr}= \left(1+\sigma\right)\rho X_{r,r}$$
+\end{tcolorbox}
+Let's recap what we know
+\begin{align}
+\begin{array}{lll}
+(a)&e_{rs,mn}+e_{mn,rs}-e_{rm,sn}-e_{sn,rm}=0&\text{(Exercise 6)}\\\\
+(b)&e_{rs}= \frac{1}{E}\left[\left(1+\sigma\right)E_{rs}-\sigma \delta_{rs} E_{nn}\right]&\text{(6.247)}\\\\
+(c)&E=\frac{\mu\left(3\lambda+2\mu\right)}{\lambda+\mu}, \quad\sigma= \frac{\lambda}{2\left(\lambda+\mu\right)}&\text{(6.248)}\\\\
+(d)&\lambda=\frac{\sigma E}{\left(1+\sigma\right)\left(1-2\sigma\right)}, \quad\mu =\frac{E}{2\left(1+\sigma\right)}&\text{(6.249)}\\\\
+(e)&\rho f_r=\rho X_r +\left(\lambda+\mu\right)\theta_{,r}+\mu\Delta u_r&\text{(6.250)}\\\\
+(f)&\theta = e_{nn}&\text{(6.246)}\\\\
+(g)&e_{rs}=\half\left(u_{r,s}+u_{s,r} \right)&\text{(6.210)}
+\end{array}
+\end{align}
+As we are in steady state we have  $ f_r=\pdv[2]{u_r}{t}=0$ and $(e)$ becomes
+\begin{align}
+&\rho X_r +\left(\lambda+\mu\right)\theta_{,r}+\mu\Delta u_r=0\\
+\Rightarrow\quad &\rho X_{r,r} +\left(\lambda+\mu\right)\theta_{,rr}+\mu\left(\Delta u_r\right)_{,r}=0
+\end{align}
+Put $m=n$ and $s=r$ in $(a)$:
+\begin{align}
+&\underbrace{e_{rr,nn}}_{=\theta_{,nn}}+\underbrace{e_{nn,rr}}_{=\theta_{,nn}}-e_{rn,rn}-e_{rn,rn}=0\\
+\text{or}\quad & \theta_{,nn}=e_{nr,nr} 
+\end{align}
+Putting $(b)$ in $(5)$ we get
+\begin{align}
+\theta_{,rr}&= \frac{1}{E}\left[\left(1+\sigma\right)E_{nr,nr}-\sigma\delta_{nr}E_{kk,nr}\right]\\
+&= \frac{1}{E}\left[\left(1+\sigma\right)E_{nr,nr}-\sigma E_{kk,rr}\right]\\
+&= \frac{1}{E}\left(1+\sigma\right)E_{nr,nr}- \frac{\sigma}{E} E_{kk,rr}
+\end{align}
+Put $\Theta=E_{kk}$, then 
+\begin{align}
+\theta_{,rr}&= \frac{1}{E}\left(1+\sigma\right)E_{nr,nr}- \frac{\sigma}{E} \Theta_{,rr}
+\end{align}
+Consider now $\Delta u_r = u_{r,kk}$, using $e_{rs}=\half\left(u_{r,s}+u_{s,r} \right)$ we have 
+\begin{align}
+e_{rs,rs}&= \half\left(u_{r,srs}+u_{s,rrs} \right)\\
+&=u_{r,ssr}
+\end{align}
+but $ u_{r,ss}=\Delta u_r$, then
+\begin{align}
+\left(\Delta u_r\right)_{,r}&= e_{rs,rs} 
+\end{align} 
+So, by $(5)$,
+\begin{align}
+\left(\Delta u_r\right)_{,r}&=\theta_{,rr}
+\end{align}
+Let's recap what we already know.
+We have $(3)$ and $(13)$ 
+\begin{align}
+\left\{\begin{array}{ll}
+(3)&\rho X_{r,r} +\left(\lambda+\mu\right)\theta_{,rr}+\mu\Delta \left(u_r\right)_{,r}=0\\\\
+(13)&\left(\Delta u_r\right)_{,r}=\theta_{,rr}
+\end{array}\right.
+\end{align}
+and also 
+\begin{align}
+\left(1+\sigma\right)E_{nr,nr} = \left(1-\sigma\right)\Theta_{,rr}
+\end{align}
+indeed $(a)$ gives
+\begin{align}
+&e_{rn,rn} = e_{rr,ss}\\
+\Rightarrow \quad & \frac{1}{E}\left[\left(1+\sigma\right)E_{rn,rn}-\sigma \delta_{rn}E_{kk,rn}\right]= \frac{1}{E}\left[\left(1+\sigma\right)E_{rr,ss}-\sigma \delta_{rr}E_{kk,ss}\right]\\
+\Leftrightarrow\quad & \left(1+\sigma\right)E_{rn,rn}-\sigma \Theta_{,rr}= \left(1+\sigma\right)\Theta_{,rr}-\sigma 3\Theta_{,rr}\\
+\Leftrightarrow\quad & \left(1+\sigma\right)E_{rn,rn}= \left(1-\sigma\right)\Theta_{,rr}
+\end{align}
+So, $(9)$ becomes
+\begin{align}
+\theta_{,rr}&= \frac{1}{E}\left(1+\sigma\right)E_{rn,rn}- \frac{\sigma}{E} \Theta_{,rr} \\
+&=\frac{1-2\sigma}{E}\Theta_{,rr} 
+\end{align}
+and  $(14)$ becomes
+\begin{align}
+\left(\Delta u_r\right)_{,r}=\frac{1-2\sigma}{E}\Theta_{,rr} 
+\end{align}
+Let's put $\xi= \left(\lambda+\mu\right)\theta_{,rr}+\mu\left(\Delta u_r\right)_{,r}$ with $(22)$ and $(23)$ we get
+\begin{align}
+\xi &= \left[\left(\lambda+\mu\right)\frac{1-2\sigma}{E}+\mu \frac{1-2\sigma}{E}\right]\Theta_{,rr} \\
+&= \frac{1-2\sigma}{E}\left(\lambda+2\mu\right)\Theta_{,rr}
+\end{align}
+Using $(d)$ in this expression gives 
+\begin{align}
+\xi&= \frac{1-2\sigma}{E}E\left(\frac{\sigma}{\left(1+\sigma\right)\left(1-2\sigma\right)}+ \frac{1}{\left(1+\sigma\right)}\right)\Theta_{,rr}\\
+&= \left(1-2\sigma\right)\frac{\sigma+\left(1-2\sigma\right)}{\left(1+\sigma\right)\left(1-2\sigma\right)}\Theta_{,rr}\\
+&= \frac{1-\sigma}{1+\sigma}\Theta_{,rr}
+\end{align}
+giving for $(3$)
+$$\left(1+\sigma\right)\rho X_{r,r} \underbrace{+}_{?\text{ should be } -}\left(1-\sigma \right)\Theta_{,rr}=0$$
+$$\blacklozenge$$
+\newpage
