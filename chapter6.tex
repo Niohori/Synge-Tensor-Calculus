@@ -1493,3 +1493,166 @@ giving for $(3$)
 $$\left(1+\sigma\right)\rho X_{r,r} \underbrace{+}_{?\text{ should be } -}\left(1-\sigma \right)\Theta_{,rr}=0$$
 $$\blacklozenge$$
 \newpage
+
+
+
+
+\section{p236 - Exercise 9}
+\begin{tcolorbox}
+In a state of plane stress we have $E_{\alpha 3}=0,E_{3 3}=0$, the coordinates being Cartesian, and Greek suffixes taking the values $1,\ 2$. prove that the equations of equilibrium under no body forces are satisfied if we put
+$$E_{\alpha \beta} = \epsilon_{\alpha\rho}\epsilon_{\beta \sigma} \psi_{,\rho \sigma} $$
+where $\psi$ is an arbitrary function. Show that this gives $$E_{11}=\psi_{,22}, \quad E_{12}=-\psi_{,12},\quad E_{22}=\psi_{,11},$$
+\end{tcolorbox}
+Given that we are in equilibrium and no body forces acting we have from $\rho f_r=\rho X_r +E_{rs,s}$ w have
+\begin{align}
+E_{rs,s}=0
+\end{align}
+Explicitly
+\begin{align}
+E_{rs,s}=E_{r1,1}+E_{r2,2}+\underbrace{E_{r3,3}}_{=0}
+\end{align}
+and for $r=3$
+\begin{align}
+E_{3s,s}=\underbrace{E_{31,1}}_{=0}+\underbrace{E_{32,2}}_{=0}+\underbrace{E_{33,3}}_{=0}
+\end{align}
+So $(1)$ can be expressed as 
+\begin{align}
+E_{\alpha\beta,\beta}=0
+\end{align}
+Let's test the expression $E_{\alpha \beta} = \epsilon_{\alpha\rho}\epsilon_{\beta \sigma} \psi_{,\rho \sigma} $
+\begin{align}
+E_{\alpha \beta,\beta} &= \epsilon_{\alpha\rho}\epsilon_{\beta \sigma} \psi_{,\rho \sigma\beta}\\
+&= 0
+\end{align}
+The last identity is due to the fact that for a fixed $\alpha$, or $\rho$ will take the value of $\alpha$ (making $\epsilon_{\alpha\rho}=0$, or for $\rho\ne\alpha$, the only non-zero terms imply that $\beta\ne\sigma$ where the expansion is of the form $\epsilon_{\alpha\rho}\epsilon_{\alpha\rho} \psi_{,\rho \sigma\beta}+\epsilon_{\alpha\rho}\epsilon_{\rho\alpha} \psi_{,\rho \sigma\beta}$ (no summation over dummy indexes) and as the order of partial differentiation is of no importance and $\epsilon_{\rho\alpha}$ and $\epsilon_{\alpha\rho}$ are of opposite sign, the two terms will cancel each other.\\
+So indeed, $E_{\alpha \beta} = \epsilon_{\alpha\rho}\epsilon_{\beta \sigma} \psi_{,\rho \sigma} $ satisfies the differential equation $E_{rs,s}=0$.
+$$\lozenge$$
+Let's calculate explicitly the $E_{\alpha\beta}$.\\
+$\epsilon_{\alpha\rho}\ne0$ implies $\alpha\ne\rho$ and $\epsilon_{\beta \sigma}\ne0$ implies $\beta \ne\sigma$, hence
+\begin{align}
+\begin{array}{ll}
+E_{11}&=\epsilon_{12}\epsilon_{12}\psi_{,22}\\
+&=(1)(1)\psi_{,22}\\
+&=\psi_{,22}\\\\
+E_{22}&=\epsilon_{21}\epsilon_{21}\psi_{,11}\\
+&=(-1)(-1)\psi_{,11}\\
+&=\psi_{,11}\\\\
+E_{12}&=\epsilon_{12}\epsilon_{21}\psi_{,21}\\
+&=(1)(-1)\psi_{,21}\\
+&=-\psi_{,21}
+\end{array}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p236 - Exercise 10}
+\begin{tcolorbox}
+An isotropic elastic body is in equilibrium under no body forces. show that, for rectangular Cartesian coordinates, the displacement satisfies the partial differential equations
+$$\left(1-2\sigma\right)\Delta u_r+\theta_{,r}=0$$
+Deduce that $\theta$ is a harmonic function.\\
+Show that the above equations are satisfied if we put 
+$$u_r=\psi_r-\frac{1}{4\left(1-\sigma\right)}\left(z_s\psi_s+\phi\right)_{,r}$$
+provided $\Delta\phi=0$, $\Delta\psi_r=0$. (Papcovich-Neuber)
+\end{tcolorbox}
+As we are in equilibrium (no acceleration) and no body forces, equation $$\mathbf{6.250}\quad \rho f_r = \rho X_r + \left(\lambda+\mu\right)\theta_{,r} + \mu\Delta u_r$$ becomes
+\begin{align}
+\left(\lambda+\mu\right)\theta_{,r} + \mu\Delta u_r = 0
+\end{align}
+with 
+\begin{align}
+\lambda= \frac{\sigma E}{\left(1+\sigma\right)\left(1-2\sigma\right)}, \quad \mu= \frac{ E}{2\left(1+\sigma\right)}
+\end{align}
+so $(1)$ becomes 
+\begin{align}
+&\frac{E}{\left(1+\sigma\right)}\left(\frac{\sigma }{1-2\sigma}+\half\right)\theta_{,r} + \frac{ E}{2\left(1+\sigma\right)}\Delta u_r = 0\\
+\Leftrightarrow\quad & \left(\frac{2\sigma +1-2\sigma}{2\left(1-2\sigma\right)}\right)\theta_{,r}+\half\Delta u_r = 0\\
+\Leftrightarrow\quad & \theta_{,r}+\left(1-2\sigma\right)\Delta u_r = 0
+\end{align}
+$$\lozenge$$
+We show now that $\theta$ is an harmonic function .
+\begin{align}
+(5)_{,r}\quad\Rightarrow\quad & \theta_{,rr}+\left(1-2\sigma\right)\left(\Delta u_r\right)_{,r} = 0\\
+\Rightarrow\quad &\Delta \theta+\left(1-2\sigma\right)\left(\Delta u_r\right)_{,r} = 0
+\end{align}
+We have 
+\begin{align}
+&\Delta u_r = u_{r,ss}\\
+\Rightarrow\quad & \left(\Delta u_r\right)_{,r} = u_{r,rss}
+\end{align}
+and from exercise 8 $(11),\ (12),\ (13)$ we know 
+\begin{align}
+&\left(\Delta u_r\right)_{,r}=\theta_{rr}=\Delta \theta
+\end{align}
+and $(7)$ becomes
+\begin{align}
+&\Delta \theta+\left(1-2\sigma\right)\Delta \theta = 0\\
+\Rightarrow\quad & \Delta \theta=0
+\end{align}
+$\theta$ is an harmonic function.
+$$\lozenge$$
+\begin{align}
+u_r&=\psi_r-\frac{1}{4\left(1-\sigma\right)}\left(z_s\psi_s+\phi\right)_{,r}\\
+\Rightarrow\quad \Delta u_r&=\underbrace{\Delta \psi_r}_{=0}-\frac{1}{4\left(1-\sigma\right)}\Delta \left(z_s\psi_s+ \phi\right)_{,r}\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left(z_s\psi_s+  \phi\right)_{,rkk}\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left[\left(z_{s,r}\psi_s+z_s\psi_{s,r}\right)_{,kk}+ \underbrace{\phi_{,rkk}}_{\left(\Delta\phi\right)_r=0}\right]\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left(\delta_{sr}\psi_s+z_s\psi_{s,r}\right)_{,kk}\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left(\psi_r+z_s\psi_{s,r}\right)_{,kk}\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left(\underbrace{\psi_{r,kk}}_{=0}+\left(\underbrace{z_{s,k}}_{= \delta_{sk}}\psi_{s,r}+z_s\psi_{s,rk}\right)_{,k}\right)\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left(\psi_{k,rk}+z_{s,k}\psi_{s,rk}+z_s\underbrace{\psi_{s,rkk}}_{=0}\right)\\
+&=-\frac{1}{4\left(1-\sigma\right)} \left(\psi_{k,rk}+\psi_{k,rk}\right)\\
+\Rightarrow\quad \Delta u_r&=-\frac{1}{2\left(1-\sigma\right)} \psi_{k,kr}
+\end{align}
+Let's look at $\theta=e_{nn}$. As $e_{rs}=\half\left(u_{r,s}+u_{s,r}\right)$
+\begin{align}
+\theta &= u_{k,k}\\
+&= \left(\psi_k-\frac{1}{4\left(1-\sigma\right)}\left(z_s\psi_s+\phi\right)_{,k}\right)_{,k}\\
+&= \psi_{k,k}-\frac{1}{4\left(1-\sigma\right)}\left(\left(z_s\psi_s+\phi\right)_{,k}\right)_{,k}\\
+&= \psi_{k,k}-\frac{1}{4\left(1-\sigma\right)}\left(\left(z_{s,k}\psi_s+ z_s\psi_{s,k}\right)_k+\underbrace{\phi_{,kk}}_{=0}\right)\\
+&= \psi_{k,k}-\frac{1}{4\left(1-\sigma\right)}\left(\psi_{k,k}+ z_{s,k}\psi_{s,k}+z_s\psi_{s,kk}\right)\\
+&= \psi_{k,k}-\frac{1}{4\left(1-\sigma\right)}\left(\psi_{k,k}+ \psi_{k,k}+z_s\underbrace{\psi_{s,kk}}_{=0}\right)\\
+&= \psi_{k,k}-\frac{1}{2\left(1-\sigma\right)}\psi_{k,k}\\
+\Rightarrow\quad &\theta = \frac{1-2\sigma}{2\left(1-\sigma\right)}\psi_{k,k}\\
+\Rightarrow\quad &\theta_{,r} = \frac{1-2\sigma}{2\left(1-\sigma\right)}\psi_{k,kr}
+\end{align}
+Be $\Gamma= \left(1-2\sigma\right)\Delta u_r+\theta_{,r}$ and let's plug into it $(22)$ and $(31)$
+\begin{align}
+\Gamma&= \left(1-2\sigma\right)\Delta u_r+\theta_{,r}\\
+&= -\left(1-2\sigma\right)\frac{1}{2\left(1-\sigma\right)} \psi_{k,kr}+\frac{1-2\sigma}{2\left(1-\sigma\right)}\psi_{k,kr}\\
+&=0
+\end{align}
+and indeed $$u_r=\psi_r-\frac{1}{4\left(1-\sigma\right)}\left(z_s\psi_s+\phi\right)_{,r}$$ is a solution of $$\left(1-2\sigma\right)\Delta u_r+\theta_{,r}=0$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p237 - Exercise 11}
+\begin{tcolorbox}
+If, for rectangular Cartesian coordinates $z_r$, $\chi_{rs}$ is any symmetric tensor, show that the tensor $E_{mn}$ defined by
+$$E_{mn}= \epsilon_{mpr}\epsilon_{nqs}\chi_{rs,pq}$$
+is symmetric, and satisfies the equations $E_{mn,n}= 0$.\\ Show that if we choose $\chi_{rs}= z_rz_s$, then $E_{mn}= -2\delta_{mn}$.
+\end{tcolorbox}
+\begin{align}
+E_{nm}&= \epsilon_{npr}\epsilon_{mqs}\chi_{rs,pq}\\
+&= \epsilon_{npr}\epsilon_{mqs}\chi_{sr,qp}\\
+&= \epsilon_{nqs}\epsilon_{mpr}\chi_{rs,pq}\\
+&= E_{mn}
+\end{align}
+$$\lozenge$$
+Consider $$E_{mn,n}= \epsilon_{mpr}\epsilon_{nqs}\chi_{rs,pqn}$$
+As $\epsilon_{nqs}$ is antisymmetric in $(n,q)$ and $\chi_{rs,pqn}$ is symmetric in these indices,  $E_{mn,n}$ reduces to a sum of terms of the type $\epsilon_{mpr}\epsilon_{(nq)s}\chi_{rs,p(qn)}-\epsilon_{mpr}\epsilon_{(nq)s}\chi_{rs,p(nq)}$.\\
+So, $E_{mn,n}=0$
+$$\lozenge$$
+Be $\chi_{rs}= z_rz_s$, then
+\begin{align}
+E_{mn}&= \epsilon_{mpr}\epsilon_{nqs}(z_rz_s)_{,pq}\\
+&= \epsilon_{mpr}\epsilon_{nqs}(\delta_{pr}z_s+\delta_{sp}z_r)_{,q}\\
+&= \epsilon_{mpr}\epsilon_{nqs}(\delta_{pr}\delta_{sq}+\delta_{sp}\delta_{rq})\\
+&= \underbrace{\epsilon_{mpp}\epsilon_{nqq}}_{=0}+\epsilon_{mpq}\epsilon_{nqp}\\
+&= \epsilon_{pmq}\epsilon_{pqn}\\
+&= \delta_{mq}\delta_{qn}-\delta_{mn}\underbrace{\delta_{qq}}_{=3}\\
+&= \delta_{mn}-3\delta_{mn}\\
+&= -2\delta_{mn}\\
+\end{align}
+$$\blacklozenge$$
+\newpage
