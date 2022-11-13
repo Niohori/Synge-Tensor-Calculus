@@ -1,0 +1,73 @@
+\begin{tikzpicture}[scale=0.8]
+\tikzset{cross/.style={cross out, draw=black, minimum size=3.5, inner sep=0pt, outer sep=0pt},
+%default radius will be 1pt. 
+cross/.default={1pt}}
+\coordinate (O) at (0,0) ;
+
+\coordinate (Y) at (5,2) ;
+\coordinate (Y2) at (-5,2) ;
+\coordinate (Z) at (0,5) ;
+\coordinate (Z2) at (0,-5) ;
+
+\node[left] at (Y2)  {$z_3=0$};
+
+\draw [](Y)--(Y2);
+\draw [-Latex](Z2)--(Z);
+
+
+
+\coordinate (W) at (3,-2) ;
+\coordinate (W1) at (5,-2) ;
+\coordinate (W2) at (-3,-2) ;
+\coordinate (W3) at (-5,-2) ;
+\draw [-Latex,thick](W)--(W1);
+\draw [-Latex,thick](W2)--(W3);
+%\node[right] at (W)  {$z_3<0$};
+\draw[white, pattern=north west lines, pattern color=gray ] (-5,2.5) rectangle (5,2);
+\coordinate (Up) at (3,-2) ;
+\coordinate (Up2) at (3,2) ;
+\coordinate (Up3) at (3,-4) ;
+\coordinate (Up4) at (3,-0) ;
+\coordinate (down) at (-3,-2) ;
+\coordinate (down2) at (-3,2) ;
+\coordinate (down3) at (-3,-4) ;
+
+\draw  [fill= white](Up)circle (3.5pt);
+\draw  [fill= white](Up2)circle (3.5pt);
+\draw  [fill= white](down)circle (3.5pt);
+\draw  [fill= white](down2)circle (3.5pt);
+%\draw  [fill= black](Up)circle (1.5pt);
+\draw  [fill=black](Up2)circle (1.5pt);
+%\draw  [fill= black](down)circle (1.5pt);
+\draw  [fill= black](down2)circle (1.5pt);
+\draw [dashed](Up)--(Up2);
+\draw [-Latex,dashed](Up)--(Up4);
+\draw [dashed](Up3)--(Up);
+\draw [dashed](down)--(down2);
+\draw [,dashed,Latex-](down3)--(down);
+%\node[anchor = north west] at (Up2)  {$\Delta t = -\frac{z_3}{c}$};
+%\node[anchor = south west] at (down)  {$\Delta t = -2\frac{ z_3}{c}$};
+\coordinate (Triad1) at (6.5,0) {} ;
+\coordinate (Triad2) at (-5.5,0) {} ;
+%\draw  [fill= white](Triad1)circle (30pt);
+%\draw  [fill= white](Triad2)circle (30pt);
+\coordinate (v) at (3,2) ;
+\coordinate (v1) at (2,2) ;
+\coordinate (v2) at (-3,2) ;
+\coordinate (v3) at (-2,2) ;
+\draw [-Latex, thick](v)--(v1);
+\draw [-Latex,thick](v2)--(v3);
+\node[anchor = north east] at (W3)  {$E^r_{\alpha}$};
+\node[anchor = north west] at (W1)  {$E^i_{\alpha}$};
+\node[anchor = north west] at (v3)  {$E^r_{\alpha}$};
+\node[anchor = north east] at (v1)  {$E^i_{\alpha}$};
+\node[anchor = north east] at (down3)  {$\hat{v}^r$};
+\node[anchor = north west] at (Up4)  {$\hat{v}^i$};
+\node[anchor = north west] at (down)  {$H^r_{\alpha}$};
+\node[anchor = north east] at (Up)  {$H^r_{\alpha}$};
+\node[anchor = north east] at (down2)  {$H^r_{\alpha}$};
+\node[anchor = north west] at (Up2)  {$H^r_{\alpha}$};
+
+\draw (Up) node[cross,black,thick] {};
+\draw (down) node[cross,black,thick] {};
+\end{tikzpicture}

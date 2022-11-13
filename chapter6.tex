@@ -832,7 +832,7 @@ Show that with homogeneous coordinates $z-r$ ($z_1,z_2,z_3$ being rectangular Ca
 $$ F_{rm,n}+F_{mn,r}+F_{nr,m}=0, \ F_{rm,m}=0$$
 Write out the components of $F_{mn}$ in terms of the real electric and magnetic vectors, noting which components are real and which are imaginary.
 \end{tcolorbox}
-We use the same convention as in the book: Greek indices are restricted to the space manifold. Extending this manifold to a $4$ dimensional manifold, latin suffixes will be used.
+We use the same convention as in the book: Greek indices are restricted to the space manifold. Extending this manifold to a $4$ dimensional manifold, Latin suffixes will be used.
 We have $\mathbf{6.369}$:
 \begin{align}
 \left\{\begin{array}{ll}
@@ -1654,5 +1654,230 @@ E_{mn}&= \epsilon_{mpr}\epsilon_{nqs}(z_rz_s)_{,pq}\\
 &= \delta_{mn}-3\delta_{mn}\\
 &= -2\delta_{mn}\\
 \end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p237 - Exercise 12}
+\begin{tcolorbox}
+The determinantal equation $\left|\lambda\delta_{mn}-E_{mn}\right|=0$ is important in elasticity because it gives the three principal stresses at a point. Show that if we introduce the three Cartesian invariants
+$$A=E_{mn},\quad B=E_{mm}E_{mn}, \quad C= E_{mn}E_{np}E_{pm}$$ the cubic equation ma be written in the form
+$$\lambda^3-A\lambda^2-\half\left(A^2-B\right)\lambda-\left(\frac{1}{6}A^3-\half AB+\frac{1}{3}C\right)=0$$
+[Hint: Note the Cartesian invariance of this expression, and use coordinates which make $E_{rs}=0$ for $r\neq s$.]
+\end{tcolorbox}
+Be a matrix $M_{pq}$. It's determinant can be expressed as $\left|M_{pq}\right|= \epsilon_{mnr}M_{1m}M_{2n}M_{3r}$ or - see $\mathbf{(4.316)}$-  $\epsilon_{stu}\left|M_{pq}\right|= \epsilon_{mnr}M_{sm}M_{tn}M_{ur}$ or $\epsilon_{stu}\epsilon_{stu}\left|M_{pq}\right|=6\left|M_{pq}\right|= \epsilon_{stu}\epsilon_{mnr}M_{sm}M_{tn}M_{ur}$.\\\\
+Put $$M_{pq}= \lambda\delta_{mn}-E_{mn}$$
+and get
+\begin{align}
+6\left|M_{pq}\right|&= \epsilon_{stu}\epsilon_{mnr}\left(\lambda\delta_{sm}-E_{sm}\right)\left(\lambda\delta_{tn}-E_{tn}\right)\left(\lambda\delta_{ur}-E_{ur}\right)\\
+&=\left\{\begin{array}{l}
+\epsilon_{stu}\epsilon_{mnr}\left\{\right.\\
+\lambda^3\delta_{sm}\delta_{tn}\delta_{ur}\\
+-\lambda^2\delta_{sm}\delta_{ur}E_{tn}-\lambda^2\delta_{tn}\delta_{ur}E_{sm}-\lambda^2\delta_{sm}\delta_{tn}E_{ur}\\
++\lambda\delta_{ur}E_{sm}E_{tn}+\lambda\delta_{sm}E_{tn}E_{ur}+\lambda\delta_{tn}E_{sm}E_{ur}\\
+-E_{sm}E_{tn}E_{ur}\\
+\left.\right\}
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\lambda^3\underbrace{\epsilon_{stu}\epsilon_{stu}}_{=6}\\
+-\lambda^2\underbrace{\epsilon_{stu}\epsilon_{snu}}_{=2\delta_{tn}}E_{tn}-\lambda^2\underbrace{\epsilon_{stu}\epsilon_{mtu}}_{=2\delta_{sm}}E_{sm}-\lambda^2\underbrace{\epsilon_{stu}\epsilon_{str}}_{=2\delta_{ur}}E_{ur}\\
++\lambda\underbrace{\epsilon_{stu}\epsilon_{mnu}}_{=\delta_{sm}\delta_{tn}-\delta_{sn}\delta_{tm}}E_{sm}E_{tn}+\lambda\underbrace{\epsilon_{stu}\epsilon_{snr}}_{=\delta_{tn}\delta_{ur}-\delta_{tr}\delta_{un}}E_{tn}E_{ur}+\lambda\underbrace{\epsilon_{stu}\epsilon_{mtr}}_{=\delta_{sm}\delta_{ur}-\delta_{sm}\delta_{ur}}E_{sm}E_{ur}\\
+-\epsilon_{stu}\epsilon_{mnr}E_{sm}E_{tn}E_{ur}
+\end{array}\right.
+\end{align}
+working out gives 
+\begin{align}
+6\left|M_{pq}\right|&= 6\lambda^3-6A\lambda^2 +\left(3A^2-3B\right)\lambda-\epsilon_{stu}\epsilon_{mnr}E_{sm}E_{tn}E_{ur}
+\end{align}
+but the term $\epsilon_{stu}\epsilon_{mnr}E_{sm}E_{tn}E_{ur}=6\left|E_{pq}\right|$
+giving 
+\begin{align}
+\left|M_{pq}\right|&= \lambda^3-A\lambda^2 +\half\left(A^2-B\right)\lambda-\left|E_{pq}\right|
+\end{align}
+Let's consider now the invariants $$A=E_{mn},\quad B=E_{mm}E_{mn}, \quad C= E_{mn}E_{np}E_{pm}$$
+As $(E_{pq})$ is symmetric with  elements $\in \mathbb{R}$, we know that there is an orthogonal transformations so that $(E_{pq})$ becomes diagonal:
+\begin{align}
+(E_{pq})&= \left(\begin{matrix}
+E_1&0&0\\
+0&E_2&0\\
+0&0&E_3\\
+\end{matrix}\right)
+\end{align}
+The invariants $A, \ B,\ C$ become
+\begin{align}
+\left\{\begin{array}{l}
+A= E_1+E_2+E_3\\
+B= E_1^2+E_2^2 +E_3^2\\
+A= E_1^3+E_2^3+E_3^3\\
+\left|E_{pq}\right|= E_1E_2E_3
+\end{array}\right.
+\end{align}
+We will try to express $\left|E_{pq}\right|$ as an expression of $A, \ B,\ C$. Obviously as $\left|E_{pq}\right|= E_1E_2E_3$ we need at least $A^3$  
+\begin{align}
+A^3&= \left\{\begin{array}{l}E_1^3+E_2^3+E_3^3\\+3E_1E_2^2+3E_1E_3^2+3E_1^2E_2+3E_1^2E_3+3E_2^2E_3+3E_3^2E_2\\
++ 6E_1E_2E_3
+\end{array}\right.\\
+&= C+6\left|E_{pq}\right|+3\left(E_1E_2^2+E_1E_3^2+E_1^2E_2+E_1^2E_3+E_2^2E_3+E_3^2E_2\right)
+\end{align}
+and $AB$
+\begin{align}
+AB&= \left(E_1+E_2+E_3\right)\left(E_1^2+E_2^2 +E_3^2\right)\\
+&= E_1^3+E_2^3 +E_3^3+ E_1E_2^2+E_1E_3^2+E_1^2E_2+E_1^2E_3+E_2^2E_3+E_3^2E_2\\
+&= C+ E_1E_2^2+E_1E_3^2+E_1^2E_2+E_1^2E_3+E_2^2E_3+E_3^2E_2
+\end{align}
+hence 
+\begin{align}
+A^3-3AB&= C+ 6\left|E_{pq}\right|-3C\\
+&= 6\left|E_{pq}\right|-2C\\
+\Rightarrow\quad 6\left|E_{pq}\right|&=A^3-3AB+2C
+\end{align}
+and $(5)$ becomes
+\begin{align}
+\left|M_{pq}\right|&= \lambda^3-A\lambda^2 +\half\left(A^2-B\right)\lambda-\left(\frac{1}{6}A^3-\half AB+\frac{1}{3}C\right)
+\end{align}
+Putting $\left|M_{pq}\right|=0$ gives the required equation.
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p237 - Exercise 13}
+\begin{tcolorbox}
+A plane electromagnetic wave in complex form is given,
+$$E_{\alpha}=A_{\alpha}e^{iS},\quad  E_3=0,\quad H_{\alpha} = -\epsilon_{\alpha\beta}A_{\beta}e^{iS},\quad H_3=0$$ $$ S=\frac{2\pi}{\lambda}\left(z_3-ct\right)$$
+where $A_{\alpha}$ is a constant complex vector, and Greek suffixes take the values $1,2$. Verify that Maxwell's equations are satisfied, and that the wave is propagated in the positive $z_3-$direction.\\
+The wave meets a perfectly conducting wall $z_3=0$,and is reflected. Given the condition on such wall is that the tangential component of the electric vector for the total field vanishes, show that the reflected wave is given by
+$$E^{'}_{\alpha}=-A_{\alpha}e^{iS^{'}},\quad E^{'}_{3}=0, \quad H^{'}_{\alpha} = -\epsilon_{\alpha\beta} A_{\beta}e^{iS^{'}},\quad H^{'}_3=0,$$
+$$S^{'}= -\frac{2\pi}{\lambda}\left(z_3+ct\right)$$
+\end{tcolorbox}
+Maxwell's equations read 
+\begin{align}
+\left\{\begin{array}{lll}(6.301)& \frac{1}{c}\partial_t E_r=\epsilon_{rmn}H_{n,m}& \frac{1}{c}\partial_t H_r=-\epsilon_{rmn}E_{n,m}\\\\
+(6.302)&E_{n,n}=0&H_{n,n}=0
+\end{array}\right.
+\end{align}
+For $\mathbf{(6.302)}$ this gives for the considered case
+\begin{align}
+E_{n,n}&=E_{\alpha,\alpha}+ \underbrace{E_{3,3}}_{=0}\\
+&=A_{\alpha}\left(e^{iS}\right)_{,\alpha}\\
+&=iA_{\alpha}e^{iS}\underbrace{S_{,\alpha}}_{=0}\\
+&=0
+\end{align}
+analogously
+\begin{align}
+H_{n,n}&=H_{\alpha,\alpha}+ \underbrace{H_{3,3}}_{=0}\\
+&=-\epsilon_{\alpha\beta}A_{\beta}\left(e^{iS}\right)_{,\alpha}\\
+&=-i\epsilon_{\alpha\beta}A_{\beta}\underbrace{S_{,\alpha}}_{=0}\\
+&=0
+\end{align}
+So for $\mathbf{6.302}$ the considered wave meets Maxwell's equations.\\
+And for $\mathbf{6.301}$ 
+\begin{align}
+\frac{1}{c}\partial_t E_{\alpha}&=\epsilon_{\alpha mn}H_{n,m}\\
+\epsilon_{\alpha mn}H_{n,m}&= \epsilon_{\alpha\beta\gamma}H_{\gamma,\beta}+\epsilon_{\alpha 3\beta}H_{\beta,3}+\epsilon_{\alpha\beta 3}\underbrace{H_{3,\gamma}}_{=0}\\
+&= -i\epsilon_{\alpha\beta\gamma}\epsilon_{\gamma\delta}A_{\delta}e^{iS}\underbrace{S_{,\beta}}_{=0}-i\epsilon_{\alpha 3 \beta}\epsilon_{\beta \gamma}A_{\gamma}e^{iS}\underbrace{S_{,3}}_{=\frac{2\pi}{\lambda}}\\
+&= -i\frac{2\pi}{\lambda}\epsilon_{\alpha 3 \beta}\epsilon_{\beta \gamma}A_{\gamma}e^{iS}\\
+&= i\frac{2\pi}{\lambda}\epsilon_{\alpha  \beta 3 }\epsilon_{\beta \gamma}A_{\gamma}e^{iS}
+\end{align}
+Let's look at $(14)$ and more specifically at the factor $\epsilon_{\alpha  \beta 3}$. As the third index is fixed we can replace $\epsilon_{\alpha  \beta  3}$ by $\epsilon_{\alpha  \beta}$ and get 
+\begin{align}
+\epsilon_{\alpha mn}H_{n,m}&= i\frac{2\pi}{\lambda}\epsilon_{\alpha  \beta  }\epsilon_{\beta \gamma}A_{\gamma}e^{iS}\\
+&= -i\frac{2\pi}{\lambda}A_{\alpha}e^{iS}
+\end{align}
+and 
+\begin{align}
+\frac{1}{c}\partial_t E_{\alpha}&=\frac{1}{c}iA_{\alpha}e^{iS}\left(-c\frac{2\pi}{\lambda}\right)\\
+&=-i\frac{2\pi}{\lambda}A_{\alpha}e^{iS}
+\end{align}
+
+So for $\mathbf{6.301 (a)}$ the considered wave meets Maxwell's equations.\\
+For the second equation: 
+\begin{align}
+\frac{1}{c}\partial_t H_{\alpha}&=-\epsilon_{\alpha mn}E_{n,m}\\
+\epsilon_{\alpha mn}E_{n,m}&= -\epsilon_{\alpha\beta\gamma}\underbrace{E_{\gamma,\beta}}_{=0}-\epsilon_{\alpha 3\beta}E_{\beta,3}-\epsilon_{\alpha\beta 3}\underbrace{E_{3,\gamma}}_{=0}\\
+&=-\epsilon_{\alpha 3\beta}E_{\beta,3}\\
+&= -i\frac{2\pi}{\lambda}\epsilon_{\alpha 3\beta}A_{\beta}e^{iS}\\
+&= i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta }A_{\beta}e^{iS}\\
+\frac{1}{c}\partial_t H_{\alpha}&= i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta}A_{\beta}e^{iS}
+\end{align}
+
+So for $\mathbf{6.301 (b)}$ the considered wave meets Maxwell's equations and also for all the other equations in Maxwell's equations set.\\
+$$\lozenge$$
+As in the equation of the plane the only varying parameter is $S=\frac{2\pi}{\lambda}\left(z_3-ct\right)$  (depending on space and time), the components of $E_r, \quad H_r$ will remain constant only when $S= $ constant and as $S$ is  only spatially dependent of $z_3$ the plane can only move in the $z_3-$direction. Indeed, at a certain configuration point $(z_1,z_2,z_3,t)$ the configuration is the same $\forall z_1,\quad z_2$ for a given pair $(z_3,t)$. At a time $t^{'}$ the value of $E_r,\quad H_r$ will be the same if $z_3-ct= z^{'}_3-ct^{'}$, giving $z^{'}_3=z_3+ c(t^{'}- t)$:  a plane with certain configuration $(z_1,z_2,z_3,t_0)$ will move along the $z_3$ axis with speed $c$
+$$\lozenge$$
+\begin{figure}[H]%
+    \centering
+\input{D:/MathLatex/images/fig_p237_Ex13.tex}
+\caption{Reflection of a plain wave }
+\label{fig:fig_p237}
+\end{figure}
+At the wall we have $E^{t}_{\alpha}=E^{i}_{\alpha}+E^{r}_{\alpha}=0$, with $E^{t}_{\alpha}$ the total field and $E^{i}_{\alpha},\quad E^{r}_{\alpha}  $ the incoming and reflected field. Without loss of generalization we can put at the wall $t=0$ and $z_3=0$ so we get 
+$$ E^{r}_{\alpha}=-A_{\alpha}$$
+so the reflection gives an opposite sign to the electric field of the reflected plane wave.\\
+We note also that the velocity of the wave is reversed, so in the definition of the incoming wave we replace $c$ by $-c$ we get
+\begin{align}
+E^r_{\alpha}=-A_{\alpha}e^{i\frac{2\pi}{\lambda}\left(z_3+ct\right)}
+\end{align} It is easily checked, see above, that the wave moves along the $z_3$ axis in the negatives sense, which is what we want.\\
+This expression could be a candidate to describe the reflected wave. 
+\\But we note that 
+\begin{align}
+E^r_{\alpha}=-A_{\alpha}e^{-i\frac{2\pi}{\lambda}\left(z_3+ct\right)}
+\end{align}
+also represents an electric field moving in the negative sense of $z_3$.\\\\
+Let's further note that the triad $E^r_{\alpha},H^r_{\alpha}, v^r$ (with $v^r$ the velocity vector), is an oriented triad. As the velocity vector and electric field of the incoming field both are reversed, we conclude that the magnetic vector will maintain it's direction (see figure).\\
+So, let's put tentatively for the magnetic complex vector
+\begin{align}
+H^r_{\alpha}=-\epsilon_{\alpha\beta}A_{\beta}e^{i\frac{2\pi}{\lambda}\left(z_3+ct\right)}
+\end{align}
+or 
+\begin{align}
+H^r_{\alpha}=-\epsilon_{\alpha\beta}A_{\beta}e^{-i\frac{2\pi}{\lambda}\left(z_3+ct\right)}
+\end{align}
+We test now these tentative equations with the Maxwell's equations.\\\\ 
+\textbf{Electric field :} \textbf{($\mathbf{6.301a}$)}\\\\
+\textbf{Case $S= \frac{2\pi}{\lambda}\left(z_3+ct_0\right)$}
+\begin{align}
+\frac{1}{c}\partial_t E_{\alpha}&=\epsilon_{\alpha mn}H_{n,m}\\
+\epsilon_{\alpha mn}H_{n,m}&= \epsilon_{\alpha\beta\gamma}H_{\gamma,\beta}+\epsilon_{\alpha 3\beta}H_{\beta,3}+\epsilon_{\alpha\beta 3}\underbrace{H_{3,\gamma}}_{=0}\\
+&= -i\epsilon_{\alpha\beta\gamma}\epsilon_{\gamma\delta}A_{\delta}e^{iS}\underbrace{S_{,\beta}}_{=0}-i\epsilon_{\alpha 3 \beta}\epsilon_{\beta \gamma}A_{\gamma}e^{iS}\underbrace{S_{,3}}_{=\frac{2\pi}{\lambda}}\\
+&= -i\frac{2\pi}{\lambda}A_{\alpha}e^{iS}\\
+\frac{1}{c}\partial_t E_{\alpha}&=-\frac{1}{c}iA_{\alpha}e^{iS}\left(c\frac{2\pi}{\lambda}\right)\\
+&=-i\frac{2\pi}{\lambda}A_{\alpha}e^{iS}
+\end{align}
+
+\textbf{Case $S= -\frac{2\pi}{\lambda}\left(z_3+ct_0\right)$}
+\begin{align}
+\frac{1}{c}\partial_t E_{\alpha}&=\epsilon_{\alpha mn}H_{n,m}\\
+\epsilon_{\alpha mn}H_{n,m}&= \epsilon_{\alpha\beta\gamma}H_{\gamma,\beta}+\epsilon_{\alpha 3\beta}H_{\beta,3}+\epsilon_{\alpha\beta 3}\underbrace{H_{3,\gamma}}_{=0}\\
+&= -i\epsilon_{\alpha\beta\gamma}\epsilon_{\gamma\delta}A_{\delta}e^{iS}\underbrace{S_{,\beta}}_{=0}-i\epsilon_{\alpha 3 \beta}\epsilon_{\beta \gamma}A_{\gamma}e^{iS}\underbrace{S_{,3}}_{=-\frac{2\pi}{\lambda}}\\
+&= i\frac{2\pi}{\lambda}A_{\alpha}e^{iS}\\
+\frac{1}{c}\partial_t E_{\alpha}&=-\frac{1}{c}iA_{\alpha}e^{iS}\left(-c\frac{2\pi}{\lambda}\right)\\
+&=i\frac{2\pi}{\lambda}A_{\alpha}e^{iS}
+\end{align}
+So, both solutions satisfies the Maxwell equation $\mathbf{6.301a}$.\\\\
+\textbf{Magnetic field :} \textbf{($\mathbf{6.301b}$)}\\\\
+\textbf{Case $S= \frac{2\pi}{\lambda}\left(z_3+ct_0\right)$}
+\begin{align}
+\frac{1}{c}\partial_t H_{\alpha}&=-\epsilon_{\alpha mn}E_{n,m}\\
+\epsilon_{\alpha mn}E_{n,m}&= -\epsilon_{\alpha\beta\gamma}\underbrace{E_{\gamma,\beta}}_{=0}-\epsilon_{\alpha 3\beta}E_{\beta,3}-\epsilon_{\alpha\beta 3}\underbrace{E_{3,\gamma}}_{=0}\\
+&=\epsilon_{\alpha \beta3}E_{\beta,3}\\
+&= -i\frac{2\pi}{\lambda}\epsilon_{\alpha 3\beta}A_{\beta}e^{iS}\\
+&= i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta }A_{\beta}e^{iS}\\
+\frac{1}{c}\partial_t H_{\alpha}&= i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta}(-A_{\beta})e^{iS}\\
+&= -i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta}A_{\beta}e^{iS}
+\end{align}
+
+\textbf{Case $S= -\frac{2\pi}{\lambda}\left(z_3+ct_0\right)$}
+
+\begin{align}
+\frac{1}{c}\partial_t H_{\alpha}&=-\epsilon_{\alpha mn}E_{n,m}\\
+\epsilon_{\alpha mn}E_{n,m}&= -\epsilon_{\alpha\beta\gamma}\underbrace{E_{\gamma,\beta}}_{=0}-\epsilon_{\alpha 3\beta}E_{\beta,3}-\epsilon_{\alpha\beta 3}\underbrace{E_{3,\gamma}}_{=0}\\
+&=\epsilon_{\alpha \beta 3}E_{\beta,3}\\
+&= i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta}A_{\beta}e^{iS}\\
+\frac{1}{c}\partial_t H_{\alpha}&= -i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta}(-A_{\beta})e^{iS}\\
+&= i\frac{2\pi}{\lambda}\epsilon_{\alpha \beta}A_{\beta}e^{iS}
+\end{align}
+We conclude that $S= \frac{2\pi}{\lambda}\left(z_3+ct_0\right)$ does not fit with the Maxwell's equations while $S= -\frac{2\pi}{\lambda}\left(z_3+ct_0\right)$ does.\\
+For the $z_3$ components of the electric and magnetic field, these must remain zero as all the energy the plane components of the incoming electromagnetic wave is transferred to the plane components of the reflected pane wave (the magnitude of these components are the same for the incoming and the reflected plane wave).
 $$\blacklozenge$$
 \newpage
