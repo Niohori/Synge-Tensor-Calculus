@@ -1881,3 +1881,560 @@ We conclude that $S= \frac{2\pi}{\lambda}\left(z_3+ct_0\right)$ does not fit wit
 For the $z_3$ components of the electric and magnetic field, these must remain zero as all the energy the plane components of the incoming electromagnetic wave is transferred to the plane components of the reflected pane wave (the magnitude of these components are the same for the incoming and the reflected plane wave).
 $$\blacklozenge$$
 \newpage
+
+
+
+\section{p238 - Exercise 14a}
+\begin{tcolorbox}
+Taking for the Hertz vector the fundamental solution of the wave equation $\mathbf{6.342}$
+$$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R},\quad R^2=z_mz_m$$
+where $B_r$ is a constant vector, show that, for $R$ much less than $\lambda=\frac{2\pi}{k}$, we have approximatively
+$$E_r= -\pdv{}{z^r}\left[B_mz_m\frac{e^{-ikct}}{R^3}\right],$$
+$$H_r= -ik\epsilon_{rmn}B_mz_n\frac{e^{-ikct}}{R^3}.$$
+Show also that for $R$ much greater than $\lambda=\frac{2\pi}{k}$ (wave zone), we have approximatively
+$$E_r= k^2\left(B_rR^2-B_mz_mz_r\right)\frac{e^{-ik(ct-R)}}{R^3},$$
+$$H_r= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}.$$
+(This is the electromagnetic field of the Hertzian dipole oscillation, which is the simplest model of a radio antenna).
+\end{tcolorbox}
+We have $\mathbf{6.341}$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\frac{1}{c^2}\partial^2_t\Pi_r\\
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+and $\mathbf{6.342}$:
+\begin{align}
+\frac{1}{c^2}\partial^2_t\Pi_r-\Pi_{r,mm}=0
+\end{align}
+\textbf{Case $kR<<2\pi$:}\\\\
+In that case $$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R} \approx B_r\frac{e^{-ikct}}{R}$$
+and let's express $\Pi_r$ as 
+\begin{align}
+\Pi_r&= B_rF(t)G(z)
+\end{align}
+with
+\\
+\begin{align}
+F(t)&=e^{-ikct}\\
+G(z)&= \frac{1}{R}
+\end{align}
+So (1) can be expressed as 
+\begin{align}
+E_r&= B_mFG_{,mr}-\frac{1}{c^2}B_rGF_{,tt}
+\end{align}
+Let's calculate some necessary derivatives
+\begin{align}
+&R_{,r} = \frac{z_r}{R}\\
+&F_{,t}= -ikcF\\
+&F_{,tt}= -k^2c^2F\\
+&G_{,r} = -\frac{z_r}{R^3}\\
+&\Pi_{m,m} = -B_mz_m\frac{F}{R^3}
+\end{align}
+So, $(7)$ can be expressed as
+\begin{align}
+E_r&= -\left(B_mz_m\frac{F}{R^3}\right)_{,r}+B_r\frac{1}{R}k^2F
+\end{align}
+Consider the expression $\frac{1}{c^2}B_mz_mGF_{,tt}$, then
+\begin{align}
+\left(\frac{1}{c^2}B_mz_mGF_{,tt}\right)_{,r}&= \frac{1}{c^2}B_rGF_{,tt}-\frac{1}{c^2}B_mF_{,tt}z_mz_r\frac{G}{R^2}\left(1-ikR\right)\\
+-\left(B_mz_m\frac{1}{R}k^2F\right)_{,r}&= -B_r\frac{1}{R}k^2F+B_mk^2Fz_mz_r\frac{1}{R^3}
+\end{align}
+
+
+
+\section{p238 - Exercise 14b}
+\begin{tcolorbox}
+Taking for the Hertz vector the fundamental solution of the wave equation $\mathbf{6.342}$
+$$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R},\quad R^2=z_mz_m$$
+where $B_r$ is a constant vector, show that, for $R$ much less than $\lambda=\frac{2\pi}{k}$, we have approximatively
+$$E_r= -\pdv{}{z^r}\left[B_mz_m\frac{e^{-ikct}}{R^3}\right],$$
+$$H_r= -ik\epsilon_{rmn}B_mz_n\frac{e^{-ikct}}{R^3}.$$
+Show also that for $R$ much greater than $\lambda=\frac{2\pi}{k}$ (wave zone), we have approximatively
+$$E_r= k^2\left(B_rR^2-B_mz_mz_r\right)\frac{e^{-ik(ct-R)}}{R^3},$$
+$$H_r= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}.$$
+(This is the electromagnetic field of the Hertzian dipole oscillation, which is the simplest model of a radio antenna).
+\end{tcolorbox}
+We have $\mathbf{6.341}$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\frac{1}{c^2}\partial^2_t\Pi_r\\
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+and $\mathbf{6.342}$:
+\begin{align}
+\frac{1}{c^2}\partial^2_t\Pi_r-\Pi_{r,mm}=0
+\end{align}
+$(3)$ in $(1)$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+\end{align}
+and let's express $\Pi_r$ as 
+\begin{align}
+\Pi_r&= B_rF(t)G(z)
+\end{align}
+with
+\\
+\begin{align}
+F(t)&=e^{-ikct}\\
+G(z)&= \frac{e^{ikR}}{R}
+\end{align}
+So (1) can be expressed as 
+\begin{align}
+E_r&= B_mFG_{,mr}-\frac{1}{c^2}B_rGF_{,tt}
+\end{align}We also know by $\mathbf{6.350}$:
+\begin{align}
+G_{,mm}=-k^2G
+\end{align}
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+&= \Pi_{m,mr}+k^2B_rFG
+\end{align}
+Let's calculate some necessary derivatives
+\begin{align}
+&R_{,r} = \frac{z_r}{R}\\
+&F_{,t}= -ikcF\\
+&F_{,tt}= -k^2c^2F\\
+&G_{,r} = -\frac{z_rG}{R^2}\left(1-ikR\right)\\
+&\Pi_{m,m} = -B_mz_mF\frac{G}{R^2}\left(1-ikR\right)
+\end{align}
+The $(12)$ becomes
+\begin{align}
+E_r&= \Pi_{m,mr}+k^2B_rFG\\
+&= -\left[B_mz_mF\frac{G}{R^2}\left(1-ikR\right)\right]_{,r}+k^2B_rFG\\
+&= -\left[B_mz_mF\frac{G}{R^2}\right]_{,r}+\left[B_mz_mF\frac{G}{R}ik\right]_{,r}+k^2B_rFG\\
+\end{align}
+Consider the expression $\frac{1}{c^2}B_mz_mGF_{,tt}$, then
+\begin{align}
+\left(\frac{1}{c^2}B_mz_mGF_{,tt}\right)_{,r}&= \frac{1}{c^2}B_rGF_{,tt}-\frac{1}{c^2}B_mF_{,tt}z_mz_r\frac{G}{R^2}\left(1-ikR\right)
+\end{align}
+$(16)$ in $(1)$:
+\begin{align}
+E_r&= \Pi_{m,mr}+\frac{1}{c^2}B_mF_{,tt}z_mz_r\frac{G}{R^2}\left(1-ikR\right)-\left(\frac{1}{c^2}B_mz_mGF_{,tt}\right)_{,r}\\
+&= \left[\Pi_{m,m}-\frac{1}{c^2}B_mz_mGF_{,tt}\right]_{,r}+\frac{1}{c^2}B_mF_{,tt}z_mz_r\frac{G}{R^2}\left(1-ikR\right)\\
+&= \left[-B_mz_mF\frac{G}{R^2}\left(1-ikR\right)+\frac{1}{c^2}B_mz_mGk^2c^2F\right]_{,r}-\frac{1}{c^2}B_mk^2c^2Fz_mz_r\frac{G}{R^2}\left(1-ikR\right)\\
+&= \left[-B_mz_mF\frac{G}{R^2}\left(1-ikR\right)+B_mz_mGk^2F\right]_{,r}-B_mk^2Fz_mz_r\frac{G}{R^2}\left(1-ikR\right)
+\end{align}
+\begin{align}
+E_r&= \left\{\begin{array}{l}\left[ikB_mz_mF\frac{G}{R}\right]_{,r}\\\\
+-\left[B_mz_mF\frac{G}{R^2}\right]_{,r}\\\\
++\left[B_mz_mGk^2F\right]_{,r}\\\\
+-B_mk^2Fz_mz_r\frac{G}{R^2}\\\\
++iB_mk^3Fz_mz_r\frac{G}{R}
+\end{array}\right.\\
+&= \left\{\begin{array}{l}
+\left[ikB_mz_mF\frac{G}{R}\right]_{,r}\\\\
+-\left[\frac{B_mz_mF}{R^3}(RG)\right]_{,r}\\\\
++\left[B_mk^2Fz_mG\right]_{,r}\\\\
+-B_mk^2Fz_mz_r\frac{G}{R^2}\\\\
++iB_mk^3Fz_mz_r\frac{G}{R}\\
+\end{array}\right.\\
+&= \left\{\begin{array}{l}
+ikB_rF\frac{G}{R}+ikB_mFz_m\left[\frac{G}{R}\right]_{,r}\\\\
+-\left[\frac{B_mz_mF}{R^3}\right]_{,r}(RG)-\frac{B_mz_mF}{R^3}\left[(RG)\right]_{,r}\\\\
++B_rk^2FG+B_mk^2Fz_m\left[G\right]_{,r}\\\\
+-B_mk^2Fz_mz_r\frac{G}{R^2}\\\\
++iB_mk^3Fz_mz_r\frac{G}{R}
+\end{array}\right.\\
+&= \left\{\begin{array}{l}
+ikB_rF\frac{G}{R}-k^2B_mFz_mz_r\frac{G}{R^2}\\\\
+-\left[\frac{B_mz_mF}{R^3}\right]_{,r}(RG)-i\frac{kB_mz_mF}{R^3}z_rG\\\\
++B_rk^2FG-B_mk^2Fz_m\frac{z_rG}{R^2}+ik^3B_mFz_m\frac{z_rG}{R}\\\\
+-k^2B_mFz_mz_r\frac{G}{R^2}\\\\
++ik^3B_mFz_mz_r\frac{G}{R}
+\end{array}\right.\\
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+**********************************************************
+\begin{align}
+G_{,rm} &= \left\{\begin{array}{l}-\delta_{mr}\frac{G}{R^2}\left(1-ikR\right)\\\\
+-\frac{z_r}{R^2}\left(1-ikR\right)G_{,m}\\\\
++2\frac{z_rG}{R^3}\left(1-ikR\right)R_{,m}\\\\
++ik\frac{z_rG}{R^2}R_{,m}
+\end{array}\right.\\
+&= \left\{\begin{array}{l}-\delta_{mr}\frac{G}{R^2}\left(1-ikR\right)\\\\
++\frac{z_r}{R^2}\left(1-ikR\right)\frac{z_rG}{R^2}\left(1-ikR\right)\\\\
++2\frac{z_rG}{R^3}\left(1-ikR\right)\frac{z_r}{R}\\\\
++ik\frac{z_rG}{R^2}\frac{z_r}{R}
+\end{array}\right.\\
+&= \left\{\begin{array}{l}-\delta_{mr}\frac{G}{R^2}\left(1-ikR\right)\\\\
++\frac{z_r^2}{R^4}G-2ik\frac{z_r^2}{R^3}G-k^2\frac{z_r^2}{R^2}G\\\\
++2\frac{z_r^2G}{R^4}-2ik\frac{z_r^2G}{R^3}\\\\
++ik\frac{z_r^2G}{R^3}
+\end{array}\right.\\
+&= 3z_r^2\frac{G}{R^4}-k^2z_r^2\frac{G}{R^2}-\delta_{mr}\frac{G}{R^2}+ik\delta_{mr}\frac{G}{R}-3ikz_r^2\frac{G}{R^3}\\
+\Rightarrow\quad G_{,mm}&= 3z_r^2\frac{G}{R^4}-k^2z_r^2\frac{G}{R^2}-3\frac{G}{R^2}+3ik\frac{G}{R}-3ikz_r^2\frac{G}{R^3}\\
+\Rightarrow\quad \Pi_{r,mm}&= 3z_r^2B_rF\frac{G}{R^4}-k^2z_r^2B_rF\frac{G}{R^2}-3B_rF\frac{G}{R^2}+3ikB_rF\frac{G}{R}-3ikz_r^2B_rF\frac{G}{R^3}
+\end{align}
+$(7)$:
+\begin{align}
+E_m&= 3z_r^2B_mF\frac{G}{R^4}-k^2z_r^2B_mF\frac{G}{R^2}-\delta_{mr}B_mF\frac{G}{R^2}+ik\delta_{mr}B_mF\frac{G}{R}-3ikz_m^2B_mF\frac{G}{R^3} +\frac{1}{c^2}B_mGk^2c^2F\\
+&= 3z_r^2B_mF\frac{G}{R^4}-k^2z_r^2B_mF\frac{G}{R^2}-\delta_{mr}B_mF\frac{G}{R^2}+ik\delta_{mr}B_mF\frac{G}{R}-3ikz_m^2B_mF\frac{G}{R^3} +B_mGk^2F
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p238 - Exercise 14c}
+\begin{tcolorbox}
+Taking for the Hertz vector the fundamental solution of the wave equation $\mathbf{6.342}$
+$$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R},\quad R^2=z_mz_m$$
+where $B_r$ is a constant vector, show that, for $R$ much less than $\lambda=\frac{2\pi}{k}$, we have approximatively
+$$E_r= -\pdv{}{z^r}\left[B_mz_m\frac{e^{-ikct}}{R^3}\right],$$
+$$H_r= -ik\epsilon_{rmn}B_mz_n\frac{e^{-ikct}}{R^3}.$$
+Show also that for $R$ much greater than $\lambda=\frac{2\pi}{k}$ (wave zone), we have approximatively
+$$E_r= k^2\left(B_rR^2-B_mz_mz_r\right)\frac{e^{-ik(ct-R)}}{R^3},$$
+$$H_r= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}.$$
+(This is the electromagnetic field of the Hertzian dipole oscillation, which is the simplest model of a radio antenna).
+\end{tcolorbox}
+We have $\mathbf{6.341}$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\frac{1}{c^2}\partial^2_t\Pi_r\\
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+and $\mathbf{6.342}$:
+\begin{align}
+\frac{1}{c^2}\partial^2_t\Pi_r-\Pi_{r,mm}=0
+\end{align}
+$(3)$ in $(1)$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+\end{align}
+and let's express $\Pi_r$ as 
+\begin{align}
+\Pi_r&= B_rG(t)F(z)
+\end{align}
+with
+\\
+\begin{align}
+G(t)&=e^{-ikct}\\
+F(z)&= \frac{e^{ikR}}{R}
+\end{align}
+So (3) can be expressed as 
+\begin{align}
+E_r&= B_mGF_{,mr}-B_rGF_{,mm}
+\end{align}We also know by $\mathbf{6.350}$:
+\begin{align}
+F_{,mm}=-k^2F
+\end{align}
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+&= \Pi_{m,mr}+k^2B_rGF
+\end{align}
+Let's calculate some necessary derivatives
+\begin{align}
+&R_{,r} = \frac{z_r}{R}\\
+&F_{,m} = -\frac{z_mF}{R^2}\left(1-ikR\right)\\
+&\Pi_{m,m} = -B_mz_mG\frac{F}{R^2}\left(1-ikR\right)
+\end{align}
+Consider the case $kR<< 2\pi$, then 
+\begin{align}
+F&= \frac{e^ikR}{R}\\
+&\approx \frac{1+ikR}{R}\\
+&=\frac{1}{R}+ik
+\end{align}
+$(15)$
+\begin{align}
+\Pi_{m,m} &= -B_mz_mG\frac{1}{R^3}\left(1+ikR\right)\left(1-ikR\right)\\
+ &= -B_mz_mG\frac{1}{R^3}\left(1+k^2R^2\right)
+\end{align}
+$(12)$ becomes
+\begin{align}
+E_r&= \Pi_{m,mr}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\left(1+k^2R^2\right)\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}-\left[B_mz_mGk^2\frac{1}{R}\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}-B_mz_mGk^2\left[\frac{1}{R}\right]_{,r}-k^2B_rG\frac{1}{R}+k^2B_rGF\\
+&= -\left[B_mz_m\frac{e^{-ikct}}{R^3}\right]_{,r}+k^2B_mz_mGz_r\frac{1}{R^3}-B_rGk^2\frac{1}{R}+k^2B_rG\frac{1}{R}+ik^3B_rG\\
+&= -\left[B_mz_m\frac{e^{-ikct}}{R^3}\right]_{,r}+k^2G\left(B_mz_mz_r\frac{1}{R^3}+ikB_r\right)\\
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p238 - Exercise 14d}
+\begin{tcolorbox}
+Taking for the Hertz vector the fundamental solution of the wave equation $\mathbf{6.342}$
+$$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R},\quad R^2=z_mz_m$$
+where $B_r$ is a constant vector, show that, for $R$ much less than $\lambda=\frac{2\pi}{k}$, we have approximatively
+$$E_r= -\pdv{}{z^r}\left[B_mz_m\frac{e^{-ikct}}{R^3}\right],$$
+$$H_r= -ik\epsilon_{rmn}B_mz_n\frac{e^{-ikct}}{R^3}.$$
+Show also that for $R$ much greater than $\lambda=\frac{2\pi}{k}$ (wave zone), we have approximatively
+$$E_r= k^2\left(B_rR^2-B_mz_mz_r\right)\frac{e^{-ik(ct-R)}}{R^3},$$
+$$H_r= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}.$$
+(This is the electromagnetic field of the Hertzian dipole oscillation, which is the simplest model of a radio antenna).
+\end{tcolorbox}
+We have $\mathbf{6.341}$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\frac{1}{c^2}\partial^2_t\Pi_r\\
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+and $\mathbf{6.342}$:
+\begin{align}
+\frac{1}{c^2}\partial^2_t\Pi_r-\Pi_{r,mm}=0
+\end{align}
+$(3)$ in $(1)$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+\end{align}
+and let's express $\Pi_r$ as 
+\begin{align}
+\Pi_r&= B_rG(t)F(z)
+\end{align}
+with
+\\
+\begin{align}
+G(t)&=e^{-ikct}\\
+F(z)&= \frac{e^{ikR}}{R}
+\end{align}
+So (3) can be expressed as 
+\begin{align}
+E_r&= B_mGF_{,mr}-B_rGF_{,mm}
+\end{align}We also know by $\mathbf{6.350}$:
+\begin{align}
+F_{,mm}=-k^2F
+\end{align}
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+&= \Pi_{m,mr}+k^2B_rGF
+\end{align}
+Let's calculate some necessary derivatives
+\begin{align}
+&R_{,r} = \frac{z_r}{R}\\
+&F_{,m} = -\frac{z_mF}{R^2}\left(1-ikR\right)\\
+&\Pi_{m,m} = -B_mz_mG\frac{F}{R^2}\left(1-ikR\right)
+\end{align}
+
+
+$(12)$ becomes
+\begin{align}
+E_r&= \Pi_{m,mr}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\left(1-ikR\right)\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\right]_{,r}+\left[ikB_mz_mG\frac{F}{R}\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\right]_{,r}+ikB_rG\frac{F}{R}+ikB_mz_mG\left[\frac{F}{R}\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\right]_{,r}+ikB_rG\frac{F}{R}+ikB_mz_mG\frac{RF_{,r}-Fz_r\frac{1}{R}}{R^2}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\right]_{,r}+ikB_rG\frac{F}{R}+ikB_mz_mG\frac{1}{R}F_{,r}-ikB_mz_mz_rGF\frac{1}{R^3}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\right]_{,r}+ikB_rG\frac{F}{R}-ikB_mz_mG\frac{z_rF}{R^2}\frac{1}{R}\left(1-ikR\right)-ikB_mz_mz_rGF\frac{1}{R^3}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{F}{R^2}\right]_{,r}+ikB_rGF\frac{1}{R}-2ikB_mz_mz_rGF\frac{1}{R^3}-k^2B_mz_mz_rGF\frac{1}{R^2}+k^2B_rGF
+\end{align}
+Suppose $kR << \pi$, then $F\approx \left(\frac{1}{R} + ik\right)$\\
+So, 
+\begin{align}
+E_r&=  \left\{\begin{array}{l}-\left[B_mz_mG\frac{\left(\frac{1}{R} + ik\right)}{R^2}\right]_{,r}\\\\
++ikB_rG\left(\frac{1}{R} + ik\right)\frac{1}{R}\\\\-2ikB_mz_mz_rG\left(\frac{1}{R} + ik\right)\frac{1}{R^3}\\\\-k^2B_mz_mz_rG\left(\frac{1}{R} + ik\right)\frac{1}{R^2}\\\\+k^2B_rG\left(\frac{1}{R} + ik\right)
+\end{array}\right.\\
+&= \left\{\begin{array}{l} -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}\\\\-ikB_rG\frac{1}{R^2}\\\\+2ikB_mz_mG\frac{z_r}{R}\frac{1}{R^3}\\\\+ikB_rG\frac{1}{R}\left(\frac{1}{R} + ik\right)\\\\-2ikB_mz_mz_rG\frac{1}{R^3}\left(\frac{1}{R} + ik\right)\\\\-k^2B_mz_mz_rG\frac{1}{R^2}\left(\frac{1}{R} + ik\right)\\\\+k^2B_rG\left(\frac{1}{R} + ik\right)
+\end{array}\right.\\
+&= \left\{\begin{array}{l} -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}\\\\-ikB_rG\frac{1}{R^2}\\\\+2ikB_mz_mGz_r\frac{1}{R^4}\\\\+ikB_rG\frac{1}{R^2}-k^2B_rG\frac{1}{R}\\\\-2ikB_mz_mz_rG\frac{1}{R^4} +2k^2B_mz_mz_rG\frac{1}{R^3} \\\\-k^2B_mz_mz_rG\frac{1}{R^3} -ik^3B_mz_mz_rG\frac{1}{R^2}\\\\+k^2B_rG\frac{1}{R}+ ik^3B_rG
+\end{array}\right.\\
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p238 - Exercise 14e}
+\begin{tcolorbox}
+Taking for the Hertz vector the fundamental solution of the wave equation $\mathbf{6.342}$
+$$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R},\quad R^2=z_mz_m$$
+where $B_r$ is a constant vector, show that, for $R$ much less than $\lambda=\frac{2\pi}{k}$, we have approximatively
+$$E_r= -\pdv{}{z^r}\left[B_mz_m\frac{e^{-ikct}}{R^3}\right],$$
+$$H_r= -ik\epsilon_{rmn}B_mz_n\frac{e^{-ikct}}{R^3}.$$
+Show also that for $R$ much greater than $\lambda=\frac{2\pi}{k}$ (wave zone), we have approximatively
+$$E_r= k^2\left(B_rR^2-B_mz_mz_r\right)\frac{e^{-ik(ct-R)}}{R^3},$$
+$$H_r= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}.$$
+(This is the electromagnetic field of the Hertzian dipole oscillation, which is the simplest model of a radio antenna).
+\end{tcolorbox}
+We have $\mathbf{6.341}$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\frac{1}{c^2}\partial^2_t\Pi_r\\
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+and $\mathbf{6.342}$:
+\begin{align}
+\frac{1}{c^2}\partial^2_t\Pi_r-\Pi_{r,mm}=0
+\end{align}
+$(3)$ in $(1)$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+\end{align}
+and let's express $\Pi_r$ as 
+\begin{align}
+\Pi_r&= B_rG(t)F(z)
+\end{align}
+with
+\\
+\begin{align}
+G(t)&=e^{-ikct}\\
+F(z)&= \frac{e^{ikR}}{R}
+\end{align}
+So (3) can be expressed as 
+\begin{align}
+E_r&= B_mGF_{,mr}-B_rGF_{,mm}
+\end{align}We also know by $\mathbf{6.350}$:
+\begin{align}
+F_{,mm}=-k^2F
+\end{align}
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}\\
+&= \Pi_{m,mr}+k^2B_rGF
+\end{align}
+From $\mathbf{6.348}$ we have
+\begin{align}
+F^{'} &= \left(\frac{ik}{R}-\frac{1}{R^2}\right)e^{ikR}
+\end{align}
+Let's calculate some necessary derivatives
+\begin{align}
+&R_{,r} = \frac{z_r}{R}\\
+&F_{,m} = F^{'}R_{,r}=z_m\left(\frac{ik}{R}-\frac{1}{R^2}\right)F\\
+&\Pi_{m,m} = B_mz_mG\left(\frac{ik}{R}-\frac{1}{R^2}\right)F
+\end{align}
+
+
+$(12)$ becomes
+\begin{align}
+E_r&= \Pi_{m,mr}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\left(1-ikR\right)\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+\left[ikB_mz_mG\frac{F}{R}\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+ikB_rG\frac{F}{R}+ikB_mz_mG\left[\frac{F}{R}\right]_{,r}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+ikB_rG\frac{F}{R}+ikB_mz_mG\frac{RF_{,r}-Fz_r\frac{1}{R}}{R^2}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+ikB_rG\frac{F}{R}+ikB_mz_mG\frac{1}{R}F_{,r}-ikB_mz_mz_rGF\frac{1}{R^3}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+ikB_rG\frac{F}{R}-ikB_mz_mG\frac{z_rF}{R^2}\frac{1}{R}\left(1-ikR\right)-ikB_mz_mz_rGF\frac{1}{R^3}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+ikB_rG\frac{F}{R}-ikB_mz_mz_rGF\frac{1}{R^3}-k^2B_mz_mz_rGF\frac{1}{R^2}-ikB_mz_mz_rGF\frac{1}{R^3}+k^2B_rGF\\
+&= -\left[B_mz_mG\frac{1}{R^3}\right]_{,r}+GF\frac{k}{R^3}\left[kR\left(R^2B_r-B_mz_mz_r\right)+i\left(R^2B_r-2B_mz_mz_r\right)\right]\\
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p238 - Exercise 14}
+\begin{tcolorbox}
+Taking for the Hertz vector the fundamental solution of the wave equation $\mathbf{6.342}$
+$$\Pi_r=B_r\frac{e^{-ik\left(ct-R\right)}}{R},\quad R^2=z_mz_m$$
+where $B_r$ is a constant vector, show that, for $R$ much less than $\lambda=\frac{2\pi}{k}$, we have approximatively
+$$E_r= -\pdv{}{z^r}\left[B_mz_m\frac{e^{-ikct}}{R^3}\right],$$
+$$H_r= -ik\epsilon_{rmn}B_mz_n\frac{e^{-ikct}}{R^3}.$$
+Show also that for $R$ much greater than $\lambda=\frac{2\pi}{k}$ (wave zone), we have approximatively
+$$E_r= k^2\left(B_rR^2-B_mz_mz_r\right)\frac{e^{-ik(ct-R)}}{R^3},$$
+$$H_r= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}.$$
+(This is the electromagnetic field of the Hertzian dipole oscillation, which is the simplest model of a radio antenna).
+\end{tcolorbox}
+We have $\mathbf{6.341}$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\frac{1}{c^2}\partial^2_t\Pi_r\\
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+and $\mathbf{6.342}$:
+\begin{align}
+\frac{1}{c^2}\partial^2_t\Pi_r-\Pi_{r,mm}=0
+\end{align}
+$(3)$ in $(1)$:
+\begin{align}
+E_r&= \Pi_{m,mr}-\Pi_{r,mm}
+\end{align}
+One is tempted to attack frontally the expression $(4)$ but when you begin, one experiences that this approach requires a lot of lengthy algebraic manipulations. So instead we try first to derive the expression for the magnetic field and then derive the electric field from the Maxwell's equations.\\
+Let's express $\Pi_r$ as 
+\begin{align}
+\Pi_r&= B_rG(t)F(z)
+\end{align}
+with
+\\
+\begin{align}
+G(t)&=e^{-ikct}\\
+F(z)&= \frac{e^{ikR}}{R}
+\end{align}
+
+From $\mathbf{6.348}$ we have
+\begin{align}
+F^{'} = \frac{\partial F}{\partial R}&= \left(\frac{ik}{R}-\frac{1}{R^2}\right)e^{ikR}
+\end{align}
+and 
+\begin{align}
+&R_{,r} = \frac{z_r}{R}
+\end{align}
+
+
+We have $(2)$ 
+\begin{align}
+H_r&= \frac{1}{c}\epsilon_{rpq}\partial_t\Pi_{q,p}
+\end{align}
+with 
+\begin{align}
+\Pi_{q,p}&= B_qGF^{'}R_{,p}\\
+&= B_qz_pGF\left(\frac{ik}{R}-\frac{1}{R^2}\right)\\
+\Rightarrow\quad \partial_{t}\Pi_{q,p}&=  B_qz_pF\left(\frac{ik}{R}-\frac{1}{R^2}\right)\partial_{t}G\\
+&=  -ikcB_qz_pGF\left(\frac{ik}{R}-\frac{1}{R^2}\right)\\
+\Rightarrow\quad H_r&=  -ik\epsilon_{rpq}B_qz_pGF\left(\frac{ik}{R}-\frac{1}{R^2}\right)
+\end{align}
+\textbf{For $kR << 2\pi$ we have}
+\begin{align}
+F= \frac{e^{ikR}}{R}= \frac{\cos kR+i\sin kR}{R}\approx\frac{1+ikR}{R}= \left(\frac{1}{R}+ik\right)
+\end{align}
+So $(15)$ becomes
+\begin{align}
+H_r&=  -ik\epsilon_{rpq}B_qz_pG\left(\frac{1}{R}+ik\right)\left(\frac{ik}{R}-\frac{1}{R^2}\right)\\
+&= -ik\epsilon_{rpq}B_qz_pG\left(\frac{1}{R}+ik\right)\left(ik-\frac{1}{R}\right)\frac{1}{R}\\
+&= -ik\epsilon_{rpq}B_qz_pG\left(-k^2-\frac{1}{R^2}\right)\frac{1}{R}\\
+&= i\epsilon_{rpq}B_qz_pG\left(k^3+\frac{k}{R^2}\right)\frac{1}{R}\\
+&= i\epsilon_{rpq}B_qz_pG\left(k^3+\frac{k^3}{k^2R^2}\right)\frac{1}{R}\\
+&= ik^3\epsilon_{rpq}B_qz_pG\left(1+\frac{1}{k^2R^2}\right)\frac{1}{R}
+\end{align}
+and as $\frac{1}{k^2R^2}>>1$
+\begin{align}
+H_r&= ik^3\epsilon_{rpq}B_qz_pG\frac{1}{k^2R^2}\frac{1}{R}\\
+&= ik\epsilon_{rpq}B_qz_p\frac{1}{R^3}e^{-ikct}\\
+&= -ik\epsilon_{rmn}B_mz_n\frac{1}{R^3}e^{-ikct}
+\end{align}
+so indeed $$\mathbf{H_r\approx -ik\epsilon_{rmn}B_mz_n\frac{1}{R^3}e^{-ikct}}$$
+For the electric field we have the Maxwell equation (for the case $kR << 2\pi$) 
+\begin{align}
+\frac{1}{c}\partial_t E_r &= \epsilon_{rmn}H_{n,m}\\
+&= -ik\epsilon_{rmn}\epsilon_{npq}B_pG\left(z_q\frac{1}{R^3}\right)_{,m}\\
+&= -ik\epsilon_{rmn}\epsilon_{npq}B_pG\left(z_q\right)_{,m}\frac{1}{R^3}+ik\epsilon_{rmn}\epsilon_{npq}B_pGz_q\left(\frac{1}{R^3}\right)_{,m}\\
+&= -ik\underbrace{\epsilon_{rmn}\epsilon_{npm}}_{= 2\delta_{rp}}B_pG\frac{1}{R^3}+3ik\underbrace{\epsilon_{rmn}\epsilon_{npq}}_{= -\delta_{mp}\delta_{rq}+\delta_{nq}\delta_{rp}}B_pGz_q\frac{z_m}{R^5}\\
+&= ikG\left(\frac{B_r}{R^3} -3\frac{B_mz_mz_r}{R^5}\right)
+\end{align}
+and note that $$\left(\frac{B_r}{R^3} -3\frac{B_mz_mz_r}{R^5}\right)=\left[\frac{B_mz_m}{R^3}\right]_{,r}$$
+so integration over $t$ of $(30)$
+\begin{align}
+E_r &= \left[ikc\frac{B_mz_m}{R^3}\underbrace{\int Gdt}_{-\frac{e^{-ikct}}{ikc}}\right]_{,r}\\
+&= -\left[iB_mz_m\frac{e^{-ikct}}{R^3}\right]_{,r}
+\end{align}
+so indeed 
+$$\mathbf{E_r\approx-\left[iB_mz_m\frac{e^{-ikct}}{R^3}\right]_{,r}}$$
+$$\lozenge$$
+\textbf{Let's look at the case $kR >> 2\pi$ :}\\\\
+We have $(15)$
+\begin{align}
+H_r&=  -ik\epsilon_{rpq}B_qz_pGF\left(\frac{ik}{R}-\frac{1}{R^2}\right)\\
+&=  -ik^3\epsilon_{rpq}B_qz_pGF\left(\frac{i}{kR}-\frac{1}{k^2R^2}\right)
+\end{align}
+as $ \frac{1}{kR}>>\frac{1}{k^2R^2}$ we discard the real part of the complex number and get 
+\begin{align}
+H_r&=  k^2\epsilon_{rpq}B_qz_pGF\frac{1}{R}\\
+&= -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}
+\end{align}
+so indeed $$\mathbf{H_r\approx -k^2\epsilon_{rmn}B_mz_n\frac{e^{-ik(ct-R)}}{R^2}}$$
+$$\blacklozenge$$
+\newpage
