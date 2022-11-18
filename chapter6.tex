@@ -2028,3 +2028,161 @@ E_r&=-ick^3\left(R^2B_r+B_mz_mz_r\frac{1}{R^2}\right)\frac{G}{-ikc}F\frac{1}{R^2
 so indeed $$\mathbf{E_r\approx k^2\left(R^2B_r+B_mz_mz_r\right)\frac{e^{-ikc(t-R)}}{R^3}}$$
 $$\blacklozenge$$
 \newpage
+
+
+
+\section{p238 - Exercise 15}
+\begin{tcolorbox}
+In terms of the magnetic tensor $H_{mn}$, defined in $\mathbf{6.367}$, show that, in curvilinear coordinates in space,\\
+(a) The condition that $\lambda^n$ be parallel to the magnetic field is 
+$$H_{mn}\lambda^n=0$$
+(b) The condition that $\mu_n$ be perpendicular to the magnetic field is 
+$$H_{mn}\mu_r+H_{nr}\mu_m+H_{rm}\mu_n=0$$
+(c) The square of the magnitude of the magnetic vector $\left(H^2=H_rH^r\right)$ is 
+$$H^2= \half H_{mn}H^{mn}$$
+\end{tcolorbox}
+
+(a) $H_n \parallel \lambda_n$: Let's prove that first in Cartesian coordinate system.
+Suppose that $H_n$ is parallel with the a curve tangent $\lambda_n$, then
+\begin{align}
+H_n&= H_0\lambda_n\\
+\times \epsilon_{rmn}\quad\rightarrow \quad H_{rm}&= H_0\epsilon_{rmn}\lambda_n\\
+\times \lambda_m\quad\rightarrow \quad H_{rm}\lambda_m&= H_0\underbrace{\epsilon_{rmn}\lambda_n\lambda_m}_{=0}\\
+\end{align}
+So in Cartesian coordinate system 
+\begin{align}
+H_{rm}\lambda_m=0
+\end{align}
+but this a tensor expression and becomes for a curvilinear system
+$$H_{rm}\lambda^m=0$$
+$$\lozenge$$
+\\
+(b) $H_n \perp \mu_n$:
+We work directly in curvilinear coordinate systems.
+\begin{align}
+H_n \perp \mu_n\quad\Rightarrow\quad H^r\mu_r =  0\\
+\mathbf{(6.364)}\Rightarrow\quad \frac{1}{2\sqrt{a}}\epsilon^{rmn}H_{mn}\mu_r =  0
+\end{align}
+By renaming dummy indexes, $(7)$ can also be written as 
+\begin{align}
+\frac{1}{2\sqrt{a}}\epsilon^{mrn}H_{rn}\mu_m =  0\\
+\frac{1}{2\sqrt{a}}\epsilon^{nrm}H_{rm}\mu_n =  0
+\end{align}
+Summation of $(7), \ (8),\ (9)$ gives
+\begin{align}
+&\epsilon^{rmn}H_{mn}\mu_r+\epsilon^{mrn}H_{rn}\mu_m+ \epsilon^{nrm}H_{rm}\mu_n =  0\\
+\Leftrightarrow\quad &\epsilon^{rmn}H_{mn}\mu_r-\epsilon^{rmn}H_{rn}\mu_m+ \epsilon^{rmn}H_{rm}\mu_n =  0\\
+\end{align}
+and as $H_{mn}$ is skew-symmetric:
+\begin{align}
+&\epsilon^{rmn}H_{mn}\mu_r+\epsilon^{rmn}H_{nr}\mu_m+ \epsilon^{rmn}H_{rm}\mu_n =  0\\
+\end{align}
+Hence, $\epsilon^{rmn}\left(H_{mn}\mu_r+H_{nr}\mu_m+ H_{rm}\mu_n\right)=0$ and conclude 
+$$H_{mn}\mu_r+H_{nr}\mu_m+ H_{rm}\mu_n=0$$\
+$$\lozenge$$
+\\
+(c)We work directly in curvilinear coordinate systems.
+\begin{align}
+H^2 &= H_rH^r\\
+\mathbf{(6.364)}\Rightarrow\quad H^2 &= \frac{\sqrt{a}}{2}\epsilon_{rmn}H^{mn}\frac{1}{2\sqrt{a}}\epsilon^{ruv}H_{uv}\\
+&= \frac{1}{4}\left(\delta_{mu}\delta_{nv}-\delta_{mv}\delta_{nu}\right)H^{mn}H_{uv}\\
+&= \frac{1}{4}\left(H^{uv}H_{uv}-H^{vu}H_{uv}\right)\\
+&= \frac{1}{4}\left(H^{uv}H_{uv}+H^{uv}H_{uv}\right)\\
+&= \frac{1}{2}H^{uv}H_{uv}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p238 - Exercise 16}
+\begin{tcolorbox}
+Show that $E_r$ and $H_r$ are unchanged if, in equations $\mathbf{6.336}$, $\phi_r$ and $\psi$ are replaced by
+$$\phi^{'}_r = \phi_r+v_{,r}, \quad \psi^{'} = \psi - \frac{1}{c}\partial_t v$$
+where $v$ is an arbitrary function of position and time. (This transformation of the electromagnetic potentials is called \textit{gauge transformation}.) If $v$ is any solution of the inhomogeneous equation $$\frac{1}{c^2}\partial^2_t v - v_{,mm}= \frac{1}{c}\partial_t\psi + \phi_{m,m}$$
+show that, if $\phi_r$ and $\psi$ satisfy $\mathbf{6.337}$ and $\mathbf{6.338}$ then $\phi^{'}_r$ and $\psi^{'}$ satisfy equations of the form  $\mathbf{6.339}$ and $\mathbf{6.340}$ 
+\end{tcolorbox}
+We have 
+\begin{align}
+\left\{\begin{array}{ll}
+\mathbf{6.336(a)}&E_r= -\frac{1}{c}\partial_t \phi_r - \psi_{,r}\\\\
+\mathbf{6.336(b)}&H_r=\epsilon_{rpq}\psi_{q,p}\\\\
+\end{array}\right.
+\end{align}
+So
+\begin{align}
+E^{'}_r&= -\frac{1}{c}\partial_t \phi_r-\frac{1}{c}\partial_t v_{,r} - \psi_{,r}+\frac{1}{c}\partial_t v_{,r}\\
+&= -\frac{1}{c}\partial_t \phi_r- \psi_{,r}\\
+&=E_r
+\end{align}
+and 
+\begin{align}
+H^{'}_r&= \epsilon_{rpq}\phi_{q,p}+\underbrace{\epsilon_{rpq}v_{,qp}}_{=0}\\
+&=\epsilon_{rpq}\phi_{q,p}\\
+&=H^{}_r
+\end{align}
+$$\lozenge$$
+We have 
+\begin{align}
+\left\{\begin{array}{ll}
+\mathbf{6.337}&\frac{1}{c^2}\partial^2_t \phi_r +\frac{1}{c} \partial_t\psi_{,r}= \phi_{r,mm}- \phi_{m,mr}\\\\
+\mathbf{6.338}&\frac{1}{c}\partial_t \phi_{m,m} +\psi_{,mm}=0\\\\
+\end{array}\right.
+\end{align}
+and 
+\begin{align}
+\left\{\begin{array}{ll}
+\mathbf{6.339}(a)&\frac{1}{c^2}\partial^2_t \phi_r- \phi_{r,mm}=0\\\\
+\mathbf{6.339}(b)&\frac{1}{c^2}\partial^2_t \psi- \psi_{,mm}=0\\\\
+\mathbf{6.340}&\frac{1}{c}\partial_t \psi+ \phi_{m,m}=0\\\\
+\end{array}\right.
+\end{align}
+And let's indeed suppose that 
+\begin{align}
+\frac{1}{c^2}\partial^2_t v - v_{,mm}= \frac{1}{c}\partial_t\psi + \phi_{m,m}
+\end{align}
+So for $\mathbf{6.339}(a)$ we get 
+\begin{align}
+&\frac{1}{c^2}\partial^2_t \phi^{'}_r- \phi^{'}_{r,mm}\\
+&= \frac{1}{c^2}\partial^2_t \phi^{}_r- \phi^{}_{r,mm}+\underbrace{\frac{1}{c^2}\partial^2_t v_{,r}- v_{,rmm}}_{= (10)_{,r}}\\
+&= \frac{1}{c^2}\partial^2_t \phi^{}_r- \phi^{}_{r,mm}+\frac{1}{c}\partial_t\psi_{,r} + \phi_{m,rm}\\
+&= \underbrace{\frac{1}{c^2}\partial^2_t \phi^{}_r+\frac{1}{c}\partial_t\psi_{,r}}_{=\text{(6.337)}} - \left(\phi^{}_{r,mm}+ \phi_{m,rm}\right)\\
+&= \left(\phi^{}_{r,mm}+ \phi_{m,rm}\right) - \left(\phi^{}_{r,mm}+ \phi_{m,rm}\right)\\
+&=0
+\end{align}
+And for $\mathbf{6.339}(b)$ we get 
+\begin{align}
+&\frac{1}{c^2}\partial^2_t \psi^{'}- \psi^{'}_{,mm}\\
+&= \frac{1}{c^2}\partial^2_t \psi- \psi^{}_{,mm}-\frac{1}{c^3}\partial^3_t v_{}+ \frac{1}{c}\partial_t v_{,mm}\\
+&= \frac{1}{c^2}\partial^2_t \psi- \psi^{}_{,mm}-\frac{1}{c}\partial_t\left(\underbrace{\frac{1}{c^2}\partial^2_t v_{}- v_{,mm}}_{= (10)}\right)\\
+&= \frac{1}{c^2}\partial^2_t \psi- \psi^{}_{,mm}-\frac{1}{c}\partial_t\left(\frac{1}{c}\partial_t\psi + \phi_{m,m}\right)\\
+&= \frac{1}{c^2}\partial^2_t \psi-\frac{1}{c^2}\partial^{2}_t\psi- \psi^{}_{,mm}-\frac{1}{c}\partial_t\phi_{m,m}\\
+&= - \left(\underbrace{\psi^{}_{,mm}+\frac{1}{c}\partial_t\phi_{m,m}}_{= \text{(6.338)}}\right)\\
+&=0
+\end{align}
+And for $\mathbf{6.340}$ we get 
+\begin{align}
+&\frac{1}{c}\partial_t \psi^{'}+ \phi^{'}_{m,m}\\
+&= \frac{1}{c}\partial_t \psi^{}+ \phi^{}_{m,m}-\left(\underbrace{\frac{1}{c^2}\partial^2_t v-v_{,mm}}_{=\text{(10)}}\right)\\
+&= \frac{1}{c}\partial_t \psi^{}+ \phi^{}_{m,m}-\frac{1}{c}\partial_t \psi^{}- \phi^{}_{m,m}\\
+=0
+\end{align}
+
+$$\blacklozenge$$
+\newpage
+
+
+\section{p239 - Exercise 17}
+\begin{tcolorbox}
+Combining the vector potential $\phi_{\alpha} \ (\alpha=1,2,3)$ and the scalar potential $\psi$ into a single $4$-vector $\kappa_r$, given by
+$$\kappa_{\alpha} = -\phi_{\alpha}, \quad \kappa_4= \psi$$
+show that equations $\mathbf{6.336}$, $\mathbf{6.337}$ and $\mathbf{6.338}$, can be written in the relativistic form
+$$F_{mn}= \kappa_{m,n}-\kappa_{n,m}$$
+$$g^{mn}\kappa_{r|mn} - g^{mn}\kappa_{m|rn}=0$$
+where $F_{mn}$ is as in $\mathbf{6.371}$ and $g^{mn}$ as in $\mathbf{6.376}$. Show further that equations $\mathbf{6.339}$ and $\mathbf{6.340}$ become
+$$g^{mn}\kappa_{r|mn}=0,\quad g^{mn}\kappa_{m|n}=0$$ 
+Show also that teh gauge transformation of the preceding exercise can be written 
+$$\kappa^{'}_r = \kappa_r - v_{,r}$$
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage
