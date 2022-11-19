@@ -866,7 +866,7 @@ Using $(4)$, (2) becomes
 \text{(d)}&F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}=0
 \end{array}\right.
 \end{align}
-For homogeneous coordinates we have $a^{\alpha\beta}=1$ and $a^{\alpha4}=1$ so:
+For homogeneous coordinates we have $a^{\alpha\gamma}=\delta_{\alpha\gamma}$ and $a^{\alpha4}=0$ so:
 \begin{align}
 \left\{\begin{array}{ll}
 \text{(a)}&F_{\alpha4,4}= -F_{\alpha\beta|\beta}\\\\
@@ -878,7 +878,7 @@ For homogeneous coordinates we have $a^{\alpha\beta}=1$ and $a^{\alpha4}=1$ so:
 
 Let's look what happens when we extend the range  $\alpha,\beta,\gamma$ to $4$. First let's extend  $\gamma$ to $4$. The left part of equation (6d) can be written as 
 \begin{align}
-F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}+ F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}
+\underbrace{F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}}_{=0}+ F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}
 \end{align}
 Consider 
 \begin{align}
@@ -894,6 +894,8 @@ Extend $\beta$ to $4$:
 P^{"}&= F_{44,4}+F_{44,4}+F_{44,4}\\
 &=0\quad \text{(}F_{mn} \text{ is skew-symmetric)}
 \end{align}
+This means that expression $(7)$ can be written as 
+$$F_{rm,n}+F_{mn,r}+F_{nr,m}=\underbrace{F_{\alpha\beta,\gamma}+F_{\beta\gamma,\alpha}+F_{\gamma\alpha,\beta}}_{=0}+P+\underbrace{P^{'}+P^{"} }_{=0}$$
 So, we only have to prove that $P= F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}=0$.\\
 From $(6b)$ we get:
 \begin{align}
@@ -901,17 +903,21 @@ P&= F_{\alpha\beta,4}+F_{\beta4,\alpha}+F_{4\alpha,\beta}\\
 &= F_{\alpha4,\beta}-F_{\beta4,\alpha}+F_{\beta4,\alpha}-F_{\alpha4,\beta}\\
 &=0
 \end{align}
-We get so,
+We get so by extending the indexes to $4$: ,
 \begin{align}
 F_{rm,n}+F_{mn,r}+F_{nr,m}=0
 \end{align}
 Consider now equation $(6c)$ and extend the suffixes from $3$ to $4$.\\
 What is the value of the following expression?
 \begin{align}
-Q&=F_{4m,m}=F_{4\beta,\beta} + F_{44,4}
+Q&=F_{4m,m}=\underbrace{F_{4\beta,\beta} }_{=0\text{ (see 6d) }}+ F_{44,4}
 \end{align}
 Obviously, $F_{mn}$ being skew-symmetric we have $F_{44}=0\quad\Rightarrow\quad F_{44,4}=0 \quad \Rightarrow\quad Q=0$.\\
-So, the Maxwell equations reduce to 
+From $\mathbf{6.378(b)}$ page 230 we know
+\begin{align}
+g^{\gamma\beta}F_{\alpha\gamma|\beta}=F_{\alpha\beta|\beta}=0
+\end{align}
+So, considering $(16)$, $(17)$ and $ (18)$ we see that the Maxwell equations reduce to 
 \begin{align}\left\{\begin{array}{l}
 F_{rm,n}+F_{mn,r}+F_{nr,m}=0\\
 F_{rm,m}=0
@@ -2183,6 +2189,154 @@ $$g^{mn}\kappa_{r|mn}=0,\quad g^{mn}\kappa_{m|n}=0$$
 Show also that teh gauge transformation of the preceding exercise can be written 
 $$\kappa^{'}_r = \kappa_r - v_{,r}$$
 \end{tcolorbox}
+What we know
+\begin{align}
+\left\{\begin{array}{ll}
+\mathbf{6.371}(a)&F_{\alpha\beta}=H_{\alpha\beta}, \quad F_{\alpha 4}=-F_{4\alpha}=E_{\alpha}, \quad F_{44}=0  \\\\
+\mathbf{6.376}(b)&g^{\alpha\beta}=a^{\alpha\beta}, \quad g_{\alpha 4}=0, \quad g{44}=-1  \\\\
+\mathbf{6.336}(a)&E_r= -\frac{1}{c}\partial_t \phi_r-\psi_{,r}\\\\
+\mathbf{6.336}(b)&H_r= \epsilon_{rpq} \phi_{q,p}\\\\
+\mathbf{6.337}&\frac{1}{c^2}\partial^2_t \phi_r+\frac{1}{c}\partial_t\psi_{,r} = \phi_{r,mm}-\phi_{m,mr}\\\\
+\mathbf{6.338}&\frac{1}{c}\partial_t \phi_{m,m}+\psi_{,mm}=0\\\\
+\mathbf{6.367}&H_{rm} =\epsilon_{rmn}H_n,\quad H_r =\half \epsilon_{rmn}H_{mn}\\\\
+\end{array}\right.
+\end{align}
+Then
+\begin{align}
+\text{6.336(b)}\times \epsilon_{ruv}\text{:}\quad H_{uv} &= \left(\delta_{up}\delta_{vq}-\delta_{uq}\delta_{vp}\right)\phi_{q,p}\\
+&=\phi_{v,u}-\phi_{u,v}
+\end{align}
+So for $(u,v) = (\alpha,\beta)$ we have 
+\begin{align}
+H_{\alpha\beta} &=\phi_{\beta,\alpha}-\phi_{\alpha,\beta}\\
+F_{\alpha\beta} &= H_{\alpha\beta}= -\left(\phi_{\alpha,\beta}-\phi_{\beta,\alpha}\right)\\
+&= \kappa_{\alpha,\beta}-\kappa_{\beta,\alpha}
+\end{align}
+Consider $F_{44}$ and $\kappa_4= \psi$.\\
+So,
+\begin{align}
+F_{44} &= \kappa_{44}-\kappa_{44}\\
+&=0
+\end{align}
+So, indeed $F_{44}=0$\\\\
+Consider $F_{\alpha 4}$.\\
+\begin{align}
+\text{6.336(a):}\quad F_{\alpha 4} &= -\frac{1}{c}\partial_t \phi_{\alpha}-\psi_{,\alpha}\\
+&= \frac{1}{c}\partial_t \kappa_{\alpha}-\kappa_{4,\alpha}\\
+\end{align}
+But $ \frac{1}{c}\partial_t \kappa_{\alpha}= \frac{\partial \kappa_{\alpha}}{\partial ct} =  \kappa_{4\alpha}$\\
+So, 
+\begin{align}
+F_{\alpha 4} &=\kappa_{\alpha, 4} -\kappa_{4,\alpha}
+\end{align}
+and conclude that  $\text{(6)}$, $\text{(8)}$ and $\text{(12)}$ can be expressed by the general formula
+$$F_{mn}= \kappa_{m,n}-\kappa_{n,m}$$
+$$\lozenge$$
+We have 
+\begin{align}\text{6.337:}\quad \frac{1}{c^2}\partial^2_t \phi_r+\frac{1}{c}\partial_t\psi_{,r} = \phi_{r,mm}-\phi_{m,mr}
+\end{align} 
+The left term can be expressed as 
+\begin{align}
+\frac{\partial^2 \phi_r}{\partial (ct)^2}+\frac{\partial^2 \psi_r}{\partial (ct)}= \phi_{r,44}+\psi_{,r4}
+\end{align}
+Hence $\text{(13)}$ becomes
+\begin{align}
+&\phi_{\alpha,44}+\psi_{,\alpha 4}=\phi_{\alpha,\beta\beta}-\phi_{\beta,\beta\alpha}\\
+\Rightarrow\quad & -\kappa_{\alpha,44}+\kappa_{4,\alpha 4}=-\kappa_{\alpha,\beta\beta}+\kappa_{\beta,\beta\alpha}\\
+\Rightarrow\quad & \kappa_{\alpha,\beta\beta}-\kappa_{\alpha,44}+ \kappa_{4,4 \alpha}-\kappa_{\beta,\beta\alpha}=0
+\end{align}
+and using the metric $g^{mn}$ we can write this as 
+\begin{align}
+g^{mn}\kappa_{\alpha|mn}-g^{mn}\kappa_{m|\alpha n}=0
+\end{align}
+This is true as $(18)$ is a tensor expression and if true in a particular coordinate system it must be true all coordinate systems (see the discussion page 62 of the book.)\\
+Yet, this yields only for $\alpha = (1,\ 2,\ 3)$ and we still have to prove that this expression is valid for $\alpha=4$
 
+We have 
+\begin{align}\text{6.338:}\quad \frac{1}{c}\partial_t \phi_{m,m}+\psi_{,mm} = 0
+\end{align} 
+The left term can be expressed as 
+\begin{align}
+\frac{\partial \phi_{\alpha,\alpha}}{\partial (ct)}+ \psi_{,\alpha\alpha}=0\\
+\Leftrightarrow\quad \phi_{\alpha,\alpha 4}+\psi_{,\alpha\alpha}=0\\
+\Leftrightarrow\quad \kappa_{\alpha,\alpha 4}-\kappa_{4,\alpha\alpha}=0
+\end{align}
+and using the metric $g^{mn}$ we can write this as 
+\begin{align}
+g^{mn}\kappa_{4|mn}-g^{mn}\kappa_{m|n4}=0
+\end{align}
+So $(18)$ and $(24)$ can be written as
+$$g^{mn}\kappa_{r|mn}-g^{mn}\kappa_{m|nr}=0$$
+$$\lozenge$$
+What about $\mathbf{6.339}$ and $\mathbf{6.340}$
+\begin{align}
+\text{6.339(a):}\quad &\frac{1}{c^2}\partial^2_t\phi_r -\phi_{r,mm}=0\\
+\Leftrightarrow\quad &\frac{\partial^2\phi_{\alpha}}{\partial(ct)^2} -\phi_{\alpha,\beta\beta}=0\\
+\Leftrightarrow\quad &\phi_{\alpha,44} -\phi_{\alpha,\beta\beta}=0\\
+\Leftrightarrow\quad &\kappa_{\alpha,44} -\kappa_{\alpha,\beta\beta}=0\\
+\text{6.339(b):}\quad &\frac{1}{c^2}\partial^2_t\psi -\psi_{,mm}=0\\
+\Leftrightarrow\quad &\frac{\partial^2\psi}{\partial(ct)^2} -\psi_{,\beta\beta}=0\\
+\Leftrightarrow\quad &\psi_{,44} -\psi_{,\beta\beta}=0\\
+\Leftrightarrow\quad &\kappa_{4,44} -\kappa_{4,\beta\beta}=0
+\end{align}
+Again we can write $(28)$ and $(31)$ as 
+$$g^{mn}\kappa_{r|mn}=0$$
+\begin{align}
+\text{6.340:}\quad &\frac{1}{c}\partial_t\psi +\phi_{m,m}=0\\
+\Leftrightarrow\quad &\frac{\partial\psi}{\partial(ct)} -\phi_{\beta,\beta}=0\\
+\Leftrightarrow\quad &\psi_{,4} +\phi_{\beta,\beta}=0\\
+\Leftrightarrow\quad &\kappa_{4,4} -\kappa_{\beta,\beta}=0
+\end{align}
+Hence $(35)$ can be written as 
+$$g^{mn}\kappa_{m|n}=0$$
+$$\lozenge$$
+For the gauge transformation in the preceding exercise we had the condition 
+\begin{align}
+&\frac{1}{c^2}\partial^2_t v - v_{,mm}= \frac{1}{c}\partial_t\psi + \phi_{m,m}\\
+\Leftrightarrow\quad &\frac{\partial^2 v}{\partial (ct)^2} - v_{,mm}= \frac{\partial \psi}{\partial (ct)} + \phi_{m,m}\\
+\Leftrightarrow\quad & v_{,44} - v_{,\beta\beta}=  \kappa_{4,4} - \kappa_{\beta,\beta}
+\end{align}
+Substituting $\kappa_r= \kappa^{'}_r+v_{,r}$, one gets for $(38)$
+\begin{align}
+&v_{,44} - v_{,\beta\beta}=  \kappa^{'}_{4,4} +v_{,44} - \kappa^{'}_{\beta,\beta}-v_{,\beta\beta}\\
+\Leftrightarrow\quad &\kappa^{'}_{4,4}- \kappa^{'}_{\beta,\beta}=0
+\end{align}
+So the condition $(35)$ is respected and the gauge transformation  can be expressed by $ \kappa^{'}_r= \kappa_r-v_{,r}$
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p239 - Exercise 18}
+\begin{tcolorbox}
+Using homogeneous coordinates $z_r\quad (z_1,\ z_2,\ z_3$ being rectangular Cartesians in space and $z_4=ict=ix^4)$, and defining 
+$$\hat{F}_{mn}= \half\epsilon_{mnrs}F_{rs}$$
+show that the complete set of Maxwell's equations $\mathbf{6.378}$ reads
+$$F_{rm,m}=0,\quad \hat{F}_{rm,m}=0$$
+\end{tcolorbox}
+In exercise  page 231 we already proved that for this kind of coordinates:
+$$F_{rm,m}=0$$ 
+$$\lozenge$$
+From this same exercise page 231, we also know that
+\begin{align}
+\mathbf{6.378}(a)\quad &F_{rm,n}+ F_{mn,r}+F_{nr,m}=0 
+\end{align}
+From the definition of $\hat{F}_{rm}$: 
+\begin{align}
+\hat{F}_{rm,m}= \half\epsilon_{rmuv}F_{uv,m}
+\end{align}
+Playing with the dummy indexes:
+\begin{align}
+\hat{F}_{rm,m}= \half\epsilon_{rumv}F_{mv,u}\\
+\hat{F}_{rm,m}= \half\epsilon_{rvum}F_{um,v}
+\end{align}
+Adding $(2),\ (3),\ (4)$:
+\begin{align}
+3\hat{F}_{rm,m}&= \half\left(\epsilon_{rmuv}F_{uv,m} +\epsilon_{rumv}F_{mv,u} +\epsilon_{rvum}F_{um,v}\right)\\
+&=\half\left(\epsilon_{rmuv}F_{uv,m} -\epsilon_{rmuv}F_{mv,u} -\epsilon_{rmuv}F_{um,v}\right)\\
+&=\half\epsilon_{rmuv}\left(F_{uv,m} -F_{mv,u} -F_{um,v}\right)\\
+&=\half\epsilon_{rmuv}\left(\underbrace{F_{uv,m} +F_{vm,u} +F_{mu,v}}_{=0}\right)
+\end{align}
+So we conclude that $$\hat{F}_{rm,m}=0$$
 $$\blacklozenge$$
 \newpage
