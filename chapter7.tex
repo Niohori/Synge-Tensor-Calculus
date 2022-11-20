@@ -1,0 +1,110 @@
+\setcounter{chapter}{6}
+\chapter{Relative tensors, ideas of volume, Green-Stokes theorems.}
+\pagebreak[4]
+
+\section{p241 - Exercise}
+\begin{tcolorbox}
+If $b_{rs}$ is an absolute tensor, show that the determinant $\left|b_{rs}\right|$ is a relative invariant of weight $2$. What are the tensor characters of $\left|c^{rs}\right|$ and $\left|f^r_{s}\right|$?
+\end{tcolorbox}
+As $b_{rs}$ is an absolute tensor, we have 
+\begin{align}
+b^{'}_{uv}&= b_{rs}\pdv{x^r}{x^{'u}}\pdv{x^s}{x^{'v}}
+\end{align}
+Hence,
+\begin{align}
+\left|b^{'}_{uv}\right|&= \left|b_{rs}\right|\left|\pdv{x^r}{x^{'u}}\right|\left|\pdv{x^s}{x^{'v}}\right|
+\end{align}
+and as $J= \left|\pdv{x^k}{x^{'s}}\right|$ we get 
+\begin{align}
+\left|b^{'}_{uv}\right|&= J^2\left|b_{rs}\right|
+\end{align}
+Conclusion, $\left|b_{rs}\right|$ is a relative invariant of weight $ 2$.
+$$\lozenge$$
+As $c^{rs}$ is an absolute tensor, we have 
+\begin{align}
+c^{'uv}&= c^{rs}\pdv{x^{'u}}{x^r}\pdv{x^{'v}}{x^s}
+\end{align}
+Hence,
+\begin{align}
+\left|c^{'uv}\right|&= \left|c^{rs}\right|\left|\pdv{x^{'u}}{x^r}\right|\left|\pdv{x^{'v}}{x^s}\right|
+\end{align}
+and as $J^{-1}= \left|\pdv{x^{'s}}{x^k}\right|$ we get 
+\begin{align}
+\left|c^{'uv}\right|&= J^{-2}\left|c^{rs}\right|
+\end{align}
+Conclusion, $\left|c^{rs}\right|$ is a relative invariant of weight $ -2$.
+$$\lozenge$$
+As $f^{r}_{s}$ is an absolute tensor, we have 
+\begin{align}
+f^{'u}_{v}&= f^{r}_{s}\pdv{x^{'u}}{x^r}\pdv{x^s}{x^{'v}}
+\end{align}
+Hence,
+\begin{align}
+\left|f^{'u}_{v}\right|&= \left|f^{r}_{s}\right|\left|\pdv{x^{'u}}{x^r}\right|\left|\pdv{x^s}{x^{'v}}\right|
+\end{align}
+and we get 
+\begin{align}
+\left|f^{'u}_{v}\right|&= JJ^{-1}\left|f^{r}_{s}\right|
+\end{align}
+Conclusion, $\left|f^{r}_{s}\right|$ is an absolute  invariant tensor .
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p242 - Exercise}
+\begin{tcolorbox}
+Show that, in three dimensions, the only non-vanishing components of $\delta^{kl}_{rs}$ are
+$$\delta^{23}_{23}=\delta^{32}_{32}=\delta^{31}_{31}=\delta^{13}_{13}=\delta^{12}_{12}=\delta^{21}_{21}=1$$
+$$\delta^{23}_{32}=\delta^{32}_{23}=\delta^{31}_{13}=\delta^{13}_{31}=\delta^{12}_{21}=\delta^{21}_{12}=-1$$
+\end{tcolorbox}
+This is easily seen. If $(k,l), (r, s)\ $ are considered as sets, then $\delta^{kl}_{rs}\ne 0 \quad\Leftrightarrow\quad (k,l)\ne (r, s)$.
+And , $\delta^{kl}_{rs}= 1 \quad\Leftrightarrow\quad k=r \wedge l=s  $ and on the opposite $\delta^{kl}_{rs}= -1 \quad\Leftrightarrow\quad k=s \wedge l=r  $
+$$\blacklozenge$$
+\newpage
+
+
+\section{p243 - Exercise}
+\begin{tcolorbox}
+Show that equations $\mathbf{5.231}$ and $\mathbf{6.128}$ can be written as follows:
+$$M_{rs} = \delta^{kl}_{rs}z_kF_l$$
+$$\omega_{rs} = \half\delta^{kl}_{rs}v_{l,k}$$
+\end{tcolorbox}
+\begin{align}
+\text{(5.231)}\quad M_{rs}&=\epsilon_{rsn}M_n= z_rF_s-z_sF_r
+\end{align}
+In this expression $M_{rs}=0$ when $r=s$, but this is also the case with $\delta^{kl}_{rs}$.\\
+In $M_{rs} = \delta^{kl}_{rs}z_kF_l$ we see that there is no contribution in the summation when $k=l$. The only contribution being those for which $k=r \wedge l=s \text{ (positive contribution) } \vee \quad k=s \wedge l=r \text{ (negative contribution) } $, hence $$\delta^{kl}_{rs}z_kF_l\quad\Leftrightarrow\quad z_rF_s-z_sF_r$$
+$$\lozenge$$
+\begin{align}
+\text{(6.128)}\quad \omega_{rs} = \half\left(v_{s,r}-v_{r,s}\right)
+\end{align}
+The same arguments of the previous case apply to this case (a way to see this is to represent symbolically,  $z_rF_s$ and $v_{s,r}$ by $T_{rs}$)
+$$\blacklozenge$$
+\newpage
+
+
+\section{p243 - Exercise}
+\begin{tcolorbox}
+If $T_{k_1k_2\dots k_M}$ is completely skew-symmetric, determine 
+$$\delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}$$
+\end{tcolorbox}
+
+$\delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}$ is a sum of $M!$ terms: the first of these is $T_{s_1s_2\dots s_M}$ ; the other terms are obtained from it by permuting the subscripts and a minus sign is attached if the permutation is odd. Since $T_{s_1s_2\dots s_M}$ is completely skew-symmetric, each of the $M!$ terms equals  $+T_{s_1s_2\dots s_M}$ 
+Hence,
+
+$$ \delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}= M! \ T_{s_1s_2\dots s_M}$$
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p245 - Exercise}
+\begin{tcolorbox}
+Show that $\epsilon^{r_1r_2\dots r_N}\epsilon_{r_1r_2\dots r_N}= N!$ .
+\end{tcolorbox}
+First note that $sign(\epsilon^{r_1r_2\dots r_N})=sign(\epsilon_{r_1r_2\dots r_N})$ so that each term in the summation is always $+1$.\\
+There are $N$ choices to chose from for $r_1$, $N-1$ for $r_2$ , etc. and only one for $r_N$. And so $\epsilon^{r_1r_2\dots r_N}\epsilon_{r_1r_2\dots r_N}= N!$ 
+$$\blacklozenge$$
+\newpage
+
