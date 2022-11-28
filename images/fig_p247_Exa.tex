@@ -1,0 +1,28 @@
+
+\begin{tikzpicture}[scale=1]
+\coordinate (p1) at (2,5) {} {};
+\coordinate (p2) at (3,5) {};
+\coordinate (p3) at (4,5) {} {} {};
+\coordinate (p4) at (5,5) {} {} {};
+\coordinate (l1) at (2.5,5) {} {};
+\coordinate (l2) at (4.5,5) {};
+\draw  (p1) circle(0.5);
+\node at (p1)  {$i$};
+\draw  (p2) circle(0.5);
+\node at (p2)  {$j$};
+\draw  (p3) circle(0.5);
+\node at (p3)  {$m$};
+\draw  (p4) circle(0.5);
+\node at (p4)  {$n$};
+\draw  (l1) circle(1.);
+\draw  (l2) circle(1.);
+
+
+
+\draw [Latex-Latex ,dashed] plot[smooth, tension=.7] coordinates {(2,4.5) (2.5,4.3) (3,4.5)};
+\draw   [Latex-Latex ,dashed]plot[smooth, tension=.7] coordinates {(4,4.5) (4.5,4.3) (5,4.5)};
+\draw   [Latex-Latex ,dashed]plot[smooth, tension=.7] coordinates {(2.5,4) (3.4,3.7) (4.5,4)};
+\node[anchor = south ] at (2.5,4.3)   {\tiny$P_1$};
+\node[anchor = south ] at (4.5,4.3)  {\tiny$P_2$};
+\node[anchor = north ] at (3.4,3.7)  {\tiny$P_3$};
+\end{tikzpicture}
