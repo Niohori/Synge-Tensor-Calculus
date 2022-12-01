@@ -210,7 +210,7 @@ As we can see in figure $7.2$,  it's no hard to see that
 \caption{Permutations}
 \label{fig:fig_p255}
 \end{figure}
-Indeed suppose, as in the example $(a)$ ,  $k_1=2, k_2=1,k_3=3, ,\dots ,k_j = m,\dots , k_m=j,\dots$ etc., so we get a sequence $\{k_2, k_1,k_3,\dots, k_m,\dots k_j,\dots\}$ as illustrate in $(b)$. But to have - with this sequence - an equivalent expression of 
+Indeed suppose, as in the example $(a)$ ,  $k_1=2, k_2=1,k_3=3, ,\dots ,k_j = m,\dots , k_m=j,\dots$ etc., so we get a sequence $\{k_2, k_1,k_3,\dots, k_m,\dots k_j,\dots\}$ as illustrated in $(b)$. But to have - with this sequence - an equivalent expression of 
 $d\tau_{(M)}^{k_1 k_2\dots k_m}=(\theta_{\alpha}) \delta_{1 2 \dots M}^{\alpha_1\dots \alpha_M}d_{(\alpha_1)}x^{k_j}d_{(\alpha_2)}x^{k_m}\dots d_{(\alpha_M)}x^{k_n}$, we need to make an equivalent permutation so that $\alpha_r$ gets in the same position  as $k_r$, resulting in a new sequence $\{\alpha_2,\alpha_1,\alpha_3,\dots,\alpha_M,\dots,\alpha_j, \alpha_m\}$.\\
 The number of permutations to generate $\theta_{\alpha}$ and $\theta_k$ are identical resulting in $\theta_{\alpha}\theta_k=1$.
 So $(6)$ can be rewritten (noting that the $\alpha_r$ are dummy indexes and that we are free to rename them so that $r=1, n=2,\dots$) 
@@ -222,6 +222,87 @@ Finally, using $\mathbf{7.114}$
 d\tau_{(M)}^{k_1 k_2\dots k_m}&= \underbrace{\epsilon_{1 2 \dots M}}_{=1}\epsilon^{\beta_1\beta_2 \dots \beta_M}d_{(\beta_1)}x^{k_1}d_{(\beta_2)}x^{k_2}\dots d_{(\beta_n)}x^{k_n}\dots d_{(\beta_M)}x^{k_M}\\
 &= \epsilon^{\beta_1\beta_2 \dots \beta_M}d_{(\beta_1)}x^{k_1}d_{(\beta_2)}x^{k_2}\dots d_{(\beta_n)}x^{k_n}\dots d_{(\beta_M)}x^{k_M}
 \end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p257 - Exercice }
+\begin{tcolorbox}
+Let $x^k$ be rectangular Cartesian coordinates in Euclidean $3-$space. Introduce polar coordinates $r,\theta,\phi$ and consider the surface of the sphere $r=a$. On this sphere form the infinitesimal $2-$cell with corners $(\theta,\phi),\ (\theta+d\theta,\phi),\ (\theta,\phi+d\phi),\ (\theta+d\theta,\phi+d\phi)$. Determine the extension of this cell and interpret the rectangular components. In particular, show that the three independent components of the extension are (apart from the sign) equal to the areas obtained by normal projection of the cell onto the three rectangular planes. Does this interpretation remain valid if the sphere is replaces by some other surface?
+\end{tcolorbox}
+We use $\mathbf{7.312}$:
+\begin{align}
+d\tau_{(2)}^{k_1k_2}&= \epsilon^{\alpha_1\alpha_2}\pdv{x^{k_1}}{y^{\alpha_1}}\pdv{x^{k_2}}{y^{\alpha_2}}\left|d_{(\beta)}y^{\gamma}\right|
+\end{align}
+with $(y^1, y^2)= (\theta,\phi)$ giving if we take $f^{(i)}=c^{(i)} $ as $\theta=c^{(1)},\ \phi =c^{(2)} $:
+\begin{align}
+\left|d_{(\beta)}y^{\gamma}\right|&=\left|\begin{matrix}d_{(1)}y^{1}&d_{(1)}y^{2}\\
+d_{(2)}y^{1}&d_{(2)}y^{2}\end{matrix}\right|\\
+&=\left|\begin{matrix}d{\theta}&0\\
+0&d{\phi}\end{matrix}\right|\\
+&= d{\theta}d{\phi}
+\end{align}
+We also have
+\begin{align}
+\left\{\begin{array}{l}
+x= a\sin{\theta}\cos{\phi}\\
+y= a\sin{\theta}\sin{\phi}\\
+z= a\cos{\theta}\\
+\end{array}\right.\\
+\end{align}
+giving
+\begin{align}
+\left\{\begin{array}{l}
+\pdv{x}{\theta}= a\cos{\theta}\cos{\phi}\\
+\pdv{x}{\phi}= -a\sin{\theta}\sin{\phi}\\
+\pdv{y}{\theta}= a\cos{\theta}\sin{\phi}\\
+\pdv{y}{\phi}=  a\sin{\theta}\cos{\phi}\\
+\pdv{z}{\theta}= -a\sin{\theta}\\
+\pdv{z}{\phi}= 0\\
+\end{array}\right.\\
+\end{align}
+
+and get 
+\begin{align}
+d\tau_{(2)}^{xy}&= \underbrace{\epsilon^{11}}_{=0}\pdv{x}{\theta}\pdv{y}{\theta}d{\theta}d{\phi}+\epsilon^{12}\pdv{x}{\theta}\pdv{y}{\phi}d{\theta}d{\phi}+\epsilon^{21}\pdv{x}{\phi}\pdv{y}{\theta}d{\theta}d{\phi}+\underbrace{\epsilon^{22}}_{=0}\pdv{x}{\phi}\pdv{y}{\phi}d{\theta}d{\phi}\\
+&=a^2\cos{\theta}\cos{\phi}\sin{\theta}\cos{\phi}d{\theta}d{\phi}
++a^2\sin{\theta}\sin{\phi}\cos{\theta}\sin{\phi}d{\theta}d{\phi}\\
+&=a^2\cos{\theta}\sin{\theta}d{\theta}d{\phi}\\
+d\tau_{(2)}^{yx}&=-a^2\cos{\theta}\sin{\theta}d{\theta}d{\phi}
+\end{align}
+\begin{align}
+d\tau_{(2)}^{xz}&= \underbrace{\epsilon^{11}}_{=0}\pdv{x}{\theta}\pdv{z}{\theta}d{\theta}d{\phi}+\epsilon^{12}\pdv{x}{\theta}\underbrace{\pdv{z}{\phi}}_{=0}d{\theta}d{\phi}+\epsilon^{21}\pdv{x}{\phi}\pdv{z}{\theta}d{\theta}d{\phi}+\underbrace{\epsilon^{22}}_{=0}\pdv{x}{\phi}\pdv{z}{\phi}d{\theta}d{\phi}\\
+&=-a^2\sin^2{\theta}\sin{\phi}d{\theta}d{\phi}\\
+d\tau_{(2)}^{zx}&=a^2\sin^2{\theta}\sin{\phi}d{\theta}d{\phi}
+\end{align}
+\begin{align}
+d\tau_{(2)}^{yz}&= \underbrace{\epsilon^{11}}_{=0}\pdv{y}{\theta}\pdv{z}{\theta}d{\theta}d{\phi}+\epsilon^{12}\pdv{y}{\theta}\underbrace{\pdv{z}{\phi}}_{=0}d{\theta}d{\phi}+\epsilon^{21}\pdv{y}{\phi}\pdv{z}{\theta}d{\theta}d{\phi}+\underbrace{\epsilon^{22}}_{=0}\pdv{y}{\phi}\pdv{z}{\phi}d{\theta}d{\phi}\\
+&=a^2\sin^2{\theta}\cos{\phi}d{\theta}d{\phi}\\
+d\tau_{(2)}^{zy}&=-a^2\sin^2{\theta}\cos{\phi}d{\theta}d{\phi}
+\end{align}
+\begin{align}
+d\tau_{(2)}^{xx}&= \underbrace{\epsilon^{11}}_{=0}\pdv{x}{\theta}\pdv{x}{\theta}d{\theta}d{\phi}+\epsilon^{12}\pdv{x}{\theta}\pdv{x}{\phi}d{\theta}d{\phi}+\epsilon^{21}\pdv{x}{\phi}\pdv{x}{\theta}d{\theta}d{\phi}+\underbrace{\epsilon^{22}}_{=0}\pdv{x}{\phi}\pdv{x}{\phi}d{\theta}d{\phi}\\
+&=0
+\end{align}
+
+\begin{align}
+d\tau_{(2)}^{yy}&= \underbrace{\epsilon^{11}}_{=0}\pdv{y}{\theta}\pdv{y}{\theta}d{\theta}d{\phi}+\epsilon^{12}\pdv{y}{\theta}\pdv{y}{\phi}d{\theta}d{\phi}+\epsilon^{21}\pdv{y}{\phi}\pdv{y}{\theta}d{\theta}d{\phi}+\underbrace{\epsilon^{22}}_{=0}\pdv{y}{\phi}\pdv{y}{\phi}d{\theta}d{\phi}\\
+&=0
+\end{align}
+
+\begin{align}
+d\tau_{(2)}^{zz}&= \underbrace{\epsilon^{11}}_{=0}\pdv{z}{\theta}\pdv{z}{\theta}d{\theta}d{\phi}+\epsilon^{12}\pdv{z}{\theta}\underbrace{\pdv{z}{\phi}}_{=0}d{\theta}d{\phi}+\epsilon^{21}\underbrace{\pdv{z}{\phi}}_{=0}\pdv{z}{\theta}d{\theta}d{\phi}+\underbrace{\epsilon^{22}}_{=0}\pdv{z}{\phi}\pdv{z}{\phi}d{\theta}d{\phi}\\
+&=0
+\end{align}
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exa.tex}}\\
+    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxz.tex}}\\
+    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxy.tex}}
+\caption{Projections of extensions}
+\label{fig:fig_p257}
+\end{figure}
+The quantities $d\tau_{(2)}^{xy},\ d\tau_{(2)}^{xz},  \ d\tau_{(2)}^{yz}$ are the projections of the extension on the respective Cartesian coordinates planes as can be seen in figure $7.3$ where figure $(a)$ depicts the extension (area = $a^2\sin{\theta}d\theta d\phi$) when choosing $\theta,\phi$ as the parameters $y^k$, while figure $(b)$ represents the projection of this extension on the $xz-$plane and figure $(c)$ represents the projection of this extension on the $xy-$plane.  
 $$\blacklozenge$$
 \newpage
 
