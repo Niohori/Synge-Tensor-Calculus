@@ -1,0 +1,96 @@
+\pgfplotsset{every axis/.append style={
+view={120}{20},
+%axis equal image,
+    %clip=false,
+    %xlabel=$x$, ylabel=$y$, zlabel=$z$,
+    %axis lines=middle,
+    colormap={whitered}{
+        color(0cm)=(white);
+        color(1cm)=(black!75!gray)
+    }
+    %y dir=reverse,
+%    axis on top
+            }}
+            
+
+
+            
+\begin{tikzpicture}[angle/.style={black,thick}]
+\tikzmath{\a=0.05/sqrt(0.05*0.05+0.1*0.1);\k=1;\f=1;\u1=0;\v1=0;\u2=0;\v2=0;\u3=0;\v3=0;\u4=0;\v4=0;};
+\a, \k,\u1,\v1,\u2,\v2,\u3,\v3,\u4,\v4,\f;
+    %\pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+    \tikzset{>=latex} % for LaTeX arrow head
+\begin{axis}
+		[
+		hide axis,clip=false,
+		zmin=\k*0.5,
+		zmax=\k,
+			xmin=-\k,
+		xmax=\k,
+			ymin=-\k,
+		ymax=\k,
+		]
+				%relevant points
+	\coordinate (O) at ({ 0},{0},{0});%origin
+	\coordinate (X) at ({ 2},{0},{0});%origin
+	\coordinate (Y) at ({ 0},{1.5},{0});%origin
+	\coordinate (Z) at ({ 0},{0},{0.4});%origin
+	\draw[-Latex](O)--(X);
+	\draw[-Latex](O)--(Y);
+	\draw[-Latex](O)--(Z);
+	\node[{anchor=south east}] at (X){$x$};
+	\node[{anchor=south west}] at (Y){$y$};
+	\node[{anchor=south west}] at (Z){$z$};
+	\addplot3[surf,fill=gray!50,domain=-15:15,domain y=-15:15,samples=30,faceted color=black,mark=none, opacity=0.21,fill opacity = 0.5,thin]({x/sqrt(x*x*1+y*y+\f)},{y*\f/sqrt(x*x*1+y*y+\f)},{0.21});
+
+			
+ 	\coordinate (Q) at ({ 0},{0},{0.21});%origin
+\draw[fill=white](Q) circle(1pt)node[{anchor=north west}]{$$};; 	
+
+
+	\tikzmath{\u1=0.5/sqrt(0.5*0.5+0.5*0.5+\f); \v1=0.5/sqrt(0.5*0.5+0.5*0.5+\f); 	};
+	\coordinate (P0) at ({\u1},{\v1},{0.21});%origin
+	\tikzmath{\u2=-0.5/sqrt(0.5*0.5+0.5*0.5+\f); \v2=0.5/sqrt(0.5*0.5+0.5*0.5+\f); 	};
+	\coordinate (P1)at ({\u2},{\v2},{0.21});%origin
+	\tikzmath{\u3=-0.5/sqrt(0.5*0.5+1.4*1.4+\f); \v3=1.4/sqrt(0.5*0.5+1.4*1.4+\f); 	};
+	\coordinate (P2)at ({\u3},{\v3},{0.21});%origin
+	\tikzmath{\u4=0.5/sqrt(0.5*0.5+1.4*1.4+\f); \v4=1.4/sqrt(0.5*0.5+1.4*1.4+\f); 	};
+	\coordinate (P3)at ({\u4},{\v4},{0.21});%origin
+	
+		\coordinate (P0xy) at ({\u1},{\v1},{0});%origin
+	\tikzmath{\u2=-0.5/sqrt(0.5*0.5+0.5*0.5+\f); \v2=0.5/sqrt(0.5*0.5+0.5*0.5+\f); 	};
+	\coordinate (P1xy)at ({\u2},{\v2},{0});%origin
+	\tikzmath{\u3=-0.5/sqrt(0.5*0.5+1.4*1.4+\f); \v3=1.4/sqrt(0.5*0.5+1.4*1.4+\f); 	};
+	\coordinate (P2xy)at ({\u3},{\v3},{0});%origin
+	\tikzmath{\u4=0.5/sqrt(0.5*0.5+1.4*1.4+\f); \v4=1.4/sqrt(0.5*0.5+1.4*1.4+\f); 	};
+	\coordinate (P3xy)at ({\u4},{\v4},{0});%origin
+
+	\draw[](P0)--(P1);
+	\draw[](P1)--(P2);
+	\draw[](P2)--(P3);
+	\draw[](P3)--(P0);
+	
+	\draw[dashed](P0xy)--(P1xy);
+	\draw[dashed](P1xy)--(P2xy);
+	\draw[dashed](P2xy)--(P3xy);
+	\draw[dashed](P3xy)--(P0xy);
+	
+		\draw[dotted](P0xy)--(P0);
+	\draw[dotted](P1xy)--(P1);
+	\draw[dotted](P2xy)--(P2);
+	\draw[dotted](P3xy)--(P3);
+	\draw[fill=white](P0) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P1) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P2) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P3) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P0xy) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P1xy) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P2xy) circle(1pt)node[{anchor=north west}]{$$};;
+	\draw[fill=white](P3xy) circle(1pt)node[{anchor=north west}]{$$};;
+	
+
+
+		
+\end{axis}
+\end{tikzpicture}
