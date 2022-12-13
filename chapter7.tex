@@ -132,7 +132,7 @@ If $T_{rs}$  is an absolute skew-symmetric tensor in a $4-$space, show that $$T_
 Be $P= T_{14}T_{23}+T_{24}T_{31}+T_{34}T_{12}$, we can write this as $P= \frac{1}{8}\delta^{ijmn}_{1234}T_{ij}T_{mn}$ 
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p247_Exa.tex}}
+    \subfloat[]{\input{C:/MathLatex/images/fig_p247_Exa.tex}}
 \caption{Permutations}
 \label{fig:fig_p247}
 \end{figure}
@@ -205,8 +205,8 @@ As we can see in figure $7.2$,  it's no hard to see that
 \end{align}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p255_Exa1.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p255_Exa2.tex}}
+    \subfloat[]{\input{C:/MathLatex/images/fig_p255_Exa1.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p255_Exa2.tex}}
 \caption{Permutations}
 \label{fig:fig_p255}
 \end{figure}
@@ -296,9 +296,9 @@ d\tau_{(2)}^{zz}&= \underbrace{\epsilon^{11}}_{=0}\pdv{z}{\theta}\pdv{z}{\theta}
 \end{align}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exa.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxz.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxy.tex}}
+    \subfloat[]{\input{C:/MathLatex/images/fig_p257_Exa.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p257_Exaxz.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p257_Exaxy.tex}}
 \caption{Projections of extensions}
 \label{fig:fig_p257}
 \end{figure}
@@ -317,7 +317,7 @@ It is easy to see that $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$, yet the su
 
 \begin{figure}[H]%
     \centering
-    \input{D:/MathLatex/images/fig_p257_Exb.tex}
+    \input{C:/MathLatex/images/fig_p257_Exb.tex}
 \caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3, \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
 \label{fig:fig_p257}
 \end{figure}
@@ -325,3 +325,109 @@ It is easy to see that $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$, yet the su
 $$\blacklozenge$$
 \newpage
 
+
+
+
+\section{p263 - Exercise}
+\begin{tcolorbox}
+Using polar coordinates in Euclidean $3-$space find the volume of an infinitesimal cell whose edges are tangent to the coordinate curves. Obtain the volume of a sphere by integration.
+\end{tcolorbox}
+For polar spherical coordinates we have
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{lll}
+1&0&0\\
+0&r^2&0\\
+0&0&r^2\sin^2\theta
+\end{array}\right)
+\end{align}
+giving
+\begin{align}
+\left|a_{mn}\right| &= r^4\sin^2\theta
+\end{align}
+
+and using as parameters the $x^k \equiv(r,\theta,\phi)$ as parameters for the parametric surface
+
+we get 
+\begin{align}
+\left|d_{(s)}x^k\right| &= \left|\begin{array}{lll}
+dr&0&0\\
+0&d\theta&0\\
+0&0&d\phi\\
+\end{array}\right|\\
+&= drd\theta d\phi
+\end{align}
+
+Using $\mathbf{7.405}$:
+\begin{align}
+dv_{(N)}^2&= \epsilon (a)\left|a_{mn}\right|\left|d_{(s)}x^k\right|^2\\
+&= r^4\sin^2\theta\left( drd\theta d\phi\right)^2
+\end{align}
+getting for the volume of a sphere with radius $R$:
+\begin{align}
+V&=8 \int_{0}^{R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{\frac{\pi}{2}}dv_{(N)}\\
+&= 8 \int_{0}^{R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{\frac{\pi}{2}}r^2\sin\theta dr d\theta d\phi\\
+&= \frac{4}{3}\pi R^3
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p265 - Exercise}
+\begin{tcolorbox}
+In the relativistic theory of finite, expanding universe, the following line element is adopted:
+$$ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]-dt^2$$
+where $R=R(t)$ is a function of the "time" $t$. the ranges of the coordinates may be taken to be $0\leq r\leq \pi, \ 0 \leq \theta \leq \pi,\ 0 \leq \phi< 2\pi,\ -\infty < t < + \infty$.\\
+Find the total volume of "space", i.e., of the surface $t=$ constant, and show that it varies with the "time" $t$ as $R^3(t)$.
+\end{tcolorbox}
+For the considered metric, we have
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{llll}
+R^2&0&0&0\\
+0&R^2\sin^2r&0&0\\
+0&0&R^2\sin^2 r\sin^2\theta&0\\
+0&0&0&-1
+\end{array}\right)
+\end{align}
+
+Using as parameters the $x^k \equiv(r,\theta,\phi)$ as parameters for the parametric surface and using $\mathbf{7.409}:\quad b_{\alpha\beta}= a_{ks}\pdv{x^k}{y^{\alpha}}\pdv{x^s}{y^{\beta}} $, we get for the $3-$space $t=$ constant
+\begin{align}
+\left(b_{mn}\right)&= \left(\begin{array}{lll}
+R^2&0&0\\
+0&R^2\sin^2r&0\\
+0&0&R^2\sin^2 r\sin^2\theta
+\end{array}\right)
+\end{align}
+giving 
+\begin{align}
+\left|b_{mn}\right| &= R^6\sin^4 r\sin^2\theta
+\end{align}
+Using $\mathbf{7.413}$:
+\begin{align}
+dv_{(M)}^2&= \frac{\epsilon (b)}{M!}a_{k_1s_1}\dots a_{k_M s_M}d\tau_{(M)}^{k_1\dots k_M}d\tau_{(M)}^{s_1\dots s_M}\\
+&= -\frac{1}{6}a_{k_1s_1}\dots a_{k_M s_M}d\tau_{(M)}^{k_1\dots k_M}d\tau_{(M)}^{s_1\dots s_M}\\
+&= -\frac{6}{6}a_{11}a_{22}a_{33}\left(\underbrace{d\tau_{(M)}^{123}}_{=dr d\theta d\phi} \right)^2\\
+&= -R^6\sin^4 r\sin^2\theta\left(dr d\theta d\phi \right)^2\\
+\Rightarrow \quad dv_{(M)}&=R^3\sin^2 r\sin\theta dr d\theta d\phi
+\end{align}
+
+
+getting for the volume of "space"  with "radius" $R$:
+\begin{align}
+V&= \int_{0}^{\pi}\int_{0}^{\pi}\int_{0}^{2\pi}R^3\sin^2 r\sin\theta dr d\theta d\phi\\
+&= 2 R^3\pi  \int_{0}^{R}\sin^2 r dr \underbrace{\int_{0}^{\pi}\sin\theta d\theta}_{=\left. -cos\theta\right|_0^{\pi}}\\
+&= 4 R^3\pi  \underbrace{\int_{0}^{R}\sin^2 r dr}_{=\left.\half\left(\theta-\half\sin (2 r)\right)\right|_0^{\pi}}\\
+&=2\pi^2 R^3  
+\end{align}
+(the integral in $(11)$ can be found by substituting $\sin^2 r = 1-\cos^2 r$ and  using the cosine sum of angles rule $\cos\left(\alpha+\beta\right) = \cos\alpha\cos\beta-\sin\alpha\sin\beta$ with $\alpha = \beta=r$).
+$$\lozenge$$
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{C:/MathLatex/images/fig_p265_Exa.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p265_Exb.tex}}
+\caption{Manifold with $ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]$ metric, embedded in a $4-$ Euclidean space}
+\label{fig:fig_p265}
+\end{figure}
+$$\blacklozenge$$
+\newpage
