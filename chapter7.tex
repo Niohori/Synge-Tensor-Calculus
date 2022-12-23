@@ -125,7 +125,7 @@ $$\blacklozenge$$
 
 
 
-\section{p245 - Exercice }
+\section{p247 - Exercise }
 \begin{tcolorbox}
 If $T_{rs}$  is an absolute skew-symmetric tensor in a $4-$space, show that $$T_{14}T_{23}+T_{24}T_{31}+T_{34}T_{12}$$ is a tensor density
 \end{tcolorbox}
@@ -148,7 +148,7 @@ $$\blacklozenge$$
 
 
 
-\section{p245 - Exercice }
+\section{p247 - Exercise }
 \begin{tcolorbox}
 Show that, for rectangular Cartesian coordinates, the vorticity tensor and the vorticity vector of a fluid are duals (cf. $\mathbf{6.130}$).
 \end{tcolorbox}
@@ -166,8 +166,61 @@ $$\blacklozenge$$
 \newpage
 
 
+\section{p250 - Exercise }
+\begin{tcolorbox}
+Show that
+$$\eta_{r_1\dots r_N}= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\eta^{s_1\dots s_N}$$
+$$\eta^{r_1\dots r_N}= \epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\eta_{s_1\dots s_N}$$
+\end{tcolorbox}
+$$\blacklozenge$$
+\newpage
 
-\section{p255 - Exercice }
+\section{p252 - Exercise }
+\begin{tcolorbox}
+Using Riemannian coordinates, prove that 
+$\mathbf{7.216}\quad \epsilon_{r_1\dots r_N|k}=\epsilon^{r_1\dots r_N}_{\quad\quad |k}=0$
+$\quad \quad \eta_{r_1\dots r_N|k}= \eta^{r_1\dots r_N}_{\quad\quad|k}=0$
+\end{tcolorbox}
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p252 - Exercise }
+\begin{tcolorbox}
+Prove that if $T^n$ is a relative vector of weight $W$ then,
+$$\mathbf{7.220} \quad T^n_{\ |n}= \left(\epsilon(a)a\right)^{\half(W-1)}\pdv{}{x^n}\left[\left(\epsilon(a)a\right)^{\half(1-W)}T^n\right]$$ 
+\end{tcolorbox}
+$$\blacklozenge$$
+\newpage
+
+\section{p255 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{7.304} \quad \Delta^{k_1\dots k_M}=\delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1} \dots \Delta_{(M)}x^{s_M}$$ 
+\end{tcolorbox}
+Using $\mathbf{7.303}$ and noting that a permutation of columns in the matrix changes or not  the sign of its determinant depending on the sign of the permutation, we can write 
+\begin{align}\Delta^{k_1\dots k_M} &= \left|\begin{matrix}
+\Delta_{(1)}x^{k_1}&\Delta_{(1)}x^{k_2} &\dots&\Delta_{(1)}x^{k_M}\\
+\Delta_{(2)}x^{k_1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
+\vdots&\vdots&\vdots&\vdots\\
+\Delta_{(M)}x^{k_1}&\Delta_{(M)}x^{k_2} &\dots&\Delta_{(M)}x^{k_M}\\
+\end{matrix}\right|\\
+&= \epsilon^{k_1 k_2\dots k_m}\left|\begin{matrix}
+\Delta_{(1)}x^{1}&\Delta_{(1)}x^{2} &\dots&\Delta_{(1)}x^{M}\\
+\Delta_{(2)}x^{1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
+\vdots&\vdots&\vdots&\vdots\\
+\Delta_{(M)}x^{1}&\Delta_{(M)}x^{2} &\dots&\Delta_{(M)}x^{M}\\
+\end{matrix}\right|
+\end{align}
+And using $\mathbf{4.313}:\quad \left|A_{pq}\right|= \epsilon_{s_1 s_2 \dots s_M}A_{1 s_1}A_{2 s_2}\dots A_{M s_M}$:
+\begin{align}\Delta^{k_1 \dots k_M} &= \underbrace{\epsilon^{k_1 k_2\dots k_m} \epsilon_{s_1 s_2 \dots s_M}}_{\text{see (7.114)}}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}\\
+&= \delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p255 - Exercise }
 \begin{tcolorbox}
 Show that $\mathbf{7.305}$ may be written in the equivalent form
 $$d\tau_{(M)}^{k_1\dots k_m}= \epsilon^{\beta_1\dots \beta_M}d_{(\beta_1)}x^{k_1}\dots d_{(\beta_M)}x^{k_M}$$
@@ -226,7 +279,7 @@ $$\blacklozenge$$
 \newpage
 
 
-\section{p257 - Exercice }
+\section{p257 - Exercise }
 \begin{tcolorbox}
 Let $x^k$ be rectangular Cartesian coordinates in Euclidean $3-$space. Introduce polar coordinates $r,\theta,\phi$ and consider the surface of the sphere $r=a$. On this sphere form the infinitesimal $2-$cell with corners $(\theta,\phi),\ (\theta+d\theta,\phi),\ (\theta,\phi+d\phi),\ (\theta+d\theta,\phi+d\phi)$. Determine the extension of this cell and interpret the rectangular components. In particular, show that the three independent components of the extension are (apart from the sign) equal to the areas obtained by normal projection of the cell onto the three rectangular planes. Does this interpretation remain valid if the sphere is replaces by some other surface?
 \end{tcolorbox}
@@ -311,14 +364,14 @@ d\tau_{(2)}^{xy}&= \left(\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}\right)dudv
 \end{align}
 So $d\tau_{(2)}^{xy}=0$ if $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$.
 Consider the disk defined by the following parametric function
-$$S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3, \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$$ 
+$$S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3: \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$$ 
 (the constant $C$ is there just to avoid the undefinedness of the surface for $(u,v) = (0,0)$). \\
 It is easy to see that $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$, yet the surface is parallel with the $xy-$plane, which implies that the projection on the $xy-$plane of an elementary cell on $S$ will not have a zero area as can be seen in the figure hereunder. 
 
 \begin{figure}[H]%
     \centering
     \input{C:/MathLatex/images/fig_p257_Exb.tex}
-\caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3, \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
+\caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3: \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
 \label{fig:fig_p257}
 \end{figure}
 \textbf{Conclusion:} The interpretation of  $d\tau_{(2)}^{k_1k_2}$ as the projection of a cell on a axis-plane, does not hold for every surface.
@@ -422,12 +475,142 @@ V&= \int_{0}^{\pi}\int_{0}^{\pi}\int_{0}^{2\pi}R^3\sin^2 r\sin\theta dr d\theta 
 \end{align}
 (the integral in $(11)$ can be found by substituting $\sin^2 r = 1-\cos^2 r$ and  using the cosine sum of angles rule $\cos\left(\alpha+\beta\right) = \cos\alpha\cos\beta-\sin\alpha\sin\beta$ with $\alpha = \beta=r$).
 $$\lozenge$$
+In order to try to understand a little bit better what manifold is represented by the metric, let's use the trick to embed it in an higher dimensional space with en Euclidean metric.\\
+Therefore let's use the following map:
+\begin{align}
+\left\{\begin{array}{l}
+x=R\sin r\sin\theta\cos\phi\\
+y=R\sin r\sin\theta\sin\phi\\
+z=R\sin r\cos\theta\\
+w=R\cos r
+\end{array}\right.
+\end{align}
+then it's easy to see that
+\begin{align}
+ds_{(4)}^2 &=  dx^2+dy^2+dz^2+dw^2\\
+&= R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]
+\end{align}
+which is exactly the hypersurface we sought.
+Now let's see what happens when we keep $\phi= 0 \text{ or } \pi$. Then $y=0$ and in fact we take a slice of the $4-space$ along the $xzw$ subspace, and can visualize this $3-$space as a sphere as represented by figure $7.5$(a). \\
+We can also keep $r$ at a certain value. We get also a sphere as represented in figure $7.5$(b). Here the biggest possible sphere corresponds to $r=(2k+1)\frac{\pi}{2},\quad k=\{\dots,-1,0,1, \dots\}$ all other spheres having a smaller radius. When $r$ tends to $r=k\pi\quad k=\{\dots,-1,0,1, \dots\}$ the sphere shrinks to a point with coordinates $(0,0,0,\pm R)$.\\
+Finally, keeping $\theta =k\pi,\quad k=\{\dots,-1,0,1, \dots\}$ we get a circle of radius $R$ situated in the $xw$ plane.
+
+Remember that what we do here is just take 'slices' of a space. compare it to an Euclidean $3-$ space with a sphere: taking a slice e.g. parallel to the $xy$ plane will give us a circle, a point or an empty set while taking a one-dimensional slice along a line will give us 2, 1 or 0 point(s). 
+
 \begin{figure}[H]%
     \centering
     \subfloat[]{\input{C:/MathLatex/images/fig_p265_Exa.tex}}\\
     \subfloat[]{\input{C:/MathLatex/images/fig_p265_Exb.tex}}
-\caption{Manifold with $ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]$ metric, embedded in a $4-$ Euclidean space}
+\caption{Manifold with $ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]$ metric, embedded in a $4-$  Euclidean space}
 \label{fig:fig_p265}
 \end{figure}
 $$\blacklozenge$$
 \newpage
+
+
+
+\section{p268 - Clarification }
+\begin{tcolorbox}
+Since $\pdv{T_k}{x^s}$ differs from the tensor $\half\left(T_{k,s}-T_{s,k}\right)$ by an expression symmetric in $k, \ s$ and $d\tau_{(2)}^{ks}$ is an absolute tensor, skew-symmetric in these suffixes, it follows that the integrand on the left is an invariant.
+\end{tcolorbox}
+Let's express $\mathbf{7.504}$ in curvilinear coordinates, equipped with metric
+\begin{align}
+\int_{R_2}T_{k|s}d\tau_{(2)}^{ks} = \int_{R_1}T_{r}d\tau_{(1)}^{r}
+\end{align}
+Obviously we have 
+\begin{align}
+T_{k|s}&= \half\left(T_{k|s}-T_{s|k}\right)+\half\left(T_{k|s}+T_{s|k}\right)
+\end{align}
+Let's put $A_{ks}= \half\left(T_{k|s}-T_{s|k}\right)$ and $B_{ks}= \half\left(T_{k|s}+T_{s|k}\right)$.\\
+$A_{ks}$ is skew-symmetric, while $B_{ks}$ is symmetric.
+Note also that $A_{ks}$ reduces to $A_{ks}=\half\left(T_{k,s}-T_{s,k}\right)$ as the Christoffel symbols vanish in this expression, leaving only the partial differentials and hence, independent of a metric. 
+So the integrand  on the left side becomes
+\begin{align}
+T_{k|s}d\tau_{(2)}^{ks} &= A_{ks}d\tau_{(2)}^{ks}+B_{ks}d\tau_{(2)}^{ks}\\
+\Rightarrow\quad T_{k|s}d\tau_{(2)}^{ks} &= A_{ks}d\tau_{(2)}^{ks}-B_{ks}d\tau_{(2)}^{sk}\\
+&= A_{ks}d\tau_{(2)}^{ks}-B_{sk}d\tau_{(2)}^{sk}\\
+\text{(3)+(5)}\quad\Rightarrow\quad T_{k|s}d\tau_{(2)}^{ks} &= A_{ks}d\tau_{(2)}^{ks}
+\end{align}
+We note that both $A_{ks}$ and $d\tau_{(2)}^{ks}$ are tensors, independent of the  metric defined, and thus $A_{ks}d\tau_{(2)}^{ks}$ is an invariant of order $0$. 
+$$\blacklozenge$$
+\newpage
+
+
+\section{p274 - Exercise }
+\begin{tcolorbox}
+Due to the skew-symmetry of $d\tau_{(M)}^{k_1\dots k_M}$, the integrand on the left-hand side is also an invariant. This may be proved in a few lines, preferably with the use of the compressed notation of $1.7$; the proof is left as an exercise for the reader.
+\end{tcolorbox}
+We will use the indices $i,j$ for the transformed tensor components and $p,q$ for the original components.
+We have 
+\begin{align}
+T^{'}_{i_1 \dots i_{M-1}}&= T^{}_{p_1 \dots p_{M-1}}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\\
+\Rightarrow \quad T^{'}_{i_1 \dots i_{M-1},i_M}&= T^{}_{p_1 \dots p_{M-1},i_M}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}+T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}\\
+&= T^{}_{p_1 \dots p_{M-1},p_M}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}X^{p_{M}}_{i_{M}}+T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}\
+\end{align} 
+and 
+\begin{align}
+d\tau_{(M)}^{'i_1 \dots i_{M}}&= d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}
+\end{align}
+This gives 
+\begin{align}
+ T^{'}_{i_1 \dots i_{M-1},i_M}d\tau_{(M)}^{'i_1 \dots i_{M}}&=\left\{\begin{array}{l}T^{}_{p_1 \dots p_{M-1},p_M}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}X^{p_{M}}_{i_{M}}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}\\\\
+ +\underbrace{T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}}_{=0} 
+ \end{array}\right.\\
+ &=T^{}_{p_1 \dots p_{M-1},p_M}X^{p_1}_{s_1}\dots X^{p_{M-1}}_{s_{M-1}}X^{p_{M}}_{s_{M}}d\tau_{(M)}^{s_1 \dots s_{M}}\\
+  &=T^{}_{p_1 \dots p_{M-1},p_M}\delta^{p_1}_{s_1}\dots \delta^{p_{M-1}}_{s_{M-1}}\delta^{p_{M}}_{s_{M}}d\tau_{(M)}^{s_1 \dots s_{M}}\\
+   &=T^{}_{s_1 \dots s_{M-1},s_M}d\tau_{(M)}^{s_1 \dots s_{M}}
+\end{align}
+The term $ T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}$ in $ (5)$  is zero. Indeed, rewriting this as : 
+\begin{align} T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,p_M}X^{p_M}_{i_M}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}
+\end{align}
+The terms in brackets are zero as they are of the form
+\begin{align}
+\dots + X^{p_1}_{i_1}\dots \underbrace{\pdv[2]{x^{p_{m}}}{x^{p_{M}}}{x^{'i_{m}}}}_{= \pdv{\delta^{p_m}_{p_M}}{x^{'i_{m}}}=0}\dots X^{p_{M-1}}_{i_{M-1}}+\dots 
+\end{align} 
+From $(8)$ we conclude that the integrand is indeed an invariant.
+$$\blacklozenge$$
+\newpage
+
+\section{p275 - Exercise }
+\begin{tcolorbox}
+The skew-symmetric part of a tensor $T_{k_1\dots k_M}$ is defined as  
+$$ T_{\left [k_1 \dots k_M\right ]}= \left(M!\right)^{-1}\delta_{k_1 \dots k_M}^{s_1 \dots s_M} T_{s_1\dots s_M}$$
+Show that the left-hand side of equation $\mathbf{7.525}$ is unchanged if $T_{k_1\dots k_M}$ is replace by its skew-symmetric part. Show that the same is true for the right-hand side.
+\end{tcolorbox}
+The integrand of the left-hand side of $\mathbf{7.525}$ is
+\begin{align}
+T_{k_1\dots k_{M-1},k_M}d\tau_{(M)}^{k_1\dots k_M}
+\end{align}
+replacing the tensor with it's skew-symmetric part gives
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ],k_M}d\tau_{(M)}^{k_1\dots k_M}&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} T_{s_1\dots s_{M-1},k_M}d\tau_{(M)}^{k_1\dots k_M}\\
+&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} \delta^{s_M}_{k_M}T_{s_1\dots s_{M-1},s_M}d\tau_{(M)}^{k_1\dots k_M}\\
+&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} T_{s_1\dots s_{M-1},s_M}d\tau_{(M)}^{k_1\dots k_{M-1}s_M}\\
+&=T_{s_1\dots s_{M-1},s_M} \frac{1}{\left(M-1\right)!}\left(\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} d\tau_{(M)}^{k_1\dots k_{M-1}s_M}\right)\\
+\end{align}
+The terms in the brackets can be reduced to $\left(M-1\right)! d\tau_{(M)}^{s_1\dots s_{M-1}s_M}$. Indeed, the number of choices in choosing the $k_1,\dots k_{M-1}$ are restricted to $M-1$ choices, due to the skew-symmetry of $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$ (choosing a $k_i= s_M$ would result in a zero value for $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$). So, in total there will be $ \left(M-1\right)!$ terms and due to the skew-symmetry of $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$  a change in sign of $\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}}$ will also result in a change of sign in $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$.
+Hence, we get 
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ],k_M}d\tau_{(M)}^{k_1\dots k_M}
+&=T_{s_1\dots s_{M-1},s_M} \frac{1}{\left(M-1\right)!}\left(M-1\right)! d\tau_{(M)}^{s_1\dots s_{M-1}s_M}\\
+&=T_{s_1\dots s_{M-1},s_M} d\tau_{(M)}^{s_1\dots s_{M-1}s_M}
+\end{align}
+$$\lozenge$$
+The integrand of the right-hand side of $\mathbf{7.525}$ is
+\begin{align}
+T_{k_1\dots k_{M-1}}d\tau_{(M-1)}^{k_1\dots k_{M-1}}
+\end{align}
+replacing the tensor with it's skew-symmetric part gives
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ]}d\tau_{(M-1)}^{k_1\dots k_{M-1}}&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} T_{s_1\dots s_{M-1}}d\tau_{(M-1)}^{k_1\dots k_{M-1}}\\
+&= T_{s_1\dots s_{M-1}}\frac{1}{\left(M-1\right)!} \left(\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}}d\tau_{(M-1)}^{k_1\dots k_{M-1}}\right)
+\end{align}
+The terms in the brackets can be reduced to $\left(M-1\right)! d\tau_{(M-1)}^{s_1\dots s_{M-1}}$. Indeed, the number of choices in choosing the $k_1,\dots k_{M-1}$ is $M-1$, giving $\left(M-1\right)!$ terms  and due to the skew-symmetry of $d\tau_{(M-1)}^{k_1\dots k_{M-1}}$   a change in sign of $\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}}$ will also result in a change of sign in $d\tau_{(M)}^{k_1\dots k_{M-1}}$.
+Hence, we get 
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ]}d\tau_{(M-1)}^{k_1\dots k_{M-1}}&=T_{s_1\dots s_{M-1}}\frac{1}{\left(M-1\right)!}\left(M-1\right)! d\tau_{(M-1)}^{s_1\dots s_{M-1}}\\
+&= =T_{s_1\dots s_{M-1}} d\tau_{(M-1)}^{s_1\dots s_{M-1}}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
