@@ -615,7 +615,7 @@ $$\blacklozenge$$
 \newpage
 
 
-\section{p276 - Exercise 1 }
+\section{p278 - Exercise 1 }
 \begin{tcolorbox}
 Show from $\mathbf{7.312}$ that the number of independent components of the extension of an $M$-cell in $N-$space is
 $$\frac{N!}{M!\left(N-M\right)!}$$
@@ -632,7 +632,7 @@ $$\blacklozenge$$
 
 
 
-\section{p276 - Exercise 2}
+\section{p278 - Exercise 2}
 \begin{tcolorbox}
 Show that
 $$\delta_{k_1 \dots k_M}^{s_1 \dots s_M}=\left|\begin{matrix}
@@ -653,10 +653,8 @@ $$\Delta = \delta_{k_1 \dots k_M}^{s_1 \dots s_M}$$
 $$\blacklozenge$$
 \newpage
 
-\end{comment}
 
-
-\section{p276 - Exercise 3}
+\section{p278 - Exercise 3}
 \begin{tcolorbox}
 If $T_{rs}$ is a symmetric tensor density and $S_{rs}$ a skew-symmetric tensor density, show that
 \begin{align*}
@@ -750,5 +748,137 @@ In the last term, put $b_{smr}\doteq a^{sk}\partial_k a_{mr}$ which is symmetric
 \text{(2) and (19):} \spatie S^{rs}_{..|r}&=\partial_r S^{rs}
 \end{align} 
 $$\blacklozenge$$
+\newpage
 
+
+\section{p279 - Exercise 4}
+\begin{tcolorbox}
+Let $b_{mn}$ an absolute covariant tensor. Show that the cofactors of the elements $b_{mn}$ in the determinant $\left|b_{mn}\right|$ are the components of a relative contravariant tensor of weight $2$.
+\end{tcolorbox}
+Let's put $b \doteq \left|b_{mn}\right|$. We have (see $\mathbf{2.202}$)
+\begin{align}
+b_{mr}\Delta^{ms}&=\delta^s_r b
+\end{align}
+where $\Delta^{ms}$ is the cofactor associated with element $b_{ms}$. Note that, for the moment being, the position of the indexes does not imply any tensor characteristics of this object.
+$\delta^s_r$ is a mixed absolute tensor of order 2 (see page 243).
+Also $b$ is a relative invariant of weight $2$ (see $\mathbf{7.202}$).\\
+So we have the following transformation rules
+\begin{align}
+\left\{\begin{array}{l}
+\delta^{'s}_{\ r} =  \delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}}\\\\
+b^{'}= J^2 b\\\\
+b^{'}_{mr} = b^{}_{uv}\frac{\partial x^{u} }{\partial {x^{'m}}}\frac{\partial x^{v} }{\partial x^{'r}}
+\end{array}\right.
+\end{align}
+Using $(1)$
+\begin{align}
+b^{'}_{mr}\Delta^{'ms}&=\delta^{'s}_r b^{'}
+\end{align}
+Substituting with $(2)$
+\begin{align}
+b^{}_{uv}\frac{\partial x^{u} }{\partial {x^{'m}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
+b^{}_{uv}\frac{\partial x^{u} }{\partial {x^{'m}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b_{mv}\Delta^{mu}\\
+\times \frac{\partial x^{'r} }{\partial x^{p}}\spatie b^{}_{up}\frac{\partial x^{u} }{\partial x^{'m}}\Delta^{'ms}&=J^2b_{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J^2 \Delta^{ij}\frac{\partial x^{'m} }{\partial {x^{i}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
+Substituting this candidate solution in the left side of $(6)$ gives
+\begin{align}
+b^{}_{up}\frac{\partial x^{u} }{\partial x^{'m}}J^2 \Delta^{ij}\frac{\partial x^{'m} }{\partial {x^{i}}}\frac{\partial x^{'s} }{\partial x^{j}}&=J^2b^{}_{up}\delta^u_i\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
+&=J^2b_{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.
+$$\blacklozenge$$
+\newpage
+
+\end{comment}
+
+
+\section{p279 - Exercise 5}
+\begin{tcolorbox}
+Determine the tensor character of the cofactors in the determinants formed by the components of \\
+(a) a mixed absolute tensor\\
+(b) a relative contravaraint tensor of weight 1.
+\end{tcolorbox}
+\textbf{(a)\\}
+Let's put $b \doteq \left|b^m_{n}\right|$. We have (see $\mathbf{2.202}$)
+\begin{align}
+b^{m}_{r}\Delta^{ms}&=\delta^s_r b
+\end{align}
+where $\Delta^{ms}$ is the cofactor associated with element $b^m_{s}$. Note that, for the moment being, the position of the indexes does not imply any tensor characteristics of this object.
+$\delta^s_r$ is a mixed absolute tensor of order 2 (see page 243).
+Also $b$ is a relative invariant of weight $2$ (see $\mathbf{7.202}$).\\
+
+So we have the following transformation rules
+\begin{align}
+\left\{\begin{array}{l}
+\delta^{'s}_{\ r} =  \delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}}\\\\
+b^{'}= J^2 b\\\\
+b^{'m}_{r} = b^{u}_{v}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{v} }{\partial x^{'r}}
+\end{array}\right.
+\end{align}
+Using $(1)$
+\begin{align}
+b^{'m}_{r}\Delta^{'ms}&=\delta^{'s}_r b^{'}
+\end{align}
+Substituting with $(2)$
+\begin{align}
+b^{u}_{v}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
+b^{u}_{v}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b^{m}_{v}\Delta^{mu}\\
+\times \frac{\partial x^{'r} }{\partial x^{p}}\spatie b^{u}_{p}\frac{\partial x^{'m} }{\partial {x^{u}}}\Delta^{'ms}&=J^2b^{m}_{p}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J^2 \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
+Substituting this candidate solution in the left side of $(6)$ gives
+\begin{align}
+b^{u}_{p}\frac{\partial x^{'m} }{\partial {x^{u}}}J^2 \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}&=J^2b^{u}_{p}\delta^i_u\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
+&=J^2b^m_{p}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.\\
+We rewrite the cofactor as $\Delta^{s}_{m}$ which transform as $$\Delta^{s}_{m}= J^2 \Delta^{i}_{j}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$$
+and conclude that the cofactor is a relative mixed tensor of weight $2$.
+$$\lozenge$$
+\textbf{(b)}
+Let's put $b \doteq \left|b^{mn}\right|$. We have (see $\mathbf{2.202}$)
+\begin{align}
+b^{mr}_{}\Delta^{ms}&=\delta^s_r b
+\end{align}
+where $\Delta^{ms}$ is the cofactor associated with element $b^{ms}$. Note that, for the moment being, the position of the indexes does not imply any tensor characteristics of this object.
+$\delta^s_r$ is a mixed absolute tensor of order 2 (see page 243).
+Also $b$ is a relative invariant of weight $2$ (see $\mathbf{7.202}$).\\
+
+So we have the following transformation rules
+\begin{align}
+\left\{\begin{array}{l}
+\delta^{'s}_{\ r} =  \delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}}\\\\
+b^{'}= J^2 b\\\\
+b^{'mr}_{} = J b^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}
+\end{array}\right.
+\end{align}
+Using $(1)$
+\begin{align}
+b^{'mr}_{}\Delta^{'ms}&=\delta^{'s}_r b^{'}
+\end{align}
+Substituting with $(2)$
+\begin{align}
+Jb^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
+Jb^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b^{mv}_{}\Delta^{mu}\\
+\times \frac{\partial x^{p} }{\partial x^{'r}}\spatie b^{up}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\Delta^{'ms}&=Jb^{mp}_{}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
+Substituting this candidate solution in the left side of $(6)$ gives
+\begin{align}
+b^{up}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}J \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}&=Jb^{up}_{}\delta^i_u\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
+&=Jb^{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.\\
+We rewrite the cofactor as $\Delta^{s}_{m}$ which transform as $$\Delta^{s}_{m}= J \Delta^{i}_{j}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$$
+and conclude that the cofactor is a relative mixed tensor of weight $1$.
+$$\blacklozenge$$
+\newpage
+
+\section{p279 - Exercise 6}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$
 \newpage
