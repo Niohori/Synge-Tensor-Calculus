@@ -1,7 +1,7 @@
 \setcounter{chapter}{6}
 \chapter{Relative tensors, ideas of volume, Green-Stokes theorems.}
 \pagebreak[4]
-%\begin{comment}
+\begin{comment}
 \section{p241 - Exercise}
 \begin{tcolorbox}
 If $b_{rs}$ is an absolute tensor, show that the determinant $\left|b_{rs}\right|$ is a relative invariant of weight $2$. What are the tensor characters of $\left|c^{rs}\right|$ and $\left|f^r_{s}\right|$?
@@ -940,7 +940,7 @@ Let's define $R=\sqrt{\left (y^1\right)^2+\left( y^2\right)^2+\left( y^3\right)^
 So, $dv_{(3)}=0$ at any point of the null cone giving a zero $3-$volume everywhere on that manifold.
 $$\blacklozenge$$
 \newpage
-%\end{comment}
+\end{comment}
 
 \section{p279 - Exercise 8$\dagger$}
 \begin{tcolorbox}
@@ -962,9 +962,38 @@ $$\blacklozenge$$
 
 \section{p279 - Exercise 9}
 \begin{tcolorbox}
-Show that the total volme of a polar $3-$space of constant curvature $R^{-2}$ is $\pi^2R^3$, and that the volume is $2\pi^2R^3$ if the space is antipodal.
+Show that the total volume of a polar $3-$space of constant curvature $R^{-2}$ is $\pi^2R^3$, and that the volume is $2\pi^2R^3$ if the space is antipodal.
 \end{tcolorbox}
-
+From $\mathbf{4.130}$ page 118 we know that the line-element for a space of positive constant curvature is 
+\begin{align}
+ds^2=dr^2+R^2\sin^2 \left( \frac{r}{R}\right)\left(d\theta^2+\sin^2\theta d\phi^2\right)
+\end{align}
+For the considered metric, we have
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{llll}
+1&0&0\\
+0&R^2\sin^2 \left( \frac{r}{R}\right)&0\\
+0&0&R^2\sin^2 \left( \frac{r}{R}\right)\sin^2\theta
+\end{array}\right)
+\end{align}
+giving 
+\begin{align}
+\left|a_{mn}\right| &= R^4\sin^4\left( \frac{r}{R}\right)\sin^2\theta
+\end{align}
+Using $\mathbf{7.410}$ with $\left|d_{(\beta )}y^{\alpha}\right|=\left|d_{(s )}x^k\right| =  dr d\theta d\phi$ :
+\begin{align}
+dv_{(M)}&=R^2\sin^2\left( \frac{r}{R}\right)\sin\theta dr d\theta d\phi
+\end{align}
+We can now integrate to get the total volume of the space. As stated for $\mathbf{7.410}$ we have to note that the distance between two points, when $dr=0$, vanish when $r=\pi R$ meaning that the integration along the intrinsic variable $r$ must be done in the interval $\left[0,\pi R\right]$ in order to avoid double counting in the integration.
+For a polar space, we have to restrict the integration along $\theta$ to $\frac{\pi}{2}$. This gives the volume :
+\begin{align}
+V_{(3)}&= \int_{0}^{\pi R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{2\pi}R^2\sin^2\left( \frac{r}{R}\right)\sin\theta dr d\theta d\phi\\
+&= 2 \pi R^3  \underbrace{\int_{0}^{\pi}\sin^2 \beta d\beta}_{=\left.\half\left(\beta-\half\sin (2 \beta)\right)\right|_0^{\pi}}\underbrace{\int_{0}^{\frac{\pi}{2}}\sin\theta d\theta}_{=\left. -cos\theta\right|_0^{\frac{\pi}{2}}}\\
+&=\pi^2 R^3  
+\end{align}
+(the first integral in $(6)$ can be found by substituting $\sin^2 x = 1-\cos^2 x$ and  using the cosine sum of angles rule $\cos\left(\alpha+\beta\right) = \cos\alpha\cos\beta-\sin\alpha\sin\beta$ with $\alpha = \beta=x$).
+$$\lozenge$$
+For an antipodal space we have to integrate along $\theta$ in the interval $\left[0,\pi \right]$., which gives a volume twice the volume of a polar plane i.e. $V_{(3)}= 2\pi^2 R^3$.
 $$\blacklozenge$$
 \newpage
 
@@ -975,9 +1004,43 @@ $$L=\left|r_{mn}\right|^{\half}$$
 is an invariant density. Discuss the tensor character of $f^{mn}$ and $g^{mn}$, defined by
 $$f^{mn}=\pdv{L}{r_{mn}}, \quad g^{mn} = f^{mn}\left|f^{ks}\right|^{-\half}$$
 and also of $g_{mn}$, defined by
-$$g_{ms}g^{ns}= \delta_n^n$$
+$$g_{ms}g^{ns}= \delta_m^n$$
 prove that $\left|g_{mn}\right| = \left|f^{mn}\right|$. (Schrödinger)
 \end{tcolorbox}
-
+As $r_{mn}$ is an absolute tensor then we know from $\mathbf{7.202}$ 
+\begin{align}
+\left|r^{'}_{mn}\right|&= J^2\left|r^{}_{st}\right|
+\end{align}
+Hence, $L=\left|r^{}_{st}\right|^{\half}$ is a relative invariant of weight $1$, i.e. a invariant density.\\
+This gives for $f^{mn}=\pdv{L}{r_{mn}}$
+\begin{align}
+f^{mn}&= \pdv{\left|r^{}_{st}\right|^{\half}}{r_{mn}}\\
+&= \half \frac{\Delta^{mn}}{\left|r^{}_{st}\right|^{\half}}
+\end{align}
+with $\Delta^{mn}$ the cofactor of the element $r_{mn}$ in the determinant. From exercise 5 in this chapter we know that $\Delta^{mn}$ is relative tensor of weight $2$. From $(3)$, this  gives a weight of $\frac{L^2}{L}= L$. Hence, $f^{mn}$ is contravariant tensor density.
+Let's look at $g^{mn} = f^{mn}\left|f^{ks}\right|^{-\half}$. Analogue to $(1)$, we have $\left|f^{'ks}\right|^{-\half} = \left(J^{-2}\left|f^{mn}\right|\right)^{-\half}=J^{}\left|f^{'mn}\right|^{-\half}$, being an invariant density. So $g^{mn}$ is a relative tensor of weight $2$.
+For  $g_{ms}$ we have 
+\begin{align}
+g_{ms}g^{ns}= \delta_m^n
+\end{align}
+We know that $g^{ns}$ is a relative tensor of weight $2$ and (see page 243) $\delta_m^n$ a mixed absolute tensor.\\
+So from $g_{ms}g^{ns}= \delta_m^n$, we deduce for the weight $W$ of $g_{ms}$, $W+2 = 0$.\\
+Conclusion, $g_{ms}$ is a relative tensor of weight $-2$.
+Finally, 
+\begin{align}
+g_{ms}g^{ns}&= \delta_m^n\\
+\Rightarrow \quad \left|g_{ms}\right|\left|g^{ns}\right|&=\underbrace{\left|\delta_m^n\right|}_{=1}
+\end{align}
+From the definition of $g^{mn}$ we have, nothing that for a matrix $A \in GL_n(\mathbb{R})$, $\left|k a^{mn}\right| = k^n \left| a^{mn}\right|$, with in our case $n=4$:
+\begin{align}
+\left|g^{mn}\right| &= \left|f^{mn}\right|\left(\left|f^{ks}\right|^{-\half}\right)^4\\
+&=\left|f^{ks}\right|^{-\half}\left|f^{ks}\right|^{-2}\\
+&= \left|f^{ks}\right|^{-1}
+\end{align}
+and $(6)$ becomes
+\begin{align}
+\left|g_{ms}\right|\left|f^{ks}\right|^{-1}&= 1
+\end{align}
+proving the identity.
 $$\blacklozenge$$
 \newpage
