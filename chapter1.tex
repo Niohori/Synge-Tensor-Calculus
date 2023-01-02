@@ -134,24 +134,24 @@ $$\blacklozenge$$
 \section{p8-clarification on expression 1.210}
 
 \begin{tcolorbox}
-$$\pdv{x^{,q}}{x^{p}}{x^{s}}+\pdv{x^{r}}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}} = 0 $$
+$$\pdv{x^{'q}}{x^{p}}{x^{s}}+\pdv{x^{r}}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}\pdv{x^{'q}}{x^{r}} = 0 $$
 \end{tcolorbox}
 From 1.209:
 \begin{gather} 
-\pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}+\pdv{x^r}{x^{,n}}\pdv{x^{,n}}{x^p}{x^{s}} = 0
+\pdv{x^r}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}+\pdv{x^r}{x^{'n}}\pdv{x^{'n}}{x^p}{x^{s}} = 0
 \end{gather}
- multiply (1)  with $\quad\pdv{x^{,q}}{x^{r}}$
+ multiply (1)  with $\quad\pdv{x^{'q}}{x^{r}}$
 \begin{gather} 
-\pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}+\pdv{x^r}{x^{,n}}\pdv{x^{,n}}{x^p}{x^{s}}\pdv{x^{,q}}{x^{r}} = 0\\
-\Leftrightarrow\pdv{x^r}{x^{,n}}\pdv{x^{,n}}{x^p}{x^{s}}\pdv{x^{,q}}{x^{r}}+ \pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}= 0
+\pdv{x^r}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}\pdv{x^{'q}}{x^{r}}+\pdv{x^r}{x^{'n}}\pdv{x^{'n}}{x^p}{x^{s}}\pdv{x^{'q}}{x^{r}} = 0\\
+\Leftrightarrow\pdv{x^r}{x^{'n}}\pdv{x^{'n}}{x^p}{x^{s}}\pdv{x^{'q}}{x^{r}}+ \pdv{x^r}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}\pdv{x^{'q}}{x^{r}}= 0
 \end{gather}
 \begin{gather} 
-\text{\centering in the first term we get\quad\quad}\quad \pdv{x^{,q}}{x^{r}}\pdv{x^r}{x^{,n}} = \pdv{x^{,q}}{x^{,n}} = \delta_n^q
+\text{\centering in the first term we get\quad\quad}\quad \pdv{x^{'q}}{x^{r}}\pdv{x^r}{x^{'n}} = \pdv{x^{'q}}{x^{'n}} = \delta_n^q
 \end{gather}
 (3) becomes
 \begin{gather} 
-\pdv{x^{,n}}{x^p}{x^{s}}\delta_n^q + \pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}=  0\\
-\Leftrightarrow\pdv{x^{,q}}{x^p}{x^{s}} + \pdv{x^r}{x^{,m}}{x^{,n}}\pdv{x^{,m}}{x^{p}}\pdv{x^{,n}}{x^{s}}\pdv{x^{,q}}{x^{r}}= 0
+\pdv{x^{'n}}{x^p}{x^{s}}\delta_n^q + \pdv{x^r}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}\pdv{x^{'q}}{x^{r}}=  0\\
+\Leftrightarrow\pdv{x^{'q}}{x^p}{x^{s}} + \pdv{x^r}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}\pdv{x^{'q}}{x^{r}}= 0
 \end{gather} 
 $$\blacklozenge$$
 \pagebreak[4]
@@ -162,20 +162,20 @@ $$\blacklozenge$$
 
 \begin{tcolorbox}
 If $A_s^r$ are the elements of a determinant A, and $B_s^r$ the elements of a determinant B, show that the element of the product determinant is $A_n^rB^n_s$. Hence show that the product of the two jacobians
-$$J =\Bigg|\pdv{x^{r}}{x^{,s}}\Bigg|\text{,}\quad J^{'} = \Bigg|\pdv{x^{,r}}{x^{s}}\Bigg|$$
+$$J =\Bigg|\pdv{x^{r}}{x^{'s}}\Bigg|\text{,}\quad J^{'} = \Bigg|\pdv{x^{'r}}{x^{s}}\Bigg|$$
 is unity.
 \end{tcolorbox}
 Remark: Some nitpick about the formulation: $A_s^r$ are not the elements of a determinant A, but elements of the matrix A which gives $\det{A}$ provided that A is square (which is not explicitly mentioned.). The same remark for B and $A_n^rB^n_s$.\\
 Be $A^i_k $ the elements of matrix A and $B^k_j $ the elements of matrix B and C = A.B the resulting matrix of the multiplication of A and B, then
 $$C^i_j  = A^i_kB^k_j $$
 are the elements of matrix C.
-Now, put $A^i_k =\pdv{x^{i}}{x^{,k}} \quad$ and $B^k_j =\pdv{x^{,k}}{x^{j}} \quad$ then,
+Now, put $A^i_k =\pdv{x^{i}}{x^{'k}} \quad$ and $B^k_j =\pdv{x^{'k}}{x^{j}} \quad$ then,
 \begin{align}
 C^{i}_{j}  &= A^{i}_{k}B^{k}_{j} \\
-&=\pdv{x^{i}}{x^{,k}}\pdv{x^{,k}}{x^{j}}\\
+&=\pdv{x^{i}}{x^{'k}}\pdv{x^{'k}}{x^{j}}\\
 &= \delta^{i}_{k}
 \end{align}
-So $C = JJ^{,}\quad$becomes the unity matrix. 
+So $C = JJ^{'}\quad$becomes the unity matrix. 
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -187,7 +187,7 @@ Show that a finite contravariant vector determines the ratios of the components 
 \end{tcolorbox}
 Be $T^{q}$ a contravariant vector.
 \begin{align}
-T^{,q}=T^{r} \pdv{x^{,q}}{x^r}\quad\text{(by definition)}
+T^{'q}=T^{r} \pdv{x^{'q}}{x^r}\quad\text{(by definition)}
 \end{align}
 Be  $\theta$ a small infinitesimal factor invariant for a coordinate transformation,  define \\
 \begin{align}
@@ -198,19 +198,19 @@ then
 \dv{x^r}{x^s} = \frac{\theta T^r}{\theta T^s}\\
 \Leftrightarrow T^s dx^r - T^r dx^s = 0
 \end{align}
-Alternatively, multiply (5) with $\partial_{x^r}{x^{,q}}$, then
+Alternatively, multiply (5) with $\partial_{x^r}{x^{'q}}$, then
 \begin{align}
-\pdv{x^{,q}}{x^r} dx^r T^s   -  \pdv{x^{,q}}{x^r}dx^s T^r &= 0\\
-\Leftrightarrow \pdv{x^{,q}}{x^r} dx^r T^s   -  dx^s T^{,q} &= 0 \quad \text{(use (1) in the second term)}\\
-\Leftrightarrow dx^{,q} T^s   -  dx^s T^{,q} &= 0 \\
+\pdv{x^{'q}}{x^r} dx^r T^s   -  \pdv{x^{'q}}{x^r}dx^s T^r &= 0\\
+\Leftrightarrow \pdv{x^{'q}}{x^r} dx^r T^s   -  dx^s T^{'q} &= 0 \quad \text{(use (1) in the second term)}\\
+\Leftrightarrow dx^{'q} T^s   -  dx^s T^{'q} &= 0 \\
 \end{align}
-Multiply (8) with $\partial_{x^s}{x^{,p}}$, then
+Multiply (8) with $\partial_{x^s}{x^{'p}}$, then
 \begin{align}
-\ &dx^{,q} T^s \partial_{x^s}{x^{,p}}  -  dx^s T^{,q}\partial_{x^s}{x^{,p}} = 0 \\
-\Leftrightarrow \quad &T^{,p} dx^q   -   T^{,q} dx^{,p} = 0 \quad \text{(use (1) in the first term)}
+\ &dx^{'q} T^s \partial_{x^s}{x^{'p}}  -  dx^s T^{'q}\partial_{x^s}{x^{'p}} = 0 \\
+\Leftrightarrow \quad &T^{'p} dx^q   -   T^{'q} dx^{'p} = 0 \quad \text{(use (1) in the first term)}
 \end{align}
 and thus 
-$$\dv{x^{,q}}{x^{,p}} = \frac{T^{,q}}{T^{,p}}$$
+$$\dv{x^{'q}}{x^{'p}} = \frac{T^{'q}}{T^{'p}}$$
 
 $$\blacklozenge$$
 \pagebreak[4]
@@ -224,29 +224,29 @@ Write down the equation of transformation, analogous to 1.305, of a contravarian
 \end{tcolorbox}
 Be 
 \begin{align}
-T^{,uvw}=T^{rst} \pdv{x^{,u}}{x^r}\pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}\quad\text{(by definition)}
+T^{'uvw}=T^{rst} \pdv{x^{'u}}{x^r}\pdv{x^{'v}}{x^s}\pdv{x^{'w}}{x^t}\quad\text{(by definition)}
 \end{align}
 a contravariant vector.\\
-Multiply (1) by $\pdv{x^{n}}{x^{,u}}$
+Multiply (1) by $\pdv{x^{n}}{x^{'u}}$
 \begin{align}
-\ T^{,uvw}\pdv{x^{n}}{x^{,u}}&= T^{rst} \pdv{x^{,u}}{x^r}\pdv{x^{n}}{x^{,u}}\pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}\\
-\Leftrightarrow  T^{,uvw}\pdv{x^{n}}{x^{,u}}&= T^{rst} \delta^{n}_{r}\pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}\\
-\Leftrightarrow  T^{,uvw}\pdv{x^{n}}{x^{,u}}&= T^{nst} \pdv{x^{,v}}{x^s}\pdv{x^{,w}}{x^t}
+\ T^{'uvw}\pdv{x^{n}}{x^{'u}}&= T^{rst} \pdv{x^{'u}}{x^r}\pdv{x^{n}}{x^{'u}}\pdv{x^{'v}}{x^s}\pdv{x^{'w}}{x^t}\\
+\Leftrightarrow  T^{'uvw}\pdv{x^{n}}{x^{'u}}&= T^{rst} \delta^{n}_{r}\pdv{x^{'v}}{x^s}\pdv{x^{'w}}{x^t}\\
+\Leftrightarrow  T^{'uvw}\pdv{x^{n}}{x^{'u}}&= T^{nst} \pdv{x^{'v}}{x^s}\pdv{x^{'w}}{x^t}
 \end{align}
-Multiply (4) by $\pdv{x^{m}}{x^{,v}}$
+Multiply (4) by $\pdv{x^{m}}{x^{'v}}$
 \begin{align}
-\ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}} &= T^{nst} \pdv{x^{,v}}{x^s}\pdv{x^{m}}{x^{,v}}\pdv{x^{,w}}{x^t}\\
-\Leftrightarrow  \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}} &= T^{nst} \delta_{s}^{m}\pdv{x^{,w}}{x^t}\\
-\Leftrightarrow  \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}} &= T^{nmt} \pdv{x^{,w}}{x^t}
+\ T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}} &= T^{nst} \pdv{x^{'v}}{x^s}\pdv{x^{m}}{x^{'v}}\pdv{x^{'w}}{x^t}\\
+\Leftrightarrow  \ T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}} &= T^{nst} \delta_{s}^{m}\pdv{x^{'w}}{x^t}\\
+\Leftrightarrow  \ T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}} &= T^{nmt} \pdv{x^{'w}}{x^t}
 \end{align}
-Multiply (7) by $\pdv{x^{p}}{x^{,w}}$
+Multiply (7) by $\pdv{x^{p}}{x^{'w}}$
 \begin{align}
-\ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} &= T^{nmt} \pdv{x^{,w}}{x^t}\pdv{x^{p}}{x^{,w}}\\
-\Leftrightarrow \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} &= T^{nmt} \delta^{p}_{t}\\
-\Leftrightarrow  \ T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} &= T^{nmp} 
+\ T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}}\pdv{x^{p}}{x^{'w}} &= T^{nmt} \pdv{x^{'w}}{x^t}\pdv{x^{p}}{x^{'w}}\\
+\Leftrightarrow \ T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}}\pdv{x^{p}}{x^{'w}} &= T^{nmt} \delta^{p}_{t}\\
+\Leftrightarrow  \ T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}}\pdv{x^{p}}{x^{'w}} &= T^{nmp} 
 \end{align}
 Giving
-$$T^{nmp} =  T^{,uvw}\pdv{x^{n}}{x^{,u}}\pdv{x^{m}}{x^{,v}}\pdv{x^{p}}{x^{,w}} $$
+$$T^{nmp} =  T^{'uvw}\pdv{x^{n}}{x^{'u}}\pdv{x^{m}}{x^{'v}}\pdv{x^{p}}{x^{'w}} $$
 
 $$\blacklozenge$$
 \pagebreak[4]
@@ -256,48 +256,48 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 For a transformation from on set of rectangular Cartesian coordinates to another in Euclidean 3-space, show that the law of transformation of a contravariant vector is precisely the same as that of a covariant vector. Can this statements be extended to cover tensor of higher orders?
 \end{tcolorbox}
-We have to prove that, given that, $$T^{,i}= T^{j} \pdv{x^{,i}}{x^j} \quad T^{,}_{i}= T_{j} \pdv{x^{j}}{x^{,i}}$$ that also
+We have to prove that, given that, $$T^{'i}= T^{j} \pdv{x^{'i}}{x^j} \quad T^{'}_{i}= T_{j} \pdv{x^{j}}{x^{'i}}$$ that also
 \begin{align}
-\ T^{,i}= T^{j} \pdv{x^{j}}{x^{,i}} \quad T^{,}_{i}&= T_{j}\pdv{x^{,i}}{x^j} \\
-\Leftrightarrow \pdv{x^{j}}{x^{,i}} &= \pdv{x^{,i}}{x^j} 
+\ T^{'i}= T^{j} \pdv{x^{j}}{x^{'i}} \quad T^{'}_{i}&= T_{j}\pdv{x^{'i}}{x^j} \\
+\Leftrightarrow \pdv{x^{j}}{x^{'i}} &= \pdv{x^{'i}}{x^j} 
 \end{align}
 Be
 \begin{align}
-\hat{e^{,i}} = g^i_k\hat{e^{k}}\quad\text{and } \hat{e^{i}} = h^i_k\hat{e^{,k}}
+\hat{e^{'i}} = g^i_k\hat{e^{k}}\quad\text{and } \hat{e^{i}} = h^i_k\hat{e^{'k}}
 \end{align}
 the transformation rules from one set of (rectangular Cartesian) basis vectors to another set of  (rectangular Cartesian) basis vectors.
 Then,
 \begin{align}
-\langle \hat{e^{,i}},\hat{e^{,j}} \rangle = \langle g^i_k\hat{e^{k}},g^j_k\hat{e^{k}} \rangle &\text{ and } \langle \hat{e^{i}},\hat{e^{j}} \rangle = \langle h^i_k\hat{e^{,k}},h^j_k\hat{e^{,k}} \rangle\\
+\langle \hat{e^{'i}},\hat{e^{'j}} \rangle = \langle g^i_k\hat{e^{k}},g^j_k\hat{e^{k}} \rangle &\text{ and } \langle \hat{e^{i}},\hat{e^{j}} \rangle = \langle h^i_k\hat{e^{'k}},h^j_k\hat{e^{'k}} \rangle\\
 \Leftrightarrow \delta^p_j = g^p_k g^j_k &\text{ and } \delta^p_j = h^p_k h^j_k \\
 \end{align}
 Be $\vec{v}$ a random vector in the Euclidean space,
 \begin{align}
-\vec{v} = x^j\hat{e^{j}} = x^{,j}\hat{e^{,j}}
+\vec{v} = x^j\hat{e^{j}} = x^{'j}\hat{e^{'j}}
 \end{align}
 then
 \begin{align}
-\text{(3) } \Rightarrow x^j\hat{e^{j}} = x^{j}h^j_k\hat{e^{,k}}&\text{ and }x^{,j}\hat{e^{,j}} = x^{,j}g^j_k\hat{e^{k}}\\
-\Rightarrow x^{,j} = x^{m}h^m_j  &\text{ and }x^m = x^{,j}g^j_m\\
-\Rightarrow x^{,j} = x^{,i}g^i_m h^m_j&\text{ and } x^m = x^{k}h^k_j g^j_m \\
+\text{(3) } \Rightarrow x^j\hat{e^{j}} = x^{j}h^j_k\hat{e^{'k}}&\text{ and }x^{'j}\hat{e^{'j}} = x^{'j}g^j_k\hat{e^{k}}\\
+\Rightarrow x^{'j} = x^{m}h^m_j  &\text{ and }x^m = x^{'j}g^j_m\\
+\Rightarrow x^{'j} = x^{'i}g^i_m h^m_j&\text{ and } x^m = x^{k}h^k_j g^j_m \\
 \Rightarrow \delta^p_j =g^p_k h^k_j &\text{ and } \delta^p_j =g^k_j h^p_k\\
 \text{(5) } \Rightarrow g^p_k g^j_k=g^p_k h^k_j &\text{ and } h^p_k h^j_k=g^k_j h^p_k\\
  \Rightarrow g^j_k =  h^k_j &\text{ and }h^j_k =  g^k_j
 \end{align}
 From (9)
 \begin{align}
-\ x^{j} = x^{,m} g^m_j &\text{ and } x^{,k} = x^{n} h^n_k\\
-\Rightarrow \pdv{x^{,k}}{x^j} = \pdv{x^{n}}{x^j} h^n_k  &\text{ and } \pdv{x^{j}}{x^{,k}} = \pdv{x^{,m}}{x^{,k}}g^m_j\\
-\Leftrightarrow \pdv{x^{,k}}{x^j} = \delta^n_j h^n_k  &\text{ and } \pdv{x^{j}}{x^{,k}} = \delta^m_k g^m_j\\
-\Leftrightarrow \pdv{x^{,k}}{x^j} = h^j_k  &\text{ and } \pdv{x^{j}}{x^{,k}} = g^k_j\\
-\text{(13) }\Rightarrow \pdv{x^{,k}}{x^j} &= \pdv{x^{j}}{x^{,k}}
+\ x^{j} = x^{'m} g^m_j &\text{ and } x^{'k} = x^{n} h^n_k\\
+\Rightarrow \pdv{x^{'k}}{x^j} = \pdv{x^{n}}{x^j} h^n_k  &\text{ and } \pdv{x^{j}}{x^{'k}} = \pdv{x^{'m}}{x^{'k}}g^m_j\\
+\Leftrightarrow \pdv{x^{'k}}{x^j} = \delta^n_j h^n_k  &\text{ and } \pdv{x^{j}}{x^{'k}} = \delta^m_k g^m_j\\
+\Leftrightarrow \pdv{x^{'k}}{x^j} = h^j_k  &\text{ and } \pdv{x^{j}}{x^{'k}} = g^k_j\\
+\text{(13) }\Rightarrow \pdv{x^{'k}}{x^j} &= \pdv{x^{j}}{x^{'k}}
 \end{align}
 So (13) matches (2), proving the assertion.\\\\
 Can this statements be extended to cover tensor of higher orders?
 Consider
-$$T^{,i,j,\dots ,n}= T^{r,s,\dots w} \pdv{x^{,i}}{x^{r}}\pdv{x^{,j}}{x^{s}}\dots \pdv{x^{,n}}{x^{w}} \text{ and } T^{r,s,\dots w}= T^{,i,j,\dots ,n} \pdv{x^{r}}{x^{,i}}\pdv{x^{s}}{x^{,j}}\dots \pdv{x^{w}}{x^{,n}}$$
+$$T^{'i,j,\dots ,n}= T^{r,s,\dots w} \pdv{x^{'i}}{x^{r}}\pdv{x^{'j}}{x^{s}}\dots \pdv{x^{'n}}{x^{w}} \text{ and } T^{r,s,\dots w}= T^{'i,j,\dots ,n} \pdv{x^{r}}{x^{'i}}\pdv{x^{s}}{x^{'j}}\dots \pdv{x^{w}}{x^{'n}}$$
 Using the same reasoning as in (1) to (2) we need
-$$\pdv{x^{,i}}{x^{r}}\pdv{x^{,j}}{x^{s}}\dots \pdv{x^{,n}}{x^{w}} =\pdv{x^{r}}{x^{,i}}\pdv{x^{s}}{x^{,j}}\dots \pdv{x^{w}}{x^{,n}}$$
+$$\pdv{x^{'i}}{x^{r}}\pdv{x^{'j}}{x^{s}}\dots \pdv{x^{'n}}{x^{w}} =\pdv{x^{r}}{x^{'i}}\pdv{x^{s}}{x^{'j}}\dots \pdv{x^{w}}{x^{'n}}$$
 As the conclusion (18) is independent of the order of the tensor, it is obvious that the above equality yields. Hence, the answer is YES.
 
 $$\blacklozenge$$
@@ -381,26 +381,26 @@ If $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors and $a_{rs}X^{r}Y^{s}$ i
 \end{tcolorbox}
 We have to prove that
 \begin{align}
-\ a^{,}_{rs} = a_{ij}\pdv{x^{i}}{x^{,r}}\pdv{x^{j}}{x^{,s}} \text{ or } a^{}_{ij} = a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}}
+\ a^{'}_{rs} = a_{ij}\pdv{x^{i}}{x^{'r}}\pdv{x^{j}}{x^{'s}} \text{ or } a^{}_{ij} = a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}}
 \end{align}
 $a_{rs}X^{r}Y^{s}$ is an invariant, means
 \begin{align}
-\ a^{,}_{rs}X^{,r}Y^{,s} = a_{rs}X^{r}Y^{s}
+\ a^{'}_{rs}X^{'r}Y^{'s} = a_{rs}X^{r}Y^{s}
 \end{align}
 As $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors, we have
 \begin{align}
-\ X^{,r} = X^{i}\pdv{x^{,r}}{x^{i}} \text{   and  } Y^{,s} = Y^{j}\pdv{x^{,s}}{x^{j}}
+\ X^{'r} = X^{i}\pdv{x^{'r}}{x^{i}} \text{   and  } Y^{'s} = Y^{j}\pdv{x^{'s}}{x^{j}}
 \end{align}
 (3) in (2) gives
 \begin{align}
-\ a^{,}_{rs}X^{i}\pdv{x^{,r}}{x^{i}}Y^{j}\pdv{x^{,s}}{x^{j}} = a_{rs}X^{r}Y^{s}\\
-\Leftrightarrow a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}}X^{i}Y^{j} = a_{ij}X^{i}Y^{j}\\
-\Leftrightarrow (a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}} - a_{ij})X^{i}Y^{j} = 0
+\ a^{'}_{rs}X^{i}\pdv{x^{'r}}{x^{i}}Y^{j}\pdv{x^{'s}}{x^{j}} = a_{rs}X^{r}Y^{s}\\
+\Leftrightarrow a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}}X^{i}Y^{j} = a_{ij}X^{i}Y^{j}\\
+\Leftrightarrow (a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}} - a_{ij})X^{i}Y^{j} = 0
 \end{align}
 As $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors, we conclude that 
 \begin{align}
-\ a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}}{x^{j}} - a_{ij} = 0\\
-\Leftrightarrow a_{ij} =  a^{,}_{rs}\pdv{x^{,r}}{x^{i}}\pdv{x^{,s}} {x^{j}}
+\ a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}} - a_{ij} = 0\\
+\Leftrightarrow a_{ij} =  a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}} {x^{j}}
 \end{align}
 (8) = (1): OK
 $$\blacklozenge$$
@@ -412,7 +412,7 @@ If $X_{rs}$ is an arbitrary covariant tensor of the second order, and $A^{mn}_{r
 \end{tcolorbox}
 We have to prove that
 \begin{align}
-\ A^{,vw}_{r} = A^{mn}_k\pdv{x^{k}}{x^{,r}}\pdv{x^{,v}}{x^{m}}\pdv{x^{,w}}{x^{n}} 
+\ A^{'vw}_{r} = A^{mn}_k\pdv{x^{k}}{x^{'r}}\pdv{x^{'v}}{x^{m}}\pdv{x^{'w}}{x^{n}} 
 \end{align}
 We have
 \begin{align}
@@ -420,18 +420,18 @@ We have
 \end{align}
 is a covariant vector
 \begin{align}
-\Rightarrow P^{,}_{r} =A^{mn}_{k }X_{mn}\pdv{x^{k}}{x^{,r}}
+\Rightarrow P^{'}_{r} =A^{mn}_{k }X_{mn}\pdv{x^{k}}{x^{'r}}
 \end{align}
 but $X_{mn}$ is a covariant tensor
 \begin{align}
-\Rightarrow X_{mn} = X^{,}_{ps}\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}
+\Rightarrow X_{mn} = X^{'}_{ps}\pdv{x^{'p}}{x^{m}}\pdv{x^{'s}}{x^{n}}
 \end{align}
 So (4) in (3) gives
 \begin{align}
-\ P^{,}_{r} =A^{mn}_{k }X^{,}_{ps}\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}\pdv{x^{k}}{x^{,r}}\\
-\Leftrightarrow P^{,}_{r} = \underbrace{A^{mn}_{k }\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}\pdv{x^{k}}{x^{,r}}}_\text{(*)}X^{,}_{ps}
+\ P^{'}_{r} =A^{mn}_{k }X^{'}_{ps}\pdv{x^{'p}}{x^{m}}\pdv{x^{'s}}{x^{n}}\pdv{x^{k}}{x^{'r}}\\
+\Leftrightarrow P^{'}_{r} = \underbrace{A^{mn}_{k }\pdv{x^{'p}}{x^{m}}\pdv{x^{'s}}{x^{n}}\pdv{x^{k}}{x^{'r}}}_\text{(*)}X^{'}_{ps}
 \end{align}
-Putting (*) as $ A^{,ps}_{r }= A^{mn}_{k }\pdv{x^{,p}}{x^{m}}\pdv{x^{,s}}{x^{n}}\pdv{x^{k}}{x^{,r}}$ we see that (6) has the form (2) and that $A^{,ps}_{r }$ obeys the rule of a mixed tensor (1).
+Putting (*) as $ A^{'ps}_{r }= A^{mn}_{k }\pdv{x^{'p}}{x^{m}}\pdv{x^{'s}}{x^{n}}\pdv{x^{k}}{x^{'r}}$ we see that (6) has the form (2) and that $A^{'ps}_{r }$ obeys the rule of a mixed tensor (1).
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -633,16 +633,16 @@ As A is invariant (note: different alphabets in the indices indicates different 
 \ A(x^{\rho}) = A(x^{i})\\
 \Rightarrow \pdv{A(x^{\rho})}{x^{i}} = \pdv{A(x^{j})}{x^{i}}
 \end{align}
-To simplify the notation, we put $A(x^{\rho}) = A^{,}$ and $A(x^{j}) = A^{,}$ then (2) can be written as
+To simplify the notation, we put $A(x^{\rho}) = A^{'}$ and $A(x^{j}) = A^{'}$ then (2) can be written as
 \begin{align}
-\pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}} = \pdv{A}{x^{i}}
+\pdv{A^{'}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}} = \pdv{A}{x^{i}}
  \end{align}
- Conclusion: $\pdv{A}{x^{i}}$ is a covariant tensor. \\\\Consider now $\pdv{A}{x^{i}} = \pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}$. Then,
+ Conclusion: $\pdv{A}{x^{i}}$ is a covariant tensor. \\\\Consider now $\pdv{A}{x^{i}} = \pdv{A^{'}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}$. Then,
 \begin{align}
-\pdv{A}{x^{i}}{x^{j}} &= \pdv{A^{,}}{x^{\rho}}{x^{j}}\pdv{x^{\rho}}{x^{i}}+ \pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}\\
-\Leftrightarrow \pdv{A}{x^{i}}{x^{j}} &= \pdv{A^{,}}{x^{\rho}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{j}}\pdv{x^{\rho}}{x^{i}}+ \pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}
+\pdv{A}{x^{i}}{x^{j}} &= \pdv{A^{'}}{x^{\rho}}{x^{j}}\pdv{x^{\rho}}{x^{i}}+ \pdv{A^{'}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}\\
+\Leftrightarrow \pdv{A}{x^{i}}{x^{j}} &= \pdv{A^{'}}{x^{\rho}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{j}}\pdv{x^{\rho}}{x^{i}}+ \pdv{A^{'}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}
 \end{align}
-The first term on the right side, behaves as covariant tensor but the presence of the second term makes that generally, $\pdv{A}{x^{i}}{x^{j}}$ has not a tensor character. This is only when $\pdv{A^{,}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}=0$, which means that $x^{\rho}, x^{i}$ are a linear map of each other.
+The first term on the right side, behaves as covariant tensor but the presence of the second term makes that generally, $\pdv{A}{x^{i}}{x^{j}}$ has not a tensor character. This is only when $\pdv{A^{'}}{x^{\rho}}\pdv{x^{\rho}}{x^{i}}{x^{j}}=0$, which means that $x^{\rho}, x^{i}$ are a linear map of each other.
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -651,25 +651,25 @@ $$\blacklozenge$$
 Suppose that in $V_2$ the components of a contravariant tensor field $T^{mn}$ in a coordinate system $x^r$ are 
 $$T^{11}=1 \quad T^{12}=0$$
 $$T^{21}=1 \quad T^{22}=0$$
-Find the components $T^{,mn}$ in a coordinate system $x^{,r}$, where
-$$x^{,1} =(x^{1})^2\quad x^{,2} = (x^{2})^2$$
+Find the components $T^{'mn}$ in a coordinate system $x^{'r}$, where
+$$x^{'1} =(x^{1})^2\quad x^{'2} = (x^{2})^2$$
 Write down the values of these components in particular at the point $x^1 = 1, x^2 0 =$.
 \end{tcolorbox}
 As we have a contravariant tensor field :
 \begin{align}
-\ T^{,mn} =  T^{ij}\pdv{x^{,m}}{x^{i}}\pdv{x^{,n}}{x^{j}}\\
+\ T^{'mn} =  T^{ij}\pdv{x^{'m}}{x^{i}}\pdv{x^{'n}}{x^{j}}\\
  \begin{array}{ccc}
-   \quad \quad \quad \quad  x^{,1} =(x^{1})^2  \Rightarrow & \pdv{x^{,1}}{x^{1}} = 2x^{1} & \pdv{x^{,1}}{x^{2}} = 0\\
-\quad \quad \quad \quad x^{,2} =(x^{2})^2  \Rightarrow & \pdv{x^{,2}}{x^{1}} = 0 & \pdv{x^{,2}}{x^{2}} = 2x^{2}\\
+   \quad \quad \quad \quad  x^{'1} =(x^{1})^2  \Rightarrow & \pdv{x^{'1}}{x^{1}} = 2x^{1} & \pdv{x^{'1}}{x^{2}} = 0\\
+\quad \quad \quad \quad x^{'2} =(x^{2})^2  \Rightarrow & \pdv{x^{'2}}{x^{1}} = 0 & \pdv{x^{'2}}{x^{2}} = 2x^{2}\\
   \end{array}\\
   \end{align}
   \begin{align}
-  &\Rightarrow T^{,11} = 4(x^{1})^2 + 4(x^{2})^2 \\
-  &\Rightarrow T^{,12} = T^{,21}=0 \\
-  &\Rightarrow T^{,22} = 4(x^{1})^2 + 4(x^{2})^2
+  &\Rightarrow T^{'11} = 4(x^{1})^2 + 4(x^{2})^2 \\
+  &\Rightarrow T^{'12} = T^{'21}=0 \\
+  &\Rightarrow T^{'22} = 4(x^{1})^2 + 4(x^{2})^2
   \end{align}\\\\
   The components in  at the point $x^1 = 1, x^2 = 0$ are
-  $$T^{,}(1,0) = \left[{\begin{array}{cc} 4 & 0 \\
+  $$T^{'}(1,0) = \left[{\begin{array}{cc} 4 & 0 \\
     0 & 4 \\ 
     \end{array} } \right]$$
     
@@ -679,7 +679,7 @@ As we have a contravariant tensor field :
 \section{p24-exercise 7.}
 \begin{tcolorbox}
 Given that if $T_{mnrs}$ is a covariant tensor, and 
-$$ T_{mnrs}+T_{mnsr} = 0$$ in a coordinate system $x^{p}$, establish directly that $$ T^{,}_{mnrs}+T^{,}_{mnsr} = 0$$ in any other coordinate system $x{,q}$.
+$$ T_{mnrs}+T_{mnsr} = 0$$ in a coordinate system $x^{p}$, establish directly that $$ T^{'}_{mnrs}+T^{'}_{mnsr} = 0$$ in any other coordinate system $x{,q}$.
 \end{tcolorbox}
 Note: in the following, different alphabets in the indices indicates different coordinate systems.
 As we $T_{mnrs}$ is a covariant tensor :
@@ -813,24 +813,24 @@ $$\blacklozenge$$
 
 \section{p24-exercise 11.}
 \begin{tcolorbox}
-Prove that with respect to transformations $$ x^{,r} = C_{rs}x^s$$ where the coefficients are constants satisfying $$C_{mr}C_{ms} = \delta^r_s$$ contravariant and covariant vectors have the same formula of transformation $$ A^{,r} = C_{rs}A^{s} \text{, } A_{,r} = C_{rs}A_{s} $$
+Prove that with respect to transformations $$ x^{'r} = C_{rs}x^s$$ where the coefficients are constants satisfying $$C_{mr}C_{ms} = \delta^r_s$$ contravariant and covariant vectors have the same formula of transformation $$ A^{'r} = C_{rs}A^{s} \text{, } A_{,r} = C_{rs}A_{s} $$
 \end{tcolorbox}
- i) $ A^{,r} = C_{rs}A^{s}$\\
+ i) $ A^{'r} = C_{rs}A^{s}$\\
  
- Be $ A^{,r} = A^{s}\pdv{x^{,r}}{x^s}$ and as $x^{,r} = C_{rs}x^{s}$  we have $\pdv{x^{,r}}{x^s} = C_{rs}$. Hence,$$ A^{,r} = C_{rs}A^{s}$$.\\\\
+ Be $ A^{'r} = A^{s}\pdv{x^{'r}}{x^s}$ and as $x^{'r} = C_{rs}x^{s}$  we have $\pdv{x^{'r}}{x^s} = C_{rs}$. Hence,$$ A^{'r} = C_{rs}A^{s}$$.\\\\
  i) $ A_{,r} = C_{rs}A_{s}$\\
- Be $ A_{,r} = A_{s}\pdv{x^{s}}{x^{,r}}$ and as $x^{,r} = C_{rs}x^{s}$  we have
+ Be $ A_{,r} = A_{s}\pdv{x^{s}}{x^{'r}}$ and as $x^{'r} = C_{rs}x^{s}$  we have
 \begin{align}
-\pdv{x^{,r}}{x^{,t}} &= C_{rs}\pdv{x^{s}}{x^{,t}}\\
-\Rightarrow \delta^{r}_{t} &= C_{rs}\pdv{x^{s}}{x^{,t}}
+\pdv{x^{'r}}{x^{'t}} &= C_{rs}\pdv{x^{s}}{x^{'t}}\\
+\Rightarrow \delta^{r}_{t} &= C_{rs}\pdv{x^{s}}{x^{'t}}
   \end{align}
   Now, multiply (2) by $C_{rq}$. We get,
   \begin{align}
- \delta^{r}_{t}C_{rq} &= C_{rq}C_{rs}\pdv{x^{s}}{x^{,t}}\\
- \ C_{tq} &= C_{rq}C_{rs}\pdv{x^{s}}{x^{,t}}\\
- \text{as }C_{mr}C_{ms} = \delta^r_s \Rightarrow \quad \quad  C_{tq} &= \delta^q_s\pdv{x^{s}}{x^{,t}}\\
- \Rightarrow   C_{tq} &= \pdv{x^{q}}{x^{,t}} \text{  or  }  C_{rs} = \pdv{x^{s}}{x^{,r}}\\
- \text{  as  } A_{,r} = A_{s}\pdv{x^{s}}{x^{,r}} \Rightarrow A_{,r} &= C_{rs}\pdv{x^{s}}{x^{,r}}
+ \delta^{r}_{t}C_{rq} &= C_{rq}C_{rs}\pdv{x^{s}}{x^{'t}}\\
+ \ C_{tq} &= C_{rq}C_{rs}\pdv{x^{s}}{x^{'t}}\\
+ \text{as }C_{mr}C_{ms} = \delta^r_s \Rightarrow \quad \quad  C_{tq} &= \delta^q_s\pdv{x^{s}}{x^{'t}}\\
+ \Rightarrow   C_{tq} &= \pdv{x^{q}}{x^{'t}} \text{  or  }  C_{rs} = \pdv{x^{s}}{x^{'r}}\\
+ \text{  as  } A_{,r} = A_{s}\pdv{x^{s}}{x^{'r}} \Rightarrow A_{,r} &= C_{rs}\pdv{x^{s}}{x^{'r}}
   \end{align}
 $$\blacklozenge$$
 \pagebreak[4]
@@ -841,7 +841,7 @@ $$\blacklozenge$$
 Prove that $$\pdv{ln\left|\pdv{x^m}{y^n}\right|}{x^r} =\pdv{y^m}{x^r}{x^n}\pdv{x^n}{y^m}$$.
 \end{tcolorbox}
 \begin{lemma}
-Be $A$ a square matrix $N\times N$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. Define $A^{,}$ as $(A^,_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^, = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
+Be $A$ a square matrix $N\times N$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} \rightarrow \mathbb{R}$. Define $A^{'}$ as $(A^{'}_{ij}) = \dv{f}{A_{ij}}$. Then,$$(ln\left|A\right|)^{'} = (A^{-1})^T \text{ wih }  f =\left|A\right|$$
 Proof:\\
 By definition of the determinant, we have
 \begin{align}
@@ -865,7 +865,7 @@ Hence, (4) becomes
 \text{But,}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{\pdv{\left|A\right|}{A_{ij}}}{\left|A\right|}\\
 \text{(6) and  (7) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{C^i_j}{\left|A\right|}\\
 \text{(3) and  (8) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{(A^{-1}_{ij})^T \left|A\right|}{\left|A\right|} = (A^{-1}_{ij})^T \\
-\Rightarrow (ln\left|A\right|)^, &= (A^{-1})^T
+\Rightarrow (ln\left|A\right|)^{'} &= (A^{-1})^T
 \end{align}
 \end{lemma}$$\diamond$$
 
@@ -962,22 +962,22 @@ Consider the following objects
   \ a &  h\\
   \ h   &b\\
   \end{array}} \right] \\
-  \ (A_{ij})^{,} = \left[ { \begin{array}{cc}
-  \ a^{,}_{11} &  a^{,}_{12}\\
-  \ a^{,}_{21}  & a^{,}_{21}\\
+  \ (A_{ij})^{'} = \left[ { \begin{array}{cc}
+  \ a^{'}_{11} &  a^{'}_{12}\\
+  \ a^{'}_{21}  & a^{'}_{21}\\
   \end{array}} \right] \\
-  \text{ we calculate}\quad A^{,}_{ij} = A_{km}\pdv{x^k}{x^{,i}}\pdv{x^m}{x^{,j}}
+  \text{ we calculate}\quad A^{'}_{ij} = A_{km}\pdv{x^k}{x^{'i}}\pdv{x^m}{x^{'j}}
 \end{align}
-with $(x^{,1},x^{,2}) = (w, z)$ and $(x^{1},x^{2}) = (x, y)$. We have,
+with $(x^{'1},x^{'2}) = (w, z)$ and $(x^{1},x^{2}) = (x, y)$. We have,
 \begin{align}
-\ \pdv{x^1}{x^{,1}} &= \alpha, \pdv{x^1}{x^{,2}} = \beta,\pdv{x^2}{x^{,1}} = \gamma,\pdv{x^2}{x^{,2}} = \delta\\
+\ \pdv{x^1}{x^{'1}} &= \alpha, \pdv{x^1}{x^{'2}} = \beta,\pdv{x^2}{x^{'1}} = \gamma,\pdv{x^2}{x^{'2}} = \delta\\
 \text{ (10) and (11)}\quad \Rightarrow\ &\begin{array}{c}
-  \ a^{,}_{11} = a \alpha^2 + 2 h \alpha \gamma + b \gamma^2 \\
-  \ a^{,}_{22} = a \beta^2 + 2 h \delta \beta + b \delta^2 \\
-  \ a^{,}_{12} = a^{,}_{21} =a \alpha \beta + h( \alpha \delta + \gamma \beta) + b \gamma \delta \\
+  \ a^{'}_{11} = a \alpha^2 + 2 h \alpha \gamma + b \gamma^2 \\
+  \ a^{'}_{22} = a \beta^2 + 2 h \delta \beta + b \delta^2 \\
+  \ a^{'}_{12} = a^{'}_{21} =a \alpha \beta + h( \alpha \delta + \gamma \beta) + b \gamma \delta \\
   \end{array}
 \end{align}
-Combining (5), (6), (7) and (12) we get $$ p = a^{,}_{11}, r = a^{,}_{22}, q =  a^{,}_{12} = a^{,}_{21}$$ and so (9) becomes $$  (A_{ij})^{,} = \left[ { \begin{array}{cc}
+Combining (5), (6), (7) and (12) we get $$ p = a^{'}_{11}, r = a^{'}_{22}, q =  a^{'}_{12} = a^{'}_{21}$$ and so (9) becomes $$  (A_{ij})^{'} = \left[ { \begin{array}{cc}
   \ p &  q\\
   \ q  & r\\
   \end{array}} \right] \\$$
@@ -1007,31 +1007,31 @@ Consider the transformation from a $(x^1,x^2)$ coordinate system to a $(y^1,y^2)
   \ H = \sum_{\rho} m_{\rho} x^{1,\rho} x^{2,\rho}\\
   \end{array}
     \text{and}\quad  \begin{array}{c}
-  \ A^, = \sum_{\rho} m_{\rho} (y^{2,\rho})^2\\
-  \ B^, = \sum_{\rho} m_{\rho} (y^{1,\rho})^2\\
-  \ H^, = \sum_{\rho} m_{\rho} y^{1,\rho} y^{2,\rho}\\
+  \ A^{'} = \sum_{\rho} m_{\rho} (y^{2,\rho})^2\\
+  \ B^{'} = \sum_{\rho} m_{\rho} (y^{1,\rho})^2\\
+  \ H^{'} = \sum_{\rho} m_{\rho} y^{1,\rho} y^{2,\rho}\\
   \end{array}
 \end{align}
 the moments and product of inertia, $\rho$ being the index of summation over all the points with mass $m_{\rho}$.\\
 For the sake of notational simplicty we consider only one point of mass as the linearity of $A, B, H$ related to $\rho$ ensures the validity of the nexts steps for all points in the plane.\\
 From (1) and (2) we have:
 \begin {align}
-\ \frac{A^,}{m_{\rho}}  &= \gamma^2 (x^1)^2+2 \gamma \delta x^1 x^2 + \delta ^2 (x^2)^2\\
-\  \frac{B^,}{m_{\rho}}  &= \alpha^2 (x^1)^2+2 \alpha \beta x^1 x^2 + \beta ^2 (x^2)^2\\
-\  \frac{H^,}{m_{\rho}}  &= \alpha \gamma (x^1)^2 + (\gamma \beta + \alpha \delta) x^1 x^2 + \beta \delta (x^2)^2\\
+\ \frac{A^{'}}{m_{\rho}}  &= \gamma^2 (x^1)^2+2 \gamma \delta x^1 x^2 + \delta ^2 (x^2)^2\\
+\  \frac{B^{'}}{m_{\rho}}  &= \alpha^2 (x^1)^2+2 \alpha \beta x^1 x^2 + \beta ^2 (x^2)^2\\
+\  \frac{H^{'}}{m_{\rho}}  &= \alpha \gamma (x^1)^2 + (\gamma \beta + \alpha \delta) x^1 x^2 + \beta \delta (x^2)^2\\
 \text{Note that} \quad &\begin{array}{cc}
   \pdv{y^1}{x^1} = \alpha & \pdv{y^1}{x^2} = \beta\\ 
 	\pdv{y^2}{x^1} = \gamma & \pdv{y^2}{x^2} = \delta\\ 
   \end{array}\\
-  \text{(6) in  (4):}\quad &\frac{B^,}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  + 2 (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\
+  \text{(6) in  (4):}\quad &\frac{B^{'}}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  + 2 (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\
   &=  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}
 \end{align}
-Repeating the same calculations for $\frac{A^,}{m_{\rho}}$ and $\frac{H^,}{m_{\rho}} $ gives:
+Repeating the same calculations for $\frac{A^{'}}{m_{\rho}}$ and $\frac{H^{'}}{m_{\rho}} $ gives:
 \begin {align}
 \begin{array}{c}
-\frac{A^,}{m_{\rho}} =  (x^1)^2\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  (x^1)(x^2)\pdv{y^2}{x^1}\pdv{y^2}{x^2} + (x^2)(x^1)\pdv{y^2}{x^2}\pdv{y^2}{x^1} + (x^2)^2\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\
-\frac{B^,}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\
-\frac{H^,}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^2}\pdv{y^2}{x^1} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^2}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^2}{x^2}
+\frac{A^{'}}{m_{\rho}} =  (x^1)^2\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  (x^1)(x^2)\pdv{y^2}{x^1}\pdv{y^2}{x^2} + (x^2)(x^1)\pdv{y^2}{x^2}\pdv{y^2}{x^1} + (x^2)^2\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\
+\frac{B^{'}}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^1}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\
+\frac{H^{'}}{m_{\rho}} =  (x^1)^2\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  (x^1)(x^2)\pdv{y^1}{x^2}\pdv{y^2}{x^1} + (x^2)(x^1)\pdv{y^1}{x^1}\pdv{y^2}{x^2} + (x^2)^2\pdv{y^1}{x^2}\pdv{y^2}{x^2}
   \end{array}
 \end{align}
 Now, define 
@@ -1039,7 +1039,7 @@ Now, define
 (K_{ij}) = \left[ { \begin{array}{cc}
   \ (x^1)^2 &  (x^1)(x^2)\\\\
   \ (x^2)(x^1)  & (x^2)^2\\
-  \end{array}} \right] \quad \quad (K_{ij})^{,} = \left[ { \begin{array}{cc}
+  \end{array}} \right] \quad \quad (K_{ij})^{'} = \left[ { \begin{array}{cc}
   \ (y^1)^2 &  (y^1)(y^2)\\\\
   \ (y^2)(y^1)  & (y^2)^2\\
   \end{array}} \right]
@@ -1047,22 +1047,22 @@ Now, define
  Then (9) can be written as
  \begin {align}
 \begin{array}{c}
-\frac{A^,}{m_{\rho}} = (y^1)^2 =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
-\frac{B^,}{m_{\rho}} = (y^2)^2 =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
-\frac{H^,}{m_{\rho}} = (y^1)(y^2)  = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
+\frac{A^{'}}{m_{\rho}} = (y^1)^2 =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
+\frac{B^{'}}{m_{\rho}} = (y^2)^2 =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
+\frac{H^{'}}{m_{\rho}} = (y^1)(y^2)  = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
   \end{array}
   \end{align}
   Hence,
   \begin{align}
 \begin{array}{c}
-  \ K^{,11}  =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
-\ K^{,22} =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
- \ K^{,12} = K^{,21} = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
+  \ K^{'11}  =  K^{11}\pdv{y^1}{x^1} \pdv{y^1}{x^1}  +  K^{12}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{21}\pdv{y^1}{x^1}\pdv{y^1}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^1}{x^2}\\\\
+\ K^{'22} =  K^{11}\pdv{y^2}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^2}{x^1}\pdv{y^2}{x^2} + K^{21}\pdv{y^2}{x^2}\pdv{y^2}{x^1} + K^{22}\pdv{y^2}{x^2}\pdv{y^2}{x^2}\\\\
+ \ K^{'12} = K^{'21} = K^{11}\pdv{y^1}{x^1} \pdv{y^2}{x^1}  +  K^{12}\pdv{y^1}{x^2}\pdv{y^2}{x^1} + K^{21}\pdv{y^1}{x^1}\pdv{y^2}{x^2} + K^{22}\pdv{y^1}{x^2}\pdv{y^2}{x^2}
   \end{array}
 \end{align}
 So the object $(K_{ij})\equiv K^{ij}$ transforms according (12) like a contravariant second order tensor.\\
 
-Now, consider $|K^{ij}|$, obviously $|K^{ij}| = (x^1)^2(x^2)^2-(x^1)(x^2)(x^2)(x^1) =0$, but so is also $|K^{,ij}|$.
+Now, consider $|K^{ij}|$, obviously $|K^{ij}| = (x^1)^2(x^2)^2-(x^1)(x^2)(x^2)(x^1) =0$, but so is also $|K^{'ij}|$.
 $$\Rightarrow\quad |K^{ij}| \text{ is an invariant under the considered transformation}$$. 
 $$\blacklozenge$$
 \pagebreak[4]

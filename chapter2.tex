@@ -140,9 +140,9 @@ a_{21} & a_{22}&\dots&a_{2N} \\
 a_{N1} & a_{N2}&\dots&a_{NN} \\
 \end{pmatrix}
 \end{align}
-and consider the matrix $A^,$
+and consider the matrix $A^{'}$
 \begin{align}
-\ A^, &= \begin{pmatrix}
+\ A^{'} &= \begin{pmatrix}
  a_{11} & a_{12}&\dots&a_{1N} \\
  \vdots & \vdots &\vdots & \vdots \\
 a_{R1} & a_{R2}&\dots&a_{RN} \\
@@ -162,7 +162,7 @@ a_{N1} & a_{N2}&\dots&a_{NN} \\
 \end{array}
 \end{align}
 This matrix corresponds to the way $a_{Rm}\Delta^{Sm}$ is computed. Indeed with the factor $a_{Rm}$ is not associated it's own cofactor $\Delta^{Rm}$ but the cofactor of the $m^{th}$ column in row $S$. Replacing the $S^{th}$ row with the row $R$ and calculating it's determinant is the same as calculating $a_{Rm}\Delta^{Sm}$\\
-But, $|A^,| = 0$ as we have two identical rows. So, $a_{Rm}\Delta^{Sm} = 0$\\\\
+But, $|A^{'}| = 0$ as we have two identical rows. So, $a_{Rm}\Delta^{Sm} = 0$\\\\
 Conclusion : The same reasoning can be applied when expanding the determinant along the columns instead of the rows we have indeed $\quad\quad a_{mr}\Delta^{ms} = a_{rm}\Delta^{sm} = \delta^s_r a$.
 $$\blacklozenge$$
 \newpage
@@ -430,8 +430,8 @@ By definition (2.428)
 \ \lambda (u) &= - \frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\\
 \text{hence by (6) and (7):}\quad  \lambda (u) &= \frac{\dv[2]{s}{u}}{\dv{s}{u}}\\
 \text{in (8) put}\quad y &= \dv{s}{u} \\
-\text{ and so} \quad \lambda (w)  &= \frac{y^,}{y}\\
-\Rightarrow \int \frac{y^,}{y}dw &= \int \lambda (w)dw\\
+\text{ and so} \quad \lambda (w)  &= \frac{y^{'}}{y}\\
+\Rightarrow \int \frac{y^{'}}{y}dw &= \int \lambda (w)dw\\
 \Leftrightarrow \int d(lny) &= \int \lambda (w)dw\\
 \Rightarrow \left. ln(y) \right|^v_{v_0} &= \int^v_{v_0} \lambda (w)dw\\
 \Rightarrow y  &= exp(\int^v_{v_0} \lambda (w)dw) + C
@@ -439,7 +439,7 @@ By definition (2.428)
 Taking into account (9), we get:
 \begin{align}
 \dv{s}{v}  &= exp(\int^v_{v_0} \lambda (w)dw) + C\\
-\Rightarrow \left. s \right|^u_{u_0} &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B^,\\
+\Rightarrow \left. s \right|^u_{u_0} &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B^{'}\\
 \Leftrightarrow  s  &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B
 \end{align}
 We show tha we have to put $C=0$ and can drop the constant $B$. Remember by (8)
@@ -457,7 +457,7 @@ $$\blacklozenge$$
 
 \section{p42-clarification on 2.430}
 \begin{tcolorbox}
-After 2.430 it is stated:\\
+After 2.430 it is stateC:\\
 \it{"No matter what values these constants have, 2.424 is satisfied, and by adjusting the constant $v_0$, we can ensure that $a_{mn}\dv{x^m}{s}\dv{x^n}{s} = \pm1$ along $C$, so that $s$ is actually the arc length."}
 \end{tcolorbox}
 We first prove that 2.4.24 is satisfied, no matter what values the constants take. We have
@@ -598,8 +598,8 @@ $$\blacklozenge$$
 \section{p47-exercise }
 \begin{tcolorbox}
 Consider a 3-space with coordinates $x,y,z$ and a metric form $\Phi = (dx)^2+(dy)^2 - (dz)^2$. prove that the geodesic null lines may be represented by the equations
-$$x = au + a^,\quad y = bu + b^, \quad z = cu + c^,$$
-where $u$ is a parameter and $a, a^,,b,b^,,c,c^,$ are constants which are arbitrary except for the relation $a^2+b^2-c^2 =0$.
+$$x = au + a^{'}\quad y = bu + b^{'} \quad z = cu + c^{'}$$
+where $u$ is a parameter and $a, a^{'},b,b^{'},c,c^{'}$ are constants which are arbitrary except for the relation $a^2+b^2-c^2 =0$.
 \end{tcolorbox}
 Given is 
 \begin{align}
@@ -607,7 +607,7 @@ Given is
 \end{align}
 From the previous exercise we have already proven that $x,y,z$ are of the form
 \begin{align}
-\ x^i = q_i u + q_i^,
+\ x^i = q_i u + q_i^{'}
 \end{align}
 To be a null geodesic null line we need to have (2.448)
 \begin{align}
@@ -626,49 +626,49 @@ $$\blacklozenge$$
 \section{p48-exercise }
 \begin{tcolorbox}
 Prove that the Christoffel symbols of the first kind transform according the equation 
-$$[mn,r]^, =  [pq,s]\pdv{x^p}{x^{,m}} \pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}+ a_{pq}\pdv{x^p}{x^{,r}}\pdv{x^q}{x^{,m}}{x^{,n}}$$
+$$[mn,r]^{'} =  [pq,s]\pdv{x^p}{x^{'m}} \pdv{x^q}{x^{'n}}\pdv{x^s}{x^{'r}}+ a_{pq}\pdv{x^p}{x^{'r}}\pdv{x^q}{x^{'m}}{x^{'n}}$$
 \end{tcolorbox}
 From 2.438 page 45, we have
 \begin{align}
 \ f_r &\equiv a_{rm}\dv[2]{x^m}{u} +[mn,r]\dv{x^m}{u}\dv{x^n}{u} \quad\text{is covariant} \\
-\Rightarrow\quad f_r^, &= f_s\pdv{x^s}{x^{,r}}\\
-\text{with}\quad f_r^, &= a^,_{rm}\dv[2]{x^{,m}}{u} +[mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u}
+\Rightarrow\quad f_r^{'} &= f_s\pdv{x^s}{x^{'r}}\\
+\text{with}\quad f_r^{'} &= a^{'}_{rm}\dv[2]{x^{'m}}{u} +[mn,r]^{'} \dv{x^{'m}}{u}\dv{x^{'n}}{u}
 \end{align}
 Combining (1), (2) and (3) gives 
 \begin{align}
-\ a^,_{rm}\dv[2]{x^{,m}}{u} +[mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} = ( a_{sm}\dv[2]{x^m}{u} +[mn,s]\dv{x^m}{u}\dv{x^n}{u})\pdv{x^s}{x^{,r}}
+\ a^{'}_{rm}\dv[2]{x^{'m}}{u} +[mn,r]^{'} \dv{x^{'m}}{u}\dv{x^{'n}}{u} = ( a_{sm}\dv[2]{x^m}{u} +[mn,s]\dv{x^m}{u}\dv{x^n}{u})\pdv{x^s}{x^{'r}}
 \end{align}
 We rewrite (4) as 
 \begin{align}
-\ [mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} &= -\underbrace{a^,_{rm}\dv[2]{x^{,m}}{u}}_\text{(*)} +\underbrace{ a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{,r}}}_\text{(**)} +\underbrace{[mn,s]\dv{x^m}{u}\dv{x^n}{u}\pdv{x^s}{x^{,r}}}_\text{(***)}\\
-\text{(***)} &\Leftrightarrow [mn,s]\pdv{x^m}{x^{,p}}\dv{x^{,p}}{u}\pdv{x^n}{x^{,q}}\dv{x^{,q}}{u}\pdv{x^s}{x^{,r}}
+\ [mn,r]^{'} \dv{x^{'m}}{u}\dv{x^{'n}}{u} &= -\underbrace{a^{'}_{rm}\dv[2]{x^{'m}}{u}}_\text{(*)} +\underbrace{ a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{'r}}}_\text{(**)} +\underbrace{[mn,s]\dv{x^m}{u}\dv{x^n}{u}\pdv{x^s}{x^{'r}}}_\text{(***)}\\
+\text{(***)} &\Leftrightarrow [mn,s]\pdv{x^m}{x^{'p}}\dv{x^{'p}}{u}\pdv{x^n}{x^{'q}}\dv{x^{'q}}{u}\pdv{x^s}{x^{'r}}
 \end{align}
 In (6) renaming the dummy indices $m,n,p,q$ gives
 \begin{align}
-\text{(***)} &\Leftrightarrow [pq,s]\pdv{x^p}{x^{,m}}\dv{x^{,m}}{u}\pdv{x^q}{x^{,n}}\dv{x^{,n}}{u}\pdv{x^s}{x^{,r}}\\
-&\Leftrightarrow [pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,n}}{u}\right)
+\text{(***)} &\Leftrightarrow [pq,s]\pdv{x^p}{x^{'m}}\dv{x^{'m}}{u}\pdv{x^q}{x^{'n}}\dv{x^{'n}}{u}\pdv{x^s}{x^{'r}}\\
+&\Leftrightarrow [pq,s]\pdv{x^p}{x^{'m}}\pdv{x^q}{x^{'n}}\pdv{x^s}{x^{'r}}\left(\dv{x^{'m}}{u}\dv{x^{'n}}{u}\right)
 \end{align}
 Also,
 \begin{align}
-\text{(**)} &\Leftrightarrow  a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{,r}}\\
-\text{As we have also}\quad \dv[2]{x^m}{u} &= \dv{(\pdv{x^m}{x^{,p}}\dv{x^{,p}}{u})}{u}\\
-&= \pdv{x^m}{x^{,p}}\dv[2]{x^{,p}}{u}+\dv{x^{,p}}{u}\pdv{x^m}{x^{,p}}{x^{,q}}\dv{x^{,q}}{u} 
+\text{(**)} &\Leftrightarrow  a_{sm}\dv[2]{x^m}{u}\pdv{x^s}{x^{'r}}\\
+\text{As we have also}\quad \dv[2]{x^m}{u} &= \dv{(\pdv{x^m}{x^{'p}}\dv{x^{'p}}{u})}{u}\\
+&= \pdv{x^m}{x^{'p}}\dv[2]{x^{'p}}{u}+\dv{x^{'p}}{u}\pdv{x^m}{x^{'p}}{x^{'q}}\dv{x^{'q}}{u} 
 \end{align}
 (11) and (9) gives by changing the dummy indices ( $m\rightarrow t$, $p\rightarrow m$, $q\rightarrow n$)
 \begin{align}
-\text{(**)}&= \underbrace{a_{st}\pdv{x^t}{x^{,p}}\dv[2]{x^{,p}}{u}\pdv{x^s}{x^{,r}}}_\text{(****)}+a_{pq}\pdv{x^q}{x^{,m}}{x^{,n}}\pdv{x^{p}}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,m}}{u}\right) \\
-\text{with (****)}\quad &= a_{st}\left(\pdv{x^t}{x^{,m}}\pdv{x^s}{x^{,r}}\right)\dv[2]{x^{,m}}{u}
+\text{(**)}&= \underbrace{a_{st}\pdv{x^t}{x^{'p}}\dv[2]{x^{'p}}{u}\pdv{x^s}{x^{'r}}}_\text{(****)}+a_{pq}\pdv{x^q}{x^{'m}}{x^{'n}}\pdv{x^{p}}{x^{'r}}\left(\dv{x^{'m}}{u}\dv{x^{'m}}{u}\right) \\
+\text{with (****)}\quad &= a_{st}\left(\pdv{x^t}{x^{'m}}\pdv{x^s}{x^{'r}}\right)\dv[2]{x^{'m}}{u}
 \end{align}
 But $a_{st}$  is a covariant tensor, so
 \begin{align}
-\ a^{,}_{rm} &= a_{st}\pdv{x^t}{x^{,m}}\pdv{x^s}{x^{,r}}\\
-\text{(13) becomes}\quad \text{(****)} &= a^{,}_{rm}\dv[2]{x^{,m}}{u}\\
-\text{and from (5) we have }\quad \text{(*)} &= -a^{,}_{rm}\dv[2]{x^{,m}}{u}\\
+\ a^{'}_{rm} &= a_{st}\pdv{x^t}{x^{'m}}\pdv{x^s}{x^{'r}}\\
+\text{(13) becomes}\quad \text{(****)} &= a^{'}_{rm}\dv[2]{x^{'m}}{u}\\
+\text{and from (5) we have }\quad \text{(*)} &= -a^{'}_{rm}\dv[2]{x^{'m}}{u}\\
 \end{align}
 and both terms cancel each other in equation (5). So adding $(*), (**)$ and $(***)$ in (5) , we get 
 \begin{align}
-\ [mn,r]^, \dv{x^{,m}}{u}\dv{x^{,n}}{u} &= a_{pq}\pdv{x^q}{x^{,m}}{x^{,n}}\pdv{x^{p}}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,m}}{u}\right)+[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}\left(\dv{x^{,m}}{u}\dv{x^{,n}}{u}\right)\\
-\Rightarrow \ &[mn,r]^, =[pq,s]\pdv{x^p}{x^{,m}}\pdv{x^q}{x^{,n}}\pdv{x^s}{x^{,r}}+  a_{pq}\pdv{x^{p}}{x^{,r}}\pdv{x^q}{x^{,m}}{x^{,n}}
+\ [mn,r]^{'} \dv{x^{'m}}{u}\dv{x^{'n}}{u} &= a_{pq}\pdv{x^q}{x^{'m}}{x^{'n}}\pdv{x^{p}}{x^{'r}}\left(\dv{x^{'m}}{u}\dv{x^{'m}}{u}\right)+[pq,s]\pdv{x^p}{x^{'m}}\pdv{x^q}{x^{'n}}\pdv{x^s}{x^{'r}}\left(\dv{x^{'m}}{u}\dv{x^{'n}}{u}\right)\\
+\Rightarrow \ &[mn,r]^{'} =[pq,s]\pdv{x^p}{x^{'m}}\pdv{x^q}{x^{'n}}\pdv{x^s}{x^{'r}}+  a_{pq}\pdv{x^{p}}{x^{'r}}\pdv{x^q}{x^{'m}}{x^{'n}}
 \end{align}
 $$\blacklozenge$$
 \newpage
@@ -946,9 +946,9 @@ i) Consider the magnitude M at a random point on the curve
 \end{align}\\
 Obviously $M$ and $\dv{M}{s}$ are invariants. Also, we can choose at any point on the curve a Riemannian coordinate system (RCS) for which the Christoffel symbols vanish at that point. Hence, $\dv{U^r}{u} = 0 $ at that point and the second term in the right part of (5) vanish. (5) becomes then,
 \begin{align}
- \dv{M}{s} = \pdv{a^,_{mn}}{x^{,k}}\dv{x^{,k}}{s}U^{,m} U^{,n}  
+ \dv{M}{s} = \pdv{a^{'}_{mn}}{x^{'k}}\dv{x^{'k}}{s}U^{'m} U^{'n}  
 \end{align}
-We also know \textbf{(2.425. page 41)} that $[km,n]^, + [kn,m]^, = \pdv{a^,_{mn}}{x^{,k}}$. But in the chosen coordinate system, $[km,n] = 0$ at the origin of this coordinate system. So by (6) we get $\dv{M}{s} = 0$.\\
+We also know \textbf{(2.425. page 41)} that $[km,n]^{'} + [kn,m]^{'} = \pdv{a^{'}_{mn}}{x^{'k}}$. But in the chosen coordinate system, $[km,n] = 0$ at the origin of this coordinate system. So by (6) we get $\dv{M}{s} = 0$.\\
 So the magnitude is constant along the curve and as we know that a certain point $M =1$:\\
 $$\textbf{ U,V are unit vectors along the curve}$$\newpage
 ii) Consider now the angle between the vectors $U,V$. Be $A = \cos \ \theta$.By definition 
@@ -1384,19 +1384,19 @@ Solving the ODE (9). Put $ e^{rs} = \lambda_{(1)}^k$
 \text{(9):}\spatie&  r^2 + \kappa^2 = 0\\
 \Rightarrow \spatie & r = \pm \imath \kappa\\
 \text{Hence, a general solution of (9) is of the form:} \spatie & \lambda_{(1)}^r = p^r e^{ \imath \kappa s}  + q^r e^{ -\imath \kappa s}\\
-\text{put}\quad  p^r+q^r = A^{,r}\quad &\text{and}\quad p^r-q^r = B^{,r}\\
-\Leftrightarrow \spatie p^r = \frac{A^{,r}+B^{,r}}{2} &\text{and}\quad p^r=\frac{A^{,r}-B^{,r}}{2}\\
-\text{(12) can then be written as }\quad  \lambda_{(1)}^r = A^{,r}\frac{ e^{ \imath \kappa s}+  e^{ -\imath \kappa s}}{2} & + B^{,r}\frac{ e^{ \imath \kappa s}- e^{ -\imath \kappa s}}{2}\\
-\text{or}\quad  \lambda_{(1)}^r = A^{,r}\cos \kappa s & + B^{,r}\sin \kappa s\\
+\text{put}\quad  p^r+q^r = A^{'r}\quad &\text{and}\quad p^r-q^r = B^{'r}\\
+\Leftrightarrow \spatie p^r = \frac{A^{'r}+B^{'r}}{2} &\text{and}\quad p^r=\frac{A^{'r}-B^{'r}}{2}\\
+\text{(12) can then be written as }\quad  \lambda_{(1)}^r = A^{'r}\frac{ e^{ \imath \kappa s}+  e^{ -\imath \kappa s}}{2} & + B^{'r}\frac{ e^{ \imath \kappa s}- e^{ -\imath \kappa s}}{2}\\
+\text{or}\quad  \lambda_{(1)}^r = A^{'r}\cos \kappa s & + B^{'r}\sin \kappa s\\
 \text{We have (8)}\spatie \spatie  \lambda^r =  & -  \kappa_{(1)} \dv{\lambda_{(1)}^r}{ s} \\
-\dv{(16)}{s}\quad\text{and (17)}\Rightarrow\spatie \lambda^r =  A^{,r}\sin \kappa s & - B^{,r}\cos \kappa s\\
-\text{as}\quad \lambda^r = \dv{x^r}{s}\quad\text{ with (18)}\quad \Rightarrow \spatie x^r = - \frac{A^{,r}}{\kappa}\cos \kappa s &  - \frac{B^{,r}}{\kappa}\sin \kappa s + C^r\\
+\dv{(16)}{s}\quad\text{and (17)}\Rightarrow\spatie \lambda^r =  A^{'r}\sin \kappa s & - B^{'r}\cos \kappa s\\
+\text{as}\quad \lambda^r = \dv{x^r}{s}\quad\text{ with (18)}\quad \Rightarrow \spatie x^r = - \frac{A^{'r}}{\kappa}\cos \kappa s &  - \frac{B^{'r}}{\kappa}\sin \kappa s + C^r\\
 \end{align}
-Replace $- \frac{A^{,r}}{\kappa}$ with $A^{r}$ and $- \frac{B^{,r}}{\kappa}$ with $B^{r}$, we get then the following set of equations,
+Replace $- \frac{A^{'r}}{\kappa}$ with $A^{r}$ and $- \frac{B^{'r}}{\kappa}$ with $B^{r}$, we get then the following set of equations,
 
 \begin{align}
 \left \{ \begin{array}{c}
-x^r = A^{r}\cos \kappa s   + B^{,r}\sin \kappa s + C^r\\
+x^r = A^{r}\cos \kappa s   + B^{'r}\sin \kappa s + C^r\\
 \lambda^r =  -\kappa A^{r}\sin \kappa s  +\kappa B^{r}\cos \kappa s\\
 \lambda_{(1)}^r = - \kappa A^{r}\cos \kappa s  - \kappa B^{r}\sin \kappa s\\
 \end{array} \right.\\
@@ -1425,9 +1425,9 @@ For cylindrical coordinates in Euclidean 3-space, write down the metric form by 
 \input{D:/MathLatex/images/fig_p78_247_a.tex}
 \label{fig:fig_p78_247_a}
 \end{figure}
-From the figure we may (assuming an infinitesimal displacement), we may approximate $\left| \overrightarrow{SS^{,}} \right|$ with the arclength $r d\theta$ and assume $\left|  \overrightarrow{S°S^{,,}} \right| \perp \left|  \overrightarrow{GS^{,}} \right|$) Hence, the infinitesimal displacement from S
+From the figure we may (assuming an infinitesimal displacement), we may approximate $\left| \overrightarrow{SS^{'}} \right|$ with the arclength $r d\theta$ and assume $\left|  \overrightarrow{S°S^{',}} \right| \perp \left|  \overrightarrow{GS^{'}} \right|$) Hence, the infinitesimal displacement from S
 \begin{align}
-\ ds^2 &= \left| \overrightarrow{SS^{,}} \right|^2 + \left| \overrightarrow{S^{,,}P^{,}} \right|^2+\left| \overrightarrow{P^{,}J} \right|^2\\
+\ ds^2 &= \left| \overrightarrow{SS^{'}} \right|^2 + \left| \overrightarrow{S^{',}P^{'}} \right|^2+\left| \overrightarrow{P^{'}J} \right|^2\\
 \ &= dr^2 + ((r+dr)d\theta)^2 + dz^2\\
 \ &= dr^2 + r^2d\theta^2 + dz^2\\
 \text{Hence} \spatie &\left(a_{mn}\right) = \begin{pmatrix}
@@ -1463,19 +1463,19 @@ If $a_{rs}$ and $b_{rs}$ are covariant tensors, show that the roots of the deter
 \end{tcolorbox}
 \begin{align}
 \text{Be}\spatie c_{rs} &= Xa_{rs} - b_{rs}\\
-\text{Given }\spatie a_{rs} &= a^{,}_{mk}\pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
-\text{and }\spatie b_{rs} &= b^{,}_{mk}\pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
-\text{(1) }\quad\Rightarrow\spatie c_{rs} &= \underbrace{(Xa^{,}_{mk}-b^{,}_{mk})}_{=c^{,}_{km}} \pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
-\ &= c^{,}_{km} \pdv{x^{,m}}{x^r} \pdv{x^{,k}}{x^s}\\
-\text{Be}\spatie J &= \left |\pdv{x^{,m}}{x^r}\right |= \left |\pdv{x^{,k}}{x^s}\right |\\
-\text{In (5) put  }\spatie d_{kr} &= c^{,}_{km} \pdv{x^{,m}}{x^r} \\
-\Rightarrow\spatie c_{rs} &= d^{,}_{kr} \pdv{x^{,k}}{x^s}\\
-\text{or in matrix form  } \spatie C &= D^T J\quad \text{with}\quad D = C^{,}J\\
-\Rightarrow\spatie \left |C \right| &= \left | (C^{,}J)^T J\right |\\
-\Leftrightarrow\spatie \left |C \right| &= \left | C^{,}\right | \left |J\right |\left |J\right |
+\text{Given }\spatie a_{rs} &= a^{'}_{mk}\pdv{x^{'m}}{x^r} \pdv{x^{'k}}{x^s}\\
+\text{and }\spatie b_{rs} &= b^{'}_{mk}\pdv{x^{'m}}{x^r} \pdv{x^{'k}}{x^s}\\
+\text{(1) }\quad\Rightarrow\spatie c_{rs} &= \underbrace{(Xa^{'}_{mk}-b^{'}_{mk})}_{=c^{'}_{km}} \pdv{x^{'m}}{x^r} \pdv{x^{'k}}{x^s}\\
+\ &= c^{'}_{km} \pdv{x^{'m}}{x^r} \pdv{x^{'k}}{x^s}\\
+\text{Be}\spatie J &= \left |\pdv{x^{'m}}{x^r}\right |= \left |\pdv{x^{'k}}{x^s}\right |\\
+\text{In (5) put  }\spatie d_{kr} &= c^{'}_{km} \pdv{x^{'m}}{x^r} \\
+\Rightarrow\spatie c_{rs} &= d^{'}_{kr} \pdv{x^{'k}}{x^s}\\
+\text{or in matrix form  } \spatie C &= D^T J\quad \text{with}\quad D = C^{'}J\\
+\Rightarrow\spatie \left |C \right| &= \left | (C^{'}J)^T J\right |\\
+\Leftrightarrow\spatie \left |C \right| &= \left | C^{'}\right | \left |J\right |\left |J\right |
 \end{align}
-As $ \left |J\right | \ne 0$ ( $J$ is the Jacobian of the transformation, and thus can't be zero), then $$\left |C \right| = 0 \Rightarrow \left |C^{,} \right| = 0$$.\\
-So, the root of $\left |C \right| = 0 $ is also a root of $\left |C^{,} \right| = 0$ and is as a consequence, invariant.
+As $ \left |J\right | \ne 0$ ( $J$ is the Jacobian of the transformation, and thus can't be zero), then $$\left |C \right| = 0 \Rightarrow \left |C^{'} \right| = 0$$.\\
+So, the root of $\left |C \right| = 0 $ is also a root of $\left |C^{'} \right| = 0$ and is as a consequence, invariant.
 
 $$\blacklozenge$$
 \newpage
@@ -1517,12 +1517,12 @@ $$\blacklozenge$$
 Show that, if $\theta$ is the angle between the normals to the surfaces $x^1 = C^{st}, x^2 = C^{st}$, then $$ \cos \theta = \frac{a^{12}}{\sqrt{a^{11}a^{22}}}$$
 \end{tcolorbox}
 \begin{align}
-\text{be}\spatie \phi^{,}_1(x^1,x^2,\dots,x^N) = C^{st} \quad \phi^{,}_2(x^1,x^2,\dots,x^N) = C^{st}
+\text{be}\spatie \phi^{'}_1(x^1,x^2,\dots,x^N) = C^{st} \quad \phi^{'}_2(x^1,x^2,\dots,x^N) = C^{st}
 \end{align}
 the two equations representing $S_1, S_2$ (see page 63). We can rewrite (1) as:
 \begin{align}
-\ x^1 &= \phi^{,}_1(x^1,x^2,\dots,x^N) = C^{st} \\
-\ x^2 &= \phi^{,}_2(x^1,x^2,\dots,x^N) = C^{st}\\
+\ x^1 &= \phi^{'}_1(x^1,x^2,\dots,x^N) = C^{st} \\
+\ x^2 &= \phi^{'}_2(x^1,x^2,\dots,x^N) = C^{st}\\
 \text{From (2.622) we know that}\quad X^m = a^{mn}\partial_n \phi_{1} & ,\ Y^m = a^{mn}\partial_n \phi_{2} \ \text{are}\perp\text{vectors to the surfaces}\  \phi_{1},\phi_{2}\\
 \text{We know also} \spatie \left|X^m\right |^2 &= a^{mk}X^mX^k\\
 \ & = a_{mk}a^{mn}\partial_n \phi_{1}a^{kp}\partial_p \phi_{1}\\
@@ -1762,26 +1762,26 @@ $$\blacklozenge$$
 Show that, for normal coordinate system, the Christoffel symbols $$ \ [ \rho N, \  \sigma], \ [\rho \sigma, \ N  ], \ [\rho N, \ N], \ [N N, \  N]$$
 $$\Gamma^{\rho}_{N \sigma},\ \Gamma^{N}_{\rho \sigma},\ \Gamma^{\rho}_{N N}, \ \Gamma^{N}_{N \rho}, \ \Gamma^{N}_{N N}$$ have tensor character with respect to the transformation of the coordinates $x^1, \dots , x^{N-1}$
 \end{tcolorbox}
-We know that $a_{\rho \sigma} = a^{,}_{mn}\partial_{\rho}x^{,m}\partial_{\sigma}x^{,n}$ with $\rho , \sigma = 1, \dots, N-1$ and $m , n = 1, \dots, N$. We have also $x^N = x^{,N}$.\\
+We know that $a_{\rho \sigma} = a^{'}_{mn}\partial_{\rho}x^{'m}\partial_{\sigma}x^{'n}$ with $\rho , \sigma = 1, \dots, N-1$ and $m , n = 1, \dots, N$. We have also $x^N = x^{'N}$.\\
 $\boldsymbol{[ \rho N, \  \sigma]}$
 \begin{align}
 \ [ \rho N, \  \sigma] &= \half \partial_N a_{\rho \sigma}\quad \text{see (2.639)}\\
-\ &= \half \partial_N (a^{,}_{mn}\partial_{\rho}x^{,m}\partial_{\sigma}x^{,n})\\
+\ &= \half \partial_N (a^{'}_{mn}\partial_{\rho}x^{'m}\partial_{\sigma}x^{'n})\\
 \ & = \left\{ \begin{array}{l}
-\half (\partial_N a^{,}_{mn}\partial_{\rho}x^{,m}\partial_{\sigma}x^{,n}\\
-\ + a^{,}_{mn} \partial_{\sigma}x^{,n} \partial_{N \rho}x^{,m}\\
-\ + a^{,}_{mn} \partial_{\rho}x^{,m} \partial_{N \sigma}x^{,n})
+\half (\partial_N a^{'}_{mn}\partial_{\rho}x^{'m}\partial_{\sigma}x^{'n}\\
+\ + a^{'}_{mn} \partial_{\sigma}x^{'n} \partial_{N \rho}x^{'m}\\
+\ + a^{'}_{mn} \partial_{\rho}x^{'m} \partial_{N \sigma}x^{'n})
 \end{array} \right.\\
-\text{We have  }\quad \partial_{N }x^{,m} = \delta^m_N & \Rightarrow \ \partial_{N \rho}x^{,m}= \partial_{N \sigma}x^{,n} = 0\\
-\Rightarrow \quad [ \rho N, \  \sigma] &= \half \partial_N a^{,}_{mn}\partial_{\rho}x^{,m}\partial_{\sigma}x^{,n}\\
+\text{We have  }\quad \partial_{N }x^{'m} = \delta^m_N & \Rightarrow \ \partial_{N \rho}x^{'m}= \partial_{N \sigma}x^{'n} = 0\\
+\Rightarrow \quad [ \rho N, \  \sigma] &= \half \partial_N a^{'}_{mn}\partial_{\rho}x^{'m}\partial_{\sigma}x^{'n}\\
 \ &= \left\{ \begin{array}{l}
-\half (\partial_N a^{,}_{\alpha\beta}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\\\
-\ +\partial_N a^{,}_{NN}\underbrace{\partial_{\rho}x^{,N}}_{=0}\underbrace{\partial_{\sigma}x^{,N}}_{=0}\\\\
-\ +\partial_N a^{,}_{\alpha N}\partial_{\rho}x^{,\alpha}\underbrace{\partial_{\sigma}x^{,N}}_{=0}\\\\
-\ +\partial_N a^{,}_{\beta N}\partial_{\rho}x^{,\alpha}\underbrace{\partial_{\sigma}x^{,N}}_{=0})\\
+\half (\partial_N a^{'}_{\alpha\beta}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}\\\\
+\ +\partial_N a^{'}_{NN}\underbrace{\partial_{\rho}x^{'N}}_{=0}\underbrace{\partial_{\sigma}x^{'N}}_{=0}\\\\
+\ +\partial_N a^{'}_{\alpha N}\partial_{\rho}x^{'\alpha}\underbrace{\partial_{\sigma}x^{'N}}_{=0}\\\\
+\ +\partial_N a^{'}_{\beta N}\partial_{\rho}x^{'\alpha}\underbrace{\partial_{\sigma}x^{'N}}_{=0})\\
 \end{array} \right.\\
-\Rightarrow \quad [ \rho N, \  \sigma] &=  \underbrace{\half \partial_N a^{,}_{\alpha\beta}}_{= [\alpha N, \ \beta]^{,}}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
-&= [\alpha N, \ \beta]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}
+\Rightarrow \quad [ \rho N, \  \sigma] &=  \underbrace{\half \partial_N a^{'}_{\alpha\beta}}_{= [\alpha N, \ \beta]^{'}}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}\\
+&= [\alpha N, \ \beta]^{'}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}
 \end{align}
 This confirms the tensor character of $[ \rho N, \  \sigma] $
 $$\diamond$$
@@ -1791,22 +1791,22 @@ $\boldsymbol{[\rho N, \ N ] }$\\
 We prove the case for $\boldsymbol{[ NN, \ \rho ]}$  as $[\rho N, \ N ] = -[ NN, \ \rho ] $
 \begin{align}
 \ [ NN, \ \rho ] &= \half \partial_{\rho} a_{NN}\quad \text{see (2.639)}\\
-\ &= \half \partial_{\rho} (a^{,}_{mn}\partial_{N}x^{,m}\partial_{N}x^{,n})\\
+\ &= \half \partial_{\rho} (a^{'}_{mn}\partial_{N}x^{'m}\partial_{N}x^{'n})\\
 \ & = \left\{ \begin{array}{l}
-\half (\partial_{\rho} a^{,}_{mn}\partial_{N}x^{,m}\partial_{N}x^{,n}\\\\
-\ + a^{,}_{mn} \partial_{\rho}x^{,n} \underbrace{\partial_{N \rho}x^{,m}}_{=0}\\\\
-\ + a^{,}_{mn} \partial_{\rho}x^{,m} \underbrace{\partial_{N \rho}x^{,n}}_{=0})
+\half (\partial_{\rho} a^{'}_{mn}\partial_{N}x^{'m}\partial_{N}x^{'n}\\\\
+\ + a^{'}_{mn} \partial_{\rho}x^{'n} \underbrace{\partial_{N \rho}x^{'m}}_{=0}\\\\
+\ + a^{'}_{mn} \partial_{\rho}x^{'m} \underbrace{\partial_{N \rho}x^{'n}}_{=0})
 \end{array} \right.\\
-\ &= \half \partial_{\rho} a^{,}_{mn}\partial_{N}x^{,m}\partial_{N}x^{,n}\\
+\ &= \half \partial_{\rho} a^{'}_{mn}\partial_{N}x^{'m}\partial_{N}x^{'n}\\
 \ &= \left\{ \begin{array}{l}
-\half (\partial_{\rho} a^{,}_{\alpha\beta}\underbrace{\partial_{N}x^{,\alpha}}_{=0}\underbrace{\partial_{N}x^{,\beta}}_{=0}\\\\
-\ +\partial_{\rho} a^{,}_{NN}\underbrace{\partial_{N}x^{,N}}_{=1}\underbrace{\partial_{N}x^{,N}}_{=1}\\\\
-\ +\partial_{\rho} a^{,}_{\alpha N}\underbrace{\partial_{N}x^{,\alpha}}_{=0}\underbrace{\partial_{N}x^{,N}}_{=1}\\\\
-\ +\partial_{\rho} a^{,}_{\beta N}\underbrace{\partial_{N}x^{,\alpha}}_{=0}\underbrace{\partial_{N}x^{,N}}_{=1})\\
+\half (\partial_{\rho} a^{'}_{\alpha\beta}\underbrace{\partial_{N}x^{'\alpha}}_{=0}\underbrace{\partial_{N}x^{'\beta}}_{=0}\\\\
+\ +\partial_{\rho} a^{'}_{NN}\underbrace{\partial_{N}x^{'N}}_{=1}\underbrace{\partial_{N}x^{'N}}_{=1}\\\\
+\ +\partial_{\rho} a^{'}_{\alpha N}\underbrace{\partial_{N}x^{'\alpha}}_{=0}\underbrace{\partial_{N}x^{'N}}_{=1}\\\\
+\ +\partial_{\rho} a^{'}_{\beta N}\underbrace{\partial_{N}x^{'\alpha}}_{=0}\underbrace{\partial_{N}x^{'N}}_{=1})\\
 \end{array} \right.\\
-\Rightarrow \quad [ NN, \ \rho ] &= \half \partial_{\rho} a^{,}_{NN}\\
-\Leftrightarrow \quad [ NN, \ \rho ] &=  \underbrace{\half \partial_{\alpha} a^{,}_{NN}}_{=[NN, \ \alpha]^,}\partial_{\rho}x^{,\alpha}\\
-\Rightarrow \quad [ NN, \ \rho ] &=  [NN, \ \alpha]^, \partial_{\rho}x^{,\alpha}
+\Rightarrow \quad [ NN, \ \rho ] &= \half \partial_{\rho} a^{'}_{NN}\\
+\Leftrightarrow \quad [ NN, \ \rho ] &=  \underbrace{\half \partial_{\alpha} a^{'}_{NN}}_{=[NN, \ \alpha]^{'}}\partial_{\rho}x^{'\alpha}\\
+\Rightarrow \quad [ NN, \ \rho ] &=  [NN, \ \alpha]^{'} \partial_{\rho}x^{'\alpha}
 \end{align}
 This confirms the tensor character of $[ NN, \ \rho ] $ and consequently of $[\rho N, \ N ]$
 $$\diamond$$
@@ -1814,15 +1814,15 @@ $$\diamond$$
 $\boldsymbol{[NN, \ N ] }$\\
 \begin{align}
 \ [ NN, \ N ] &= \half \partial_{N} a_{NN}\quad \text{see (2.639)}\\
-\ &= \half \partial_{N} (a^{,}_{mn}\partial_{N}x^{,m}\partial_{N}x^{,n})\\
+\ &= \half \partial_{N} (a^{'}_{mn}\partial_{N}x^{'m}\partial_{N}x^{'n})\\
 \ & = \left\{ \begin{array}{l}
-\half (\partial_{N} a^{,}_{mn}\underbrace{\partial_{N}x^{,m}}_{\delta^m_N}\underbrace{\partial_{N}x^{,n}}_{\delta^n_N}\\\\
-\ + a^{,}_{mn} \partial_{N}x^{,n} \underbrace{\partial_{N N}x^{,m}}_{=0}\\\\
-\ + a^{,}_{mn} \partial_{N}x^{,m} \underbrace{\partial_{N N}x^{,n}}_{=0})
+\half (\partial_{N} a^{'}_{mn}\underbrace{\partial_{N}x^{'m}}_{\delta^m_N}\underbrace{\partial_{N}x^{'n}}_{\delta^n_N}\\\\
+\ + a^{'}_{mn} \partial_{N}x^{'n} \underbrace{\partial_{N N}x^{'m}}_{=0}\\\\
+\ + a^{'}_{mn} \partial_{N}x^{'m} \underbrace{\partial_{N N}x^{'n}}_{=0})
 \end{array} \right.\\
-\ &= \half \partial_{N} a^{,}_{mn}\delta^m_N\delta^n_N\\
-\ &=  \underbrace{\half \partial_{N} a^{,}_{NN}}_{=[ NN, \ N ]^,} \\
-\Rightarrow \quad [ NN, \ N ] &=  [ NN, \ N ]^,
+\ &= \half \partial_{N} a^{'}_{mn}\delta^m_N\delta^n_N\\
+\ &=  \underbrace{\half \partial_{N} a^{'}_{NN}}_{=[ NN, \ N ]^{'}} \\
+\Rightarrow \quad [ NN, \ N ] &=  [ NN, \ N ]^{'}
 \end{align}
 This confirms the tensor character of $[ NN, \ N ] $ as an invariant under transformation of the coordinates $x^1, \dots , x^{N-1}$
 $$\diamond$$
@@ -1830,7 +1830,7 @@ $$\Gamma^{\rho}_{N \sigma},\ \Gamma^{N}_{\rho \sigma},\ \Gamma^{\rho}_{N N}, \ \
 For the Christoffel symbols of the second kind we use:
 \begin{align}
 \Gamma^r_{st} &= a^{rk}[st,\ k]\\
-\ a^{rk} &= a^{,mn}\pdv{x^r}{x^{,m}}\pdv{x^k}{x^{,n}}\\
+\ a^{rk} &= a^{'mn}\pdv{x^r}{x^{'m}}\pdv{x^k}{x^{'n}}\\
  \text{(2.631) page 65:}\spatie a^{N \rho} &= 0 
 \end{align}
 \newpage
@@ -1838,16 +1838,16 @@ $\boldsymbol{\Gamma^{\rho}_{N \sigma}}$\\
 \begin{align}
 \Gamma^{\rho}_{N \sigma} &= a^{\rho k}[N \sigma,\ k]\\
 \ & = a^{\rho \tau}[N \sigma,\ \tau]+ \underbrace{a^{\rho N}}_{=0}[N \sigma,\ N]\\
-\text{(24):}\quad &= a^{,mn}\pdv{x^{\rho}}{x^{,m}}\pdv{x^{\tau}}{x^{,n}}[N \sigma,\ \tau]\\
-\text{also (see previous results):}\quad \ [N \sigma,\ \tau] &= [ N \mu, \ \nu]^{,}\partial_{\sigma}x^{,\mu}\partial_{\tau}x^{,\nu}
+\text{(24):}\quad &= a^{'mn}\pdv{x^{\rho}}{x^{'m}}\pdv{x^{\tau}}{x^{'n}}[N \sigma,\ \tau]\\
+\text{also (see previous results):}\quad \ [N \sigma,\ \tau] &= [ N \mu, \ \nu]^{'}\partial_{\sigma}x^{'\mu}\partial_{\tau}x^{'\nu}
 \end{align}
 And so,
 \begin{align}
- \Gamma^{\rho}_{N \sigma} &=a^{,mn}\pdv{x^{\rho}}{x^{,m}}\pdv{x^{\tau}}{x^{,n}}[ N \mu, \ \nu]^{,}\partial_{\sigma}x^{,\mu}\partial_{\tau}x^{,\nu}\\
-\ &=a^{,mn}\pdv{x^{\rho}}{x^{,m}}\underbrace{\pdv{x^{,\nu}}{x^{,n}}}_{= \delta^{\nu}_{n}}[ N \mu, \ \nu]^{,}\partial_{\sigma}x^{,\mu}\\
-\ &=a^{,\theta \nu }[ N \mu, \ \nu]^{,}\pdv{x^{\rho}}{x^{,\theta}}\pdv{x^{,\mu}}{x^{\sigma}}+ \underbrace{a^{,N \nu }}_{=0}[ N \mu, \ \nu]^{,}\pdv{x^{\rho}}{x^{,N}}\pdv{x^{,\mu}}{x^{\sigma}}\\
-\ &=\underbrace{a^{,\theta \nu }[ N \mu, \ \nu]^{,}}_{ = \Gamma^{,\theta}_{N\mu}}\pdv{x^{\rho}}{x^{,\theta}}\pdv{x^{,\mu}}{x^{\sigma}}\\
-\Rightarrow \quad \Gamma^{\rho}_{N \sigma} &=  \Gamma^{,\theta}_{N\mu}\pdv{x^{\rho}}{x^{,\theta}}\pdv{x^{,\mu}}{x^{\sigma}}
+ \Gamma^{\rho}_{N \sigma} &=a^{'mn}\pdv{x^{\rho}}{x^{'m}}\pdv{x^{\tau}}{x^{'n}}[ N \mu, \ \nu]^{'}\partial_{\sigma}x^{'\mu}\partial_{\tau}x^{'\nu}\\
+\ &=a^{'mn}\pdv{x^{\rho}}{x^{'m}}\underbrace{\pdv{x^{'\nu}}{x^{'n}}}_{= \delta^{\nu}_{n}}[ N \mu, \ \nu]^{'}\partial_{\sigma}x^{'\mu}\\
+\ &=a^{'\theta \nu }[ N \mu, \ \nu]^{'}\pdv{x^{\rho}}{x^{'\theta}}\pdv{x^{'\mu}}{x^{\sigma}}+ \underbrace{a^{'N \nu }}_{=0}[ N \mu, \ \nu]^{'}\pdv{x^{\rho}}{x^{'N}}\pdv{x^{'\mu}}{x^{\sigma}}\\
+\ &=\underbrace{a^{'\theta \nu }[ N \mu, \ \nu]^{'}}_{ = \Gamma^{'\theta}_{N\mu}}\pdv{x^{\rho}}{x^{'\theta}}\pdv{x^{'\mu}}{x^{\sigma}}\\
+\Rightarrow \quad \Gamma^{\rho}_{N \sigma} &=  \Gamma^{'\theta}_{N\mu}\pdv{x^{\rho}}{x^{'\theta}}\pdv{x^{'\mu}}{x^{\sigma}}
 \end{align}
 So, $\Gamma^{\rho}_{N \sigma}$ is a $2^{nd}$ order mixed tensor (contravariant in $\rho$, covariant in $\sigma$.)
 $$\diamond$$
@@ -1855,11 +1855,11 @@ $\boldsymbol{\Gamma^{N }_{\rho \sigma}}$\\
 \begin{align}
 \Gamma^{N }_{\rho \sigma} &= a^{N  k}[\rho \sigma,\ k]\\
 \ & = \underbrace{a^{N \tau}}_{=0}[\rho \sigma,\ \tau]+ a^{N N}[\rho \sigma,\ N]\\
-\text{(8):}\quad &= a^{,NN}[\alpha \beta, \ N]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
-\text{considering :}\quad \ a^{,N \tau} & =0 \quad \text{we can write this as:}\\
-\Gamma^{N }_{\rho \sigma} &=a^{,N \tau}[\alpha \beta, \ \tau]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}+ a^{,NN}[\alpha \beta, \ N]^{,}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
-\ &=\underbrace{a^{,N k}[\alpha \beta, \ k]^{,}}_{= \Gamma^{,N}_{\alpha \beta}}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}\\
-\Rightarrow \quad \Gamma^{N }_{\rho \sigma} &= \Gamma^{,N}_{\alpha \beta}\partial_{\rho}x^{,\alpha}\partial_{\sigma}x^{,\beta}
+\text{(8):}\quad &= a^{'NN}[\alpha \beta, \ N]^{'}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}\\
+\text{considering :}\quad \ a^{'N \tau} & =0 \quad \text{we can write this as:}\\
+\Gamma^{N }_{\rho \sigma} &=a^{'N \tau}[\alpha \beta, \ \tau]^{'}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}+ a^{'NN}[\alpha \beta, \ N]^{'}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}\\
+\ &=\underbrace{a^{'N k}[\alpha \beta, \ k]^{'}}_{= \Gamma^{'N}_{\alpha \beta}}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}\\
+\Rightarrow \quad \Gamma^{N }_{\rho \sigma} &= \Gamma^{'N}_{\alpha \beta}\partial_{\rho}x^{'\alpha}\partial_{\sigma}x^{'\beta}
 \end{align}
 So, $\Gamma^{N }_{\rho \sigma}$ is a $2^{nd}$ order mixed tensor (covariant in both indices)
 $$\diamond$$
@@ -1868,11 +1868,11 @@ $\boldsymbol{\Gamma^{\rho}_{N N}}$\\
 \begin{align}
 \Gamma^{\rho }_{N N} &= a^{\rho  k}[N N,\ k]\\
 \ & = a^{\rho \tau}[N N,\ \tau]+ \underbrace{a^{\rho N}}_{=0}[N N,\ N]\\
-\text{(16):}\quad &= a^{,mn}\pdv{x^\rho}{x^{,m}}\pdv{x^\tau}{x^{,n}}[NN, \ \alpha]^, \partial_{\tau}x^{,\alpha}\\
-\ &= a^{,mn}\pdv{x^\rho}{x^{,m}} \underbrace{\pdv{x^{\alpha}}{x^{,n}}}_{= \delta^{\alpha}_{n}}[NN, \ \alpha]^, \\
-\ &= a^{, \tau \alpha}[NN, \ \alpha]^,\pdv{x^\rho}{x^{, \tau}}+  \underbrace{a^{,N \alpha}}_{=0}[NN, \ \alpha]^,\pdv{x^\rho}{x^{,N}} \\
-\ &= \underbrace{a^{, \tau \alpha}[NN, \ \alpha]^,}_{= \Gamma^{, \tau}_{NN}}\pdv{x^\rho}{x^{, \tau}}  \\
-\Rightarrow \quad \Gamma^{\rho }_{N N} &= \Gamma^{, \tau}_{NN}\pdv{x^\rho}{x^{, \tau}}  
+\text{(16):}\quad &= a^{'mn}\pdv{x^\rho}{x^{'m}}\pdv{x^\tau}{x^{'n}}[NN, \ \alpha]^{'} \partial_{\tau}x^{'\alpha}\\
+\ &= a^{'mn}\pdv{x^\rho}{x^{'m}} \underbrace{\pdv{x^{\alpha}}{x^{'n}}}_{= \delta^{\alpha}_{n}}[NN, \ \alpha]^{'} \\
+\ &= a^{' \tau \alpha}[NN, \ \alpha]^{'}\pdv{x^\rho}{x^{' \tau}}+  \underbrace{a^{'N \alpha}}_{=0}[NN, \ \alpha]^{'}\pdv{x^\rho}{x^{'N}} \\
+\ &= \underbrace{a^{' \tau \alpha}[NN, \ \alpha]^{'}}_{= \Gamma^{' \tau}_{NN}}\pdv{x^\rho}{x^{' \tau}}  \\
+\Rightarrow \quad \Gamma^{\rho }_{N N} &= \Gamma^{' \tau}_{NN}\pdv{x^\rho}{x^{' \tau}}  
 \end{align}
 So, $\Gamma^{\rho }_{N N}$ is a $1^{st}$ order contravariant tensor.
 $$\diamond$$
@@ -1881,11 +1881,11 @@ $\boldsymbol{\Gamma^{N}_{N \rho}}$\\
 \begin{align}
 \Gamma^{N}_{N \rho} &= a^{N  k}[N \rho,\ k]\\
 \ & = a^{N N}[N \rho,\ N]+ \underbrace{a^{N \tau}}_{=0}[N \rho,\ \tau]\\
-\text{(16):}\quad &= a^{,NN}[N\alpha, \ N ]^, \partial_{\rho}x^{,\alpha}\\
-\text{considering :}\quad \ a^{,N \tau} & =0 \quad \text{we can write this as:}\\
-\ &= a^{,N\tau}[N\alpha, \ \tau ]^, \partial_{\rho}x^{,\alpha}+ a^{,NN}[N\alpha, \ N ]^, \partial_{\rho}x^{,\alpha}\\
-\ &= \underbrace{a^{,N k}[N \alpha, \ k ]^,}_{= \Gamma^{,N}_{N \alpha}} \partial_{\rho}x^{,\alpha}\\
-\Rightarrow \quad \Gamma^{N}_{N \rho} &= \Gamma^{,N}_{N \alpha} \partial_{\rho}x^{,\alpha}
+\text{(16):}\quad &= a^{'NN}[N\alpha, \ N ]^{'} \partial_{\rho}x^{'\alpha}\\
+\text{considering :}\quad \ a^{'N \tau} & =0 \quad \text{we can write this as:}\\
+\ &= a^{'N\tau}[N\alpha, \ \tau ]^{'} \partial_{\rho}x^{'\alpha}+ a^{'NN}[N\alpha, \ N ]^{'} \partial_{\rho}x^{'\alpha}\\
+\ &= \underbrace{a^{'N k}[N \alpha, \ k ]^{'}}_{= \Gamma^{'N}_{N \alpha}} \partial_{\rho}x^{'\alpha}\\
+\Rightarrow \quad \Gamma^{N}_{N \rho} &= \Gamma^{'N}_{N \alpha} \partial_{\rho}x^{'\alpha}
 \end{align}
 So, $\Gamma^{N}_{N \rho}$ is a $1^{st}$ order covariant tensor.
 $$\diamond$$
@@ -1894,9 +1894,9 @@ $\boldsymbol{\Gamma^{N}_{N N}}$\\
 \begin{align}
 \Gamma^{N}_{N N} &= a^{N  k}[N N,\ k]\\
 \ & = a^{N N}[N N,\ N]+ \underbrace{a^{N \tau}}_{=0}[N N,\ \tau]\\
-\ & = a^{,N N}[N N,\ N]\\
-\text{(22):}\quad &= a^{,N N}[N N,\ N]^,\\
-\Rightarrow \quad \Gamma^{N}_{N N} &= \Gamma^{,N}_{N N}
+\ & = a^{'N N}[N N,\ N]\\
+\text{(22):}\quad &= a^{'N N}[N N,\ N]^{'}\\
+\Rightarrow \quad \Gamma^{N}_{N N} &= \Gamma^{'N}_{N N}
 \end{align}
 So, $\Gamma^{N}_{N N}$ is an invariant.
 $$\blacklozenge$$
@@ -1908,13 +1908,13 @@ $$x^1 = \theta \cos \phi, \ x^2=\theta\sin \phi$$
 Calculate the Christoffels symbols for the coordinate system $x^1, x^2$ and show that they vanish at the point $\theta = 0$
 \end{tcolorbox}
 \begin{align}
-\text{We have, page 48  (2.507) :}\spatie\Gamma_{mn}^{,r} =\Gamma_{pq}^{s}\pdv{x^{,r}}{x^s}\pdv{x^{p}}{x^{,m}}\pdv{x^{q}}{x^{,n}}+\pdv{x^{,r}}{x^s}\pdv{x^s}{x^{,m}}{x^{,n}}
+\text{We have, page 48  (2.507) :}\spatie\Gamma_{mn}^{'r} =\Gamma_{pq}^{s}\pdv{x^{'r}}{x^s}\pdv{x^{p}}{x^{'m}}\pdv{x^{q}}{x^{'n}}+\pdv{x^{'r}}{x^s}\pdv{x^s}{x^{'m}}{x^{'n}}
 \end{align}
-The calculations are really basic but lengthy and only train your skills in basic calculus. So I will only calculate $\Gamma_{11}^{,1}$.\\
-We know that in a spherical coordinate system all $\Gamma_{pq}^{,s}$ vanish except for $\Gamma_{\phi\phi}^{\theta} = -\sin\theta\cos\theta$ and $
+The calculations are really basic but lengthy and only train your skills in basic calculus. So I will only calculate $\Gamma_{11}^{'1}$.\\
+We know that in a spherical coordinate system all $\Gamma_{pq}^{'s}$ vanish except for $\Gamma_{\phi\phi}^{\theta} = -\sin\theta\cos\theta$ and $
 \Gamma_{\phi\theta}^{\phi} =  \cot\theta$.
 \begin{align}
-\boldsymbol{\Gamma_{11}^{,1}} &=\boldsymbol{\Gamma_{\phi\phi}^{\theta}\partial_{\theta}{x^{1}}\partial_{1}\phi\partial_{1}\phi+ 2\Gamma_{\phi\theta}^{\phi}\partial_{\phi}{x^{1}}\partial_{1}\theta\partial_{1}\phi+\partial_{\theta}{x^{1}}\partial^2_{11}{\theta}+\partial_{\phi}{x^{1}}\partial^2_{11}{\phi}}\\
+\boldsymbol{\Gamma_{11}^{'1}} &=\boldsymbol{\Gamma_{\phi\phi}^{\theta}\partial_{\theta}{x^{1}}\partial_{1}\phi\partial_{1}\phi+ 2\Gamma_{\phi\theta}^{\phi}\partial_{\phi}{x^{1}}\partial_{1}\theta\partial_{1}\phi+\partial_{\theta}{x^{1}}\partial^2_{11}{\theta}+\partial_{\phi}{x^{1}}\partial^2_{11}{\phi}}\\
 \text{we have}\quad & \left \{ \begin{array}{l}
 \ x^1 = \theta\cos\phi\\
 \ x^2 = \theta\sin\phi\
@@ -1927,13 +1927,13 @@ We know that in a spherical coordinate system all $\Gamma_{pq}^{,s}$ vanish exce
 \partial_{\theta} x^1 = \cos\phi & \partial_{\phi} x^1 = -\theta\sin\phi\\\\
 \partial^2_{11} \theta = \frac{\theta^2 -(x^1)^2}{\theta ^3} = \frac{\sin^2\phi}{\theta} & \partial^2_{11} \phi =2\frac{x^1 x^2}{\theta^4}= 2\frac{\cos\phi \sin\phi}{\theta^2}
 \end{array}\right.\\
-\Gamma_{11}^{,1} &=\Gamma_{\phi\phi}^{\theta}\cos\phi\frac{\sin^2\phi}{\theta^2}+ 2\Gamma_{\phi\theta}^{\phi}(-\theta\sin\phi)\cos\phi(-\frac{\sin\phi}{\theta} )+\cos\phi\frac{\sin^2\phi}{\theta}+(-\theta\sin\phi)(2\frac{\cos\phi \sin\phi}{\theta^2})\\
+\Gamma_{11}^{'1} &=\Gamma_{\phi\phi}^{\theta}\cos\phi\frac{\sin^2\phi}{\theta^2}+ 2\Gamma_{\phi\theta}^{\phi}(-\theta\sin\phi)\cos\phi(-\frac{\sin\phi}{\theta} )+\cos\phi\frac{\sin^2\phi}{\theta}+(-\theta\sin\phi)(2\frac{\cos\phi \sin\phi}{\theta^2})\\
 \ &= -\sin\theta\cos\theta\frac{\cos\phi \sin^2\phi}{\theta^2}+ 2\cot\theta\cos\phi\sin^2\phi+\frac{\cos\phi\sin^2\phi}{\theta}-2\frac{\cos\phi \sin^2\phi}{\theta}\\
 \ &= (2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2})\cos\phi\sin^2\phi
 \end{align}
 $$\diamond$$
 \newpage
-Does $\boldsymbol{\Gamma_{11}^{,1}}$ vanish for $\theta \rightarrow0$ ? \\The problematic term in (7) is $2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$ for which $\lim_{\theta \to 0 }= \pm \infty \mp \infty \mp \infty$ is undefined. 
+Does $\boldsymbol{\Gamma_{11}^{'1}}$ vanish for $\theta \rightarrow0$ ? \\The problematic term in (7) is $2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$ for which $\lim_{\theta \to 0 }= \pm \infty \mp \infty \mp \infty$ is undefined. 
 \begin{align}
 \text{Consider}\quad L_{+}& = \lim_{\theta \to 0_{+}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2} \\
 \text{We have}\quad &\begin{array}{lllll}
@@ -1951,7 +1951,7 @@ Does $\boldsymbol{\Gamma_{11}^{,1}}$ vanish for $\theta \rightarrow0$ ? \\The pr
 \ & \leq 0\\
 \text{(14) and ((20)}\quad \Rightarrow L_{+}& =0
 \end{align} 
-Considering that $$L_{-} = \lim_{\theta \to 0_{-}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$$ is equivalent to  $$L_{+}^{\alpha} = \lim_{\alpha \to 0_{+}}-(2\cot\alpha -\frac{1}{\alpha}-\frac{\sin\alpha\cos\alpha}{\alpha^2})$$ (substitute $\theta = -\alpha$) we conclude that   $$L_{-} =  -L_{+}=0$$. And so $$\left.\Gamma_{11}^{,1}\right|_{\theta=0} =\left.(2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2})\cos\phi\sin^2\phi\right|_{\theta=0} = 0$$
+Considering that $$L_{-} = \lim_{\theta \to 0_{-}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$$ is equivalent to  $$L_{+}^{\alpha} = \lim_{\alpha \to 0_{+}}-(2\cot\alpha -\frac{1}{\alpha}-\frac{\sin\alpha\cos\alpha}{\alpha^2})$$ (substitute $\theta = -\alpha$) we conclude that   $$L_{-} =  -L_{+}=0$$. And so $$\left.\Gamma_{11}^{'1}\right|_{\theta=0} =\left.(2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2})\cos\phi\sin^2\phi\right|_{\theta=0} = 0$$
 $$\blacklozenge$$
 \newpage
 
@@ -1973,18 +1973,18 @@ $$\blacklozenge$$
 
 \section{p79-exercise 12}
 \begin{tcolorbox}
-Deduce from 2.201 that the determinant $a= \left | a_{mn} \right |$ transforms according to $$a^, = aJ^2 \quad , \quad J = \left | \pdv{x^r}{x^{,s}}\right|$$
+Deduce from 2.201 that the determinant $a= \left | a_{mn} \right |$ transforms according to $$a^{'} = aJ^2 \quad , \quad J = \left | \pdv{x^r}{x^{'s}}\right|$$
 \end{tcolorbox}
 \begin{align}
-\ a^,_{rs} &= a_{mk} \pdv{x^{m}}{x^{,r}} \pdv{x^{k}}{x^{,s}}\\
-\text{Be}\spatie \left(J_{mr} \right )&= \left (\pdv{x^{m}}{x^{,r}}\right )\\
-\text{In (1) put  }\spatie c_{kr} &= a_{mk} \pdv{x^{m}}{x^{,r}}= a_{km} \pdv{x^{m}}{x^{,r}} \\
-\Rightarrow\spatie a^,_{rs} &= c_{kr} \pdv{x^{k}}{x^{,s}}\\
-\text{or in matrix form  } \spatie A^, &= C^T J\quad \text{with}\quad C = AJ\\
-\Rightarrow\spatie \left |A^, \right| &= \left | (AJ)^T J\right |\\
-\Leftrightarrow\spatie \left |A^, \right| &= \left | J^T A^T J\right |\\
-\Leftrightarrow\spatie \left |A^, \right| &= \left | A\right | \left |J\right |\left |J\right |\\
-\Leftrightarrow\spatie \left |A^, \right| &= \left | A\right | \left |J\right | ^2
+\ a^{'}_{rs} &= a_{mk} \pdv{x^{m}}{x^{'r}} \pdv{x^{k}}{x^{'s}}\\
+\text{Be}\spatie \left(J_{mr} \right )&= \left (\pdv{x^{m}}{x^{'r}}\right )\\
+\text{In (1) put  }\spatie c_{kr} &= a_{mk} \pdv{x^{m}}{x^{'r}}= a_{km} \pdv{x^{m}}{x^{'r}} \\
+\Rightarrow\spatie a^{'}_{rs} &= c_{kr} \pdv{x^{k}}{x^{'s}}\\
+\text{or in matrix form  } \spatie A^{'} &= C^T J\quad \text{with}\quad C = AJ\\
+\Rightarrow\spatie \left |A^{'} \right| &= \left | (AJ)^T J\right |\\
+\Leftrightarrow\spatie \left |A^{'} \right| &= \left | J^T A^T J\right |\\
+\Leftrightarrow\spatie \left |A^{'} \right| &= \left | A\right | \left |J\right |\left |J\right |\\
+\Leftrightarrow\spatie \left |A^{'} \right| &= \left | A\right | \left |J\right | ^2
 \end{align}
 $$\blacklozenge$$
 \newpage
@@ -2005,8 +2005,8 @@ Using local Cartesian coordinates we have:
 \end{align}
 Going from $\left( a_{mn} \right)$ to any arbitrary coordinate system, we have (see exercise 12 page 79) 
 \begin{align}
-\left | a^,_{mn} \right | &= \underbrace{\left | a_{mn} \right |}_{>0}\underbrace{J^2}_{>0}\\
-\Rightarrow \quad\left | a^,_{mn} \right | &>0
+\left | a^{'}_{mn} \right | &= \underbrace{\left | a_{mn} \right |}_{>0}\underbrace{J^2}_{>0}\\
+\Rightarrow \quad\left | a^{'}_{mn} \right | &>0
 \end{align}
 $$\blacklozenge$$
 \newpage
@@ -2042,18 +2042,18 @@ In a plane, let $x^1, \  x^2$ be the distances of a general point from the point
 \newpage
 Be $A$ the metric tensor in Cartesian coordinate system. Then, going to a arbitrary coordinate system gives a metric tensor according to  
 \begin{align}
-\ & A^, = J^TAJ =J^TJ \quad \text{as}\quad A = \begin{pmatrix}
+\ & A^{'} = J^TAJ =J^TJ \quad \text{as}\quad A = \begin{pmatrix}
 1 &0 \\
 0& 1 \\
 \end{pmatrix}\\
-\Rightarrow\quad & A^, = \begin{pmatrix}
+\Rightarrow\quad & A^{'} = \begin{pmatrix}
 -\frac{x^1}{2} & \frac{y^1+1}{2y^2}x^1 \\
 \frac{x^2}{2} & -\frac{y^1-1}{2y^2}x^2 \\
 \end{pmatrix}\begin{pmatrix}
 -\frac{x^1}{2} &\frac{x^2}{2}  \\
 \frac{y^1+1}{2y^2}x^1 & -\frac{y^1-1}{2y^2}x^2 \\
 \end{pmatrix}\\
-\Rightarrow\quad & A^, =\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
+\Rightarrow\quad & A^{'} =\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
 \ & \\
 x^1x^2 &-\left[(y^1)^2 +(y^2)^2-1)\right] \\\\
 -\left[(y^1)^2 +(y^2)^2-1)\right]  &x^1x^2\\
@@ -2080,7 +2080,7 @@ The area $K$ of the triangle can be expressed in two ways
 \end{align}
 So we get from (11):
 \begin{align}
-A^, =\frac{4x^1x^2}{(x^1+x^2+2)(x^1+2)(x^2+2)(x^1+x^2)} \begin{pmatrix}
+A^{'} =\frac{4x^1x^2}{(x^1+x^2+2)(x^1+2)(x^2+2)(x^1+x^2)} \begin{pmatrix}
 \ & \\
 x^1x^2 &2-\frac{(x^1)^2+(x^2)^2}{2} \\\\
 2-\frac{(x^1)^2+(x^2)^2}{2}  &x^1x^2\\
@@ -2089,8 +2089,8 @@ x^1x^2 &2-\frac{(x^1)^2+(x^2)^2}{2} \\\\
 \end{align}
 For the conjugate metric tensor we start from expression (11) and invert the metric tensor
 \begin{align}
-\left| A^,\right| &= \left[ \frac{x^1x^2}{4(y^2)^2}\right]^2\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]\\
-\text{hence}\quad \left(a^{,mn}\right) &= \frac{1}{\left| A^,\right|}\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
+\left| A^{'}\right| &= \left[ \frac{x^1x^2}{4(y^2)^2}\right]^2\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]\\
+\text{hence}\quad \left(a^{'mn}\right) &= \frac{1}{\left| A^{'}\right|}\frac{x^1x^2}{4(y^2)^2} \begin{pmatrix}
 \ & \\
 x^1x^2 &\left[(y^1)^2 +(y^2)^2-1\right] \\\\
 \left[(y^1)^2 +(y^2)^2-1\right]  &x^1x^2\\
@@ -2204,11 +2204,11 @@ Bring $\frac{1}{\xi}$ out in $\Psi_1, \Psi_2$. This gives
 What about the factor $\epsilon = \pm1$ in the terms $\epsilon a_{12}(dx^1+ dx^2)$ and $\epsilon a_{12}(-dx^1+ dx^2)$ ? Consider the alternate form
 \begin{align}
 \ &\left \{ \begin{array}{l} \\
-\Psi^,_1 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left( a_{12}(dx^1+ dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right) \\\\
-\Psi^,_2 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left(  a_{12}(- dx^1+ dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right) \\
+\Psi^{'}_1 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left( a_{12}(dx^1+ dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right) \\\\
+\Psi^{'}_2 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left(  a_{12}(- dx^1+ dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right) \\
 \end{array}\right.
 \end{align}
-Let's have a look at the terms in $dx^idx^j$ in $\Psi_1^{,2}-\Psi^{,2}_2$\\
+Let's have a look at the terms in $dx^idx^j$ in $\Psi_1^{'2}-\Psi^{'2}_2$\\
 \begin{align}
 \ x_{11}(dx^1)^2+ 2x_{12}dx^1dx^2+x_{22}(dx^2)^2&= \frac{1}{2 \epsilon a_{12}}\left(( a_{12})^2(dx^1 + dx^2)^2 - ( a_{12})^2(-dx^1 + dx^2)^2\right)  \\
 &= \frac{\epsilon a_{12}}{2}\left((dx^1 +  dx^2)^2 - (- dx^1 + dx^2)^2\right)  \\
@@ -2224,8 +2224,8 @@ Let's have a look at the terms in $dx^idx^j$ in $\Psi_1^{,2}-\Psi^{,2}_2$\\
 \ &= \frac{2\epsilon}{ a_{12}}\left(a_{23}a_{14}+a_{13}a_{24}\right)
 \end{align}
 We rewrite now the metric form $\Phi$ as 
-$$\Phi =\epsilon \Psi_1^{,2}- \epsilon \Psi^{,2}_2 + \Phi_2 $$
-From (28), (31) and (34) we see that the terms in $dx^1, dx^2$ in $\Phi =\epsilon \Psi_1^{,2}- \epsilon \Psi^{,2}_2 + \Phi_2$ correspond to the expected  metric form and that the other terms in $dx^j, dx^k, \ j,k \neq 1,2$ can be corrected in the remaining term $\Phi_2$.
+$$\Phi =\epsilon \Psi_1^{'2}- \epsilon \Psi^{'2}_2 + \Phi_2 $$
+From (28), (31) and (34) we see that the terms in $dx^1, dx^2$ in $\Phi =\epsilon \Psi_1^{'2}- \epsilon \Psi^{'2}_2 + \Phi_2$ correspond to the expected  metric form and that the other terms in $dx^j, dx^k, \ j,k \neq 1,2$ can be corrected in the remaining term $\Phi_2$.
 \newpage
 
 \section{p80-exercise 16}
@@ -2317,9 +2317,9 @@ Note that this means that $\grad \gamma$ and $\partial_4 \overline{x}$ are ortho
 So the set of equations in (14) reduce to the following set of $2^{nd}$ order differential equations:
 \begin{align}
 \ & \left  \{ \begin{array}{l}
-\ x^{,,} = 0\\
-\ y^{,,} = 0\\
-\ z^{,,} = 0\\
+\ x^{',} = 0\\
+\ y^{',} = 0\\
+\ z^{',} = 0\\
 \ t = t\\
 \end{array} \right.
 \Rightarrow  \left  \{ \begin{array}{l}
@@ -2352,13 +2352,13 @@ Null geodesics are determined by the following set of equations
 \Rightarrow\quad  \frac{1}{\gamma}a^{rs} &= b_{rs}\\
 \text{So (3) becomes}\quad  \Gamma^r_{mn} & =b^{rs}\gamma[mn,s]
 \end{align}
-Be $ [mn,s]^{'} $ the Christoffel symbol associated with the metric $b_{mn}= \gamma a_{mn}$. Then with  $$[mn,s]^, = \half \left(\partial_n \gamma a_{ms}+\partial_m \gamma a_{ns}-\partial_s \gamma a_{mn} \right)$$ we get
+Be $ [mn,s]^{'} $ the Christoffel symbol associated with the metric $b_{mn}= \gamma a_{mn}$. Then with  $$[mn,s]^{'} = \half \left(\partial_n \gamma a_{ms}+\partial_m \gamma a_{ns}-\partial_s \gamma a_{mn} \right)$$ we get
 \begin{align}
 \ [mn,s]^{'} &= \gamma [mn,s] + \half\left( a_{ms}\partial_n \gamma+a_{ns}\partial_m \gamma-a_{mn}\partial_s \gamma \right)
 \end{align}
 Substitute $\gamma [mn,s]$ from (10) in (9) we get
 \begin{align}
-\Gamma^r_{mn} & =\underbrace{b^{rs}\gamma[mn,s]^,}_{=\Gamma^{'r}_{mn}}  - \underbrace{\half b^{rs}\left( a_{ms}\partial_n \gamma+a_{ns}\partial_m \gamma-a_{mn}\partial_s \gamma \right)}_{\coloneqq Q}\\
+\Gamma^r_{mn} & =\underbrace{b^{rs}\gamma[mn,s]^{'}}_{=\Gamma^{'r}_{mn}}  - \underbrace{\half b^{rs}\left( a_{ms}\partial_n \gamma+a_{ns}\partial_m \gamma-a_{mn}\partial_s \gamma \right)}_{\coloneqq Q}\\
 \text{with}\quad Q &= \half b^{rs}\left( a_{ms}\partial_n \gamma+a_{ns}\partial_m \gamma-a_{mn}\partial_s \gamma \right)\\
 &= \half \gamma \left( \underbrace{a^{rs}a_{ms}}_{ = \delta^r_m}\partial_n \gamma+\underbrace{a^{rs}a_{ns}}_{ = \delta^r_n}\partial_m \gamma-a^{rs}a_{mn}\partial_s \gamma \right)\\
 \ Q \times \dv{x^m}{v}\dv{x^n}{v} &= \half \gamma \left( \underbrace{\delta^r_m\dv{x^m}{v}}_{=\dv{x^r}{v}} \underbrace{\partial_n \gamma \dv{x^n}{v}}_{= \dv{\gamma}{v}}+\underbrace{\delta^r_n\dv{x^n}{v}}_{=\dv{x^r}{v}}\underbrace{\partial_m \gamma\dv{x^m}{v}}_{= \dv{\gamma}{v}}-a^{rs}\partial_s \gamma \underbrace{a_{mn}\dv{x^m}{v}\dv{x^n}{v}}_{ = 0 \ \text{by(1)}} \right)\\
@@ -2470,7 +2470,7 @@ Put $x^{'r} \coloneqq   v\xi(v) p^r$ with $\xi(v) = \left(1  + \half v\lambda  +
 \begin{align}
 \ x^r &= a^r + x^{'r} + \frac{\lambda v^3}{6}  \left( \frac{p^{'r}}{v\xi} - \frac{\xi + v\xi^{'}}{v^2\xi^2}x^{'r}\right)  -  \frac{\Gamma^r_{mn}}{2\xi ^2}x^{'m}x^{'n} + \frac{A^r_{.mns}}{6\xi ^3}x^{'m}x^{'n}x^{'s}+\dots\\
 \ & = a^r + \tau(v) x^{'r}+ \frac{\lambda v^2 }{6\xi}p^{'r} -  \frac{\Gamma^r_{mn}}{2\xi ^2}x^{'m}x^{'n}   + \frac{A^r_{.mns}}{6\xi ^3}x^{'m}x^{'n}x^{'s}+\dots\\
-\text{with}\spatie & \tau(v)  \coloneqq 1-\frac{\lambda v}{6\xi^2}\left( \xi + v\xi^{,}\right)
+\text{with}\spatie & \tau(v)  \coloneqq 1-\frac{\lambda v}{6\xi^2}\left( \xi + v\xi^{'}\right)
 \end{align}\\
 Is the Jacobian non-zero?
 \begin{align}

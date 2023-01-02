@@ -36,16 +36,16 @@ view={120}{20},
 	\coordinate (X) at ({ 2},{0},{0});%origin
 	\coordinate (Y) at ({ 0},{1.5},{0});%origin
 	\coordinate (Z) at ({ 0},{0},{0.4});%origin
+	\coordinate (Q) at ({ 0},{0},{0.21});
 	\draw[-Latex](O)--(X);
 	\draw[-Latex](O)--(Y);
-	\draw[-Latex](O)--(Z);
+	\draw[](Q)--(O);
 	\node[{anchor=south east}] at (X){$x$};
 	\node[{anchor=south west}] at (Y){$y$};
 	\node[{anchor=south west}] at (Z){$z$};
-	\addplot3[surf,fill=gray!50,domain=-15:15,domain y=-15:15,samples=30,faceted color=black,mark=none, opacity=0.21,fill opacity = 0.5,thin]({x/sqrt(x*x*1+y*y+\f)},{y*\f/sqrt(x*x*1+y*y+\f)},{0.21});
+	\addplot3[surf,fill=gray!30,domain=-15:15,domain y=-15:15,samples=30,faceted color=black,mark=none, opacity=0.21,fill opacity = 0.3,thin]({x/sqrt(x*x*1+y*y+\f)},{y*\f/sqrt(x*x*1+y*y+\f)},{0.21});
 
-			
- 	\coordinate (Q) at ({ 0},{0},{0.21});%origin
+\draw[-Latex](Q)--(Z);
 \draw[fill=white](Q) circle(1pt)node[{anchor=north west}]{$$};; 	
 
 
@@ -76,7 +76,7 @@ view={120}{20},
 	\draw[dashed](P2xy)--(P3xy);
 	\draw[dashed](P3xy)--(P0xy);
 	
-		\draw[dotted](P0xy)--(P0);
+	\draw[dotted](P0xy)--(P0);
 	\draw[dotted](P1xy)--(P1);
 	\draw[dotted](P2xy)--(P2);
 	\draw[dotted](P3xy)--(P3);
@@ -89,8 +89,5 @@ view={120}{20},
 	\draw[fill=white](P2xy) circle(1pt)node[{anchor=north west}]{$$};;
 	\draw[fill=white](P3xy) circle(1pt)node[{anchor=north west}]{$$};;
 	
-
-
-		
 \end{axis}
 \end{tikzpicture}

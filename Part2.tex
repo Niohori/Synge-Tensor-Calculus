@@ -41,7 +41,8 @@
 \usetikzlibrary{patterns}
 \usepackage{tkz-euclide}
 \usepackage{tikz-3dplot}
-
+\usepgfplotslibrary{external} 
+\tikzexternalize
 %\usepackage[margin=0cm,nohead]{geometry}
 %\usepackage[active,tightpage]{preview}
 %\usepackage[pdf]{pstricks}
@@ -101,51 +102,17 @@
 
 %**************************** Document itself *******************************
 \author{Bernard Carrette}
-\gradyear{1979}
+%\gradyear{1979}
 \title{Tensor Calculus\\J.L. Synge and A.Schild (Dover Publication)\\ Solutions to exercises\\Part II\\
 Chapters \RomanNumeralCaps{5} to \RomanNumeralCaps{8}}
 \begin{document}
 \maketitle
-\begin{figure}%                 use [hb] only if necceccary!
-  \centering
-  \includegraphics[width=10cm]{zebook.jpg}
-  \caption{My copy, falling apart...}
-  \label{fig:test}
-\end{figure}
-
-\section*{Remarks and warnings}
-You're welcome to use these notes, but they may contain errors, so proceed with caution : I graduated in 1979, went straight in the industry (where I didn't have to use fancy maths), and picked mathematics and physics again after I retired, so my mathematics got rusty  for sure. If you do find an error, typo's , I'd be happy to receive bug reports, suggestions, and the like, through Github.
-An overview of the material covered in the book can be found in the separate document "Synge overview.pdf".
-
-\section*{Some notation conventions}
-
-\begin{center}
-\begin{tabular}{ l l }
-$\dagger$& means that the exercise has only been solved partially or contains i.m.o. a doubtful step\\\\
-$\dagger \dagger$& means that the exercise has not been  solved as it should.\\\\
-$\blacklozenge$&end of an exercise or proof.\\\\
-$\lozenge$&end of Lemma or sub-task of an exercise.\\\\
-&\textbf{As a rule, I followed the notation used in the book,}\\ &\textbf{except some which where easier to type in Latex.}\\\\
-$\partial_r $ &$\equiv \pdv{}{x^r}$  \\\\
-$\partial^2_{rs}$  &$\equiv \frac{\partial^2}{\partial x^r \partial x^s}$ \\\\
-$\Gamma^r_{mn} $&$\equiv 
-\begin{Bmatrix}
-r\\
-m n\\
-\end{Bmatrix}\quad$  Christoffel symbol of the second kind\\\\
-\end{tabular}
-\end{center}
 
 \tableofcontents
 \listoffigures
-%\include{chapter1}
-%\include{chapter2}
-%\include{chapter3}
-%\include{chapter4}
 \include{chapter5}
 \include{chapter6}
-%\include{chapter7}
+\include{chapter7}
 %\include{chapter8}
-%\include{Appendices}
 \printbibliography %Prints bibliography
 \end{document}

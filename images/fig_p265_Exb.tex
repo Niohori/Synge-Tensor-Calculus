@@ -1,0 +1,129 @@
+
+\begin{tikzpicture}[scale = 0.7,angle/.style={black,thick}]
+\pgfplotsset{every axis/.append style={
+view={120}{20},
+axis equal image,
+    %clip=false,
+    %xlabel=$x$, ylabel=$y$, zlabel=$z$,
+    %axis lines=middle,
+    colormap={whitered}{
+        color(0cm)=(white);
+        color(1cm)=(black!75!gray)
+    }
+    %y dir=reverse,
+%    axis on top
+            }}
+            
+\tikzmath{\p=360;\a=1/sqrt(0.05*0.05+0.1*0.1);\k=3;\f=1;\u1=0;\v1=0;\u2=0;\v2=0;\u3=0;\v3=0;\u4=0;\v4=0;};
+\p, \a, \k,\u1,\v1,\u2,\v2,\u3,\v3,\u4,\v4,\f;
+    %\pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+    \tikzset{>=latex} % for LaTeX arrow head
+\begin{axis}
+		[axis equal image,
+		hide axis,clip=false,
+		zmin=-\k,
+		zmax=\k,
+			xmin=-\k,
+		xmax=\k,
+			ymin=-\k,
+		ymax=\k,
+		]
+				%relevant points
+	\coordinate (O) at ({ 0},{0},{0});%origin
+	\coordinate (X) at ({4* \k},{0},{0});%origin
+	\coordinate (Y) at ({ 0},{4*\k},{0});%origin
+	\coordinate (Z) at ({ 0},{0},{4*\k});%origin
+	\draw[-Latex](O)--(X);
+	\draw[-Latex](O)--(Y);
+	\draw[-Latex](O)--(Z);
+
+
+\coordinate (Pn) at ({\a*sin(\p/9)*cos(60)},{-\a*sin(\p/9)*sin(60)},{\a*cos(\p/9)});
+\coordinate (Pnn) at ({-\a*sin(\p/9)*cos(60)},{\a*sin(\p/9)*sin(60)},{-\a*cos(\p/9)});
+
+\coordinate (Pnf) at ({1.3*\a*sin(\p/9)*cos(60)},{-1.3*\a*sin(\p/9)*sin(60)},{1.3*\a*cos(\p/9)});
+\coordinate (Pnnf) at ({-1.3*\a*sin(\p/9)*cos(60)},{1.3*\a*sin(\p/9)*sin(60)},{-1.3*\a*cos(\p/9)});
+\draw[dashdotted,thick](Pn)--(Pnn);
+\coordinate (Pns) at ({1.05*\a*sin(\p/9)*cos(60)*sin(30)},{1.05*\a*sin(\p/9)*sin(60)*sin(30)},{1.05*\a*cos(\p/9)*sin(30)});
+\coordinate (Pnsc) at ({\a*sin(\p/9)*cos(60)*1.5},{\a*sin(\p/9)*sin(60)*3},{\a*1.5*cos(\p/9)*1.});
+
+	\draw[fill=black](Pns) circle(1.5pt)node[{anchor=west}]{$$};; 
+	\draw[fill=white](Pnsc) circle(0pt)node[{anchor=west}]{$\quad |r|<\frac{\pi}{2}$};; 
+	\draw []plot [smooth] coordinates {(Pnsc)  ({\a*sin(\p/9)*cos(60)*1.5},{0.8*\a*sin(\p/9)*sin(60)*3},{\a*cos(\p/9)*1.35})  ({\a*sin(\p/9)*cos(60)*1.5},{0.7*\a*sin(\p/9)*sin(60)*3.6},{\a*cos(\p/9)*1.}) (Pns)};
+
+%draw surfaces
+\addplot3[surf,fill=white!50,domain=0:\p,domain y=0:2*\p,samples=30,faceted color=gray!80,mark=none, opacity=0.8
+	21,fill opacity = 0.65,thin]({\a*sin(1*30)*sin(x)*cos(y)},{\a*sin(1*30)*sin(x)*sin(y)},{\a*cos(x)*sin(1*30)});
+\draw [-Latex]plot [smooth] coordinates {(Pnsc)  ({\a*sin(\p/9)*cos(60)*1.5},{0.8*\a*sin(\p/9)*sin(60)*3},{\a*cos(\p/9)*1.35})  ({\a*sin(\p/9)*cos(60)*1.5},{0.7*\a*sin(\p/9)*sin(60)*3.6},{\a*cos(\p/9)*1.}) (Pns)};
+
+\addplot3[surf,fill=white!50,domain=0:\p,domain y=0:2*\p,samples=30,faceted color=gray!30,mark=none, opacity=0.21,fill opacity = 0.15,thin]({\a*sin(3*30)*sin(x)*cos(y)},{\a*sin(3*30)*sin(x)*sin(y)},{\a*cos(x)*sin(3*30)});
+
+ \draw[dashed,thick, color = gray!50, opacity=1](Pn)--(Pnn);
+	
+	\node[{anchor=south east}] at (X){$x$};
+	\node[{anchor=south west}] at (Y){$y$};
+	\node[{anchor=south west}] at (Z){$z$};
+			
+ \coordinate (Q) at ({ 0},{0},{0.0});%origin
+\draw[fill=white](Q) circle(1pt)node[{anchor=north west}]{$$};; 	
+ \coordinate (Qx) at ({\a*sin(0)*cos(0)},{\a*sin(0)*sin(0)},{\a*cos(0)});%origin
+ \node[{anchor=south west}] at (Qx){$\theta=0, \phi=\pi$};
+\draw[fill=white](Qx) circle(1pt)node[{anchor=north west}]{$$};; 
+ \coordinate (Qz) at ({\a*sin(90)*cos(0)},{\a*sin(90)*sin(0)},{\a*cos(90)});%origin
+ \node[{anchor=north west}] at (Qz){$\theta=\frac{\pi}{2}, \phi =0$};
+\draw[fill=white](Qz) circle(1pt)node[{anchor=north west}]{$$};; 
+ \coordinate (Qw) at ({\a*sin(90)*cos(90)},{\a*sin(90)*sin(90)},{\a*cos(90)});%origin
+ \node[{anchor=south west}] at (Qw){$\theta=\frac{\pi}{2}, \phi=\frac{\pi}{2}$};
+\draw[fill=white](Qw) circle(1pt)node[{anchor=north west}]{$$};; 
+
+
+\draw[dashed] plot[variable=\x,domain=0:\p/4,samples=30,thick]({\a*sin(\x)*cos(0)},{\a*sin(\x)*sin(0)},{\a*cos(\x)});
+
+\draw [postaction=decorate,decoration={markings,
+    mark=at position 1 with {\arrow{Latex}}}] plot[variable=\x,domain=0:\p/9,samples=30,thick]({\a*sin(\x)*cos(60)},{\a*sin(\x)*sin(60)},{\a*cos(\x)});
+ \coordinate (Pp) at ({\a*sin(\p/9)*cos(60)},{\a*sin(\p/9)*sin(60)},{\a*cos(\p/9)});
+\draw[fill=white](Pp) circle(1.5pt)node[{anchor=west}]{$r=\frac{\pi}{2}$};; 
+
+\draw [postaction=decorate,decoration={markings,
+    mark=at position 1 with {\arrow{Latex}}}] plot[variable=\x,domain=0:\p/9,samples=30,thick]({\a*sin(\x)*cos(60)},{-\a*sin(\x)*sin(60)},{\a*cos(\x)});
+
+\draw[fill=white](Pn) circle(1.5pt)node[{anchor=east}]{$r=\frac{\pi}{2} \quad$};; 
+\draw[fill=white](Pnn) circle(1.5pt)node[{anchor=west}]{$\quad r=-\frac{\pi}{2}$};; 
+
+
+
+\draw[postaction=decorate,decoration={markings,
+    mark=at position 1 with {\arrow{Latex}}}] plot[variable=\x,domain=0:60,samples=30,thick]({\a*sin(\p/9)*cos(\x)},{\a*sin(\p/9)*sin(\x)},{\a*cos(\p/9)});
+\draw [postaction=decorate,decoration={markings,
+    mark=at position 1 with {\arrow{Latex}}}] plot[variable=\x,domain=0:60,samples=30,thick]({\a*sin(\p/9)*cos(\x)},{-\a*sin(\p/9)*sin(\x)},{\a*cos(\p/9)});
+ \coordinate (Pm) at ({\a*sin(\p/9)*cos(0)},{-\a*sin(\p/9)*sin(0)},{\a*cos(\p/9)});
+\draw[fill=white](Pm) circle(1.5pt)node[{anchor= west}]{$$};; 
+
+ \coordinate (Ta) at ({\a*sin(\p/9)*cos(30)},{\a*sin(\p/9)*sin(30)},{\a*cos(\p/9)});%origin
+\draw[white,fill=white](Ta) circle(10pt)node[black]{$\phi$};; 
+
+\coordinate (Tb) at ({\a*sin(\p/9)*cos(30)},{-\a*sin(\p/9)*sin(30)},{\a*cos(\p/9)});%origin
+\draw[white,fill=white](Tb) circle(10pt)node[black]{$\phi$};; 
+
+ \coordinate (Tc)  at ({\a*sin(\p/9/2)*cos(60)},{\a*sin(\p/9/2)*sin(60)},{\a*cos(\p/9/2)});
+\draw[white,fill=white](Tc) circle(7pt)node[black]{$\theta$};
+
+\coordinate (Td)  at ({\a*sin(\p/9/2)*cos(60)},{-\a*sin(\p/9/2)*sin(60)},{\a*cos(\p/9/2)});
+\draw[white,fill=white](Td) circle(7pt)node[black]{$\theta$};
+
+
+
+\coordinate (Te)  at ({\a*sin(55)*cos(0)},{\a*sin(55)*sin(0)},{\a*cos(55)});
+\draw[white,fill=white](Te) circle(7pt)node[black]{$\phi=0$};
+
+ \draw[dashdotted,thick](Pn)--(Pnf);
+
+\draw[dashdotted,thick](Pnn)--(Pnnf);
+	\draw[-Latex](Qx)--(Z);
+	\draw[-Latex](Qz)--(X);
+	\draw[-Latex](Qw)--(Y);
+	\draw[fill=gray!50](Pns) circle(1.5pt)node[{anchor=west}]{$$};;
+
+\end{axis}
+\end{tikzpicture}

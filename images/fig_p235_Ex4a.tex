@@ -1,0 +1,103 @@
+\begin{tikzpicture}[scale=0.8]
+\coordinate (O) at (-15,-5) ;
+\coordinate (X) at (-17,-7) ;
+\coordinate (Y) at (-11,-5) ;
+\coordinate (Z) at (-15,-1) ;
+\draw[-Latex] (O)--(X);
+\draw [-Latex](O)--(Y);
+\draw [-Latex](O)--(Z);
+\coordinate (p0) at(-14.0384,-4.8633) {}  ;
+\coordinate (p1) at (-13.5,-4) {}  ;
+\coordinate (p2) at (-12,-2.5) {} {}  ;
+\coordinate (p3) at (-10,-1) {}  ;
+\coordinate (p4) at (-8.715,-0.3396);
+
+
+\coordinate (m0) at(-13.056,-5.286)  {}  ;
+\coordinate (m1) at(-12.6333,-4.5206) {}  ;
+\coordinate (m2) at (-11.3653,-3.2747) {}  {}  ;
+\coordinate (m3) at (-9.389,-1.8018) {} {}  ;
+\coordinate (m4) at(-8.4523,-1.2877);
+
+\coordinate (q0) at (-14.8152,-4.2007)  {}  ;
+\coordinate (q1) at (-14.3697,-3.4696) {}  ;
+\coordinate (q2) at (-12.8618,-1.983) {} {}  {}  ;
+\coordinate (q3) at (-10.6228,-0.2025)  {}  ;
+\coordinate (q4) at(-9.2862,0.4372);
+
+\coordinate(pin) at (-11.2607,-4.0646) {} {} {} {} {} {} {};
+\coordinate (pinb) at (-13.4505,-0.6099) {} {} {} {} {} {} {};
+\draw [rotate=-40,black,thick,dashed] (m2) arc (0:180:1 and 0.5);\draw[dashed][thick]  plot[smooth, tension=.7] coordinates {(p0) (p1) (p2) (p3) (p4)};
+\draw [dashed, ultra thin] plot[smooth, tension=.7] coordinates {(-14.5068,-4.1824) (-13.7871,-3.3828) (-12.2449,-1.9548) (-10.1201,-0.3213) (-9.1377,0.1585)};
+\draw[dashed,ultra thin]  plot[smooth, tension=.7] coordinates {(-13.3416,-5.1306) (-12.6562,-4.1596) (-11.331,-2.9715) (-9.3091,-1.4408) (-8.5665,-1.0752)};
+
+
+\draw  [fill= white](p1)circle (1.5pt);
+\draw  [fill= white](p2)circle (1.5pt);
+\draw  [fill= white](p3)circle (1.5pt);
+\path[fill=gray!20,opacity=0.7] plot[smooth cycle, tension=.7] coordinates { (-12.9303,-2.3525) (-12.8618,-2.5236) (-12.6793,-2.7746) (-12.4054,-3.0484) (-12.3142,-3.1055) (-12.1088,-3.2424) (-11.8122,-3.3451) (-11.5954,-3.3679) (-11.4585,-3.3679) (m2) (-11.2417,-3.0256) (-11.2645,-2.5921)  (-11.5497,-1.9417) (-11.8806,-1.8048) (-12.2229,-1.7934) (-12.4739,-1.8162) (q2) (-12.8618,-1.9645) (-12.9351,-2.191) (-12.8846,-2.4437) (-12.8504,-2.5236)};
+
+\path [fill=gray!20,opacity=0.7] plot[smooth cycle, tension=.7] coordinates {(-10.7595,-0.7696) (-10.7108,-0.8915) (-10.5889,-1.119) (-10.3858,-1.4115) (-10.2477,-1.5496) (-10.0689,-1.6796) (-9.9227,-1.769) (-9.6952,-1.8502) (-9.6058,-1.8665) (-9.4839,-1.8502) (m3) (-9.2402,-1.5334) (-9.2402,-1.1921) (-9.2483,-0.8428) (-9.3458,-0.6234) (-9.4758,-0.4853) (-9.6383,-0.3309) (-9.8577,-0.2822) (-10.077,-0.2334) (-10.3289,-0.209) (-10.4995,-0.209) (q3)  (-10.7433,-0.3959) (-10.792,-0.5421) (-10.7514,-0.7859)};
+\coordinate (omega) at (-11.7872,-1.3915) {};
+\draw [rotate=-45,black] (omega)   circle(0.051cm and 0.1cm);
+\node (omega2) at (-12.544,-0.3591) {};
+\draw [-Latex](omega)--(omega2);
+\node[right]  at (omega2){$\hat{n}_{\omega}$};
+\draw [rotate=-30,black,thick,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=-20mm]}}},    postaction={decorate}] (m1) arc (0:-180:1 and 0.5);
+\draw [rotate=-30,black,thick,dashed] (m1) arc (0:180:1 and 0.5);
+
+\draw [rotate=-40,black,thick,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=-20mm]}}},    postaction={decorate}] (m2) arc (0:-180:1 and 0.5);
+
+
+\draw [rotate=-50,black,thick,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=-20mm]}}},    postaction={decorate}] (m3) arc (0:-180:1 and 0.5);
+\draw [rotate=-50,black,thick,dashed] (m3) arc (0:180:1 and 0.5);
+
+
+
+\node[right] at (pin) {$\partial \Sigma_C$};
+\node[left] at (pinb) {$\Sigma_{\omega}$};
+
+
+\draw[thick] plot[smooth, tension=.7] coordinates { (m0) (m1) (m2) (m3) (m4) };
+\draw[thick]  plot[smooth, tension=.7] coordinates { (q0) (q1) (q2) (q3) (q4) };
+%\draw[thick]  plot[smooth, tension=.7] coordinates {(-14.5296,-4.5137) (-14.2098,-4.0796) (-12.8161,-2.6517) (-10.7142,-0.9838) (-9.0577,0.01)};
+%\draw[thick]  plot[smooth, tension=.7] coordinates {(-13.7071,-5.1648) (-13.3758,-4.6165) (-12.005,-3.3028) (-10.0402,-1.7264) (-8.6122,-0.8467)};
+\draw [thick] plot[smooth, tension=.7] coordinates {(-14.404,-4.6095) (-14.1184,-4.1868) (-12.7475,-2.736) (-10.6456,-1.0453) (-8.9892,-0.12)};
+\draw[thick]  plot[smooth, tension=.7] coordinates {(-13.73,-5.0893) (-13.4444,-4.5866) (-12.2221,-3.193) (-10.1544,-1.6394) (-8.6693,-0.7141)};
+
+\draw []  plot[smooth, tension=.7] coordinates {(pinb) (-13.0741,-1.1253) (omega)};
+\node (v2) at (-12.0164,-3.2729) {};
+\draw [Latex-]  plot[smooth, tension=.7] coordinates {(v2) (-11.6394,-3.7413) (pin)};
+\node[right] (v3) at (-8.7036,1.4295) {\text{vortex lines}};
+\draw[Latex-]  plot[smooth, tension=.7] coordinates { (-9.8688,0.2293) (-9.2291,0.9883)(-8.6922,1.1775) };
+
+\draw  plot[smooth, tension=.7] coordinates {(p0)};
+\draw  plot[smooth, tension=.7] coordinates {};
+\coordinate (v4) at (-13.8929,-1.5641) {} ;
+\node[above] at (v4)  {$\Sigma_C$};
+\node (v5) at (-12.6444,-2.1021) {};
+
+\draw  plot[smooth, tension=.7] coordinates {(v4) (-13.5052,-2.0732) (v5)};
+
+\coordinate (v5) at (-11.427,0.7816) {};
+\node[above] at (v5)  {$\Sigma_{C^{'}}$};
+\node (v7) at (-10.4433,-0.4949) {};
+\draw  plot[smooth, tension=.7] coordinates {(v7) (-10.6189,0.3483) (v5)};
+\coordinate (v8) at (-9.0263,-2.1695) {} ;
+\node[right] at (v8) {$\partial \Sigma_{C^{'}}$};;
+\node (v6) at (-9.9397,-1.7948) {};
+\draw[-Latex]  plot[smooth, tension=.7] coordinates {(v8) (-9.5064,-2.2515) (v6)};
+\coordinate (el1) at (-11.6488,-3.0231) {};
+\coordinate (el2) at (-9.5853,-1.55) {};
+\draw [rotate=-10,black] (el1) node (v1) {}  circle(0.051cm and 0.1cm);
+\draw [rotate=3,black] (el2) node (v1) {}  circle(0.051cm and 0.1cm);
+\coordinate (el1b) at (-10.4064,-3.2345) {} {};
+\coordinate (el2b) at (-8.1674,-1.4681) {};
+\draw [-Latex](el1)--(el1b);
+\node[right]  at (el1b){$\hat{n}$};
+\draw [-Latex](el2)--(el2b);
+\node[right]  at (el2b){$\hat{n}$};
+
+
+
+\end{tikzpicture}

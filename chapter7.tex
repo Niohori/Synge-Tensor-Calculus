@@ -1,7 +1,7 @@
 \setcounter{chapter}{6}
 \chapter{Relative tensors, ideas of volume, Green-Stokes theorems.}
 \pagebreak[4]
-
+%\begin{comment}
 \section{p241 - Exercise}
 \begin{tcolorbox}
 If $b_{rs}$ is an absolute tensor, show that the determinant $\left|b_{rs}\right|$ is a relative invariant of weight $2$. What are the tensor characters of $\left|c^{rs}\right|$ and $\left|f^r_{s}\right|$?
@@ -125,7 +125,7 @@ $$\blacklozenge$$
 
 
 
-\section{p245 - Exercice }
+\section{p247 - Exercise }
 \begin{tcolorbox}
 If $T_{rs}$  is an absolute skew-symmetric tensor in a $4-$space, show that $$T_{14}T_{23}+T_{24}T_{31}+T_{34}T_{12}$$ is a tensor density
 \end{tcolorbox}
@@ -148,7 +148,7 @@ $$\blacklozenge$$
 
 
 
-\section{p245 - Exercice }
+\section{p247 - Exercise }
 \begin{tcolorbox}
 Show that, for rectangular Cartesian coordinates, the vorticity tensor and the vorticity vector of a fluid are duals (cf. $\mathbf{6.130}$).
 \end{tcolorbox}
@@ -166,8 +166,61 @@ $$\blacklozenge$$
 \newpage
 
 
+\section{p250 - Exercise }
+\begin{tcolorbox}
+Show that
+$$\eta_{r_1\dots r_N}= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\eta^{s_1\dots s_N}$$
+$$\eta^{r_1\dots r_N}= \epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\eta_{s_1\dots s_N}$$
+\end{tcolorbox}
+$$\blacklozenge$$
+\newpage
 
-\section{p255 - Exercice }
+\section{p252 - Exercise }
+\begin{tcolorbox}
+Using Riemannian coordinates, prove that 
+$\mathbf{7.216}\quad \epsilon_{r_1\dots r_N|k}=\epsilon^{r_1\dots r_N}_{\quad\quad |k}=0$
+$\quad \quad \eta_{r_1\dots r_N|k}= \eta^{r_1\dots r_N}_{\quad\quad|k}=0$
+\end{tcolorbox}
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p252 - Exercise }
+\begin{tcolorbox}
+Prove that if $T^n$ is a relative vector of weight $W$ then,
+$$\mathbf{7.220} \quad T^n_{\ |n}= \left(\epsilon(a)a\right)^{\half(W-1)}\pdv{}{x^n}\left[\left(\epsilon(a)a\right)^{\half(1-W)}T^n\right]$$ 
+\end{tcolorbox}
+$$\blacklozenge$$
+\newpage
+
+\section{p255 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{7.304} \quad \Delta^{k_1\dots k_M}=\delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1} \dots \Delta_{(M)}x^{s_M}$$ 
+\end{tcolorbox}
+Using $\mathbf{7.303}$ and noting that a permutation of columns in the matrix changes or not  the sign of its determinant depending on the sign of the permutation, we can write 
+\begin{align}\Delta^{k_1\dots k_M} &= \left|\begin{matrix}
+\Delta_{(1)}x^{k_1}&\Delta_{(1)}x^{k_2} &\dots&\Delta_{(1)}x^{k_M}\\
+\Delta_{(2)}x^{k_1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
+\vdots&\vdots&\vdots&\vdots\\
+\Delta_{(M)}x^{k_1}&\Delta_{(M)}x^{k_2} &\dots&\Delta_{(M)}x^{k_M}\\
+\end{matrix}\right|\\
+&= \epsilon^{k_1 k_2\dots k_m}\left|\begin{matrix}
+\Delta_{(1)}x^{1}&\Delta_{(1)}x^{2} &\dots&\Delta_{(1)}x^{M}\\
+\Delta_{(2)}x^{1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
+\vdots&\vdots&\vdots&\vdots\\
+\Delta_{(M)}x^{1}&\Delta_{(M)}x^{2} &\dots&\Delta_{(M)}x^{M}\\
+\end{matrix}\right|
+\end{align}
+And using $\mathbf{4.313}:\quad \left|A_{pq}\right|= \epsilon_{s_1 s_2 \dots s_M}A_{1 s_1}A_{2 s_2}\dots A_{M s_M}$:
+\begin{align}\Delta^{k_1 \dots k_M} &= \underbrace{\epsilon^{k_1 k_2\dots k_m} \epsilon_{s_1 s_2 \dots s_M}}_{\text{see (7.114)}}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}\\
+&= \delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+\section{p255 - Exercise }
 \begin{tcolorbox}
 Show that $\mathbf{7.305}$ may be written in the equivalent form
 $$d\tau_{(M)}^{k_1\dots k_m}= \epsilon^{\beta_1\dots \beta_M}d_{(\beta_1)}x^{k_1}\dots d_{(\beta_M)}x^{k_M}$$
@@ -226,7 +279,7 @@ $$\blacklozenge$$
 \newpage
 
 
-\section{p257 - Exercice }
+\section{p257 - Exercise }
 \begin{tcolorbox}
 Let $x^k$ be rectangular Cartesian coordinates in Euclidean $3-$space. Introduce polar coordinates $r,\theta,\phi$ and consider the surface of the sphere $r=a$. On this sphere form the infinitesimal $2-$cell with corners $(\theta,\phi),\ (\theta+d\theta,\phi),\ (\theta,\phi+d\phi),\ (\theta+d\theta,\phi+d\phi)$. Determine the extension of this cell and interpret the rectangular components. In particular, show that the three independent components of the extension are (apart from the sign) equal to the areas obtained by normal projection of the cell onto the three rectangular planes. Does this interpretation remain valid if the sphere is replaces by some other surface?
 \end{tcolorbox}
@@ -311,17 +364,745 @@ d\tau_{(2)}^{xy}&= \left(\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}\right)dudv
 \end{align}
 So $d\tau_{(2)}^{xy}=0$ if $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$.
 Consider the disk defined by the following parametric function
-$$S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3, \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$$ 
+$$S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3: \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$$ 
 (the constant $C$ is there just to avoid the undefinedness of the surface for $(u,v) = (0,0)$). \\
 It is easy to see that $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$, yet the surface is parallel with the $xy-$plane, which implies that the projection on the $xy-$plane of an elementary cell on $S$ will not have a zero area as can be seen in the figure hereunder. 
 
 \begin{figure}[H]%
     \centering
     \input{D:/MathLatex/images/fig_p257_Exb.tex}
-\caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3, \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
+\caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3: \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
 \label{fig:fig_p257}
 \end{figure}
 \textbf{Conclusion:} The interpretation of  $d\tau_{(2)}^{k_1k_2}$ as the projection of a cell on a axis-plane, does not hold for every surface.
 $$\blacklozenge$$
 \newpage
 
+
+
+
+\section{p263 - Exercise}
+\begin{tcolorbox}
+Using polar coordinates in Euclidean $3-$space find the volume of an infinitesimal cell whose edges are tangent to the coordinate curves. Obtain the volume of a sphere by integration.
+\end{tcolorbox}
+For polar spherical coordinates we have
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{lll}
+1&0&0\\
+0&r^2&0\\
+0&0&r^2\sin^2\theta
+\end{array}\right)
+\end{align}
+giving
+\begin{align}
+\left|a_{mn}\right| &= r^4\sin^2\theta
+\end{align}
+
+and using as parameters the $x^k \equiv(r,\theta,\phi)$ as parameters for the parametric surface
+
+we get 
+\begin{align}
+\left|d_{(s)}x^k\right| &= \left|\begin{array}{lll}
+dr&0&0\\
+0&d\theta&0\\
+0&0&d\phi\\
+\end{array}\right|\\
+&= drd\theta d\phi
+\end{align}
+
+Using $\mathbf{7.405}$:
+\begin{align}
+dv_{(N)}^2&= \epsilon (a)\left|a_{mn}\right|\left|d_{(s)}x^k\right|^2\\
+&= r^4\sin^2\theta\left( drd\theta d\phi\right)^2
+\end{align}
+getting for the volume of a sphere with radius $R$:
+\begin{align}
+V&=8 \int_{0}^{R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{\frac{\pi}{2}}dv_{(N)}\\
+&= 8 \int_{0}^{R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{\frac{\pi}{2}}r^2\sin\theta dr d\theta d\phi\\
+&= \frac{4}{3}\pi R^3
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p265 - Exercise}
+\begin{tcolorbox}
+In the relativistic theory of finite, expanding universe, the following line element is adopted:
+$$ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]-dt^2$$
+where $R=R(t)$ is a function of the "time" $t$. the ranges of the coordinates may be taken to be $0\leq r\leq \pi, \ 0 \leq \theta \leq \pi,\ 0 \leq \phi< 2\pi,\ -\infty < t < + \infty$.\\
+Find the total volume of "space", i.e., of the surface $t=$ constant, and show that it varies with the "time" $t$ as $R^3(t)$.
+\end{tcolorbox}
+For the considered metric, we have
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{llll}
+R^2&0&0&0\\
+0&R^2\sin^2r&0&0\\
+0&0&R^2\sin^2 r\sin^2\theta&0\\
+0&0&0&-1
+\end{array}\right)
+\end{align}
+
+Using as parameters the $x^k \equiv(r,\theta,\phi)$ as parameters for the parametric surface and using $\mathbf{7.409}:\quad b_{\alpha\beta}= a_{ks}\pdv{x^k}{y^{\alpha}}\pdv{x^s}{y^{\beta}} $, we get for the $3-$space $t=$ constant
+\begin{align}
+\left(b_{mn}\right)&= \left(\begin{array}{lll}
+R^2&0&0\\
+0&R^2\sin^2r&0\\
+0&0&R^2\sin^2 r\sin^2\theta
+\end{array}\right)
+\end{align}
+giving 
+\begin{align}
+\left|b_{mn}\right| &= R^6\sin^4 r\sin^2\theta
+\end{align}
+Using $\mathbf{7.413}$:
+\begin{align}
+dv_{(M)}^2&= \frac{\epsilon (b)}{M!}a_{k_1s_1}\dots a_{k_M s_M}d\tau_{(M)}^{k_1\dots k_M}d\tau_{(M)}^{s_1\dots s_M}\\
+&= -\frac{1}{6}a_{k_1s_1}\dots a_{k_M s_M}d\tau_{(M)}^{k_1\dots k_M}d\tau_{(M)}^{s_1\dots s_M}\\
+&= -\frac{6}{6}a_{11}a_{22}a_{33}\left(\underbrace{d\tau_{(M)}^{123}}_{=dr d\theta d\phi} \right)^2\\
+&= -R^6\sin^4 r\sin^2\theta\left(dr d\theta d\phi \right)^2\\
+\Rightarrow \quad dv_{(M)}&=R^3\sin^2 r\sin\theta dr d\theta d\phi
+\end{align}
+
+
+getting for the volume of "space"  with "radius" $R$:
+\begin{align}
+V&= \int_{0}^{\pi}\int_{0}^{\pi}\int_{0}^{2\pi}R^3\sin^2 r\sin\theta dr d\theta d\phi\\
+&= 2 R^3\pi  \int_{0}^{R}\sin^2 r dr \underbrace{\int_{0}^{\pi}\sin\theta d\theta}_{=\left. -cos\theta\right|_0^{\pi}}\\
+&= 4 R^3\pi  \underbrace{\int_{0}^{R}\sin^2 r dr}_{=\left.\half\left(\theta-\half\sin (2 r)\right)\right|_0^{\pi}}\\
+&=2\pi^2 R^3  
+\end{align}
+(the integral in $(11)$ can be found by substituting $\sin^2 r = 1-\cos^2 r$ and  using the cosine sum of angles rule $\cos\left(\alpha+\beta\right) = \cos\alpha\cos\beta-\sin\alpha\sin\beta$ with $\alpha = \beta=r$).
+$$\lozenge$$
+In order to try to understand a little bit better what manifold is represented by the metric, let's use the trick to embed it in an higher dimensional space with en Euclidean metric.\\
+Therefore let's use the following map:
+\begin{align}
+\left\{\begin{array}{l}
+x=R\sin r\sin\theta\cos\phi\\
+y=R\sin r\sin\theta\sin\phi\\
+z=R\sin r\cos\theta\\
+w=R\cos r
+\end{array}\right.
+\end{align}
+then it's easy to see that
+\begin{align}
+ds_{(4)}^2 &=  dx^2+dy^2+dz^2+dw^2\\
+&= R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]
+\end{align}
+which is exactly the hypersurface we sought.
+Now let's see what happens when we keep $\phi= 0 \text{ or } \pi$. Then $y=0$ and in fact we take a slice of the $4-space$ along the $xzw$ subspace, and can visualize this $3-$space as a sphere as represented by figure $7.5$(a). \\
+We can also keep $r$ at a certain value. We get also a sphere as represented in figure $7.5$(b). Here the biggest possible sphere corresponds to $r=(2k+1)\frac{\pi}{2},\quad k=\{\dots,-1,0,1, \dots\}$ all other spheres having a smaller radius. When $r$ tends to $r=k\pi\quad k=\{\dots,-1,0,1, \dots\}$ the sphere shrinks to a point with coordinates $(0,0,0,\pm R)$.\\
+Finally, keeping $\theta =k\pi,\quad k=\{\dots,-1,0,1, \dots\}$ we get a circle of radius $R$ situated in the $xw$ plane.
+
+Remember that what we do here is just take 'slices' of a space. compare it to an Euclidean $3-$ space with a sphere: taking a slice e.g. parallel to the $xy$ plane will give us a circle, a point or an empty set while taking a one-dimensional slice along a line will give us 2, 1 or 0 point(s). 
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p265_Exa.tex}}\\
+    \subfloat[]{\input{D:/MathLatex/images/fig_p265_Exb.tex}}
+\caption{Manifold with $ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]$ metric, embedded in an Euclidean $4-$space}
+\label{fig:fig_p265}
+\end{figure}
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p268 - Clarification }
+\begin{tcolorbox}
+Since $\pdv{T_k}{x^s}$ differs from the tensor $\half\left(T_{k,s}-T_{s,k}\right)$ by an expression symmetric in $k, \ s$ and $d\tau_{(2)}^{ks}$ is an absolute tensor, skew-symmetric in these suffixes, it follows that the integrand on the left is an invariant.
+\end{tcolorbox}
+Let's express $\mathbf{7.504}$ in curvilinear coordinates, equipped with metric
+\begin{align}
+\int_{R_2}T_{k|s}d\tau_{(2)}^{ks} = \int_{R_1}T_{r}d\tau_{(1)}^{r}
+\end{align}
+Obviously we have 
+\begin{align}
+T_{k|s}&= \half\left(T_{k|s}-T_{s|k}\right)+\half\left(T_{k|s}+T_{s|k}\right)
+\end{align}
+Let's put $A_{ks}= \half\left(T_{k|s}-T_{s|k}\right)$ and $B_{ks}= \half\left(T_{k|s}+T_{s|k}\right)$.\\
+$A_{ks}$ is skew-symmetric, while $B_{ks}$ is symmetric.
+Note also that $A_{ks}$ reduces to $A_{ks}=\half\left(T_{k,s}-T_{s,k}\right)$ as the Christoffel symbols vanish in this expression, leaving only the partial differentials and hence, independent of a metric. 
+So the integrand  on the left side becomes
+\begin{align}
+T_{k|s}d\tau_{(2)}^{ks} &= A_{ks}d\tau_{(2)}^{ks}+B_{ks}d\tau_{(2)}^{ks}\\
+\Rightarrow\quad T_{k|s}d\tau_{(2)}^{ks} &= A_{ks}d\tau_{(2)}^{ks}-B_{ks}d\tau_{(2)}^{sk}\\
+&= A_{ks}d\tau_{(2)}^{ks}-B_{sk}d\tau_{(2)}^{sk}\\
+\text{(3)+(5)}\quad\Rightarrow\quad T_{k|s}d\tau_{(2)}^{ks} &= A_{ks}d\tau_{(2)}^{ks}
+\end{align}
+We note that both $A_{ks}$ and $d\tau_{(2)}^{ks}$ are tensors, independent of the  metric defined, and thus $A_{ks}d\tau_{(2)}^{ks}$ is an invariant of order $0$. 
+$$\blacklozenge$$
+\newpage
+
+
+\section{p274 - Exercise }
+\begin{tcolorbox}
+Due to the skew-symmetry of $d\tau_{(M)}^{k_1\dots k_M}$, the integrand on the left-hand side is also an invariant. This may be proved in a few lines, preferably with the use of the compressed notation of $1.7$; the proof is left as an exercise for the reader.
+\end{tcolorbox}
+We will use the indices $i,j$ for the transformed tensor components and $p,q$ for the original components.
+We have 
+\begin{align}
+T^{'}_{i_1 \dots i_{M-1}}&= T^{}_{p_1 \dots p_{M-1}}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\\
+\Rightarrow \quad T^{'}_{i_1 \dots i_{M-1},i_M}&= T^{}_{p_1 \dots p_{M-1},i_M}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}+T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}\\
+&= T^{}_{p_1 \dots p_{M-1},p_M}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}X^{p_{M}}_{i_{M}}+T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}\
+\end{align} 
+and 
+\begin{align}
+d\tau_{(M)}^{'i_1 \dots i_{M}}&= d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}
+\end{align}
+This gives 
+\begin{align}
+ T^{'}_{i_1 \dots i_{M-1},i_M}d\tau_{(M)}^{'i_1 \dots i_{M}}&=\left\{\begin{array}{l}T^{}_{p_1 \dots p_{M-1},p_M}X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}X^{p_{M}}_{i_{M}}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}\\\\
+ +\underbrace{T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}}_{=0} 
+ \end{array}\right.\\
+ &=T^{}_{p_1 \dots p_{M-1},p_M}X^{p_1}_{s_1}\dots X^{p_{M-1}}_{s_{M-1}}X^{p_{M}}_{s_{M}}d\tau_{(M)}^{s_1 \dots s_{M}}\\
+  &=T^{}_{p_1 \dots p_{M-1},p_M}\delta^{p_1}_{s_1}\dots \delta^{p_{M-1}}_{s_{M-1}}\delta^{p_{M}}_{s_{M}}d\tau_{(M)}^{s_1 \dots s_{M}}\\
+   &=T^{}_{s_1 \dots s_{M-1},s_M}d\tau_{(M)}^{s_1 \dots s_{M}}
+\end{align}
+The term $ T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,i_M}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}$ in $ (5)$  is zero. Indeed, rewriting this as : 
+\begin{align} T^{}_{p_1 \dots p_{M-1}}\left(X^{p_1}_{i_1}\dots X^{p_{M-1}}_{i_{M-1}}\right)_{,p_M}X^{p_M}_{i_M}d\tau_{(M)}^{s_1 \dots s_{M}}X^{i_1}_{s_1}\dots X^{i_{M}}_{s_{M}}
+\end{align}
+The terms in brackets are zero as they are of the form
+\begin{align}
+\dots + X^{p_1}_{i_1}\dots \underbrace{\pdv[2]{x^{p_{m}}}{x^{p_{M}}}{x^{'i_{m}}}}_{= \pdv{\delta^{p_m}_{p_M}}{x^{'i_{m}}}=0}\dots X^{p_{M-1}}_{i_{M-1}}+\dots 
+\end{align} 
+From $(8)$ we conclude that the integrand is indeed an invariant.
+$$\blacklozenge$$
+\newpage
+
+\section{p275 - Exercise }
+\begin{tcolorbox}
+The skew-symmetric part of a tensor $T_{k_1\dots k_M}$ is defined as  
+$$ T_{\left [k_1 \dots k_M\right ]}= \left(M!\right)^{-1}\delta_{k_1 \dots k_M}^{s_1 \dots s_M} T_{s_1\dots s_M}$$
+Show that the left-hand side of equation $\mathbf{7.525}$ is unchanged if $T_{k_1\dots k_M}$ is replace by its skew-symmetric part. Show that the same is true for the right-hand side.
+\end{tcolorbox}
+The integrand of the left-hand side of $\mathbf{7.525}$ is
+\begin{align}
+T_{k_1\dots k_{M-1},k_M}d\tau_{(M)}^{k_1\dots k_M}
+\end{align}
+replacing the tensor with it's skew-symmetric part gives
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ],k_M}d\tau_{(M)}^{k_1\dots k_M}&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} T_{s_1\dots s_{M-1},k_M}d\tau_{(M)}^{k_1\dots k_M}\\
+&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} \delta^{s_M}_{k_M}T_{s_1\dots s_{M-1},s_M}d\tau_{(M)}^{k_1\dots k_M}\\
+&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} T_{s_1\dots s_{M-1},s_M}d\tau_{(M)}^{k_1\dots k_{M-1}s_M}\\
+&=T_{s_1\dots s_{M-1},s_M} \frac{1}{\left(M-1\right)!}\left(\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} d\tau_{(M)}^{k_1\dots k_{M-1}s_M}\right)\\
+\end{align}
+The terms in the brackets can be reduced to $\left(M-1\right)! d\tau_{(M)}^{s_1\dots s_{M-1}s_M}$. Indeed, the number of choices in choosing the $k_1,\dots k_{M-1}$ are restricted to $M-1$ choices, due to the skew-symmetry of $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$ (choosing a $k_i= s_M$ would result in a zero value for $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$). So, in total there will be $ \left(M-1\right)!$ terms and due to the skew-symmetry of $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$  a change in sign of $\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}}$ will also result in a change of sign in $d\tau_{(M)}^{k_1\dots k_{M-1}s_M}$.
+Hence, we get 
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ],k_M}d\tau_{(M)}^{k_1\dots k_M}
+&=T_{s_1\dots s_{M-1},s_M} \frac{1}{\left(M-1\right)!}\left(M-1\right)! d\tau_{(M)}^{s_1\dots s_{M-1}s_M}\\
+&=T_{s_1\dots s_{M-1},s_M} d\tau_{(M)}^{s_1\dots s_{M-1}s_M}
+\end{align}
+$$\lozenge$$
+The integrand of the right-hand side of $\mathbf{7.525}$ is
+\begin{align}
+T_{k_1\dots k_{M-1}}d\tau_{(M-1)}^{k_1\dots k_{M-1}}
+\end{align}
+replacing the tensor with it's skew-symmetric part gives
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ]}d\tau_{(M-1)}^{k_1\dots k_{M-1}}&= \frac{1}{\left(M-1\right)!}\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}} T_{s_1\dots s_{M-1}}d\tau_{(M-1)}^{k_1\dots k_{M-1}}\\
+&= T_{s_1\dots s_{M-1}}\frac{1}{\left(M-1\right)!} \left(\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}}d\tau_{(M-1)}^{k_1\dots k_{M-1}}\right)
+\end{align}
+The terms in the brackets can be reduced to $\left(M-1\right)! d\tau_{(M-1)}^{s_1\dots s_{M-1}}$. Indeed, the number of choices in choosing the $k_1,\dots k_{M-1}$ is $M-1$, giving $\left(M-1\right)!$ terms  and due to the skew-symmetry of $d\tau_{(M-1)}^{k_1\dots k_{M-1}}$   a change in sign of $\delta_{k_1 \dots k_{M-1}}^{s_1 \dots s_{M-1}}$ will also result in a change of sign in $d\tau_{(M)}^{k_1\dots k_{M-1}}$.
+Hence, we get 
+\begin{align}
+T_{\left [k_1 \dots k_{M-1}\right ]}d\tau_{(M-1)}^{k_1\dots k_{M-1}}&=T_{s_1\dots s_{M-1}}\frac{1}{\left(M-1\right)!}\left(M-1\right)! d\tau_{(M-1)}^{s_1\dots s_{M-1}}\\
+&= T_{s_1\dots s_{M-1}} d\tau_{(M-1)}^{s_1\dots s_{M-1}}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+
+\section{p278 - Exercise 1 }
+\begin{tcolorbox}
+Show from $\mathbf{7.312}$ that the number of independent components of the extension of an $M$-cell in $N-$space is
+$$\frac{N!}{M!\left(N-M\right)!}$$
+\end{tcolorbox}
+\begin{align}
+\mathbf{7.312:}\quad d\tau^{k_1\dots k_M}&= \epsilon^{\alpha_1 \dots \alpha_M}\pdv{x^{k_1}}{y^{\alpha_1}}\dots \pdv{x^{k_M}}{y^{\alpha_M}}\left|d_{(\beta)}y^{\gamma}\right|
+\end{align}
+As all $k_i$ are different, the unconstrained number of ordered arrangement of $M$ elements picked out of a set of N possibilities is $N(N-1)\dots (N-M+1) = \frac{N!}{\left(N-M\right)!}$.\\
+As $d\tau^{k_1\dots k_M}$ is skew-symmetric we have to divide this number by the number of constraints of the form $d\tau^{k_1\dots k_j \dots k_p \dots k_M} = -d\tau^{k_1\dots k_p \dots k_j \dots k_M}$. This number just corresponds to tne number of permutations of $M$ distinct objects and is equal to $M!$.\\
+Hence,
+$$\frac{N!}{M!\left(N-M\right)!}$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p278 - Exercise 2 }
+\begin{tcolorbox}
+Prove that the covariant derivative of a generalized Kronecker delta is zero.
+\end{tcolorbox}
+$\mathbf{(2.525)}$  gives: 
+\begin{align}
+\delta^{k_1\dots k_M}_{s_1 \dots s_M|s_{\tau}} &= \underbrace{\pdv{\delta^{k_1\dots k_M}_{s_1 \dots s_M}}{x^{s_{\tau}}}}_\text{=0} + \Gamma^{k_1}_{q s_{\tau}}\delta^{q k_2\dots k_M}_{s_1 \dots s_M}+ \dots +\Gamma^{k_M}_{q s_{\tau}}\delta^{ k_1\dots k_{(M-1)}q}_{s_1 \dots s_M} - \Gamma^{q}_{ s_1 s_{\tau}}\delta^{ k_1\dots k_{M}}_{qs_2 \dots s_M} -\dots -\Gamma^{q}_{ s_M s_{\tau}}\delta^{ k_1\dots k_{M}}_{s_1 \dots s_{(M-1)}q}\\
+\end{align}
+Let us now consider the following notation for $\delta^{k_1\dots k_M}_{s_1 \dots s_M}$
+$$\delta^{k_1 \leftrightsquigarrow s_x\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow k_y\leftrightsquigarrow s_M}$$
+showing the respective position of an element in the two series use in the generalized Kronecker delta.\\
+Consider in this expression (no summations on the indexes) the positive and negative terms like
+\begin{align}
+\left.\Gamma^{k_y}_{q s_{\tau}}\delta^{k_1 \leftrightsquigarrow q\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow k_y\leftrightsquigarrow s_M}\right|_{q\ne s_x},\dots ,- \left.\Gamma^{q}_{ s_x s_{\tau}}\delta^{k_1 \leftrightsquigarrow s_x\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow q\leftrightsquigarrow s_M}\right|_{q\ne k_y}
+\end{align} 
+Obviously these terms are zero as $q$ does not refer to the value necessary to have no repetition in the set $\{s_1 \dots s_M\}$ or $\{k_1 \dots k_M\}$.\\
+
+Consider now the sum of two terms like (no summations on the indexes).
+\begin{align}
+& \left.\Gamma^{k_y}_{q s_{\tau}}\delta^{k_1 \leftrightsquigarrow q\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow k_y\leftrightsquigarrow s_M}\right|_{q=  s_x}-\left.\Gamma^{q}_{ s_x s_{\tau}}\delta^{k_1 \leftrightsquigarrow s_x\leftrightsquigarrow  k_M}_{s_x \leftrightsquigarrow q \leftrightsquigarrow s_M}\right|_{q= k_y}\\
+\end{align}
+ As each term in this sum occurs only once in $(1)$ and  we get 
+\begin{align}
+& \left.\Gamma^{k_y}_{q s_{\tau}}\delta^{k_1 \leftrightsquigarrow q\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow k_y\leftrightsquigarrow s_M}\right|_{q=  s_x}-\left.\Gamma^{q}_{ s_x s_{\tau}}\delta^{k_1 \leftrightsquigarrow s_x\leftrightsquigarrow  k_M}_{s_x \leftrightsquigarrow q \leftrightsquigarrow s_M}\right|_{q= k_y}\\
+&= \delta^{k_1 \dots k_M}_{s_1 \dots s_M}\left(\Gamma^{k_y}_{s_x s_{\tau}}-\Gamma^{k_y}_{ s_x s_{\tau}}\right)\\
+&=0
+\end{align}
+This show that indeed the covariant derivative of the generalize Kronecker delta is zero.
+$$\lozenge$$
+Note: probably this can also be proved by induction, starting with the result in exercise in chapter 2, page $53$ (see part I of this solution manual).
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p278 - Exercise 3}
+\begin{tcolorbox}
+Show that
+$$\delta_{k_1 \dots k_M}^{s_1 \dots s_M}=\left|\begin{matrix}
+\delta_{s_1}^{k_1}&\delta_{s_2}^{k_1}&\dots &\delta_{s_M}^{k_1}\\
+\vdots &\vdots &\vdots& \vdots \\
+\delta_{s_1}^{k_M}&\delta_{s_2}^{k_M}&\dots&\delta_{s_M}^{k_M}
+\end{matrix}\right|$$ 
+\end{tcolorbox}
+The determinant on the right side can be represented as
+\begin{align}
+\Delta &= \epsilon_{i_1 i_2\dots i_M}\delta_{s_1}^{k_{i_1}}\delta_{s_2}^{k_{i_2}} \dots \delta_{s_M}^{k_{i_M}}
+\end{align}
+Be $K_M, \ S_M$ the (unordered) sets $\{k_1, k_2,\dots , k_M \}$ and $\{s_1, s_2,\dots , s_M \}$. If $K_M \ne S_M$ then, one of the elements will differ and from $(1)$ it follows that $\Delta =0$ as for all terms in $(1)$ at least one of  the $\delta_{s_m}^{k_{i_n}}$ will be zero.\\
+If $K_M = S_M$ then there will be only $1$ term left in $(1)$ having value $\pm 1$ depending on the value of the corresponding $\epsilon_{i_1 i_2\dots i_M}$ associated with this term.
+Be $\hat{K}_M, \ \hat{S}_M$ the (ordered) list generated by $K_M, \ S_M$, then the value of the $\epsilon_{i_1 i_2\dots i_M}$ will be determined by the number of permutation needed to map bijectively $\hat{K}_M$ to $\hat{S}_M$. 
+The above reasoning shows that the determinant can be expressed as 
+$$\Delta = \delta_{k_1 \dots k_M}^{s_1 \dots s_M}$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p278 - Exercise 4}
+\begin{tcolorbox}
+If $T_{rs}$ is a symmetric tensor density and $S_{rs}$ a skew-symmetric tensor density, show that
+\begin{align*}
+T^r_{.s|r}&= \partial_r T^r_{.s} - \half T^{rk}\partial_s a_{rk}\\
+S^{rs}_{..|r}&= \partial_r S^{rs}
+\end{align*}
+\end{tcolorbox}
+Let's define the absolute oriented tensor.
+\begin{align}
+\overline{T}^r_{.s} &= \left(\epsilon (a) a\right)^{-\half}T^r_{.s}
+\end{align}
+By $\mathbf{7.214}$ we have
+\begin{align}
+T^r_{.s|r}&= \left(\epsilon (a) a \right)^{\half}\left[\overline{T}^r_{.s} \right]_{|r}
+\end{align}
+with 
+\begin{align}
+\left[\overline{T}^r_{.s} \right]_{|r}&= \partial_r \overline{T}^r_{.s}  + \Gamma^r_{mr}\overline{T}^m_{.s} - \Gamma^m_{rs}\overline{T}^r_{.m}
+\end{align}
+
+Using $\mathbf{2.542}:\quad \Gamma^r_{mr}= \left(\epsilon (a) a\right)^{-\half}\partial_m \left(\epsilon (a) a\right)^{\half}$
+\begin{align}
+\left[\overline{T}^r_{.s} \right]_{|r}&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\partial_r T^r_{.s} + T^r_{.s}\partial_r \left(\epsilon (a) a\right)^{-\half}\\\\
+  + \left(\epsilon (a) a\right)^{-\half}\partial_m \left(\epsilon (a) a\right)^{\half}\overline{T}^m_{.s} \\\\
+   - \half\left(\partial_s a_{rk} + \partial_r a_{sk}-\partial_k a_{rs} \right)a^{mk}\overline{T}^r_{.m}\\
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\partial_r T^r_{.s} + T^r_{.s}\partial_r \left(\epsilon (a) a\right)^{-\half}\\\\
+  + \left(\epsilon (a) a\right)^{-\half}\left(\epsilon (a) a \right)^{-\half}T^m_{.s}\partial_m \left(\epsilon (a) a\right)^{\half} \\\\
+    - \half\left(\epsilon (a) a\right)^{-\half}\left(T^{rk}\partial_s a_{rk} + \underbrace{T^{rk}\partial_r a_{sk}-T^{rk}\partial_k a_{rs}}_{=0} \right)
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\left(\partial_r T^r_{.s} - \half T^{rk}\partial_s a_{rk}\right)\\\\
++ T^r_{.s}\left[\partial_r \left(\epsilon (a) a\right)^{-\half}+ 
+\left(\epsilon (a) a\right)^{-1}\partial_r \left(\epsilon (a) a\right)^{\half} \right]
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\left(\partial_r T^r_{.s} - \half T^{rk}\partial_s a_{rk}\right)\\\\
++ T^r_{.s}\left[\underbrace{-\half \left(\epsilon (a)\right)^{-\frac{3}{2}}\partial_r \left(\epsilon (a) a\right)+ 
+\half\left(\epsilon (a) a\right)^{-1}\left(\epsilon (a) a\right)^{-\half}\partial_r \left(\epsilon (a) a\right)}_{=0} \right]
+\end{array}\right.
+\end{align}
+giving
+\begin{align}
+\left[\overline{T}^r_{.s} \right]_{|r}&=\left(\epsilon (a) a\right)^{-\half}\left(\partial_r T^r_{.s} - \half T^{rk}\partial_s a_{rk}\right)\\
+\text{(2) and (8):} \spatie T^r_{.s|r}&= \partial_r T^r_{.s} - \half T^{rk}\partial_s a_{rk}
+\end{align}
+$$\lozenge$$
+Let's define the absolute oriented tensor.
+\begin{align}
+\overline{S}^{rs} &= \left(\epsilon (a) a\right)^{-\half}S^{rs}
+\end{align}
+By $\mathbf{7.214}$ we have
+\begin{align}
+S^{rs}_{..|r}&= \left(\epsilon (a) a \right)^{\half}\left[\overline{S}^{rs} \right]_{|r}
+\end{align}
+with 
+\begin{align}
+\left[\overline{S}^{rs} \right]_{|r}&= \partial_r \overline{S}^{rs}  + \Gamma^r_{mr}\overline{S}^{ms} + \Gamma^s_{mr}\overline{S}^{rm}
+\end{align}
+
+Using $\mathbf{2.542}:\quad \Gamma^r_{mr}= \left(\epsilon (a) a\right)^{-\half}\partial_m \left(\epsilon (a) a\right)^{\half}$
+\begin{align}
+\left[\overline{S}^{rs} \right]_{|r}&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\partial_r S^{rs} + S^{rs}\partial_r \left(\epsilon (a) a\right)^{-\half}\\\\
+  + \left(\epsilon (a) a\right)^{-\half}\partial_m \left(\epsilon (a) a\right)^{\half}\overline{S}^{ms} \\\\
+   + \half\left(\partial_m a_{rk} + \partial_r a_{mk}-\partial_k a_{mr} \right)a^{sk}\overline{S}^{rm}\\
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\partial_r S^{rs} + S^{rs}\partial_r \left(\epsilon (a) a\right)^{-\half}\\\\
+  + \left(\epsilon (a) a\right)^{-\half}\left(\epsilon (a) a \right)^{-\half}S^{ms}\partial_m \left(\epsilon (a) a\right)^{\half} \\\\
+    + \half\left(\epsilon (a) a\right)^{-\half}\left(S^{rm}\partial_m a_{rk} + S^{rm}\partial_r a_{mk}-S^{rm}\partial_k a_{mr} \right)a^{sk}
+\end{array}\right.\\
+\end{align}
+Using the skew-symmetry of $S_{rm}$ we get
+\begin{align}
+\left[\overline{S}^{rs} \right]_{|r}&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\partial_r S^{rs} \\\\
+\underbrace{S^{rs}\partial_r \left(\epsilon (a) a\right)^{-\half}  + \left(\epsilon (a) a\right)^{-1}S^{ms}\partial_m \left(\epsilon (a) a\right)^{\half} }_{=0}\\\\
+    + \half\left(\epsilon (a) a\right)^{-\half}\left(\underbrace{S^{rm}\partial_m a_{rk} + S^{rm}\partial_r a_{mk}}_{=0}-S^{rm}\partial_k a_{mr} \right)a^{sk}
+\end{array}\right.\\
+&=\left\{\begin{array}{l}
+\left(\epsilon (a) a\right)^{-\half}\partial_r S^{rs}\\\\
+    - \half\left(\epsilon (a) a\right)^{-\half}\left(a^{sk}\partial_k a_{mr}S^{rm} \right)
+\end{array}\right.\\
+\end{align}
+In the last term, put $b_{smr}\doteq a^{sk}\partial_k a_{mr}$ which is symmetric in the last two indexes. Due to the skew-symmetry of $S^{rm}$ we have then $b_{srm}S^{rm}=0$ and get
+\begin{align}
+\left[\overline{S}^{rs} \right]_{|r}&=\left(\epsilon (a) a\right)^{-\half}\partial_r S^{rs}\\
+\text{(2) and (19):} \spatie S^{rs}_{..|r}&=\partial_r S^{rs}
+\end{align} 
+$$\blacklozenge$$
+\newpage
+
+
+\section{p279 - Exercise 5}
+\begin{tcolorbox}
+Let $b_{mn}$ an absolute covariant tensor. Show that the cofactors of the elements $b_{mn}$ in the determinant $\left|b_{mn}\right|$ are the components of a relative contravariant tensor of weight $2$.
+\end{tcolorbox}
+Let's put $b \doteq \left|b_{mn}\right|$. We have (see $\mathbf{2.202}$)
+\begin{align}
+b_{mr}\Delta^{ms}&=\delta^s_r b
+\end{align}
+where $\Delta^{ms}$ is the cofactor associated with element $b_{ms}$. Note that, for the moment being, the position of the indexes does not imply any tensor characteristics of this object.
+$\delta^s_r$ is a mixed absolute tensor of order 2 (see page 243).
+Also $b$ is a relative invariant of weight $2$ (see $\mathbf{7.202}$).\\
+So we have the following transformation rules
+\begin{align}
+\left\{\begin{array}{l}
+\delta^{'s}_{\ r} =  \delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}}\\\\
+b^{'}= J^2 b\\\\
+b^{'}_{mr} = b^{}_{uv}\frac{\partial x^{u} }{\partial {x^{'m}}}\frac{\partial x^{v} }{\partial x^{'r}}
+\end{array}\right.
+\end{align}
+Using $(1)$
+\begin{align}
+b^{'}_{mr}\Delta^{'ms}&=\delta^{'s}_r b^{'}
+\end{align}
+Substituting with $(2)$
+\begin{align}
+b^{}_{uv}\frac{\partial x^{u} }{\partial {x^{'m}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
+b^{}_{uv}\frac{\partial x^{u} }{\partial {x^{'m}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b_{mv}\Delta^{mu}\\
+\times \frac{\partial x^{'r} }{\partial x^{p}}\spatie b^{}_{up}\frac{\partial x^{u} }{\partial x^{'m}}\Delta^{'ms}&=J^2b_{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J^2 \Delta^{ij}\frac{\partial x^{'m} }{\partial {x^{i}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
+Substituting this candidate solution in the left side of $(6)$ gives
+\begin{align}
+b^{}_{up}\frac{\partial x^{u} }{\partial x^{'m}}J^2 \Delta^{ij}\frac{\partial x^{'m} }{\partial {x^{i}}}\frac{\partial x^{'s} }{\partial x^{j}}&=J^2b^{}_{up}\delta^u_i\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
+&=J^2b_{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p279 - Exercise 6}
+\begin{tcolorbox}
+Determine the tensor character of the cofactors in the determinants formed by the components of \\
+(a) a mixed absolute tensor\\
+(b) a relative contravaraint tensor of weight 1.
+\end{tcolorbox}
+\textbf{(a)\\}
+Let's put $b \doteq \left|b^m_{n}\right|$. We have (see $\mathbf{2.202}$)
+\begin{align}
+b^{m}_{r}\Delta^{ms}&=\delta^s_r b
+\end{align}
+where $\Delta^{ms}$ is the cofactor associated with element $b^m_{s}$. Note that, for the moment being, the position of the indexes does not imply any tensor characteristics of this object.
+$\delta^s_r$ is a mixed absolute tensor of order 2 (see page 243).
+Also $b$ is a relative invariant of weight $2$ (see $\mathbf{7.202}$).\\
+
+So we have the following transformation rules
+\begin{align}
+\left\{\begin{array}{l}
+\delta^{'s}_{\ r} =  \delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}}\\\\
+b^{'}= J^2 b\\\\
+b^{'m}_{r} = b^{u}_{v}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{v} }{\partial x^{'r}}
+\end{array}\right.
+\end{align}
+Using $(1)$
+\begin{align}
+b^{'m}_{r}\Delta^{'ms}&=\delta^{'s}_r b^{'}
+\end{align}
+Substituting with $(2)$
+\begin{align}
+b^{u}_{v}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
+b^{u}_{v}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{v} }{\partial x^{'r}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b^{m}_{v}\Delta^{mu}\\
+\times \frac{\partial x^{'r} }{\partial x^{p}}\spatie b^{u}_{p}\frac{\partial x^{'m} }{\partial {x^{u}}}\Delta^{'ms}&=J^2b^{m}_{p}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J^2 \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
+Substituting this candidate solution in the left side of $(6)$ gives
+\begin{align}
+b^{u}_{p}\frac{\partial x^{'m} }{\partial {x^{u}}}J^2 \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}&=J^2b^{u}_{p}\delta^i_u\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
+&=J^2b^m_{p}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.\\
+We rewrite the cofactor as $\Delta^{s}_{m}$ which transform as $$\Delta^{s}_{m}= J^2 \Delta^{i}_{j}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$$
+and conclude that the cofactor is a relative mixed tensor of weight $2$.
+$$\lozenge$$
+\textbf{(b)}
+Let's put $b \doteq \left|b^{mn}\right|$. We have (see $\mathbf{2.202}$)
+\begin{align}
+b^{mr}_{}\Delta^{ms}&=\delta^s_r b
+\end{align}
+where $\Delta^{ms}$ is the cofactor associated with element $b^{ms}$. Note that, for the moment being, the position of the indexes does not imply any tensor characteristics of this object.
+$\delta^s_r$ is a mixed absolute tensor of order 2 (see page 243).
+Also $b$ is a relative invariant of weight $2$ (see $\mathbf{7.202}$).\\
+
+So we have the following transformation rules
+\begin{align}
+\left\{\begin{array}{l}
+\delta^{'s}_{\ r} =  \delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}}\\\\
+b^{'}= J^2 b\\\\
+b^{'mr}_{} = J b^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}
+\end{array}\right.
+\end{align}
+Using $(1)$
+\begin{align}
+b^{'mr}_{}\Delta^{'ms}&=\delta^{'s}_r b^{'}
+\end{align}
+Substituting with $(2)$
+\begin{align}
+Jb^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
+Jb^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b^{mv}_{}\Delta^{mu}\\
+\times \frac{\partial x^{p} }{\partial x^{'r}}\spatie b^{up}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\Delta^{'ms}&=Jb^{mp}_{}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
+Substituting this candidate solution in the left side of $(6)$ gives
+\begin{align}
+b^{up}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}J \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}&=Jb^{up}_{}\delta^i_u\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
+&=Jb^{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
+\end{align}
+proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.\\
+We rewrite the cofactor as $\Delta^{s}_{m}$ which transform as $$\Delta^{s}_{m}= J \Delta^{i}_{j}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$$
+and conclude that the cofactor is a relative mixed tensor of weight $1$.
+$$\blacklozenge$$
+\newpage
+
+\section{p279 - Exercise 7}
+\begin{tcolorbox}
+In the space-time of relativity with metric form
+$$\left ( dx^1\right)^2+\left( dx^2\right)^2+\left ( dx^3\right)^2-\left( dx^4\right)^2$$
+the $3-$space with equation 
+$$\left (x^1\right)^2+\left( x^2\right)^2+\left( x^3\right)^2-\left( x^4\right)^2=0$$
+is called a null cone. prove that the $3-$volume of any portion of the null cone is zero.
+\end{tcolorbox}
+We have $\mathbf{7.414}: v_{(3)} = \int_{R_{(3)}} dv_{(3)} $  with $\mathbf{7.410}: dv_{(3)}= \left(\epsilon(b)b\right)^{\half}\epsilon(\tau)\left | d_{(\beta)}y_{\alpha}\right |$ \\
+and $\mathbf{(7.409)}: b_{\alpha \beta }= a_{ks}\frac{\partial x^k}{\partial y_{\alpha}}\frac{\partial x^s}{\partial y_{\beta}}$. Let's compute $b=\left | b_{\alpha \beta }\right|$. We define the intrinsic parameters $\left(x^1, x^2,x^3\right)$ for the $\left( y_{\alpha}\right)$.
+We have 
+\begin{align}
+\left(a_{mn}\right)&=\left |\begin{matrix}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&0&-1
+\end{matrix}\right |
+\end{align}
+Let's define $R=\sqrt{\left (y^1\right)^2+\left( y^2\right)^2+\left( y^3\right)^2}$ and using the equation of the null cone in the form $$\left(x^4\right)^2 = R^2$$ we get
+\begin{align}
+\left|b_{mn}\right|&=\left |\begin{matrix}
+1-\left(\frac{x^1}{R}\right)^2&\frac{x^1 x^2}{R^2}&\frac{x^1 x^3}{R^2}\\
+\frac{x^1 x^2}{R^2}&1-\left(\frac{x^2}{R}\right)^2&\frac{x^2 x^3}{R^2}\\
+\frac{x^1 x^3}{R^2}&\frac{x^2 x^3}{R^2}&1-\left(\frac{x^3}{R}\right)^2
+\end{matrix}\right |\\
+&= 1-\left(\frac{x^1}{R}\right)^2-\left(\frac{x^2}{R}\right)^2-\left(\frac{x^2}{R}\right)^2\\
+&= 1 -\frac{R^2}{R^2}\\
+&=0
+\end{align}
+So, $dv_{(3)}=0$ at any point of the null cone giving a zero $3-$volume everywhere on that manifold.
+$$\blacklozenge$$
+\newpage
+%\end{comment}
+
+\section{p279 - Exercise 8$\dagger$}
+\begin{tcolorbox}
+Prove that a polar $N-$space of constant curvature is oriented if $N$ is odd and unoriented if $N$ is even., but that an antipodal $N-$space of constant curvature is always oriented.
+\end{tcolorbox}
+Let's us first sum up some key-definitions which could be usefull for proving the above assumption.\\
+\textbf{a)} Chapter 4 pages 111-116: \textit{In a space with constant positive curvature, two adjacent geodesics issuing from a point $O$ intersect at a point $O^{'}$  at a distance $s=\frac{\pi}{\sqrt{\epsilon K}}$. If we have $O=O^{'}$, than the space is called \textbf{polar} (or elliptic).}\\
+\textbf{b)} The factor $d\tau_{(M)} = \left|d_{(\beta)}y^{\alpha}\right|$ is called the \textbf{\textit{intrinsic extension of the infinitesimal cell in the subspace $V_M$}}. The following relations exist: 
+$$d\tau_{M}^{k_1\dots k_M} = \nu^{k_1\dots k_M}d\tau_{(M)}$$ with $$\nu^{k_1\dots k_M}= \epsilon^{k_1 \dots k_M} \pdv{x^{k_1}\dots  x^{k^M}}{y^{\alpha_1}\dots y^{\alpha_M}}$$
+$\mathbf{\nu^{k_1\dots k_M}}$ is called the \textbf{\textit{$\mathbf{M}-$direction of $V_M$ at a point $P$}}.\\
+If $M=N$ then we see that $\nu^{k_1\dots k_M}=\epsilon^{k_1 \dots k_M} $.\\
+\textbf{c)} page 261: \textit{Comparison of $M-$cells at two different points $A$ and $B$ in a region $R_M$ of the subspace $V_M$ is achieved as follows: The infinitesimal cell at $A$, say, is moved in a continuous manner to $B$ along a path $C$ lying in $R_M$, such that, at each stage of the continuous motion, the intrinsic extension of the cell is non-zero. The orientations of the two cells are then compared at point $B$. }\\
+\textbf{d)} page 261: \textit{There are, however, regions where the orientations of cells at different points cannot be compared because the procedure adapted above is not unique. Such regions are called unoriented or one-sided.}\\
+Before delving in an attempt, some things are not clear for me.
+E.g. in c), how can one be sure that such a path exist zo that the intrinsic extension does not vanish.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p279 - Exercise 9}
+\begin{tcolorbox}
+Show that the total volume of a polar $3-$space of constant curvature $R^{-2}$ is $\pi^2R^3$, and that the volume is $2\pi^2R^3$ if the space is antipodal.
+\end{tcolorbox}
+From $\mathbf{4.130}$ page 118 we know that the line-element for a space of positive constant curvature is 
+\begin{align}
+ds^2=dr^2+R^2\sin^2 \left( \frac{r}{R}\right)\left(d\theta^2+\sin^2\theta d\phi^2\right)
+\end{align}
+For the considered metric, we have
+\begin{align}
+\left(a_{mn}\right)&= \left(\begin{array}{llll}
+1&0&0\\
+0&R^2\sin^2 \left( \frac{r}{R}\right)&0\\
+0&0&R^2\sin^2 \left( \frac{r}{R}\right)\sin^2\theta
+\end{array}\right)
+\end{align}
+giving 
+\begin{align}
+\left|a_{mn}\right| &= R^4\sin^4\left( \frac{r}{R}\right)\sin^2\theta
+\end{align}
+Using $\mathbf{7.410}$ with $\left|d_{(\beta )}y^{\alpha}\right|=\left|d_{(s )}x^k\right| =  dr d\theta d\phi$ :
+\begin{align}
+dv_{(M)}&=R^2\sin^2\left( \frac{r}{R}\right)\sin\theta dr d\theta d\phi
+\end{align}
+We can now integrate to get the total volume of the space. As stated for $\mathbf{7.410}$ we have to note that the distance between two points, when $dr=0$, vanish when $r=\pi R$ meaning that the integration along the intrinsic variable $r$ must be done in the interval $\left[0,\pi R\right]$ in order to avoid double counting in the integration.
+For a polar space, we have to restrict the integration along $\theta$ to $\frac{\pi}{2}$. This gives the volume :
+\begin{align}
+V_{(3)}&= \int_{0}^{\pi R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{2\pi}R^2\sin^2\left( \frac{r}{R}\right)\sin\theta dr d\theta d\phi\\
+&= 2 \pi R^3  \underbrace{\int_{0}^{\pi}\sin^2 \beta d\beta}_{=\left.\half\left(\beta-\half\sin (2 \beta)\right)\right|_0^{\pi}}\underbrace{\int_{0}^{\frac{\pi}{2}}\sin\theta d\theta}_{=\left. -cos\theta\right|_0^{\frac{\pi}{2}}}\\
+&=\pi^2 R^3  
+\end{align}
+(the first integral in $(6)$ can be found by substituting $\sin^2 x = 1-\cos^2 x$ and  using the cosine sum of angles rule $\cos\left(\alpha+\beta\right) = \cos\alpha\cos\beta-\sin\alpha\sin\beta$ with $\alpha = \beta=x$).
+$$\lozenge$$
+For an antipodal space we have to integrate along $\theta$ in the interval $\left[0,\pi \right]$., which gives a volume twice the volume of a polar plane i.e. $V_{(3)}= 2\pi^2 R^3$.
+$$\blacklozenge$$
+\newpage
+
+\section{p279 - Exercise 10}
+\begin{tcolorbox}
+If $r_{mn}$ is an absolute tensor in $4-$space, show that $L$ defined by,
+$$L=\left|r_{mn}\right|^{\half}$$
+is an invariant density. Discuss the tensor character of $f^{mn}$ and $g^{mn}$, defined by
+$$f^{mn}=\pdv{L}{r_{mn}}, \quad g^{mn} = f^{mn}\left|f^{ks}\right|^{-\half}$$
+and also of $g_{mn}$, defined by
+$$g_{ms}g^{ns}= \delta_m^n$$
+prove that $\left|g_{mn}\right| = \left|f^{mn}\right|$. (Schrödinger)
+\end{tcolorbox}
+As $r_{mn}$ is an absolute tensor then we know from $\mathbf{7.202}$ 
+\begin{align}
+\left|r^{'}_{mn}\right|&= J^2\left|r^{}_{st}\right|
+\end{align}
+Hence, $L=\left|r^{}_{st}\right|^{\half}$ is a relative invariant of weight $1$, i.e. a invariant density.\\
+This gives for $f^{mn}=\pdv{L}{r_{mn}}$
+\begin{align}
+f^{mn}&= \pdv{\left|r^{}_{st}\right|^{\half}}{r_{mn}}\\
+&= \half \frac{\Delta^{mn}}{\left|r^{}_{st}\right|^{\half}}
+\end{align}
+with $\Delta^{mn}$ the cofactor of the element $r_{mn}$ in the determinant. From exercise 5 in this chapter we know that $\Delta^{mn}$ is relative tensor of weight $2$. From $(3)$, this  gives a weight of $\frac{L^2}{L}= L$. Hence, $f^{mn}$ is contravariant tensor density.
+Let's look at $g^{mn} = f^{mn}\left|f^{ks}\right|^{-\half}$. Analogous to $(1)$, we have $\left|f^{'ks}\right|^{-\half} = \left(J^{-2}\left|f^{mn}\right|\right)^{-\half}=J^{}\left|f^{'mn}\right|^{-\half}$, being an invariant density. So $g^{mn}$ is a relative tensor of weight $2$.
+For  $g_{ms}$ we have 
+\begin{align}
+g_{ms}g^{ns}= \delta_m^n
+\end{align}
+We know that $g^{ns}$ is a relative tensor of weight $2$ and (see page 243) $\delta_m^n$ a mixed absolute tensor.\\
+So from $g_{ms}g^{ns}= \delta_m^n$, we deduce for the weight $W$ of $g_{ms}$, $W+2 = 0$.\\
+Conclusion, $g_{ms}$ is a relative tensor of weight $-2$.
+Finally, 
+\begin{align}
+g_{ms}g^{ns}&= \delta_m^n\\
+\Rightarrow \quad \left|g_{ms}\right|\left|g^{ns}\right|&=\underbrace{\left|\delta_m^n\right|}_{=1}
+\end{align}
+From the definition of $g^{mn}$ we have, nothing that for a matrix $A \in GL_n(\mathbb{R})$, $\left|k a^{mn}\right| = k^n \left| a^{mn}\right|$, with in our case $n=4$:
+\begin{align}
+\left|g^{mn}\right| &= \left|f^{mn}\right|\left(\left|f^{ks}\right|^{-\half}\right)^4\\
+&=\left|f^{ks}\right|^{-\half}\left|f^{ks}\right|^{-2}\\
+&= \left|f^{ks}\right|^{-1}
+\end{align}
+and $(6)$ becomes
+\begin{align}
+\left|g_{ms}\right|\left|f^{ks}\right|^{-1}&= 1
+\end{align}
+proving the identity.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p279 - Exercise 11}
+\begin{tcolorbox}
+In a non-metrical space $V_4$ there is a skew-symmetric absolute tensor field $F_{mn}$ satisfying the partial differential equations
+$$F_{mn,r}+F_{nr,m}+F_{rm,n}=0$$
+Show that, if $U_2$ and $W_2$ are two-closed $2-$spaces in $V_4$, deformable into one another with preservation of orientation, then
+$$\int_{U_2}F_{mn}d\tau_{(2)}^{mn} = \int_{W_2}F_{mn}d\tau_{(2)}^{mn} $$
+\end{tcolorbox}
+First we note that the term "deformable" is not defined precisely in this exercise. So we suppose that the two $3-$spaces, $U_3$ and $W_3$ enclosed by $U_2$ and $W_2$ are diffeomorphic to each other and that this diffeomorphism preserves the orientation and value of the extension between the mapped points, giving $\int_{U_3} d\tau_{(3)}^{mnr}=\int_{W_3}d\tau_{(3)}^{mnr}$. \\
+From $\mathbf{7.505}$ we have
+\begin{align}
+\left\{\begin{array}{l}\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr} = \int_{U_2} F_{mn}d\tau_{(2)}^{mn}\\\\
+\int_{W_3} F_{mn,r}d\tau_{(3)}^{mnr} = \int_{W_2} F_{mn}d\tau_{(2)}^{mn}
+\end{array}\right.
+\end{align}
+The partial differential equations give, using the skew-symmetry of $F_{mn}$ and $d\tau_{(3)}^{mnr}$:
+\begin{align}
+&\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr}+\int_{U_3} F_{nr,m}d\tau_{(3)}^{mnr}+\int_{U_3} F_{rm,n}d\tau_{(3)}^{mnr}= \int_{U_3} d\tau_{(3)}^{mnr}\\
+\Rightarrow \quad &\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr}+\int_{U_3} F_{rn,m}d\tau_{(3)}^{rnm}+\int_{U_3} F_{rn,m}d\tau_{(3)}^{rnm}= \int_{U_3} d\tau_{(3)}^{mnr}\\
+\Rightarrow \quad &3\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr}= \int_{U_3} d\tau_{(3)}^{mnr}\\
+\text{(1)} \quad &3\int_{U_2} F_{mn}d\tau_{(2)}^{mn}= \int_{U_3} d\tau_{(3)}^{mnr}
+\end{align}
+The same is true for the $W_3$ space and as we assumed that  $\int_{U_3} d\tau_{(3)}^{mnr}=\int_{W_3}d\tau_{(3)}^{mnr}$ we can conclude 
+$$\int_{U_2} F_{mn}d\tau_{(2)}^{mn}=\int_{W_2} F_{mn}d\tau_{(2)}^{mn}$$
+
+$$\blacklozenge$$
+\newpage
+
+
+\section{p280 - Exercise 12}
+\begin{tcolorbox}
+In a flat space $V_4$ there is a skew-symmetric Cartesian tensor field $F_{mn}$ satisfying the partial differential equations $F_{mn,n}=0$. Show that if $U_3$ and $W_3$ are two closed $3-$spaces in $V_4$ deformable into one another with preservation of the sense of the unit normal $n_r$, then 
+$$ \int_{U_3} \epsilon (n)F_{rs}n_sdv_{(3)} = \int_{W_3} \epsilon (n)F_{rs}n_sdv_{(3)}$$
+\end{tcolorbox}
+The way to go is quite similar to the previous exercise. In this case we assume also that the two $4-$spaces, $U_4$ and $W_4$ enclosed by $U_3$ and $W_3$ are diffeomorphic to each other and that this diffeomorphism preserves the volume of the two shapes, giving $\int_{U_4} dv_{(4)}^{}=\int_{W_4}dv_{(4)}^{}$. \\
+From $\mathbf{7.609}$ we have (considering $T^n = \left.F_{mn}\right|_{m=M}$ as a Cartesian vector for a fixed $m=M$.): 
+\begin{align}
+\left\{\begin{array}{l}
+\int_{U_4} T^n_{\ |n}dv_{(4)}^{} = \int_{U_3} \epsilon (n)T^rn_rdv_{(3)} \\\\
+\int_{W_4} T^n_{\ |n}dv_{(4)}^{} = \int_{W_3} \epsilon (n)T^rn_rdv_{(3)} 
+\end{array}\right.
+\end{align}
+Note that raising the index in $T^n$ is allowed as $F_{mn}$ is Cartesian tensor and that we are in a flat space where we we can choose a homogeneous coordinate system. For a Cartesian tensor we can replace the covariant derivative by the partial derivative and using the given differential equation we get
+\begin{align}
+&\int_{U_4} T^n_{\ |n}d\tau_{(4)}^{} =\int_{U_4} dv_{(4)}^{}\\
+\Rightarrow \quad &\int_{U_3} \epsilon (n)T^r n_rdv_{(3)}  = \int_{U_4} dv_{(4)}^{}
+\end{align}
+The same is true for $W_4$. using the assumption $\int_{U_4} dv_{(4)}^{}=\int_{W_4}dv_{(4)}^{}$ and replacint $T^n$ by $F_{mn}$ we get $$ \int_{U_3} \epsilon (n)F_{rs}n_sdv_{(3)} = \int_{W_3} \epsilon (n)F_{rs}n_sdv_{(3)}$$
+$$\blacklozenge$$
+\newpage
+
+
+\section{p280 - Exercise 13}
+\begin{tcolorbox}
+In a non-metrical space $V_3$ ther is given an absolute covariant vector field $v_r$. Then the derived vector field $\omega^r =\epsilon^{rmn}v_{n,m}$ determines an invariant direction at each point of $V_3$ and hence a congruence of curves in $V_3$. A tube $T$ is chosen, composed of such curves, and $C$, $C^{'}$ are two closed curves lying in $T$, and such that they may be deformed into another without leaving $T$. Prove that
+$$\int_{C} v_rdx^r = \int_{C^{'}} v_r dx^r$$
+the integrals being taken in senses which coincide when one curve is deformed into the other. (Note that this is a generalization of Exercise VI, No.4.) 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage
