@@ -1,7 +1,11 @@
 \setcounter{chapter}{6}
 \chapter{Relative tensors, ideas of volume, Green-Stokes theorems.}
 \pagebreak[4]
+<<<<<<< HEAD
 %\begin{comment}
+=======
+\begin{comment}
+>>>>>>> adfdd13a74863c750c19cd7f30af5a98907dce92
 \section{p241 - Exercise}
 \begin{tcolorbox}
 If $b_{rs}$ is an absolute tensor, show that the determinant $\left|b_{rs}\right|$ is a relative invariant of weight $2$. What are the tensor characters of $\left|c^{rs}\right|$ and $\left|f^r_{s}\right|$?
@@ -132,7 +136,7 @@ If $T_{rs}$  is an absolute skew-symmetric tensor in a $4-$space, show that $$T_
 Be $P= T_{14}T_{23}+T_{24}T_{31}+T_{34}T_{12}$, we can write this as $P= \frac{1}{8}\delta^{ijmn}_{1234}T_{ij}T_{mn}$ 
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p247_Exa.tex}}
+    \subfloat[]{\input{C:/MathLatex/images/fig_p247_Exa.tex}}
 \caption{Permutations}
 \label{fig:fig_p247}
 \end{figure}
@@ -194,6 +198,7 @@ $$\mathbf{7.220} \quad T^n_{\ |n}= \left(\epsilon(a)a\right)^{\half(W-1)}\pdv{}{
 \end{tcolorbox}
 $$\blacklozenge$$
 \newpage
+<<<<<<< HEAD
 
 \section{p255 - Clarification}
 \begin{tcolorbox}
@@ -220,6 +225,34 @@ And using $\mathbf{4.313}:\quad \left|A_{pq}\right|= \epsilon_{s_1 s_2 \dots s_M
 $$\blacklozenge$$
 \newpage
 
+=======
+
+\section{p255 - Clarification}
+\begin{tcolorbox}
+$$\mathbf{7.304} \quad \Delta^{k_1\dots k_M}=\delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1} \dots \Delta_{(M)}x^{s_M}$$ 
+\end{tcolorbox}
+Using $\mathbf{7.303}$ and noting that a permutation of columns in the matrix changes or not  the sign of its determinant depending on the sign of the permutation, we can write 
+\begin{align}\Delta^{k_1\dots k_M} &= \left|\begin{matrix}
+\Delta_{(1)}x^{k_1}&\Delta_{(1)}x^{k_2} &\dots&\Delta_{(1)}x^{k_M}\\
+\Delta_{(2)}x^{k_1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
+\vdots&\vdots&\vdots&\vdots\\
+\Delta_{(M)}x^{k_1}&\Delta_{(M)}x^{k_2} &\dots&\Delta_{(M)}x^{k_M}\\
+\end{matrix}\right|\\
+&= \epsilon^{k_1 k_2\dots k_m}\left|\begin{matrix}
+\Delta_{(1)}x^{1}&\Delta_{(1)}x^{2} &\dots&\Delta_{(1)}x^{M}\\
+\Delta_{(2)}x^{1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
+\vdots&\vdots&\vdots&\vdots\\
+\Delta_{(M)}x^{1}&\Delta_{(M)}x^{2} &\dots&\Delta_{(M)}x^{M}\\
+\end{matrix}\right|
+\end{align}
+And using $\mathbf{4.313}:\quad \left|A_{pq}\right|= \epsilon_{s_1 s_2 \dots s_M}A_{1 s_1}A_{2 s_2}\dots A_{M s_M}$:
+\begin{align}\Delta^{k_1 \dots k_M} &= \underbrace{\epsilon^{k_1 k_2\dots k_m} \epsilon_{s_1 s_2 \dots s_M}}_{\text{see (7.114)}}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}\\
+&= \delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}
+\end{align}
+$$\blacklozenge$$
+\newpage
+
+>>>>>>> adfdd13a74863c750c19cd7f30af5a98907dce92
 \section{p255 - Exercise }
 \begin{tcolorbox}
 Show that $\mathbf{7.305}$ may be written in the equivalent form
@@ -258,8 +291,8 @@ As we can see in figure $7.2$,  it's no hard to see that
 \end{align}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p255_Exa1.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p255_Exa2.tex}}
+    \subfloat[]{\input{C:/MathLatex/images/fig_p255_Exa1.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p255_Exa2.tex}}
 \caption{Permutations}
 \label{fig:fig_p255}
 \end{figure}
@@ -349,9 +382,9 @@ d\tau_{(2)}^{zz}&= \underbrace{\epsilon^{11}}_{=0}\pdv{z}{\theta}\pdv{z}{\theta}
 \end{align}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exa.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxz.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxy.tex}}
+    \subfloat[]{\input{C:/MathLatex/images/fig_p257_Exa.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p257_Exaxz.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p257_Exaxy.tex}}
 \caption{Projections of extensions}
 \label{fig:fig_p257}
 \end{figure}
@@ -370,7 +403,11 @@ It is easy to see that $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$, yet the su
 
 \begin{figure}[H]%
     \centering
+<<<<<<< HEAD
     \input{D:/MathLatex/images/fig_p257_Exb.tex}
+=======
+    \input{C:/MathLatex/images/fig_p257_Exb.tex}
+>>>>>>> adfdd13a74863c750c19cd7f30af5a98907dce92
 \caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3: \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
 \label{fig:fig_p257}
 \end{figure}
@@ -499,8 +536,13 @@ Remember that what we do here is just take 'slices' of a space. compare it to an
 
 \begin{figure}[H]%
     \centering
+<<<<<<< HEAD
     \subfloat[]{\input{D:/MathLatex/images/fig_p265_Exa.tex}}\\
     \subfloat[]{\input{D:/MathLatex/images/fig_p265_Exb.tex}}
+=======
+    \subfloat[]{\input{C:/MathLatex/images/fig_p265_Exa.tex}}\\
+    \subfloat[]{\input{C:/MathLatex/images/fig_p265_Exb.tex}}
+>>>>>>> adfdd13a74863c750c19cd7f30af5a98907dce92
 \caption{Manifold with $ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]$ metric, embedded in an Euclidean $4-$space}
 \label{fig:fig_p265}
 \end{figure}
@@ -940,7 +982,11 @@ Let's define $R=\sqrt{\left (y^1\right)^2+\left( y^2\right)^2+\left( y^3\right)^
 So, $dv_{(3)}=0$ at any point of the null cone giving a zero $3-$volume everywhere on that manifold.
 $$\blacklozenge$$
 \newpage
+<<<<<<< HEAD
 %\end{comment}
+=======
+\end{comment}
+>>>>>>> adfdd13a74863c750c19cd7f30af5a98907dce92
 
 \section{p279 - Exercise 8$\dagger$}
 \begin{tcolorbox}
@@ -1079,6 +1125,7 @@ $$\blacklozenge$$
 In a flat space $V_4$ there is a skew-symmetric Cartesian tensor field $F_{mn}$ satisfying the partial differential equations $F_{mn,n}=0$. Show that if $U_3$ and $W_3$ are two closed $3-$spaces in $V_4$ deformable into one another with preservation of the sense of the unit normal $n_r$, then 
 $$ \int_{U_3} \epsilon (n)F_{rs}n_sdv_{(3)} = \int_{W_3} \epsilon (n)F_{rs}n_sdv_{(3)}$$
 \end{tcolorbox}
+<<<<<<< HEAD
 The way to go is quite similar to the previous exercise. In this case we assume also that the two $4-$spaces, $U_4$ and $W_4$ enclosed by $U_3$ and $W_3$ are diffeomorphic to each other and that this diffeomorphism preserves the volume of the two shapes, giving $\int_{U_4} dv_{(4)}^{}=\int_{W_4}dv_{(4)}^{}$. \\
 From $\mathbf{7.609}$ we have (considering $T^n = \left.F_{mn}\right|_{m=M}$ as a Cartesian vector for a fixed $m=M$.): 
 \begin{align}
@@ -1103,6 +1150,8 @@ In a non-metrical space $V_3$ ther is given an absolute covariant vector field $
 $$\int_{C} v_rdx^r = \int_{C^{'}} v_r dx^r$$
 the integrals being taken in senses which coincide when one curve is deformed into the other. (Note that this is a generalization of Exercise VI, No.4.) 
 \end{tcolorbox}
+=======
+>>>>>>> adfdd13a74863c750c19cd7f30af5a98907dce92
 
 $$\blacklozenge$$
 \newpage
