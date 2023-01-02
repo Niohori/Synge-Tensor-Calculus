@@ -1018,7 +1018,7 @@ f^{mn}&= \pdv{\left|r^{}_{st}\right|^{\half}}{r_{mn}}\\
 &= \half \frac{\Delta^{mn}}{\left|r^{}_{st}\right|^{\half}}
 \end{align}
 with $\Delta^{mn}$ the cofactor of the element $r_{mn}$ in the determinant. From exercise 5 in this chapter we know that $\Delta^{mn}$ is relative tensor of weight $2$. From $(3)$, this  gives a weight of $\frac{L^2}{L}= L$. Hence, $f^{mn}$ is contravariant tensor density.
-Let's look at $g^{mn} = f^{mn}\left|f^{ks}\right|^{-\half}$. Analogue to $(1)$, we have $\left|f^{'ks}\right|^{-\half} = \left(J^{-2}\left|f^{mn}\right|\right)^{-\half}=J^{}\left|f^{'mn}\right|^{-\half}$, being an invariant density. So $g^{mn}$ is a relative tensor of weight $2$.
+Let's look at $g^{mn} = f^{mn}\left|f^{ks}\right|^{-\half}$. Analogous to $(1)$, we have $\left|f^{'ks}\right|^{-\half} = \left(J^{-2}\left|f^{mn}\right|\right)^{-\half}=J^{}\left|f^{'mn}\right|^{-\half}$, being an invariant density. So $g^{mn}$ is a relative tensor of weight $2$.
 For  $g_{ms}$ we have 
 \begin{align}
 g_{ms}g^{ns}= \delta_m^n
@@ -1042,5 +1042,43 @@ and $(6)$ becomes
 \left|g_{ms}\right|\left|f^{ks}\right|^{-1}&= 1
 \end{align}
 proving the identity.
+$$\blacklozenge$$
+\newpage
+
+
+\section{p279 - Exercise 11}
+\begin{tcolorbox}
+In a non-metrical space $V_4$ there is a skew-symmetric absolute tensor field $F_{mn}$ satisfying the partial differential equations
+$$F_{mn,r}+F_{nr,m}+F_{rm,n}=0$$
+Show that, if $U_2$ and $W_2$ are two-closed $2-$spaces in $V_4$, deformable into one another with preservation of orientation, then
+$$\int_{U_2}F_{mn}d\tau_{(2)}^{mn} = \int_{W_2}F_{mn}d\tau_{(2)}^{mn} $$
+\end{tcolorbox}
+First we note that the term "deformable" is not defined precisely in this exercise. So we suppose that the two $3-$spaces, $U_3$ and $W_3$ enclosed by $U_2$ and $W_2$ are diffeomorphic to each other and that this diffeomorphism preserves the orientation and value of the extension between the mapped points, giving $\int_{U_3} d\tau_{(3)}^{mnr}=\int_{W_3}d\tau_{(3)}^{mnr}$. \\
+From $\mathbf{7.505}$ we have
+\begin{align}
+\left\{\begin{array}{l}\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr} = \int_{U_2} F_{mn}d\tau_{(2)}^{mn}\\\\
+\int_{W_3} F_{mn,r}d\tau_{(3)}^{mnr} = \int_{W_2} F_{mn}d\tau_{(2)}^{mn}
+\end{array}\right.
+\end{align}
+The partial differential equations give, using the skew-symmetry of $F_{mn}$ and $d\tau_{(3)}^{mnr}$:
+\begin{align}
+&\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr}+\int_{U_3} F_{nr,m}d\tau_{(3)}^{mnr}+\int_{U_3} F_{rm,n}d\tau_{(3)}^{mnr}= \int_{U_3} d\tau_{(3)}^{mnr}\\
+\Rightarrow \quad &\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr}+\int_{U_3} F_{rn,m}d\tau_{(3)}^{rnm}+\int_{U_3} F_{rn,m}d\tau_{(3)}^{rnm}= \int_{U_3} d\tau_{(3)}^{mnr}\\
+\Rightarrow \quad &3\int_{U_3} F_{mn,r}d\tau_{(3)}^{mnr}= \int_{U_3} d\tau_{(3)}^{mnr}\\
+\text{(1)} \quad &3\int_{U_2} F_{mn}d\tau_{(2)}^{mn}= \int_{U_3} d\tau_{(3)}^{mnr}
+\end{align}
+The same is true for the $W_3$ space and as we assumed that  $\int_{U_3} d\tau_{(3)}^{mnr}=\int_{W_3}d\tau_{(3)}^{mnr}$ we can conclude 
+$$\int_{U_2} F_{mn}d\tau_{(2)}^{mn}=\int_{W_2} F_{mn}d\tau_{(2)}^{mn}$$
+
+$$\blacklozenge$$
+\newpage
+
+
+\section{p280 - Exercise 12}
+\begin{tcolorbox}
+In a flat space $V_4$ there is a skew-symmetric Cartesian tensor field $F_{mn}$ satisfying the partial differential equations $F_{mn,n}=0$. Show that if $U_3$ and $W_3$ are two closed $3-$spaces in $V_4$ deformable into one another with preservation of the sense of the unit normal $n_r$, then 
+$$ \int_{U_3} \epsilon (n)F_{rs}n_sdv_{(3)} = \int_{W_3} \epsilon (n)F_{rs}n_sdv_{(3)}$$
+\end{tcolorbox}
+
 $$\blacklozenge$$
 \newpage
