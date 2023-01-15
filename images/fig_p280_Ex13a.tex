@@ -1,0 +1,95 @@
+\begin{tikzpicture}[spy using outlines={circle, magnification=2.5, size=1cm, connect spies}]
+\coordinate (O) at (-15,-5) ;
+\coordinate (X) at (-17,-7) ;
+\coordinate (Y) at (-11,-5) ;
+\coordinate (Z) at (-15,-1) ;
+\draw[-Latex] (O)--(X);
+\draw [-Latex](O)--(Y);
+\draw [-Latex](O)--(Z);
+\coordinate (p0) at(-14.0384,-4.8633) {}  ;
+\coordinate (p1) at (-13.5,-4) {}  ;
+\coordinate (p2) at (-12.0301,-2.5603) {} {} {}  ;
+\coordinate (p3) at (-9.242,-0.5857) {} {}  ;
+\coordinate (p4) at (-8.715,-0.3396);
+
+
+\coordinate (m0) at(-13.056,-5.286)  {}  ;
+\coordinate (m1) at(-12.6333,-4.5206) {}  ;
+\coordinate (m2) at (-11.3653,-3.2747) {}  {}  ;
+\coordinate (m3) at (-8.5855,-1.2896) {} {} {}  ;
+\coordinate (m4) at (-.3419,-2.2618) {};
+
+\coordinate (q0) at (-14.8152,-4.2007)  {}  ;
+\coordinate (q1) at (-14.3697,-3.4696) {}  ;
+\coordinate (q2) at (-12.8618,-1.983) {} {}  {}  ;
+\coordinate (q3) at (-10.6228,-0.2025)  {}  ;
+\coordinate (q4) at (-9.4437,0.4979) {};
+
+\coordinate(pin) at (-11,-4) {} {} {} {} {} {} {};
+\coordinate (pinb) at (-10,-3) {} {} {} {} {} {};
+\path [rotate=-40,fill= gray!20] (m2) arc (0:360:1 and 0.5);
+\draw [rotate=-70,black] (-1.5,-11) node (v1) {}  circle(0.051cm and 0.1cm);
+%\draw [rotate=-50,black,thick] (p2) circle(1cm and 0.5cm);
+%\draw [rotate=-50,black,thick] (p3) circle(1cm and 0.5cm);
+\draw [rotate=-30,black,thick,] (m1) arc (0:-180:1 and 0.5);
+\draw [rotate=-30,black,ultra thin,dashed] (m1) arc (0:180:1 and 0.5);
+
+\draw [rotate=-40,black,thick,] (m2) arc (0:-180:1 and 0.5);
+\draw [rotate=-40,black,ultra thin,dashed] (m2) arc (0:180:1 and 0.5);
+
+
+\draw [rotate=-50,black,thick] (m3) arc (0:-180:1 and 0.5);
+\draw [rotate=-50,black,thick] (m3) arc (0:180:1 and 0.5);
+
+
+\draw  [fill= white](p1)circle (1.5pt);
+\draw  [fill= white](p2)circle (1.5pt);
+\draw  [fill= white](p3)circle (1.5pt);
+
+\node[right] at (pinb) {$R^T_{(2)}$};
+\node[right] at (pin) {$R_{(1)}$};
+
+\draw[dashed][ultra thin]  plot[smooth, tension=.7] coordinates {(p0) (p1) (p2) (p3) (p4)};
+\draw[thick] plot[smooth, tension=.7] coordinates { (m0) (m1) (m2) (m3) (-8.1548,-0.9786)};
+\draw[thick]  plot[smooth, tension=.7] coordinates { (q0) (q1) (q2) (q3) (q4) };
+%\draw[thick]  plot[smooth, tension=.7] coordinates {(-14.5296,-4.5137) (-14.2098,-4.0796) (-12.8161,-2.6517) (-10.7142,-0.9838) (-9.0577,0.01)};
+%\draw[thick]  plot[smooth, tension=.7] coordinates {(-13.7071,-5.1648) (-13.3758,-4.6165) (-12.005,-3.3028) (-10.0402,-1.7264) (-8.6122,-0.8467)};
+\draw [dashed,ultra thin] plot[smooth, tension=.7] coordinates {(-14.5068,-4.1824) (-13.7871,-3.3828) (-12.2449,-1.9548) (-10.1201,-0.3213) (-9.1377,0.1585)};
+\draw[dashed,ultra thin]  plot[smooth, tension=.7] coordinates {(-13.3416,-5.1306) (-12.6562,-4.1596) (-11.331,-2.9715) (-9.3091,-1.4408) (-8.5665,-1.0752)};
+\draw [thick] plot[smooth, tension=.7] coordinates {(-14.404,-4.6095) (-14.1184,-4.1868) (-12.7475,-2.736) (-10.6456,-1.0453) (-9.1901,-0.1401)};
+\draw[thick]  plot[smooth, tension=.7] coordinates {(-13.73,-5.0893) (-13.4444,-4.5866) (-12.2221,-3.193) (-10.1544,-1.6394) (-8.9558,-0.8414)};
+
+\draw [-Latex]  plot[smooth, tension=.7] coordinates {(pinb) (-10.5,-2.8) (v1)};
+\coordinate (v2) at (-12.0164,-3.2729) {};
+\draw [Latex-]  plot[smooth, tension=.7] coordinates {(v2) (-11.6394,-3.7413) (pin)};
+\node[right] (v3) at (-8.2881,-0.1128) {\text{Tube}};
+\draw[Latex-]  plot[smooth, tension=.7] coordinates { (-8.9717,-0.4882) (-8.3686,-0.4876)(-8.2626,-0.0764) };
+
+\draw  plot[smooth, tension=.7] coordinates {(p0)};
+\coordinate (s0) at (-10.5,-3.5) {};
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {( -11.91,-2.75) (-11,-3) (s0)};
+\node[right] at (s0) {$R_{(2)}$};;
+\coordinate (om1) at (-10.5714,-0.4431) {} {} {} {};
+\coordinate (om2) at (-10.3479,-0.3189) {} {} {} {} ;
+\coordinate (om2t) at (-10.5533,-0.4) {} {} {} {} {} ;
+\node [right] at (om2t) {\tiny$\hat{\omega}^r$};
+\draw[-{Stealth[length=0.5mm]}, ultra thin]  (om1) --(om2) ;
+
+
+\coordinate (r1) at (-10.6906,-0.4163);
+\coordinate (r2) at(-10.4818,-0.299) ;
+\coordinate (r3) at (-10.4455,-0.4724);
+\coordinate (r4) at (-10.6703,-0.5993);
+\coordinate (y1) at (-10.3352,-0.2198) {};
+\coordinate (y2) at (-10.6576,-0.7621) {};
+\coordinate (y1t) at (-10.4992,-0.1276) {} {} {};
+\coordinate (y2t) at (-10.7862,-0.7248) {} {} {};
+\coordinate (mag) at (-14.7862,0.15248) {} {} {};
+\draw[-{Stealth[length=0.5mm]}, ultra thin]  (r2) --(y1) ;
+\draw[-{Stealth[length=0.5mm]},  ultra thin]  (r4) --(y2) ;
+\node [right] at (y1t) {\tiny$dy^1$};
+\node [right] at (y2t) {\tiny$dy^2$};
+\draw[ultra thin ]  plot[smooth, tension=0] coordinates {(r1) (r2) (r3) (r4)(r1) };
+\spy [size=2.7cm] on (r2)   in node [right] at (mag);
+
+\end{tikzpicture}

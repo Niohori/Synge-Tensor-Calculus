@@ -1,0 +1,140 @@
+\begin{tikzpicture}
+\coordinate (O) at (-15,-5) ;
+\coordinate (X) at (-17,-7) ;
+\coordinate (Y) at (-11,-5) ;
+\coordinate (Z) at (-15,-1) ;
+\draw[-Latex] (O)--(X);
+\draw [-Latex](O)--(Y);
+\draw [-Latex](O)--(Z);
+\coordinate (p0) at(-14.0384,-4.8633) {}  ;
+\coordinate (p1) at (-13.5,-4) {}  ;
+\coordinate (p3) at (-10,-1) {}  ;
+
+
+\coordinate (m1) at(-12.6333,-4.5206) {}  ;
+\coordinate (m2) at (-11.3653,-3.2747) {}  {}  ;
+\coordinate (m3) at (-9.389,-1.8018) {} {}  ;
+
+
+\coordinate (q1) at (-14.3939,-3.5417) {} {}  ;
+\coordinate (q2) at (-12.8618,-1.983) {} {}  {}  ;
+\coordinate (q3) at (-10.6883,-0.2644) {}  {}  ;
+
+\coordinate(pin) at (-12.3,-5.5) {} {} {} {} {} {} {} {};
+\coordinate (pinb) at (-10.2,-2.9) {} {} {} {} {} {} {};
+\path [rotate=-30,fill= gray!10] (m1) arc (0:360:1 and 0.5);
+\path [rotate=-50,fill= gray!10] (m3) arc (0:360:1 and 0.5);
+\draw [rotate=-70,black] (-1.5,-11) node (v1) {}  circle(0.051cm and 0.1cm);
+\draw [rotate=-30,black,thick,] (m1) arc (0:-180:1 and 0.5);
+\draw [rotate=-30,black,ultra thin,dashed] (m1) arc (0:180:1 and 0.5);
+
+
+\draw [rotate=-50,black,thick,] (m3) arc (0:-180:1 and 0.5);
+\draw [rotate=-50,black,thick,] (m3) arc (0:180:1 and 0.5);
+
+\draw  [fill= white](p1)circle (1.05pt);
+\draw  [fill= white](p3)circle (1.05pt);
+
+\node[right] at (pinb) {$R^T_{(2)}$};
+\node[right] at (pin) {$R_{(1)}$};
+\draw[thick] plot[smooth, tension=.7] coordinates {  (m1) (m2) (m3)  };
+\draw[thick]  plot[smooth, tension=.7] coordinates {  (q1) (q2) (q3) };
+
+\draw [ultra thin,dashed] plot[smooth, tension=.7] coordinates { (-13.7871,-3.3828) (-12.2449,-1.9548) (-10.1201,-0.3213) };
+\draw[ultra thin,dashed]  plot[smooth, tension=.7] coordinates { (-12.6562,-4.1596) (-11.331,-2.9715) (-9.3091,-1.4408) };
+\draw [ultra thin] plot[smooth, tension=.7] coordinates { (-14.1184,-4.1868) (-12.7475,-2.736) (-10.6456,-1.0453) };
+\draw[ultra thin]  plot[smooth, tension=.7] coordinates { (-13.4444,-4.5866) (-12.2221,-3.193) (-10.1544,-1.6394) };
+
+\draw [-Latex]  plot[smooth, tension=.7] coordinates {(pinb) (-10.5,-2.8) (v1)};
+\coordinate (v2) at (-12.0164,-3.2729) {};
+\draw [Latex-]  plot[smooth, tension=.7] coordinates {(-13.4444,-4.5866)  (-12.8,-5.3) (pin)};
+\draw [Latex-]  plot[smooth, tension=.7] coordinates { (-10.1544,-1.6394)  (-9.9,-2.2)  (-9.6,-2.4)};
+\node[right] at (-9.6,-2.4) {$R^{'}_{(1)}$};;
+
+\draw  plot[smooth, tension=.7] coordinates {(p0)};
+\coordinate (s0) at (-11.3,-4.6) {} {};
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {(-13.0593,-4.4489) (-12.086,-4.8601) (s0)};
+\node[right] at (s0) {$R_{(2)}$};;
+
+
+\coordinate (z1) at (-9.6121,-1.5806) {} {};
+\coordinate (z2) at (-9.3,-1.9) {} {} {};
+\coordinate (z3) at (-9,-2) {} {};
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {(z1) (z2) (z3)};
+\node[right] at (z3) {$R^{'}_{(2)}$};;
+\coordinate (tau0) at (-13.5028,-3.9997) {};
+\coordinate (tau1) at (-13.6833,-3.8466) {};
+\coordinate (tau2) at (-13.4208,-3.7809) {};
+\draw [->](tau0)--(tau1);
+\draw [->](tau0)--(tau2);
+\node[below ] at (tau0) {\tiny$d\tau^{}_{(2)}$};;
+
+\coordinate (btau0) at (-9.9964,-1.013) {};
+\coordinate (btau1) at (-10.2316,-0.816) {};
+\coordinate (btau2) at (-9.7885,-0.816) {};
+\draw [->](btau0)--(btau1);
+\draw [->](btau0)--(btau2);
+\node[below] at (btau1) {\tiny$\ \ \ \ \ \ \ d\tau^{'}_{(2)}$};;
+\coordinate (b1) at (-6.8741,-4.7711);
+\coordinate (b2) at (-4.9899,-1.9372);
+\path [rotate=-30,fill= gray!5] (b1) arc (0:360:1 and 0.5);
+%\path [rotate=-50,fill= gray!5] (b2) arc (0:360:1 and 0.5);
+
+
+%\path[fill=gray!20]  plot[smooth, tension=0]coordinates {(-8.6227,-3.7913) (-8.7282,-4.545) (-8.5774,-4.8917)(-8.291,-5.1328) (-7.9293,-5.2082)  (-7.4921,-5.2384)(-7.3113,-5.163) (-6.8892,-4.7711) (-7.2208,-4.9218)(-7.8087,-4.8163)(-8.276,-4.545) (-8.487,-4.3188) (-8.6227,-4.0174) };
+%\path[fill=gray!50] (-8.637,-3.7619) .. controls (-7.6609,-3.2966) and (-9.125,-5.5552) .. (-8.3646,-5.0899) .. controls (-8.9661,-5.7822) and (-6.1058,-4.6472) .. (-6.8777,-5.7607);
+\path[fill=gray!20] (-6.2862,-0.3695) .. controls (-4.7234,0.1491) and (-4.2829,-1.1596) .. (-5.0069,-1.9248) .. controls (-5.3174,-2.1625) and (-5.6445,-1.8614) .. (-6.0716,-1.4583) node (v4) {} .. controls (-6.4329,-0.9902) and (-6.4515,-0.6205) .. (-6.2484,-0.3999);
+
+\path[fill=gray!20] (-8.5993,-5.2144) .. controls (-8.0898,-5.523) and (-7.3708,-5.6948) .. (-6.8764,-4.7525) .. controls (-7.0297,-4.9261) and (-7.4015,-5.0188) .. (-8.191,-4.5789) node (v3) {} .. controls (-8.4718,-4.3261) and (-8.7151,-4.1015) .. (-8.6215,-3.7553) .. controls (-8.9116,-4.1577) and (-9.1004,-4.703) .. (-8.5919,-5.2059);
+
+
+\draw [rotate=-30,black,thick,] (b1) arc (0:-180:1 and 0.5);
+\draw [rotate=-30,black,dashed, ultra thin]  (b1) arc (0:180:1 and 0.5);
+\draw [rotate=-50,black,thick,] (b2) arc (0:-180:1 and 0.5);
+\draw [rotate=-50,black,dashed, ultra thin] (b2) arc (0:180:1 and 0.5);
+
+\draw [dashed,very thin]  plot[smooth, tension=.7] coordinates {(-6.8816,-4.7817)  (-7.6338,-5.1202)  (-8.3182,-5.0349)(-8.6777,-4.4424) (-8.6283,-3.7426)};
+\draw [->] (-8.3182,-5.0349)-- (-8.4832,-4.9156);
+\draw [->] (-8.3182,-5.0349)-- (-8.2284,-4.8937) ;
+\node[below ] at (-8.3182,-5.0349) {\tiny$d\tau^{}_{(2)}$};;
+\node[right ] at (-7.5227,-6.1958){$R_{(2)}$};;
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {(-7.7314,-5.3012)(-7.8141,-5.8417)  (-7.5227,-6.1958)};
+\node[left ] at (-7.632,-0.3908){$R^{'}_{(2)}$};;
+\draw[Latex-]  plot[smooth, tension=.7] coordinates { (-6.0615,-0.7188) (-6.9959,-0.7387)(-7.632,-0.3908)};
+\draw [dashed,very thin]   plot[smooth, tension=.7] coordinates {(-6.2802,-0.3908) (-5.6341,-0.4107) (-5.0576,-0.6565) (-4.7892,-1.2755) (-4.998,-1.9514)};
+\draw [->](-5.0576,-0.6565) -- (-4.9002,-0.5379);
+\draw [->](-5.0576,-0.6565) -- (-5.334,-0.4604) ;
+\node[below] at(-5.0576,-0.6565)  {\tiny$d\tau^{'}_{(2)}$};;
+\node at (-1,-3) {};
+\path  [fill=gray!10](-1,-3)circle (35pt);
+\draw [rotate=-30,black,thick,] (1.82,-3.1276) arc (0:-180:1.2 and 0.5);
+\draw [dashed, ultra thin][rotate=-30] (1.82,-3.1276) arc (0:-180:1.2 and -0.5);
+
+
+\draw [dashed,very thin]  plot[smooth, tension=.7] coordinates {(0.0285,-3.6192)  (-0.5618,-3.995)  (-1.5798,-3.9052)(-2.1389,-3.0296) (-2.0827,-2.3589)};
+\draw [->]  (-1.5798,-3.9052)-- (-1.9436,-3.544);
+\draw [->] (-1.5798,-3.9052)-- (-1.3863,-3.7127) ;
+\node[below ] at  (-1.5798,-3.9052){\tiny$d\tau^{}_{(2)}$};;
+\node[right ] at (-7.5227,-6.1958){$R_{(2)}$};;
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {(-7.7314,-5.3012)(-7.8141,-5.8417)  (-7.5227,-6.1958)};
+
+\node[left ] at (-3.1636,-1.9606) {$R^{'}_{(2)}$};;
+\draw[Latex-]  plot[smooth, tension=.7] coordinates { (-1.8097,-2.5399) (-2.5286,-1.8651)(-3.1445,-1.9573)};
+\draw [dashed,very thin]   plot[smooth, tension=.7] coordinates {(-6.2802,-0.3908) (-5.6341,-0.4107) (-5.0576,-0.6565) (-4.7892,-1.2755) (-4.998,-1.9514)};
+\draw [->](-5.0576,-0.6565) -- (-4.9002,-0.5379);
+\draw [->](-5.0576,-0.6565) -- (-5.334,-0.4604) ;
+\node[below] at(-5.0576,-0.6565)  {\tiny$d\tau^{'}_{(2)}$};;
+
+\node[left ] at (-3.5,-3) {$R^{}_{(2)}$};;
+\draw[Latex-]  plot[smooth, tension=.7] coordinates { (-2,-3.2) (-2.8,-2.7)(-3.5,-3)};
+\draw [dashed,very thin]   plot[smooth, tension=.7] coordinates {(-2.0905,-2.3527) (-1.4433,-2.0093) (-0.6025,-2.0824) (0.0507,-2.7853) (0.0283,-3.596)};
+\draw [->](-0.6025,-2.0824) -- (-1.0929,-1.93);
+\draw [->](-0.6025,-2.0824)-- (-0.4274,-1.9822) ;
+\node[below] at(-0.6025,-2.0824)  {\tiny$d\tau^{'}_{(2)}$};;
+
+\draw  plot[smooth, tension=.7] coordinates {(-8.6,-3.8) (-7.7,-2) (-6.3,-0.4)};
+\draw  plot[smooth, tension=.7] coordinates {(-6.9,-4.8) (-6.2,-3.1) (-5,-1.9)};
+\draw  [ultra thin] plot[smooth, tension=.7] coordinates {(v3) (-7.2,-2.6) (v4)};
+%\draw  [ultra thin]plot[smooth, tension=.7] coordinates {(-4.2,-5.5)};
+\end{tikzpicture} ;
+  

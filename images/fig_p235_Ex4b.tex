@@ -25,10 +25,10 @@
 \coordinate (q3) at (-10.6228,-0.2025)  {}  ;
 \coordinate (q4) at(-9.2862,0.4372);
 
-\coordinate(pin) at (-10.97,-3.5114) {} {} {} {} {} {};
-\coordinate (pinb) at (-12.09,-0.3411) {} {} {} {} {};
-
-\draw [rotate=-70,black] (-2.9676,-10.9813) node (v1) {}  circle(0.051cm and 0.1cm);
+\coordinate(pin) at (-11,-4) {} {} {} {} {} {} {};
+\coordinate (pinb) at (-10,-3) {} {} {} {} {} {};
+\path [rotate=-40,fill= gray!20] (m2) arc (0:360:1 and 0.5);
+\draw [rotate=-70,black] (-3,-11) node (v1) {}  circle(0.051cm and 0.1cm);
 %\draw [rotate=-50,black,thick] (p2) circle(1cm and 0.5cm);
 %\draw [rotate=-50,black,thick] (p3) circle(1cm and 0.5cm);
 \draw [rotate=-30,black,thick,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=-20mm]}}},    postaction={decorate}] (m1) arc (0:-180:1 and 0.5);
@@ -36,6 +36,7 @@
 
 \draw [rotate=-40,black,thick,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=-20mm]}}},    postaction={decorate}] (m2) arc (0:-180:1 and 0.5);
 \draw [rotate=-40,black,thick,dashed] (m2) arc (0:180:1 and 0.5);
+
 
 \draw [rotate=-50,black,thick,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=-20mm]}}},    postaction={decorate}] (m3) arc (0:-180:1 and 0.5);
 \draw [rotate=-50,black,thick,dashed] (m3) arc (0:180:1 and 0.5);
@@ -45,8 +46,8 @@
 \draw  [fill= white](p2)circle (1.5pt);
 \draw  [fill= white](p3)circle (1.5pt);
 
-\node[right] at (pin) {$C$};
-\node[left] at (pinb) {$\Sigma$};
+\node[right] at (pin) {$\partial \Sigma_C$};
+\node[right] at (pinb) {$\Sigma_{\omega}$};
 
 \draw[dashed][thick]  plot[smooth, tension=.7] coordinates {(p0) (p1) (p2) (p3) (p4)};
 \draw[thick] plot[smooth, tension=.7] coordinates { (m0) (m1) (m2) (m3) (m4) };
@@ -58,11 +59,18 @@
 \draw [thick] plot[smooth, tension=.7] coordinates {(-14.404,-4.6095) (-14.1184,-4.1868) (-12.7475,-2.736) (-10.6456,-1.0453) (-8.9892,-0.12)};
 \draw[thick]  plot[smooth, tension=.7] coordinates {(-13.73,-5.0893) (-13.4444,-4.5866) (-12.2221,-3.193) (-10.1544,-1.6394) (-8.6693,-0.7141)};
 
-\draw [-Latex]  plot[smooth, tension=.7] coordinates {(pinb) (-11.5481,-0.4399) (v1)};
-\node (v2) at (-12.0164,-3.2729) {};
+\draw [-Latex]  plot[smooth, tension=.7] coordinates {(pinb) (-11,-2) (v1)};
+\coordinate (v2) at (-12.0164,-3.2729) {};
 \draw [Latex-]  plot[smooth, tension=.7] coordinates {(v2) (-11.6394,-3.7413) (pin)};
 \node[right] (v3) at (-8.7036,1.4295) {\text{vortice lines}};
 \draw[Latex-]  plot[smooth, tension=.7] coordinates { (-9.8688,0.2293) (-9.2291,0.9883)(-8.6922,1.1775) };
 
 \draw  plot[smooth, tension=.7] coordinates {(p0)};
+\coordinate (s0) at (-10.5,-3.5) {};
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {( -11.91,-2.75) (-11,-3) (s0)};
+\node[right] at (s0) {$\Sigma_{C}$};
+\coordinate (s1) at(-12,0) {};
+\coordinate (v3) at (-11.4034,-0.9335) {};
+\draw[Latex-](s1)--(v3);
+\node[right] at (s1) {$\hat{n_{\omega}}$};
 \end{tikzpicture}
