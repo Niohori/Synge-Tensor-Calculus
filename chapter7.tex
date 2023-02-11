@@ -132,7 +132,7 @@ If $T_{rs}$  is an absolute skew-symmetric tensor in a $4-$space, show that $$T_
 Be $P= T_{14}T_{23}+T_{24}T_{31}+T_{34}T_{12}$, we can write this as $P= \frac{1}{8}\delta^{ijmn}_{1234}T_{ij}T_{mn}$ 
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p247_Exa.tex}}
+    \subfloat[]{\input{./images/fig_p247_Exa.tex}}
 \caption{Permutations}
 \label{fig:fig_p247}
 \end{figure}
@@ -166,12 +166,39 @@ $$\blacklozenge$$
 \newpage
 
 
+
 \section{p250 - Exercise }
 \begin{tcolorbox}
 Show that
 $$\eta_{r_1\dots r_N}= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\eta^{s_1\dots s_N}$$
 $$\eta^{r_1\dots r_N}= \epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\eta_{s_1\dots s_N}$$
 \end{tcolorbox}
+We have 
+\begin{align}
+\left\{\begin{array}{lll}
+(\mathbf{7.208})&\eta_{r_1\dots r_N}= \left(\epsilon(a)a\right)^{\half}\epsilon_{r_1\dots r_N}&(a)\\\\
+(\mathbf{7.209})&\eta^{r_1\dots r_N}= \left(\epsilon(a)a\right)^{-\half}\epsilon^{r_1\dots r_N}&(b)\\\\
+(\mathbf{7.210})&\epsilon_{r_1\dots r_N}= \frac{1}{a} a_{r_1s_1}\dots a_{r_Ns_N}\epsilon^{s_1\dots s_N}&(c)\\\\
+(\mathbf{7.211})&\epsilon^{r_1\dots r_N}= a a^{r_1s_1}\dots a^{r_Ns_N}\epsilon_{s_1\dots s_N}&(d)\\
+\end{array}\right.
+\end{align}
+Combining $(a)$ and $(c)$ and writing $a$ as $\left(\epsilon(a)a\right)^{\half}\left(\epsilon(a)a\right)^{\half} \epsilon(a)$ in order to keep track of the sign of $a$, we get
+\begin{align}
+\eta_{r_1\dots r_N} &=\left(\epsilon(a)a\right)^{\half}\epsilon_{r_1\dots r_N}\\
+&=\left(\epsilon(a)a\right)^{\half}\frac{1}{\left(\epsilon(a)a\right)^{\half}\left(\epsilon(a)a\right)^{\half} \epsilon(a)}a_{r_1s_1}\dots a_{r_Ns_N}\epsilon^{s_1\dots s_N}\\
+&= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\left(\epsilon(a)a\right)^{-\half}\epsilon^{s_1\dots s_N}\\
+&= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\eta^{s_1\dots s_N}\\
+\end{align}
+$$\lozenge$$
+$(b)$ and $(d)$ give in the same way
+\begin{align}
+\eta^{r_1\dots r_N} &= \left(\epsilon(a)a\right)^{-\half}\epsilon^{r_1\dots r_N}\\
+&=\left(\epsilon(a)a\right)^{-\half}\left(\epsilon(a)a\right)^{\half}\left(\epsilon(a)a\right)^{\half} \epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\epsilon_{s_1\dots s_N}\\
+&=\epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\left(\epsilon(a)\right)^{\half}\epsilon_{s_1\dots s_N}\\
+&=\epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\eta_{s_1\dots s_N}
+\end{align}
+
+
 $$\blacklozenge$$
 \newpage
 
@@ -181,6 +208,21 @@ Using Riemannian coordinates, prove that
 $\mathbf{7.216}\quad \epsilon_{r_1\dots r_N|k}=\epsilon^{r_1\dots r_N}_{\quad\quad |k}=0$
 $\quad \quad \eta_{r_1\dots r_N|k}= \eta^{r_1\dots r_N}_{\quad\quad|k}=0$
 \end{tcolorbox}
+We use $\mathbf{(7.214)}$   $T^{r\dots}_{s\dots |k}= \left(\epsilon(a)a\right)^{\half W}\left[ \left(\epsilon(a)a\right)^{-\half W} T^{r\dots}_{s\dots }\right]_{|k}$ and put $T^{r\dots}_{s\dots }=\epsilon_{r_1 \dots r_N}$ and at the origin of the Riemannian coordinate system, we have $T^{r\dots}_{s\dots |k}=T^{r\dots}_{s\dots,k}$, giving
+\begin{align}
+\epsilon_{r_1 \dots r_N,k} &= \left(\epsilon(a)a\right)^{\half W}\left[ \left(\epsilon(a)a\right)^{-\half W} \epsilon_{r_1 \dots r_N}\right]_{,k}\\
+&= \left(\epsilon(a)a\right)^{\half W}\left[ \underbrace{\left(\left(\epsilon(a)a\right)^{-\half W}\right)_{,k}}_{=0} \epsilon_{r_1 \dots r_N}+\left(\epsilon(a)a\right)^{-\half W} \underbrace{\epsilon_{r_1 \dots r_N,k}}_{=0}\right]\\
+&=0
+\end{align}
+The same reasoning is the same for $\epsilon^{r_1\dots r_N}$.
+$$\lozenge$$
+For $ \eta_{r_1\dots r_N|k}$ the proof is even simpler as $ \eta_{r_1\dots r_N|k}$is an absolute oriented tensor ($W=0$), giving 
+\begin{align}
+\eta_{r_1 \dots r_N|k} &= \eta_{r_1 \dots r_N,k}\\
+&= \left(\epsilon(a)a\right)^{\half } \underbrace{\left(\left(\epsilon(a)a\right)^{-\half }\right)_{,k}}_{=0} \epsilon_{r_1 \dots r_N}+\left(\epsilon(a)a\right)^{\half } \underbrace{\epsilon_{r_1 \dots r_N,k}}_{=0}\\
+&=0
+\end{align}
+The proof for $\eta^{r_1\dots r_N}$ is identical.
 $$\blacklozenge$$
 \newpage
 
@@ -192,8 +234,28 @@ $$\blacklozenge$$
 Prove that if $T^n$ is a relative vector of weight $W$ then,
 $$\mathbf{7.220} \quad T^n_{\ |n}= \left(\epsilon(a)a\right)^{\half(W-1)}\pdv{}{x^n}\left[\left(\epsilon(a)a\right)^{\half(1-W)}T^n\right]$$ 
 \end{tcolorbox}
+From $\mathbf{7.207}$ we can define an orientable absolute tensor
+\begin{align}
+t^n= \left(\epsilon(a)a\right)^{-\half W}T^n
+\end{align}
+and from $\mathbf{2.545}$, for an absolute tensor yields,
+\begin{align}
+& t^n_{\ |n} = \left(\epsilon(a)a\right)^{-\half }\pdv{}{x^n} \left(\epsilon(a)a\right)^{\half }t^n\\
+(2) \times \left(\epsilon(a)a\right)^{\half W}\spatie 
+&\left(\epsilon(a)a\right)^{\half W}t^n_{\ |n} = \left(\epsilon(a)a\right)^{\half W}\left(\epsilon(a)a\right)^{-\half }\pdv{}{x^n} \left(\epsilon(a)a\right)^{\half }t^n\\
+\Rightarrow \spatie &\left(\epsilon(a)a\right)^{\half W}t^n_{\ |n} = \left(\epsilon(a)a\right)^{\half W}\left(\epsilon(a)a\right)^{-\half }\pdv{}{x^n} \left(\epsilon(a)a\right)^{\half }\left(\epsilon(a)a\right)^{-\half W}T^n\\
+\Leftrightarrow \spatie &\left(\epsilon(a)a\right)^{\half W}t^n_{\ |n} = \left(\epsilon(a)a\right)^{\half (W-1)}\pdv{}{x^n} \left(\epsilon(a)a\right)^{\half (1-W) }T^n
+\end{align}
+as $ \left(\epsilon(a)a\right)^{\half W}_{\ \ \ |n}=0$, $(5)$ can be written as 
+\begin{align}
+&\left[\underbrace{\left(\epsilon(a)a\right)^{\half W}t^n}_{= T^n}\right]_{|n} = \left(\epsilon(a)a\right)^{\half (W-1)}\pdv{}{x^n} \left(\epsilon(a)a\right)^{\half (1-W) }T^n\\
+\Rightarrow \spatie &T^n_{\ |n} = \left(\epsilon(a)a\right)^{\half (W-1)}\pdv{}{x^n} \left(\epsilon(a)a\right)^{\half (1-W) }T^n
+\end{align}
 $$\blacklozenge$$
 \newpage
+
+
+
 
 \section{p255 - Clarification}
 \begin{tcolorbox}
@@ -258,8 +320,8 @@ As we can see in figure $7.2$,  it's no hard to see that
 \end{align}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p255_Exa1.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p255_Exa2.tex}}
+    \subfloat[]{\input{./images/fig_p255_Exa1.tex}}\\
+    \subfloat[]{\input{./images/fig_p255_Exa2.tex}}
 \caption{Permutations}
 \label{fig:fig_p255}
 \end{figure}
@@ -349,9 +411,9 @@ d\tau_{(2)}^{zz}&= \underbrace{\epsilon^{11}}_{=0}\pdv{z}{\theta}\pdv{z}{\theta}
 \end{align}
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exa.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxz.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p257_Exaxy.tex}}
+    \subfloat[]{\input{./images/fig_p257_Exa.tex}}\\
+    \subfloat[]{\input{./images/fig_p257_Exaxz.tex}}\\
+    \subfloat[]{\input{./images/fig_p257_Exaxy.tex}}
 \caption{Projections of extensions}
 \label{fig:fig_p257}
 \end{figure}
@@ -370,7 +432,7 @@ It is easy to see that $\pdv{x}{u}\pdv{y}{v}-\pdv{x}{v}\pdv{y}{u}=0$, yet the su
 
 \begin{figure}[H]%
     \centering
-    \input{D:/MathLatex/images/fig_p257_Exb.tex}
+    \input{./images/fig_p257_Exb.tex}
 \caption{A disk defined as $S: \left\{\mathbb{R}^2\rightarrow \mathbb{R}^3: \ S(u,v)= \left(\frac{u}{\sqrt{u^2+v^2+C}},\ \frac{v}{\sqrt{u^2+v^2+C}}, \ 1\right)\right\}$}
 \label{fig:fig_p257}
 \end{figure}
@@ -499,8 +561,8 @@ Remember that what we do here is just take 'slices' of a space. compare it to an
 
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p265_Exa.tex}}\\
-    \subfloat[]{\input{D:/MathLatex/images/fig_p265_Exb.tex}}
+    \subfloat[]{\input{./images/fig_p265_Exa.tex}}\\
+    \subfloat[]{\input{./images/fig_p265_Exb.tex}}
 \caption{Manifold with $ds^2=R^2\left[dr^2+\sin^2 r\left(d\theta^2+\sin^2\theta d\phi^2\right)\right]$ metric, embedded in an Euclidean $4-$space}
 \label{fig:fig_p265}
 \end{figure}
@@ -1095,7 +1157,6 @@ The same is true for $W_4$. using the assumption $\int_{U_4} dv_{(4)}^{}=\int_{W
 $$\blacklozenge$$
 \newpage
 
-
 \section{p280 - Exercise 13}
 \begin{tcolorbox}
 In a non-metrical space $V_3$ there is given an absolute covariant vector field $v_r$. Then the derived vector field $\omega^r =\epsilon^{rmn}v_{n,m}$ determines an invariant direction at each point of $V_3$ and hence a congruence of curves in $V_3$. A tube $T$ is chosen, composed of such curves, and $C$, $C^{'}$ are two closed curves lying in $T$, and such that they may be deformed into another without leaving $T$. Prove that
@@ -1118,7 +1179,7 @@ $$\lozenge$$
 Let's thackle the proof.
 \begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p280_Ex13a.tex}}
+    \subfloat[]{\input{./images/fig_p280_Ex13a.tex}}
 \caption{Vortice tube in non-metrical space}
 \label{fig:fig_p280a}
 \end{figure}
@@ -1166,7 +1227,7 @@ Thus $(7)$ can be written as
 \end{align}
 Let's now consider the space $R_{(3)}$ bounded by the three surfaces $R^{}_{(2)}, \ R^{T}_{(2)}, \ R^{'}_{(2)},$. Lets put $R^\Sigma_{(2)}$ the union of those three surfaces.\begin{figure}[H]%
     \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p280_Ex13b.tex}}
+    \subfloat[]{\input{./images/fig_p280_Ex13b.tex}}
 \caption{Vortice tube in non-metrical space}
 \label{fig:fig_p280b}
 \end{figure}
@@ -1364,109 +1425,117 @@ $$\blacklozenge$$
 In a flat $N-$space, as in exercise $16$, if we put $r^2=z_pz_p$, then $z_p=\partial_{z_p}\left(\half r^2\right)$, and the outward-drawn unit normal to the sphere $z_p z_p= R^2$ is $n_p= \frac{z_p}{R}$. Use these facts and Green's theorem to prove that
 $$\int r^2dV = \frac{N}{N+2}R^2 V$$ where the integral is taken throughout the interior of the sphere, and $V$ is the volume of the sphere.
 \end{tcolorbox}
-Let's immerse the  flat $N-$space in a flat $N+1-$space and consider a sphere $z_p z_p= R^{'2}$. Consider also the tensor $T^p=z_p$. We have  $T^p_{\ ,p}= N+1$. By Green's theorem we can write for the volume $V^{'}_{(N+1)} = \int_{V^{'}_{(N+1)}} dv^{'}_{(N+1)} $ of the $N+1-$sphere:
+Consider the function $F= z_q r^2$, then
+
 \begin{align}
-V^{'}_{(N+1)} &= \frac{1}{N+1}\int_{V^{'}_{(N+1)}}T^p_{\ ,p} dv^{'}_{(N+1)} \\
-&=\frac{1}{N+1}\int_{V^{'}_{(N)}} T^p n_p v^{'}_{(N)} \\
-&=\frac{1}{N+1}\int_{V^{'}_{(N)}} z_p\frac{z_p}{R^{'}} v^{'}_{(N)} \\
-&=\frac{1}{R^{'}\left(N+1\right)}\int_{V^{'}_{(N)} } r^2 v^{'}_{(N)}
+F_{,p}&= \left(z_q r^2\right)_{,p}\\
+&= \delta_{qp}r^2+2rr_{,p}z_q\\
+\left(r r_{,p}= z_p \right)\Rightarrow\spatie F_{,p}&= \delta_{qp}r^2+2z_pz_q\\
+\end{align}
+put $z_p=z_q$
+\begin{align}
+F_{,p}&= Nr^2+2r^2\\
+&= \left(N+2 \right)r^2
+\end{align}
+Hence, 
+\begin{align}
+\left(N+2\right)\int_{V(N)} r^2 dv_{(n)} &= \int_{V(N)}F_{,p} dv_{(N)} \\
+\text{Green's theorem }\Rightarrow\spatie &=  \int_{V(N-1)}z_p r^2 n_p dv_{(N-1)} \\
+&=  \int_{V(N-1)}r^2 \frac{z_p z_p}{R} dv_{(N-1)} 
+\end{align}
+but in the $V_{(N-1)}$ integral $r=R^2$ and $z_p z_p = R^2$ as we are integrating on he shell of $V_{(N)}$
+\begin{align}
+\Rightarrow\spatie \left(N+2\right)\int_{V(N)} r^2 dv_{(n)} &=R^3 \int_{V(N-1)} dv_{(N-1)} \\
+&=R^3 V_{(N-1)} 
+\end{align}
+The volume $V_{(N-1)} $ is not the volume of the $N-1$ ball in a $N-1$space, but is the 'area' of the shell enclosing $V_{(N-1)}$
+$$\lozenge$$
+\textbf{Lemma} : The area of a sphere enclosing a ball with volume $V_{(N)}$ is 
+$$ S_{(N)} = \frac{N}{R} V_{(N)}$$
+\textbf{Proof}:\\
+From exercise $16$ we know that $V_{(N)}= K(N)R^N$ with $K(N)$ not a function of $R$. The same way of reasoning gives us 
+$$S_{(N)}= L(N)R^{N-1}$$  
+We consider the ball $V_{(N)}$ as the union of the shells (spheres of radius $r$ with a thickness $dr$) and get
+
+\begin{align}
+V_{(N)} &= \int_{0}^{R} S(N,r) dr\\
+&= L(N)\int_{0}^{R} R^{N-1} dr\\
+&= \frac{L(N)}{N} R^{N}\\
+&= L(N)R_{N-1}\frac{R}{N} \\
+&= S(N)\frac{R}{N}\\
+\Rightarrow\spatie S_{(N)} &=\frac{N V_{(N)}}{R}
+\end{align}
+$$\lozenge$$
+applying this to $(11)$ 
+\begin{align}
+\spatie \left(N+2\right)\int_{V(N)} r^2 dv_{(n)} &=R^3 S_{(N)}\\
+&=R^3 \frac{N V_{(N)}}{R}\\ 
+&=R^3 S_{(N)}\\
+&=R^2 N V_{(N)}\\
+\Rightarrow \spatie  \int_{V(N)} r^2 dv_{(n)} &= \frac{N}{N+2} R^2 V_{(N)}
+\end{align}
+$$\blacklozenge$$
+
+
+\section{p281 - Exercise 18}
+\begin{tcolorbox}
+Using Ex. $17$, or otherwise, prove that the fourth-order moment of inertia tensor (cf. equation $\mathbf{(5.330)}$) for a sphere of uniform density $\rho$ and radius $R$, calculated with its centre as origin, is
+$$J_{nprq} = \frac{\rho V R^2}{N+2}\delta_{pq}^{rq}$$
+(proof first that $\int z_p z_qdV = \frac{\delta_{pq} V R^2}{N+2}$).
+Show also hat the fraction $I_{st}$, if defined by $\mathbf{(5.335)}$, has components
+$$I_{st}=\rho V R^2 \frac{N-1}{N+2}\delta_{st}$$
+\end{tcolorbox}
+As in exercise $17$, we define
+\begin{align}
+F&= z_q r^2\\
+F_{,p}&=\delta_{qp}r^2+2z_pz_q
+\end{align}
+\begin{align}
+\Rightarrow\spatie \delta_{qp}\int_{V_{(N)}}r^2 dv_{(N)} +2\int_{V_{(N)}}z_pz_q dv_{(N)} &= \int_{V_{(N)}}F_{,p}dv_{(N)}
+\end{align}
+Using the previous exercise and Green's theorem,  considering that on the subspace $V_{(N-1)}$ (shell enclosing $V_{(N)}$) we have $r=R$, we get 
+\begin{align}
+2\int_{V_{(N)}}z_pz_qdv_{(N)} &= R\int_{V_{(N-1)}}z_q z_p dv_{(N-1)}-\delta_{qp}\frac{NR^2}{N+2}{V_{(N)}}
+\end{align}
+The first term in the right part of the expression can be written as
+\begin{align}
+R\int_{V_{(N-1)}}z_q z_p dv_{(N-1)}&= R^2\int_{V_{(N-1)}}z_q n_pdv_{(N-1)}\\
+&=  R^2\int_{V_{(N)}}z_{q,p}dv_{(N)}\\
+&=  R^2\delta_{qp}V_{(N)}
 \end{align}
 giving
 \begin{align}
-\int_{V_{(N)}} r^2 dv_{(N)}&=R^{'}\left(N+1\right)V_{(N+1)} 
+2\int_{V_{(N)}}z_pz_qdv_{(N)} &=  2\delta_{qp}\frac{R^2V_{(N)}}{N+2}
 \end{align}
-By exercise $16$ we can write
 \begin{align}
-V_{(N+1)} = \pi^{\half\left(N+1\right)} \frac{R^{'N+1}}{\Gamma \left(\half\left(N+1\right)+1\right)}
-\end{align} 
-
-Using the functional expression of the Gamma function $\Gamma\left(p+1\right) = p\Gamma\left(p\right)$, 
-$(6)$ becomes
-\begin{align}
-V_{(N+1)} = \pi^{\half\left(N+1\right)} \frac{2}{\left(N+1\right)\Gamma \left(\half\left(N+1\right)\right)}R^{'N+1}
-\end{align}  
-and thus 
-\begin{align}
-\int_{V_{(N)}} r^2 dv_{(N)}&=\pi^{\half\left(N+1\right)} \frac{2N}{\Gamma \left(\half\left(N+1\right)\right)}R^{'}R^{'N+1}\\
-&=N R^{'2 }\frac{2\pi^{\half\left(N+1\right)}}{\Gamma \left(\half\left(N+1\right)\right)}R^{'N}
+\Rightarrow \spatie \int_{V_{(N)}}z_pz_qdv_{(N)} &=  \delta_{qp}\frac{R^2V_{(N)}}{N+2}
 \end{align}
-
-The expression $(8)$ "lives" in the $n+1-$space.
-
-The sphere in the $N+1-$ space has an area equal to
-$$S^{'}_{N}= \frac{2\pi^{\half(N+1)}}{\Gamma\left(\half (N+1)\right)}R^{'N}$$
-The volumes of the the sphere in the $N-$space is
+$$\lozenge$$
+From $\mathbf{(5.330)}$ 
 \begin{align}
-V^{}_{(N)} = \pi^{\half N} \frac{R^{N}}{\Gamma \left(\half N+1\right)}
+J_{nprq} &= \Sigma m \left(\delta_{nr}z_q z_p-\delta_{pr}z_n z_q\right)\\
+&= \rho\int_{V_{(N)}} \delta_{nr}z_q z_p dv_{(N)}-\rho\int_{V_{(N)}}\delta_{pr}z_n z_q dv_{(N)}
 \end{align}
-
-and $(9)$ becomes
-
+using $(9)$ we get
 \begin{align}
-\int_{V_{(N)}} r^2 dv_{(N)}&=N V^{}_{(N)} R^{'2 }
+J_{nprq} &= \rho\delta_{nr}\delta_{pq}\frac{R^2V_{(N)}}{N+2}-\rho\delta_{pr}\delta_{nq}\frac{R^2V_{(N)}}{N+2}\\
+&= \rho\frac{R^2V_{(N)}}{N+2}\left(\delta_{nr}\delta_{pq}- \delta_{pr}\delta_{nq}\right)
 \end{align}
-as $S^{'}_N=V^{}_N$ we get
-
+From exercise $9$, chapter 4, page 140: $\epsilon_{np}\epsilon_{rq} = \left(\delta_{nr}\delta_{pq}- \delta_{pr}\delta_{nq}\right)$
 \begin{align}
-& \pi^{\half N} \frac{R^{N}}{\Gamma \left(\half N+1\right)}=\frac{2\pi^{\half(N+1)}}{\Gamma\left(\half (N+1)\right)}R^{'N}\\
-\Rightarrow \quad & R^{'N} =\half\sqrt{\pi}\frac{\Gamma\left(\half (N+1)\right)}{\Gamma \left(\half N+1\right)}R^{N}
+J_{nprq} &=\rho\frac{R^2V_{(N)}}{N+2}\epsilon_{np}\epsilon_{rq}
 \end{align}
-Let's compute further $\Gamma\left(\half (N+1)\right)$ and $\Gamma \left(\half N+1\right)$ with $p=\half N$
+and as $\epsilon_{np}\epsilon_{rq} = \delta_{rq}^{np} =  \delta^{rq}_{np}$ (see $\mathbf{(7.144)}$) we get 
 \begin{align}
-\Gamma\left(\half (N+1)\right) &= \Gamma\left(p+ \half \right)\\
-&= \Gamma\left(p-\half+1 \right)\\
-&= \left(p-\half\right)\Gamma\left(p-\half \right)\\
-&= \left(p-\half\right)\Gamma\left(p-\frac{3}{2} +1\right)\\
-&= \left(p-\half\right)\left(p-\frac{3}{2}\right)\Gamma\left(p-\frac{3}{2} \right)\\
-&\vdots\\ 
-&= \left(p-\half\right)\left(p-\frac{3}{2}\right)\dots \left(p-\frac{2 k_{max}-1}{2}\right)\Gamma\left(p-\frac{2 k_{max}-1}{2} \right)
+J_{nprq} &=\rho\frac{R^2V_{(N)}}{N+2} \delta^{rq}_{np}
 \end{align}
-where $ p-\frac{2 k_{max}-1}{2}$ is equal to $2$ or $\half$ depending on whether $N$ is odd or even.
-This gives two possibilities
+$$\lozenge$$
+Definition $\mathbf{(5.335)}$ gives
 \begin{align}
-\left\{\begin{array}{ll}
-\Gamma\left(\half (N+1)\right) = \left(p-\half\right)\left(p-\frac{3}{2}\right)\dots \left(p-\frac{2 k_{max}-1}{2}\right)\Gamma\left(\half  \right)& \text{( N = even)}\\\\
-\Gamma\left(\half (N+1)\right) = \left(p-\half\right)\left(p-\frac{3}{2}\right)\dots \left(p-\frac{2 k_{max}-1}{2}\right)\Gamma\left(2 \right)& \text{( N = odd)}\\
-\end{array}\right.
-\end{align}
-giving
-\begin{align}
-\left\{\begin{array}{ll}
-\Gamma\left(\half (N+1)\right) =\left(\half\right)^{p }\left(2p-1\right)\left(2p-3\right)\left(2p-5\right)\dots (3)(2)\sqrt{\pi}& \text{( N = even)}\\\\
-\Gamma\left(\half (N+1)\right) = \left(\half\right)^{p -\half}\left(2p-1\right)\left(2p-3\right)\left(2p-5\right)\dots  (4)(2)(1)& \text{( N = odd)}\\
-\end{array}\right.
-\end{align}
-and for $\Gamma\left(\half N+1)\right)$
-\begin{align}
-\Gamma\left(\half N+1)\right) &= \Gamma\left(p+ 1\right)\\
-&= \Gamma\left(p-1+1 \right)\\
-&= \left(p-1\right)\Gamma\left(p-1 \right)\\
-&= \left(p-1\right)\Gamma\left(p-2 +1\right)\\
-&= \left(p-1\right)\left(p-2\right)\Gamma\left(p-2 \right)\\
-&\vdots\\ 
-&= \left(p-1\right)\left(p-2\right)\dots \left(p- k_{max}\right)\Gamma\left(p- k_{max}\right)
-\end{align}
-where $ p- k_{max}$ is equal to $1$ or $\half$ depending on whether $N$ is odd or even.
-This gives two possibilities
-\begin{align}
-\left\{\begin{array}{ll}
-\Gamma\left(\half N+1)\right) = \left(p-1\right)\left(p-2\right)\dots (2)(1)\Gamma\left(1  \right)& \text{( N = even)}\\\\
-\Gamma\left(\half N+1)\right) = \left(p-1\right)\left(p-2\right)\dots \left(\frac{3}{2}\right)\left( \half\right)\Gamma\left(\half \right)& \text{( N = odd)}\\
-\end{array}\right.
-\end{align}
-giving
-\begin{align}
-\left\{\begin{array}{ll}
-\Gamma\left(\half N+1)\right) = 2^{p-1}\left(2p-2\right)\left(2p-2\right)\dots (4)(2)& \text{( N = even)}\\\\
-\Gamma\left(\half N+1)\right) = 2^{p}\left(2p-2\right)\left(2p-4\right)\dots \left(3\right)\left( 1\right)\sqrt{\pi}& \text{( N = odd)}\\
-\end{array}\right.
-\end{align}
-giving 
-\begin{align}
-\left\{\begin{array}{ll}
-\frac{\Gamma\left(\half (N+1)\right)}{\Gamma \left(\half N+1\right)}= \frac{\left(\half\right)^{p }\left(2p-1\right)\left(2p-3\right)\left(2p-5\right)\dots (3)(2)\sqrt{\pi}}{2^{p-1}\left(2p-2\right)\left(2p-2\right)\dots (4)(2)}& \text{( N = even)}\\\\
-\frac{\Gamma\left(\half (N+1)\right)}{\Gamma \left(\half N+1\right)} = \frac{\left(\half\right)^{p -\half}\left(2p-1\right)\left(2p-3\right)\left(2p-5\right)\dots  (3)(2)(1)}{2^{p}\left(2p-2\right)\left(2p-4\right)\dots \left(3\right)\left( 1\right)\sqrt{\pi}}& \text{( N = odd)}\\
-\end{array}\right.
+I_{st} &= \delta_{st}\Sigma m z_q z_q -\Sigma m z_s z_t \\
+\Rightarrow \spatie &=  \rho \delta_{st}\int_{V_{(N)}}  z_q z_q dv_{(N)} -\rho \int_{V_{(N)}} z_s z_t dv_{(N)}\\
+&=  \delta_{st}\rho\frac{N R^2 }{N+2}V_{(N)}  - \delta_{st}\rho \frac{R^2}{N+2} V_{(N)}\\
+&=  \rho\frac{N-1 }{N+2}R^2 V_{(N)}\delta_{st} 
 \end{align}
 $$\blacklozenge$$
 \newpage

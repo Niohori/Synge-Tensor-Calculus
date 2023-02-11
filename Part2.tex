@@ -41,8 +41,7 @@
 \usetikzlibrary{patterns}
 \usepackage{tkz-euclide}
 \usepackage{tikz-3dplot}
-\usepgfplotslibrary{external} 
-\tikzexternalize
+
 %\usepackage[margin=0cm,nohead]{geometry}
 %\usepackage[active,tightpage]{preview}
 %\usepackage[pdf]{pstricks}
@@ -97,7 +96,8 @@
 \end{comment}
 
 %**************************** Where to find images *****************************
-\graphicspath{ {D:/MathLatex/images/} }
+%\graphicspath{ {images/} }
+%\graphicspath{ {./images/} }
 
 
 %**************************** Document itself *******************************
@@ -110,9 +110,9 @@ Chapters \RomanNumeralCaps{5} to \RomanNumeralCaps{8}}
 
 \tableofcontents
 \listoffigures
-\include{chapter5}
-\include{chapter6}
-\include{chapter7}
-%\include{chapter8}
+%\include{chapter5}
+%\include{chapter6}
+%\include{chapter7}
+\include{chapter8}
 \printbibliography %Prints bibliography
 \end{document}
