@@ -8,7 +8,7 @@
 #### pdflatex -shell-escape "filename".
 #### This  can be done in LaTeX editors: there is usually a place in the settings for this type of thing.
 #### I use Texmaker and this how the settings look like:
-<img src="images/texmaker.png" width="800" />
+<img src="https://github.com/Niohori/Synge-Tensor-Calculus/blob/main/images/texmaker.PNG" width="800" />
 
 
 
