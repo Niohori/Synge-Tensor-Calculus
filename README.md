@@ -5,9 +5,10 @@
 ### Possible problem when compiling the Latex code. 
 #### Due to use of a lot of TIKZ plots, your Latex compilation  will probably fail, issuing a memory overflow error message. 
 #### One way to turn around this problem, is to add the "-shell-escape" switch in de pdf-command line, something like
-#### pdflatex -shell-escape <filename>.
+#### pdflatex -shell-escape "filename".
 #### This  can be done in LaTeX editors: there is usually a place in the settings for this type of thing.
 #### I use Texmaker and this how the settings look like:
-![Settings](texmaker.png)
+<img src="texmaker.png" alt="Alt text" title="Settings">
+
 
 
