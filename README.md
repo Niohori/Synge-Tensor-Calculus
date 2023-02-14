@@ -9,6 +9,7 @@
 #### This  can be done in LaTeX editors: there is usually a place in the settings for this type of thing.
 #### I use Texmaker and this how the settings look like:
 <img src="https://github.com/Niohori/Synge-Tensor-Calculus/blob/main/images/texmaker.PNG" width="800" />
+#### This way, every image will be treated as a separate pdf-file and will make the compilation faster (except the first time).
 
 
 
