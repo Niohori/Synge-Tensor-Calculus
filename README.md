@@ -8,7 +8,7 @@
 #### pdflatex -shell-escape "filename".
 #### This  can be done in LaTeX editors: there is usually a place in the settings for this type of thing.
 #### I use Texmaker and this how the settings look like:
-<img src="/texmaker.png" width="800" />
+<img src="images/texmaker.png" width="800" />
 
 
 
