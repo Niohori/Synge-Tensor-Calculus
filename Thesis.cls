@@ -1,5 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesClass{ut-thesis}
+%\ProvidesClass{ut-thesis}
+\ProvidesClass{thesis}
 [2021/08/26 v3.1.5 University of Toronto thesis class]
 \newif\ifmargins@equal
 \newlength{\margin@base}

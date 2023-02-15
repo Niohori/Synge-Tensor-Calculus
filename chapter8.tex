@@ -497,7 +497,7 @@ giving for $(5)$:
  &= \left[ \half\underbrace{\left(\Gamma^s_{mt}-\Gamma^s_{tm} -\right)_0}_{=\delta^s_mA_{t(0)} - \delta^s_t A_{m(0)}}X^m_{\mu}+ \half \delta^{s}_m A_{t(0)}X^m_{\mu}+ \half \delta^{s}_t A_{m(0)}X^m_{\mu}\right]T_s\lambda^t\\
  &= \left[ \half\delta^s_mA_{t(0)} X^m_{\mu}- \half\delta^s_t A_{m(0)}X^m_{\mu}+ \half \delta^{s}_m A_{t(0)}X^m_{\mu}+ \half \delta^{s}_t A_{m(0)}X^m_{\mu}\right]T_s\lambda^t\\
  &=  \delta^s_mA_{t(0)} X^m_{\mu}T_s\lambda^t\\
- &= \underbrace{\left(A_{t(0)} \lambda^t\right)}_{\text{invariant}}\underbrace{T_sX^s_{\mu}}_{= T_{\mu}}\\
+ &= \underbrace{\left(A_{t(0)} \lambda^t\right)}_{\text{invariant}}\underbrace{T_sX^s_{\mu}}_{= T_{\mu}}
 \end{align}
 and we get $$\Delta T_{\mu}= kT_{\mu}$$.
 $$\blacklozenge$$\\
@@ -882,7 +882,7 @@ As we want $P^r_{mn}$ to be invariant under projective transformations, we have 
 \begin{align}
 A^r_{mn}&=\frac{1}{N+1}\left[\delta^r_m\left( \Gamma^{'p}_{pn}-\Gamma^p_{pn}\right) +  \delta^r_n \left(\Gamma^{'p}_{pm} -   \Gamma^p_{pm} \right)\right]
 \end{align}
-From this we see that $A^r_{mn}$ must of the form
+From this we see that $A^r_{mn}$ must be of the form
 $$A^r_{mn}=\delta^r_n\phi_m+\delta^r_n\phi_n$$
 with $\phi_k = \frac{1}{N+1}\left( \Gamma^{'p}_{pk}-\Gamma^p_{pk}\right) $, which leads to the type of transformations as defined in $\mathbf{(8.337)}$.
 $$\blacklozenge$$
@@ -1515,7 +1515,6 @@ $$\blacklozenge$$
 
 
 
-\begin{comment}
 \section{p312 - Exercise 22}
 \begin{tcolorbox}
 Substituting into equations $a_{mn,rs}-a_{mn,sr}=0$ from $\mathbf{(8.304)}$, and using $\mathbf{(8.318)}$, $\mathbf{(8.219)}$, show that, in a Weyl space, the metric tensor $a_{mn}$ satisfies the algebraic equations
@@ -1529,10 +1528,7 @@ We have:
 \begin{align}
 \left\{\begin{matrix}
 \mathbf{(8.304)}&a_{mn,r}-\Gamma^k_{mr}a_{kn} - \Gamma^k_{nr}a_{mk} + a_{mn}\phi_{r}=0\\\\
-\mathbf{(8.318)}&F_{mn} = \begin{Bmatrix}
-r\\
-m n\\
-\end{Bmatrix}+\half N\phi_n\\\\
+\mathbf{(8.318)}&F_{mn} = \frac{N}{4}\left(\phi_{n,m}- \phi_{m,n}\right)\\\\
 \mathbf{(8.219)}&F_{mn} = \half R^s_{.smn}=\half \left(\pdv{\Gamma^s_{ns}}{x^m} - \pdv{\Gamma^s_{ms}}{x^n}\right)\\\\
 \mathbf{(8.214)}&R^s_{.rmn} = \pdv{\Gamma^s_{rn}}{x^m} - \pdv{\Gamma^s_{rm}}{x^n}+\Gamma^p_{rn}\Gamma^s_{pm}-\Gamma^p_{rm}\Gamma^s_{pn}\\\\
 \end{matrix}\right.
@@ -1544,19 +1540,62 @@ m n\\
 \end{matrix}\right\}=0
 \end{align} 
 We can get rid of the partial derivatives of the metric tensor by using $\mathbf{(8.214)}$ again, giving for $(2)$
-\begin{align}\left.\begin{matrix}
-\Gamma^k_{ms,r}a_{kn} + \Gamma^k_{ns,r}a_{mk} - a_{mn}\phi_{s,r}\\\\- a_{mn,r}\phi_{s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
-+\Gamma^k_{ms}a_{kn,r}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right) \\\\
-+ \Gamma^k_{ns}a_{mk,r}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right) \\\\
+\begin{align*}
+\left.\begin{matrix}
+\Gamma^k_{ms,r}a_{kn} + \Gamma^k_{ns,r}a_{mk} - a_{mn}\phi_{s,r}\\\\- \phi_{s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
++\Gamma^k_{ms}\left(\Gamma^q_{kr}a_{qn} + \Gamma^q_{nr}a_{kq} - a_{kn}\phi_{r}\right) \\\\
++ \Gamma^k_{ns}\left(\Gamma^q_{mr}a_{qk} + \Gamma^q_{kr}a_{mq} - a_{mk}\phi_{r}\right) \\\\
 -\Gamma^k_{mr,s}a_{kn} - \Gamma^k_{nr,s}a_{mk} + a_{mn}\phi_{r,s}\\\\
-+ a_{mn,s}\phi_{r}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
--\Gamma^k_{mr}a_{kn,s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
-- \Gamma^k_{nr}a_{mk,s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)
-\end{matrix}\right\}=0
++ \phi_{r}\left(\Gamma^q_{ms}a_{qn} + \Gamma^q_{ns}a_{mq} - a_{mn}\phi_{s}\right)\\\\
+-\Gamma^k_{mr}\left(\Gamma^q_{ks}a_{qn} + \Gamma^q_{ns}a_{kq} - a_{kn}\phi_{s}\right)\\\\
+- \Gamma^k_{nr}\left(\Gamma^q_{ms}a_{qk} + \Gamma^q_{ks}a_{mq} - a_{mk}\phi_{s}\right)
+\end{matrix}\right\}&=0\\\\\\
+\Leftrightarrow \spatie\left.\begin{matrix}
+a_{kn}\left(\underbrace{\Gamma^k_{ms,r}-\Gamma^k_{mr,s} +\Gamma^q_{ms}\Gamma^k_{qr}-\Gamma^q_{mr}\Gamma^k_{qs}}_{=R^k_{.mrs}}\right)\\\\
++ a_{mk}\left(\underbrace{\Gamma^k_{ns,r} - \Gamma^k_{nr,s}+\Gamma^q_{ns} \Gamma^k_{qr} - \Gamma^q_{nr} \Gamma^k_{qs} }_{=R^k_{.nrs}}\right)\\\\
+ +a_{mk}\left(\underbrace{\Gamma^k_{ns}\phi_{r} - \phi_{s} \Gamma^k_{nr}+ \Gamma^k_{nr} \phi_{s}- \Gamma^k_{ns}\phi_{r}}_{=0}\right) \\\\
++a_{kn}\left(\underbrace{\Gamma^k_{ms}\phi_{r}- \phi_{s}\Gamma^k_{mr}+\Gamma^k_{mr} \phi_{s}- \Gamma^k_{ms}\phi_{r}}_{=0}\right) \\\\
++ a_{kq}\left(\Gamma^k_{ms}\Gamma^q_{nr}  -\Gamma^k_{mr} \Gamma^q_{ns}\right) \\\\
++ a_{qk}\left(\Gamma^k_{ns}\Gamma^q_{mr}- \Gamma^k_{nr}\Gamma^q_{ms}\right) \\\\
+-a_{mn}\left(\underbrace{ \phi_{s,r}-\phi_{r,s}}_{=\frac{4}{N}F_{rs} }\right)
+\end{matrix}\right\}&=0\\
+\end{align*} 
+giving with $\frac{4}{N}F_{rs} = \frac{4}{N}\half R^q_{.qrs}=\frac{2}{N} R^q_{.qrs}$
+\begin{align*}
+\left.\begin{matrix}
+a_{kn}R^k_{.mrs}+ a_{mk}R^k_{.nrs}\\\\
++ \underbrace{a_{kq}\left(\Gamma^k_{ms}\Gamma^q_{nr}  -\Gamma^k_{mr} \Gamma^q_{ns}\right) 
++ a_{kq}\left(\Gamma^q_{ns}\Gamma^k_{mr}- \Gamma^q_{nr}\Gamma^k_{ms}\right) }_{=0}\\\\
+-a_{mn}\frac{2}{N}R^q_{.qrs}\\
+\end{matrix}\right\}&=0
+\end{align*}
+i.e.
+\begin{align}
+a_{kn}R^k_{.mrs}+ a_{mk}R^k_{.nrs}-\frac{2}{N}a_{mn}R^t_{.trs}&=0
 \end{align} 
+Swapping $(m,n)$ in expression $(3)$ and adding this to $(3)$ gives
+\begin{align*}
+a_{pn}R^p_{.mrs}+ a_{mq}R^q_{.nrs}+a_{pm}R^p_{.nrs}+ a_{nq}R^q_{.mrs}-\frac{2}{N}\left(a_{mn}+a_{nm}\right)R^t_{.trs}&=0\\
+\Leftrightarrow\spatie a_{pq}\delta^q_n R^p_{.mrs}+ a_{pq}\delta^p_mR^q_{.nrs}+a_{pq}\delta^q_mR^p_{.nrs}+ a_{pq}\delta^p_nR^q_{.mrs}-\frac{2}{N}\left(a_{pq}\delta^p_m\delta^q_n+a_{pq}\delta^q_m\delta^p_n\right)R^t_{.trs}&=0
+\end{align*}
+giving as final result
+\begin{align}a_{pq}\left[\half\left(\delta^q_n R^p_{.mrs}+\delta^p_mR^q_{.nrs}+\delta^q_mR^p_{.nrs}+\delta^p_nR^q_{.mrs}\right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs}\right]=0
+\end{align}
+as asked.\\\\
+
+$$\lozenge$$\\\\
+We use $\mathbf{(8.301)}:  \quad a_{mn|r}+ a_{mn}\phi_r=0$ in the  
+covariant differentiation of $(4)$. \\
+This  gives
+\begin{align}
+\left.\begin{matrix}
+-a_{pq}\phi_{t_1}\left[\half\left(\delta^q_n R^p_{.mrs}+\delta^p_mR^q_{.nrs}+\delta^q_mR^p_{.nrs}+\delta^p_nR^q_{.mrs}\right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs}\right]\\\\
++a_{pq}\left[\half\left(\delta^q_n R^p_{.mrs|t_1}+\delta^p_mR^q_{.nrs|t_1}+\delta^q_mR^p_{.nrs|t_1}+\delta^p_nR^q_{.mrs|t_1}\right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs|t_1}\right]
+\end{matrix}\right\}&=0
+\end{align}
 $$\blacklozenge$$
 \newpage
-\end{comment}
+
 
 
 
