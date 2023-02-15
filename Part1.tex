@@ -1,4 +1,5 @@
-\documentclass{ut-thesis}
+%\documentclass{ut-thesis}
+\documentclass{thesis}
 
 %**************************** General libraries *******************************
 \usepackage{mathtools}
@@ -30,6 +31,8 @@
 
 %**************************** Tikz libraries *******************************
 \usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
 \usetikzlibrary{shapes,arrows,arrows.meta,spy}
 \usetikzlibrary{calc}% needed for BB
 \usepackage{pgfplots}
@@ -116,6 +119,12 @@ Chapters \RomanNumeralCaps{1} to \RomanNumeralCaps{4}}
 \section*{Remarks and warnings}
 You're welcome to use these notes, but they may contain errors, so proceed with caution : I graduated in 1979, went straight in the industry (where I didn't have to use fancy maths), and picked mathematics and physics again after I retired, so my mathematics got rusty  for sure. If you do find an error, typo's , I'd be happy to receive bug reports, suggestions, and the like, through Github.
 An overview of the material covered in the book can be found in the separate document "Synge overview.pdf".
+\newpage
+
+\section*{References: I used following books}
+\textbf{D. Beklémichev}, \textit{Cours de Géométrie analytique et d'Algèbre Linéaire}, 1988, Editions Mir-Moscou\\
+\textbf{L. Pontriaguine}, \textit{Equations différentielles ordinaires}, 1969, Editions Mir-Moscou\\
+\textbf{S.M. Selby (Ed.)}, \textit{CRC Standard Mathematical Tables $22^{nd}$ edition}, 1974, CRC Press, Cleveland \\
 
 \section*{Some notation conventions}
 
@@ -128,11 +137,12 @@ $\lozenge$&end of Lemma or sub-task of an exercise.\\\\
 &\textbf{As a rule, I followed the notation used in the book,}\\ &\textbf{except some which where easier to type in Latex.}\\\\
 $\partial_r $ &$\equiv \pdv{}{x^r}$  \\\\
 $\partial^2_{rs}$  &$\equiv \frac{\partial^2}{\partial x^r \partial x^s}$ \\\\
-$\Gamma^r_{mn} $&$\equiv 
+$\Gamma^r_{mn} \equiv 
 \begin{Bmatrix}
 r\\
 m n\\
-\end{Bmatrix}\quad$  Christoffel symbol of the second kind\\\\
+\end{Bmatrix}\quad$  &Christoffel symbol of the second kind until chapter \RomanNumeralCaps{7}. \\
+&In chapter \RomanNumeralCaps{8} $\Gamma^r_{mn}$ will represent a (general) linear connection\\\\
 \end{tabular}
 \end{center}
 

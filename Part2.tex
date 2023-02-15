@@ -1,5 +1,7 @@
-\documentclass{ut-thesis}
-
+%\documentclass{ut-thesis}
+\documentclass{thesis}
+%\usepgfplotslibrary{external} 
+%\tikzexternalize
 %**************************** General libraries *******************************
 \usepackage{mathtools}
 \usepackage{cancel}
@@ -30,6 +32,9 @@
 
 %**************************** Tikz libraries *******************************
 \usepackage{tikz}
+%\usepgfplotslibrary{external} 
+\usetikzlibrary{external}
+\tikzexternalize
 \usetikzlibrary{shapes,arrows,arrows.meta,spy}
 \usetikzlibrary{calc}% needed for BB
 \usepackage{pgfplots}
@@ -108,11 +113,13 @@ Chapters \RomanNumeralCaps{5} to \RomanNumeralCaps{8}}
 \begin{document}
 \maketitle
 
+
 \tableofcontents
 \listoffigures
-%\include{chapter5}
-%\include{chapter6}
-%\include{chapter7}
+
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
 \include{chapter8}
 \printbibliography %Prints bibliography
 \end{document}

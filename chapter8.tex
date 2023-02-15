@@ -1,7 +1,7 @@
 \setcounter{chapter}{7}
 \chapter{Non-Riemannian spaces.}
 \pagebreak[4]
-\begin{comment}
+%\begin{comment}
 \section{p283 - Clarification}
 \begin{tcolorbox}
 $$\mathbf{8.101}\spatie \dv{T^{\rho}}{u} =\dv{T_r}{u}X^{\rho}_{r} + X^{\rho}_{rs}T^r \dv{x^s}{u}$$
@@ -785,7 +785,7 @@ $$\blacklozenge$$\\
 \newpage
 
 
-\end{comment}
+%\end{comment}
 
 
 
@@ -1291,3 +1291,273 @@ T^s\left(\pdv{}{x^n}\Gamma^r_{ms}-\pdv{}{x^m}\Gamma^r_{ns}\right)\\\\
 \end{align*}
 $$\blacklozenge$$
 \newpage
+
+
+\section{p311 - Exercise 16}
+\begin{tcolorbox}
+By use of the lemma of $\mathbf{(8.1)}$, or otherwise, show that in a space with symmetric connection
+$$T^{r . \dots}_{.s\dots|mn}-T^{r . \dots}_{.s\dots|nm}= -T^{p . \dots}_{.s\dots}R^r_{.pmn} + T^{r . \dots}_{.p\dots}R^r_{.smn} + \dots$$
+\end{tcolorbox}
+To simplify the notation let's restricts us to $2^{nd}$ order tensor  written as the outer product of two vector, $T^{rs}= X^r_{(p)}Y^s_{(p)}$. this gives
+\begin{align*}
+T^{rs}_{\quad|mn}-T^{rs}_{\quad|nm}&= \left\{\begin{matrix}X^r_{(p)|mn}Y^s_{(p)}+X^r_{(p)|m}Y^s_{(p)|n}+X^r_{(p)|n}Y^s_{(p)|m}+X^r_{(p)}Y^s_{(p)|mn}\\\\
+-X^r_{(p)|nm}Y^s_{(p)}-X^r_{(p)|n}Y^s_{(p)|m}-X^r_{(p)|m}Y^s_{(p)|n}-X^r_{(p)}Y^s_{(p)|nm}
+\end{matrix}\right.\\
+&= \left(X^r_{(p)|mn} -X^r_{(p)|nm}\right)Y^s_{(p)}+\left(Y^s_{(p)|mn} -Y^s_{(p)|nm}\right)X^r_{(p)}\\
+&= -X^k_{(p)}R^r_{.kmn}Y^s_{(p)}-Y^k_{(p)}R^s_{.kmn}X^kr_{(p)}\\
+&= -T^{ks}R^r_{.kmn}-T^{rk}R^s_{.kmn}
+\end{align*}
+As we can express any tensor of rank $N$ as the outer product of a tensor of rank $N-1$ and a vector, the  expression in the assignment can be obtained by summing (with the adequate sign for the lower suffixes)  all permutations of the lower or upper suffixes.
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p311 - Exercise 17}
+\begin{tcolorbox}
+Using the compressed notation of $\mathbf{(1.7)}$, show that, in a  space with a double linear connection, the contractions of the connections $\Gamma^r_{mn}, \ \overline{\Gamma}^r_{mn}$ transform as follows:
+$$\begin{matrix}
+\Gamma^{\rho}_{\rho\nu}= X^{n}_{\nu}\Gamma^r_{rn}+ \frac{1}{J}\pdv{J}{x^{\nu}}\\\\
+\overline{\Gamma}^{\rho}_{\rho\nu}= X^{n}_{\nu}\overline{\Gamma}^r_{rn}+ \frac{1}{J}\pdv{J}{x^{\nu}}
+\end{matrix}$$
+\end{tcolorbox}
+Using the transformation rule for the connections
+\begin{align}
+\Gamma^{\rho}_{\rho\nu} &=  \Gamma^r_{mn}X^{\rho}_{r}X^{m}_{\rho}X^{n}_{\nu}+X^{r}_{\rho \nu}X^{\rho}_{r}\\
+&=  \Gamma^r_{rn}X^{n}_{\nu}+X^{r}_{\rho \nu}X^{\rho}_{r}
+\end{align}
+By Exercise $I.12$ page 25 we have
+ \begin{align}
+X^{r}_{\rho \nu}X^{\rho}_{r}&= \pdv{ln J}{x^{\nu}}= \frac{1}{J}\pdv{J}{x^{\nu}}
+\end{align}
+proving the expression. An identical way leads to the same rule for the second connection.
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p311 - Exercise 18}
+\begin{tcolorbox}
+Let $T^{r . \dots}_{.s\dots}$ be a relative tensor field of weight $W$, so that its transformation character is given by $\mathbf{(7.102)}$. In a space with a double linear connection, we now define the absolute derivative of $T^{r . \dots}_{.s\dots}$ along a curve $x^r=x^r(u)$ as follows:
+$$\fdv{}{u}T^{r . \dots}_{.s\dots} = \dv{}{u}T^{r . \dots}_{.s\dots}+\Gamma^r_{mt}T^{m . \dots}_{.s\dots}\dv{x^t}{u}+ \dots -\overline{\Gamma}^m_{st}T^{r . \dots}_{.m\dots}\dv{x^t}{u}-\dots -W\Gamma^m_{mt}T^{r . \dots}_{.s\dots}\dv{x^t}{u}$$
+Prove that $\fdv{}{u}T^{r . \dots}_{.s\dots}$ is a relative tensor of the same type and weight as $T^{r . \dots}_{.s\dots}$. Verify that the absolute derivatives of outer products and sums of relative tensors obey the usual rules for differentiating products and sums (cf. $\mathbf{8.102}$, $\mathbf{8.103}$).
+\end{tcolorbox}
+For the ease of notation let's check the case for a order $3$ tensor $T^r_{mn}$
+Let's consider it's absolute derivative in another coordinate system:
+\begin{align}
+\fdv{}{u}T^{\rho}_{\mu\nu} = \dv{}{u}T^{\rho}_{\mu\nu}+\Gamma^{\rho}_{\lambda\tau}T^{\lambda}_{\mu\nu}\dv{x^{\tau}}{u} -\overline{\Gamma}^{\beta}_{\mu\tau}T^{\rho}_{\beta\nu}\dv{x^{\tau}}{u}-\overline{\Gamma}^{\gamma}_{\tau\nu}T^{\rho}_{\mu\gamma}\dv{x^{\tau}}{u}-W\Gamma^{\alpha}_{\alpha\tau}T^{\rho}_{\mu\nu}\dv{x^{\tau}}{u}
+\end{align}
+With the following transformation rules
+\begin{align}
+\left\{\begin{matrix}
+T^{\rho}_{\mu\nu} = J^W T^r_{mn} X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}&\\\\
+\Gamma^{\rho}_{\lambda\tau} = \Gamma^{s}_{uv} X^{\rho}_{s}X^{u}_{\lambda}X^{v}_{\tau}+ X^q_{\lambda\tau}X^{\rho}_q&\\\\
+\Gamma^{\alpha}_{\alpha\tau} = X^{p}_{\tau}\Gamma^s_{sp}+ \frac{1}{J}\pdv{J}{x^{\tau}}&\text{(cf. Exercise VIII.17)}\\\\
+\dv{x^{\tau}}{u} = X^{\tau}_{q}\dv{x^q}{u}&\\
+\end{matrix}\right.
+\end{align}
+First let's look at the object $Q^{\rho}_{\mu\nu} = \dv{}{u}T^{\rho}_{\mu\nu}-W\Gamma^{\alpha}_{\alpha\tau}T^{\rho}_{\mu\nu}\dv{x^{\tau}}{u}$ (the left and right terms in $(1)$).
+We get
+\begin{align}
+Q^{\rho}_{\mu\nu}&=\left\{\begin{matrix} 
+\cancel{WJ^{W-1}T^r_{mn} \left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\dv{J}{u}}\\\\ 
++J^W  \left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\dv{}{u}T^r_{mn}\\\\
++J^W T^r_{mn} \dv{}{u}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\\\\
+-WJ^W\Gamma^s_{sq}T^r_{mn} \left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\dv{x^q}{u}-\cancel{ WJ^W\frac{1}{J}T^r_{mn} \left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\pdv{J}{x^{\tau}}X^{\tau}_{q}\dv{x^q}{u}}
+\end{matrix}\right.
+\end{align}
+Let's look at the middle terms like 
+\begin{align}
+\Gamma^{\rho}_{\lambda\tau}T^{\lambda}_{\mu\nu}\dv{x^{\tau}}{u}&= \left\{\begin{matrix} 
+J^W \Gamma^{s}_{uv} X^{\rho}_{s}X^{u}_{\lambda}X^{v}_{\tau}T^r_{mn} X^{\lambda}_{r}X^{m}_{\mu}X^{n}_{\nu}X^{\tau}_{q}\dv{x^q}{u}\\\\
++J^W X^s_{\lambda\tau}X^{\rho}_sT^r_{mn} X^{\lambda}_{r}X^{m}_{\mu}X^{n}_{\nu}X^{\tau}_{q}\dv{x^q}{u}
+\end{matrix}\right.\\
+&= \left\{\begin{matrix} 
+J^W \Gamma^{r}_{sq} T^s_{mn}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\dv{x^q}{u}\\\\
++J^W \underbrace{X^s_{rq}}_{=0}X^{\rho}_qT^r_{mn} X^{m}_{\mu}X^{n}_{\nu}\dv{x^q}{u}
+\end{matrix}\right.
+&= 
+J^W \Gamma^{r}_{sq} T^s_{mn}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\dv{x^q}{u}
+\end{align}
+With analogue calculations for the other connections and using $(3)$ we get for $(1)$
+\begin{align}
+\fdv{}{u}T^{\rho}_{\mu\nu} &= 
+\left\{\begin{matrix}
+J^W \left(\underbrace{\dv{}{u}T^r_{mn} + \Gamma^{r}_{sq} T^s_{mn}\dv{x^q}{u}- {\overline\Gamma}^{s}_{mq} T^r_{sn}\dv{x^q}{u}- {\overline\Gamma}^{s}_{qn} T^r_{ms}\dv{x^q}{u}-W\Gamma^s_{sq}T^r_{mn} \dv{x^q}{u}}_{=\fdv{}{u}T^r_{mn}}\right)\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]\\\\+J^W T^r_{mn} \dv{}{u}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]
+\end{matrix}\right.\\
+&= 
+J^W \fdv{T^r_{mn}}{u}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]+J^W T^r_{mn} \underbrace{\dv{}{u}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]}_{=0}\\
+&= 
+J^W \fdv{T^r_{mn}}{u}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]
+\end{align}
+(In $(7)$ the term $ \dv{}{u}\left[X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}\right]=0$ as this is the sum of three terms like $\dv{X^{\rho}_{r}}{u}\left[X^{m}_{\mu}X^{n}_{\nu}\right]$, but $\dv{X^{\rho}_{r}}{u}$ can be rewritten as  $\pdv{X^{\rho}_{r}}{\gamma}\dv{x^{\gamma}}{u}= \pdv{X^{\rho}_{\gamma}}{r}\dv{x^{\gamma}}{u}= \pdv{\delta^{\rho}_{\gamma}}{r}\dv{x^{\gamma}}{u} = 0$.)
+$$\lozenge$$
+\textbf{Product rule}\\\\
+Let's take a, relative,  outer product tensor $T^{mn}_{rsp} =X^{m}_{rs}Y^{n}_{p} $.\\
+Obviously, the product rule applies to the "normal" derivative.
+For the middle terms we will have
+\begin{align}
+&\left(\Gamma^m_{kt}T^{kn}_{rsp}+\Gamma^n_{kt}T^{mk}_{rsp}-\overline{\Gamma}^k_{rt}T^{mn}_{ksp} -\overline{\Gamma}^k_{st}T^{mn}_{rkp} -\overline{\Gamma}^k_{pt}T^{mn}_{rsk} \right)\dv{x^t}{u}\\
+&= \left(\Gamma^m_{kt}X^{k}_{rs}Y^{n}_{p}+\Gamma^n_{kt}X^{m}_{rs}Y^{k}_{p}-\overline{\Gamma}^k_{rt}X^{m}_{ks}Y^{n}_{p} -\overline{\Gamma}^k_{st}X^{m}_{rk}Y^{n}_{p} -\overline{\Gamma}^k_{pt}X^{m}_{rs}Y^{n}_{k} \right)\dv{x^t}{u}\\
+&= \left(\Gamma^m_{kt}X^{k}_{rs}-\overline{\Gamma}^k_{rt}X^{m}_{ks} -\overline{\Gamma}^k_{st}X^{m}_{rk}  \right)Y^{n}_{p}\dv{x^t}{u}+\left(\Gamma^n_{kt}Y^{k}_{p}  -\overline{\Gamma}^k_{pt}Y^{n}_{k} \right)X^{m}_{rs}\dv{x^t}{u}
+\end{align}
+So, the product rule applies to these terms.\\
+For the ultimate term 
+$$-W\Gamma^k_{kt}T^{mn}_{rsp}\dv{x^t}{u}$$ we have to be aware that the weight $W$ is sum of the weight of the two tensors in the outer product. Let's put $W= W_x + W_y$, we get
+\begin{align}
+&-W\Gamma^k_{kt}T^{mn}_{rsp}\dv{x^t}{u}\\
+&= 
+-\left(W_x+W_y\right)\Gamma^k_{kt}X^{m}_{rs}Y^{n}_{p}\dv{x^t}{u}\\
+&= 
+-\left(W_y\Gamma^k_{kt}Y^{n}_{p}\right)X^{m}_{rs}\dv{x^t}{u}-\left(W_x\Gamma^k_{kt}X^{m}_{rs}\right)Y^{n}_{p}\dv{x^t}{u}
+\end{align}
+which also follows the product rule. 
+Considering that the product rule applies to the "normal" derivative combined with $(11)$ and $(14)$ we can conclude that the product rule applies to the absolute derivative as defined for relative tensors.
+$$\lozenge$$
+\textbf{Sum rule}\\\\
+Let's take a tensor $T^{mn}_{rsp} =X^{mn}_{rsp}+Y^{mn}_{rsp}$.\\
+Obviously, the sum rule applies to the "normal" derivative.
+For the middle terms we will have
+\begin{align}
+&\left(\Gamma^m_{kt}T^{kn}_{rsp}+\Gamma^n_{kt}T^{mk}_{rsp}-\overline{\Gamma}^k_{rt}T^{mn}_{ksp} -\overline{\Gamma}^k_{st}T^{mn}_{rkp} -\overline{\Gamma}^k_{pt}T^{mn}_{rsk} \right)\dv{x^t}{u}\\
+&= \left(\Gamma^m_{kt}\left(X^{kn}_{rsp}+Y^{mkn}_{rsp}\right)+\Gamma^n_{kt}\left(X^{mk}_{rsp}+Y^{mk}_{rsp}\right)-\overline{\Gamma}^k_{rt}\left(X^{mn}_{ksp}+Y^{mn}_{ksp}\right) -\overline{\Gamma}^k_{st}\left(X^{mn}_{rkp}+Y^{mn}_{rkp}\right) -\overline{\Gamma}^k_{pt}\left(X^{mn}_{rsk}+Y^{mn}_{rsk}\right) \right)\dv{x^t}{u}\\
+&= \left\{\begin{matrix}
+\left(\Gamma^m_{kt}X^{kn}_{rsp}+\Gamma^n_{kt}X^{mk}_{rsp}-\overline{\Gamma}^k_{rt}X^{mn}_{ksp} -\overline{\Gamma}^k_{st}X^{mn}_{rkp} -\overline{\Gamma}^k_{pt}X^{mn}_{rsk} \right)\dv{x^t}{u}\\\\
++ \left(\Gamma^m_{kt}Y^{mkn}_{rsp}+\Gamma^n_{kt}Y^{mk}_{rsp}-\overline{\Gamma}^k_{rt}Y^{mn}_{ksp} -\overline{\Gamma}^k_{st}Y^{mn}_{rkp}-\overline{\Gamma}^k_{pt}Y^{mn}_{rsk}\right)\dv{x^t}{u}
+\end{matrix}\right.
+\end{align}
+So, the sum rule applies to these terms.\\
+For the ultimate term 
+$$-W\Gamma^k_{kt}T^{mn}_{rsp}\dv{x^t}{u}$$ the weight $W$ is also the weight of the two  outer product tensors
+\begin{align}
+&-W\Gamma^k_{kt}T^{mn}_{rsp}\dv{x^t}{u}\\
+&= 
+-W\Gamma^k_{kt}\left(X^{mn}_{rsp}+Y^{mn}_{rsp}\right)\dv{x^t}{u}\\
+&= 
+-W\Gamma^k_{kt}X^{mn}_{rsp}\dv{x^t}{u}-W\Gamma^k_{kt}Y^{mn}_{rsp}\dv{x^t}{u}
+\end{align}
+which also follows the sum rule. 
+Considering that the sum  rule applies to the "normal" derivative combined with $(11)$ and $(14)$ we can conclude that the sul rule applies to the absolute derivative as defined for relative tensors.
+$$\blacklozenge$$ 
+\newpage
+
+
+
+\section{p311 - Exercise 19}
+\begin{tcolorbox}
+Are the statements of Ex. $18$ correct if, in the definition of the absolute derivative, $\Gamma^m_{mt}$ is replaced by \\
+a) $\overline{\Gamma}^m_{mt}$\\\\
+b) $\half\left(\Gamma^m_{mt}+ \overline{\Gamma}^m_{mt}\right)$?\\\\
+Show that in the special case  of a single connection, postulate \textit{E} applies to relative tensors.
+\end{tcolorbox}
+Both for a) and b) the statements are correct for a coordinate transformation. \\\\
+This is a direct consequence of the two terms in expression $(3)$ of Exercise 18 which cancel each others even if you replace the connection $\Gamma^m_{mt}$ by $\overline{\Gamma}^m_{mt}$ or $\overline{\Gamma}^m_{mt}$ (the terms which cancel each other contain the factor $\frac{1}{J}\pdv{J}{x^{\nu}}$ which is common for both types of connections. \\
+Also, we have
+$$\half\left(\Gamma^{\rho}_{\rho\nu}+\overline{\Gamma}^{\rho}_{\rho\nu}\right)= X^{n}_{\nu}\half\left(\Gamma^r_{rn}+\overline{\Gamma}^r_{rn}\right) + \frac{1}{J}\pdv{J}{x^{\nu}}$$ 
+which gives also an unchanged factor $\frac{1}{J}\pdv{J}{x^{\nu}}$  and as in the expression of the absolute derivative the other terms does not contain any contracted connection the transformation rule is valid for a) and b).\\\\
+For the product rule and sum rule , a) and b) are  also correct as the last term of the absolute derivative is linear in the $\Gamma^k_{kt}$ and can replace it by any covariant vector to make the product and sum rule still valid.
+$$\lozenge$$
+\textbf{Are the operations of contraction and absolute differentiation commutative when having a single connection ?}\\\\
+Again we only have to scrutinize the last term of containing 
+$$-W\Gamma^m_{mt}T^{r . \dots}_{.s\dots}\dv{x^t}{u}$$ as we already now that the other terms (valid for absolute tensors) are also commutative in the operations of contraction.
+As in section $8.1$ of the book, let's restrict ourselves to the contracting of vectors $U^r$ and $V_s$. 
+\begin{align}
+\fdv{}{u}U^rV_s &= \dots -W\Gamma^m_{mt}U^rV_s\dv{x^t}{u}\\
+\Rightarrow \spatie \fdv{}{u}U^rV_r &= \dots -W\Gamma^m_{mt}U^rV_r\dv{x^t}{u}\\
+\end{align}
+on the other hand 
+\begin{align}
+V_s\fdv{}{u}U^r+ U^r\fdv{}{u}V_s &= \dots -W_U\Gamma^m_{mt}U^rV_s\dv{x^t}{u}-W_V\Gamma^m_{mt}U^rV_s\dv{x^t}{u}\\
+&= \dots -W\Gamma^m_{mt}U^rV_s\dv{x^t}{u}\\
+\Rightarrow \spatie V_r\fdv{}{u}U^r+ U^r\fdv{}{u}V_r &= \dots -W\Gamma^m_{mt}U^rV_r\dv{x^t}{u}\\
+\end{align}
+proving the commutativity.
+$$\blacklozenge$$
+\newpage
+
+
+
+
+\section{p311 - Exercise 20}
+\begin{tcolorbox}
+From the defintion of Ex. $18$ and from $\mathbf{8.115)}$, deduce an expression for the covariant derivative of a general relative tensor 
+\end{tcolorbox}
+From $\mathbf{(8.115)}$ we get immediately
+\begin{align*}
+T^{r . \dots}_{.s\dots|t} = T^{r . \dots}_{.s\dots,t}+\Gamma^r_{mt}T^{m . \dots}_{.s\dots}+ \dots -\overline{\Gamma}^m_{st}T^{r . \dots}_{.m\dots}-\dots -W\Gamma^m_{mt}T^{r . \dots}_{.s\dots}
+\end{align*}
+$$\blacklozenge$$
+\newpage
+
+
+
+\section{p312 - Exercise 21}
+\begin{tcolorbox}
+In the special case of a Riemannian space 
+$$\left(\Gamma^r_{mn}=  \overline{\Gamma}^r_{mn}=\begin{Bmatrix}
+r\\
+m n\\
+\end{Bmatrix}\right)$$
+verify that the definition in Ex. $18$ agrees with $\mathbf{(7.212)}$.
+\end{tcolorbox}
+We have $\mathbf{(7.212)}$:
+$$\fdv{}{u}T^{r\dots .}_{.s\dots} = \left(\epsilon(a)a\right)^{\half W}\fdv{}{u}\left[\left(\epsilon(a)a \right)^{-\half W}T^{r\dots .}_{.s\dots}\right]$$
+Again, we only have to focus on the last term of the definition of Ex. 18. as the other terms correspond to the expression used for the absolute derivative in $\mathbf{(7.212)}$.
+This gives
+\begin{align*}
+\fdv{}{u}T^{r\dots .}_{.s\dots} &= \dots -W\Gamma^m_{mt}T^{r . \dots}_{.s\dots}\dv{x^t}{u}\\
+&= \dots-W\left(\epsilon(a)a\right)^{\half W} \left[\left(\epsilon(a)a \right)^{-\half W}\Gamma^m_{mt}T^{r . \dots}_{.s\dots}\right]\dv{x^t}{u}
+\end{align*}
+confirming that the definition of Ex. 18 is compatible with  $\mathbf{(7.212)}$. 
+$$\blacklozenge$$
+\newpage
+
+
+
+\begin{comment}
+\section{p312 - Exercise 22}
+\begin{tcolorbox}
+Substituting into equations $a_{mn,rs}-a_{mn,sr}=0$ from $\mathbf{(8.304)}$, and using $\mathbf{(8.318)}$, $\mathbf{(8.219)}$, show that, in a Weyl space, the metric tensor $a_{mn}$ satisfies the algebraic equations
+$$(a)\spatie a_{pq}G^{pq}_{..mnrs}=0$$
+where $G^{pq}_{..mnrs}$ is a function of the $\Gamma^r_{mn}$ and their derivatives, given by
+$$G^{pq}_{..mnrs}= \half\left(\delta^p_mR^q_{.nrs} +\delta^q_mR^p_{.nrs} +\delta^p_nR^q_{.mrs} +\delta^q_nR^p_{.mrs} \right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs}$$
+By repeated covariant differentiation of (a) and by use of $\mathbf{8.301)}$, deduce the following set of algebraic equations for $a_{mn}$:
+$$(b)\spatie a_{pq}G^{pq}_{..mnrs|t_1}=a_{pq}G^{pq}_{..mnrs|t_1t_2}=\dots =0$$
+\end{tcolorbox}
+We have:
+\begin{align}
+\left\{\begin{matrix}
+\mathbf{(8.304)}&a_{mn,r}-\Gamma^k_{mr}a_{kn} - \Gamma^k_{nr}a_{mk} + a_{mn}\phi_{r}=0\\\\
+\mathbf{(8.318)}&F_{mn} = \begin{Bmatrix}
+r\\
+m n\\
+\end{Bmatrix}+\half N\phi_n\\\\
+\mathbf{(8.219)}&F_{mn} = \half R^s_{.smn}=\half \left(\pdv{\Gamma^s_{ns}}{x^m} - \pdv{\Gamma^s_{ms}}{x^n}\right)\\\\
+\mathbf{(8.214)}&R^s_{.rmn} = \pdv{\Gamma^s_{rn}}{x^m} - \pdv{\Gamma^s_{rm}}{x^n}+\Gamma^p_{rn}\Gamma^s_{pm}-\Gamma^p_{rm}\Gamma^s_{pn}\\\\
+\end{matrix}\right.
+\end{align}
+ Using $\mathbf{(8.304)}$ twice with $r,s$ as index in the first term and partial differentiation with the opposite index and subtracting the two expressions, gives:
+\begin{align}\left.\begin{matrix}
+\Gamma^k_{ms,r}a_{kn} + \Gamma^k_{ns,r}a_{mk} - a_{mn,r}\phi_{s}+\Gamma^k_{ms}a_{kn,r} + \Gamma^k_{ns}a_{mk,r} - a_{mn}\phi_{s,r}\\\\
+-\Gamma^k_{mr,s}a_{kn} - \Gamma^k_{nr,s}a_{mk} + a_{mn,s}\phi_{r}-\Gamma^k_{mr}a_{kn,s} - \Gamma^k_{nr}a_{mk,s} + a_{mn}\phi_{r,s}
+\end{matrix}\right\}=0
+\end{align} 
+We can get rid of the partial derivatives of the metric tensor by using $\mathbf{(8.214)}$ again, giving for $(2)$
+\begin{align}\left.\begin{matrix}
+\Gamma^k_{ms,r}a_{kn} + \Gamma^k_{ns,r}a_{mk} - a_{mn}\phi_{s,r}\\\\- a_{mn,r}\phi_{s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
++\Gamma^k_{ms}a_{kn,r}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right) \\\\
++ \Gamma^k_{ns}a_{mk,r}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right) \\\\
+-\Gamma^k_{mr,s}a_{kn} - \Gamma^k_{nr,s}a_{mk} + a_{mn}\phi_{r,s}\\\\
++ a_{mn,s}\phi_{r}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
+-\Gamma^k_{mr}a_{kn,s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)\\\\
+- \Gamma^k_{nr}a_{mk,s}\left(\Gamma^q_{mr}a_{qn} + \Gamma^q_{nr}a_{mq} - a_{mn}\phi_{r}\right)
+\end{matrix}\right\}=0
+\end{align} 
+$$\blacklozenge$$
+\newpage
+\end{comment}
+
+
+
+
