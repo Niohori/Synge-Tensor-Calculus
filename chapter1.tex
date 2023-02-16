@@ -60,10 +60,10 @@ $$\blacklozenge$$
 Let $U_2$ and $W_2$ be subspaces of $V_N$. Show that if N = 3  they will in general intersect in a curve; if N = 4 they will in general intersect in a finite number of points; and if $N > 4$ they will not in general intersect at all.
 \end{tcolorbox}
 
-We have (see 1.102 page 5):
-$\quad x^r = f^r(u^1, u^2,..., u^M) \quad (r = 1, 2, ...,N)$
+We have (see $\mathbf{(1.102)}$ page 5):
+$\quad x^r = f^r(u^1, u^2,..., u^M) \quad (r = 1, 2, ...,N)$\\
 
-Case N=3: \\
+\textbf{Case N=3}: \\
 
 For $U_2$ we have:
 $$x^r = \phi^r(u^1, u^2) \quad (r = 1, 2, 3)$$
@@ -77,17 +77,16 @@ $$\phi^r(u^1, u^2) = \psi^r(v^1, v^2) \quad (r = 1, 2, 3)$$
 
 So we have 3 equations in 4 unknown $u^1,u^2, v^1, v^2$ and can choose (fix) one e.g. $u^1$ and solve the set of equations  for $u^2, v^1, v^2$ giving 
 $$x^r = \theta^r(u^1) \quad (r = 1, 2, 3)$$
-This is an equation of a curve in space (1 parameter equation)\\
-Case N=4: \\
+This is an equation of a curve in space (1 parameter equation)\\\\
+\textbf{Case N=4}: \\
 Using the same reasoning as with N=3, we get 4 equations for 4 unknown $u^1,u^2, v^1, v^2$.\\
-Provided that the set of equation does not degenerate, these 4 equations will determine $u^1,u^2, v^1, v^2$ without any degree of freedom. So we get  points as solutions. This solution does not to be unique, e.g. if the $\phi^r(u^1, u^2)$ are quadratic form, then the solutions 
+Provided that the set of equation does not degenerate, these 4 equations will determine $u^1,u^2, v^1, v^2$ without any degree of freedom. So we get  points as solutions. This solution does not to be unique, e.g. if the $\phi^r(u^1, u^2)$ are quadratic form, then the following solutions are possible.
 $$(u^1,u^2, v^1, v^2)$$
 $$(-u^1,u^2, v^1, v^2)$$
 $$ (u^1,-u^2, v^1, v^2)$$
 $$ (-u^1,-u^2, v^1, v^2)$$
-are possible.\\
-Case N=5: 
-There are more equations than variables. If the equations are not linear dependent, no solutions will be found.
+\\
+\textbf{Case N=5}: There are more equations than variables. If the equations are not linear dependent, no solutions will be found.
 $$\blacklozenge$$
 \pagebreak[4]
 \section{p8-exercise}
@@ -97,7 +96,7 @@ Show that $(a_{rst}+a_{str}+a_{srt})x^rx^sx^t = 3a_{rst}x^rx^sx^t$
 \end{tcolorbox}
 %\setcounter {equation} {1} %sets the counter to have the specified
 $(a_{rst}+a_{str}+a_{srt})x^rx^sx^t = a_{rst}x^rx^sx^t+a_{rts}x^rx^sx^t+a_{srt}x^rx^sx^t\quad$
-so by just renaming the dummy indices e.g. for the second term  $r \mapsto s\quad$, $s \mapsto t\quad$ and $t \mapsto r\quad$ we get the desired result.
+so by just renaming the dummy indices e.g. for the second term  $r \mapsto s\quad$, $s \mapsto t\quad$ and $t \mapsto r\quad$, we get the desired result.
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -136,7 +135,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 $$\pdv{x^{'q}}{x^{p}}{x^{s}}+\pdv{x^{r}}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}\pdv{x^{'q}}{x^{r}} = 0 $$
 \end{tcolorbox}
-From 1.209:
+From $\mathbf{(1.209)}$:
 \begin{gather} 
 \pdv{x^r}{x^{'m}}{x^{'n}}\pdv{x^{'m}}{x^{p}}\pdv{x^{'n}}{x^{s}}+\pdv{x^r}{x^{'n}}\pdv{x^{'n}}{x^p}{x^{s}} = 0
 \end{gather}
@@ -170,11 +169,11 @@ Be $A^i_k $ the elements of matrix A and $B^k_j $ the elements of matrix B and C
 $$C^i_j  = A^i_kB^k_j $$
 are the elements of matrix C.
 Now, put $A^i_k =\pdv{x^{i}}{x^{'k}} \quad$ and $B^k_j =\pdv{x^{'k}}{x^{j}} \quad$ then,
-\begin{align}
+\begin{align*}
 C^{i}_{j}  &= A^{i}_{k}B^{k}_{j} \\
 &=\pdv{x^{i}}{x^{'k}}\pdv{x^{'k}}{x^{j}}\\
 &= \delta^{i}_{k}
-\end{align}
+\end{align*}
 So $C = JJ^{'}\quad$becomes the unity matrix. 
 $$\blacklozenge$$
 \pagebreak[4]
@@ -219,7 +218,7 @@ $$\blacklozenge$$
 \section{p12-exercise}
 
 \begin{tcolorbox}
-Write down the equation of transformation, analogous to 1.305, of a contravariant tensor of the third order. Solve the equation so as to express the unprimed components in terms of the primed components.
+Write down the equation of transformation, analogous to $\mathbf{(1.305)}$, of a contravariant tensor of the third order. Solve the equation so as to express the unprimed components in terms of the primed components.
 
 \end{tcolorbox}
 Be 
@@ -254,51 +253,59 @@ $$\blacklozenge$$
 \section{p14-exercise}
 
 \begin{tcolorbox}
-For a transformation from on set of rectangular Cartesian coordinates to another in Euclidean 3-space, show that the law of transformation of a contravariant vector is precisely the same as that of a covariant vector. Can this statements be extended to cover tensor of higher orders?
+For a transformation from one set of rectangular Cartesian coordinates to another in Euclidean 3-space, show that the law of transformation of a contravariant vector is precisely the same as that of a covariant vector. Can this statements be extended to cover tensor of higher orders?
 \end{tcolorbox}
-We have to prove that, given that, $$T^{'i}= T^{j} \pdv{x^{'i}}{x^j} \quad T^{'}_{i}= T_{j} \pdv{x^{j}}{x^{'i}}$$ that also
+We have to prove, given that, $$T^{'i}= T^{j} \pdv{x^{'i}}{x^j} \quad T^{'}_{i}= T_{j} \pdv{x^{j}}{x^{'i}}$$ that also
 \begin{align}
 \ T^{'i}= T^{j} \pdv{x^{j}}{x^{'i}} \quad T^{'}_{i}&= T_{j}\pdv{x^{'i}}{x^j} \\
 \Leftrightarrow \pdv{x^{j}}{x^{'i}} &= \pdv{x^{'i}}{x^j} 
 \end{align}
 Be
 \begin{align}
-\hat{e^{'i}} = g^i_k\hat{e^{k}}\quad\text{and } \hat{e^{i}} = h^i_k\hat{e^{'k}}
+\hat{e_{'i}} = g_i^k\hat{e_{k}}\quad\text{and } \hat{e_{i}} = h_i^k\hat{e_{'k}}
 \end{align}
 the transformation rules from one set of (rectangular Cartesian) basis vectors to another set of  (rectangular Cartesian) basis vectors.
 Then,
 \begin{align}
-\langle \hat{e^{'i}},\hat{e^{'j}} \rangle = \langle g^i_k\hat{e^{k}},g^j_k\hat{e^{k}} \rangle &\text{ and } \langle \hat{e^{i}},\hat{e^{j}} \rangle = \langle h^i_k\hat{e^{'k}},h^j_k\hat{e^{'k}} \rangle\\
-\Leftrightarrow \delta^p_j = g^p_k g^j_k &\text{ and } \delta^p_j = h^p_k h^j_k \\
+\langle \hat{e}_{'i},\hat{e}_{'j} \rangle = \langle g_i^k\hat{e}_{k},g_j^k\hat{e}_{k} \rangle &\text{ and } \langle \hat{e}_{i},\hat{e}_{j} \rangle = \langle h_i^k\hat{e}^{'}_{k},h_j^k\hat{e}^{'}_{k} \rangle\\
+\Leftrightarrow \delta_p^j = g_p^k g_j^k &\text{ and } \delta_p^j = h_p^k h_j^k
 \end{align}
 Be $\vec{v}$ a random vector in the Euclidean space,
-\begin{align}
-\vec{v} = x^j\hat{e^{j}} = x^{'j}\hat{e^{'j}}
-\end{align}
+\begin{align*}
+\vec{v} = x^j\hat{e}_{j}= x^{'j}\hat{e}^{'}_{j}
+\end{align*}
 then
+\begin{align*}
+\begin{matrix}
+\text{(3) } &\Rightarrow& x^j\hat{e}_{j} = x^{j}h_j^k\hat{e}^{'}_{k}&\text{ and }&x^{'j}\hat{e}^{'}_{'j} = x^{'j}g_j^k\hat{e}^{}_{k}&\\
+&\Rightarrow &x^{'j} = x^{m}h^m_j  &\text{ and }&x^m = x^{'j}g^j_m&\spatie(6)\\
+&\Rightarrow &x^{'j} = x^{'i}g_i^m h_m^j&\text{ and }& x^m = x^{k}h_k^j g_jm &\\
+&\Rightarrow &\delta_p^j =g_p^k h_k^j &\text{ and }& \delta_p^j =g_k^j h_p^k&\\
+\text{(5) } &\Rightarrow& g_p^k g_j^k=g_p^k h_k^j &\text{ and }& h_p^k h_j^k=g_k^j h_p^k\\
+ &\Rightarrow &g_j^k =  h_k^j &\text{ and }&h_j^k =  g_k^j&
+ \end{matrix}
+\end{align*}
+Conclusion 
 \begin{align}
-\text{(3) } \Rightarrow x^j\hat{e^{j}} = x^{j}h^j_k\hat{e^{'k}}&\text{ and }x^{'j}\hat{e^{'j}} = x^{'j}g^j_k\hat{e^{k}}\\
-\Rightarrow x^{'j} = x^{m}h^m_j  &\text{ and }x^m = x^{'j}g^j_m\\
-\Rightarrow x^{'j} = x^{'i}g^i_m h^m_j&\text{ and } x^m = x^{k}h^k_j g^j_m \\
-\Rightarrow \delta^p_j =g^p_k h^k_j &\text{ and } \delta^p_j =g^k_j h^p_k\\
-\text{(5) } \Rightarrow g^p_k g^j_k=g^p_k h^k_j &\text{ and } h^p_k h^j_k=g^k_j h^p_k\\
- \Rightarrow g^j_k =  h^k_j &\text{ and }h^j_k =  g^k_j
+g_j^k =  h_k^j
 \end{align}
-From (9)
+From (6) we have further,
 \begin{align}
-\ x^{j} = x^{'m} g^m_j &\text{ and } x^{'k} = x^{n} h^n_k\\
-\Rightarrow \pdv{x^{'k}}{x^j} = \pdv{x^{n}}{x^j} h^n_k  &\text{ and } \pdv{x^{j}}{x^{'k}} = \pdv{x^{'m}}{x^{'k}}g^m_j\\
-\Leftrightarrow \pdv{x^{'k}}{x^j} = \delta^n_j h^n_k  &\text{ and } \pdv{x^{j}}{x^{'k}} = \delta^m_k g^m_j\\
-\Leftrightarrow \pdv{x^{'k}}{x^j} = h^j_k  &\text{ and } \pdv{x^{j}}{x^{'k}} = g^k_j\\
-\text{(13) }\Rightarrow \pdv{x^{'k}}{x^j} &= \pdv{x^{j}}{x^{'k}}
+\begin{matrix}
+& x^{j} = x^{'m} g_m^j &\text{ and }& x^{'k} = x^{n} h_n^k\\
+\Rightarrow \spatie &\pdv{x^{'k}}{x^j} = \pdv{x^{n}}{x^j} h_n^k  &\text{ and }&\pdv{x^{j}}{x^{'k}} = \pdv{x^{'m}}{x^{'k}}g_m^j\\
+\Leftrightarrow \spatie &\pdv{x^{'k}}{x^j} = \delta^n_j h_n^k  &\text{ and } &\pdv{x^{j}}{x^{'k}} = \delta^m_k g_m^j\\
+\Leftrightarrow \spatie &\pdv{x^{'k}}{x^j} = h_j^k  &\text{ and }& \pdv{x^{j}}{x^{'k}} = g_k^j\\
+\text{(6): }\spatie &\pdv{x^{'k}}{x^j} &=& \pdv{x^{j}}{x^{'k}}
+\end{matrix}
 \end{align}
-So (13) matches (2), proving the assertion.\\\\
+So (7) matches (2), proving the assertion.\\\\
 Can this statements be extended to cover tensor of higher orders?
 Consider
 $$T^{'i,j,\dots ,n}= T^{r,s,\dots w} \pdv{x^{'i}}{x^{r}}\pdv{x^{'j}}{x^{s}}\dots \pdv{x^{'n}}{x^{w}} \text{ and } T^{r,s,\dots w}= T^{'i,j,\dots ,n} \pdv{x^{r}}{x^{'i}}\pdv{x^{s}}{x^{'j}}\dots \pdv{x^{w}}{x^{'n}}$$
 Using the same reasoning as in (1) to (2) we need
 $$\pdv{x^{'i}}{x^{r}}\pdv{x^{'j}}{x^{s}}\dots \pdv{x^{'n}}{x^{w}} =\pdv{x^{r}}{x^{'i}}\pdv{x^{s}}{x^{'j}}\dots \pdv{x^{w}}{x^{'n}}$$
-As the conclusion (18) is independent of the order of the tensor, it is obvious that the above equality yields. Hence, the answer is YES.
+As the conclusion (7) is independent of the order of the tensor, it is obvious that the above equality yields. Hence, the answer is YES.
 
 $$\blacklozenge$$
 \pagebreak[4]
@@ -313,29 +320,29 @@ is imposed, show that that only 20 components may be chosen arbitrarily.
 \end{tcolorbox}
 We have, as A is skew-symmetric in the last pair of suffixes
 $$A_{rst} = -A_{rts}  \Rightarrow s=t \text{: } A_{rst} = 0 $$
-So, for each r (4 possible choices as N = 4) we have 4x4/2 - 4 = 6 degrees of freedom. [we have the term 4x4/2  as the tensor is (skew-)symmetric, e.g. once we choose element $a_{12}$, then $a_{21}$ is also known. The term -4 takes into account the diagonal element which are 0 and thus cannot be chosen.]\\
+So, for each r (4 possible choices as N = 4) we have 4x4/2 - 4 = 6 degrees of freedom (we have the term 4x4/2  as the tensor is (skew-)symmetric, e.g. once we choose element $a_{12}$, then $a_{21}$ is also known. The term -4 takes into account the diagonal element which are 0 and thus cannot be chosen.)\\
 So, we have 4x6 = 24 degrees of freedom.\\
-What about the supplementary constraint $A_{rst} + A_{str}+A_{trs} =0 $       :\\
+What about the supplementary constraint $A_{rst} + A_{str}+A_{trs} =0 \quad (1)$       :\\
 Consider the two possible excluding cases:\\
 
-i) $r=s\neq t \text{ (}\Leftrightarrow r=t\neq s \text{)}$\\
-This case gives - without the additional constraint (1) -  4x(4x3/2-4) = 8 degrees of freedom.
+\textbf{i) $r=s\neq t \text{ (}\Leftrightarrow r=t\neq s \text{)}$}\\
+This case gives - without the additional constraint (1) -  4x(4x3/2-4) = 8 out of the 24 degrees of freedom.
 Does the constraint (1) reduces this degree of freedom?\\
 We have, 
 \begin{align}
 \ A_{rst} + A_{str}+A_{trs} =0\\
 \Rightarrow \underbrace{A_{rrt} + A_{rtr}}_\text{= 0 (non-diagonal terms)} + \underbrace{A_{trr}}_\text{= 0 (diagonal terms)} =0
 \end{align}
-So, no additional constraints are added by (1) to the restriction i) and the DOF remains 8.\\
+So, no additional constraints are added by (1) to the restriction definend by i) and the DOF remains 8.\\
 
-ii) $t \neq r\neq s\neq t$\\
+\textbf{ii) $t \neq r\neq s\neq t$}\\
 This case means that we have to choose a set of 3 elements out of 4 elements without repetition. This a \textit{variation} of 3 elements out of 4.
-$$V^n_{k} = \frac{n!}{(n-k)!} \text{ giving } V^4_{3} = \frac{4!}{(4-3)!} = 24 $$
-The constraint (1) gives us 24 equations but as  $A_{rst} = -A_{rts}$ only 12 equations have to be considered. So, with the  additional constraints the DOF becomes 24-12 = 12.\\
-As i) and ii) are independent and excluding events we can add the DOF of both events and we get 8+12 = 20 DOF.
+$$V^n_{k} = \frac{n!}{(n-k)!}\quad  \text{ giving } \quad V^4_{3} = \frac{4!}{(4-3)!} = 24 $$
+The constraint (1) gives us 24 equations but as  $A_{rst} = -A_{rts}$ only 12 equations have to be considered. So, with the   constraint $(1)$  the DOF becomes 24-12 = 12.\\
+As \textbf{i)} and \textbf{ii)} are independent and excluding events we can add the DOF of both events and we get 8+12 = 20 DOF.
 
 $$\blacklozenge$$
-\pagebreak[4]
+\newpage
 
 \section{p16-exercise}
 
@@ -392,17 +399,20 @@ As $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors, we have
 \ X^{'r} = X^{i}\pdv{x^{'r}}{x^{i}} \text{   and  } Y^{'s} = Y^{j}\pdv{x^{'s}}{x^{j}}
 \end{align}
 (3) in (2) gives
-\begin{align}
-\ a^{'}_{rs}X^{i}\pdv{x^{'r}}{x^{i}}Y^{j}\pdv{x^{'s}}{x^{j}} = a_{rs}X^{r}Y^{s}\\
-\Leftrightarrow a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}}X^{i}Y^{j} = a_{ij}X^{i}Y^{j}\\
-\Leftrightarrow (a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}} - a_{ij})X^{i}Y^{j} = 0
-\end{align}
+\begin{align*}
+& a^{'}_{rs}X^{i}\pdv{x^{'r}}{x^{i}}Y^{j}\pdv{x^{'s}}{x^{j}} = a_{rs}X^{r}Y^{s}\\
+\Leftrightarrow \spatie &a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}}X^{i}Y^{j} = a_{ij}X^{i}Y^{j}\\
+\Leftrightarrow \spatie &(a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}} - a_{ij})X^{i}Y^{j} = 0
+\end{align*}
 As $X^{r}$, $Y^{r}$ are arbitrary contravariant vectors, we conclude that 
+\begin{align*}
+\ a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}} - a_{ij} = 0
+\end{align*}
+giving
 \begin{align}
-\ a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}}{x^{j}} - a_{ij} = 0\\
-\Leftrightarrow a_{ij} =  a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}} {x^{j}}
+a_{ij} =  a^{'}_{rs}\pdv{x^{'r}}{x^{i}}\pdv{x^{'s}} {x^{j}}
 \end{align}
-(8) = (1): OK
+Which is the required transformation rule $(1)$.
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -451,7 +461,7 @@ Note that
 \partial_{k}{(A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}})} = 
 \partial_{k}{(A_{\alpha\beta})}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+
 \ A_{\alpha\beta}\partial_{k}{(\pdv{x^{\alpha}}{x^{s}})}\pdv{x^{\beta}}{x^{t}}+
-\ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}} \partial_{k}{(\pdv{x^{\beta}}{x^{t}})}\\
+\ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}} \partial_{k}{(\pdv{x^{\beta}}{x^{t}})}
 \end{align}
 so, 
 \begin{align}
@@ -461,21 +471,21 @@ so,
 \partial_{t}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}+A_{\alpha\beta}\underbrace{\partial_{t}{\pdv{x^{\alpha}}{x^{r}}}\pdv{x^{\beta}}{x^{s}}}_\text{**}+\underbrace{A_{\alpha\beta}\pdv{x^{\alpha}}{x^{r}}\partial_{t}{\pdv{x^{\beta}}{x^{s}}}}_\text{***}
 \end{array}
 \end{align}
-In (5) consider the two terms with (*) 
-\begin{align}
+In $(4)$ consider the two terms with (*) 
+\begin{align*}
 \ T &= A_{\alpha\beta}\partial_{r}{\pdv{x^{\alpha}}{x^{s}}}\pdv{x^{\beta}}{x^{t}}+ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{t}}\partial_{s}{\pdv{x^{\beta}}{x^{r}}}\\
 & = A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}{x^{r}}\pdv{x^{\beta}}{x^{t}}+ A_{\alpha\beta}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}{x^{s}}\\
 & = A_{\alpha\beta}\pdv{x^{\alpha}}{x^{s}}{x^{r}}\pdv{x^{\beta}}{x^{t}}+ A_{\beta\alpha}\pdv{x^{\beta}}{x^{t}}\pdv{x^{\alpha}}{x^{r}}{x^{s}} \text{ (by renaming dummy variables)}
-\end{align}
+\end{align*}
 As $A_{ij} = - A_{ji}$ (skew-symmetric tensor), we get $T=0$. The same yields for the (**) and (***) terms. So, $B_{rst}$ reduces to
-\begin{align}
+\begin{align*}
 \ B_{rst} = \partial_{r}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+ 
 \partial_{s}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}+
 \partial_{t}{A_{\alpha\beta}}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}\\
 \Leftrightarrow \ B_{rst} = \pdv{A_{\alpha\beta}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{r}}\pdv{x^{\alpha}}{x^{s}}\pdv{x^{\beta}}{x^{t}}+ 
 \pdv{A_{\alpha\beta}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{s}}\pdv{x^{\alpha}}{x^{t}}\pdv{x^{\beta}}{x^{r}}+
 \pdv{A_{\alpha\beta}}{x^{\gamma}}\pdv{x^{\gamma}}{x^{t}}\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}
-\end{align}
+\end{align*}
 By adequate renaming of the dummy variable in the 3 terms:
 $$  \left[ {\begin{array}{c}
     1^{st} term \\
@@ -490,11 +500,11 @@ $$  \left[ {\begin{array}{c}
   \end{array} } \right]
 $$
 we get
-\begin{align}
+\begin{align*}
 \ B_{rst} = (\pdv{A_{\beta\gamma}}{x^{\alpha}}+\pdv{A_{\gamma\alpha}}{x^{\beta}}+\pdv{A_{\alpha\beta}}{x^{\gamma}})\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}\pdv{x^{\gamma}}{x^{t}}\\
 \Leftrightarrow  B_{rst} = (\underbrace{\partial_{\alpha}{A_{\beta\gamma}}+\partial_{\beta}{A_{\gamma\alpha}}+\partial_{\gamma}{A_{\alpha\beta}}}_\text{(****)})\pdv{x^{\alpha}}{x^{r}}\pdv{x^{\beta}}{x^{s}}\pdv{x^{\gamma}}{x^{t}}
-\end{align}
-The expression (****) has exactly the required form $B_{rst} = \partial_{r}{A_{st}} + \partial_{s}{A_{tr}} +\partial_{t}{A_{rs}} $ and is transformed (12) according the rules of a covariant tensor.\\
+\end{align*}
+The expression (****) has exactly the required form $B_{rst} = \partial_{r}{A_{st}} + \partial_{s}{A_{tr}} +\partial_{t}{A_{rs}} $ and is transformed according the rules of a covariant tensor.\\
 Let's prove now that it is skew-symmetric in all pairs of suffixes.
 We have to consider the following permutations
 $$  \left[ {\begin{array}{c}
@@ -507,11 +517,11 @@ $$  \left[ {\begin{array}{c}
   \end{array} } \right]$$
   
 E.g. $srt$
-\begin{align}
+\begin{align*}
 \ B_{rts} &= \partial_{r}{A_{ts}}+\partial_{t}{A_{sr}}+\partial_{s}{A_{rt}}\\
 &= -\partial_{r}{A_{st}}-\partial_{t}{A_{rs}}-\partial_{s}{A_{tr}}\\
 &= - B_{rst}
-\end{align}
+\end{align*}
 The same calculations can be done for the other permutations.
 $$\blacklozenge$$
 \pagebreak[4]
@@ -535,14 +545,14 @@ We have,
 \end{align}
 Suppose we choose $u^4$ as parameter.
 This means $u^i = \phi^i(u^4)$ for i=1,2,3 and thus we can write
-\begin{align}
+\begin{align*}
 \pdv{x^i}{u^4} &= \pdv{x^i}{u^j}\dv{\phi^j}{u^4}+ \pdv{x^i}{u^4}\quad\text{ with j=1,2,3} \quad\text{  i = 1,2,3,4}\\
 &\Rightarrow \pdv{x^i}{u^j}\dv{\phi^j}{u^4} = 0
-\end{align}
-This means that in (1) the three first columns a not linearly independent and thus have   $\left|\pdv{x^r}{u^s}\right| = 0$
+\end{align*}
+This means that in $(1)$ the three first columns a not linearly independent and thus have   $\left|\pdv{x^r}{u^s}\right| = 0$.
 
 $$\blacklozenge$$
-\pagebreak[4]
+\newpage
 
 \section{p23-exercise 2.}
 \begin{tcolorbox}
@@ -581,7 +591,7 @@ Partial differentiating of (x,y,z) with respect to (r,$\theta$,$\phi$) gives the
 \ &= r^2\sin \theta (\sin^2 \theta\cos^2 \phi + \sin^2 \theta \sin^2 \phi + \cos^2\theta \cos^2\phi + \cos^2\theta\sin^2\phi)\\
 \  &= r^2\sin \theta 
 \end{align}
-J=0: for $r=0$ or $\theta = 0_{\ r \epsilon (-\infty, +\infty)}$ and $J\rightarrow \pm\infty$ or $\mp\infty$ for $r\rightarrow \pm\infty|_{\theta\neq 0}$. But what about the case $r\rightarrow \pm\infty|_{\theta\rightarrow 0}$? This case is not determined as long as no path is chosen in the $(r,\theta)$ configuration space.
+J=0: for $r=0$ or $\theta = 0_{|r \epsilon (-\infty, +\infty)}$ and $J\rightarrow \pm\infty$ or $\mp\infty$ for $r\rightarrow \pm\infty|_{\theta\neq 0}$. But what about the case $r\rightarrow \pm\infty|_{\theta\rightarrow 0}$ ? This case is not determined as long as no path is chosen in the $(r,\theta)$ configuration space.
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -618,10 +628,10 @@ In a space of three dimensions, how many different expressions are represented b
 \end{tcolorbox}
 
 As we have $V_{3}$ and considering that in $A^{m}_{np} B^{pq}_{rs}C^{s}_{tu}$ the six indices m, n, q, r, t, u are not dummy indices, we get $3^{6}$ different expressions (first choose m: you have three choices, then n: also three choices giving 3x3 possibilities, etc for q, r, t, u).\\
-For the second question, as in $A^{m}_{np} B^{pq}_{rs}$ there is only summation on over index (p) we get three terms for this part. As the summation with $A^{m}_{np} B^{pq}_{rs}$ and $C^{s}_{tu}$ occurs only on one index also (s) we get 3x3 terms in the expression.
+For the second question, as in $A^{m}_{np} B^{pq}_{rs}$ there is only summation over index (p) we get three terms for this part. As the summation with $A^{m}_{np} B^{pq}_{rs}$ and $C^{s}_{tu}$ occurs only on one index also (s) we get 3x3 terms in the expression.
 
 $$\blacklozenge$$
-\pagebreak[4]
+\newpage
 
 \section{p23-exercise 5.}
 \begin{tcolorbox}
@@ -653,21 +663,21 @@ $$T^{11}=1 \quad T^{12}=0$$
 $$T^{21}=1 \quad T^{22}=0$$
 Find the components $T^{'mn}$ in a coordinate system $x^{'r}$, where
 $$x^{'1} =(x^{1})^2\quad x^{'2} = (x^{2})^2$$
-Write down the values of these components in particular at the point $x^1 = 1, x^2 0 =$.
+Write down the values of these components in particular at the point $x^1 = 1,\ x^2 0 =$.
 \end{tcolorbox}
 As we have a contravariant tensor field :
-\begin{align}
+\begin{align*}
 \ T^{'mn} =  T^{ij}\pdv{x^{'m}}{x^{i}}\pdv{x^{'n}}{x^{j}}\\
  \begin{array}{ccc}
    \quad \quad \quad \quad  x^{'1} =(x^{1})^2  \Rightarrow & \pdv{x^{'1}}{x^{1}} = 2x^{1} & \pdv{x^{'1}}{x^{2}} = 0\\
 \quad \quad \quad \quad x^{'2} =(x^{2})^2  \Rightarrow & \pdv{x^{'2}}{x^{1}} = 0 & \pdv{x^{'2}}{x^{2}} = 2x^{2}\\
   \end{array}\\
-  \end{align}
-  \begin{align}
+  \end{align*}
+  \begin{align*}
   &\Rightarrow T^{'11} = 4(x^{1})^2 + 4(x^{2})^2 \\
   &\Rightarrow T^{'12} = T^{'21}=0 \\
   &\Rightarrow T^{'22} = 4(x^{1})^2 + 4(x^{2})^2
-  \end{align}\\\\
+  \end{align*}\\\\
   The components in  at the point $x^1 = 1, x^2 = 0$ are
   $$T^{'}(1,0) = \left[{\begin{array}{cc} 4 & 0 \\
     0 & 4 \\ 
@@ -679,10 +689,10 @@ As we have a contravariant tensor field :
 \section{p24-exercise 7.}
 \begin{tcolorbox}
 Given that if $T_{mnrs}$ is a covariant tensor, and 
-$$ T_{mnrs}+T_{mnsr} = 0$$ in a coordinate system $x^{p}$, establish directly that $$ T^{'}_{mnrs}+T^{'}_{mnsr} = 0$$ in any other coordinate system $x{,q}$.
+$$ T_{mnrs}+T_{mnsr} = 0$$ in a coordinate system $x^{p}$, establish directly that $$ T^{'}_{mnrs}+T^{'}_{mnsr} = 0$$ in any other coordinate system $x^{'q}$.
 \end{tcolorbox}
 Note: in the following, different alphabets in the indices indicates different coordinate systems.
-As we $T_{mnrs}$ is a covariant tensor :
+As $T_{mnrs}$ is a covariant tensor :
 \begin{align}
 \ T_{\alpha\beta\gamma\delta} &=  T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\gamma}}\pdv{x^{s}}{x^{\delta}}\\
 \Rightarrow T_{\alpha\beta\gamma\delta}+T_{\alpha\beta\delta\gamma} &= T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\gamma}}\pdv{x^{s}}{x^{\delta}}+ T_{mnrs}\pdv{x^{m}}{x^{\alpha}}\pdv{x^{n}}{x^{\beta}}\pdv{x^{r}}{x^{\delta}}\pdv{x^{s}}{x^{\gamma}}
