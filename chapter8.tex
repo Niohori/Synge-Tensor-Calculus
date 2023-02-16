@@ -1452,10 +1452,10 @@ b) $\half\left(\Gamma^m_{mt}+ \overline{\Gamma}^m_{mt}\right)$?\\\\
 Show that in the special case  of a single connection, postulate \textit{E} applies to relative tensors.
 \end{tcolorbox}
 Both for a) and b) the statements are correct for a coordinate transformation. \\\\
-This is a direct consequence of the two terms in expression $(3)$ of Exercise 18 which cancel each others even if you replace the connection $\Gamma^m_{mt}$ by $\overline{\Gamma}^m_{mt}$ or $\overline{\Gamma}^m_{mt}$ (the terms which cancel each other contain the factor $\frac{1}{J}\pdv{J}{x^{\nu}}$ which is common for both types of connections. \\
+This is a direct consequence of the two terms in expression $(3)$ of Exercise 18 which cancel each others even if you replace the connection $\Gamma^m_{mt}$ by $\overline{\Gamma}^m_{mt}$ or $\overline{\Gamma}^m_{mt}$ (the terms which cancel each other contain the factor $\frac{1}{J}\pdv{J}{x^{\nu}}$ which is common for both types of connections). \\
 Also, we have
 $$\half\left(\Gamma^{\rho}_{\rho\nu}+\overline{\Gamma}^{\rho}_{\rho\nu}\right)= X^{n}_{\nu}\half\left(\Gamma^r_{rn}+\overline{\Gamma}^r_{rn}\right) + \frac{1}{J}\pdv{J}{x^{\nu}}$$ 
-which gives also an unchanged factor $\frac{1}{J}\pdv{J}{x^{\nu}}$  and as in the expression of the absolute derivative the other terms does not contain any contracted connection the transformation rule is valid for a) and b).\\\\
+which gives also an unchanged factor $\frac{1}{J}\pdv{J}{x^{\nu}}$  and as in the expression of the absolute derivative the other terms do not contain any contracted connection the transformation rule is valid for a) and b).\\\\
 For the product rule and sum rule , a) and b) are  also correct as the last term of the absolute derivative is linear in the $\Gamma^k_{kt}$ and can replace it by any covariant vector to make the product and sum rule still valid.
 $$\lozenge$$
 \textbf{Are the operations of contraction and absolute differentiation commutative when having a single connection ?}\\\\
@@ -1481,7 +1481,7 @@ $$\blacklozenge$$
 
 \section{p311 - Exercise 20}
 \begin{tcolorbox}
-From the defintion of Ex. $18$ and from $\mathbf{8.115)}$, deduce an expression for the covariant derivative of a general relative tensor 
+From the defintion of Ex. $18$ and from $\mathbf{(8.115)}$, deduce an expression for the covariant derivative of a general relative tensor 
 \end{tcolorbox}
 From $\mathbf{(8.115)}$ we get immediately
 \begin{align*}
@@ -1521,9 +1521,10 @@ Substituting into equations $a_{mn,rs}-a_{mn,sr}=0$ from $\mathbf{(8.304)}$, and
 $$(a)\spatie a_{pq}G^{pq}_{..mnrs}=0$$
 where $G^{pq}_{..mnrs}$ is a function of the $\Gamma^r_{mn}$ and their derivatives, given by
 $$G^{pq}_{..mnrs}= \half\left(\delta^p_mR^q_{.nrs} +\delta^q_mR^p_{.nrs} +\delta^p_nR^q_{.mrs} +\delta^q_nR^p_{.mrs} \right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs}$$
-By repeated covariant differentiation of (a) and by use of $\mathbf{8.301)}$, deduce the following set of algebraic equations for $a_{mn}$:
+By repeated covariant differentiation of (a) and by use of $\mathbf{(8.301)}$, deduce the following set of algebraic equations for $a_{mn}$:
 $$(b)\spatie a_{pq}G^{pq}_{..mnrs|t_1}=a_{pq}G^{pq}_{..mnrs|t_1t_2}=\dots =0$$
 \end{tcolorbox}
+\textbf{(a)}\\\\
 We have:
 \begin{align}
 \left\{\begin{matrix}
@@ -1581,18 +1582,25 @@ a_{pn}R^p_{.mrs}+ a_{mq}R^q_{.nrs}+a_{pm}R^p_{.nrs}+ a_{nq}R^q_{.mrs}-\frac{2}{N
 giving as final result
 \begin{align}a_{pq}\left[\half\left(\delta^q_n R^p_{.mrs}+\delta^p_mR^q_{.nrs}+\delta^q_mR^p_{.nrs}+\delta^p_nR^q_{.mrs}\right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs}\right]=0
 \end{align}
-as asked.\\\\
+as asked.\\
 
-$$\lozenge$$\\\\
+$$\lozenge$$\\
+\textbf{(b)}\\\\
 We use $\mathbf{(8.301)}:  \quad a_{mn|r}+ a_{mn}\phi_r=0$ in the  
 covariant differentiation of $(4)$. \\
 This  gives
-\begin{align}
-\left.\begin{matrix}
--a_{pq}\phi_{t_1}\left[\half\left(\delta^q_n R^p_{.mrs}+\delta^p_mR^q_{.nrs}+\delta^q_mR^p_{.nrs}+\delta^p_nR^q_{.mrs}\right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs}\right]\\\\
-+a_{pq}\left[\half\left(\delta^q_n R^p_{.mrs|t_1}+\delta^p_mR^q_{.nrs|t_1}+\delta^q_mR^p_{.nrs|t_1}+\delta^p_nR^q_{.mrs|t_1}\right)-\frac{1}{N}\left(\delta^p_m\delta^q_n+\delta^q_m\delta^p_n\right)R^t_{.trs|t_1}\right]
-\end{matrix}\right\}&=0
-\end{align}
+\begin{align*}
+\begin{matrix}
+&-\phi_{t_1}\underbrace{a_{pq}G^{pq}_{..mnrs}}_{=0}
++a_{pq}G^{pq}_{..mnrs|t_1}&=0\\
+\Rightarrow& -\phi_{t_2}\underbrace{a_{pq}G^{pq}_{..mnrs|t_1}}_{=0}
++a_{pq}G^{pq}_{..mnrs|t_1t_2}&=0\\
+\Rightarrow& -\phi_{t_3}\underbrace{a_{pq}G^{pq}_{..mnrs|t_1 t_2}}_{=0}
++a_{pq}G^{pq}_{..mnrs|t_1t_2t_3}&=0\\
+&\vdots&
+\end{matrix}
+\end{align*}
+proving the assertion.
 $$\blacklozenge$$
 \newpage
 
