@@ -12,7 +12,7 @@ Take polar coordinates $r, \theta$ in a plane. Draw the infinitesimal triangle w
 \caption{Metric tensor in polar coordinate system}
 \label{fig:fig_p27_21_a}
 \end{figure}
-\begin{align} 
+\begin{align*} 
 \ ds^2 &= |AB|^2\\
 \ &= dr^2 +|CA|^2\\
 \ |CA| &= r\sin(d\theta)\approx rd\theta\\
@@ -21,7 +21,7 @@ Take polar coordinates $r, \theta$ in a plane. Draw the infinitesimal triangle w
  1& 0 \\
 0 & r^2 \\
 \end{pmatrix}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \pagebreak[4]
 
@@ -42,7 +42,7 @@ Consider an infinitesimal displacement of point E to J with $(dr,d\theta, d\phi 
 \begin{align}
 \ ds^2 &= |EJ|^2
 \end{align}
-As we use infinitesimal displacements we can assume that $$|ES|\perp|GK|\perp|JK|\perp|ES|$$. Hence,
+As we use infinitesimal displacements we can assume that, omitting $2^{nd}$ order terms, $$|ES|\perp|GK|\perp|JK|\perp|ES|$$. Hence,
 \begin{align}
 \ ds^2 = |ES|^2+|SK|^2+|KJ|^2
 \end{align}
@@ -95,11 +95,11 @@ $$\blacklozenge$$
 \section{p27-exercise}
 
 \begin{tcolorbox}
-Starting from 3.103, show that $$a_{mn} = \pdv{y^1}{x^m}\pdv{y^1}{x^n}+\pdv{y^2}{x^m}\pdv{y^2}{x^n}+\pdv{y^3}{x^m}\pdv{y^3}{x^n}$$ and calculate the quantities for a sphere, taking as curvilinear coordinates on he sphere $$x^1 = y^1 , x^2 = y^2$$
+Starting from $\mathbf{(2.103)}$, show that $$a_{mn} = \pdv{y^1}{x^m}\pdv{y^1}{x^n}+\pdv{y^2}{x^m}\pdv{y^2}{x^n}+\pdv{y^3}{x^m}\pdv{y^3}{x^n}$$ and calculate the quantities for a sphere, taking as curvilinear coordinates on he sphere $$x^1 = y^1 , x^2 = y^2$$
 \end{tcolorbox}
 We have
 \begin{align}
-\text{(2.103)}\quad &\Rightarrow y^1 = x^1 , y^2 = x^2, y^3 = f^3(x^1,x^2)\\
+\mathbf{(2.103)}\quad &\Rightarrow y^1 = x^1 , y^2 = x^2, y^3 = f^3(x^1,x^2)\\
 \text{surface = sphere}\quad &\Rightarrow y^3 = \pm \sqrt{R^2 -(x^1)^2-(x^2)^2}\\
 \ ds^2 &= (dx^1)^2+(dx^2)^2+(dx^3)^2\\
 \ \text{(1) and (2)}\quad& \Rightarrow \left\{ \begin{array}{c} 
@@ -128,9 +128,10 @@ $$\blacklozenge$$
 \begin{tcolorbox}
            $$\quad\quad a_{mr}\Delta^{ms} = a_{rm}\Delta^{sm} = \delta^s_r a$$
 \end{tcolorbox}
-Case 1: $r =s$\\
+
+\textbf{Case 1}: $r =s$\\
 We have, $a_{Rm}\Delta^{Rm}$ (no summation on R) is the definition of the determinant of A developed along the row R: OK.\\\\
-Case 2: $r \neq s$\\
+$\spatie$    \textbf{Case 2}: $r \neq s$\\
 Consider
 \begin{align}
 \ A &= \begin{pmatrix}
@@ -171,37 +172,37 @@ $$\blacklozenge$$
 \section{p31-exercise}
 
 \begin{tcolorbox}
-Show that if $a{mn} = 0$ for $m\neq n$, then $$a^{11} = \frac{1}{a_{11}}, a^{22} = \frac{1}{a_{22}}, \dots, a¨{12} = 0, \dots$$
+Show that if $a_{mn} = 0$ for $m\neq n$, then $$a^{11} = \frac{1}{a_{11}}, a^{22} = \frac{1}{a_{22}}, \dots, a^{12} = 0, \dots$$
 \end{tcolorbox}
 We have to prove that:
-\begin{align}
+\begin{align*}
 \ a^{ij} = \left\{\begin{array}{cc}
 \frac{1}{a_{ij}} & \text{: }i=j\\
 \ 0 & \text{: }i \neq j
 \end{array}\right.
-\end{align}
+\end{align*}
 From 2.204:
 \begin{align}
-a_{mR}a_{mS} = \delta^S_R
+a_{mR}a^{mS} = \delta^S_R
 \end{align}
 i) Be $R \neq S$
-\begin{align}
-\text{(2) }\quad \Rightarrow a_{mR}a_{mS} &= 0\\
-\text{but } \quad a_{mR} &=0\quad \forall m \neq R\\
-\Rightarrow a_{RR}a^{RS} = 0
-\end{align}
+\begin{align*}
+\text{(1) }\quad \Rightarrow \spatie &a_{mR}a^{mS} = 0\\
+\text{but } \spatie &a_{mR} =0\quad \forall m \neq R\\
+\Rightarrow \spatie &a_{RR}a^{RS} = 0
+\end{align*}
 but $a_{RR} \neq 0$ ($a_{RR}$ can't be $0$ as the metric tensor would degenerate  if $a_{mn} = 0\quad \forall m \neq n$
-\begin{align}
-\Rightarrow a^{Rs} = 0\\\\
-\end{align}
+\begin{align*}
+\Rightarrow \spatie &a^{Rs} = 0\\\\
+\end{align*}
 
 i) Be $R = S$
-\begin{align}
-\text{(2) }\quad \Rightarrow a_{mR}a_{mR} &= 1\\
-\text{but } \quad a_{mR} &=0\quad \forall m \neq R\\
-\Rightarrow a_{RR}a^{RR} = 1\\
-\Rightarrow a^{RR} = \frac{1}{a_{RR}}
-\end{align}
+\begin{align*}
+\text{(1) }\quad \Rightarrow \spatie & a_{mR}a^{mR} = 1\\
+\text{but } \spatie &a_{mR} =0\quad \forall m \neq R\\
+\Rightarrow \spatie &a_{RR}a^{RR} = 1\\
+\Rightarrow \spatie &a^{RR} = \frac{1}{a_{RR}}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -211,21 +212,21 @@ $$\blacklozenge$$
 Find the components of $a^{mn}$ for spherical polar coordinates in Eulidean 3-space.
 \end{tcolorbox}
 We have (see exercise page 27):
-\begin{align}
+\begin{align*}
 \ (a_{mn}) = \begin{pmatrix}
  1& 0 & 0\\
 0 & r^2 & 0 \\
 0 & 0 & r^2\sin^2\theta \\
 \end{pmatrix}
-\end{align}
-As $a_{mn} = 0 \quad \forall m \neq n$ we deduce (see previous exercise p31)
-\begin{align}
+\end{align*}
+As $a_{mn} = 0 \quad \forall m \neq n$ we deduce (see previous exercise p. 31)
+\begin{align*}
 \ (a^{mn}) = \begin{pmatrix}
  1& 0 & 0\\
 0 & \frac{1}{r^2} & 0 \\
 0 & 0 & \frac{1}{r^2\sin^2\theta)}\\
 \end{pmatrix}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -235,12 +236,12 @@ $$\blacklozenge$$
 Find the mixed metric tensor  $a^{.n}_m$ obtained from $a_{mn}$ by raising the second subscript
 \end{tcolorbox}
 We have :
-\begin{align}
+\begin{align*}
 \ a_{i}^{.j} &=  a_{in}a^{nj}\\
 \ &=  a_{in}a^{jn}\quad a^{jn} \text{  is symmetric}\\
 \ &= \delta^j_i \quad \text{ (see 2.205 pg. 30)}\\
 \ &\Rightarrow a_{i}^{.j} = \delta^j_i 
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -248,18 +249,18 @@ $$\blacklozenge$$
 \begin{tcolorbox}
           $$ \pdv{a}{a_{mn}} = a a^{mn}$$
 \end{tcolorbox}
-Put $a_{MN}\equiv a_{mn}$. By definition, we have
+By definition, we have
 \begin{align}
-\  a\equiv |a_{mn}|  &= a_{Mk}\Delta^{Mk}\quad\text{(develop determinant along row M)}\\
-\ &\Rightarrow \pdv{a}{a_{mn}} = \pdv{a_{Mk}}{a_{mn}}\Delta^{Mk} + a_{Mk}\pdv{\Delta^{Mk}}{a_{mn}}\\
-\text{but}\quad &\pdv{a_{Mk}}{a_{mn}} = \left\{\begin{array}{c}
+\  &a\equiv |a_{mn}| = a_{Mk}\Delta^{Mk}\quad\text{(develop determinant along row M)}\\
+\ \Rightarrow \spatie &\pdv{a}{a_{mn}} = \pdv{a_{Mk}}{a_{mn}}\Delta^{Mk} + a_{Mk}\pdv{\Delta^{Mk}}{a_{mn}}\\
+\text{but}\spatie  &\pdv{a_{Mk}}{a_{mn}} = \left\{\begin{array}{c}
 \ 1\quad\text{if} \quad k = N\\
 \ 0\quad\text{if} \quad k \neq N\\
 \end{array}\right.\\
-\text{and}\quad &\pdv{\Delta^{Mk}}{a_{mn}} = 0 \quad \forall k \text{ as } \Delta^{Mk} \text{does not contain the row with } a_{mn} \text{ as element.}\\
-\ & \text{(3) and (4)}\quad  \Rightarrow \pdv{a}{a_{mn}} = \Delta^{MN}\\ 
+\text{and}\spatie  &\pdv{\Delta^{Mk}}{a_{mn}} = 0 \quad \forall k \text{ as } \Delta^{Mk} \text{does not contain the row with } a_{mn} \text{ as element.}\\
+\  \text{(3) and (4)}\quad  \Rightarrow \spatie & \pdv{a}{a_{mn}} = \Delta^{MN}\\ 
 \ &  a^{mn} = \frac{\Delta^{mn}}{a}\quad\text{by definition (see 2.203 page 30)}\\
-\ & \Rightarrow \pdv{a}{a_{mn}} = aa^{mn}
+\  \Rightarrow \spatie  &\pdv{a}{a_{mn}} = aa^{mn}
 \end{align} 
 $$\blacklozenge$$
 \newpage
@@ -273,7 +274,7 @@ From 2.204, we have
 \begin{align}
 \ a_{mr}a^{ms} &= \delta^s_r\\
 \text{Consider} \quad a_{mR}a^{mR} &= 1\\
-\text{We can repeat (2) for R = 1,2,...,N} \quad \Rightarrow a_{mr}a^{mr} &= N\\
+\text{We can repeat (2) for R = 1,2,...,N} \quad \Rightarrow a_{mr}a^{mr} &= N
 \end{align}
 $$\blacklozenge$$
 \newpage
@@ -284,13 +285,13 @@ $$\blacklozenge$$
 Show that in Euclidean 3-space with rectangular Cartesian coordinates, the definition 2.301 coincides with the usual definition of the magnitude of a vector.
 \end{tcolorbox}
 The length of an arbitrary vector in Euclidean 3-space with rectangular Cartesian coordinates, is
-\begin{align}
+\begin{align*}
 \ ds^2 = (dy^1)^2 + (dy^2)^2 (dy^2)^2
-\end {align}
+\end {align*}
 From 2.301, it is obvious that the metrixc tensor can be expressed as,
-\begin{align}
+\begin{align*}
 \begin{pmatrix}1 & 0 &0 \\ 0 & 1 &0\\0 & 0 &1  \\ \end{pmatrix} 
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -305,16 +306,16 @@ The metric tensor has the following form,
 \text {and  (2.306)  }\quad s &= \int^{2\pi}_0[\epsilon a_{mn}p^mp^n]^{\frac{1}{2}}du
 \end{align}
 with
-\begin{align}
+\begin{align*}
 \ p^1 = \dv{x^1}{u} = -a\sin(u), \quad p^2 = \dv{x^2}{u} = a\cos(u), \quad p^3 = \dv{x^3}{u} = b
-\end{align}
+\end{align*}
 Hence (2) becomes
-\begin{align}
+\begin{align*}
 s &= \int^{2\pi}_0\epsilon[a^2 \sin^2(u) + a^2\cos^2(u) + b^2]^{\frac{1}{2}}du\\
 \ &= \int^{2\pi}_0\epsilon[a^2+  b^2]^{\frac{1}{2}}du\\
 \ &= [a^2+  b^2]^{\frac{1}{2}} \left. u\right|^{2\pi}_0\\
 \ &= 2\pi[a^2+  b^2]^{\frac{1}{2}} 
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -338,17 +339,17 @@ Show that the small angle between unit vectors $X^r$ and $X^r + dX^r$ (these inc
 \input{D:/MathLatex/images/fig_p37_213_a.tex}
 \caption{Small angle expression}
 \end{figure}
-By definition (2.302 page 33)
-\begin{align} 
-\ |BC|^2 =\epsilon a_{mn}dX^mdX^n\\
-\end{align}
+By definition ($\mathbf{2.302}$ page 33)
+\begin{align*} 
+\ |BC|^2 =\epsilon a_{mn}dX^mdX^n
+\end{align*}
 We can drop $\epsilon = 1$ as the considered space is positive definite.\\
 As $\theta$ is infinitesimal, we can state
-\begin{align}
+\begin{align*}
 \ |BC| &\approx |AC|\theta\\
 \text{ and } \quad |AC| &= X^r = 1\quad  \text{(as } X^r \text{ is a unit vector)}\\
-\Rightarrow \theta^2 &= a_{mn}dX^mdX^n
-\end{align}
+\Rightarrow \spatie \theta^2 &= a_{mn}dX^mdX^n
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -361,7 +362,7 @@ We clarify the integration by parts in the derivation of the general  geodesic e
 We have 
 \begin{align}
 \int d(A.B) &= \int AdB + \int BdA\\
-\Rightarrow  \int AdB &= \int BdA -  \int d(A.B)\
+\Rightarrow  \int AdB &=  \int d(A.B)-\int BdA
 \end{align}
 Now, substitute 2.407 in 2.406, we get
 \begin{align}
@@ -373,11 +374,11 @@ To integrate by parts the second term in (5) we put in (2)
 $$A= \pdv{(\epsilon w)^{\frac{1}{2}}}{p^r} \quad \text{and } B = \pdv{x^r}{v}$$
 \begin{align}
 \int \pdv{(\epsilon w)^{\frac{1}{2}}}{p^r} d(\pdv{x^r}{v}) &= \int AdB \\
-\ & = \int BdA -  \int d(A.B)\\
+\ & = \int d(A.B)-\int BdA\\
 \ &= \pdv{(\epsilon w)^{\frac{1}{2}}}{p^r}\left.\pdv{x^r}{v}\right|_{u_0}^{u_1} - \int \pdv{x^r}{v}d(\pdv{(\epsilon w)^{\frac{1}{2}}}{p^r} )\\
 \ &= \pdv{(\epsilon w)^{\frac{1}{2}}}{p^r}\left.\pdv{x^r}{v}\right|_{u_0}^{u_1} - \int \pdv{x^r}{v}\pdv{\pdv{(\epsilon w)^{\frac{1}{2}}}{p^r} )}{u}du
 \end{align}
-Replacing (9) in (5) gives the formulea 2.409.
+Replacing (9) in (5) gives the formula $\mathbf{(2.409)}$.
 $$\blacklozenge$$
 \newpage
 
@@ -385,17 +386,17 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove the following identities: $$ [mn,r] = [nm,r], \quad [rm,n]+[rn,m] = \partial_r a_{mn}$$
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \ [mn,r] &= \frac{1}{2}(\partial_{n} a_{mr}+ \partial_{m} a_{nr} - \partial_{r} a_{mn})\\
 \ &= \frac{1}{2}(\partial_{m} a_{nr} + \partial_{n} a_{mr}  - \partial_{r} a_{nm})\\
 \ &=[nm,r] 
-\end{align}
+\end{align*}
 and 
-\begin{align}
+\begin{align*}
 \ [rm,n] + [rn,m]&= \frac{1}{2}(\partial_{r} a_{mn}+ \partial_{m} a_{rn} - \partial_{n} a_{rm} + \partial_{n} a_{rm}+ \partial_{r} a_{mn} - \partial_{m} a_{rn})\\
 \ &= \frac{1}{2}(\partial_{r} a_{mn}+\partial_{r} a_{mn})\\
 \ &=\partial_{r} a_{mn}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -403,11 +404,11 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove that  $$ [mn,r] = a_{rs}\Gamma^s_{mn}$$
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \ a_{rs}\Gamma^s_{mn} & = a_{rs}a^{sk}[mn,k]\\
 \ & = \delta^k_r[mn,k]\\
 \ &= [mn,r]
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -416,40 +417,40 @@ $$\blacklozenge$$
 ... This may proved without difficulty by starting with 2.427, in which $\lambda$ is a known function of $u$ , and defining $s$ by the relation$$ s = \int^u_{u_0}(exp\int^v_{v_0} \lambda(w)dw)dv$$ $u_0, v_0$ being constants....
 \end{tcolorbox}
 \begin{align}
-\text{see 2.428 :} \quad  \lambda (u)=-\frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\\
+\text{see 2.428 :} \spatie  \lambda (u)=-\frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}
 \end{align}
 We suppose $u(s)$ continuous by parts with continuous inverse.
 \begin{align}
-\Rightarrow \dv{s}{u} &= \frac{1}{\dv{u}{s}}\\
-\Rightarrow \dv[2]{s}{u}&= \dv{(\frac{1}{\dv{u}{s}})}{s}\dv{s}{u}\\
+\Rightarrow \spatie  \dv{s}{u} &= \frac{1}{\dv{u}{s}}\\
+\Rightarrow \spatie \dv[2]{s}{u}&= \dv{(\frac{1}{\dv{u}{s}})}{s}\dv{s}{u}\\
 \ & = -\frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\dv{s}{u}\\
 \Rightarrow \frac{\dv[2]{s}{u}}{\dv{s}{u}} &= - \frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}  
 \end{align}
 By definition (2.428)
 \begin{align}
 \ \lambda (u) &= - \frac{\dv[2]{u}{s}}{(\dv{u}{s})^2}\\
-\text{hence by (6) and (7):}\quad  \lambda (u) &= \frac{\dv[2]{s}{u}}{\dv{s}{u}}\\
-\text{in (8) put}\quad y &= \dv{s}{u} \\
-\text{ and so} \quad \lambda (w)  &= \frac{y^{'}}{y}\\
+\text{hence by (5) and (6):}\spatie   \lambda (u) &= \frac{\dv[2]{s}{u}}{\dv{s}{u}}\\
+\text{in (8) put}\spatie  y &= \dv{s}{u} \\
+\text{ and so} \spatie  \lambda (w)  &= \frac{y^{'}}{y}\\
 \Rightarrow \int \frac{y^{'}}{y}dw &= \int \lambda (w)dw\\
-\Leftrightarrow \int d(lny) &= \int \lambda (w)dw\\
+\Leftrightarrow \spatie  \int d(lny) &= \int \lambda (w)dw\\
 \Rightarrow \left. ln(y) \right|^v_{v_0} &= \int^v_{v_0} \lambda (w)dw\\
-\Rightarrow y  &= exp(\int^v_{v_0} \lambda (w)dw) + C
+\Rightarrow y  \spatie  &= exp(\int^v_{v_0} \lambda (w)dw) + C
 \end{align}
-Taking into account (9), we get:
+Taking into account $(8)$, we get:
 \begin{align}
 \dv{s}{v}  &= exp(\int^v_{v_0} \lambda (w)dw) + C\\
-\Rightarrow \left. s \right|^u_{u_0} &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B^{'}\\
-\Leftrightarrow  s  &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B
+\Rightarrow \spatie  \left. s \right|^u_{u_0} &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B^{'}\\
+\Leftrightarrow  \spatie  s  &=\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv +Cu + B
 \end{align}
-We show tha we have to put $C=0$ and can drop the constant $B$. Remember by (8)
+We show that we have to put $C=0$ and can drop the constant $B$. Remember by $(7)$
 \begin{align}
 \lambda (u) &= \frac{\dv[2]{s}{u}}{\dv{s}{u}}\\
-\text{by (17)} \quad \dv{s}{u}  &=exp(\int^u_{u_0} \lambda (w)dw) +C\\
-\text{and}\quad \dv[2]{s}{u}  &= \lambda (u) exp(\int^u_{u_0} \lambda (w)dw) \\
-\text{hence by (18), (19) and (20):} \quad \lambda (u)&= \frac{\lambda (u) exp(\int^u_{u_0} \lambda (w)dw)}{exp(\int^u_{u_0} \lambda (w)dw) +C}
+\text{by (17)} \spatie  \dv{s}{u}  &=exp(\int^u_{u_0} \lambda (w)dw) +C\\
+\text{and}\spatie  \dv[2]{s}{u}  &= \lambda (u) exp(\int^u_{u_0} \lambda (w)dw) \\
+\text{hence by (17), (18) and (19):} \spatie  \lambda (u)&= \frac{\lambda (u) exp(\int^u_{u_0} \lambda (w)dw)}{exp(\int^u_{u_0} \lambda (w)dw) +C}
 \end{align}
-So, whatever the constant B, the relation (18) is correct on the condition that C=0. 
+So, whatever the constant B, the relation $(17)$ is correct on the condition that C=0. 
 So, indeed, we can choose the independent variable $s$ as
 $$s  =\int^u_{u_0}  exp(\int^v_{v_0} \lambda (w)dw)dv $$ 
 $$\blacklozenge$$
@@ -457,10 +458,10 @@ $$\blacklozenge$$
 
 \section{p42-clarification on 2.430}
 \begin{tcolorbox}
-After 2.430 it is stateC:\\
-\it{"No matter what values these constants have, 2.424 is satisfied, and by adjusting the constant $v_0$, we can ensure that $a_{mn}\dv{x^m}{s}\dv{x^n}{s} = \pm1$ along $C$, so that $s$ is actually the arc length."}
+After 2.430 it is stated:\\
+\it{"No matter what values these constants have, $\mathbf{(2.424)}$ is satisfied, and by adjusting the constant $v_0$, we can ensure that $a_{mn}\dv{x^m}{s}\dv{x^n}{s} = \pm1$ along $C$, so that $s$ is actually the arc length."}
 \end{tcolorbox}
-We first prove that 2.4.24 is satisfied, no matter what values the constants take. We have
+We first prove that $\mathbf{(2.424)}$  is satisfied, no matter what values the constants take. We have
 \begin{align}
 \text{(2.430) } \quad  &s =\int_{u_0}^u(exp\int_{v_0}^v \lambda (w)dw)dv\\
 \text{and (2.427)} \quad &\dv[2]{x^r}{u} + \Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} =  \lambda \dv{x^r}{u}
@@ -510,25 +511,25 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 $$\lambda = \Gamma^N_{\mu \nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + 2\Gamma^N_{\mu N}\dv{x^{\mu}}{x^N}+\Gamma^N_{N N} $$
 \end{tcolorbox}
-We start with 2.427 with $r=N$
+We start with $\mathbf{(2.427)}$ with $r=N$
 \begin{align}
 \ &\dv[2]{x^N}{{x^{N}}} + \Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} = \lambda \dv{x^N}{x^N}\\
 \Rightarrow\quad &\Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} = \lambda \quad \text{(as}\quad \dv[2]{x^N}{{x^{N}}} = 0 \quad \dv{x^N}{x^N} = 1 \text{)}
 \end{align}
 But (2) is only valid with the dummy indices $\mu$ and $\nu$ spanning the whole dimension $(1,2,\dots N)$, but by choice $\mu,\nu \quad \epsilon \quad (1,2, \dots, N-1)$. We have thus to add in the left term of (2) the cases
-\begin{align}
-\left\{ \begin{array}{cc}
+\begin{align*}
+&\left\{ \begin{array}{cc}
 \Gamma^N_{N\nu}& \nu = (1,2,\dots ,N-1)\\\\
 \Gamma^N_{\mu N}& \mu = (1,2,\dots ,N-1)\\\\
 \Gamma^N_{NN}& \\
 \end{array} \right.\\
-\text{(2) becomes } \quad \Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{N \nu}\dv{x^N}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{\mu N}\dv{x^{\mu}}{x^N} \dv{x^{N}}{x^N} + \Gamma^N_{NN}\dv{x^{N}}{x^N} \dv{x^{N}}{x^N}= \lambda\\
-\Rightarrow   \quad \Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{N \nu}\dv{x^{\nu}}{x^N} + \Gamma^N_{\mu N}\dv{x^{\mu}}{x^N}+ \Gamma^N_{NN} = \lambda
-\end{align}
+\text{(2) becomes } \quad &\Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{N \nu}\dv{x^N}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{\mu N}\dv{x^{\mu}}{x^N} \dv{x^{N}}{x^N} + \Gamma^N_{NN}\dv{x^{N}}{x^N} \dv{x^{N}}{x^N}= \lambda\\
+\Rightarrow   \quad &\Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + \Gamma^N_{N \nu}\dv{x^{\nu}}{x^N} + \Gamma^N_{\mu N}\dv{x^{\mu}}{x^N}+ \Gamma^N_{NN} = \lambda
+\end{align*}
 As $\Gamma^N_{\mu N}$ is symmetric on the lower indices and $\mu$, $\nu$ being dummy indices:
-\begin{align}
+\begin{align*}
 \lambda  =\Gamma^N_{\mu\nu}\dv{x^{\mu}}{x^N} \dv{x^{\nu}}{x^N} + 2\Gamma^N_{N \nu}\dv{x^{\nu}}{x^N} +\Gamma^N_{NN}
-\end{align}
+\end{align*}
 The other $N-1$ equation for $r= 1,\dots, N-1$ can be deduced following the same reasoning.
 $$\blacklozenge$$
 \newpage
@@ -572,17 +573,17 @@ $$\blacklozenge$$
 
 \section{p47-exercise }
 \begin{tcolorbox}
-The class of all parameters $u$, for which the equations of a geodesic null line assume the simple form 2.445, are obtained from any one such parameter by linear transformation $$ \overline{u} = au + b$$ $a$ and $b$ being constants.
+The class of all parameters $u$, for which the equations of a geodesic null line assume the simple form $\mathbf{(2.445)}$, are obtained from any one such parameter by linear transformation $$ \overline{u} = au + b$$ $a$ and $b$ being constants.
 \end{tcolorbox}
-The simple form 2.445 is :
+The simple form $\mathbf{(2.445)}$ is :
 \begin{align}
 \  \dv[2]{x^r}{u} +\Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0\\
 \end{align}
-The general form of a geodesic is (2.447) 
+The general form of a geodesic is $\mathbf{(2.447)}$
 \begin{align}
 \  \dv[2]{x^r}{\overline{u}} +\Gamma^r_{mn}\dv{x^m}{\overline{u}}\dv{x^n}{\overline{u}} = \lambda \dv{x^r}{\overline{u}}\\
 \end{align}
-So (2.447) can only of the form (2.445) if $\lambda = 0$
+So $\mathbf{(2.447)}$ can only of the form $\mathbf{(2.445)}$ if $\lambda = 0$
 \begin{align}
 \   \lambda  = - \frac{\dv[2]{\overline{u}}{u}}{\left( \dv{\overline{u}}{u}\right)^2} = 0\\
 \end{align}
@@ -677,7 +678,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 $$\dv{\left(T_rS^r\right)}{u} = \dv{T_r}{u}S^r + T_r\dv{S^r}{u} = \left(\dv{T_r}{u} - \Gamma^m_{rn}T_m\dv{x^n}{u}\right)S^r$$ with $$\frac{\delta T_r}{\delta u} = \dv{T_r}{u} -\Gamma^m_{rn}\dv{x^n}{u} T_m$$ a covariant vector.
 \end{tcolorbox}
-It is given that $S^r$ is a tensor propagated parallelly along the curve. The by (2.5212) we have
+It is given that $S^r$ is a tensor propagated parallelly along the curve. Then by $\mathbf{(2.5212)}$ we have
 \begin{align}
 \dv{S^r}{u} &+ \Gamma^r_{mn}S^m\dv{x^n}{u}= 0\\
 \dv{S^r}{u} &= - \Gamma^r_{mn}S^m\dv{x^n}{u}\\
@@ -697,7 +698,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 $$\frac{\delta T_{rs}}{\delta u} \equiv \dv{T_{rs}}{u}  - \Gamma^m_{rn}T_{ms}\dv{x^n}{u} - \Gamma^m_{sn}T_{rm}\dv{x^n}{u}$$ is a covariant vector.
 \end{tcolorbox}
-We build an invariant $ T_{rs} S^rU^s$ with $S^r$ and $U^s$ arbitrary contravariant tensors. The we know that $\dv{\left( T_{rs} S^r U^s\right)}{u}$ is also an invariant. We have 
+We build an invariant $ T_{rs} S^rU^s$ with $S^r$ and $U^s$ arbitrary contravariant tensors. Then we know that $\dv{\left( T_{rs} S^r U^s\right)}{u}$ is also an invariant. We have 
 \begin{align}
 \dv{\left( T_{rs} S^r U^s\right)}{u} = \dv{T_{rs}}{u} S^r U^s + T_{rs} \dv{S^r}{u} U^s + T_{rs} S^r \dv{U^s}{u}
 \end{align} 
@@ -745,16 +746,16 @@ So (2) becomes:
 \ +D^r_{st}R_rS_s\Gamma^m_{tn}T^m\dv{x^n}{u}
 \end{array} \right.
 \end{align}
-In (5) apply the following renaming of dummy variables 
+In $(5)$ apply the following renaming of dummy variables 
 $$\left\{\begin{array}{c}
 2^{nd} line: \quad r\rightarrow m, m \rightarrow r\\
 3^{rd} line: \quad s\rightarrow m, m \rightarrow s\\
 4^{th} line: \quad t\rightarrow m, m \rightarrow t\\
 \end{array}  \right. $$
-and regrouping terms with $R^rS_sT_t$,(5) becomes then
-\begin{align}
+and regrouping terms with $R^rS_sT_t$, $(5)$  becomes then
+\begin{align*}
 \ A = \left[\dv{\left(D^r_{st}\right)}{u}+(\ D^r_{mt}\Gamma^s_{mn}+\ D^r_{sm}\Gamma^t_{mn}-\ D^m_{st}\Gamma^m_{rn})\dv{x^n}{u}\right]R^rS_sT_t
-\end{align}
+\end{align*}
 But $A$ is an invariant, so the expression in the square parenthesis is a tensor of the form $T^r_{st}$ and we define the absolute derivative of $T^r_{st}$ as:
 $$ \frac{\delta T^r_{st}}{\delta u} = \dv{\left(T^r_{st}\right)}{u}+\Gamma^s_{mn} T^r_{mt}\dv{x^n}{u}+\Gamma^t_{mn}T^r_{sm}\dv{x^n}{u}-\Gamma^m_{rn} T^m_{st}\dv{x^n}{u}$$
 $$\blacklozenge$$
@@ -765,13 +766,13 @@ $$\blacklozenge$$
 Prove that $$\delta^r_{s|t} = 0, \quad a^{rs}_{|t} = 0$$
 \end{tcolorbox}
 
-i)$\delta^t_{s|t} = 0$
+\textbf{i)} $\delta^t_{s|t} = 0$
 \begin{align}
 \text{(2.524) gives:}\quad \delta^r_{s|t} &= \underbrace{\pdv{\delta^r_{s}}{x^t}}_\text{=0} + \Gamma^r_{mt}\delta^m_{s}- \Gamma^m_{st}\delta^r_{m}\\
 &= \Gamma^r_{st}- \Gamma^r_{st} = 0
 \end{align}
 
-ii)$ a^{rs}_{|t} = 0$
+\textbf{ii)} $ a^{rs}_{|t} = 0$
 We know that 
 \begin{align}
 \delta^r_{s|t} &= a_{sk}a^{kr}|_{t}\\
@@ -881,9 +882,9 @@ Replace in (4) $\quad x^1 =r$, $x^2 =  \theta$ and $x^3 = \phi$
 \end{align}
 Let's calculate the Laplacian.
 \begin{align}
-\Delta V &= \left( a^{mn}\partial_m V\right)_{|n}\\
-\text{be}\quad \quad \quad G^n &= a^{mn}\partial_m V\\
-\text{then (see exercise p.32) } \quad \quad \left\{ \begin{array}{c}
+&\Delta V = \left( a^{mn}\partial_m V\right)_{|n}\\
+\text{be}\spatie & G^n = a^{mn}\partial_m V\\
+\text{then (see exercise p.32) } \spatie & \left\{ \begin{array}{l}
 \ G^1 = \partial_r V\\
 \ G^2 = \frac{1}{r^2}\partial_{\theta} V\\
 \ G^1 = \frac{1}{r^2 \sin ^2 \theta}\partial_{\phi} V\\

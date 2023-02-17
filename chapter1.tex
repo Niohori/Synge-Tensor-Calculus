@@ -855,9 +855,9 @@ Be $A$ a square matrix $N\times N$; Be $f$ a $C^1$ function $f:\mathbb{R}^{NxN} 
 Proof:\\
 By definition of the determinant, we have
 \begin{align}
-\left|A\right| = A_{iK}C_{K}^i \quad \text{ (no summation on K!)}
+\left|A\right| = A_{iK}C_{K}^i \quad \text{ (development along column K, no summation on K!)}
 \end{align}
-with $(C_{K}^i) =  (-1)^{i+K}M^{i}_K$ being the cofactor  of element $A_{iK}$ and $M^{i}_K$ the minor (N-1)x(N-1) matrix associated with the cofactor $A_{K^i}$. Be $C = (C_{ij})$ the NxN matrix formed with all possible cofactor elements  $C_{j}^i \text{  }(i,j = 1 \dots,N)$.\\
+with $(C_{K}^i) =  (-1)^{i+K}M^{i}_K$ being the cofactor  of element $A_{iK}$ and $M^{i}_K$ the minor $(N-1)\times(N-1)$ matrix associated with the cofactor $A_{K^i}$. Be $C = (C_{ij})$ the $N\times N$ matrix formed with all possible cofactor elements  $C_{j}^i \text{  }(i,j = 1 \dots,N)$.\\
 We have 
 \begin{align}
 \ A^{-1} &= \frac{C^T}{\left|A\right|}\\
@@ -869,13 +869,13 @@ We have
   \end{array}
 \end{align}
 Also, $\forall K: \pdv{C^i_K}{A_{in}} = 0 $ as by definition of the cofactor matrix, $A_{ij} $ is not contained in $C_{ij} $.\\
-Hence, (4) becomes
+Hence, $(4)$ becomes
 \begin{align}
 \pdv{\left|A\right|}{A_{ij}} &= C^i_j\\
-\text{But,}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{\pdv{\left|A\right|}{A_{ij}}}{\left|A\right|}\\
-\text{(6) and  (7) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{C^i_j}{\left|A\right|}\\
-\text{(3) and  (8) gives}\quad \pdv{ln\left|A\right|}{A_{ij}} &= \frac{(A^{-1}_{ij})^T \left|A\right|}{\left|A\right|} = (A^{-1}_{ij})^T \\
-\Rightarrow (ln\left|A\right|)^{'} &= (A^{-1})^T
+\text{But,}\spatie \pdv{ln\left|A\right|}{A_{ij}} &= \frac{\pdv{\left|A\right|}{A_{ij}}}{\left|A\right|}\\
+\text{(6) and  (7) gives}\spatie \pdv{ln\left|A\right|}{A_{ij}} &= \frac{C^i_j}{\left|A\right|}\\
+\text{(3) and  (8) gives}\spatie \pdv{ln\left|A\right|}{A_{ij}} &= \frac{(A^{-1}_{ij})^T \left|A\right|}{\left|A\right|} = (A^{-1}_{ij})^T \\
+\Rightarrow \spatie(ln\left|A\right|)^{'} &= (A^{-1})^T
 \end{align}
 \end{lemma}$$\diamond$$
 
@@ -883,12 +883,12 @@ Now the main proof:\\
 Let, 
 \begin{align}
 \ A \equiv \left[ a_{mn}\right] &= \left[ \pdv{y^m}{x^n}\right]\\
-\Rightarrow \pdv{ln\left|A\right|}{x^r} &= \pdv{ln\left|A\right|}{a_{mn}}\pdv{a_{mn}}{x^r}\\
-\text{from (10) we get }\quad \pdv{ln\left|A\right|}{a_{mn}} &= (A^{-1})^T_{mn}\\
-\text{But A is a Jacobian, so } (A^{-1})_{mn} &= \pdv{x^m}{y^n}\\
-\text{ and thus  }(A^{-1})^T_{mn} &=  \pdv{x^n}{y^m}\\
-\text{(13) can be written as }  \pdv{ln\left|A\right|}{x^r} &=  \pdv{x^n}{y^m}\pdv{a_{mn}}{x^r}\\
-\Rightarrow \pdv{ln\left|A\right|}{x^r} &=  \pdv{x^n}{y^m}\pdv{y^m}{x^r}{x^n}
+\Rightarrow \spatie \pdv{ln\left|A\right|}{x^r} &= \pdv{ln\left|A\right|}{a_{mn}}\pdv{a_{mn}}{x^r}\\
+\text{from (10) we get }\spatie \pdv{ln\left|A\right|}{a_{mn}} &= (A^{-1})^T_{mn}\\
+\text{But A is a Jacobian, so }\spatie (A^{-1})_{mn} &= \pdv{x^m}{y^n}\\
+\text{ and thus  }\spatie(A^{-1})^T_{mn} &=  \pdv{x^n}{y^m}\\
+\text{(13) can be written as }  \spatie \pdv{ln\left|A\right|}{x^r} &=  \pdv{x^n}{y^m}\pdv{a_{mn}}{x^r}\\
+\Rightarrow \spatie\pdv{ln\left|A\right|}{x^r} &=  \pdv{x^n}{y^m}\pdv{y^m}{x^r}{x^n}
 \end{align}
 $$\blacklozenge$$
 \pagebreak[4]
@@ -1079,8 +1079,9 @@ $$\blacklozenge$$
 
 \section{p25-exercise 17.}
 \begin{tcolorbox}
-$S_{nmr}$ is a skew-symmetric tensor in the first two indices.
- $-f_{mnr} + f_{nmr} = S_{mnr}$.
+Given a tensor $S_{nmr}$  skew-symmetric tensor in the first two indices, find a tensor $f_{mnr}$ skew-symmetric in the last two suffixes and satisfying the relation 
+ $$-f_{mnr} + f_{nmr} = S_{mnr}$$
+ Answer: $f_{mnr}= \half\left(-S_{rmn}+S_{nrm}-S_{mnr}\right)$
 \end{tcolorbox}
 From exercise 13. we know that 
 \begin{align}
