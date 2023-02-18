@@ -11,7 +11,7 @@ The reason is because those surfaces can be "unwrapped" like the figure below sh
 \input{D:/MathLatex/images/fig_p82_21_a.tex}
 \caption{Unwrapping of a cone}
 \end{figure}\\
-For the cone, we can for each point $\ P $ on the cone, lying on a distance $\ h $ from the apex and making an angle $\theta $,  associate on a plane,  a  point $ P^* $ lying at the same  distance $ h $ from the apex, taken as origin for the coordinate system, and making an angle $\phi =  \theta \sin{\alpha} $ with $ \alpha $ the angle of the cone. This pair of coordinates are polar coordinates with $ r \in (-\infty, + \infty)$ and $\theta \in [0, 2k\pi)$. 
+For the cone, we can for each point $\ P $ on the cone, lying on a distance $\ h $ from the apex and making an angle $\theta $,  associate on a plane, tangent to the cone,  a  point $ P^* $ lying at the same  distance $ h $ from the apex, taken as origin for the coordinate system, and making an angle $\phi =  \theta \sin{\alpha} $ with $ \alpha $ the angle of the cone. This pair of coordinates are polar coordinates with $ r \in (-\infty, + \infty)$ and $\theta \in [0, 2k\pi)$. 
 The same reasoning can be applied to a cylinder which is a cone with the apex at $\infty$. In that case the coordinate system becomes a Cartesian coordinate system. \\
 As a continuous mapping exist from polar to orthogonal Cartesian coordinates both  coordinate system can be written under the required form (3.101) and so can be called "flat".
 
@@ -39,14 +39,14 @@ We have (3.115) and (3.116)
 \ R_{rsmn} + R_{rmns}+R_{rnsm}=0
 \end{array} \right.
 \end{align}
-It is clear from the two first identities that  in pairs $(rs)$ and $(mn)$ both indices have to be different when the tensor is not $0$. So we only have to consider $R_{1212}$,  $R_{1221}$, $R_{2112}$ and $R_{2121}$.\\
+It is clear from the two first identities that  in the tuples $(rs)$ and $(mn)$ both indices have to be different when the tensor is not $0$. So we only have to consider $R_{1212}$,  $R_{1221}$, $R_{2112}$ and $R_{2121}$.\\
 The two first  identities gives us:
 \begin{align}
  R_{1221}= -R_{1212}\\
  R_{2112}= -R_{1212}\\
  R_{2121}= -R_{2112} = R_{1212}
 \end{align}
-The third identity does give us any additional information.
+The third identity doesn't  give us any additional information.
 The fourth identity gives us only trivial statements:
 \begin{align}
  R_{1212} + \underbrace{R_{1122}}_{=0}+\underbrace{R_{1221}}_{=- R_{1212} } = 0\\
@@ -72,7 +72,7 @@ R_{rsmn} =   R_{mnrs}\\
 R_{rsmn} + R_{rmns}+R_{rnsm}=0
 \end{array}\right.
 \end{align}
-It is clear from the two first identities that  in the tuple $(rs)$ and $(mn)$ both indices have to be different when the component is not $0$. So we only have to consider the component with the pair of tuples $(r,s)$ and $m,n)$ with $r \neq s$ and $m \neq n$.
+It is clear from the two first identities that  in the tuple $(rs)$ and $(mn)$ both indices have to be different when the component is not $0$. So we only have to consider the component with the pair of tuples $(r,s)$ and $(m,n)$ with $r \neq s$ and $m \neq n$.
 For the tuple $(r,s)$ we have $N$ possibilities to draw an index for $r$ but for $s$ only $N-1$ indices remain as $r \neq s$. So for the tuple $(r,s)$ we get $N(N-1)$ possibilities. But note by the first identity $R_{rsmn} =  - R_{srmn}$ that we only have to consider the half of this quantity as once we have chosen a tuple $(r,s)$ we also know  the component for the tuple $(s,r)$. So the total number of possibilities we have for  $(r,s)$ is $M = \half N(N-1)$. The same yields for the tuple $(mn)$. So, we get in total $M^2$ possibilities according to the two first identities.\\
 The third identity $R_{rsmn} =   R_{mnrs}$ puts an extra constraint on the number of possibilities as we have to subtract from $M^2$ the number of possibilities covered by this third identity. Note that, once we have chosen a tuple $(rs)$ we have to exclude the tuple $(m,n) =  (r,s)$ as the identity $R_{rsrs} =   R_{rsrs}$ becomes trivial.. So for the first tuple we have $M$ possibilities, but once chosen, only $M-1$ remain for the second tuple. So we get $M(M-1)$ possibilities. But, again we only have to take half of these possibilities as the identities $R_{rsmn} =   R_{mnrs}$ and $ R_{mnrs} = R_{rsmn}$ are equivalent.\\
 So the total number of possibilities reduces to $$ M^2 - \half M(M-1) \quad \text{with} \quad M=\half N(N-1) $$
@@ -86,25 +86,25 @@ First we note that this identity implies that all indices are different as it be
 \end{array} \right.
 \end{align}
 Let's consider the following cases
-\begin{align}
+\begin{align*}
 \left \{ \begin{array}{llll}
 \ r = m&\rightarrow m\neq s \  m\neq n \ r\neq n&\rightarrow & R_{rsrn} + \underbrace{R_{rrns}}_{=0}+\underbrace{R_{rnsr}}_{= -R_{rnrs}= -R_{rsrn}}=0\\
 \ r = n&\rightarrow n\neq s \  m\neq n \ r\neq s&\rightarrow & R_{rsmr} + \underbrace{R_{rmrs}}_{= -R_{mrrs}= -R_{rsmr}}+\underbrace{R_{rrsm}}_{=0}=0\\
 \ s = m&\rightarrow m\neq r \  n\neq s \ r\neq s&\rightarrow & R_{rssn} + \underbrace{R_{rsns}}_{= -R_{rssn}}+\underbrace{R_{rnss}}_{=0}=0\\
 \ s = n&\rightarrow r\neq s \  m\neq s \ m\neq n&\rightarrow & R_{rsms} + \underbrace{R_{rmss}}_{=0}+\underbrace{R_{rssm}}_{= -R_{rsms}}=0
 \end{array} \right.
-\end{align}
+\end{align*}
 So indeed, once two indices are equal, the fourth identity becomes trivial and does not put extra constraints to the number of possibilities. For the tuple $(r,s,m,n)$ we have $N$ possibilities to draw an index for $r$, for $s$ only $N-1$, for $m$ only $N-2$ and for $n$ only $N-3$ indices remain as $r \neq s\neq m\neq n$. The maximum number of constraint generated by the fourth identity is thus $$N(N-1)(N-2)(N-3)$$
 But here again double counts occur. Indeed the fourth identity is true for the $6$ tuples $$(rsmn),(rmsn) ,(rmns),(rsnm),(rnsm),(rnms)$$ as first entry    in the identity. The same reasoning is valid for the tuples $(n...), \ (s...) \ (m...) $. \\So in total we get $6\times4 = 24$ equivalent identities and the number of constraints generated by the fourth identity reduces to  $$\frac{1}{24}N(N-1)(N-2)(N-3)$$
 Note that this number of constraints vanish for $N \leq 3$.\\
 Putting it all together the number of independent components of $R_{rsmn}$ becomes
-\begin{align}
+\begin{align*}
 \mho &= M^2 - \half M(M-1)-\frac{1}{24}N(N-1)(N-2)(N-3)\\
 &= \half M(M+1)-\frac{1}{24}N(N-1)(N-2)(N-3)\\
 &= \frac{1}{8} N(N-1) \left(N(N-1)+2\right)-\frac{1}{24}N(N-1)(N-2)(N-3)\\
 &= \frac{N}{24} \left( 3N^2-6N^2+9N-6-N^3+3N^2+3N^2-9N-2N+6 \right)\\
 &= \frac{1}{12}N^2 \left( N^2-1\right)
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -113,7 +113,7 @@ $$\blacklozenge$$
 Using the fact that the absolute derivative of the fundamental tensor vanishes, prove that 3.107 may be written $$ \frac{\delta^2 T_r}{\delta u \delta v} - \frac{\delta^2 T_r}{\delta v \delta u} = R_{rpmn}T^p\partial_u x^m \partial_v x^n $$
 \end{tcolorbox}
 By 2.519 and 2.619 we have
-\begin{align}
+\begin{align*}
 \fdv{T_r}{u} &= \fdv{(a_{rk}T^k)}{u} 
  = \underbrace{\fdv{(a_{rk})}{u}}_{=0}T^k+a_{rk}\fdv{(T^k)}{u}\\
  &= a_{rk}T^k_{|n} \partial_u x^n\\
@@ -123,9 +123,9 @@ By 2.519 and 2.619 we have
    &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n+a_{rk}T^k_{|n} \underbrace{\left(\partial_u x^n \right)_{|m}}_{ = \partial_m \left(\partial_u x^n \right) + \Gamma^n_{pm}\partial_u x^p}\partial_v x^m\\
    &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n+a_{rk}T^k_{|n} \left( \underbrace{\partial_m \left(\partial_u x^n \right)}_{=\partial_u \left( \delta_m^n \right)=0} + \Gamma^n_{pm}\partial_u x^p \right)\partial_v x^m\\
    &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n+a_{rk}T^k_{|n} \Gamma^n_{pm}\partial_u x^p \partial_v x^m
-\end{align}
+\end{align*}
 Hence we have 
-\begin{align}
+\begin{align*}
 \frac{\delta^2 T_r}{\delta v \delta u} &=a_{rk}T^k_{|nm}\partial_u x^m \partial_v x^n+a_{rk}T^k_{|n} \Gamma^n_{pm}\partial_v x^p \partial_u x^m\\
 &=a_{rk}T^k_{|mn}\partial_u x^n \partial_v x^m+a_{rk}T^k_{|n} \Gamma^n_{mp}\partial_v x^m \partial_u x^p\\
 \Rightarrow\quad \frac{\delta^2 T_r}{\delta u \delta v} - \frac{\delta^2 T_r}{\delta v \delta u} &= a_{rk}T^k_{|nm}\partial_v x^m \partial_u x^n - a_{rk}T^k_{|mn}\partial_u x^n \partial_v x^m\\
@@ -133,7 +133,7 @@ Hence we have
 &= \left(\underbrace{T_{r|nm} - T_{r|mn}}_{= -R_{rpmn}T^p}\right)\partial_u x^n \partial_v x^m\\
 &= -\underbrace{R_{rpmn}}_{=-R_{rpnm}} T^p\partial_u x^n \partial_v x^m = 
 R_{rpmn} T^p\partial_u x^m \partial_v x^n
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -142,35 +142,35 @@ $$\blacklozenge$$
 Would the study of geodesic deviation enable us to distinguish between a plane and a right circular cylinder?
 \end{tcolorbox}
 For geodesic lines we have
-\begin{align}
+\begin{align*}
 \dv[2]{x^r}{u} + \Gamma^r_{mn}\dv{x^m}{u}\dv{x^n}{u} = 0\\
-\end{align}
+\end{align*}
 with the fundamental tensor for a cylinder (see exercise page 27)
-\begin{align} 
+\begin{align*} 
 (a_{mn}) = \begin{pmatrix}
  1& 0 \\
 0 & r^2 \\
 \end{pmatrix}
-\end{align}
+\end{align*}
 As no element of this tensor is a function of the coordinates, it is clear that all Christoffel symbols vanish and the geodesic curve are solutions of the simple system of $2^{nd}$ order differential equations
-\begin{align}
+\begin{align*}
 \dv[2]{x^r}{u}  = 0
-\end{align}
+\end{align*}
 Hence
 \begin{align}
-x^r  &= \kappa u + \mu\\
+x^r  &= \kappa^r u + \mu^r\\
 \text{or}\quad x^r &= \kappa^r u
 \end{align}
 by choosing the origin of the coordinates system with the initial condition position of the point.
 Choosing polar coordinates $\phi, z$ as coordinates, the distance one walks when following a geodesic is given by
-\begin{align}
+\begin{align*}
  s= \int_{u_0}^{u_1}\sqrt{(r^2(d\phi)^2 + (dz)^2)}
-\end{align}
-and if we take $u=\phi$ as independent a parameter, by (6) we get 
-\begin{align}
+\end{align*}
+and if we take $u=\phi$ as independent a parameter, by (2) we get 
+\begin{align*}
  s-s_0 &= \int_{\psi_0}^{\psi_1}\sqrt{(r^2 + \kappa^2)}d\psi \equiv g(\psi - \psi_0)\\
  \text{or}\quad s&= \int_{\psi_0}^{\psi_1}\sqrt{(r^2 + \kappa^2)}d\psi \equiv g\psi
-\end{align}
+\end{align*}
 by introducing transformed coordinates $s^{'}= s-s_0$ and $\psi^{'} =\psi - \psi_0$.\\
 and thus we get 
 \begin{align}
@@ -187,14 +187,14 @@ and thus we get
 \caption{Geodesics on a cylinder}
 \label{fig:fig_p91_153_a}
 \end{figure}
-The above figure illustrates what an observer living in the manifold $\Omega$ sees when walking along geodesics on the cylinder.  He only can measure the distance $s^{'}$ and the displacement along $z$ and by (10) can only draw a chart like the one seen on the right of the cylinder. A "flatlander" living in the mapped manifold $M(\Omega)$ would see the same chart when walking along geodesics in his plane.\\\\
+The above figure illustrates what an observer living in the manifold $\Omega$ sees when walking along geodesics on the cylinder.  He only can measure the distance $s^{'}$ and the displacement along $z$ and by (3) can only draw a chart like the one seen on the right of the cylinder. A "flatlander" living in the mapped manifold $M(\Omega)$ would see the same chart when walking along geodesics in his plane.\\\\
 \textbf{Conclusion:} No, studying the geodesic deviation on a right circular cylinder does not enable us to say on which surface we are.
 $$\blacklozenge$$
 \newpage
 
 \section{p93 - Exercise}
 \begin{tcolorbox}
-For rectangular cartesians in Euclidean 3-space, show that the general solution of 3.311 is $\eta^r = A^r s+B^r $, where $A^, \ B^r$ are constants. verify this by elementary geometry. 
+For rectangular cartesians in Euclidean 3-space, show that the general solution of 3.311 is $\eta^r = A^r s+B^r $, where $A^, \ B^r$ are constants. Verify this by elementary geometry. 
 \end{tcolorbox}
 We have equation 3.111
 \begin{align}
@@ -394,7 +394,7 @@ $$\blacklozenge$$
 
 \section{p108 - Exercise 2}
 \begin{tcolorbox}
-Take as manifold $V_2$ the surface of an ordinary right circular cone, and consider one of the circular sections. A vector in $V_2$ is propagated parallely round this circle. Show that its direction is changed on completion of the circuit. can you reconcile this result with the fact that $V_2$ is flat?
+Take as manifold $V_2$ the surface of an ordinary right circular cone, and consider one of the circular sections. A vector in $V_2$ is propagated parallely round this circle. Show that its direction is changed on completion of the circuit. Can you reconcile this result with the fact that $V_2$ is flat?
 \end{tcolorbox}
 \begin{figure}[h]
 \center
@@ -405,7 +405,7 @@ Take as manifold $V_2$ the surface of an ordinary right circular cone, and consi
 We take as coordinate system $\left(u,\theta \right)$, embedded in the manifold, $u$ being the distance of the generator of the considered point to the apex of the cone and $\theta$ the angle with a arbitrary vector laying in a plane perpendicular to the axis of the cone.\\
 It is not hard to see that the fundamental form for this manifold is $$ \Phi = du^2+ \underbrace{k}_{= \ \sin^2 \alpha}u^2 d\theta^2 $$ 
 We have 
-\begin{align}
+\begin{align*}
  (a_{mn})= \begin{pmatrix}
  1&0  \\
  0& k u^2 \\
@@ -428,10 +428,10 @@ We have
  0&0&-k u \\
  0&\frac{1}{u}&0 \\
 \end{pmatrix}
-\end{align}
+\end{align*}
 
 Let's calculate the curvature tensor. From the exercise on page 86 we know that for a $V_2$ all components of the curvature tensor can be expressed in terms of $R_{1212}$. We have
-\begin{align}
+\begin{align*}
 R_{u\theta u\theta} &= \left \{ \begin{array}{l}
 \frac{1}{2}\left(\partial_{\theta u}a_{u \theta}+\partial_{u \theta}a_{\theta u}-\partial_{\theta \theta}a_{uu}-\partial_{u u}a_{\theta \theta}  \right) \\
  + a^{pq}\left([u \theta,p][\theta u,q] -[u u,p][\theta \theta,q]  \right)
@@ -443,7 +443,7 @@ R_{u\theta u\theta} &= \left \{ \begin{array}{l}
  + \underbrace{a^{\theta u}}_{=0}\left([u \theta,\theta][\theta u,u] -[u u,\theta][\theta \theta,u]  \right)\\
  + \underbrace{a^{\theta \theta}}_{=\frac{1}{ku^2}}\left(\underbrace{[u \theta,\theta][\theta u,\theta]}_{= k^2u^2} -\underbrace{[u u,\theta][\theta \theta,\theta]}_{=0}  \right)\\
 \end{array} \right.
-\end{align}
+\end{align*}
 So indeed all components of the curvature tensor vanish and hence $V_2$ is flat.
 
 Let's now calculate the parallel transportation of a vector $T^r$ along a circle somewhere on the cone. Taking $\theta$ as the parameter of the curve, the equation of the curve is $(u=u_0,\ \theta) \quad \theta \in \ \left[0, 2\pi \right)$. We have for parallel transportation along that curve $\fdv{T^r}{\theta}=0$ and get
@@ -463,12 +463,12 @@ Let's now calculate the parallel transportation of a vector $T^r$ along a circle
 \dot{T}^{\theta} =- \frac{T^{u}}{u_0}
 \end{array} \right.
 \end{align}
-From the first equation in (11) we deduce that a solution can be of the form\\ $T^u = p^{'}\left( e^{(a \theta + b^{'})}+ e^{-(a \theta + b^{'})}\right)$. Substituting in (12) we see that $a^2 = -k \rightarrow a = \pm i\sqrt{k}$. Replacing $b^{'}$ by $ib$ the solution for the system of differential equations (12) becomes
+From (3a) we deduce that a solution can be of the form\\ $T^u = p^{'}\left( e^{(a \theta + b^{'})}+ e^{-(a \theta + b^{'})}\right)$. Substituting in (3) we see that $a^2 = -k \rightarrow a = \pm i\sqrt{k}$. Replacing $b^{'}$ by $ib$ the solution for the system of differential equations (3) becomes
 \begin{align}
 T^u  &= p^{'}\left( e^{i(\sqrt{k} \theta + b)}+ e^{-i(\sqrt{k} \theta + b)}\right)\\
  &= p\cos{\left(\sqrt{k} \theta + b \right)}\\
  \Leftrightarrow \quad &=   C_1\sin{\sqrt{k}\theta}+ C_2\cos{\sqrt{k}\theta}\\
- \text{(15) in (12) gives:}\quad & \left \{ \begin{array}{l}
+ \text{(6) in (3) gives:}\quad & \left \{ \begin{array}{l}
 T^u = C_1\sin{\sqrt{k}\theta}+ C_2\cos{\sqrt{k}\theta}\\\\
 T^{\theta}  =  \frac{1}{\sqrt{k}u_0}\left(C_1\cos{\sqrt{k}\theta}- C_2\sin{\sqrt{k}\theta}\right)\\
 \end{array} \right.\\
@@ -482,18 +482,18 @@ T^{\theta}  =   T^{\theta}_{0}\cos{\sqrt{k}\theta}- \frac{T^{u}_{0}}{\sqrt{k}u_0
 \end{array}\right.
 \end{align}\\
 Let's now compute the angle $\phi$ between the starting vector $T^r_{0}$ and the vector $T^r$ parallely transported over an angle $\theta$ on the circle. We have (see $\textbf{(2.301.)}$ and $\textbf{(2.312.)}$):
-\begin{align}
+\begin{align*}
 \left \{ \begin{array}{l}
  \left| T^r_0 \right|^2 =  \left(T^u_0\right)^2 + k u^2_0\left(T^{\theta}_0\right)^2\\\\
  \left| T^r \right|^2 =  \left(T^u_0\right)^2 + k u^2_0\left(T^{\theta}_0\right)^2\\\\
  \cos{\phi} =  \frac{T^u_0 T^u+k u^2_0T^{\theta}_0 T^{\theta} }{\left(T^u_0\right)^2 + k u^2_0\left(T^{\theta}_0\right)^2}
 \end{array} \right.
-\end{align}
+\end{align*}
 The last equation in (19) becomes
-\begin{align}
+\begin{align*}
 \cos{\phi} &= \cos{\sqrt{k}\theta} \\
 \Rightarrow \quad \phi &= \sqrt{k}\theta + 2m\pi\quad\quad (m= 0,\pm 1,\pm 2, \dots)
-\end{align}
+\end{align*}
 So for $\theta = 2\pi$ the angle between the starting vector and the transported vector is not $2m\pi$. 
 \begin{figure}[H]%
     \centering
@@ -503,10 +503,10 @@ So for $\theta = 2\pi$ the angle between the starting vector and the transported
 \caption{Relationship between parallel transportation along a circle of a cone and unwrapping a cone .}
 \label{fig:fig_p108_Ex2_b2}
 \end{figure}
-Fig. ~\ref{fig:fig_p108_Ex2_b2} illustrates the analogy between 
+Fig. ~\ref{fig:fig_p108_Ex2_b2} illustrates the analogy between\\ 
 (a): the $\parallel$ transportation of a vector $P$ along a circular curve $\gamma$ on the cone over an angle $\theta$ giving a vector $P_t$ making an angle $\phi = \sqrt{k}\theta$ with the starting vector, and \\
 (b): the result of "unwrapping" a cone. Be two vectors $\overrightarrow{OP}$ and $\overrightarrow{OP_t}$, $P$ and $P_t$ being two points placed at a distance $r\theta$ along a circle  with radius $r$. Placing the vector $\overrightarrow{OP}$ in the $XY$-plane and unwrapping the cone over an angle $\theta$ will map the vector $\overrightarrow{OP_t}$ in the $XY$-plane to a vector $\overrightarrow{OP_t^{*}}$ making an angle $\phi = \sqrt{k}\theta$ with the vector $\overrightarrow{OP}$.\\
-The transported vector will only coincide with the initial vector for $\sqrt{k}=\sin{\alpha}  = \frac{1}{n}\quad (n= 1, 2, \dots)$. Fig. ~\ref{fig:fig_p108_Ex2_b3} illustrates this in the $X-Y$-plane,  for n=3. Only after a transportation over three periods, will the transported vector coincide with the initial vector. The dotted area represented the unwrapped cone.
+The transported vector will only coincide with the initial vector for $\sqrt{k}=\sin{\alpha}  = \frac{1}{n}\quad (n= 1, 2, \dots)$. Fig. ~\ref{fig:fig_p108_Ex2_b3} illustrates this in the $X-Y$-plane,  for n=3. Only after a transportation over three periods, will the transported vector coincide with the initial vector. The dotted area represents the unwrapped cone.
 \begin{figure}[H]%
     \centering
 {\input{D:/MathLatex/images/fig_p108_Ex2_b3.tex}}
@@ -517,7 +517,7 @@ $$\blacklozenge$$
 \newpage
 
 \section{p109 - Exercise 3 and 4}
-$\mathbf{Exercise 3.}$\\
+$\mathbf{Exercise \ 3.}$\\
 \begin{tcolorbox}
 Consider the equations $$ \left( R_{mn} -\theta a_{mn}\right)X^n = 0$$ where $R_{mn}$ is the Ricci tensor in a $V_N \ (N>2)$, $\theta$ an invariant, and $X^n$ a vector. Show that, if these equations are to be consistent, $\theta$ must have one of a certain set of $N$ values, and that the vectors $X^n$ corresponding to different values of $\theta$ are perpendicular to one another. (The directions of these vectors are called the $\mathit{Ricci \ principal \ directions}$).
 \end{tcolorbox}
@@ -525,26 +525,26 @@ Consider the equations $$ \left( R_{mn} -\theta a_{mn}\right)X^n = 0$$ where $R_
 \begin{align}
 \left( R_{mn} -\theta a_{mn}\right)X^n = 0\\
  (1)\times (a^{mp}) \quad \Rightarrow \quad a^{mp} R_{mn}X^n  -\theta \underbrace{a^{mp}a_{mn}}_{=\delta^p_n}X^n  =0\\
- \Rightarrow \quad a^{mp} R_{mn}X^n  -\theta X^p  =0\\
+ \Rightarrow \quad a^{mp} R_{mn}X^n  -\theta X^p  =0
 \end{align}
 Define $T^{p}_{n} =  a^{mp} R_{mn} $, then (3) can be written in matrix form with $\mathbf{T}\equiv (T^{p}_{n})$ , $\mathbf{X}\equiv (X^p)$ and $\mathbf{I} \equiv (\delta^i_j)$
 \begin{align}
 \left(\mathbf{T}-\theta \mathbf{I}\right)\mathbf{X} =0
 \end{align}
-This is an eigenvector equation with $\mathbf{T}$ being Hermitian i.e. $\mathbf{T}^{\dag} =\mathbf{T}$ . Indeed, obviously $\mathbf{\overline{T}} = \textbf{T}$ and  
-\begin{align}
+This is an eigenvector equation with $\mathbf{T}$ being Hermitian i.e. $\mathbf{T}^{\dag} =\mathbf{T}$ . Indeed, obviously the complex conjugat $\mathbf{\overline{T}} = \textbf{T}$ and  
+\begin{align*}
 \mathbf{T}^T &=  \left(\mathbf{AR}\right)^T\\
  &= \mathbf{R}^T \mathbf{A}^T\\
  \Leftrightarrow \left(T^{j}_{i}\right)  &= \left(R_{kj}\right)^T\left(a^{ik}\right)^T\\
  &= \left(R_{jk}\right)\left(a^{ki}\right)
-\end{align}         
+\end{align*}         
 as both $ R_{jk}, \ a^{ki}$ are symmetric we  have
-\begin{align}
+\begin{align*}
 \left(T^{j}_{i}\right) &= \left(R_{kj}\right)\left(a^{ik}\right)\\
  &= \left(T^{i}_{j}\right)\\
  \Rightarrow \spatie \mathbf{T}^{\dag} &=\mathbf{T}
-\end{align} 
-This means that the $N$ roots of $det\left(\mathbf{T}-\theta \mathbf{I_n}\right)=0$, which is a necessary condition to have equation (5) consistent, are real. Hence $\theta$ will take $N$ values, being the eigenvalues of the transformation matrix $\textbf{T}$. If all eigenvalues have multiplicity one, then  the N eigenvectors in (5) corresponding to the $N$ eigenvalues will be  orthogonal to each other. But, can eigenvalues with algebraic multiplicity $ m > 1$ occur? The answer is yes. Let's rewrite $P(\theta) = det\left(\mathbf{T}-\theta \mathbf{I_n}\right)$ as $\theta^{N} + q_i \theta^{n-i}  \quad (i= N-1,N-2,\dots, 1)$ with $q_i$ functions of the Ricci tensor components. The condition for eigenvalues with algebraic multiplicity $ m > 1$  to occur is that the determinant of the Sylvester matrix of the two following polynomial should be zero.
+\end{align*} 
+This means that the $N$ roots of $det\left(\mathbf{T}-\theta \mathbf{I_n}\right)=0$, which is a necessary condition to have equation (4) consistent, are real. Hence $\theta$ will take $N$ values, being the eigenvalues of the transformation matrix $\textbf{T}$. If all eigenvalues have multiplicity one, then  the N eigenvectors in (4) corresponding to the $N$ eigenvalues will be  orthogonal to each other. But, can eigenvalues with algebraic multiplicity $ m > 1$ occur? The answer is yes. Let's rewrite $P(\theta) = det\left(\mathbf{T}-\theta \mathbf{I_n}\right)$ as $\theta^{N} + q_i \theta^{n-i}  \quad (i= N-1,N-2,\dots, 1)$ with $q_i$ functions of the Ricci tensor components. The condition for eigenvalues with algebraic multiplicity $ m > 1$  to occur is that the determinant of the Sylvester matrix of the two following polynomial should be zero.
 \begin{align}
 \left \{ \begin{array}{l}
  P(\theta) = \theta^{N} + q_i \theta^{n-i}  \quad (i= N-1,N-2,\dots, 1)\\
@@ -562,13 +562,13 @@ The associated Sylvester matrix with these two polynomials will be of the form $
  0&\dots&0&N&(N-1)q_{N-1}&\dots &2q_2&q_1\\
 \end{array} \right)
 $$
-If the determinant of this matrix is not zero, then there will be no algebraic multiplicity. In the other case, one has to check whether in the eigenspace, related to the eigenvalues with algebraic multiplicity $ m > 1$, $m$ linear independent eigenvectors can be found.\\\\ 
-$\mathbf{Exercise \ 4.}$\\
+If the determinant of this matrix is not zero, then there will be no algebraic multiplicity. In the other case, one has to check whether in the eigenspace, related to the eigenvalues with algebraic multiplicity $ m > 1$, $m$ linear independent eigenvectors can be found.\\\\
+$\mathbf{Exercise \ 4.}$
 \begin{tcolorbox}
 What becomes of the Ricci principal directions (see above) if $N=2$?
 \end{tcolorbox}
 From $\mathbf{3.208.}$ we have
-\begin{align}
+\begin{align*}
 \frac{R_{11}}{a_{11}} &= \frac{R_{12}}{a_{12}}=\frac{R_{22}}{a_{22}}=-\frac{R_{1212}}{a}\\
 \Rightarrow\quad & \left \{ \begin{array}{l}
  T^{1}_{1} = a^{11}R_{11} +  a^{12}R_{21}\\
@@ -579,14 +579,14 @@ From $\mathbf{3.208.}$ we have
  T^{1}_{1} = K a^{11}a_{11} +  K a^{12}a_{12}\\
  T^{1}_{2} = Ka^{11}a_{12} +  Ka^{12}a_{22}\\
  T^{2}_{2} = Ka^{21}a_{12} +  Ka^{22}a_{22}\\
-\end{array} \right.\\
+\end{array} \right.\quad
 \Rightarrow\quad & \left \{ \begin{array}{l}
  T^{1}_{1} = K\delta^1_1 = K \\
  T^{1}_{2} = K\delta^1_2 = 0\\
  T^{2}_{2} = K\delta^2_2 = K\\
 \end{array} \right.
-\end{align}
-hence the characteristic equation $det\left(\mathbf{T}-\theta \mathbf{I_n} \right)=0$ becomes $ (K-\theta)^2=0$ . So only one value of $\theta$ exists as $\theta = K$.  Equation (5) becomes $\mathbf{0}\mathbf{X}=0$. So we can chose any pair of linear independent vectors as eigenvectors and can make them perpendicular to one another.
+\end{align*}
+hence the characteristic equation $det\left(\mathbf{T}-\theta \mathbf{I_n} \right)=0$ becomes $ (K-\theta)^2=0$ . So only one value of $\theta$ exists as $\theta = K$.  Equation (4) becomes $\mathbf{0}\mathbf{X}=0$. So we can chose any pair of linear independent vectors as eigenvectors and can make them perpendicular to one another.
 $$\blacklozenge$$
 \newpage
 
@@ -595,10 +595,10 @@ $$\blacklozenge$$
 Suppose that two spaces $V_N$, $V^{'}_N$ have metric tensors $a_{mn}, \ a^{'}_{mn}$ such that $\ a^{'}_{mn}=k\ a_{mn}  $, where $k$ is a constant. Write down the relations between the curvature tensors, the Ricci tensors, and the curvature invariants of the two spaces.
 \end{tcolorbox}
 We have 
-\begin{align}
+\begin{align*}
  ds^2 &= a_{mn}dx^{m} dx^{n}\\
  ds^{'2}&= a^{'}_{mn} dx^{'m}dx^{'n}
-\end{align}
+\end{align*}
 But let's be careful: there is no reason to assume that  $dx^m = dx^{'m}$. Let's embed the two spaces in a space $V_{N+1}$. If an observer in that space sees two displacements  $ds^2$ and $ds^{'2}$ which for him have the same magnitude, we have
 \begin{figure}[H]
 \centering
@@ -611,44 +611,44 @@ But let's be careful: there is no reason to assume that  $dx^m = dx^{'m}$. Let's
 \caption{Embedded $V_N$ spaces}
 \label{fig:p109_Ex5_a}
 \end{figure}
-\begin{align}
+\begin{align*}
  ds^{'2} &= ds^2\\
  \Rightarrow \spatie a^{'}_{mn} dx^{'m}dx^{'n} &= a_{mn}dx^{m} dx^{n}\\
  \Rightarrow \spatie k a_{mn} dx^{'m}dx^{'n} &= a_{mn}dx^{m} dx^{n}\\
  \Rightarrow \spatie dx^{'m} &= \frac{1}{\sqrt{k}}dx^{m}
-\end{align}
+\end{align*}
 We have also
-\begin{align}
+\begin{align*}
  a^{'}_{mk}a^{'kn} &= \delta^n_m\\
  \Rightarrow \spatie ka_{mp}a^{'pn} &= \delta^n_m\\
  \Rightarrow \spatie a^{'pn} &= \frac{1}{k}a^{pn}
-\end{align}
+\end{align*}
 And get the following relations
-\begin{align}
+\begin{align*}
 \left \{ \begin{array}{l}
  [mn,r]^{'} = \sqrt{k}^3[mn,r]\\\\
  \Gamma^{'r}_{.mn} =\sqrt{k}\Gamma^{r}_{.mn}
  \end {array}\right.
- \end{align}
- \begin{align}
- \Rightarrow \spatie R^{'s}_{\ .rmn} &= \frac{\partial \Gamma^{'s}_{\ .rn}}{\partial x^{'m}} + \dots\\
- \Rightarrow \spatie R^{'s}_{\ .rmn} &= \frac{\sqrt{k}\partial \Gamma^{s}_{.rn}}{\partial \left(\frac{x^{m}}{\sqrt{k}}\right)} + \dots\\
- \Rightarrow \spatie R^{'s}_{\ .rmn} &= k R^{s}_{.rmn}\\
- \times \ a^{'ks}\spatie \Rightarrow \quad a^{'ks}R^{'s}_{\ .rmn} &= k a^{'ks}R^{s}_{.rmn}\\
- \Rightarrow \quad R^{'}_{krmn} &= k \frac{1}{k}a^{ks}R^{s}_{.rmn}\\
- \Rightarrow \quad R^{'}_{krmn} &=R_{krmn}\\
- R_{rm} = R^n_{.rmn} \spatie \Rightarrow \quad R^{'}_{\ mn} &= k R_{rmn}\\
- R = a^{mn}R_{mn} \spatie \Rightarrow \quad R^{'} &= a^{'mn}R^{'}_{mn}\\
- \Rightarrow \spatie  R^{'} &= \frac{1}{k}a^{mn}k R_{mn}\\
- \Rightarrow \spatie  R^{'} &=  R
-\end{align}\\\\
+ \end{align*}
+ \begin{align*}
+ \Rightarrow \spatie &R^{'s}_{\ .rmn} = \frac{\partial \Gamma^{'s}_{\ .rn}}{\partial x^{'m}} + \dots\\
+ \Rightarrow \spatie &R^{'s}_{\ .rmn} = \frac{\sqrt{k}\partial \Gamma^{s}_{.rn}}{\partial \left(\frac{x^{m}}{\sqrt{k}}\right)} + \dots\\
+ \Rightarrow \spatie &R^{'s}_{\ .rmn} = k R^{s}_{.rmn}\\
+ \times \ a^{'ks}\spatie \Rightarrow \spatie & a^{'ks}R^{'s}_{\ .rmn} = k a^{'ks}R^{s}_{.rmn}\\
+ \Rightarrow \spatie &R^{'}_{krmn} = k \frac{1}{k}a^{ks}R^{s}_{.rmn}\\
+ \Rightarrow \spatie & R^{'}_{krmn} =R_{krmn}\\
+ R_{rm} = R^n_{.rmn} \quad \Rightarrow \spatie &R^{'}_{\ mn} = k R_{rmn}\\
+ R = a^{mn}R_{mn} \quad \Rightarrow \spatie &R^{'} = a^{'mn}R^{'}_{mn}\\
+ \Rightarrow \spatie  &R^{'} = \frac{1}{k}a^{mn}k R_{mn}\\
+ \Rightarrow \spatie  &R^{'} =  R
+\end{align*}\\\\
 $\mathbf{Summary}$\\
- \begin{align}
+ \begin{align*}
 R^{'s}_{\ .rmn} &= k R^{s}_{.rmn}\\
 R^{'}_{krmn} &=R_{krmn}\\
 R^{'}_{ mn} &= k R_{rmn}\\
 R^{'} &=  R
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -789,7 +789,7 @@ $$\blacklozenge$$
 Suppose that in a $V_3$ the metric is :$$ ds^2= (h_1dx^1)^2+(h_2dx^2)^2+(h_3dx^3)^2$$ where $h_1, h_2, h_3$ are functions of the three coordinates. Calculate the curvature  tensor in terms of the $h^{'}s$ and their derivatives. Check your result by nothing that the curvature tensor will vanish if $h_1$ is a function of $x^1$ only, $h_2$ a function of $x^2$ only, and $h_3$  a function of $x^3$ only.
 \end{tcolorbox}
 From $\mathbf{3.115.}$ and $\mathbf{3.115.}$ we get for the non vanishing components of the covariant curvature tensor($6$ independent components to calculate):
-\begin{align}
+\begin{align*}
 R_{1212} =\left\{ \begin{array}{c}
 - R_{1221} \\
 - R_{2112} \\
@@ -830,21 +830,21 @@ R_{1323} =\left\{ \begin{array}{c}
  -R_{3213} \\
  R_{3231} \\
 \end{array}\right.
-\end{align}
-The metrix tensors:
-\begin{align}
+\end{align*}
+The metric tensors:
+\begin{align*}
 (a_{mn})  = \begin{pmatrix}
  h^2_1& 0&0 \\
  0& h^2_2&0 \\
  0& 0&h^2_3
-\end{pmatrix}\quad (a_{mn})  = \begin{pmatrix}
+\end{pmatrix}\quad (a^{mn})  = \begin{pmatrix}
  \frac{1}{h^2_1}& 0&0 \\
  0& \frac{1}{h^2_2}&0 \\
  0& 0&\frac{1}{h^2_3}
 \end{pmatrix}
-\end{align}
+\end{align*}
 The Christoffel symbols:
-\begin{align}
+\begin{align*}
 \begin{array}{lll}
 \ [11,1]= h_{1} \partial_{1} h_{1} & [11,2]=- h_{1} \partial_{2} h_{1} & [11,3]= -h_{1} \partial_{3} h_{1}\\
 \ [12,1]= h_{1} \partial_{2} h_{1} & [12,2]= h_{2} \partial_{1} h_{2} & [12,3]= 0\\
@@ -853,8 +853,8 @@ The Christoffel symbols:
 \ [33,1]= -h_{3} \partial_{1} h_{3} & [33,2]=- h_{3} \partial_{2} h_{3} & [33,3]= -h_{3} \partial_{3} h_{3}\\
 \ [31,1]= h_{1} \partial_{3} h_{1} & [31,2]=0 & [31,3]= h_{3} \partial_{1} h_{3}\\
 \end{array}
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 \begin{array}{lll}
 \Gamma^1_{11}=\frac{1}{h_{1}}\partial_{1}{h_{1}} &\Gamma^2_{11}=-\frac{h_{1}}{h_{2}^2}\partial_{2}{h_{1}}  & \Gamma^3_{11}= -\frac{h_{1}}{h_{3}^2}\partial_{3}{h_{1}}   \\
 \Gamma^1_{12}= \frac{1}{h_{1}}\partial_{2}{h_{1}} &\Gamma^2_{12}=\frac{1}{h_{2}}\partial_{1}{h_{2}} & \Gamma^3_{12}=0\\
@@ -863,11 +863,11 @@ The Christoffel symbols:
 \Gamma^1_{33}= -\frac{h_{3}}{h_{1}^2}\partial_{1}{h_{3}}&\Gamma^2_{33}=-\frac{h_{3}}{h_{2}^2}\partial_{2}{h_{3}} & \Gamma^3_{33}= \frac{1}{h_{3}}\partial_{3}{h_{3}}\\
 \Gamma^1_{31}=\frac{1}{h_{1}}\partial_{3}{h_{1}} &\Gamma^2_{31}=0 & \Gamma^3_{31}=\frac{1}{h_{3}}\partial_{1}{h_{3}} \\
 \end{array}
-\end{align}
+\end{align*}
 We use $3.113.$ $$R_{rsmn}= \partial_m[sn,r] -\partial_n[sm,r]+\Gamma^p_{sm}[rn,p]-\Gamma^p_{sn}[rm,p]$$\\
 
 Note that we only have to perform the full calculation for two curvature tensors e.g. $R_{1212}$ and $R_{1213}$  as the others can be retrieved by using adequate indices renaming and use of the identities $3.115.$
-\begin{align}
+\begin{align*}
 R_{1212}&=
 -h_2\partial_{11}^2(h_2)-h_1\partial_{22}^2(h_1)
 +\frac{h_2}{h_1}\partial_1 h_1\partial_1 h_2+\frac{h_1}{h_2}\partial_2 h_1\partial_2 h_2-\frac{h_1 h_2}{h_3^2}\partial_3 h_1\partial_3 h_2\\
@@ -877,13 +877,13 @@ R_{2323}&=
 R_{1313}&=
 -h_3\partial_{11}^2(h_3)-h_1\partial_{33}^2(h_1)
 +\frac{h_3}{h_1}\partial_1 h_1\partial_1 h_3+\frac{h_1}{h_3}\partial_3 h_1\partial_3 h_3-\frac{h_1 h_3}{h_2^2}\partial_2 h_1\partial_2 h_3
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 R_{1213}&=-h_1\partial_{32}^2(h_1)+\frac{h_1}{h_3}\partial_2 h_3\partial_3 h_1+\frac{h_1}{h_2}\partial_2 h_1\partial_3 h_2\\
 R_{1223}&=h_2\partial_{31}^2(h_2)-\frac{h_2}{h_1}\partial_1 h_2\partial_3 h_1-\frac{h_2}{h_3}\partial_3 h_2\partial_1 h_3\\
 R_{1323}&=
 -h_3\partial_{21}^2(h_3)+\frac{h_3}{h_1}\partial_1 h_3\partial_3 h_1+\frac{h_3}{h_2}\partial_2 h_3\partial_1 h_2
-\end{align}
+\end{align*}
 And, indeed, all curvature tensors vanish when the $h_i$ are only a function of the indices' dimension.
 $$\blacklozenge$$
 \newpage
@@ -1461,7 +1461,7 @@ T_{\alpha\beta\gamma\delta}&=\left\{\begin{array}{l}\partial_N\left( a_{ab}\part
 +\text{other terms}
 \end{array}\right.
 \end{align}
-So we see that $T_{abcd}$ transforms to $T_{\alpha\beta\gamma\delta}$ as a tensor provided that the other terms in $(20)$ vanish. This is the case as the other terms will all have elements containing factors like $\partial2_{N\nu} x$ which are zero as the $x$ are no explicit function of $N$.
+So we see that $T_{abcd}$ transforms to $T_{\alpha\beta\gamma\delta}$ as a tensor provided that the other terms in $(20)$ vanish. This is the case as the other terms will all have elements containing factors like $\partial^2_{N\nu x}$ which are zero as the $x$ are no explicit function of $N$.
 $$ii)\spatie \mathbf{R_{\alpha\beta} =\left\{\begin{array}{l}R^{'}_{\alpha\beta} + \frac{1}{a_{NN}}R^{'}_{N \alpha\beta N} \\\\ -\kwart\frac{1}{a_{NN}^2}\left(\underbrace{ \frac{1}{a_{NN}}\partial_N a_{\alpha\beta}\partial_N a_{NN}+\partial_{\alpha} a_{NN}\partial_{\beta} a_{NN}}_{\equiv T_{\alpha\beta} = tensor?}\right)\end{array}\right.}$$
 \begin{align}
 T_{\alpha\beta} &= \frac{1}{a_{NN}}\partial_N \left(a_{ab}\partial_\alpha a \partial_\beta b\right)\partial_N a_{NN}+\partial_{a} a_{NN}\partial_{b} a_{NN}\partial_{\alpha}a\partial_{\beta} b\\
@@ -1478,7 +1478,7 @@ $$\blacklozenge$$
 
 \section{p110 - Exercise 11}
 \begin{tcolorbox}
-Prove that $$T^{mn}_{\ \ \ \ |mn} =T^{mn}_{\ \ \ \ |nm}$$ whet $T^{mn}$ is not necessarily symmetric.
+Prove that $$T^{mn}_{\ \ \ \ |mn} =T^{mn}_{\ \ \ \ |nm}$$ where $T^{mn}$ is not necessarily symmetric.
 \end{tcolorbox}
 \begin{align}
 T^{mn}_{\ \ \ \ |s} &= \partial_s T^{mn} + \Gamma^m_{ks}T^{kn} + \Gamma^n_{ks}T^{mk}\\
@@ -1521,7 +1521,7 @@ In the second term of $(11)$ we may again swap the indices $n$ and $k$ giving
 $$\blacklozenge$$
 \newpage
 
-\section{p110 - Exercise 12a$\dagger  \dagger$}
+\section{p110 - Exercise 12 $\dagger  \dagger$}
 \begin{tcolorbox}
 Prove that the quantities $$G^{mn}+ \frac{1}{2a}\frac{\delta^2}{\delta x^r \delta x^s}\left[ a \left( a^{mn}a^{rs}-a^{mr}a^{ns} \right)\right]$$ can be expressed in terms of the metric tensor and its first derivatives.
 \end{tcolorbox}

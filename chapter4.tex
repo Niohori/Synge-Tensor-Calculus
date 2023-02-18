@@ -9,7 +9,7 @@ So by $4.110.$,
 \begin{align}
 K\left({a_{11}a_{22}-a_{12}a_{21}}\right) = R_{1212}
 \end{align}
-and from page 96 $3.415.$ we know that for $V_2$, $K=G$. Hence,
+and from page 96 $\mathbf{(3.415)}$ we know that for $V_2$, $K=G$. Hence,
 \begin{align}
 G = \frac{R_{1212}}{\left(a_{11}a_{22}-a_{12}a_{21}\right)}
 \end{align}
@@ -18,25 +18,24 @@ $$\blacklozenge$$
 
 \section{p113 - Exercise}
 \begin{tcolorbox}
-Prove that, in a space $V_N$ of constant curvature $K$,$$\mathbf{4.115.}\spatie R_{mn} = -\left(N-1\right)Ka_{mn}, \quad R = -N\left(N-1\right)K$$
+Prove that, in a space $V_N$ of constant curvature $K$,$$\mathbf{(4.115)}\spatie R_{mn} = -\left(N-1\right)Ka_{mn}, \quad R = -N\left(N-1\right)K$$
 \end{tcolorbox}
 We have
-\begin{align}
+\begin{align*}
 R_{mn} = R^s_{.mns} = a^{sk}R_{kmns}
-\end{align}
-From $4.114.$
-\begin{align}
-R_{kmns} &= K\left(a_{kn}a_{ms}-a_{ks}a_{mn}\right)\\
-&= K \left(\underbrace{\delta^s_n a_{ms}}_{a{mn}}-Na_{mn}\right)\\
-&= K\left(1-N\right)a_{mn}
-\end{align}
+\end{align*}
+From $\mathbf{(4.114)}$
+\begin{align*}
+&R_{kmns} = K\left(a_{kn}a_{ms}-a_{ks}a_{mn}\right)\\
+\Rightarrow\spatie &R_{kmns}= K \left(\underbrace{\delta^s_n a_{ms}}_{a{mn}}-Na_{mn}\right)= K\left(1-N\right)a_{mn}
+\end{align*}
 and 
-\begin{align}
+\begin{align*}
 R &= R^n_{.n}\\
-&= a^{kn}R{kn}\\
+&= a^{kn}R_{kn}\\
 &= -\underbrace{a^{kn}a_{kn}}_{N}\left( N-1 \right)K\\
 &= -N\left( N-1 \right)K
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -50,12 +49,12 @@ R^r_{.smn} &= a^{rk} R_{ksmn}\\
 \text{(4.114)}\Rightarrow \spatie &= a^{rk} K\left(a_{km}a_{sn}-a_{kn}a_{sm}\right)\\
 &= K\left(\delta^r_m a_{sn}-\delta^r_n a_{sm}\right)
 \end{align}
-\begin{align}
+\begin{align*}
 \text{(3.311) and (3)}\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\left(\delta^r_m a_{sn}-\delta^r_n a_{sm}\right)p^s\eta^m p^n\\
 \Leftrightarrow\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\left(\delta^r_m \eta^m \underbrace{a_{sn}p^s p^n}_{=\epsilon}-\delta^r_n \underbrace{a_{sm}p^s\eta^m}_{=0} p^n\right)\\
 \Leftrightarrow\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\epsilon\underbrace{\delta^r_m \eta^m}_{=\eta^r} \\
 \Leftrightarrow\spatie 0 &=\frac{\delta^2 \eta^r}{\delta s^2} +  K\epsilon\eta^r
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -64,14 +63,14 @@ $$\blacklozenge$$
 $$\mathbf{4.118.}\spatie \dv[2]{\left(X_r\eta^r\right)}{s} + \epsilon K\left(X_r\eta^r\right) =0$$
 \end{tcolorbox}
 We know that $\frac{\delta X_r}{\delta s} = 0$ (parallel transport)
-\begin{align}
-\frac{\delta \left(X_r\eta^r\right)}{\delta s}&= \eta^r\underbrace{\frac{\delta X_r}{\delta s}}_{=0}+X_r\frac{\delta \eta^r}{\delta s}\\
-\Rightarrow\spatie \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s}&= \underbrace{\frac{\delta X_r}{\delta s}}_{=0}\frac{\delta \eta^r}{\delta s}+X_r\frac{\delta^2 \eta^r}{\delta s^2}\\
-\Rightarrow\spatie X_r\frac{\delta^2 \eta^r}{\delta s^2}&= \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s^2}\\
-\text{but}\spatie \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s^2} &=  \dv[2]{X_r\eta^r}{s} \quad \text{ as } X_r\eta^r \text{ is an invariant}\\
-\Rightarrow X_r\frac{\delta^2 \eta^r}{\delta s^2}&=\dv[2]{X_r\eta^r}{s}\\
-\text{and so}\spatie \frac{\delta^2 \left(\eta^r\right)}{\delta s^2}X_r + \epsilon K\left(X_r\eta^r\right) &= \dv[2]{X_r\eta^r}{s}+ \epsilon K\left(X_r\eta^r\right) = 0
-\end{align}
+\begin{align*}
+&\frac{\delta \left(X_r\eta^r\right)}{\delta s}= \eta^r\underbrace{\frac{\delta X_r}{\delta s}}_{=0}+X_r\frac{\delta \eta^r}{\delta s}\\
+\Rightarrow\spatie &\frac{\delta^2 \left(X_r\eta^r\right)}{\delta s}= \underbrace{\frac{\delta X_r}{\delta s}}_{=0}\frac{\delta \eta^r}{\delta s}+X_r\frac{\delta^2 \eta^r}{\delta s^2}\\
+\Rightarrow\spatie &X_r\frac{\delta^2 \eta^r}{\delta s^2}= \frac{\delta^2 \left(X_r\eta^r\right)}{\delta s^2}\\
+\text{but}\spatie &\frac{\delta^2 \left(X_r\eta^r\right)}{\delta s^2} =  \dv[2]{X_r\eta^r}{s} \quad \text{ as } X_r\eta^r \text{ is an invariant}\\
+\Rightarrow \spatie &X_r\frac{\delta^2 \eta^r}{\delta s^2}=\dv[2]{X_r\eta^r}{s}\\
+\text{and so}\spatie &\frac{\delta^2 \left(\eta^r\right)}{\delta s^2}X_r + \epsilon K\left(X_r\eta^r\right) = \dv[2]{X_r\eta^r}{s}+ \epsilon K\left(X_r\eta^r\right) = 0
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -89,20 +88,20 @@ Applying $(1)$ $N$ times with the different $X^{(k)}_r$ $(k= 1,2,\dots, N)$, we 
 X^{(k)}_r \eta^r &= A^{(k)}\sin \left(s\sqrt{\epsilon K}\right)
 \end{align}
 But as the $X^{(k)}_r$ are orthonormal and are used as a basis at the considered point of the geodesic we have 
-\begin{align}
+\begin{align*}
 X^{(k)}_r &= \delta^k_r
-\end{align}
+\end{align*}
 So, $(2)$ becomes
-\begin{align}
+\begin{align*}
 \eta^k &= A^{(k)}\sin \left(s\sqrt{\epsilon K}\right)
-\end{align}
+\end{align*}
 which are the components of the displacement vector in the orthonormal basis. By $\mathbf{2.301.}$ :
-\begin{align}
+\begin{align*}
 Y^2 &= \epsilon a_{mn} Y^m Y^n\\
 \Rightarrow \spatie \eta^2 &= \epsilon a_{mn} A^{(m)} A^{(n)}\sin^2 \left(s\sqrt{\epsilon K}\right)\\
 \Rightarrow \spatie \eta &= C\left|\sin \left(s\sqrt{\epsilon K}\right)\right|\\
 \text{with}\spatie C&= \sqrt{\left|\epsilon a_{mn} A^{(m)} A^{(n)}\right|}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -199,15 +198,15 @@ $$\blacklozenge$$
 It is easy to see ... viz., $$\mathit{the \ straight \ line \ joining \ any \ two \ points \ in \ a \ plane \ lies \ entirely \ in \ the \ plane.}$$ 
 \end{tcolorbox}
 The plane is identified by 
-\begin{align}
+\begin{align*}
 A_n z_n+B=0
-\end{align}
+\end{align*}
 and a line by
-\begin{align}
+\begin{align*}
 z_n = C_nu+D_n
-\end{align}
+\end{align*}
 Take two points at $u=0$ and $u=p$ lying in the plane:
-\begin{align}
+\begin{align*}
 & \left\{ \begin{array}{l}
 A_nC_np+A_nD_n+B=0\\
 A_nD_n+B=0
@@ -216,11 +215,11 @@ A_nD_n+B=0
 A_nC_np=0\\
 A_nD_n+B=0
 \end{array} \right.
-\end{align}
+\end{align*}
 And as $p\neq 0 \ \Rightarrow A_nC_n = 0$. So for any arbitrary $u$ of this line we have
-\begin{align}
-\underbrace{A_nC_n}_{=0}u+\underbrace{A_nD_n}_{=0}+B=0
-\end{align}
+\begin{align*}
+\underbrace{A_nC_n}_{=0}u+\underbrace{A_nD_n+B}_{=0}=0
+\end{align*}
 hence, all points of the line lie in the plane.
 $$\blacklozenge$$
 \newpage
@@ -239,7 +238,7 @@ E.g. put $z_N=u$ with u the free parameter. then,
 \begin{align}
 A^{(k)}_{\alpha}z_{\alpha}+ A^{(k)}_{N}u+ B^{(k)} =0 \quad \alpha=1,\dots,N-1
 \end{align}
-If $detA^{(k)}_{\alpha} \neq0$ we get a solution of the et of equation
+If $detA^{(k)}_{\alpha} \neq0$ we get a solution of the set of equation
 \begin{align}
 Az&=B \quad\text{with}\quad B \text{ a linear function in } u\\
 \Rightarrow\spatie z_m&= \left(A^{-1}B\right)_m
@@ -690,7 +689,7 @@ V &= 4\pi R^2\int^{\pi R}_{0}\sin^2\left(\frac{r}{R}\right)dr\\
 &= 4\pi R^3\left.\left( \half x - \frac{1}{4}\sin2x \right)\right|^{\pi}_0\\
 &= 2\pi^2 R^3
 \end{align}
-Fo a polar space, the volume would be half of that of an antipodal one (with same curvature of course) as in (3) we would consider only 4 quadrants instead of 8.
+For a polar space, the volume would be half of that of an antipodal one (with same curvature of course) as in (3) we would consider only 4 quadrants instead of 8.
 $$\blacklozenge$$
 \newpage
 
@@ -1110,9 +1109,9 @@ $$\blacklozenge$$
 If, in a space of four dimensions, $F_{mn}$ is a skew-symmetric Cartesian tensor, and $$\hat{F}_{mn} = \half \epsilon_{rsmn} F_{rs}$$
 prove that the differential equations $$ F_{mn,r}+F_{nr,m}+F_{rm,n}=0$$ may be written $$\hat{F}_{mn,n} =0$$
 \end{tcolorbox}
-Let's us express $F_{mn}$ as the result of expression $\mathbf{4.324.} $ i.e $$F_{mn} = \epsilon_{mnks} X_kY_s$$ or simplified $$F_{mn} = \epsilon_{mnks} Z_{ks}$$
+Let's us express $F_{mn}$ as the result of expression $\mathbf{(4.324)} $ i.e $$F_{mn} = \epsilon_{mnks} X_kY_s$$ or simplified $$F_{mn} = \epsilon_{mnks} Z_{ks}$$
 This expression gives indeed skew-symmetric tensors.\\\\
-\textit{NOTE:  at first glance this way of representation is  a restriction as the  skew-symmetric Cartesian tensor $F_{mn}$ should moreover be an oriented Cartesian tensor. This can be circumvent by the result of clarification 4.14 where we found that the tensor character  of the quantities $F_{mn}$ was only influenced by the determinant of an orthogonal transformation. So if in the case we are dealing with non-proper orthogonal transformation,  we replace the given identity by   $ \left|A_{mn}\right|F_{mn,r}+\left|A_{mn}\right|F_{nr,m}+\left|A_{mn}\right|F_{rm,n}=0$ and define $\hat{F}_{mn} = \half \epsilon_{rsmn}\left|A_{mn}\right| F_{rs}$ and the following reasoning will still be valid.}\\\\
+\textit{NOTE:  at first glance this way of representation is  a restriction as the  skew-symmetric Cartesian tensor $F_{mn}$ should moreover be an oriented Cartesian tensor. This can be circumvent by the result of clarification $\mathbf{(4.14)}$ where we found that the tensor character  of the quantities $F_{mn}$ was only influenced by the determinant of an orthogonal transformation. So if in the case we are dealing with non-proper orthogonal transformation,  we replace the given identity by   $ \left|A_{mn}\right|F_{mn,r}+\left|A_{mn}\right|F_{nr,m}+\left|A_{mn}\right|F_{rm,n}=0$ and define $\hat{F}_{mn} = \half \epsilon_{rsmn}\left|A_{mn}\right| F_{rs}$ and the following reasoning will still be valid.}\\\\
  We have:
 \begin{align}
 &\left\{\begin{array}{l}
@@ -1154,29 +1153,29 @@ What is the tensor character of these expressions?
 \textit{REMARK: although not explicitly stated we assume that we are in a $V_4$-space.}\\
 Let's us express $F_{mn}$ as the result of expression $\mathbf{4.324.} $ i.e $$F_{mn} = \epsilon_{mnks} X_kY_s$$ or simplified $$F_{mn} = \epsilon_{mnks} Z_{ks}$$
 First we note that by a same reasoning for $\mathbf{4.329.}$ we have
-\begin{align}
+\begin{align*}
 \epsilon_{mnrs}\epsilon_{mnpq} &= 2\left(\delta_{rp}\delta_{sq}-\delta_{rq}\delta_{sp}\right)
-\end{align} 
+\end{align*} 
 The factor $2$ arising from the fact that we are dealing in $V_4$ with a sum over the ordered pair $(mn)$.\\
  We have for the first  expression $F_{mn}F_{mn}$:
-\begin{align}
+\begin{align*}
 \half F_{mn}F_{mn}&=\half\epsilon_{mnrs}\epsilon_{mnpq} Z_{rs} Z_{pq}\\
 &=\delta_{rp}\delta_{sq}Z_{rs} Z_{pq}-\delta_{rq}\delta_{sp}Z_{rs} Z_{pq}\\
 &=\delta_{sq}Z_{rs} Z_{rq}-\delta_{sp}Z_{rs} Z_{pr}\\
 &=Z_{rs} Z_{rs}-Z_{rp} Z_{pr}\\
 \Rightarrow \spatie F_{mn}F_{mn}&=2\left(X_r X_r Y_s Y_s - \left(X_r Y_r\right)^2\right)
-\end{align}
+\end{align*}
 \textbf{$F_{mn}F_{mn}$ is an oriented Cartesian invariant.}
 
 
 We have for the second  expression $\epsilon_{mnrs} F_{mn}F_{rs}$:
-\begin{align}
+\begin{align*}
 \epsilon_{mnrs} F_{mn}F_{rs}&=\underbrace{\epsilon_{mnrs}\epsilon_{mnpq}}_{2\left(\delta_{rp}\delta_{sq}-\delta_{rq}\delta_{sp}\right) }\epsilon_{rsuv} Z_{pq} Z_{uv}\\
 &=2\left(\delta_{rp}\delta_{sq}\epsilon_{rsuv}-\delta_{rq}\delta_{sp}\epsilon_{rsuv}\right)Z_{pq} Z_{uv}\\
 &=2\left(\epsilon_{pquv}-\epsilon_{qpuv}\right)Z_{pq} Z_{uv}\\
 &=4\epsilon_{pquv}Z_{pq} Z_{uv}\\
 \Rightarrow \spatie \epsilon_{mnrs} F_{mn}F_{rs}&=4\epsilon_{pquv}X_p  Y_q X_uY_v
-\end{align}
+\end{align*}
 \textbf{$\epsilon_{mnrs} F_{mn}F_{rs}$ is an oriented Cartesian invariant.}
 $$\blacklozenge$$
 \newpage
@@ -1205,20 +1204,21 @@ are components of covariant and contravariant oriented tensors .
 First remember that $J^{'}= \frac{1}{J}$.\\
 The reasoning is completely analogous as to the reasoning from $\mathbf{4.312}$ till $\mathbf{4.317}$ except that the $\frac{\partial z^{m}}{\partial z^{'s}}$ are held and not replaced by the $A_{mn}$.\\
 $\mathbf{4.316}$ becomes
-\begin{align}
+\begin{align*}
 \epsilon^{'}_{mnr}J^{}&= \epsilon^{}_{stu}\partial_m x^s\partial_n x^t\partial_r x^u, \spatie J^{}= \left|\frac{\partial x^{p}}{\partial x^{'q}}\right|\\
 J^{}= \frac{1}{J^{'}}\quad \Rightarrow\spatie\epsilon^{'}_{mnr}&= \epsilon^{}_{stu}J^{'}\partial_m x^s\partial_n x^t\partial_r x^u, \spatie J^{'}= \left|\frac{\partial x^{'p}}{\partial x^{q}}\right|
-\end{align}
+\end{align*}
 Following Exercises II, 12  we have $a^{'} = aJ^2$. So,
-\begin{align}
+\begin{align*}
 \eta^{'}_{mnr} &=\eta^{}_{uvw} \partial_m x^u\partial_n x^v\partial_r x^w\\
 &=\sqrt{a}\ \underbrace{\epsilon^{}_{uvw}\partial_m x^u\partial_n x^v\partial_r x^w}_{= \frac{1}{J^{'}}\epsilon^{'}_{mnr}}\\
 &=\sqrt{a}\ J^{}\epsilon^{'}_{mnr}\\
 \sqrt{a^{'}} = \sqrt{aJ^2}\quad\Rightarrow\spatie&= \sqrt{a^{'}}\ \epsilon^{'}_{mnr}
-\end{align}
+\end{align*}
 The same reasoning applies to the contravariant counterpart.
 $$\blacklozenge$$
 \newpage
+
 
 \section{p141 - Exercise 14}
 \begin{tcolorbox}
@@ -1227,41 +1227,41 @@ $$ \nabla .  \left( \phi V \right) = \phi  \nabla . V + V .\nabla \phi $$
 $$ \vdots$$
 \end{tcolorbox}
 $$ \mathbf{\nabla .  \left( \phi V \right) = \phi  \nabla .V + V .\nabla \phi }$$
-\begin{align}
+\begin{align*}
 \nabla .  \left( \phi V \right) &\equiv \partial_k \phi V_k\\
 &= \phi\partial_k V_k+V_k\partial_k\phi\\
 &\equiv \phi\nabla.V+V.\nabla\phi
-\end{align}
+\end{align*}
 $$\lozenge$$
 $$ \mathbf{\nabla \times  \left( \phi V \right) = \phi  \nabla \times V + V \times \nabla \phi }$$
-\begin{align}
+\begin{align*}
 \left( \nabla \times  \left( \phi V \right)\right)_m &\equiv \epsilon_{mnr}\partial_n \phi V_r\\
 &= \phi\epsilon_{mnr}\partial_n V_r+\epsilon_{mnr}V_r\partial_n\phi\\
 &\equiv \phi\nabla\times V+\nabla\phi \times V\\
 &= \phi\nabla\times V-  V\times\nabla\phi
-\end{align}
+\end{align*}
 $$\lozenge$$
 $$ \mathbf{\nabla . \left( U\times V \right) = V .\left( \nabla \times U\right) -  U .\left( \nabla \times V\right)}$$
-\begin{align}
+\begin{align*}
 \nabla . \left( U\times V \right) &\equiv \partial_m \left(\epsilon_{mnr}U_n V_r\right)\\
 &=  U_n\epsilon_{mnr} \partial_m  V_r+ V_r\epsilon_{mnr} \partial_mU_n\\
 &=  -U_n\underbrace{\epsilon_{nmr} \partial_m  V_r}_{\equiv \left(\nabla \times V\right)_n}+ V_r\underbrace{\epsilon_{rmn} \partial_m U_n}_{\equiv \left(\nabla \times U\right)_r}\\
 &\equiv V .\left( \nabla \times U\right) -  U .\left( \nabla \times V\right)
-\end{align}
+\end{align*}
 $$\lozenge$$
 
 $$ \mathbf{\nabla \times  \left( U\times V \right) = V . \nabla U -  U . \nabla V+U\nabla . V-V\nabla.U}$$
-\begin{align}
+\begin{align*}
 \left(\nabla \times  \left( U\times V \right) \right)_k &\equiv \epsilon_{kpm}\partial_p \epsilon_{mnr}U_n V_r\\
 &=  \underbrace{\epsilon_{kpm}}_{= \epsilon_{mkp}}\epsilon_{mnr}V_r\partial_p U_n + \underbrace{\epsilon_{kpm}}_{= \epsilon_{mkp}}\epsilon_{mnr}U_n\partial_p V_r \\
 &= \delta_{kn}\delta_{pr}V_r\partial_p U_n -\delta_{kr}\delta_{pn}V_r\partial_p U_n +\delta_{kn}\delta_{pr}U_n\partial_p V_r-\delta_{kr}\delta_{pn}U_n\partial_p V_r\\
 &= \underbrace{V_p\partial_p U_k}_{\equiv \left(V .\nabla U\right)_k} -\underbrace{V_k\partial_n U_n}_{\equiv \left(V\nabla .U\right)_k} +\underbrace{U_k\partial_r V_r}_{\equiv \left(U\nabla .V\right)_k}-\underbrace{U_p\partial_p V_k}_{\equiv \left(U .\nabla V\right)_k}\\
 &\equiv V .\nabla U-U .\nabla V+U\nabla .V-V\nabla .U
-\end{align}
+\end{align*}
 $$\lozenge$$
 
 $$ \mathbf{\nabla \left( U. V \right) = U . \nabla V + V . \nabla U+U\times\left(\nabla \times V\right)+V\times\left(\nabla \times U\right)}$$
-\begin{align}
+\begin{align*}
 \left(\nabla \left( U. V \right) \right)_p &\equiv \partial_p U_k V_k\\
 &=  V_k\partial_p U_k +U_k\partial_p  V_k\\
 \left(U\times\left(\nabla\times V\right)\right)_p &\equiv \epsilon_{pkm} U_k\epsilon_{mnr}\partial_n V_r\\
@@ -1269,62 +1269,62 @@ $$ \mathbf{\nabla \left( U. V \right) = U . \nabla V + V . \nabla U+U\times\left
 &=\delta_{pn}\delta_{kr}U_k\partial_n V_r-\delta_{pr}\delta_{kn}U_k\partial_n V_r\\
 &=U_r\partial_p V_r-U_n\partial_n V_p\\
 \Rightarrow\spatie \left(U\times\left(\nabla\times V\right)\right)_p &\equiv U_r\partial_p V_r-\underbrace{U_n\partial_n V_p}_{\equiv \left(U.\nabla V\right)_p}
-\end{align}
+\end{align*}
 Plugging (23) in (18) twice (with interchanging U and V) gives
-\begin{align}
+\begin{align*}
 \nabla \left( U. V \right)  =U\times\left(\nabla\times V\right)+U.\nabla V+V\times\left(\nabla\times U\right)+V.\nabla U
-\end{align}
+\end{align*}
 $$\lozenge$$
 
 $$ \mathbf{\nabla \times \left(\nabla\phi \right) = 0}$$
-\begin{align}
+\begin{align*}
 \left(\nabla \times \left(\nabla\phi \right)\right)_k&\equiv \epsilon_{kmn}\partial_m \partial_n\phi
-\end{align}
+\end{align*}
 We just have to note that if $m=n$ the terms in the sum are zero and that when $m\ne n$ we will have two terms which add as $\epsilon_{kMN}\partial_M \partial_N\phi + \epsilon_{kNM}\partial_N \partial_M\phi $ which obviously is zero. And so $\nabla \times \left(\nabla\phi \right) = 0$.
 $$\lozenge$$
 
 $$ \mathbf{\nabla . \left(\nabla\times V \right)= 0}$$
-\begin{align}
+\begin{align*}
 \nabla . \left(\nabla\times V \right)&\equiv \partial_p\epsilon_{pmn} \partial_mV_n\\
 &=\epsilon_{npm} \partial_p \partial_m V_n
-\end{align}
+\end{align*}
 We apply the same reasoning as in the previous identity. And so $\nabla . \left(\nabla\times V \right) = 0$.
 $$\lozenge$$
 
 $$ \mathbf{\nabla \times \left(\nabla\times V \right)= \nabla\nabla.V-\nabla^2V}$$
-\begin{align}
+\begin{align*}
 \left(\nabla \times \left(\nabla\times V \right)\right)_m&\equiv \epsilon_{mkr} \partial_k \epsilon_{ruv} \partial_uV_v\\
 &=\epsilon_{rmk} \epsilon_{ruv}\partial_k  \partial_u V_v\\
 &=\delta_{mu}\delta_{kv}\partial_k  \partial_u V_v-\delta_{mv}\delta_{ku}\partial_k  \partial_u V_v\\
 &=\underbrace{\partial_m  \partial_v V_v}_{\left(\nabla\nabla.V\right)_m}-\underbrace{\partial_k  \partial_k V_m}_{\left(\nabla^2 V\right)_m}
-\end{align}
+\end{align*}
 $$\lozenge$$
 
 $$ \mathbf{\nabla .r= 3}$$
 where r is the vector with components equal to the Cartesian coordinates $z_1,z_2,z_3$
-\begin{align}
+\begin{align*}
 \nabla .r &\equiv \partial_k z_k\\
 &=\delta_{kk}\\
 &=3
-\end{align}
+\end{align*}
 $$\lozenge$$
 
 $$ \mathbf{\nabla \times r= 0}$$
 where r is the vector with components equal to the Cartesian coordinates $z_1,z_2,z_3$
-\begin{align}
+\begin{align*}
 \left(\nabla \times r\right)_m &\equiv \epsilon_{mns}\partial_n z_s\\
 &=\epsilon_{mns}\delta_{ns}\\
-\end{align}
+\end{align*}
 This sum is zero as when $n=s$, $\delta_{ns}=1$ but $\epsilon_{mNN}=0$ and when $n\ne s$, $\delta_{ns}=0$.
 $$\lozenge$$
 
 $$ \mathbf{V .\nabla r= 0}$$
 where r is the vector with components equal to the Cartesian coordinates $z_1,z_2,z_3$
-\begin{align}
+\begin{align*}
 \left(V .\nabla r\right)_m &\equiv V_n \partial_n r_m\\
 &=V_n \delta_{nm}\\
 &=V_m\\
-\end{align}
+\end{align*}
 $$\lozenge$$
 $$\blacklozenge$$
 \newpage
@@ -1333,12 +1333,12 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove that $$\epsilon_{amn}\epsilon_{ars}+\epsilon_{ams}\epsilon_{anr}=\epsilon_{amr}\epsilon_{ans}$$
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \epsilon_{amn}\epsilon_{ars}+\epsilon_{ams}\epsilon_{anr}&=
 \left(\delta_{mr}\delta_{ns}-\delta_{ms}\delta_{nr}\right)
 +\left(\delta_{mn}\delta_{sr}-\delta_{mr}\delta_{sn}\right)\\
 &=\delta_{mn}\delta_{sr}-\delta_{ms}\delta_{nr}\\
 &=\epsilon_{amr}\epsilon_{anr}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
