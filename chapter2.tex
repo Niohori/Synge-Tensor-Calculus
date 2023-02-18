@@ -943,23 +943,23 @@ for both vectors $U, V$. Thus,
 i) Consider the magnitude M at a random point on the curve
 \begin{align}
 \ M &= a_{mn}U^m U^n \\
-\Rightarrow \quad\quad \dv{M}{s} &= \dv{a_{mn}}{u}U^m U^n + 2a_{mn}U^m \dv{U^n}{u} 
+\Rightarrow \quad\quad \dv{M}{s} &= \dv{a_{mn}}{s}U^m U^n + 2a_{mn}U^m \dv{U^n}{s} 
 \end{align}\\
-Obviously $M$ and $\dv{M}{s}$ are invariants. Also, we can choose at any point on the curve a Riemannian coordinate system (RCS) for which the Christoffel symbols vanish at that point. Hence, $\dv{U^r}{u} = 0 $ at that point and the second term in the right part of (5) vanish. (5) becomes then,
+Obviously $M$ and $\dv{M}{s}$ are invariants. Also, we can choose at any point on the curve a Riemannian coordinate system (RCS) for which the Christoffel symbols vanish at that point. Hence, $\dv{U^r}{s} = 0 $ at that point and the second term in the right part of (5) vanish. (5) becomes then,
 \begin{align}
  \dv{M}{s} = \pdv{a^{'}_{mn}}{x^{'k}}\dv{x^{'k}}{s}U^{'m} U^{'n}  
 \end{align}
 We also know \textbf{(2.425. page 41)} that $[km,n]^{'} + [kn,m]^{'} = \pdv{a^{'}_{mn}}{x^{'k}}$. But in the chosen coordinate system, $[km,n] = 0$ at the origin of this coordinate system. So by (6) we get $\dv{M}{s} = 0$.\\
 So the magnitude is constant along the curve and as we know that a certain point $M =1$:\\
 $$\textbf{ U,V are unit vectors along the curve}$$\newpage
-ii) Consider now the angle between the vectors $U,V$. Be $A = \cos \ \theta$.By definition 
+ii) Consider now the angle between the vectors $U,V$. Be $A = \cos \ \theta$. By definition 
 \begin{align}
 \ A &= a_{mn}U ^mV^n\\
 \Rightarrow \quad\quad \dv{A}{s} &= \dv{a_{mn}}{u}U^m V^n + a_{mn}(V^m \dv{U^n}{u} +U^m \dv{V^n}{u} )
 \end{align}
 We follow the same reasoning as in i) and so
 $$\dv{A}{s} = 0$$
-So, the angle is constant and we know is is $\frac{\pi}{2}$ at a certain point. So,:
+So, the angle is constant and we know it is $\frac{\pi}{2}$ at a certain point. So,
 $$\textbf{ U,V are orthogonal along the curve}$$
 
 $$\blacklozenge$$
@@ -986,12 +986,12 @@ We have the trivial identity
 \begin{lemma}: $\partial_sa^{rm} = 0$ in a Riemannian coordinate system (i.e. at the origin)\\\\
 We have
 \begin{align}
-\ a^{rm}a_{ms} &= \delta^r_s\\
-\Rightarrow a_{ms}\partial_k a^{rm}  & +a^{rm}\partial_k a_{ms} = 0\\
-\text{we know (2.618)}\quad\quad \partial_r a_{mn} &= 0\quad\quad\text{at the origin of a RCS}\\
-\text{so (8) becomes}\quad\quad a_{ms}\partial_k a^{rm} & = 0\\
-\text{multiply (10) by}\quad a^{ns}\quad\Rightarrow \underbrace{a^{ns}a_{ms}}_{= \delta^n_m}\partial_k a^{rm}& = 0\\
-\Rightarrow\quad\quad \partial_k a^{rn}& = 0
+&\ a^{rm}a_{ms} = \delta^r_s\\
+\Rightarrow \spatie &a_{ms}\partial_k a^{rm}   +a^{rm}\partial_k a_{ms} = 0\\
+\text{we know (2.618)}\spatie &\partial_r a_{mn} = 0\spatie \text{at the origin of a RCS}\\
+\text{so (8) becomes}\spatie  &a_{ms}\partial_k a^{rm}  = 0\\
+\text{multiply (10) by}\quad  a^{ns}\quad\Rightarrow \spatie  &\underbrace{a^{ns}a_{ms}}_{= \delta^n_m}\partial_k a^{rm} = 0\\
+\Rightarrow\spatie  &\partial_k a^{rn} = 0
 \end{align}
 \end{lemma}
 $$\diamond$$
@@ -1088,7 +1088,7 @@ Just as a check, we calculate $V^r_{|s}V_r$ which should be zero:
 \ V^s_{\ |2}V_s = V^1_{\ |2}V_1+V^2_{\ |2}V_2 = (-\frac{xy}{r^3})(+\frac{x}{r})+ (+\frac{y}{r})+\frac{x^2}{r^3}) = 0
 \end{array} \right.
 \end{align}\\
-So, in the second example the relationship $\lambda^r_{|s}\lambda_s = 0$ holds.
+So, in the second example the relationship $\lambda^r_{|s}\lambda_s = 0$ holds.\\
 Question (to investigate further and later) : does the fact that in the first case $\grad \maal \overline{V}  \ne 0$ and in the second case $\grad \maal \overline{V}= 0$, means that there is some relation with this expression?
 $$\blacklozenge$$
 \newpage
@@ -1099,18 +1099,18 @@ $\textbf{2.625} \quad\quad\quad\quad\quad\quad \dv{ x^r}{x^N} = \frac{X^r}{X^N}$
 \end{tcolorbox}
 Be $C$ a surface defined by the function $F(x^1,\dots, x^{N-1}) = C$ and  $c_{\perp}$ the curve intersecting the surface $C$ perpendicularly at a point $p$.\\
 Along the curve at that point $p$ we have
-\begin{align}
+\begin{align*}
 \text{as}\quad\quad & \left \{ \begin{array}{cc}
 \dv{ x^r}{s}& \text{is the tangent vector along}\quad c_{\perp}\\
 \ X^r = a^{rn}\pdv{F}{x^n}& \text{ is orthogonal on the surface (2.623)}\quad C\\
 \end{array}\right.\\
 \Rightarrow \quad\quad & \dv{ x^r}{s} = kX^r
-\end{align}
+\end{align*}
 So, $\dv{ x^r}{s}$ is proportional to $X^r$ (as the curve intersects the surface orthogonally). This means that also all the components (coordinates) of both quantities are proportional. And so,
-\begin{align}
+\begin{align*}
 \frac{\dv{ x^r}{s}}{\dv{ x^N}{s}} &= \frac{kX^r}{kX^N}\\
 \Rightarrow\quad\quad \dv{ x^r}{x^N} &= \frac{X^r}{X^N}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1124,21 +1124,21 @@ We have (see 2.629):
 \text{and also}\quad\quad a_{Nm}a^{ms} = \delta^s_N
 \end{align}
 In (2) split the $m$ index in the subspace and the remaining coordinate $N$
-\begin{align}
+\begin{align*}
 \ a_{N\rho}a^{\rho s} +  a_{NN}a^{N s} &= \delta^s_N\\
 \text{as}\quad a_{N\rho} =0 \Rightarrow \quad\quad a_{NN}a^{N s} &= \delta^s_N
-\end{align}\\
-Case 1: $s\ne N$
-\begin{align}
+\end{align*}\\
+\textbf{Case 1:} $s\ne N$
+\begin{align*}
 \  a_{NN}a^{N s} =0 \quad \Leftrightarrow \quad a_{NN}a^{N \rho} =0 \quad\quad \text{(as}\quad s\ne N \text{)}\\
 \text{as we suppose}\quad a_{NN}\ne 0 \quad \Rightarrow \quad a^{N \rho} =0
-\end{align}\\
+\end{align*}\\
 
-Case 2: $s= N$
-\begin{align}
+\textbf{Case 2}: $s= N$
+\begin{align*}
 \  a_{NN}a^{N N} &=1 \\
 \Rightarrow \quad a^{N N} &=\frac{1}{a_{NN}}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1148,13 +1148,13 @@ $$\blacklozenge$$
 In 2.645 we have $$T_{\alpha | \beta} =T_{\alpha || \beta}  +\frac{1}{2}\frac{1}{a_{NN}}\partial_N  a_{\alpha\beta}T_{N}$$ and $$T_{\alpha | \beta} =T_{\alpha || \beta}  +\frac{1}{2}\partial_N  a_{\alpha\beta}T^{N}$$
 \end{tcolorbox}
 Indeed,
-\begin{align}
+\begin{align*}
 \ T^N &= a^{mN}T_m\\
 \ & = a^{\alpha N}T_{\alpha}+a^{N N}T_{N}\\
 \text{but (2.631)}\quad\quad a^{\alpha N} &= 0\\
 \Rightarrow \quad\quad T^N &= a^{NN} T_N\\
 \text{as}\quad a^{NN}= \frac{1}{a_{NN}} \quad \Rightarrow \quad\quad  T_{\alpha | \beta} &= T_{\alpha || \beta}  + \frac{1}{2}\partial_N  a_{\alpha\beta}T^{N}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 \section{p69-exercise}
@@ -1164,27 +1164,27 @@ $$\textbf{2.648}\quad\quad T^{\alpha}_{\ |\beta} = T^{\alpha}_{\ ||\beta} + \hal
 $$\textbf{2.649}\quad\quad T^{N}_{\ |\alpha} = \partial_{\alpha}T^{N} - \frac{1}{2 a_{NN}} \partial_N a_{\alpha\mu}T^{\mu} + \frac{1}{2 a_{NN}} \partial_{\alpha} a_{NN}T^{N}$$
 $$\textbf{2.650}\quad\quad T^{\alpha}_{\ |N} = \partial_{N}T^{\alpha}  + \half a^{\alpha\mu} \partial_N a_{\mu\sigma}T^{\sigma} - \half a^{\alpha\mu}  \partial_{\mu} a_{NN}T^{N}$$
 \end{tcolorbox}
-i) $T^{\alpha}_{\ |\beta} = T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N$\\
+\textbf{i)} $T^{\alpha}_{\ |\beta} = T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N$\\
 \begin{align}
-\textbf{(2.520)}\quad\quad \Rightarrow \quad\quad T^{\alpha}_{\ |\beta} &= \partial_{\beta}T^{\alpha}+\Gamma^{\alpha}_{m\beta}T^m \quad\quad\text{(}m = 1,\dots,N \text{)}\\
-\Leftrightarrow \quad\quad T^{\alpha}_{\ |\beta} &= \underbrace{ \partial_{\beta}T^{\alpha}+ \Gamma^{\alpha}_{\mu \beta} T^{\mu}}_{T^{\alpha}_{ \ || \beta}} +\Gamma^{\alpha}_{N \beta}T^{N}\\
-\textbf{(2.639)}\quad\quad \Gamma^{\alpha}_{N\beta} &= \half a^{\alpha \mu}\partial_N a^{\mu \beta}\\
-\text{(2) and (3): }\quad\quad T^{\alpha}_{\ |\beta} &= T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N
+\textbf{(2.520)}\spatie & T^{\alpha}_{\ |\beta} = \partial_{\beta}T^{\alpha}+\Gamma^{\alpha}_{m\beta}T^m \spatie \text{(}m = 1,\dots,N \text{)}\\
+\Leftrightarrow \spatie & T^{\alpha}_{\ |\beta} = \underbrace{ \partial_{\beta}T^{\alpha}+ \Gamma^{\alpha}_{\mu \beta} T^{\mu}}_{T^{\alpha}_{ \ || \beta}} +\Gamma^{\alpha}_{N \beta}T^{N}\\
+\textbf{(2.639)}\spatie &\Gamma^{\alpha}_{N\beta} = \half a^{\alpha \mu}\partial_N a^{\mu \beta}\\
+\text{(2) and (3): }\spatie & T^{\alpha}_{\ |\beta} = T^{\alpha}_{\ ||\beta} + \half a^{\alpha \mu} \partial_N a_{\mu\beta}T^N
 \end{align}
 $$\diamond$$
 Remark: We also use $\textbf{(2.639)}$ for the two other identities.\\\\
-ii) $T^{N}_{\ |\alpha} = \partial_{\alpha}T^{N} - \frac{1}{2 a_{NN}} \partial_N a_{\alpha\mu}T^{\mu} + \frac{1}{2 a_{NN}} \partial_{\alpha} a_{NN}T^{N}$\\
-\begin{align}
+\textbf{ii)} $T^{N}_{\ |\alpha} = \partial_{\alpha}T^{N} - \frac{1}{2 a_{NN}} \partial_N a_{\alpha\mu}T^{\mu} + \frac{1}{2 a_{NN}} \partial_{\alpha} a_{NN}T^{N}$\\
+\begin{align*}
 \textbf{(2.520)}\quad\quad \Rightarrow \quad\quad T^{N}_{\ |\alpha} &= \partial_{\alpha}T^{N}+\Gamma^{N}_{m\alpha}T^m \quad\quad\text{(}m = 1,\dots,N \text{)}\\
 \Leftrightarrow \quad\quad T^{N}_{\ |\alpha} &=  \partial_{\beta}T^{\alpha}+ \underbrace{\Gamma^{N}_{\sigma \alpha}}_{ - \frac{1}{2a_{NN}}\partial_N a_{\sigma\alpha}} T^{\sigma } +\underbrace{\Gamma^{N}_{N \alpha}}_{ \frac{1}{2a_{NN}}\partial_{\alpha} a_{NN}}T^{N}\\
 \Rightarrow \quad\quad T^{N}_{\ |\alpha} &=  \partial_{\beta}T^{\alpha} - \frac{1}{2a_{NN}}\partial_N a_{\sigma\alpha}T^{\sigma } +\frac{1}{2a_{NN}}\partial_{\alpha} a_{NN}T^{N}
-\end{align}\\
-iii) $T^{\alpha}_{\ |N} = \partial_{N}T^{\alpha}  + \half a^{\alpha\mu} \partial_N a_{\mu\sigma}T^{\sigma} - \half a^{\alpha\mu}  \partial_{\mu} a_{NN}T^{N}$\\
-\begin{align}
+\end{align*}\\
+\textbf{iii)} $T^{\alpha}_{\ |N} = \partial_{N}T^{\alpha}  + \half a^{\alpha\mu} \partial_N a_{\mu\sigma}T^{\sigma} - \half a^{\alpha\mu}  \partial_{\mu} a_{NN}T^{N}$\\
+\begin{align*}
 \textbf{(2.520)}\quad\quad \Rightarrow \quad\quad T^{\alpha}_{\ |N} &= \partial_{N}T^{\alpha}+\Gamma^{\alpha}_{mN}T^m \quad\quad\text{(}m = 1,\dots,N \text{)}\\
 \Leftrightarrow \quad\quad T^{\alpha}_{\ |N} &=  \partial_{N}T^{\alpha}+ \underbrace{\Gamma^{\alpha}_{\sigma N }}_{ \half a^{\alpha \mu}\partial_N a_{\mu\sigma}}  T^{\sigma }+\underbrace{\Gamma^{\alpha}_{N N}}_{ -\half a^{\alpha\mu}\partial_{\mu} a_{NN}}T^{N}\\
 \Rightarrow \quad\quad T^{\alpha}_{\ |N} &=  \partial_{N}T^{\alpha}+ \half a^{\alpha \mu}\partial_N a_{\mu\sigma}T^{\sigma } -\half a^{\alpha\mu}\partial_{\mu} a_{NN}T^{N}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1225,11 +1225,11 @@ $$\blacklozenge$$
 \end{tcolorbox}
 We can state that $\kappa_{(2)}$ is an invariant but one has to check whether the expression $(1)$ implies that $\kappa_{(2)}$ is indeed invariant.\\
 What we know is that $\lambda^r, \frac{\delta \lambda^r}{\delta s},\frac{\delta\lambda_{(1)}^r}{\delta s},  \lambda^r_{(2)}$ are contravariant vectors. Also $\kappa_{(1)}$ is an invariant as $\frac{\delta\lambda^r}{\delta s} = \kappa_{(1)}\lambda^r_{(1)}$ and the magnitude of $\frac{\delta\lambda^r}{\delta s}$ does not depend on the coordinate system. So,
-\begin{align}
+\begin{align*}
 \text{(1)}\times \lambda_{(2)r} \quad\Rightarrow \quad\quad \frac{\delta\lambda_{(1)}^r}{\delta s}\lambda_{(2)r} &= \kappa_{(2)}\lambda^r_{(2)}\lambda_{(2)r} - \epsilon\epsilon_{(1)}\kappa_{(1)}\lambda^r\lambda_{(2)r}\\
 \Rightarrow \quad\quad \kappa_{(2)}\underbrace{\lambda^r_{(2)}\lambda_{(2)r}}_{\text{invariant}} &= \underbrace{\frac{\delta\lambda_{(1)}^r}{\delta s}\lambda_{(2)r}}_{\text{invariant}}  + \underbrace{\epsilon\epsilon_{(1)}}_{\text{invariant}} \underbrace{\kappa_{(1)}}_{\text{invariant}} \underbrace{\lambda^r \lambda_{(2)r}}_{\text{invariant}} \\
 \Rightarrow \quad\quad \kappa_{(2)}&= \text{invariant} 
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1391,7 +1391,7 @@ Solving the ODE (9). Put $ e^{rs} = \lambda_{(1)}^k$
 \text{or}\quad  \lambda_{(1)}^r = A^{'r}\cos \kappa s & + B^{'r}\sin \kappa s\\
 \text{We have (8)}\spatie \spatie  \lambda^r =  & -  \kappa_{(1)} \dv{\lambda_{(1)}^r}{ s} \\
 \dv{(16)}{s}\quad\text{and (17)}\Rightarrow\spatie \lambda^r =  A^{'r}\sin \kappa s & - B^{'r}\cos \kappa s\\
-\text{as}\quad \lambda^r = \dv{x^r}{s}\quad\text{ with (18)}\quad \Rightarrow \spatie x^r = - \frac{A^{'r}}{\kappa}\cos \kappa s &  - \frac{B^{'r}}{\kappa}\sin \kappa s + C^r\\
+\text{as}\quad \lambda^r = \dv{x^r}{s}\quad\text{ with (18)}\quad \Rightarrow \spatie x^r = - \frac{A^{'r}}{\kappa}\cos \kappa s &  - \frac{B^{'r}}{\kappa}\sin \kappa s + C^r
 \end{align}
 Replace $- \frac{A^{'r}}{\kappa}$ with $A^{r}$ and $- \frac{B^{'r}}{\kappa}$ with $B^{r}$, we get then the following set of equations,
 
@@ -1421,9 +1421,10 @@ $$\blacklozenge$$
 For cylindrical coordinates in Euclidean 3-space, write down the metric form by inspection of a diagram showing a general infinitesimal displacement, and calculate all the Christoffel symbols of both kinds.
 \end{tcolorbox}
 \begin{figure}[h]
-
+\centering
 %\includegraphics[scale=.4]{polar3d.jpg}
 \input{D:/MathLatex/images/fig_p78_247_a.tex}
+\caption{Cylindrical coorinates. }
 \label{fig:fig_p78_247_a}
 \end{figure}
 From the figure we may (assuming an infinitesimal displacement), we may approximate $\left| \overrightarrow{SS^{'}} \right|$ with the arclength $r d\theta$ and assume $\left|  \overrightarrow{S°S^{',}} \right| \perp \left|  \overrightarrow{GS^{'}} \right|$) Hence, the infinitesimal displacement from S
@@ -1435,7 +1436,7 @@ From the figure we may (assuming an infinitesimal displacement), we may approxim
  1& 0 & 0 \\
  0&  r^2&0  \\
  0&0  &1  \\
-\end{pmatrix}\quad\text{and}\quad \left(a_{mn}\right) = \begin{pmatrix}
+\end{pmatrix}\quad\text{and}\quad \left(a^{mn}\right) = \begin{pmatrix}
  1& 0 & 0 \\
  0&  ^\frac{1}{r^2}&0  \\
  0&0  &1  \\
@@ -1503,13 +1504,13 @@ $$\blacklozenge$$
 If $X^r, Y^r$ are unit vectors inclined at an angle $\theta$, prove that $$\sin^2 \theta = (a_{rm}a_{sn}- a_{rs}a_{mn})X^r Y^s X^m Y^n$$
 \end{tcolorbox}
 $X^r Y^s$ are unit vectors. So,
-\begin{align}
+\begin{align*}
 \ a_{rm}X^rX^m = 1 \quad &\text{and}\quad a_{sn}Y^sY^n = 1\\
 \text{We have}\spatie \sin^2\theta &= 1 - \cos^2\theta\\
 \text{and (2.312)}\spatie \cos\theta &= a_{mn}X^mY^n\\
 \Rightarrow\spatie \sin^2 \theta &= a_{rm}X^rX^m a_{sn}Y^sY^n - a_{mn}X^mY^na_{rs}X^rY^s\\
 \ &= (a_{rm} a_{sn} - a_{mn}a_{rs})X^rY^sX^mY^n
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1604,7 +1605,7 @@ Write down the differential equations of the geodesics on a sphere, using colati
 where $A,B,C$ are arbitrary constants.
 \end{tcolorbox}
 $$\textbf{We will use two different approaches to determine the relation and finally use a geometrical reasoning }$$ $$\textbf{allowing us to avoid solving the ODE's resulting from the above mentioned approaches.}$$\\
-We will first find the solution, starting from the variational principle , defining a geodesic.
+We will first find the solution, starting from the variational principle, defining a geodesic.
 In spherical coordinates we have (see exercise page 27) $ds^2 = dr^2 +  r^2\sin^2(\theta)d\phi^2+ r^2d\theta^2$.\\
 As $r=R= C^{st}$ this reduces to
 \begin{align}
@@ -1627,7 +1628,7 @@ Applying the variational principle on L and using the Euler-Langrange equations:
 \text{(9) and (10):}\quad C^2 &= \frac{\sin^2 \theta \  \dot{\phi}}{ \sqrt{1+\sin^2 \theta \ \dot{\phi}^2 }} \\
 \text{or}\quad \dot{\phi} &= \frac{C}{\sin \theta \sqrt{\sin^2 \theta - C^2}}
 \end{align}
-Solving the ODE (12). Put $u = \cot \theta \quad \Rightarrow \quad du = - \csc^2 d\theta = -\frac{1}{\sin^2\theta} d\theta$. So,  
+Solving the ODE (11). Put $u = \cot \theta \quad \Rightarrow \quad du = - \csc^2 d\theta = -\frac{1}{\sin^2\theta} d\theta$. So,  
 \begin{align}
 \phi &= -C\int \frac{\sin \theta}{ \sqrt{\sin^2 \theta - C^2}}du\\
 &= -C\int \frac{du}{ \sqrt{1- \frac{C^2 }{\sin^2 \theta}}}\\
@@ -1636,7 +1637,7 @@ Solving the ODE (12). Put $u = \cot \theta \quad \Rightarrow \quad du = - \csc^2
 \text{be}\quad a&= \frac{\sqrt{1-C^2}}{C}\\
 \text{(15) becomes}\quad \phi &= -\int \frac{1}{ \sqrt{a^2 -  u^2}}du\\
 \text{put }\quad u &= av\\
-\text{(18) becomes}\quad \phi &= -\int \frac{1}{ \sqrt{1 -  v^2}}dv\\
+\text{(17) becomes}\quad \phi &= -\int \frac{1}{ \sqrt{1 -  v^2}}dv\\
 \ &= -\arccos v + C^{st}\\
 \ &= -\arccos \frac{u}{a}  + \phi_0\\
 \text{or:}\quad \frac{u}{a} &= \cos (\phi - \phi_0)  \ \text{(by choosing an adequate}\ \phi_0\text{)}\\
@@ -1680,15 +1681,15 @@ Finding the geodesics from the tensorial formula's, implies solving $2^{nd}$ ord
 \lambda =  2 \cot\theta\dv{\theta}{\phi}\\\\
 \dv[2]{\theta}{\phi}  = \lambda \dv{\theta}{\phi} + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\\\
 \end{array}\right.\\
-\Rightarrow \quad \dv[2]{\theta}{\phi}  &= 2 \cot\theta(\dv{\theta}{\phi})^2 + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 \\
+\Rightarrow \quad \dv[2]{\theta}{\phi}  &= 2 \cot\theta(\dv{\theta}{\phi})^2 + \sin\theta\cos\theta(\dv{\theta}{\phi})^2 
 \
 \end{align}
-Inspection shows hat the expression (32) and (34) are quite complicated while using (30b) and (30c) we can get an expression of the form
+Inspection shows hat the expression (31) and (33) are quite complicated while using (29b) and (29c) we can get an expression of the form,
 \begin{align}
 \ddot{\theta} - \sin\theta\cos\theta\left(\frac{1 - \dot{\theta}^2}{\sin^2\theta}\right)&= 0\\
 \text{or:}\quad \ddot{\theta} - \cot\theta\left( 1-\dot{\theta}^2\right) &= 0\\
 \text{Put }\ u(\theta)= \dot{\theta}\quad\Rightarrow\quad \ddot{\theta} &= \dot{u}u\\
-\text{(37) can be written as:}\quad \dot{u}u - \cot\theta\left( 1-u^2\right) &= 0\\
+\text{(36) can be written as:}\quad \dot{u}u - \cot\theta\left( 1-u^2\right) &= 0\\
 \text{or}\quad \frac{\dot{u}u}{\left( 1-u^2\right)} &= \cot\theta\\
 \text{or}\quad \frac{u}{\left( 1-u^2\right)}du &= \frac{\cos\theta}{\sin\theta} d\theta\\
 \text{or}\quad -\half\frac{1}{\left( 1-u^2\right)}d(1-u^2) &= \frac{1}{\sin \theta} d(\sin\theta)\\
@@ -1697,24 +1698,24 @@ Inspection shows hat the expression (32) and (34) are quite complicated while us
 \Leftrightarrow \quad d(\log( \sqrt{1-u^2}\sin\theta))&=0\\
 \Rightarrow \quad (1-\dot{\theta}^2)\sin^2\theta &= C^2\\
 \Rightarrow \quad \dot{\theta}^2&= 1-\frac{C^2}{\sin^2\theta}\\
-\text{we have (30c)}\quad \dot{\theta}^2+\dot{\phi}^2\sin^2\theta &= 1\\
-\text{and so (47):}\quad 1-\frac{C^2}{\sin^2\theta}+\dot{\phi}^2\sin^2\theta &= 1\\
+\text{we have (29c)}\quad \dot{\theta}^2+\dot{\phi}^2\sin^2\theta &= 1\\
+\text{and so (45):}\quad 1-\frac{C^2}{\sin^2\theta}+\dot{\phi}^2\sin^2\theta &= 1\\
 \Rightarrow \quad \dot{\phi}^2 &= \frac{C^2}{\sin^4\theta}\\
 \Rightarrow \quad \dot{\phi} &= \frac{C}{\sin^2\theta}\\
 \text{we have} \quad \dot{\phi}=\dv{\phi}{\theta}\dot{\theta}\\
 \text{so} \quad d\phi  &= \frac{C}{\sin^2\theta\sqrt{1-\frac{C^2}{\sin^2\theta}}}d\theta\\
 \text{so} \quad d\phi  &= \frac{C}{\sin\theta\sqrt{\sin^2\theta-C^2}}d\theta
 \end{align}
-Note that expression (54) is exactly the expression (12) we found by applying directly the variational principle to find the general expression. So applying steps (13) to (26) gives us the same expression.
+Note that expression (52) is exactly the expression (11) we found by applying directly the variational principle to find the general expression. So applying steps (12) to (25) gives us the same expression.
 $$\diamond$$
 \newpage
-Instead of solving the ODE's (46) and (53) we can use geometrical considerations to get the asked expression.\\ Due to the invariance of a sphere regarding rotation of the axes, we can choose a reference axis system $XYZ$ (from which $\theta, \phi$ are measured) so that at $s=0$ of the geodesic,  corresponds the point $r=1, \ \theta = 0$. As  from (45),  $\left.(1-\dot{\theta}^2)\sin^2\theta \right |_{s=0} = C^2$ follows that $C=0 \ (\text{because} \ \left.\theta \right |_{s=0} = 0)$. So we get $(1-\dot{\theta}^2)\sin^2\theta  = 0 \ \forall \ \theta : \ \Rightarrow \ \dot{\theta} = 1$ and  $\theta =s$. Then from (37) $\dot{\theta}^2+\dot{\phi}^2\sin^2\theta = 1$  follows that $\dot{\phi}= 0$ and thus $\phi = C^{st}$. Again, considering symmetry we can choose the axis system so that $\phi = 0$. The set of equations $ \theta =s, \ \phi = 0$ represents a circle on the sphere generated by the intersection of the sphere with the $XZ$ plane. Again, considering symmetry, we can conclude that any circle on the sphere generated by the intersection a plane going through the origin of the axis system, is also a geodesic curve. So, be $\widehat{n} = (A,B,C)$ the normal vector defining a plane going through the origin and $\widehat{p} = (\cos\phi \sin\theta,\sin\phi \sin\theta,\cos\theta)$ a point on the sphere, then the intersection of the plane and the sphere is given by $$\left<\widehat{n} | \widehat{p}\right> = A\cos\phi \sin\theta+ B\sin\phi \sin\theta+ C\cos\theta = 0$$
+Instead of solving the ODE's (45) and (52) we can use geometrical considerations to get the asked expression.\\ Due to the invariance of a sphere regarding rotation of the axes, we can choose a reference axis system $XYZ$ (from which $\theta, \phi$ are measured) so that at $s=0$ of the geodesic,  corresponds the point $r=1, \ \theta = 0$. As  from (45),  $\left.(1-\dot{\theta}^2)\sin^2\theta \right |_{s=0} = C^2$ follows that $C=0 \ (\text{because} \ \left.\theta \right |_{s=0} = 0)$. So we get $(1-\dot{\theta}^2)\sin^2\theta  = 0 \ \forall \ \theta : \ \Rightarrow \ \dot{\theta} = 1$ and  $\theta =s$. Then from (37) $\dot{\theta}^2+\dot{\phi}^2\sin^2\theta = 1$  follows that $\dot{\phi}= 0$ and thus $\phi = C^{st}$. Again, considering symmetry we can choose the axis system so that $\phi = 0$. The set of equations $ \theta =s, \ \phi = 0$ represents a circle on the sphere generated by the intersection of the sphere with the $XZ$ plane. Again, considering symmetry, we can conclude that any circle on the sphere generated by the intersection a plane going through the origin of the axis system, is also a geodesic curve. So, be $\widehat{n} = (A,B,C)$ the normal vector defining a plane going through the origin and $\widehat{p} = (\cos\phi \sin\theta,\sin\phi \sin\theta,\cos\theta)$ a point on the sphere, then the intersection of the plane and the sphere is given by $$\left<\widehat{n} | \widehat{p}\right> = A\cos\phi \sin\theta+ B\sin\phi \sin\theta+ C\cos\theta = 0$$
 $$\blacklozenge$$
 \newpage
 
 \section{p79-exercise 8}
 \begin{tcolorbox}
-Find in integrated form the geodesic null lines in a $V_3$ for which the metric form $$(dx^1)^2 -R^2[(dx^2)^2+(dx^3)^2]$$
+Find in integrated form the geodesic null lines in a $V_3$ for which the metric form is$$(dx^1)^2 -R^2[(dx^2)^2+(dx^3)^2]$$
 R being a function of $x^1$ only.
 \end{tcolorbox}
 We have,
@@ -1934,7 +1935,8 @@ We know that in a spherical coordinate system all $\Gamma_{pq}^{'s}$ vanish exce
 \end{align}
 $$\diamond$$
 \newpage
-Does $\boldsymbol{\Gamma_{11}^{'1}}$ vanish for $\theta \rightarrow0$ ? \\The problematic term in (7) is $2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$ for which $\lim_{\theta \to 0 }= \pm \infty \mp \infty \mp \infty$ is undefined. 
+Does $\boldsymbol{\Gamma_{11}^{'1}}$ vanish for $\theta \rightarrow0$ ? 
+\\The problematic term in (7) is $2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$ for which $\lim_{\theta \to 0 }= \pm \infty \mp \infty \mp \infty$ is undefined. 
 \begin{align}
 \text{Consider}\quad L_{+}& = \lim_{\theta \to 0_{+}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2} \\
 \text{We have}\quad &\begin{array}{lllll}
@@ -1952,7 +1954,8 @@ Does $\boldsymbol{\Gamma_{11}^{'1}}$ vanish for $\theta \rightarrow0$ ? \\The pr
 \ & \leq 0\\
 \text{(14) and ((20)}\quad \Rightarrow L_{+}& =0
 \end{align} 
-Considering that $$L_{-} = \lim_{\theta \to 0_{-}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$$ is equivalent to  $$L_{+}^{\alpha} = \lim_{\alpha \to 0_{+}}-(2\cot\alpha -\frac{1}{\alpha}-\frac{\sin\alpha\cos\alpha}{\alpha^2})$$ (substitute $\theta = -\alpha$) we conclude that   $$L_{-} =  -L_{+}=0$$. And so $$\left.\Gamma_{11}^{'1}\right|_{\theta=0} =\left.(2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2})\cos\phi\sin^2\phi\right|_{\theta=0} = 0$$
+Considering that $$L_{-} = \lim_{\theta \to 0_{-}}2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2}$$ is equivalent to  $$L_{+}^{\alpha} = \lim_{\alpha \to 0_{+}}-(2\cot\alpha -\frac{1}{\alpha}-\frac{\sin\alpha\cos\alpha}{\alpha^2})$$ (substitute $\theta = -\alpha$) we conclude that   $$L_{-} =  -L_{+}=0$$
+And so $$\left.\Gamma_{11}^{'1}\right|_{\theta=0} =\left.(2\cot\theta -\frac{1}{\theta}-\frac{\sin\theta\cos\theta}{\theta^2})\cos\phi\sin^2\phi\right|_{\theta=0} = 0$$
 $$\blacklozenge$$
 \newpage
 
@@ -1961,14 +1964,14 @@ $$\blacklozenge$$
 If vectors $T^r$ and $S_r$ undergo parallel propagation along a curve, show that $T^nS_n$ is constant along the curve.
 \end{tcolorbox}
 Parallel propagation of $T^r$ and $S_r$  along a curve means
-\begin{align}
+\begin{align*}
 \frac{\delta T^r}{\delta u} &\equiv \dv{T^r}{u} + \Gamma^r_{mn}T^m \dv{x^n}{u} = 0\\
 \frac{\delta S_r}{\delta u} &\equiv \dv{S_r}{u} - \Gamma^m_{rn}S_m \dv{x^n}{u} = 0\\
 \text{Hence}\quad \dv{T^rS_r}{u} &= S_r\left(-\Gamma^r_{mn}T^m\dv{x^n}{u}\right) + T^r\left(\Gamma^m_{rn}S_m \dv{x^n}{u} \right)\\
 \ &= \dv{x^n}{u}\left(\Gamma^m_{rn}S_mT^r -  \Gamma^m_{rn}T^rS_m\right)\\
 \ &=0\\
 \Rightarrow \spatie T^rS_r &= C^{st}
-\end{align} 
+\end{align*} 
 $$\blacklozenge$$
 \newpage
 
@@ -1992,7 +1995,7 @@ $$\blacklozenge$$
 
 \section{p79-exercise 13}
 \begin{tcolorbox}
-Using local Cartesians and applying the result of the previous exercise (N° 12), prove that, if the metric form is positive-definite, then the determinant $a= \left | a_{mn} \right |$ is always positive.
+Using local Cartesians and applying the result of the previous exercise (Ex. 12), prove that, if the metric form is positive-definite, then the determinant $a= \left | a_{mn} \right |$ is always positive.
 \end{tcolorbox}
 Using local Cartesian coordinates we have:
 \begin{align}
@@ -2041,7 +2044,7 @@ In a plane, let $x^1, \  x^2$ be the distances of a general point from the point
 \end{pmatrix}
 \end{align}
 \newpage
-Be $A$ the metric tensor in Cartesian coordinate system. Then, going to a arbitrary coordinate system gives a metric tensor according to  
+Be $A$ the metric tensor in Cartesian coordinate system. Then, going to an arbitrary coordinate system gives a metric tensor according to  
 \begin{align}
 \ & A^{'} = J^TAJ =J^TJ \quad \text{as}\quad A = \begin{pmatrix}
 1 &0 \\
@@ -2068,26 +2071,26 @@ We use plane geometry to express expression (11) as  a function of only $(x^1,x^
 \caption{Bipolar coordinates versus Cartesian coordinates}
 \label{fig:fig_p79_260_b}
 \end{figure}
-\begin{align}
+\begin{align*}
 \ \left |  OP \right |^2 &= \frac{(x^1)^2+(x^2)^2}{2} - \underbrace{\frac{\left | AB \right|^2}{4}}_{=1}\\
 \Rightarrow\quad (y^1)^2 +(y^2)^2 &= \frac{(x^1)^2+(x^2)^2}{2} - 1
-\end{align}
+\end{align*}
 The area $K$ of the triangle can be expressed in two ways
-\begin{align}
+\begin{align*}
 \ K &= \half y^2\left | AB \right| = y^2\\
 \text{and} \quad K &= \sqrt{s(s-x^1)(s-x^2)(s-2)}\\
 \text{with}\quad s &= \half (x^1+x^2+2)\\
 \text{hence}\quad (y^2)^2 &= \frac{1}{16}(x^1+x^2+2)(x^1+2)(x^2+2)(x^1+x^2)
-\end{align}
+\end{align*}
 So we get from (11):
-\begin{align}
+\begin{align*}
 A^{'} =\frac{4x^1x^2}{(x^1+x^2+2)(x^1+2)(x^2+2)(x^1+x^2)} \begin{pmatrix}
 \ & \\
 x^1x^2 &2-\frac{(x^1)^2+(x^2)^2}{2} \\\\
 2-\frac{(x^1)^2+(x^2)^2}{2}  &x^1x^2\\
 \ & 
 \end{pmatrix}
-\end{align}
+\end{align*}
 For the conjugate metric tensor we start from expression (11) and invert the metric tensor
 \begin{align}
 \left| A^{'}\right| &= \left[ \frac{x^1x^2}{4(y^2)^2}\right]^2\left[(x^1x^2)^2 -\left((y^1)^2 +(y^2)^2-1\right)^2\right]\\
@@ -2114,17 +2117,17 @@ Given $\Phi = a_{mn}dx^m dx^n$, with $a_{11} = a_{22}= 0$ but $a_{12} \ne 0$, sh
 $$\Psi_1 = \frac{1}{\sqrt(2 \epsilon a_{12})}\left[ a_{12}(dx^1+dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right]$$
 $$\Psi_2 = \frac{1}{\sqrt(2 \epsilon a_{12})}\left[ a_{12}(-dx^1+dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right]$$
 \end{tcolorbox}
-Using local Cartesian coordinates we have:
+Using local Cartesian coordinates:
 Be 
 \begin{align}
-\Phi &= a_{mn}dx^mdx^n\\ 
+\Phi &= a_{mn}dx^mdx^n
 \end{align}
 and consider the following sequences of terms: 
 \begin{align}
 \Psi_1 =  b_{11}dx^1+b_{12}dx^2 + b_{13}dx^3+ \dots +b_{1N}dx^N \\
 \Psi_2 =  b_{21}dx^1+b_{22}dx^2 + b_{23}dx^3+ \dots +b_{2N}dx^N 
 \end{align}
-The expressions (3) and (4) contain all the terms of $\Phi$ with $(dx^1)^2,(dx^2)^2$ and $dx^1dx^2$. So, $\Phi$ can be expressed as 
+The expressions (2) and (3) contain all the terms of $\Phi$ with $(dx^1)^2,(dx^2)^2$ and $dx^1dx^2$. So, $\Phi$ can be expressed as 
 \begin{align}
 \Phi =\Psi_1^2 -\Psi_2^2 + \Phi_2 
 \end{align}
@@ -2137,8 +2140,8 @@ We can express $\Psi_1^2 - \Psi_2^2$ as
  + \dots 2( b_{1j} b_{1k}-b_{2j} b_{2k})dx^kdx^j+\dots\quad j>2, \ k\ne j
 \end{array} \right.
 \end{align}
-Equating the terms in (1) and (6) and taking into account (=given) $a_{11}=a_{22}=0$ and $a_{12} \ne0$ 
-\begin{align}
+Equating the terms in (1) and (5) and taking into account (=given) $a_{11}=a_{22}=0$ and $a_{12} \ne0$ 
+\begin{align*}
 \ &\left \{ \begin{array}{l}
  b_{11}^2 - b_{21}^2 =0\\
  b_{12}^2 - b_{22}^2 =0\\
@@ -2155,26 +2158,27 @@ Equating the terms in (1) and (6) and taking into account (=given) $a_{11}=a_{22
 \text{or}\\
 \pm b_{12}b_{21} \mp b_{12}b_{21}  =a_{12}
 \end{array}\right.\\
-\end{align}
+\end{align*}
 As $a_{12} \ne0$, the signs in the above expressions must be the same. Hence,
-\begin{align}
+\begin{align*}
 &\left \{ \begin{array}{c} 
  2b_{11}b_{22} =\pm a_{12}\\ 
 2 b_{12}b_{21} =\pm a_{12} 
 \end{array}\right.
-\end{align}
-(12) can be satisfied with an infinite combination of $b_{11},b_{12},b_{21}, b_{22}$. Choose,
-\begin{align} 
+\end{align*}
+(6) can be satisfied with an infinite combination of $b_{11},b_{12},b_{21}, b_{22}$. Choose,
+\begin{align*} 
 \ b_{11} = \sqrt{\frac{\epsilon a_{12}}{2 }}\quad b_{22} = \sqrt{\frac{\epsilon a_{12}}{2 }}\quad & b_{12} = \sqrt{\frac{\epsilon a_{12}}{2 }}\quad b_{21} = - \sqrt{\frac{\epsilon a_{12}}{2 }}\\
 \text{with} \quad  \epsilon &= \pm 1\quad\text{so that}\quad \epsilon a_{12} \geq 0
-\end{align}
-Put $\xi = \sqrt{\frac{\epsilon a_{12}}{2 }}$. Then, (3) and (4) can be expressed as 
-\begin{align}
+\end{align*}
+Put $\xi = \sqrt{\frac{\epsilon a_{12}}{2 }}$. Then, (2) and (3) can be expressed as 
+\begin{align*}
 \Psi_1 =  \xi dx^1+\xi dx^2 + b_{13}dx^3+ \dots +b_{1N}dx^1dx^N \\
 \Psi_2 =  -\xi dx^1+\xi dx^2 + b_{23}dx^3+ \dots +b_{2N}dx^1dx^N 
-\end{align}
-What are the $b_{.j}\quad (j>2)$? \\From (6), e.g. for $j=3$,  identifying the terms in $dx^1dx^3$ and $dx^2dx^3$ we see that
-\begin{align}
+\end{align*}
+What are the $b_{.j}\quad (j>2)$?
+ \\From (5), e.g. for $j=3$,  identifying the terms in $dx^1dx^3$ and $dx^2dx^3$ we see that
+\begin{align*}
 &\left \{ \begin{array}{l} 
  \xi b_{13}+\xi b_{23} =a_{13}\\ 
 \xi b_{13}-\xi b_{23} =a_{23}\\ 
@@ -2188,9 +2192,9 @@ What are the $b_{.j}\quad (j>2)$? \\From (6), e.g. for $j=3$,  identifying the t
  \ &\ (j>2)\\ 
  b_{2j}=\frac{a_{1j}-a_{2j}}{2\xi}
 \end{array}\right.
-\end{align}
+\end{align*}
 Bring $\frac{1}{\xi}$ out in $\Psi_1, \Psi_2$. This gives
-\begin{align}
+\begin{align*}
 \Psi_1 &= \frac{1}{\xi}\left( \xi^2( dx^1+ dx^2) + \frac{a_{13}+a_{23}}{2}dx^3+ \dots +\frac{a_{1N}+a_{2N}}{2}dx^N \right) \\
 \Psi_2 &= \frac{1}{\xi}\left( \xi^2(- dx^1+ dx^2) + \frac{a_{13}-a_{23}}{2}dx^3+ \dots +\frac{a_{1N}-a_{2N}}{2}dx^N \right) \\
 \Rightarrow \quad &\left \{ \begin{array}{l} 
@@ -2201,32 +2205,33 @@ Bring $\frac{1}{\xi}$ out in $\Psi_1, \Psi_2$. This gives
 \Psi_1 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left(\epsilon a_{12}(dx^1+ dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right) \\\\
 \Psi_2 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left( \epsilon a_{12}(- dx^1+ dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right) \\
 \end{array}\right.
-\end{align}
+\end{align*}
 What about the factor $\epsilon = \pm1$ in the terms $\epsilon a_{12}(dx^1+ dx^2)$ and $\epsilon a_{12}(-dx^1+ dx^2)$ ? Consider the alternate form
-\begin{align}
+\begin{align*}
 \ &\left \{ \begin{array}{l} \\
 \Psi^{'}_1 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left( a_{12}(dx^1+ dx^2) + (a_{13}+a_{23})dx^3+ \dots +(a_{1N}+a_{2N})dx^N \right) \\\\
 \Psi^{'}_2 = \frac{1}{\sqrt{2 \epsilon a_{12}}}\left(  a_{12}(- dx^1+ dx^2) + (a_{13}-a_{23})dx^3+ \dots +(a_{1N}-a_{2N})dx^N \right) \\
 \end{array}\right.
-\end{align}
-Let's have a look at the terms in $dx^idx^j$ in $\Psi_1^{'2}-\Psi^{'2}_2$\\
+\end{align*}
+Let's have a look at the terms $p_{ij}$ in $dx^idx^j$ in $\Psi_1^{'2}-\Psi^{'2}_2$\\
 \begin{align}
-\ x_{11}(dx^1)^2+ 2x_{12}dx^1dx^2+x_{22}(dx^2)^2&= \frac{1}{2 \epsilon a_{12}}\left(( a_{12})^2(dx^1 + dx^2)^2 - ( a_{12})^2(-dx^1 + dx^2)^2\right)  \\
+\ p_{11}(dx^1)^2+ 2p_{12}dx^1dx^2+p_{22}(dx^2)^2&= \frac{1}{2 \epsilon a_{12}}\left(( a_{12})^2(dx^1 + dx^2)^2 - ( a_{12})^2(-dx^1 + dx^2)^2\right)  \\
 &= \frac{\epsilon a_{12}}{2}\left((dx^1 +  dx^2)^2 - (- dx^1 + dx^2)^2\right)  \\
 &= \frac{\epsilon a_{12}}{2}\left((dx^1)^2 + 2 dx^1dx^2+  (dx^2)^2 - (dx^1)^2 + 2 dx^1dx^2-  (dx^2)^2\right)  \\
 &= 2 \epsilon a_{12}dx^1dx^2 \\
-\ 2x_{13}dx^1dx^3&= \frac{1}{2 \epsilon a_{12}}(2 a_{12}(a_{13}+a_{23})dx^1dx^3 - 2a_{12}(a_{13}-a_{23})dx^1dx^3) \\
-\ &= \frac{1}{2 \epsilon a_{12}}(4 a_{12}a_{23})dx^1dx^3 \\
- & =  2\epsilon a_{23}dx^1dx^3\\
- \ 2x_{23}dx^2dx^3&= \frac{1}{2 \epsilon a_{12}}(2 a_{12}(a_{13}+a_{23})dx^1dx^3 - 2 a_{12}(a_{13}-a_{23})dx^1dx^3) \\
-\ &= \frac{1}{2 \epsilon a_{12}}(4 a_{12}a_{23})dx^1dx^3 \\
- & =  2\epsilon a_{23}dx^1dx^3\\
-\ 2x_{34}dx^3dx^4&=  \frac{1}{2 \epsilon a_{12}}\left(\begin{array}{l} 2 (a_{13}+ a_{23})(a_{14}+ a_{24}\\ - 2 (a_{13}- a_{23})(a_{14}- a_{24}) \end{array} \right)dx^3dx^4 \\
-\ &= \frac{2\epsilon}{ a_{12}}\left(a_{23}a_{14}+a_{13}a_{24}\right)
+\ 2p_{13}dx^1dx^3&= \frac{1}{2 \epsilon a_{12}}(2 a_{12}(a_{13}+a_{23})dx^1dx^3 + 2a_{12}(a_{13}-a_{23})dx^1dx^3) \\
+\ &= \frac{1}{2 \epsilon a_{12}}(4 a_{12}a_{13})dx^1dx^3 \\
+ & =  2\epsilon a_{13}dx^1dx^3\\
+ \ 2p_{23}dx^2dx^3&= \frac{1}{2 \epsilon a_{12}}(2 a_{12}(a_{13}+a_{23})dx^2dx^3 - 2 a_{12}(a_{13}-a_{23})dx^2dx^3) \\
+\ &= \frac{1}{2 \epsilon a_{12}}(4 a_{12}a_{23})dx^2dx^3 \\
+ & =  2\epsilon a_{23}dx^2dx^3\\
+\ 2p_{34}dx^3dx^4&=  \frac{1}{2 \epsilon a_{12}}\left(\begin{array}{l} 2 (a_{13}+ a_{23})(a_{14}+ a_{24})\\ - 2 (a_{13}- a_{23})(a_{14}- a_{24}) \end{array} \right)dx^3dx^4 \\
+\ &= \frac{2\epsilon}{ a_{12}}\left(a_{23}a_{14}+a_{13}a_{24}\right)dx^3dx^4
 \end{align}
 We rewrite now the metric form $\Phi$ as 
 $$\Phi =\epsilon \Psi_1^{'2}- \epsilon \Psi^{'2}_2 + \Phi_2 $$
-From (28), (31) and (34) we see that the terms in $dx^1, dx^2$ in $\Phi =\epsilon \Psi_1^{'2}- \epsilon \Psi^{'2}_2 + \Phi_2$ correspond to the expected  metric form and that the other terms in $dx^j, dx^k, \ j,k \neq 1,2$ can be corrected in the remaining term $\Phi_2$.
+From (9), (12) and (15) we see that the terms in $dx^1, dx^2$ in $\Phi =\epsilon \Psi_1^{'2}- \epsilon \Psi^{'2}_2 + \Phi_2$ correspond to the expected  metric form and that the other terms in $dx^j, dx^k, \ j,k \neq 1,2$ can be corrected in the remaining term $\Phi_2$.
+$$\blacklozenge$$
 \newpage
 
 \section{p80-exercise 16}
@@ -2411,7 +2416,7 @@ $$\boldsymbol{T_{r|sk} \questeq  T_{r|ks}}$$
   \end{split}
 \quad\leftrightarrow\quad
   \begin{split}
- \ & \boldsymbol{T_{r|sk}}\\\\
+ \ & \boldsymbol{T_{r|ks}}\\\\
   \ & B_{rk} \coloneqq T_{r|k} = \partial_{k}T_r - \Gamma^m_{rk}T_m\\
   \ & B_{rk|s}= \partial_s B_{rk} - \Gamma^m_{rs}B_{mk} -  \Gamma^m_{ks}B_{rm}\\
   \ & B_{mk}=  \partial_{k}T_m - \Gamma^n_{mk}T_n\\
