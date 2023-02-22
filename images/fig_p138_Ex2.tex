@@ -1,0 +1,25 @@
+\begin{tikzpicture}[]
+    \begin{axis}[
+    domain = 0:2.5*pi,
+    samples = 201,
+    axis on top = true,
+    grid =none,
+    grid style = {dashed, line width=.1pt, draw=gray!30, 
+    /pgfplots/on layer=axis background},
+    		ytick=\empty,
+		xtick=\empty,
+		xmin=-0,
+		xmax=9,
+		ymin=0,
+		ymax=1.5,
+]
+\addplot+[no marks, color=black] {(sin(deg(x)))^2};
+\node[{anchor=south east}] at (0,10){$\phi_0$};
+\end{axis}
+\coordinate(0) at (0,0);
+\node[{anchor=north east }] at (0){$0$};
+\coordinate(p1) at (2.7,0);
+\node[{anchor=north east }] at (p1){$\pi$};
+\coordinate(p2) at (2*2.5,0);
+\node[{anchor=north east }] at (p2){$2\pi$};
+\end{tikzpicture}
