@@ -1,4 +1,11 @@
-\pgfplotsset{every axis/.append style={
+
+            
+\begin{tikzpicture}[angle/.style={black,thick}]
+\tikzmath{\a=0.05/sqrt(0.05*0.05+0.1*0.1);\k=1;\f=1;\u1=0;\v1=0;\u2=0;\v2=0;\u3=0;\v3=0;\u4=0;\v4=0;};
+\a, \k,\u1,\v1,\u2,\v2,\u3,\v3,\u4,\v4,\f;
+    %\pgfplotsset{ticks=none};
+    \pgfplotsset{compat=1.12};
+	\pgfplotsset{every axis/.append style={
 view={120}{20},
 %axis equal image,
     %clip=false,
@@ -11,15 +18,6 @@ view={120}{20},
     %y dir=reverse,
 %    axis on top
             }}
-            
-
-
-            
-\begin{tikzpicture}[angle/.style={black,thick}]
-\tikzmath{\a=0.05/sqrt(0.05*0.05+0.1*0.1);\k=1;\f=1;\u1=0;\v1=0;\u2=0;\v2=0;\u3=0;\v3=0;\u4=0;\v4=0;};
-\a, \k,\u1,\v1,\u2,\v2,\u3,\v3,\u4,\v4,\f;
-    %\pgfplotsset{ticks=none};
-    \pgfplotsset{compat=1.12};
     \tikzset{>=latex} % for LaTeX arrow head
 \begin{axis}
 		[

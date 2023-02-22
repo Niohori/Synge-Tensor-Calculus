@@ -1,0 +1,73 @@
+\tdplotsetmaincoords{50}{220}
+\begin{tikzpicture}[tdplot_main_coords, >=Latex]
+\tikzmath{\aax=3;\bby=4;\ccz=3;\a = (\bby+\bby)/4;\d=-8.5;\e=4.5;};
+\aax, \bby,\ccz;
+\coordinate (a0) at (0,0,0);
+\coordinate (a5) at (\aax,0,0);
+\coordinate (a3) at (0,\bby,0);
+\coordinate (a1) at (0,0,\ccz);
+\coordinate (a4) at (\aax,\bby,0);
+\coordinate (a6) at  (\aax,0,\ccz);
+\coordinate (a2) at  (0,\bby,\ccz);
+\coordinate (a7) at  (\aax,\bby,\ccz);
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (0,0,\ccz);
+\coordinate (C) at (\aax,\bby,\ccz);
+\coordinate (D) at (\aax,\bby,0);
+
+\coordinate (a0p) at (0+\d,0,0+\e);
+\coordinate (a5p) at (\aax+\d,0,0+\e);
+\coordinate (a3p) at (0+\d,\bby,0+\e);
+\coordinate (a1p) at (0+\d,0,\ccz+\e);
+\coordinate (a4p) at (\aax+\d,\bby,0+\e);
+\coordinate (a6p) at  (\aax+\d,0,\ccz+\e);
+\coordinate (a2p) at  (0+\d,\bby,\ccz+\e);
+\coordinate (a7p) at  (\aax+\d,\bby,\ccz+\e);
+\coordinate (Ap) at (0+\d,0,0+\e);
+\coordinate (Bp) at (0+\d,0,\ccz+\e);
+\coordinate (Cp) at (\aax+\d,\bby,\ccz+\e);
+\coordinate (Dp) at (\aax+\d,\bby,0+\e);
+\draw[very thick,fill = gray!20](D)--(a6)--(a0)--(D);
+\draw[very thick,fill = gray!20](Dp)--(a6p)--(a0p)--(Dp);
+\draw[very thick,fill = gray!10](a6p)--(a7p)--(a0p)--(a6p);
+\draw[dashed,very thin](a0)--(a1);
+\draw[very thick](a0)--(a5);
+\draw[dashed,very thin](a0)--(D);
+\draw[very thick](a5)--(a6);
+\draw[very thick](a5)--(D);
+\draw[dashed,very thick](a6)--(a7);
+\draw[dashed,very thick](a6)--(a1);
+\draw[dashed,very thick](a7)--(a4);
+\draw[dashed,very thick](A)--(B);
+\draw[dashed,very thick](B)--(C);
+\draw[dashed,very thick](C)--(D);
+\draw[dashed,very thick](D)--(A);
+
+\draw[,very thick](a6p)--(a7p);
+\draw[very thick](a6p)--(a1p);
+\draw[very thick](a7p)--(a4p);
+\draw[very thick](Ap)--(Bp);
+\draw[very thick](Bp)--(Cp);
+\draw[dashed,very thick](Dp)--(a6p);
+
+
+
+
+\draw[very thick](a0)--(D);
+\draw[very thick](a6)--(a0);
+\node[anchor = south east] at (a6){A};
+\node[anchor = south east] at (a5){O};
+\node[anchor = north east] at (D){C};
+\node[anchor = south west ] at (a0){B};
+\node[anchor = north east ] at (a7){D};
+\node[anchor = north west ] at (a1){E};
+
+\node[anchor = south east] at (a6p){A};
+\node[anchor = north east] at (Dp){C};
+\node[anchor = south west ] at (a0p){B};
+\node[anchor = north east ] at (a7p){D};
+\node[anchor = north west ] at (a1p){E};
+\draw[](a5)--(a6)node[midway,thick,left] {$c$};
+\draw[](a5)--(a4)node[midway,thick,below] {$b$};
+\draw[](a6)--(a1)node[midway,very thick,above] {$a$};;
+\end{tikzpicture}        

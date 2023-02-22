@@ -6,7 +6,7 @@
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
 
-\begin{tikzpicture}[scale=0.8]
+\begin{tikzpicture}[scale=0.75]
 \tikzstyle{left-hand-mirror} = [
     draw,
     postaction=decorate, 
@@ -16,7 +16,7 @@
     }
 ]  
 \coordinate (O) at (0,0);
-\coordinate (X) at (-6,-6);
+\coordinate (X) at (-5,-5);
 \coordinate (Y) at (10,0);
 \coordinate (Z) at (0,10);
 \draw [-{Latex[length=3mm]}] (O) -- (X);
@@ -37,7 +37,7 @@
 \coordinate (Px) at (-2,-2) {};
 \coordinate (Py) at (6.8,0) {};
 \node[label=north west:$P1$] at (Px) {};
-\node[label=north west:$P1$] at (Py) {};
+\node[label=north west:$P2$] at (Py) {};
 \coordinate (Pp) at (5,-2) {};
 \draw [dashed] (Pp) -- (P);
 \draw [dashed] (Pp) -- (Px);

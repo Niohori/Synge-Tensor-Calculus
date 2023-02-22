@@ -1,0 +1,74 @@
+\begin{tikzpicture}[scale = 0.5]
+\coordinate (p1) at (-7.5,2);
+\coordinate (p2) at (-9.5,2.5);
+\coordinate (p3) at (-10.5,1);
+\coordinate (p4) at(-10.5,-1);
+\coordinate (p5) at (-10,-2);
+\coordinate (p6) at (-8.5,-2.5);
+\coordinate (p7) at (-7,-2.5);
+\coordinate (p8) at (-5,-2);
+
+%\node[above] at (p1) {$p_1$};
+%\node[above] at (p2) {$p_2$};
+%\node[above] at (p3) {$p_3$};
+%\node[above] at (p4) {$p_4$};
+%\node[above] at (p5) {$p_5$};
+%\node[above] at (p6) {$p_6$};
+%\node[above] at (p7) {$p_7$};
+%\node[above] at (p8) {$p_8$};
+
+
+\draw[very thick]  plot[smooth cycle, tension=.7] coordinates {(p1) (p2) (p3) (p4) (p5)  (p6) (p7)  (p8)};
+
+\coordinate (p1b) at (-3,5.5);
+\coordinate (p2b) at (-5.5,5.5);
+\coordinate (p3b) at (-6,4);
+\coordinate (p4b) at (-5.5,2);
+\coordinate (p5b) at (-5,1);
+\coordinate (p6b) at (-4,0.5);
+\coordinate (p7b) at (-2.5,0.5);
+\coordinate (p8b) at (-1.5,1.5);
+\draw[very thick]  plot[smooth cycle, tension=.7] coordinates {(p1b) (p2b) (p3b) (p4b) (p5b)  (p6b) (p7b)  (p8b)};
+
+
+%\node[above] at (p1b) {$p_1$};
+%\node[above] at (p2b) {$p_2$};
+%\node[above] at (p3b) {$p_3$};
+%\node[above] at (p4b) {$p_4$};
+%\node[above] at (p5b) {$p_5$};
+%\node[above] at (p6b) {$p_6$};
+%\node[above] at (p7b) {$p_7$};
+%\node[right] at (p8b) {$p_8$};
+\draw[dashed,decoration={markings, mark=at position 0.52  with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-12,-0.5) (p1)    (-4.5,4.5) (p1b) (-2,6.5)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-12,2)(p2) (-7.5,3.5)   (p2b)  (-4,6.5) (-3,7.5)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-12,0.5) (-10.5,1) (-7,3) (p3b) (-5,5) (-2.5,7)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}] plot[smooth, tension=.7] coordinates {(-11.5,-1.5) (p4)  (p4b)  (-4,3.5)  (-1.5,6)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-11,-2.5) (p5) (-7.5,-0.5) (-5.5,0.5) (p5b) (-3.5,3) (-2,4.5) (-1,5.5)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-10.5,-3.5) (p6) (-6.5,-1) (-4.5,0) (p6b) (-3,2.5) (-1,4.5) (-0.5,5)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-9.5,-4)  (p7) (-3.5,-0.5) (p7b) (-2,2) (0.5,4.5)};
+\draw[dashed,decoration={markings, mark=at position 0.52 with {\arrow[scale = 0.1]{Latex[length=20mm]}}},    postaction={decorate}]  plot[smooth, tension=.7] coordinates {(-8.5,-4.5) (-6.5,-3) (p8) (-2.5,-0.5)  (p8b) (1,4)};
+\draw  [fill= white](p1)circle (2.5pt);
+\draw  [fill= white](p2)circle (2.5pt);
+\draw  [fill= white](p3)circle (2.5pt);
+\draw  [fill= white](p4)circle (2.5pt);
+\draw  [fill= white](p5)circle (2.5pt);
+\draw  [fill= white](p6)circle (2.5pt);
+\draw  [fill= white](p7)circle (2.5pt);
+\draw  [fill= white](p8)circle (2.5pt);
+
+\draw  [fill= white](p1b)circle (2.5pt);
+\draw  [fill= white](p2b)circle (2.5pt);
+\draw  [fill= white](p3b)circle (2.5pt);
+\draw  [fill= white](p4b)circle (2.5pt);
+\draw  [fill= white](p5b)circle (2.5pt);
+\draw  [fill= white](p6b)circle (2.5pt);
+\draw  [fill= white](p7b)circle (2.5pt);
+\draw  [fill= white](p8b)circle (2.5pt);
+
+\coordinate (Cdt) at (-1.5,1) {};
+\node[right] at (Cdt) {$C_{t+dt}$};
+
+\coordinate (C) at (-5.5,-2.5) {} {};
+\node[below] at (C) {$C_t$};
+\node[above] at(-3,7.5) {stream lines};
+\end{tikzpicture}
