@@ -5,11 +5,11 @@
 \begin{tcolorbox}
 If $\mu^{\alpha}$ are the contra-variant components of a unit vector in a surface $S$, show that $\mu^{\alpha}f_{\alpha}$ is the physical component of acceleration in the direction tangent to $S$ defined by $\mu^{\alpha}$.
 \end{tcolorbox}
-As we are in an Euclidean space we can interpret $a_{mn}\mu^{\alpha}f^{\alpha}$ as $\left|\mu\right|\left|f\right|\cos\theta $ with $\theta$ the angle between the two vectors. As $\left|\mu\right|=1$ we have
-\begin{align}
-a_{mn}\mu^{\alpha}f^{\alpha}&= \mu^{\alpha}f_{\alpha}\\
+As we are in an Euclidean space we can interpret $a_{\alpha\beta}\mu^{\alpha}f^{\beta}$ as $\left|\mu\right|\left|f\right|\cos\theta $ with $\theta$ the angle between the two vectors. As $\left|\mu\right|=1$ we have
+\begin{align*}
+a_{\alpha\beta}\mu^{\alpha}f^{\beta}&= \mu^{\alpha}f_{\alpha}\\
 &= \left|f\right|\cos\theta 
-\end{align}
+\end{align*}
 which is the projection of the vector $f$ on the unit vector $\mu$.
 $$\blacklozenge$$
 \newpage
@@ -19,8 +19,9 @@ $$\blacklozenge$$
 $$\mathbf{\text{5.226.}\spatie v\dv{v}{s}=0,\quad \overline{\kappa}v^2=0}$$
 Assuming that the particle is not at rest $v\ne 0$, and therefore $\overline{\kappa}=0$. \textit{\textbf{Since this implies that the curve is a geodesic}...}
 \end{tcolorbox}
-The assertion in bold is a direct consequence $$\mathbf{\text{2.513.}}\spatie \frac{\delta \dv{x^r}{s}}{\delta s}=0$$ 
-As in $ \mathbf{5.233}$ we have $\frac{\delta \lambda^{\alpha}}{\delta s}=\frac{\delta \dv{x^{\alpha}}{s}}{\delta s}=0$, the considered curve follows the geodesic curve.
+The assertion in bold is a direct consequence of
+$$\mathbf{\text{2.513.}}\spatie \fdv{}{s}\dv{x^r}{s}=0$$ 
+As in $ \mathbf{5.223}$:  $\overline{\kappa}\nu^{\alpha} = \fdv{\lambda^{\alpha}}{s}$ we have in our case $\fdv{\lambda^{\alpha}}{ s}=\fdv{}{s}\dv{x^{\alpha}}{s}=0$, we conclude $\overline{\kappa}=0$, meaning that the deviation from the tangent geodesic is zero and thus, the considered curve follows the geodesic curve.
 $$\blacklozenge$$
 \newpage
 
@@ -29,10 +30,10 @@ $$\blacklozenge$$
 Show that in relativity the force $4$-vector $X^r$ lies along the first normal of the trajectory in space-time. Express the first curvature in terms of the proper mass $m$ of the particle and the magnitude $X$ of $ X^r$.
 \end{tcolorbox}
 Let us recall the first Frenet formula $\mathbf{2.705}$ without forgetting that the metric form is not positive-definite, $$\frac{\delta \lambda^r}{\delta s}=\kappa\nu^r,\quad \epsilon_{(1)}\nu_n\nu^n=1$$ As $\mathbf{5.299}$ $$m\frac{\delta \lambda^r}{\delta s}=X^r$$ it is clear that $X^r = m\kappa\nu^r$ and is collinear with the first normal.
-\begin{align}
-X^r &= m\kappa\nu^r\\
-\times \quad a_{mr}X^m\quad\Rightarrow\spatie \underbrace{a_{mr}X^mX^r}_{=\left(X^1\right)^2+\left(X^2\right)^2+\left(X^3\right)^2-\left(X^4\right)^2} &= m\kappa \underbrace{a_{mr}\nu^m\nu^r}_{= \epsilon_{(1)}}
-\end{align}
+\begin{align*}
+&X^r = m\kappa\nu^r\\
+\times \quad a_{mr}X^m\quad\Rightarrow\spatie &\underbrace{a_{mr}X^mX^r}_{=\left(X^1\right)^2+\left(X^2\right)^2+\left(X^3\right)^2-\left(X^4\right)^2} = m\kappa \underbrace{a_{mr}\nu^m\nu^r}_{= \epsilon_{(1)}}
+\end{align*}
 \textbf{$$\Rightarrow\spatie \kappa = \epsilon_{(1)}\frac{\left(X^1\right)^2+\left(X^2\right)^2+\left(X^3\right)^2-\left(X^4\right)^2}{m}
 $$}
 $$\blacklozenge$$
@@ -52,8 +53,8 @@ What do the $M_{rs}$ represent?
 \end{figure}
 Let's consider a mass point $P$ on which a force $\overrightarrow{F}$ is acting. The force has components $\left(F_x,F_y,F_z\right)$ in the  space $V^{'}_3$ (which is by the way not the space $V_3$ of the considered mass point).\\
 Let's investigate the element $M_{12}$ of the \textit{tensor moment}.\\
-$P_1F_2\overrightarrow{e_3}$ is the vector product $\overrightarrow{P_1}\times\overrightarrow{F_2}$ and is as such the torque of the component $F_2$ of $\overrightarrow{F}$ acting on the mass point situated at $P_1$. The origin being fixed, $\overrightarrow{F_2}$ tries to move $P_1$, clockwise along the $z_3$ axis. The same is true for the component $\overrightarrow{F_1}$ acting on the mass point situated at $P_2$, and is represented here by the vector $- \overrightarrow{P_2}\times\overrightarrow{F_1}$ ($\overrightarrow{F_1}$ tries to move  $P_2$, counter clockwise along the $z_3$ axis). \\
-Hence, $P_1F_2-P_2F_1$ is the net force trying to move the point $P$ along the $z_3$ axis (i.e. in the plane $\parallel$ with the $z_3=0$ plane).
+$P_1F_2\overrightarrow{e_3}$ is the crossproduct $\overrightarrow{P_1}\times\overrightarrow{F_2}$ and is as such the torque of the component $F_2$ of $\overrightarrow{F}$ acting on the mass point situated at $P_1$. The origin being fixed, $\overrightarrow{F_2}$ tries to move $P_1$, clockwise along the $z_3$ axis. The same is true for the component $\overrightarrow{F_1}$ acting on the mass point situated at $P_2$, and is represented here by the vector $- \overrightarrow{P_2}\times\overrightarrow{F_1}$ ($\overrightarrow{F_1}$ tries to move  $P_2$, counter clockwise along the $z_3$ axis). \\
+Hence, $P_1F_2-P_2F_1$ is the net force trying to move the point $P$ around the $z_3$ axis (i.e. in the plane $\parallel$ with the $z_3=0$ plane).
 $$\blacklozenge$$
 \newpage
 
@@ -62,12 +63,12 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 $$\mathbf{5.234.}\spatie \dv{h_r}{t}= M_r$$
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 h_r &= m\epsilon_{rmn}z_mv_n\\
 \Rightarrow \spatie \dv{h_r}{t} &= m\epsilon_{rmn}\dv{z_m}{t} v_n+m\epsilon_{rmn}z_m\dv{v_n}{t}\\
 &= m\underbrace{\epsilon_{rmn}v_m v_n}_{=0}+\underbrace{\epsilon_{rmn}z_mF_n}_{=M_r}\\
 &=M_r
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -78,21 +79,21 @@ $$\blacklozenge$$
 $$\mathbf{5.313.}\spatie \omega_{rs}= -\omega_{sr}$$ From 5.310 and the vector character of $v_r$ and $z_r$ (for transformations which do not change the origin), \textbf{it follows that $\omega_{rs} $ is a Cartesian tensor of second order}.
 \end{tcolorbox}
 Be 
-\begin{align}
+\begin{align*}
 v^{}_r = -\omega^{}_{rn}z^{}_n
-\end{align}
+\end{align*}
 Considering orthogonal transformation in a flat space $z^{'}_m = A_{mr}z^{}_r+B_m$ with  $B_m=0$ as we consider only transformations which do not change the origin. Differentiation with the parameter $t$ gives 
-\begin{align}
+\begin{align*}
 v^{'}_m &= A_{mr}v^{}_r\\
 &= -\omega^{}_{rn}A_{mr}z^{}_n\\
-\end{align}
-But $z^{'}_q = A_{qr}z^{}_r\quad\Rightarrow \quad A_{qn}z^{'}_q = A_{qn}A_{qr}z^{}_r\quad\Rightarrow \quad A_{qn}z^{'}_q = z^{}_n$ 
+\end{align*}
+But $z^{'}_q = A_{qr}z^{}_r\quad\Rightarrow \quad A_{qn}z^{'}_q = A_{qn}A_{qr}z^{}_r\quad\Rightarrow \quad A_{qn}z^{'}_q = z^{}_n$.\\ 
 Hence
-\begin{align}
+\begin{align*}
 v^{'}_m &= -\omega^{}_{rn}A_{mr}z^{}_n\\
 &= -\underbrace{\omega^{}_{rn}A_{mr}A_{qn}}_{\overset{\underset{\mathrm{def}}{}}{=}\omega_{mq}^{'}}z^{'}_q\\
 v^{'}_m &= -\omega_{mq}^{'}z^{'}_q
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -161,12 +162,12 @@ $$= J_{npqr}\omega_{rq}$$
 where
 $$\mathbf{5.330.}\spatie J_{npqr}= \sum m\left(\delta_{nr}z_qz_p-\delta_{pr}z_nz_q \right)$$
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 h_{np}&=\sum m\left(\omega_{nq} z_q z_p -\omega_{pq} z_qz_n\right)\\
 &=\sum m\left(\omega_{rq}\delta_{rn} z_q z_p -\omega_{rq} \delta_{rp}z_qz_n\right)\\
 &=\omega_{rq}\sum m\left(\delta_{rn} z_q z_p -\delta_{rp}z_qz_n\right)\\
 &=J_{npqr}\omega_{rq}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -175,11 +176,11 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Deduce immediately from $\mathbf{5.420.}$ that the Coriolis force is perpendicular to the velocity.
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 G^{'}_s &= 2m\omega^{'}_{sm}(S^{'},S)v^{'}_m(S^{'})\\
 \times v^{'}_s(S^{'})\quad : \spatie G^{'}_s v^{'}_s(S^{'})&=m\left(\omega^{'}_{sm}(S^{'},S)v^{'}_m(S^{'})v^{'}_s(S^{'})+\omega^{'}_{ms}(S^{'},S)v^{'}_m(S^{'})v^{'}_s(S^{'})\right)\\
 &=0\quad\text{as }\omega^{'}_{ms}\text{ is skew-symmetric}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -190,26 +191,27 @@ $$\mathbf{5.422.}\spatie C^{'}_s = m\omega^{'}_{n}(S^{'},S)\omega^{'}_{n}(S^{'},
 Deduce that $ C^{'}_s$ is coplanar with the vectors $\omega^{'}_{s}(S^{'},S)$ and $z^{'}_n$ and perpendicular to the former.
 \end{tcolorbox}
 By $\mathbf{5.420.}$ with $\dot{\omega}^{'}_r(S^{'},S) =0$ and using $\mathbf{5.316.} \quad ( \omega^{'}_{rs}=\epsilon_{rsn}\omega^{'}_n)$
-\begin{align}
+\begin{align*}
 C^{'}_s &= m\omega^{'}_{sm}(S^{'},S)\omega^{'}_{nm}(S^{'},S)z^{'}_n\\
 &= m\epsilon_{smk}\omega^{'}_k(S^{'},S)\epsilon_{nmp}\omega^{'}_p(S^{'},S)z^{'}_n\\
 &= m\epsilon_{msk}\epsilon_{mnp}\omega^{'}_k(S^{'},S)\omega^{'}_p(S^{'},S)z^{'}_n\\
 &= m\left(\delta_{sn}\delta_{kp} -\delta_{sp}\delta_{kn} \right)\omega^{'}_k(S^{'},S)\omega^{'}_p(S^{'},S)z^{'}_n\\
 &= m\delta_{sn}\delta_{kp}\omega^{'}_k(S^{'},S)\omega^{'}_p(S^{'},S)z^{'}_n -m\delta_{sp}\delta_{kn} \omega^{'}_k(S^{'},S)\omega^{'}_p(S^{'},S)z^{'}_n\\
 &= m\omega^{'}_p(S^{'},S)\omega^{'}_p(S^{'},S)z^{'}_s - m\omega^{'}_n(S^{'},S)\omega^{'}_s(S^{'},S)z^{'}_n
-\end{align}
+\end{align*}
 To deduce that $ C^{'}_s$ is coplanar with the vectors $\omega^{'}_{s}(S^{'},S)$ and $z^{'}_n$ we calculate the mixed triple product
-\begin{align}
+\begin{align*}
 P &= \epsilon_{spr}C^{'}_s \omega^{'}_p(S^{'},S)z^{'}_r\\
 &= m\underbrace{\epsilon_{spr} \omega^{'}_n(S^{'},S)\omega^{'}_n(S^{'},S)z^{'}_s \omega^{'}_p(S^{'},S)z^{'}_r}_{=0} -\underbrace{ m\epsilon_{spr}\omega^{'}_n(S^{'},S)\omega^{'}_s(S^{'},S)z^{'}_n \omega^{'}_p(S^{'},S)z^{'}_r}_{=0}\\
 =0
-\end{align}
+\end{align*}
 Both terms vanish: the first by the presence of the terms $\epsilon_{spr}z^{'}_s z^{'}_r$ which cancel each other and for the second by the terms $\epsilon_{spr}\omega^{'}_s(S^{'},S) \omega^{'}_p(S^{'},S)$. As $P=0$, the three vectors are coplanar.\\
 We now calculate the inner product $C^{'}_s\omega^{'}_s(S^{'},S)$
-\begin{align}
-P&= m\omega^{'}_n(S^{'},S)\omega^{'}_n(S^{'},S)z^{'}_s\omega^{'}_s(S^{'},S) - \underbrace{m\omega^{'}_n(S^{'},S)\omega^{'}_s(S^{'},S)z^{'}_n\omega^{'}_s(S^{'},S)}_{\Leftrightarrow \  m\omega^{'}_n(S^{'},S)\omega^{'}_n(S^{'},S)z^{'}_s\omega^{'}_s(S^{'},S)}\\
+\begin{align*}
+C^{'}_s\omega^{'}_s(S^{'},S)&= m\omega^{'}_n(S^{'},S)\omega^{'}_n(S^{'},S)z^{'}_s\omega^{'}_s(S^{'},S) - \underbrace{m\omega^{'}_n(S^{'},S)\omega^{'}_s(S^{'},S)z^{'}_n\omega^{'}_s(S^{'},S)}_{\Leftrightarrow \  m\omega^{'}_n(S^{'},S)\omega^{'}_n(S^{'},S)z^{'}_s\omega^{'}_s(S^{'},S)}\\
 &=0
-\end{align}
+\end{align*}
+Hence, $C^{'}_s$ is perpendicular to $\omega^{'}_s(S^{'},S)$.
 $$\blacklozenge$$
 \newpage
 
@@ -375,7 +377,7 @@ Assign convenient generalized coordinates for the three systems $(a), \ (b),\tex
 \end{tcolorbox}
 \textbf{$(a)$ a particle on a surface $(N=2)$}\\
 No need here for fancy general coordinates: the $V_2$ coordinate system in the plane is the metric form of choice.
-Indeed $\left|v\right|^2 = a_{mn}v_mv_n$ and for a $V_2$
+Indeed $\left|v\right|^2 = a_{mn}v^mv^n$ and for a $V_2$
 $$ds^2 =\left(a_{11}\left(v^1\right)^2+2a_{12}v^1v^2+a_{22}\left(v^2\right)^2 \right)dt^2$$ and if the space is Euclidean and the plane smooth, we can choose an orthogonal system where $a_{12}$ will vanish.\\\\  
 \textbf{$(b)$ a rigid body which can turn about a fixed point, as in the preceding section $(N=3)$}\\
 For a rigid body we can choose a coordinate system $S^{'}$ fixed to the body to describe the geometry of the rigid body. The kinetic energy  referenced to a 'non-moving' (abuse of language) coordinate system $S$ is 
@@ -536,11 +538,11 @@ Deduce that, if no forces at on the system, the trajectory is a geodesic in conf
 \end{tcolorbox}
 In configuration space $f_r=X_r$. Hence by $\mathbf{5,515}$
 
-\begin{align}
+\begin{align*}
 X^r&=v\dv{v}{s}\lambda^r+\kappa v^2\nu^r\\
 \Rightarrow \spatie X^r \lambda_r &=X_r\lambda^r = v\dv{v}{s} \quad \text{as } \lambda^r \perp \nu^r\\
 \text{and} \spatie X^r \nu_r &=X_r\nu^r = \kappa v^2\quad \text{as } \lambda^r \perp \nu^r\\
-\end{align}
+\end{align*}
 The trajectory is a geodesic if $\kappa = 0$ which is the case as $X_r=0$ and $$v\dv{v}{s} =0 \Rightarrow \dv{v}{s} =0 \Rightarrow v= C^{t}$$
 $$\blacklozenge$$
 \newpage
@@ -597,20 +599,20 @@ We know that at $O$, $X^r$ is tangent to the trajectory and so $X^r = X\lambda^r
 Multiplying $(3)$ with $\lambda^r$ we see that $\dv{v}{t} = X$. 
 So we get for $(3)$
 \begin{align}
-X\lambda^r + \kappa v^2 \nu^r&= X\lambda^{'r}\\
-\frac{\delta\text{(4)}}{\delta s}\quad\Rightarrow\quad  \dv{X}{s}\lambda^r +X\underbrace{\frac{\delta \lambda^r}{\delta s}}_{\kappa\nu^r}+\dv{\kappa}{s}\underbrace{v^2}_{=0}\nu_r + 2\kappa \underbrace{v\dv{v}{s}}_{=\dv{v}{t}=X} \nu^r+\kappa \underbrace{v^2}_{=0}\frac{\delta \nu^r}{\delta s}&= \dv{X}{s}\lambda^{'r}+X\underbrace{\frac{\delta \lambda^{'r}}{\delta s}}_{=\kappa^{'} \nu^{'r}}\Rightarrow 3\kappa&= 
+&X\lambda^r + \kappa v^2 \nu^r= X\lambda^{'r}\\
+\frac{\delta\text{(4)}}{\delta s}\quad\Rightarrow\quad  &\dv{X}{s}\lambda^r +\underbrace{X\underbrace{\frac{\delta \lambda^r}{\delta s}}_{\kappa\nu^r}+\dv{\kappa}{s}\underbrace{v^2}_{=0}\nu_r + 2\kappa \underbrace{v\dv{v}{s}}_{=\dv{v}{t}=X} \nu^r+\kappa \underbrace{v^2}_{=0}\frac{\delta \nu^r}{\delta s}}_{= 3\kappa X \nu^r}= \dv{X}{s}\lambda^{'r}+X\underbrace{\frac{\delta \lambda^{'r}}{\delta s}}_{=\kappa^{'} \nu^{'r}} 
 \end{align}
-(we evaluate the expression at point $O$ and define $\kappa^{'}\nu^{'r}$ as the first curvature tensor  of the line of force evaluated at $0$)
+(we evaluate the expression at point $O$ and define $\kappa^{'}\nu^{'r}$ as the first curvature tensor  of the line of force evaluated at $O$)
 
 \begin{align}
-\dv{X}{s}\lambda^r +X\kappa\nu^r+ 2\kappa X \nu^r&= \dv{X}{s}\lambda^{'r}+X \nu^{'r}\\
+\dv{X}{s}\lambda^r + 3\kappa X \nu^r&= \dv{X}{s}\lambda^{'r}+X \nu^{'r}\\
 \times \quad\nu^r\quad\Rightarrow\quad3\kappa X &= \dv{X}{s}\underbrace{\lambda^{'r}\nu^r}_{=0}+X \kappa^{'}\nu^{'r}\nu^r\\
-\Rightarrow 3\kappa&=\kappa^{'}\nu^{'r}\nu^r
+\Rightarrow \spatie 3\kappa&=\kappa^{'}\nu^{'r}\nu^r
 \end{align}
 Note that $\lambda^{'r}\nu^r=0$ as $\lambda^{'r}$ coincides with $\lambda^{r}$. On the other hand we still have to prove that $\nu^{'r}$ coincides with $\nu^{r}$ at $O$.
 \begin{align}
-\text{(6)}\times \nu^{'r}\quad\Rightarrow\quad X\kappa\nu^r\nu^{'r}+2\kappa X \nu^r\nu^{'r}&= X\kappa^{'}\\
-3\kappa\nu^r\nu^{'r}&=\kappa^{'}
+\text{(6)}\times \nu^{'r}\quad\Rightarrow\quad &\underbrace{\dv{X}{s}\lambda^r\nu^{'r}}_{=0}+3\kappa X \nu^r\nu^{'r}= X\kappa^{'}\\
+\Rightarrow\spatie &3\kappa\nu^r\nu^{'r}=\kappa^{'}
 \end{align}
 From $(8)$ and $(10)$ we see that $\nu^r\nu^{'r}=1$ and so 
 $$\mathbf{3\kappa=\kappa^{'}}$$
@@ -656,21 +658,21 @@ T&= \half\sum m v_r v_r\\
 &=\half \sum m \left(\delta_{su}\delta_{tv}\omega_s \omega_u z_tz_v - \delta_{sv}\delta_{tu}\omega_s \omega_u z_tz_v  \right)
 \end{align}
 For the case $N=3$ we get from $(4)$:
-\begin{align}
+\begin{align*}
 T&= \half\sum m  \left[ \omega_1^2 \left( z_2^2+z_3^2 \right)+\omega_2^2\left( z_1^2+z_3^2 \right)+\omega_3^2 \left( z_1^2+z_2^2 \right)
 -2\omega_1 \omega_2 z_1 z_2 -2\omega_1 \omega_3 z_1 z_3 -2\omega_2 \omega_3 z_2 z_3 \right]
-\end{align}
+\end{align*}
 Using the result from $\mathbf{5.336}$ this can be written as 
 \begin{align}
 T&= \half \left[ I_{11}\omega_1^2 +I_{22}\omega_2^2+I_{33}\omega_3^2 
 +2I_{12}\omega_1 \omega_2+2I_{13}\omega_1 \omega_3 +2I_{23}\omega_2 \omega_3  \right]
 \end{align}
-Considering that the matrix $I_{ij}$ is symmetric, one can always find an appropriate basis so that the matrix becomes diagonal. Hence $(6)$ can be simplified to
+Considering that the matrix $I_{ij}$ is symmetric, one can always find an appropriate basis so that the matrix becomes diagonal. Hence $(5)$ can be simplified to
 \begin{align}
 T&= \half \left[ I_{11}\omega_1^2 +I_{22}\omega_2^2+I_{33}\omega_3^2 
  \right]
 \end{align}
-Of course the $\omega_i$ in $(7)$ are not the Euler angles and we have to express the $\omega_i$ as functions of the Euler angles.
+Of course the $\omega_i$ in $(6)$ are not the Euler angles and we have to express the $\omega_i$ as functions of the Euler angles.
 
 \begin{figure}[H]
 \begin{center}
@@ -681,13 +683,13 @@ Of course the $\omega_i$ in $(7)$ are not the Euler angles and we have to expres
 \end{figure}
 
 Consider the Euler angles as in figure 5.5. The resulting angular velocity of the rigid body can be expressed as 
-\begin{align}
+\begin{align*}
 \overline{\omega}&= \dot{\psi}\overline{z}+\dot{\theta}\overline{N}+\dot{\phi}\overline{z}_1
-\end{align}
+\end{align*}
 The projection of $\overline{\omega}$ on the basis $\overline{x}_1,\overline{y}_1,\overline{z}_1$ (which we choose fixed to the rigid body) will then coincide with the $\omega_i$.\\
 We determine the components of $\overline{z},\overline{N},\overline{z}_1$ with $\overline{x}_1,\overline{y}_1,\overline{z}_1$ as basis.\\
 We have
-\begin{align}
+\begin{align*}
 & \left\{\begin{array}{l}
 \overline{N}=\cos{\phi} \ \overline{y}_1+\sin{\phi} \ \overline{x}_1\\
 \overline{z}= \cos{\theta} \ \overline{z}_1-\sin{\theta}\ \overline{x}_0\\
@@ -697,11 +699,11 @@ We have
 \overline{N}=\cos{\phi} \ \overline{y}_1+\sin{\phi} \ \overline{x}_1\\
 \overline{z}= \cos{\theta} \ \overline{z}_1-\sin{\theta}\ \cos{\phi} \ \overline{x}_1 +\sin{\theta}\ \sin{\phi} \ \overline{y}_1
 \end{array}\right.
-\end{align}
+\end{align*}
 Hence,
-\begin{align}
+\begin{align*}
  \overline{\omega}&= \dot{\psi}\cos{\theta} \ \overline{z}_1-\dot{\psi}\sin{\theta}\ \cos{\phi} \ \overline{x}_1 +\dot{\psi}\sin{\theta}\ \sin{\phi} \ \overline{y}_1+\dot{\theta}\cos{\phi} \ \overline{y}_1+\dot{\theta}\sin{\phi} \ \overline{x}_1+\dot{\phi}\overline{z}_1
-\end{align}
+\end{align*}
 giving
 \begin{align}
 \left\{\begin{array}{l}
@@ -710,7 +712,7 @@ giving
 \omega_3= \dot{\psi}\cos{\theta} +\dot{\phi}\\
 \end{array}\right.
 \end{align}
-In the case  considered $I_{11}=I_{22}=I_{33}=I$. Plugging $(12)$ in $(7)$ gives indeed
+In the case  considered $I_{11}=I_{22}=I_{33}=I$. Plugging $(7)$ in $(6)$ gives indeed
 $$T=\half I\left(\dot{\theta}^2+\dot{\phi}^2+\dot{\psi}^2+2\dot{\phi}\dot{\psi}\cos{\theta} \right)$$
 
 
@@ -884,39 +886,39 @@ a_{mn} &= \begin{pmatrix}
 \end{align}
 and the contravariant velocities
 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{lll}
 v^1= &\dv{r}{t}\\\\
 v^2= &\dv{\phi}{t}\\\\
 v^3= &\dv{z}{t}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 giving by $v_{K}^{phys.} = h_K v^K$
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{lll}
 v_r= &\dv{r}{t}\\\\
 v_{\phi}= &r\dv{\phi}{t}\\\\
 v_z= &\dv{z}{t}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 For the acceleration using $f^r=\fdv{v^r}{t} $
 and the Christoffel symbols being 
-\begin{align}
+\begin{align*}
 \left \{ \begin{array}{c}
 \Gamma^m_{nk} = 0 \quad\forall\quad (nk) \ne (r, \theta), (\theta, \theta)\\\\
 \Gamma^{\theta}_{r\theta} = \frac{1}{r} \quad\text{and}\quad \Gamma^r_{\theta\theta} = -r
 \end{array}\right.\
-\end{align}
+\end{align*}
 we have
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{lll}
 f^1= &\dv{v^1}{t}-r\underbrace{v^2\dv{x^2}{t}}_{=\left(v^2\right)^2}\\\\
 f^2= &\dv{v^2}{t}+\underbrace{\frac{1}{r}v^1\dv{x^2}{t}+\frac{1}{r}v^2\dv{x^21}{t}}_{=\frac{2}{r}v^1 v^2}\\\\
 f^3= &\dv{v^3}{t}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 giving by $f_{K}^{phys.} = h_K f^K$
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{lll}
 f_r= &\dv{v^1}{t}-r\left(v^2\right)^2\\\\
 f_{phi}= &r\dv{v^2}{t}+r\frac{2}{r}v^1 v^2\\\\
@@ -927,7 +929,7 @@ f_r= &\dv[2]{r}{t}-r\left(\dv{\phi}{t}\right)^2\\\\
 f_{phi}= &r\dv[2]{\phi}{t}+2\dv{r}{t} \dv{\phi}{t}\\\\
 f_z= &\dv[2]{z}{t}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -985,23 +987,24 @@ Consider the motion of a particle on a smooth torus under no forces except norma
 $$(a)\spatie \left(a-b\cos\theta\right)^2\dv{\phi}{s} = h$$
 $$(b)\spatie b^2\left(\dv{\theta}{\phi}\right)^2= \frac{\left(a-b\cos\theta\right)^4}{h^2}-\left(a-b\cos\theta\right)^2$$
 \end{tcolorbox}
-We use equation $\mathbf{5.212.}$ and  $\mathbf{5.212.}$
-\begin{align}
+We use equation $\mathbf{5.212.}$ and  $\mathbf{5.213.}$
+\begin{align*}
 &\left\{\begin{array}{l}
 \dv{}{t}\frac{\partial T}{\partial \dot{x}^s} - \frac{\partial T}{\partial x^s} = F_{s}\\\\
 T = \half m a_{pq}\dot{x}^p\dot{x}^q, \ \dot{x}^s=\dv{x^s}{t}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 with for our case
-\begin{align}
+\begin{align*}
 T = \half m \left(b^2\dot{\theta}^2+ \left(a-b\cos \theta \right)^2  \ \dot{\phi}^2 \right)
-\end{align}
+\end{align*}
 \begin{align}
 &\left\{\begin{array}{ll}
 \frac{\partial T}{\partial \dot{\phi}}= m \left(a-b\cos \theta \right)^2   \dot{\phi}&\frac{\partial T}{\partial {\phi}}= 0\\\\
 \frac{\partial T}{\partial \dot{\theta}}=  mb^2\dot{\theta}&\frac{\partial T}{\partial {\theta}}=  mb\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta\\\\
 \end{array}\right.
-\end{align}giving
+\end{align}
+giving
 \begin{align} 
 &\left\{\begin{array}{l}
 \left(a-b\cos \theta \right)^2   \ddot{\phi}+2b\left(a-b\cos \theta \right)\dot{\theta} \dot{\phi}\sin \theta  =0\\\\
@@ -1014,24 +1017,24 @@ b^2\ddot{\theta}-b\left(a-b\cos \theta \right)\dot{\phi}^2\sin \theta=0\\\\
 \end{align}
 In the first equation, put $y \equiv \dot{\phi}$ giving for the first equation:
 \begin{align}
-\frac{dy}{y}&=-2b \frac{\sin \theta d\theta} {\left(a-b\cos \theta \right)}  \\
-\Leftrightarrow\spatie\frac{dy}{y}&=-2 \frac{d\left(a-b\cos \theta \right)} {\left(a-b\cos \theta \right)}\\
-\Rightarrow \spatie \log y&=-2 \log \left(a-b\cos \theta \right)+\log C^{}\\
-\Rightarrow \spatie \dot{\phi}&= C \left(a-b\cos \theta \right)^{-2}
+&\frac{dy}{y}=-2b \frac{\sin \theta d\theta} {\left(a-b\cos \theta \right)}  \\
+\Leftrightarrow\spatie&\frac{dy}{y}=-2 \frac{d\left(a-b\cos \theta \right)} {\left(a-b\cos \theta \right)}\\
+\Rightarrow \spatie &\log y=-2 \log \left(a-b\cos \theta \right)+\log C^{}\\
+\Rightarrow \spatie &\dot{\phi}= C \left(a-b\cos \theta \right)^{-2}
 \end{align}
-Note that $\dot{\phi}$ is a time derivative. But as we are on a geodesic, $\mathbf{5.226.}$ stands and so $v$ is constant as $\dv{v}{s} =0$. Using $v = \dv{s}{t}$, (9) can be written as 
+Note that $\dot{\phi}$ is a time derivative. But as we are on a geodesic, $\mathbf{5.226.}$ stands and so $v$ is constant as $\dv{v}{s} =0$. Using $v = \dv{s}{t}$, (7) can be written as 
 \begin{align}
-\left(a-b\cos \theta \right)^{2}\dv{\phi}{t}&= C \\
-\Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}\underbrace{\dv{s}{t}}_{=v}&= C \\
-\Leftrightarrow\spatie\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}&= h \quad \text{with } h=\frac{C}{v}
+&\left(a-b\cos \theta \right)^{2}\dv{\phi}{t}= C \\
+\Leftrightarrow\spatie &\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}\underbrace{\dv{s}{t}}_{=v}= C \\
+\Leftrightarrow\spatie &\left(a-b\cos \theta \right)^{2}\dv{\phi}{s}= h \quad \text{with } h=\frac{C}{v}
 \end{align}
-Next, we don't use the second equation in (5) but the line element equation instead
-\begin{align}
-ds^2&=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2\\
-\Rightarrow\spatie \left(\dv{s}{\phi}\right)^2 &= \left(a-b\cos \theta \right)^2 +b^2 \left(\dv{\theta}{\phi}\right)^2\\
-\Rightarrow\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \left(\dv{\phi}{s}\right)^{-2 }- \left(a-b\cos \theta \right)^2 \\
-\left(12\right)\quad \text{: }\spatie b^2 \left(\dv{\theta}{\phi}\right)^2 &= \frac{\left(a-b\cos \theta \right)^4}{h^2}- \left(a-b\cos \theta \right)^2
-\end{align}
+Next, we don't use the second equation in (3) but the line element equation instead
+\begin{align*}
+&ds^2=\left(a-b\cos \theta \right)^2 d{\phi}^2+b^2 d\theta^2\\
+\Rightarrow\spatie &\left(\dv{s}{\phi}\right)^2 = \left(a-b\cos \theta \right)^2 +b^2 \left(\dv{\theta}{\phi}\right)^2\\
+\Rightarrow\spatie &b^2 \left(\dv{\theta}{\phi}\right)^2 = \left(\dv{\phi}{s}\right)^{-2 }- \left(a-b\cos \theta \right)^2 \\
+\left(10\right)\quad \text{: }\spatie &b^2 \left(\dv{\theta}{\phi}\right)^2 = \frac{\left(a-b\cos \theta \right)^4}{h^2}- \left(a-b\cos \theta \right)^2
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1039,12 +1042,12 @@ $$\blacklozenge$$
 
 \section{p186 - Exercise 6}
 \begin{tcolorbox}
-Consider the motion of a particle under gravity on the smooth torus o the previous problem, the equatorial plane of the torus being horizontal. Taking the mass of the particle to unity, so that $V= bg\sin{\theta}$, show that the path of the particle satisfies the following two differential equations. 
+Consider the motion of a particle under gravity on the smooth torus of the previous problem, the equatorial plane of the torus being horizontal. Taking the mass of the particle to unity, so that $V= bg\sin{\theta}$, show that the path of the particle satisfies the following two differential equations. 
 $$(a)\spatie \left(E-V\right)\left(a-b\cos\theta\right)^2\dv{\phi}{s} = h$$
 $$(b)\spatie b^2\left(\dv{\theta}{\phi}\right)^2=  \left(E-V\right)\frac{\left(a-b\cos\theta\right)^4}{h^2}-\left(a-b\cos\theta\right)^2$$
 where $E$ is the total energy,  $h$ is a constant and $d\sigma$ is the action line element.
 \end{tcolorbox}
-The line of reasoning is quite the same as problem $(5)$.
+The line of reasoning is quite the same as Exercise $(5)$.
 We use equation $\mathbf{5.212.}$ and  $\mathbf{5.212.}$
 \begin{align}
 &\left\{\begin{array}{l}
@@ -1106,11 +1109,11 @@ A dynamical system consists of a thin straight smooth tube which can rotate in a
 \end{tcolorbox}
 Well understanding the question is of course paramount:
 \begin{itemize}
-  \item  The tube mentioned plays only a functional role to hold the spring ``stiff'' along the line $OB$ as its mass can be neglected.It  will play  no further role in the dynamics of the system. 
+  \item  The tube mentioned plays only a functional role to hold the spring ``stiff'' along the line $OB$ as its mass can be neglected. It  will play  no further role in the dynamics of the system. 
   \item Nothing is said that the system contains any force that keeps the angular velocity at a constant speed $\omega$. 
 \end{itemize}  
-That being clarified, one can expect that the system will behave as a harmonic oscillator along the line  $OB$ and that ,given an initial rotational momentum, the angular momentum will be a constant during the trajectory of the bead.
-This means that the bead will oscillate along $OB$ but as the angular momentum is a constant and  given $m \omega r^2 =C$($m$ = mass of the bead), the  instant radial speed will vary.\\
+That being clarified, one can expect that the system will behave as a harmonic oscillator along the line  $OB$ and that, given an initial rotational momentum, the angular momentum will be a constant during the trajectory of the bead.
+This means that the bead will oscillate along $OB$ but as the angular momentum is a constant and  given $m \omega r^2 =C$ ($m$ = mass of the bead), the  instant radial speed will vary.\\
 The only conservative force acting on the bead will be that of the spring and will be $V=\half k \left( r-r_0 \right)^2$, $r_0$ being the point along $OB$ where the spring is not stretched. The generalized forces are $F_r = - k\left( r-r_0 \right)$ and $F_{\theta}= 0$ meaning the lines of force are straight lines pointing to the origin $O$.\\
 About the geodesics. Clearly the instantaneous velocity of the bead is $\overrightarrow{v} = \dot{r}\overrightarrow{1}_r+ \dot{\theta}r\overrightarrow{1}_{\theta}$ giving as kinetic energy $T=\half\left(\dot{r}^2+\dot{\theta}^2 r^2\right)$ giving as kinematic line element
 $$ds^2= 2Tdt = dr^2+r^2d\theta^2$$
@@ -1190,7 +1193,7 @@ Put $B= \frac{\partial x^r}{\partial v}$ and $A=  \frac{\partial (T-V)(u,v)}{\pa
 \dv{L}{v} &= \int_{u_1}^{u_2}d\left(\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial x^r}{\partial v} \right)-\int_{u_1}^{u_2}\frac{\partial x^r}{\partial v} d \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)+\int_{u_1}^{u_2}\frac{\partial (T-V)(u,v)}{\partial x^r}\frac{\partial x^r}{\partial v}du\\
 &=\left.\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial x^r}{\partial v} \right|_{u_1}^{u_2}-\left[\int_{u_1}^{u_2}\left(\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u,v)}{\partial x^r}\right)\frac{\partial x^r}{\partial v} du \right]
 \end{align}
-We express now the results in term of infinitesimals. A change in ``length'' $\delta L$ when we pas from a curve $v$ to a curve $v+dv$ is
+We express now the results in term of infinitesimals. A change in ``length'' $\delta L$ when we go from a curve $v$ to a curve $v+dv$ is
 \begin{align}
 \delta L &= \dv{L}{v}\delta v\\
 &= \left.\frac{\partial (T-V)(u,v)}{\partial \dot{x^r}}\frac{\partial x^r}{\partial v} \delta v\right|_{u_1}^{u_2}-\int_{u_1}^{u_2}\left(\frac{\partial}{\partial u} \left(\frac{ \partial (T-V)(u,v)}{\partial \dot{x^r}} \right)-\frac{\partial (T-V)(u,v)}{\partial x^r}\right)\frac{\partial x^r}{\partial v}\delta v du\\
@@ -1210,22 +1213,22 @@ $$\blacklozenge$$
 
 \section{p188 - Exercise 10}
 \begin{tcolorbox}
-Using the definition $\mathbf{5.5335}$ for $I_{rs}$, prove that if $X_r$ is any non-zero vector, then $I_{rs}X_rX_s \geq 0$, and that the equality occurs only if all particles of the system are distributed on a single line.
+Using the definition $\mathbf{5.335}$ for $I_{rs}$, prove that if $X_r$ is any non-zero vector, then $I_{rs}X_rX_s \geq 0$, and that the equality occurs only if all particles of the system are distributed on a single line.
 \end{tcolorbox}
 By  $\mathbf{5.335}$
-\begin{align}
+\begin{align*}
 I_{rs}&= \delta_{rs}\sum m z_qz_q - \sum m z_r z_s
-\end{align}
+\end{align*}
 Multiplying by $X_rX_s$:
 
-\begin{align}
+\begin{align*}
 I_{rs}X_rX_s&= \underbrace{X_r X_s \delta_{rs}}_{=X_rX_r}\sum m z_qz_q - \sum m \underbrace{z_rX_r}_{=\left|z\right|_{(m)}\left|X\right|\cos{\theta}_m }\underbrace{ z_sX_s}_{=\left|z\right|_{(m)}\left|X\right|\cos{\theta}_m }
-\end{align}
+\end{align*}
 with $\theta_m$ the angle between the vector $X_r$ and the position vector $z_m$ of a particle.
-\begin{align}
+\begin{align*}
 I_{rs}X_rX_s &=\left|X\right|^2\sum m \left|z\right|_{(m)}^2 - \left|X\right|^2\sum m\left|z\right|_{(m)}^2\cos^2{\theta}_m \\
 &=\left|X\right|^2\sum m \left|z\right|_{(m)}^2\left(1 - \cos^2{\theta}_m \right)
-\end{align}
+\end{align*}
 As we have $\left(1 - \cos^2{\theta}_m \right) \in [0,1]$ it is clear that $I_{rs}X_rX_s  \geq0$ and that it only will be zero when $\theta_m = 0 \quad \forall m$ which means that all position vectors are collinear wit $X_r$ and are on a line.
 $$\blacklozenge$$
 \newpage
@@ -1324,35 +1327,35 @@ Consider three rigid bodies, $S,S^{'}, S^{"}$, turning about a common point. If 
 \end{tcolorbox} 
 
 Consider the following three transformation from one axes system to another 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{llll}
 z^{'}_r= A_{rm}z^{}_m&z^{}_r= A_{mr}z^{'}_m& A_{mp} A_{mq}=\delta_{pq}&A_{pm} A_{qm}=\delta_{pq}\\
 z^{"}_r= B_{rm}z^{'}_m&z^{'}_r=B_{mr}z^{"}_m& B_{mp} B_{mq}=\delta_{pq}&B_{pm} B_{qm}=\delta_{pq}\\
 z^{"}_r= C_{rm}z^{}_m&z^{}_r=C_{mr}z^{"}_m& C_{mp} C_{mq}=\delta_{pq}&C_{pm} C_{qm}=\delta_{pq}
 \end{array}\right.
-\end{align}
+\end{align*}
 We then have,
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 \omega^{'}_{pq}\left(S^{'},S^{}\right)= -A_{pm}\dot{A_{qm}}\\
 \omega^{"}_{pq}\left(S^{"},S^{'}\right)= -B_{pm}\dot{B_{qm}}\\
 \omega^{"}_{pq}\left(S^{"},S^{}\right)= -C_{pm}\dot{C_{qm}}
 \end{array}\right.
- \end{align}
+ \end{align*}
  From (1) we see that 
- \begin{align}
+ \begin{align*}
  C_{rq}= B_{rm}A_{mq}
- \end{align}
+ \end{align*}
  And thus 
- \begin{align}
+ \begin{align*}
  \omega^{"}_{pq}\left(S^{"},S^{}\right)&= -B_{pk}A_{km}\dot{\left(B_{qn}A_{nm}\right)}\\
 \Rightarrow\spatie &= \underbrace{-A_{km}\dot{A_{nm}}}_{= \omega^{'}_{kn}\left(S^{'},S^{}\right)}B_{pk}B_{qn}-\underbrace{A_{km}A_{nm}}_{=\delta_{kn}}B_{pk}\dot{B_{qn}}\\
 \Rightarrow\spatie &=  \omega^{'}_{kn}\left(S^{'},S^{}\right)B_{pk}B_{qn}-\underbrace{B_{pn}\dot{B_{qn}}}_{=-\omega^{"}_{pq}\left(S^{"},S^{'}\right)}
- \end{align}
+ \end{align*}
  The fist term of the right side expression is a bilinear map of the tensor $\omega^{'}_{kn}\left(S^{'},S^{}\right)$ from the reference axis $S^{'}$ to $S^{"}$. Hence we get 
-\begin{align}
+\begin{align*}
 \omega^{"}_{pq}\left(S^{"},S^{}\right)=\omega^{"}_{pq}\left(S^{"},S^{'}\right)+\omega^{"}_{pq}\left(S^{'},S^{}\right)
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 
 \newpage
@@ -1360,34 +1363,34 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 A freely moving particle is observed from a platform which rotates with angular velocity $\omega_r = n\delta_{r3}$, where $n$ is constant, relative to a Newtonian frame $S$ in which $z_r$ are rectangular Cartesians. Use $\mathbf{5.421}$ to find the equations of motion relative to $S^{'}$ in terms of coordinates  $z^{'}_r$ in $S^{'}$, such that the axis of $z^{'}_3$ coincides permanently with the axis of $z_3$.
 \end{tcolorbox} 
-$\mathbf{5.421}$ gives (where the equation is expressed in term of the $z^{'}_r$
-\begin{align}
+$\mathbf{5.421}$ gives (where the equation is expressed in term of the $z^{'}_r$)
+\begin{align*}
 \left\{\begin{array}{l}
 mf_s = F^{'}_s + C^{'}_s + G^{'}_s\\
 C^{'}_s= m\left[\dot{\omega}^{'}_{sn}\left(S^{'},S\right) + \omega^{'}_{sm}\left(S^{'},S\right)\omega^{'}_{nm}\left(S^{'},S\right)\right]z^{'}_n\\
 C^{'}_s = 2m\omega^{'}_{sm}v^{'}_m\left(S^{'}\right)
 \end{array}\right.
-\end{align}
+\end{align*}
 We note the particle is free, so $F^{'}_s=0$ and the angular velocity is a constant, so $\dot{\omega}^{'}_{sn}\left(S^{'},S\right)=0$, and the equation simplify to 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 f^{'}_s = K^{'}_s + J^{'}_s\\
 K^{'}_s= \left[ \omega^{'}_{sm}\left(S^{'},S\right)\omega^{'}_{nm}\left(S^{'},S\right)\right]z^{'}_n\\
 J^{'}_s = 2\omega^{'}_{sm}v^{'}_m\left(S^{'}\right)
 \end{array}\right.
-\end{align}
+\end{align*}
 As $\omega_s= n\delta_{s3}$ and by the requirement  that the axis of $z^{'}_3$ coincides permanently with the axis of $z_3$, it is not hard to see that
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{llll}
 \omega^{}_{12}\left(S^{'},S\right) = n\\
 \omega^{'}_{12}\left(S^{'},S\right) = n\\
 \omega^{}_{12}\left(S^{},S^{'}\right) = -n\\
 \omega^{'}_{12}\left(S^{},S^{'}\right) = -n
 \end{array}\right.
-\end{align}
+\end{align*}
 while all other elements vanish.\\
 We get 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{l}
 K^{'}_1 = \omega^{'}_{12}\left(S^{'},S\right)\omega^{'}_{12}\left(S^{'},S\right)z^{'}_1 = n^2 z_1^{'}\\
 K^{'}_1 = \omega^{'}_{21}\left(S^{'},S\right)\omega^{'}_{21}\left(S^{'},S\right)z^{'}_1 = n^2 z_1^{'}\\
@@ -1398,15 +1401,15 @@ J^{'}_1= 2\omega^{'}_{12}\left(S^{'},S\right)v^{'}_2\left(S^{'}\right)=2 n v_2^{
 J^{'}_2= 2\omega^{'}_{21}\left(S^{'},S\right)v^{'}_1\left(S^{'}\right)=-2 n v_1^{'}\left(S^{'}\right)\\
 J^{'}_3 = 0
 \end{array}\right.
-\end{align}
+\end{align*}
 and get as equations of motion
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 f^{'}_1= n^2z_1^{'} +2nv^{'}_2\left(S^{'}\right)\\
 f^{'}_2= n^2z_1^{'} -2nv^{'}_1\left(S^{'}\right)\\
 f^{'}_3= 0
 \end{array}\right.
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1417,13 +1420,13 @@ $$J_{nprq}= \left(N-1\right)^{-1}I_{ss}\left(\delta_{nr}\delta_{pq}- \delta_{nq}
 $$J_{nppq}=I_{ss}$$
 $$I_{nq}= \left(N-1\right)^{-1}\left(J_{nprq}-\delta_{nq}J_{nprq}\right) $$
 \end{tcolorbox} 
-$\mathbf{5.421}$ and $\mathbf{5.421}$:
-\begin{align}
+$\mathbf{5.335}$ and $\mathbf{5.330}$:
+\begin{align*}
 \left\{\begin{array}{l}
 I_{st}= \delta_{st}\sum m z_q z_q - \sum m z_s z_t\\
 J_{nprq} = \sum m \left( \delta_{nr} z_p z_q - \delta_{pr} z_n z_q \right)
 \end{array}\right.
-\end{align}
+\end{align*}
 The first equation can be expressed as $ \sum m z_p z_q=  \delta_{pq}\sum m z_k z_k-I_{pq}$ and $ \sum m z_n z_q=  \delta_{st}\sum m z_k z_k-I_{nq}$ 
 
 giving 
@@ -1432,21 +1435,21 @@ J_{nprq}& =  \delta_{nr} \delta_{pq}\sum m z_k z_k-\delta_{nr}I_{pq} - \delta_{p
 &= \sum m z_k z_k\left( \delta_{nr} \delta_{pq}- \delta_{nr}I_{pq}\right)-\delta_{nr}I_{pq} +\delta_{pr}I_{nq}
 \end{align}
 Now, consider the expressions 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 I_{11}= \sum m z_q z_q - \sum m z_1 z_1\\
 I_{11}= \sum m z_q z_q - \sum m z_1 z_1\\
 \vdots\\
 I_{NN} = \sum m z_q z_q - \sum m z_N z_N\\
 \end{array}\right.
-\end{align}
+\end{align*}
 Summing up these $N$ expressions we have
-\begin{align}
+\begin{align*}
 I_{ss} &= N\left( \sum m z_q z_q \right) - \sum m z_q z_q\\
 &= \left( N-1  \right)\sum m z_q z_q \\
 \Rightarrow\spatie \sum m z_q z_q &= I_{ss} \left( N-1  \right)^{-1}
-\end{align}
-Plugging this in $(3)$ we get
+\end{align*}
+Plugging this in $(2)$ we get
 \begin{align}
 J_{nprq}
 &= I_{ss} \left( N-1  \right)^{-1}\left( \delta_{nr} \delta_{pq}- \delta_{nr}I_{pq}\right)-\delta_{nr}I_{pq} +\delta_{pr}I_{nq}
@@ -1460,22 +1463,22 @@ $$\blacklozenge$$
 The motion of a dynamical system is represented by a curve in configuration-space. Using the kinematical line element, express the curvature as a function of its total energy $E$, and deduce that as $E$ tends to infinity, the trajectory tends to become a geodesic . Illustrate by considering a particle moving under gravity on a smooth sphere.
 \end{tcolorbox} 
 We have $\mathbf{5.512}$ and $\mathbf{5.533}$:
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 v^2= a_{mn}v^mv^n= 2T\\
 \kappa v^2 = X_r\nu^r
 \end{array}\right.
 \Rightarrow \quad \kappa &= \frac{X_r\nu^r}{2T}
-\end{align}
+\end{align*}
 First, we have to note that nothing is said about the nature of the generalized forces (conservative or not) and therefore we use $\mathbf{5.517}$
-\begin{align}
+\begin{align*}
 dW = X_r dx^r
-\end{align}
+\end{align*}
 From this we can express $T$ as
-\begin{align}
+\begin{align*}
 T\left(s\right) &= T_0 + \int_{0}^{s}dW\\
 &= T_0 + \int_{0}^{s}X_r dx^r
-\end{align}
+\end{align*}
 where $T_0$ is the kinetic energy at the initial configuration $s=0$.\\\\
 $\mathbf{\dagger}$\\ \textit{Suppose now that the for $ s\rightarrow +\infty, \quad \int_{0}^{s}dW\rightarrow +\infty$. In that case, the kinematical energy will represent the total energy of the system, $T\rightarrow E$ and $\kappa \rightarrow 0$ for $E\rightarrow +\infty$ provided that $X_r\nu^r\cancel{\rightarrow}\pm \infty$ which we will assume . }\\$\mathbf{\dagger}$
 \begin{comment}
@@ -1491,20 +1494,20 @@ Let's illustrate this with a particle on a smooth sphere moving under gravity.
 \textbf{INTERMEZZO}:\\
 The next calculation are showed how careful we have to be when applying blindly some formulas. The aim is to find the equation of motion in the configuration space equipped with the kinematical fundamental form, starting from the physical components of the force field.\\\\
 We have as physical components:
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{l}
 F_{\phi}^{phys}= 0\\\\
 F_{\theta}^{phys}= mg\sin{\theta}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 Using $\mathbf{5.109}$ and $\mathbf{5.110}$ combined with the kinematical fundamental form, $ds^2= 2Tdt^2 = \left(\sqrt{m}R\right)^2d\theta^2 + \left(\sqrt{m}R\sin\theta\right)^2d\phi^2 $
-\begin{align}
+\begin{align*}
 (a_{mn}) = \left(\begin{matrix}
 mR^2&0\\
 0&mR^2\sin^2\theta
 \end{matrix}\right)
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 &\left\{\begin{array}{ll}
 h_1 = \sqrt{m}R&[M]^{\half}[L]\\
 h_2 = \sqrt{m}R\sin\theta&[M]^{\half}[L]\\
@@ -1513,9 +1516,9 @@ F_{\theta}^{phys}= mg\sin{\theta}&[M]^{}[L][T]^{-2}\\
 v_{\phi}^{phys}= R\sin\theta \dot{\phi}&[L][T]^{-1}\\
 v_{\theta}^{phys}= R \dot{\theta}&[L][T]^{-1}\\
 \end{array}\right.
-\end{align}
+\end{align*}
 we have 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{ll}
 X^{\phi}= 0&X_{\phi}= 0\\\\
 X_{\theta} = F_{\theta}^{phys}{h_1} = m^{\frac{3}{2}}gR\sin{\theta}&[M]^{\frac{3}{2}}[L]^2[T]^{-2}\\\\
@@ -1525,30 +1528,30 @@ v^{\theta} = \frac{v_{\theta}^{phys}}{h_1} = \frac{ R \dot{\theta}}{\sqrt{m}R}=\
 v_{\phi} = v_{\phi}^{phys}{h_1} = \sqrt{m}R^2\sin\theta \  \dot{\phi}&[M]^{\frac{1}{2}}[L]^2[T]^{-1}\\\\
 v^{\phi} = \frac{v_{\phi}^{phys}}{h_1} = \frac{ R \sin\theta \ \dot{\phi}}{\sqrt{m}R}=\frac{1}{\sqrt{m}}\dot{\phi}&[M]^{-\half}[T]^{-1}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 Check 1:
-\begin{align}
+\begin{align*}
 X_{\theta} &= a_{11}X^{\theta}\\
 &= mR^2\frac{\sqrt{m}g\sin{\theta}}{R}\\
 &= m^{\frac{3}{2}}gR\sin{\theta}
-\end{align}
+\end{align*}
 Check 2:
-\begin{align}
+\begin{align*}
 v_{\theta} &= a_{11}v^{\theta}+ a_{12}v^{\phi}\\
 &= mR^2\frac{1}{\sqrt{m}}\dot{\theta}\\
 &= \sqrt{m}R^2\dot{\theta}
-\end{align}
+\end{align*}
 Check 3:
-\begin{align}
+\begin{align*}
 \underbrace{f^{\theta} = X^{\theta}}_{\sim [M]^{\half}[T]^{-2}}&= \underbrace{\frac{\delta v^{\theta}}{\delta t}}_{\sim [M]^{-\half}[T]^{-2}}\\
 [M]^{\half}[T]^{-2}&\neq[M]^{-\half}[T]^{-2} 
-\end{align}
+\end{align*}
 
 So, obviously, we ran into a problem.\\
 The reason is due  to the fact that the physical components and the generalized coordinates are not equipped with the same metric. Indeed, consider a system with only one mass. Then there is no fundamental difference in the geometry of the two spaces ('physical' and 'generalized coordinates space' )but , if $ds$ is a distance in the physical space and $ds^{'}$ a distance in the 'generalized coordinates space' (abuse of language), then $ds^{'}\neq ds$ as $ds^{'}= \sqrt{m} ds$. So, the same physical object will be 'seen' stretched by a factor $\sqrt{m}$ when observed in the generalized configuration space.\\
 So let's begin again but with adapted conversion factors $h_i$.
 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{ll}
 h_1 = R&[M]^{\half}[L]\\
 h_2 = R\sin\theta&[M]^{\half}[L]\\
@@ -1557,9 +1560,9 @@ F_{\theta}^{phys}= mg\sin{\theta}&[M]^{}[L][T]^{-2}\\
 v_{\phi}^{phys}= R\sin\theta \dot{\phi}&[L][T]^{-1}\\
 v_{\theta}^{phys}= R \dot{\theta}&[L][T]^{-1}\\
 \end{array}\right.
-\end{align}
+\end{align*}
 we have 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{ll}
 X^{\phi}= 0&X_{\phi}= 0\\\\
 X_{\theta} = F_{\theta}^{phys}{h_1} = m^{}gR\sin{\theta}&[M]^{}[L]^2[T]^{-2}\\\\
@@ -1569,82 +1572,82 @@ v^{\theta} = \frac{v_{\theta}^{phys}}{h_1} = \frac{ R \dot{\theta}}{R}=\dot{\the
 v_{\phi} = v_{\phi}^{phys}{h_2} = R^2\sin^2\theta \  \dot{\phi}&[L]^2[T]^{-1}\\\\
 v^{\phi} = \frac{v_{\phi}^{phys}}{h_2} = \frac{ R \sin\theta \ \dot{\phi}}{R\sin\theta}=\dot{\phi}&[T]^{-1}\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 Check 1:
-\begin{align}
+\begin{align*}
 X_{\theta} &= a_{11}X^{\theta}\\
 &= mR^2\frac{{m}g\sin{\theta}}{R}\\
 &= m^{2}gR\sin{\theta}\\
 &\neq m^{}gR\sin{\theta}
-\end{align}
+\end{align*}
 Check 2:
-\begin{align}
+\begin{align*}
 v_{\theta} &= a_{11}v^{\theta}+ a_{12}v^{\phi}\\
 &= mR^2\dot{\theta}\\
 &\neq R^2\dot{\theta}
-\end{align}
+\end{align*}
 Check 3:
-\begin{align}
+\begin{align*}
 \underbrace{f^{\theta} = X^{\theta}}_{\sim [M]^{}[T]^{-2}}&= \underbrace{\frac{\delta v^{\theta}}{\delta t}}_{\sim [T]^{-2}}\\
 [M]^{}[T]^{-2}&\neq[T]^{-2} 
-\end{align}
+\end{align*}
 Again, we ran into problems.\\
 In fact, the idea of going from the physical space into the configuration space, by some transformation rule is wrong because, in configuration space equipped with the kinematical fundamental form, velocity and generalized forces have their very own, specific  definition: 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{ll}
 \text{velocity:}& v^r = \dv{x^r}{t}\\
 \text{generalized forces:}&dW = X_rdx^r
 \end{array}\right.
-\end{align}
+\end{align*}
 and get for the velocities
-\begin{align}
+\begin{align*}
 v^{\theta} = \dot{\theta}\\ 
 v^{\phi} = \dot{\phi}
-\end{align}
+\end{align*}
 
 and for the generalized forces
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{ll}
 dW = F_{\theta}^{phys}Rd\theta&\text{in the physical space}\\
 dW = X_{\theta}d\theta&\text{in the configurartion space}\\
 \end{array}\right.
-\end{align}
+\end{align*}
 and by the invariance of $dW$ we get
-\begin{align}
+\begin{align*}
 X_{\theta}&=  mgR\sin{\theta}\\
 \Rightarrow\quad X^{\theta}&=  a^{11}mgR\sin{\theta}\\
 &= \frac{mgR\sin{\theta}}{mR^2}\\
 &= \frac{g\sin{\theta}}{R}
-\end{align}
+\end{align*}
 and get for check 3:
-\begin{align}
+\begin{align*}
 \underbrace{f^{\theta} = X^{\theta}}_{\sim [T]^{-2}}&= \underbrace{\frac{\delta v^{\theta}}{\delta t}}_{\sim [T]^{-2}}\\
 [T]^{-2}&=[T]^{-2} 
-\end{align}
+\end{align*}
 and get what we wanted.
 \newpage
 Let's go on with the equations of motion in the configuration space:
 assuming that the gravitational force is conservative, we get as potential energy:
-\begin{align}
+\begin{align*}
 V = -mgR \cos{\theta}
-\end{align}
+\end{align*}
 
 We use equation $\mathbf{5.531.}$
-\begin{align}
+\begin{align*}
 \dv{}{t}\frac{\partial L}{\partial \dot{x}^s} - \frac{\partial L}{\partial x^s} =0
-\end{align}
+\end{align*}
 with for our case
-\begin{align}
+\begin{align*}
 L=  \half m R^2\dot{\theta}^2 + \half m R^2\sin^2\theta\dot{\phi}^2 +mgR \cos{\theta}
-\end{align}
+\end{align*}
 and get the set of equations of motion (the second column gives the dimensional analysis as a check for consistency)
 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{lll}
 \frac{\ddot{\phi}}{\dot{\phi}}=  -2\cot\theta \  \dot{\theta}&:&\frac{[T]^{-2}}{[T]^{-1}}\cong [T]^{-1}\\\\
 \ddot{\theta} - \left(\dot{\phi}\right)^2\sin\theta \cos\theta= -\frac{g}{R}\sin{\theta}&:&[T]^{-2}+\left([T]^{-1}\right)^2 \cong \frac{[L][T]^{-2}}{[L]^{}}\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1653,34 +1656,34 @@ $$\blacklozenge$$
 A particle moves on a smooth sphere under action of gravity. Using he action line element, calculate the Gaussian curvature of configuration-space as a function of total energy $E$ and height $z$ above the centre of the sphere. Show that if the total energy is not sufficient to raise the particle to the top of the sphere, but only to a level $z=h$, then the Gaussian curvature tends to infinity as $z$ approaches $h$ from below.
 \end{tcolorbox} 
 Using polar spherical coordinates, the line element on the sphere is 
-\begin{align}
+\begin{align*}
 ds^2= R^2d\theta^2 + R^2\sin^2 \theta d\phi^2
-\end{align}
+\end{align*}
 For the potential energy, we use the lowest point (along the axis of the gravitational filed) as reference. Hence the potential is given by
-\begin{align}
+\begin{align*}
 V&= mgR + mgz\\
 &= R\left(1+mg\cos\theta\right)
-\end{align}
+\end{align*}
 Giving for the action line element (with a total energy of the system $E_0$)
-\begin{align}
+\begin{align*}
 d\sigma^2 = \left(E_0-mgR-mgR\cos\theta\right)ds^2
-\end{align}
+\end{align*}
 Be $E=E_0-mgR$
-\begin{align}
+\begin{align*}
 \left(a_{mn}\right)&= \left(\begin{array}{cc}
 R^2\left(E-mgR\cos\theta\right)&0\\
 0&R^2\left(E-mgR\cos\theta\right)\sin^2 \theta 
 \end{array}\right)
-\end{align}
+\end{align*}
 $\mathbf{3.114}$ and the exercise (Riemann curvature of a 2-space) on page 112 gives:
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 G= \frac{R_{1212}}{a_{11}a_{22}}\\\\
 R_{1212}= -\half\partial_{11}^2a_{22}-\frac{1}{4}a^{11}\partial_1 a_{11}\partial_1 a_{22}+\frac{1}{4}a^{22}\partial_1 a_{22}\partial_1 a_{22}
 \end{array}\right.
-\end{align}
+\end{align*}
 With
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 \partial_1 a_{11} = mgR^3\sin\theta\\\\
 \partial_1 a_{22} = 2ER^2\sin\theta\cos\theta+ R^3mg\left(\sin^3\theta-2\sin\theta\cos^2\theta\right)  \\\\
@@ -1689,9 +1692,9 @@ With
 a^{11}=\frac{1}{R^2\left(E-mgR\cos\theta\right)}\\\\
 a^{22}=\frac{1}{R^2\left(E-mgR\cos\theta\right)\sin^2 \theta }
 \end{array}\right.
-\end{align}
+\end{align*}
 We first try now to replace the expressions in $\theta$ with expressions in $R\cos\theta=z$ and $R\sin \theta = \sqrt{R^2-z^2}$
-\begin{align}
+\begin{align*}
  &
 \left\{\begin{array}{l}
 \partial_1 a_{11} = mgR^2\sqrt{R^2-z^2}\\\\
@@ -1709,9 +1712,9 @@ a^{22}=\frac{1}{\left(E-mgz\right)\left(R^2-z^2\right)}&M^{-1}L^{-4}T^{2}\\\\
 a_{11}=R^2\left(E-mgz\right)&ML^{4}T^{-2}\\\\
 a_{22}=\left(E-mgz\right)\left(R^2-z^2\right)&ML^{4}T^{-2}
 \end{array}\right.
-\end{align}
+\end{align*}
 giving
-\begin{align}
+\begin{align*}
 R_{1212}&= -\half\partial_{11}^2a_{22}-\frac{1}{4}a^{11}\partial_1 a_{11}\partial_1 a_{22}+\frac{1}{4}a^{22}\partial_1 a_{22}\partial_1 a_{22}\\
  &=\left\{\begin{array}{l}
  -E\left(2z^2-R^2\right)-\half mgz\left(7R^2-9z^2  \right)\\\\
@@ -1729,23 +1732,23 @@ R_{1212}&= -\half\partial_{11}^2a_{22}-\frac{1}{4}a^{11}\partial_1 a_{11}\partia
  \frac{R^2-z^2}{\left(E-mgz\right)}\left(E-mgz\right)\left[ E-3mgz\right]\\
  &=
  \left(R^2-z^2\right)\left[ E-3mgz\right]
-\end{align}
+\end{align*}
 For the Gauss curvature we get then 
-\begin{align}
+\begin{align*}
 G&= \frac{R_{1212}}{R^2\left(E-mgz\right)^2\left(R^2-z^2\right)}
-\end{align}
+\end{align*}
 and so 
 \begin{align}
 G&= \frac{ E-3mgz}{R^2\left(E-mgz\right)^2}
 \end{align}
-Be $h= \frac{E}{mg}$. From $(17)$ we see that as long $z<\frac{h}{3}$, G is defined and positive. It becomes $0$ for $z=\frac{h}{3}$ and negative for $z>\frac{h}{3}$ to become $-\infty$ for $z\rightarrow h$.\\
+Be $h= \frac{E}{mg}$. From $(1)$ we see that as long $z<\frac{h}{3}$, G is defined and positive. It becomes $0$ for $z=\frac{h}{3}$ and negative for $z>\frac{h}{3}$ to become $-\infty$ for $z\rightarrow h$.\\
 Remember that $E=E_0-mgR$ with $E_0$ the total energy of the system and that the maximum potential energy is $V_{max}= 2mgR$. In order to reach the top, a particle starting from the bottom of the sphere $(V=0)$, should have at least a total energy $E_0= 2mgR$.\\
 Suppose now, that we configure the system so that the particle starts from the bottom and gets zero velocity at a point $z=h$. Then $E_0= mg\left(R+h \right)<2mgR$ and so $E= E_0-mgR= mgh$.\\
- $(17)$ becomes
-\begin{align}
+ $(1)$ becomes
+\begin{align*}
 G&= \frac{ h-3z}{mgR^2\left(h-z\right)^2}\\
 \Rightarrow\spatie &\lim_{ z\to h}G=-\infty
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1765,22 +1768,23 @@ h^{'}_{np}&= J^{'}_{nprq} \omega^{'}_{rq}\\
  M^{'}_{ab}&=J^{'}_{abrq} \dot{\omega}^{'}_{rq}\left(S^{'},S\right)+J^{'}_{cdrq}\left(\delta_{ac}\delta_{du}\delta_{bv}+\delta_{bd}\delta_{cu}\delta_{av}\right)\omega^{'}_{uv}\left(S^{'},S\right) \omega^{'}_{rq}\left(S^{'},S\right)
 \end{align}
 Then, using $(1),(2),(3)$ in $(4)$ and contracting the terms in $\delta_{ij}$
-\begin{align}
-M{'}_{ab}&= \dot{h_{ab}}^{'}+h^{'}_{au}\omega^{'}_{ub}\left(S^{'},S\right) +h^{'}_{ub}\omega^{'}_{ua}\left(S^{'},S\right)\\
-\Leftrightarrow \spatie \epsilon_{abn}M{'}_{n}&= \epsilon_{abn}\dot{h_{n}}^{'}+\epsilon_{aun}h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\epsilon_{ubn}h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
-\times \epsilon_{abt}\quad \Rightarrow \quad \epsilon_{abt}\epsilon_{abn}M{'}_{n}&= \epsilon_{abt}\epsilon_{abn}\dot{h_{n}}^{'}+\epsilon_{abt}\epsilon_{aun}h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\epsilon_{bat}\epsilon_{bun}h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
-\Rightarrow \quad 2 M{'}_{t}&= 2\dot{h_{t}}^{'}+\left(\delta_{bu}\delta_{tn} -\delta_{bn}\delta_{tu}\right)h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\left(\delta_{au}\delta_{tn} -\delta_{an}\delta_{tu}\right)h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
-&= 2\dot{h_{t}}^{'}+h^{'}_{t}\omega^{'}_{bb}\left(S^{'},S\right) -h^{'}_{b}\omega^{'}_{tb}\left(S^{'},S\right) +h^{'}_{t}\omega^{'}_{uu}\left(S^{'},S\right) -h^{'}_{a}\omega^{'}_{ta}\left(S^{'},S\right)\end{align}
+\begin{align*}
+&M{'}_{ab}= \dot{h_{ab}}^{'}+h^{'}_{au}\omega^{'}_{ub}\left(S^{'},S\right) +h^{'}_{ub}\omega^{'}_{ua}\left(S^{'},S\right)\\
+\Leftrightarrow \spatie &\epsilon_{abn}M{'}_{n}= \epsilon_{abn}\dot{h_{n}}^{'}+\epsilon_{aun}h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\epsilon_{ubn}h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
+\times \epsilon_{abt}\quad \Rightarrow \spatie & \epsilon_{abt}\epsilon_{abn}M{'}_{n}= \epsilon_{abt}\epsilon_{abn}\dot{h_{n}}^{'}+\epsilon_{abt}\epsilon_{aun}h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\epsilon_{bat}\epsilon_{bun}h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
+\Rightarrow \spatie & 2 M{'}_{t}= 2\dot{h_{t}}^{'}+\left(\delta_{bu}\delta_{tn} -\delta_{bn}\delta_{tu}\right)h^{'}_{n}\omega^{'}_{ub}\left(S^{'},S\right) +\left(\delta_{au}\delta_{tn} -\delta_{an}\delta_{tu}\right)h^{'}_{n}\omega^{'}_{ua}\left(S^{'},S\right)\\
+&\quad\quad= 2\dot{h_{t}}^{'}+h^{'}_{t}\omega^{'}_{bb}\left(S^{'},S\right) -h^{'}_{b}\omega^{'}_{tb}\left(S^{'},S\right) +h^{'}_{t}\omega^{'}_{uu}\left(S^{'},S\right) -h^{'}_{a}\omega^{'}_{ta}\left(S^{'},S\right)
+\end{align*}
 And so, 
-\begin{align}
+\begin{align*}
 M{'}_{r}&=\dot{h_{r}}^{'}+\omega^{'}_{mr}\left(S^{'},S\right)h^{'}_{m}
-\end{align}
+\end{align*}
 $$\lozenge$$
 Let's try to express equation $(4)$ but with the inertia tensor $I_{ij}$ as parameter.
 We have $\mathbf{5.332}$:
-\begin{align}
+\begin{align*}
 \dv{\left(I_{st}\omega_t\left(S^{'},S\right)\right)}{t} = M_s
-\end{align}
+\end{align*}
 Let's express this in the coordinate system $S^{'}$ so that $I^{'}_{sr}$ will not depend of the time. Be $A_{ij}$ the map from $S^{'}$ to $S^{}$. Then:
 \begin{align}
 \dv{\left(A_{ks}I^{'}_{st}\omega^{'}_t\left(S^{'},S\right)\right)}{t} &= M_s\\
@@ -1788,32 +1792,32 @@ Let's express this in the coordinate system $S^{'}$ so that $I^{'}_{sr}$ will no
 A_{ps}\dot{A_{ks}}I^{'}_{kt}\omega^{'}_t\left(S^{'},S\right) + A_{ps}A_{ks}I^{'}_{kt}\dot{\omega}^{'}_t\left(S^{'},S\right)&= M^{'}_p
 \end{align}
 We have
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{lll}
 \textbf{5.408}&\omega^{'}_{ts}\left(S^{'},S\right)= A_{tm}\dot{A}_{sm}&\\
 \textbf{5.401}& A_{mp}A_{mq}= \delta_{pq}& A_{pm}A_{qm}= \delta_{pq}
 \end{array}\right.
-\end{align}
-So, $(14)$ becomes 
+\end{align*}
+So, $(7)$ becomes 
 \begin{align}
 \omega^{'}_{pk}\left(S^{'},S\right)I^{'}_{kt}\omega^{'}_t\left(S^{'},S\right)+I^{'}_{pt}\dot{\omega}^{'}_t\left(S^{'},S\right)&= M^{'}_p
 \end{align}
 We use 
-\begin{align}
+\begin{align*}
 \omega^{'}_{pk}\left(S^{'},S\right) &= \epsilon_{pkm}\omega^{'}_{m}\left(S^{'},S\right)
-\end{align}
-and get for $(16)$:
+\end{align*}
+and get for $(8)$:
 \begin{align}
 I^{'}_{pt}\dot{\omega}^{'}_t\left(S^{'},S\right)+\epsilon_{pkm}\omega^{'}_{m}\left(S^{'},S\right)I^{'}_{kt}\omega^{'}_t\left(S^{'},S\right)&= M^{'}_p
 \end{align}
 Note also that $h^{'}_s =I_{sr}\omega^{'}_{r}\left(S^{'},S\right)$. Indeed,
-\begin{align}
+\begin{align*}
 h^{'}_{np} &=J^{'}_{npqr}\omega^{'}_{rq}\left(S^{'},S\right)\\
 &= J^{'}_{npqr}\epsilon_{rqm}\omega^{'}_{m}\left(S^{'},S\right)\\
 \times\quad\half\epsilon_{snp}\spatie h^{'}_{s} &= \underbrace{\half J^{'}_{npqr}\epsilon_{snp}\epsilon_{rqm}}_{=I_{sm}^{'}}\omega^{'}_{m}\left(S^{'},S\right)\\
 \Rightarrow\spatie h^{'}_{s} &=I_{sm}^{'}\omega^{'}_{m}\left(S^{'},S\right)
-\end{align}
-and $(18)$ becomes 
+\end{align*}
+and $(8)$ becomes 
 \begin{align}
 \dot{h}^{'}_p\left(S^{'},S\right)+\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)&= M^{'}_p
 \end{align}
@@ -1821,39 +1825,39 @@ Let's examine the term $\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\righ
 \begin{align}
 K¨{'}_{pqn}h^{'}_qh^{'}_n&=\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)
 \end{align}
-using $h^{'}_{r} = I^{'}_{rv}\omega^{'}_{v}\left(S^{'},S\right)$ in $(24)$ we get
+using $h^{'}_{r} = I^{'}_{rv}\omega^{'}_{v}\left(S^{'},S\right)$ in $(11)$ we get
 \begin{align}
 K^{'}_{pkn}I^{'}_{kt}I^{'}_{nm}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_{t}\left(S^{'},S\right)&=\epsilon_{pkm}I^{'}_{kt}\omega^{'}_{m}\left(S^{'},S\right)\omega^{'}_t\left(S^{'},S\right)\\
 \Rightarrow\spatie K^{'}_{pkn}I^{'}_{kt}I^{'}_{nm}&=\epsilon_{pkm}I^{'}_{kt}\\
 \Rightarrow\spatie K^{'}_{pkn}I^{'}_{nm}&=\epsilon_{pkm}\\
 \times\quad\epsilon_{pkt}\Rightarrow \spatie \epsilon_{pkt}K^{'}_{pkn}I^{'}_{nm}&= \delta_{mt}
 \end{align}
-Let's write $$ I^{'-1}_{tn}=\epsilon_{pkt}K^{'}_{pkn}$$We can truly consider $I^{'-1}_{tn}$ as the inverse of $I^{'}_{tn}$ due to $(28)$ and the fact that $I^{'}_{tm}$ is represented as a symmetric square matrix with real numbers as elements and hence has a non-zero determinant and has indeed an inverse. Multiplying $(27)$ by $I^{'-1}_{mt}$ gives us finally
+Let's write $$ I^{'-1}_{tn}=\epsilon_{pkt}K^{'}_{pkn}$$We can truly consider $I^{'-1}_{tn}$ as the inverse of $I^{'}_{tn}$ due to $(15)$ and the fact that $I^{'}_{tm}$ is represented as a symmetric square matrix with real numbers as elements and hence has a non-zero determinant and has indeed an inverse. Multiplying $(14)$ by $I^{'-1}_{mt}$ gives us finally
 
  $$\mathbf{K^{'}_{pkt}=\epsilon_{pkm}I^{'-1}_{mt}}$$
 \textbf{Q: Why the minus sign in the question?\\}
 Let's now calculate $I^{'-1}_{tn}$
-\begin{align}
+\begin{align*}
 I^{'}_{tn} &= \left(\begin{matrix}
 I^{'}_{11}&I^{'}_{12}&I^{'}_{13}\\
 I^{'}_{12}&I^{'}_{22}&I^{'}_{23}\\
 I^{'}_{13}&I^{'}_{23}&I^{'}_{33}
 \end{matrix}\right)
-\end{align}
+\end{align*}
 The determinant
-\begin{align}
+\begin{align*}
 \Delta= I^{'}_{12}I^{'}_{22}I^{'}_{33}+2I^{'}_{12}I^{'}_{13}I^{'}_{23}-I^{'}_{11}I^{'2}_{23}-I^{'}_{22}I^{'2}_{13}-I^{'}_{33}I^{'2}_{12}
-\end{align}
+\end{align*}
 giving
-\begin{align}
+\begin{align*}
 I^{'-1}_{tn} &= \frac{1}{\Delta}\left(\begin{matrix}
 I^{'}_{22}I^{'}_{33}-I^{'2}_{23}&-I^{'}_{12}I^{'}_{33}+I^{'}_{13}I^{'}_{23}&I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13}\\
 -I^{'}_{12}I^{'}_{33}+I^{'}_{13}I^{'}_{23}&I^{'}_{11}I^{'}_{33}-I^{'2}_{13}&-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}\\
 I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13}&-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}&I^{'}_{11}I^{'}_{22}-I^{'2}_{12}
 \end{matrix}\right)
-\end{align}
+\end{align*}
 giving for $\mathbf{K^{'}_{pkt}=\epsilon_{pkm}I^{'-1}_{mt}}$
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 K^{'}_{121} = \frac{1}{\Delta}\left(I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13} \right)\\
 K^{'}_{122} = \frac{1}{\Delta}\left(-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13}\right)\\
@@ -1865,7 +1869,7 @@ K^{'}_{231} = -\frac{1}{\Delta}\left(I^{'}_{22}I^{'}_{33}-I^{'2}_{23}\right)\\
 K^{'}_{232} = \frac{1}{\Delta}\left(-I^{'}_{11}I^{'}_{23}+I^{'}_{12}I^{'}_{13} \right)\\
 K^{'}_{233} = \frac{1}{\Delta}\left(I^{'}_{12}I^{'}_{23}-I^{'}_{22}I^{'}_{13}\right)
 \end{array}\right.
-\end{align}
+\end{align*}
 all others can be found by symmetry considerations.
 $$\blacklozenge$$
 \newpage
@@ -1873,17 +1877,17 @@ $$\blacklozenge$$
 
 \section{p189 - Exercise 19}
 \begin{tcolorbox}
-A rigid body turns about a fixed point $O$in a flat space of $N$ dimensions. prove that if $N$ is odd, there exists at any instant a line $OP$ of particles instantaneously at rest, but that, if $N$ is even, no point other than $O$ is, in general, instantaneously at rest. Show that if $N=4$, there are are points other than $O$ instantaneously at rest if, and only if,
+A rigid body turns about a fixed point $O$ in a flat space of $N$ dimensions. prove that if $N$ is odd, there exists at any instant a line $OP$ of particles instantaneously at rest, but that, if $N$ is even, no point other than $O$ is, in general, instantaneously at rest. Show that if $N=4$, there are are points other than $O$ instantaneously at rest if, and only if,
 $$\omega_{23}\omega_{14}+\omega_{31}\omega_{24}+\omega_{12}\omega_{34}=0$$
 \end{tcolorbox} 
 Consider $\mathbf{5.310}$
-\begin{align}
+\begin{align*}
 v_p &= - \omega_{pr}z_{r}
-\end{align}
+\end{align*}
 What we seek, is a vector $z_{r}$ so that 
-\begin{align}
+\begin{align*}
 v_p &= - \theta \omega_{pr}z_{r} = 0 \quad \theta \in\mathbb{R}
-\end{align}
+\end{align*}
 which means that we have to solve the homogeneous system of linear equations
 \begin{align}
 \Omega \mathbf{z} =0
@@ -1892,17 +1896,17 @@ with $\Omega$ the skew-symmetric matrix containing the elements of the tensor $\
 From algebra, we know that when the dimension of a skew-symmetric matrix is odd, then it's determinant is zero, and hence the homogeneous system will have an infinity of solutions that can be of the  form $z_r = a_rZ_N \quad r=\{1,2,\dots, N-1\}$, (we take the last coordinate as free parameter). This represents a line along which, all velocities are zero.\\
 On the contrary if $N$ is even, the determinant might be non-zero and the system will not have any solution except the trivial solution $z_r=0$.\\
 $$\lozenge$$\\
-Let's investigate this for $N=4$. We have for $(3)$:
-\begin{align}
+Let's investigate this for $N=4$. We have for $(2)$:
+\begin{align*}
 \Omega =\left( \begin{matrix}
 0&\omega_{12}&\omega_{13}&\omega_{14}\\
 -\omega_{12}&0&\omega_{23}&\omega_{24}\\
 -\omega_{13}&-\omega_{23}&0&\omega_{34}\\
 -\omega_{14}&-\omega_{24}&-\omega_{34}&0
 \end{matrix}\right)
-\end{align}
+\end{align*}
 giving
-\begin{align}
+\begin{align*}
 \det{\Omega} &=-\omega_{12}\left|\begin{array}{lll} -\omega_{12}&\omega_{23}&\omega_{24}\\
 -\omega_{13}&0&\omega_{34}\\
 -\omega_{14}&-\omega_{34}&0\\
@@ -1915,38 +1919,41 @@ giving
 \end{array}\right|\\
 &= \left\{\begin{array}{l}-\omega_{12}\left( -\omega_{12}\omega_{34}\omega_{34}-\omega_{23}\omega_{14}\omega_{34}+\omega_{24}\omega_{13}\omega_{34} \right)\\
 +\omega_{13}\left(- \omega_{12}\omega_{14}\omega_{34} +\omega_{24}\left( \omega_{13}\omega_{24}-\omega_{23}\omega_{14}\right)\right)\\
--\omega_{14}\left(- \omega_{12}\omega_{23}\omega_{34} +\omega_{23}\left( \omega_{13}\omega_{24}-\omega_{23}\omega_{14}\right)\right)\end{array}\right.\\
-&= \left\{\begin{array}{l}+\omega_{12}\omega_{12}\omega_{34}\omega_{34}+\omega_{12}\omega_{14}\omega_{23}\omega_{34}-\omega_{12}\omega_{13}\omega_{24}\omega_{34} \\
+-\omega_{14}\left(- \omega_{12}\omega_{23}\omega_{34} +\omega_{23}\left( \omega_{13}\omega_{24}-\omega_{23}\omega_{14}\right)\right)\end{array}\right.
+\end{align*}
+or
+\begin{align}
+\det{\Omega}&= \left\{\begin{array}{l}+\omega_{12}\omega_{12}\omega_{34}\omega_{34}+\omega_{12}\omega_{14}\omega_{23}\omega_{34}-\omega_{12}\omega_{13}\omega_{24}\omega_{34} \\
 - \omega_{12}\omega_{13}\omega_{14}\omega_{34} + \omega_{13}\omega_{13}\omega_{24}\omega_{24}-\omega_{13}\omega_{14}\omega_{23}\omega_{24}\\
 + \omega_{12}\omega_{14}\omega_{23}\omega_{34} - \omega_{13}\omega_{14}\omega_{23}\omega_{24}+\omega_{14}\omega_{14}\omega_{23}\omega_{23}\end{array}\right.
 \end{align}
 Define
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 A= \omega_{12}\omega_{34}\\
 B=\omega_{13}\omega_{24}\\
 C=\omega_{14}\omega_{23}
 \end{array}\right.
-\end{align}
-then we can write $(7)$ as 
-\begin{align}
+\end{align*}
+then we can write $(2)$ as 
+\begin{align*}
 \det{\Omega}&= A^2+B^2+C^2 -2AB-2BC+2AB\\
 &= \left(A-B+C\right)^2
-\end{align}
+\end{align*}
 So, in the space of even dimensions,the system of homogeneous linear equations will have non-trivial solutions, only if $$\omega_{12}\omega_{34}-\omega_{13}\omega_{24}+\omega_{14}\omega_{23}=0$$$$\lozenge$$
 \textbf{Let's find now some possible instantaneous lines of rotation.}\\
 Suppose $N$=4.\\
 Let's define a line with 
-\begin{align}
+\begin{align*}
 \left(z_r\right) = \theta\left( \begin{matrix}
 \omega_{23}-\omega_{24}+\omega_{34}\\ 
 -\omega_{13}+\omega_{14}+\omega_{34}\\ 
 \omega_{12}-\omega_{14}-\omega_{24}\\ 
 -\omega_{12}+\omega_{13}+\omega_{23}
 \end{matrix}\right)
-\end{align}
-Then calculating the velocities with $(1)$ we get
-\begin{align}
+\end{align*}
+Then calculating the velocities with $v_p = - \omega_{pr}z_{r}$ we get
+\begin{align*}
 \left( \begin{matrix}v_1\\
 v_2\\
 v_3\\
@@ -1967,7 +1974,7 @@ v_4\end{matrix}\right) &= -\theta\left( \begin{matrix}
 -\omega_{12}\omega_{34}+\omega_{13}\omega_{24}-\omega_{14}\omega_{23}\\
 -\omega_{12}\omega_{34}+\omega_{13}\omega_{24}-\omega_{14}\omega_{23}
 \end{matrix}\right)
-\end{align}
+\end{align*}
 So the velocities will vanish when$$\omega_{12}\omega_{34}-\omega_{13}\omega_{24}+\omega_{14}\omega_{23}=0$$
 $$\lozenge$$\\
 Suppose $N$ is odd. Let's define the following vector
@@ -1975,11 +1982,11 @@ Suppose $N$ is odd. Let's define the following vector
 \omega_{i_1}= \frac{1}{2^{\frac{N-1}{2}}\frac{N-1}{2}!}\epsilon_{i_{1} i_{2} \dots i_{N}}\prod_{k=1}^{\frac{N-1}{2}}\omega_{i_{2k} i_{2k+1}}
 \end{align}
 and a line
-\begin{align}
+\begin{align*}
 z_{i_1} = \theta \omega_{i_1}\quad (\theta \in \mathbb{R})
-\end{align}
+\end{align*}
 First we note that $\omega_{i_1}$ (and hence $z_{i_1}$) is not a null-vector:\\
-Let's consider in $(14)$ the terms consisting of the permutation of the sequence of pairs $$\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$$ This sequence contains $\frac{N-1}{2}$ pairs and so can be arranged in $\frac{N-1}{2}!$ ways. As for each pair we have two valid possibilities e.g. $\left( i_2,i_3 \right)$ and $\left( i_3,i_2 \right)$ and as a sequence contains $\frac{N-1}{2}$ pairs, we will have for a given order of pairs $2^{\frac{N-1}{2}}$ possibilities. So in $(1)$ there will be $2^{\frac{N-1}{2}}\frac{N-1}{2}!$ terms consisting of the permutation of the sequence of pairs $\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$.\\
+Let's consider in $(3)$ the terms consisting of the permutation of the sequence of pairs $$\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$$ This sequence contains $\frac{N-1}{2}$ pairs and so can be arranged in $\frac{N-1}{2}!$ ways. As for each pair we have two valid possibilities e.g. $\left( i_2,i_3 \right)$ and $\left( i_3,i_2 \right)$ and as a sequence contains $\frac{N-1}{2}$ pairs, we will have for a given order of pairs $2^{\frac{N-1}{2}}$ possibilities. So in $(1)$ there will be $2^{\frac{N-1}{2}}\frac{N-1}{2}!$ terms consisting of the permutation of the sequence of pairs $\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$.\\
 Without loss of generality, suppose that $\epsilon_{i_{1} i_{2} \dots i_{N}}$ is positive and also all $\omega_{i_{2k} i_{2k+1}}$ are positive.
 Let's first consider a permutation of two pairs in the sequence $\left\{\left( i_2,i_3 \right),\left( i_4,i_5 \right),\left( i_6,i_7\right),\dots ,\left( i_{N-1},i_N \right)\right\}$. Obviously, this does not change the product of the $\omega_{i_{2k} i_{2k+1}}$. Also $\epsilon_{i_{1} i_{2} \dots i_{N}}$ will hold it's initial sign as the considered permutation needs two permutation of indices.\\
 Next consider a permutation in one of the pairs of the sequence. Obviously $\epsilon_{i_{1} i_{2} \dots i_{N}}$ will change sign but also the picked $\omega_{i_{2k} i_{2k+1}}$(skew-symmetric). \\
@@ -1987,10 +1994,10 @@ Conclusion, all $2^{\frac{N-1}{2}}\frac{N-1}{2}!$ terms can be reduced to the su
 Let's consider now $\mathbf{5.310}$
 \begin{align}
 v_p &= -  \omega_{pi_{1}}z_{i_{1}}\\
-\text{(14):}\spatie v_p &= -\frac{1}{2^{\frac{N-1}{2}}\frac{N-1}{2}!}\theta \epsilon_{i_{1} i_{2} \dots i_{N}}\omega_{pi_{1}}\prod_{k=1}^{\frac{N-1}{2}}\omega_{i_{2k} i_{2k+1}}
+\text{(3):}\spatie v_p &= -\frac{1}{2^{\frac{N-1}{2}}\frac{N-1}{2}!}\theta \epsilon_{i_{1} i_{2} \dots i_{N}}\omega_{pi_{1}}\prod_{k=1}^{\frac{N-1}{2}}\omega_{i_{2k} i_{2k+1}}
 \end{align}
-On the right side, for having a non-zero term, we need that $p\ne i_{1}$ ( $\omega_{st}$ skew-symmetric ). This leaves us with only $N-1$ possible choices in the indices but as $\epsilon_{i_{1} i_{2} \dots i_{N}}$ needs $N$ mutual different indices it is obvious that each term in $(17)$ will have a $\epsilon_{i_{1} i_{2} \dots i_{N}}= 0$ \\
-Conclusion, all $v_p$ are zero and hence the defined line in $(15)$ is an instantaneous line of rotation.
+On the right side, for having a non-zero term, we need that $p\ne i_{1}$ ( $\omega_{st}$ skew-symmetric ). This leaves us with only $N-1$ possible choices in the indices but as $\epsilon_{i_{1} i_{2} \dots i_{N}}$ needs $N$ mutual different indices it is obvious that each term in $(5)$ will have a $\epsilon_{i_{1} i_{2} \dots i_{N}}= 0$ \\
+Conclusion, all $v_p$ are zero and hence the defined line in $(5)$ is an instantaneous line of rotation.
 \\
 $$\blacklozenge$$
 \newpage 
@@ -2006,21 +2013,21 @@ $$ I_{st} = \half\epsilon_{snp}\epsilon_{trq}J_{nprq}, \quad  J_{nprq}=  \half\e
 \end{tcolorbox} 
 The equations $\mathbf{5.329}$ , $h_{np}=J_{nprq}\omega_{rq}$ do not determine $J_{nprq}$ uniquely because $\omega_{rq}$ is skew symmetric, so all elements at the positions $J_{np(rr)}$ can be chosen arbitrarily and still comply with the equation.\\
 Consider now the expression
-\begin{align}
+\begin{align*}
 J^{'}_{nprq}&= \half\left(  J^{}_{nprq}-J^{'}_{npqr}\right)\\
 \Rightarrow \spatie h^{'}_{np}&=J^{'}_{nprq}\omega_{rq}\\
 &=  \half\left(  J^{}_{nprq}\omega_{rq}-J^{}_{npqr}\omega_{rq}\right)\\
 &= \half\left(  J^{}_{nprq}\omega_{rq}+J^{}_{npqr}\omega_{qr}\right)\\
 &= \half\left(  J^{}_{nprq}\omega_{rq}+J^{}_{nprq}\omega_{rq}\right)\\
 &=h_{np}
-\end{align}
+\end{align*}
 So this expression $J_{nprq}= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)$ still describes the dynamical system and we note that this expression is skew-symmetric in the two last suffixes:
-\begin{align}
+\begin{align*}
 J_{np(rr)}&= \half\sum m \left(\delta_{nr}z_pz_r +\delta_{pr}z_nz_r-\delta_{nr}z_pz_r-\delta_{pr}z_nz_r \right)=0\\
 J_{npqr}&= \half\sum m \left(\delta_{nq}z_pz_r +\delta_{pr}z_nz_q-\delta_{nr}z_pz_q-\delta_{pq}z_nz_r \right)\\
 &=-\half\sum m \left(-\delta_{nq}z_pz_r -\delta_{pr}z_nz_q+\delta_{nr}z_pz_q+\delta_{pq}z_nz_r \right)\\
 &= - J_{nprq}
-\end{align}
+\end{align*}
 
 \textbf{Symmetries to prove:}
 \begin{align}
@@ -2029,27 +2036,27 @@ J_{nprq} = -J_{pnrq}, \quad J_{nprq} = -J_{npqr},\quad J_{nprq} = J_{rqnp}\\
 J_{nprq}+J_{nrqp}+J_{nqpr}=0
 \end{array}\right.
 \end{align}
-The second identity of $(11)$ is already proven as $J_{nprq}$ is skew-symmetric in the last two suffixes. For the rest:
-\begin{align}
+The second identity of $(1)$ is already proven as $J_{nprq}$ is skew-symmetric in the last two suffixes. For the rest:
+\begin{align*}
 J_{nprq}&= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)\\
 &=- \half\sum m \left(-\delta_{nr}z_pz_q -\delta_{pq}z_nz_r+\delta_{nq}z_pz_r+\delta_{pr}z_nz_q \right)\\
 &= J_{pnrq}
-\end{align}
+\end{align*}
 and
-\begin{align}
+\begin{align*}
 J_{nprq}&= \half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)\\
 J_{rqnp}&= \half\sum m \left(\delta_{rn}z_qz_p +\delta_{qp}z_rz_n-\delta_{rp}z_qz_n-\delta_{qn}z_rz_p \right)\\
 &= J_{pnrq}
-\end{align}
+\end{align*}
 and
-\begin{align}
+\begin{align*}
 J_{nprq}+J_{nrqp}+J_{nqpr}&=\left\{\begin{array}{l}
 +\half\sum m \left(\delta_{nr}z_pz_q +\delta_{pq}z_nz_r-\delta_{nq}z_pz_r-\delta_{pr}z_nz_q \right)\\
 +\half\sum m \left(\delta_{nq}z_pz_r +\delta_{rp}z_nz_q-\delta_{np}z_qz_r-\delta_{rq}z_nz_p \right)\\
 +\half\sum m \left(\delta_{np}z_rz_q +\delta_{qr}z_nz_p-\delta_{nr}z_qz_p-\delta_{qp}z_nz_r \right)
 \end{array}\right.
 &=0
-\end{align}
+\end{align*}
 For the last part:
 From $\mathbf{5.33}$,  ($J^{'}_{nprq}$ being a not necessarily skew-symmetric tensor)
 \begin{align}
@@ -2060,25 +2067,25 @@ or
 I_{st} &= \half J^{'}_{npqr} \epsilon_{qrt}\epsilon_{snp}\\
 &= -\half J{'}_{npqr} \epsilon_{rqt}\epsilon_{snp}
 \end{align}
-Adding $(19)$ and $(21)$ gives
-\begin{align}
+Adding $(2)$ and $(4)$ gives
+\begin{align*}
 2I_{st} &= \underbrace{\half \left(J^{'}_{npqr} - J{'}_{npqr} \right)}_{= J^{}_{npqr}}\epsilon_{rqt}\epsilon_{snp}\\
 \Rightarrow\spatie I_{st} &=\half J^{}_{npqr}\epsilon_{rqt}\epsilon_{snp}\
-\end{align}
-And
-\begin{align}
+\end{align*}
+and
+\begin{align*}
 I_{st}\epsilon_{trq}\epsilon_{snp} &= \half J^{'}_{kjuv} \underbrace{\epsilon_{tuv}\epsilon_{trq}}_{= \delta_{ur}\delta_{vq}-\delta_{uq}\delta_{vr}}\underbrace{\epsilon_{skj}\epsilon_{snp}}_{= \delta_{kn}\delta_{jp}-\delta_{kp}\delta_{jn}}\\
 &= -\half J{'}_{npqr} \epsilon_{rqt}\epsilon_{snp}
-\end{align}
+\end{align*}
 expanding the right product we get
-\begin{align}
+\begin{align*}
 I_{st}\epsilon_{trq}\epsilon_{snp} &= \half \left( J{}_{nprq} +J{}_{pnqr}-J{}_{npqr}-J{}_{pnrq}\right)
-\end{align}
+\end{align*}
 And considering the symmetries described previously we get
-\begin{align}
+\begin{align*}
 I_{st}\epsilon_{trq}\epsilon_{snp} &= \half 4 J{}_{nprq}\\
 &= 2 J{}_{nprq}\\
 \Rightarrow \spatie J{}_{nprq}&= \half I_{st}\epsilon_{trq}\epsilon_{snp} 
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
