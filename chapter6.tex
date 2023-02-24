@@ -10,30 +10,30 @@ The motion described reduces to a motion in a $V_2$ plane with $z_3$ a constant 
 
 A particular particle with starting coordinates $\left(z^{(*)}_1,z^{(*)}_2, z^{(*)}_3\right)$ will describe a  circle with radius $\sqrt{z^{(*)2}_1+z^{(*)2}_2}$ in the  plane $V_2$ parallel with the $1,2$ axes.
 Taking axis $1$ as reference to determine the instantaneous angle $\theta$ of the vertex $OP$ (origin and particle) we get
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 z_1 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\cos\left(\theta(t) + \phi_0\right)\\
 z_2 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\sin\left(\theta(t) + \phi_0\right)\\
 z_3 = z^{(*)}_3
 \end{array}\right.
-\end{align}
+\end{align*}
 with 
-\begin{align}
+\begin{align*}
 \phi_0 & = \arctan\frac{z^{(*)}_2}{z^{(*)}_1}
-\end{align}
+\end{align*}
 Note that $\omega(t)$ is not a constant, so
-\begin{align}
+\begin{align*}
 \theta(t)&= \int_{0}^{t}\omega(\tau)d\tau
-\end{align}
+\end{align*}
 and get 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 z_1 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\cos\left(\int_{0}^{t}\omega(\tau)d\tau + \phi_0\right)\\\\
 z_2 = \sqrt{z^{(*)2}_1+z^{(*)2}_2}\sin\left(\int_{0}^{t}\omega(\tau)d\tau + \phi_0\right)\\\\
 z_3 = z^{(*)}_3\\\\
 \phi_0 = \arctan\frac{z^{(*)}_2}{z^{(*)}_1}
 \end{array}\right.
-\end{align}
+\end{align*}
 $$\lozenge$$\\
 \newpage
 \textbf{Eulerian}\\
@@ -45,13 +45,13 @@ The equations get simplified and reduce to a motion of a particle on a circle.
 \label{fig:fig_p191_Exa}
 \end{figure}
 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 v_1 = -\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_2 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_3 = 0
 \end{array}\right.
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -60,18 +60,18 @@ $$\blacklozenge$$
 Compute the components of acceleration for the motion described in the preceding exercise.
 \end{tcolorbox}
 We have
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 v_1 = -\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_2 = \sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 v_3 = 0
 \end{array}\right.
-\end{align}
+\end{align*}
 and 
-\begin{align}
+\begin{align*}
 f_r &= \partial_tv_r + v_{r,s}v_s
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 &\left\{\begin{array}{l}
 \partial_t v_1 = -\sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 \partial_t v_2 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
@@ -80,8 +80,8 @@ v_{1,2}= -\omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\sin\left(\arctan\fra
 v_{2,1}= \omega(t)\left[\frac{z_1}{\sqrt{z^{2}_1+z^{2}_2}}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{z_2}{z_1^2}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
 v_{2,2}= \omega(t)\left[\frac{z_2}{\sqrt{z^{2}_1+z^{2}_2}}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{1}{z^{}_1}\frac{1}{1+\frac{z_2^2}{z_1^2}}\right]\\\\
 \end{array}\right.
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 &=\left\{\begin{array}{l}
 \partial_t v_1 = -\sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
 \partial_t v_2 = \sqrt{z^{2}_1+z^{2}_2}\dot{\omega}(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\\\\
@@ -90,30 +90,30 @@ v_{1,2}=  -\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\fr
 v_{2,1}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 v_{2,2}=  \frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z^{}_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 \end{array}\right.
-\end{align}
+\end{align*}
 and get
-\begin{align}
+\begin{align*}
 v_{1,s}v_s &= \left\{\begin{array}{l}
 -\sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 -\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z^{}_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]
 \end{array}\right.\\
 &=-z_1\omega^2(t)
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 v_{2,s}v_s &= \left\{\begin{array}{l}
 \sqrt{z^{2}_1+z^{2}_2}\omega(t)\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_1\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) +z_2\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 +\sqrt{z^{2}_1+z^{2}_2}\omega(t)\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\frac{\omega(t)}{\sqrt{z^{2}_1+z^{2}_2}}\left[z_2\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right) -z^{}_1\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)\right]\\\\
 \end{array}\right.\\
 &= z_2\omega^2(t)
-\end{align}
+\end{align*}
 giving with the second derivative term
-\begin{align}
+\begin{align*}
 &=\left\{\begin{array}{l}
 f_1 = -\dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\sin\left(\arctan\frac{z^{}_2}{z^{}_1}\right)-z_1\omega^2(t)\\\\\\
 f_2 = \dot{\omega}(t)\sqrt{z^{2}_1+z^{2}_2}\cos\left(\arctan\frac{z^{}_2}{z^{}_1}\right)+z_2\omega^2(t)\\\\
 f_3=0
 \end{array}\right.
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -123,9 +123,9 @@ $$\blacklozenge$$
 Verify that the operator $\frac{\partial}{\partial t}$ does not alter tensor character.
 \end{tcolorbox}
 Be $X^r$ and $Y^r$, two tensors so that $I=X_rY^r$ is an invariant. Obviously, $\frac{\partial I}{\partial t}$ will also be invariant and 
-\begin{align}
+\begin{align*}
 \frac{\partial I}{\partial t}= \frac{\partial X_r}{\partial t}Y^r+X_r\frac{\partial Y^r}{\partial t}
-\end{align}
+\end{align*}
 Meaning that the right side is a sum of two invariants, from which we conclude (see page 20, $\mathbf{1.607}$) that $\frac{\partial X_r}{\partial t}$ and $\frac{\partial Y^r}{\partial t}$ are tensors.
 $$\blacklozenge$$
 \newpage
@@ -149,21 +149,21 @@ We can define $$\overline{F} = F\overline{1}_r$$
 Write out $\mathbf{6.126}$ and $\mathbf{6.127b}$ explicitly for spherical polar coordinates.
 \end{tcolorbox}
 For spherical polar coordinates we have 
-\begin{align}
+\begin{align*}
 (v^r) = \left(\begin{matrix}\dot{r}\\r\dot{\theta}\\r\sin\theta\dot{\phi} \end{matrix}\right)
-\end{align}
+\end{align*}
 and (see $\mathbf{2.546}$ page 58):
-\begin{align}
+\begin{align*}
 v^r_{|r} &= \frac{1}{r^2}\partial_r\left(r^2v^1\right)+\frac{1}{\sin\theta}\partial_{\theta}\left(\sin\theta v^2\right)+\partial_{\phi} v^3\\
 &=  \frac{1}{r^2}\left(2rv^1+r^2\partial_rv^1\right)+\frac{1}{\sin\theta}\left(v^2\cos\theta + \sin\theta\partial_{\theta}v^2\right)\\
 &= \frac{2}{r}\dot{r}+r\dot{\theta}\cot \theta 
-\end{align}
+\end{align*}
 and 
-\begin{align}
+\begin{align*}
 &\partial_t \rho+ \left(\rho v^r\right)_{|r} =0\\
 \Leftrightarrow\spatie &\partial_t\rho+ \rho_{|r}v^r+\rho v^r_{|r} =0\\
 \Leftrightarrow\spatie &\dv{\rho}{t}+\rho \left(\frac{2}{r}\dot{r}+r\dot{\theta}\cot \theta \right) =0
-\end{align}
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
@@ -173,11 +173,11 @@ and
 If $\epsilon^{rmn}$ is defined in precisely the same way as $\epsilon_{rmn}$, prove that $$ \epsilon^{'uvw}= J\epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}$$
 \end{tcolorbox}
 We follow the pretty same line of reasoning as for $\epsilon_{rst}$. Going from $x^{'r}$ to $x^{s}$ we have (expanding the determinant of the inverse Jacobian along the rows instead of the columns):
-\begin{align}
+\begin{align*}
 J^{-1}=\left|\frac{\partial x^{'p}}{\partial x^{q}}\right|&= \epsilon^{rmn}\frac{\partial x^{'1}}{\partial x^r}\frac{\partial x^{'2}}{\partial x^m}\frac{\partial x^{'3}}{\partial x^n}\\
 \times \epsilon^{uvw}\spatie J^{-1}\epsilon^{uvw}&= \epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}\\
 \times J\spatie\epsilon^{uvw}&= J\epsilon^{rmn}\frac{\partial x^{'u}}{\partial x^r}\frac{\partial x^{'v}}{\partial x^m}\frac{\partial x^{'w}}{\partial x^n}\\ 
-\end{align}
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
@@ -213,18 +213,20 @@ Pressure is independent of the direction
 \caption{Pressure on a trirectangular tetrahedron}
 \label{fig:fig_p199}
 \end{figure}
-To see that the pressure is independent of the direction of the surface element on which we measure it, let's consider a trirectangular tetrahedron $OABC$ as  depicted in figure $5.2(a)$. Let's define $P_x,P_y,P_z, P_t$ the pressure measured on the $4$ surfaces with normal vectors $dS_x,dS_y,dS_z,dS_t$. Let's neglect second order terms due to acceleration and external forces. For the forces along axis $z$ (the same reasoning is valid for the two others) we will have $P_zdS_z= P_tdS_t\gamma_z$ where $\gamma_z$ is the cosine of the angle formed by  normal on $dS_t$ and the z-axis.\\
+To see that the pressure is independent of the direction of the surface element on which we measure it, let's consider a trirectangular tetrahedron $OABC$ as  depicted in figure $6.2(a)$. Let's define $P_x,P_y,P_z, P_t$ the pressure measured on the $4$ surfaces with normal vectors $dS_x,dS_y,dS_z,dS_t$. Let's neglect second order terms due to acceleration and external forces. For the forces along axis $z$ (the same reasoning is valid for the two others) we will have $P_zdS_z= P_tdS_t\gamma_z$ where $\gamma_z$ is the cosine of the angle formed by  normal on $dS_t$ and the z-axis.\\
 Let's investigate the relationship between $dS_t$ and $dS_x,dS_y,dS_z$.\\
- Be $hA$ the line element lying in the plane $ABC$ (see figure $5.2(b)$) and $hO$ the line element lying in the plane $OBC$. As the area of a triangle $=\half\times base \times perpendicular \ height$ we get $dS_z = \half |hO||BC|$. But $|hO|= |hA|\cos\alpha$  (see figure $5.2(c)$) and so $dS_z = \half |BC||hA|\cos\alpha = dS_t\gamma_z$
+ Be $hA$ the line element lying in the plane $ABC$ (see figure $6.2(b)$) and $hO$ the line element lying in the plane $OBC$. As the area of a triangle $=\half\times base \times perpendicular \ height$ we get $dS_z = \half |hO||BC|$. But $|hO|= |hA|\cos\alpha$  (see figure $6.2(c)$) and so $dS_z = \half |BC||hA|\cos\alpha = dS_t\gamma_z$
  and get 
-\begin{align}
+\begin{align*}
 &P_zdS_z= P_tdS_t\gamma_z\\ 
 \Rightarrow \spatie & P_z dS_t\gamma_z= P_tdS_t\gamma_z\\ 
 \Rightarrow \spatie & P_z = P_t
-\end{align}
+\end{align*}
 
  $$\blacklozenge$$
 \newpage
+
+
 \section{p201 - Exercise}
 \begin{tcolorbox}
 Write down the contravariant form of $\mathbf{6.147}$
@@ -248,13 +250,13 @@ Note that $p_{,r}$ in $(1)$ and $(5)$ are not the same vector function as $p_{,r
 \begin{tcolorbox}
 Verify by means of  $\mathbf{3.204}$ that $\mathbf{6.157}$ and $\mathbf{6.156}$  are the same equation.
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{lll}
 \mathbf{3.204}&\spatie&\Gamma^{n}_{rn} = \half\partial_r\log a = \partial_r\log \sqrt{a}\\
 \mathbf{6.157}&\spatie&\left(\sqrt{a}a^{mn}\phi_{,m}\right)_{,n}=0\\
 \mathbf{6.156}&\spatie&a^{mn}\phi_{|mn}=0
 \end{array}\right.
-\end{align}
+\end{align*}
 Considering also
 \begin{align}
 \left\{\begin{array}{l}
@@ -263,17 +265,17 @@ T^m_{|n}= \partial_n T_m+\Gamma^{m}_{kn}T_k
 \end{array}\right.
 \end{align}
 So $\mathbf{6.156}$ can written as
-\begin{align}
+\begin{align*}
 & a^{mn}\phi_{|mn}=0\\
 \Leftrightarrow\spatie & \left(a^{mn}\phi_{|m}\right)_{|n}=0\\
 T^n = a^{mn}\phi_{|m}\spatie\Rightarrow\spatie &\partial_n T^n+\Gamma^{n}_{kn}T^k=0\\
 \Rightarrow\spatie &\partial_n \left(a^{mn}\phi_{|m}\right)+\Gamma^{n}_{kn}a^{pk}\phi_{|p}=0\\
 \Leftrightarrow\spatie &\partial_n \left(a^{mn}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\Gamma^{n}_{kn}a^{pk}\phi_{,p}=0\\
-\text{(2)}\quad \Rightarrow\spatie &\partial_n \left(a^{mn}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\partial_k\log \sqrt{a}a^{pk}\phi_{,p}=0\\
+\text{(1)}\quad \Rightarrow\spatie &\partial_n \left(a^{mn}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\partial_k\log \sqrt{a}a^{pk}\phi_{,p}=0\\
 \Leftrightarrow\spatie &\left(a^{mn}_{,n}\right) \phi_{,m}+a^{mn}\phi_{,mn}+\frac{1}{\sqrt{a}}\left(\sqrt{a}a^{pk}\right)_{,k}\phi_{,p}=0\\
 \Leftrightarrow\spatie &\sqrt{a} \phi_{,m}\left(a^{mn}\right)_{,n}+\sqrt{a}a^{mn}\phi_{,mn}+a^{mn}\phi_{,m}\left(\sqrt{a}\right)_{,n}=0\\
 \Leftrightarrow\spatie &\left(\sqrt{a}a^{mn}\phi_{,m}\right)_{,n}=0
-\end{align}
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
@@ -284,33 +286,32 @@ Show that a small strain is a rigid body displacement if, and only if, $e_{rs}=0
 \end{tcolorbox}
 \textbf{Suppose we deal with  a rigid body.} Then the position of two particles of the rigid body are given by
 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 p_r=z_r+u_r(z)\\
 p^{'}_r=z^{'}_r+u_r(z^{'})\\
 \end{array}\right.
-\end{align}
+\end{align*}
 and
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{l}
 L_0= z_r-z^{'}_r \\
 L_1 = z^{'}_r+u_r(z^{'})-z_r-u_r(z)  
 \end{array}\right.
-\end{align}
+\end{align*}
 A rigid body means $L_1=L_0$, giving $u_r(z^{'})=u_r(z^{})$ i.e $u_r(z^{})$ is a constant and thus $u_{r,s}(z^{})=0$.\\
 As $e_{rs}=\half\left(u_{r,s}(z^{})+u_{s,r}(z^{})\right)$ we get $e_{rs}=0$\\\\
 \textbf{Suppose now that $e_{rs}=0$}\\
-We have $e= e_{rs}\lambda_r\lambda_s = 0$ and $e= u_{r,s}(z^{})\lambda_r\lambda_s $
-As the $\lambda_r$ are arbitrary, in the sense that we are free to choose whatever curve to approach the initial point, we conclude that $u_{r,s}(z^{})=0$ . So$u_{r}(z^{})$ is a constant, meaning that the mutual distance between two arbitrary points, do not change. The body is a rigid body.
+We have $e= e_{rs}\lambda_r\lambda_s = 0$ and $e= u_{r,s}(z^{})\lambda_r\lambda_s $. As the $\lambda_r$ are arbitrary, in the sense that we are free to choose whatever curve to approach the initial point, we conclude that $u_{r,s}(z^{})=0$ . So $u_{r}(z^{})$ is a constant, meaning that the mutual distance between two arbitrary points, do not change. The body is a rigid body.
  $$\lozenge$$
  For a finite strain we have $\mathbf{6.206}$:
- \begin{align}
+ \begin{align*}
  \lim \frac{L_1^2-L_0^2}{L_0^2}=2 u_{r,s}(z^{})\lambda_r\lambda_s + u_{m,r}(z^{})u_{m,s}(z^{})\lambda_r\lambda_s
- \end{align}
+ \end{align*}
  This limit is $0$ and so we get as condition
-  \begin{align}
+  \begin{align*}
  \left(2 u_{r,s}(z^{}) + u_{m,r}(z^{})u_{m,s}(z^{})\right)\lambda_r\lambda_s=0
- \end{align}
+ \end{align*}
  As the $\lambda_r$ are arbitrary, in the sense that we are free to choose whatever curve to approach the initial point, we conclude that $2 u_{r,s}(z^{}) + u_{m,r}(z^{})u_{m,s}(z^{})$ must be zero.
  $$2 u_{r,s}(z^{}) + u_{m,r}(z^{})u_{m,s}(z^{})=0$$
  $$\blacklozenge$$
@@ -325,43 +326,45 @@ But  $\displaystyle \lim_{a \to 0} \frac{S}{a^2}$ is not zero,...
 \end{tcolorbox}
 First, note that the volume of  a trirectangular tetrahedron is $V=\frac{1}{6}abc$ with $a,b,c$ the bases of the 3 rectangular triangles (see clarification for page 199), so if $a\ge b,c$ we have  $V< a^3$.\\
 There is no assurance that $\displaystyle \lim_{a \to 0} \frac{1}{a^3} \dv{M_r}{t}=0$. Indeed, consider $\mathbf{5.334}$. For a continuous medium, this equation can be written as
-\begin{align}
+\begin{align*}
 I_{st} &= \int_{V}\rho\epsilon_{ptq}\epsilon_{psn}z_sz_tdV
-\end{align} 
-If $V$ goes to zero, the quantities under the integral can be approximated by constant values and hence, the dynamics of the tetrahedron are govern by
-\begin{align}
+\end{align*} 
+If $V$ goes to zero, the quantities under the integral can be approximated by constant values and hence, the dynamics of the tetrahedron are governed by
+\begin{align*}
 &\displaystyle \lim_{V \to 0}I_{st} = \rho\epsilon_{ptq}\epsilon_{psn}z_sz_t V\\
 \mathbf{5.332}\text{:}\spatie &\dv{I_{st}\omega_t}{t}= M_s\\
 \Rightarrow\spatie &\lim_{V \to 0} \dv{M_s}{t} = \lim_{V \to 0}V\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
 \Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^3}\dv{M_s}{t} = \lim_{a \to 0}\frac{1}{a^3}V\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
 \Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^3}\dv{M_s}{t} < \lim_{a \to 0}\frac{1}{a^3}a^3\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
 \Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^3}\dv{M_s}{t} < \lim_{a \to 0}\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t}
-\end{align}
+\end{align*}
 but there is no reason to admit that $\displaystyle \lim_{V \to 0}\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t}=0$. \\
 On the other hand, replacing $a_3$ with $a^2$ in $(5)$ gives 
-\begin{align}
+\begin{align*}
 &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} = \lim_{a \to 0}\frac{1}{a^2}V\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
 \Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} < \lim_{a \to 0}\frac{1}{a^2}a^3\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t} \\
 \Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} < \lim_{a \to 0}a\dv{\left(\rho\epsilon_{ptq}\epsilon_{psn}z_sz_t\omega_t\right)}{t}\\
 \Rightarrow\spatie &\lim_{a \to 0} \frac{1}{a^2}\dv{M_s}{t} =0
-\end{align}
+\end{align*}
 For $ \displaystyle \lim_{a \to 0} \frac{1}{a^2} \int X_rdV=0$ the reasoning is even simpler as for a volume going to zero , we can consider $X_r$ as constant and thus 
-\begin{align}
+\begin{align*}
  \displaystyle \lim_{a \to 0} \frac{1}{a^2} \int X_rdV=\displaystyle \lim_{a \to 0} \frac{1}{a^2}  X_r \int dV < \displaystyle \lim_{a \to 0} \frac{1}{a^2}  X_r a^3 = 0
-\end{align}
+\end{align*}
 $$\lozenge$$
 \textbf{But  $\displaystyle \lim_{a \to 0} \frac{S}{a^2}$ is not zero,...}\\\\
 Be $S_t$ the area of the ``sloped'' triangle in the tetrahedron. Then, the total area of the tetrahedron is:
-\begin{align}
+\begin{align*}
 &S= \half\left(ab + bc + ac \right) + S_t\\
 &S_t > \half ab\text{,   }S_t > \half bc\text{,   }S_t > \half ac\\
-\Rightarrow \spatie & S>  \half\left(ab + bc + ac \right) + \half ab\\
+\Rightarrow \spatie & S>  \half\left(ab + bc + ac \right) + \half ab
+\end{align*}
+\begin{align}
 \Rightarrow \spatie & \frac{S}{a^2}>  \half\left( \frac{bc}{a^2} + \frac{c}{a} \right) + b
 \end{align}
-If we shrink the tetrahedron uniformly and put $a=\epsilon a_0, b=\epsilon b_0, c=\epsilon c_0$ then $(16)$ can be written as 
-\begin{align}
+If we shrink the tetrahedron uniformly and put $a=\epsilon a_0, b=\epsilon b_0, c=\epsilon c_0$ then $(1)$ can be written as 
+\begin{align*}
 \lim_{\epsilon \to 0}\frac{S}{a^2}>   \half\left( \frac{b_0c_0}{a_0^2} + \frac{c_0}{a_0} \right) + b_0\lim_{\epsilon \to 0}\epsilon 
-\end{align}
+\end{align*}
 which is indeed not zero.
  $$\blacklozenge$$
 \newpage
@@ -370,18 +373,18 @@ which is indeed not zero.
 \begin{tcolorbox}
 Show that the stress across a plane $z_1 = \text{const.}$ has the components $E_{11}, \ E_{21}, \ E_{31}$. What are the components across planes $z_2 = \text{const.}$ and $z_3 = \text{const.}$?
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \mathbf{6.223} \spatie T_r = E_{rs}n_s
-\end{align}
+\end{align*}
 So for the the stress across a plane $z_1 = \text{const.}$, we have $n_1=1, \ n_2=0, \ n_3 = 0$ and so 
-\begin{align}
+\begin{align*}
 T_r\left(z_1 = \text{const.}\right) = \left(\begin{matrix}E_{11}\\E_{21}\\E_{31}\end{matrix}\right)
-\end{align}
+\end{align*}
 For the the stress across a plane $z_2 = \text{const.}$, we have $n_1=0, \ n_2=1, \ n_3 = 0$ and for the the stress across a plane $z_3 = \text{const.}$, we have $n_1=0, \ n_2=0, \ n_3 = 1$ and so
-\begin{align}
+\begin{align*}
 &T_r\left(z_2 = \text{const.}\right) = \left(\begin{matrix}E_{12}\\E_{22}\\E_{32}\end{matrix}\right)\\
 &T_r\left(z_3 = \text{const.}\right) = \left(\begin{matrix}E_{13}\\E_{23}\\E_{33}\end{matrix}\right)\
-\end{align}
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
@@ -393,11 +396,11 @@ then the symmetry conditions $\mathbf{6.234}, \  \mathbf{6.235}, \text{ and } \m
 \end{tcolorbox}
 \textbf{a) $C_{rsnm}= C_{rsmn}$ and $C_{srmn}= C_{rsmn}$\\}
 This is a direct consequence of the symmetries $E_{nm}= E_{mn}$ and $e_{nm}= e_{mn}$. \\E.g.:
-\begin{align}
-e_{nm}&= e_{mn}\\
-\Leftrightarrow\spatie C_{nmrs}E_{rs}&=C_{mnrs}E_{rs}\\
-\Rightarrow\spatie C_{nmrs}&=C_{mnrs}
-\end{align}\\
+\begin{align*}
+&e_{nm}= e_{mn}\\
+\Leftrightarrow\spatie &C_{nmrs}E_{rs}=C_{mnrs}E_{rs}\\
+\Rightarrow\spatie &C_{nmrs}=C_{mnrs}
+\end{align*}\\
 \textbf{b) $C_{rsnm}= C_{mnrs}$ \\}
 We simplify the notation by using 'compactified' indices (e.g.):
 $$e_{a}= C_{ab}E_{b} \quad \Leftrightarrow \quad e_{rs}= C_{rsmn}E_{mn}$$
@@ -408,7 +411,7 @@ E_ae_a &=  c_{au}e_{u}C_{av}E_{v}\\
 &=  C_{uv}E_u E_{v}\\
 &=  C_{vu}E_u E_{v}\quad\text{(renaming dummy indices)}
 \end{align}
-From $(6)$ and $(7)$ we can conclude 
+From $(3)$ and $(4)$ we can conclude 
 $$C_{vu}=C_{uv}$$
  $$\blacklozenge$$
 \newpage
@@ -419,12 +422,12 @@ Deduce from  $\mathbf{6.250}$ that if an isotropic elastic body is in equilibriu
 \end{tcolorbox}
 $$\mathbf{6.250}: \spatie \rho f_r= \rho X_r+\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r$$
 In equilibrium under no body forces means $f_r=0$ and $X_r=0$. So,
-\begin{align}
-\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r&=0\\
-\partial_r \quad \Rightarrow \spatie \left( \lambda+ \mu \right)\underbrace{\theta_{,rr}}_{= \mathbf{\Delta}\theta} +\mu\underbrace{\left(\mathbf{\Delta}u_r \right)_{,r}}_{=\mathbf{\Delta}u_{r,r}} &=0\\
-u_{r,r}=\theta\quad\Rightarrow\spatie \left( \lambda+ \mu \right)\mathbf{\Delta}\theta +\mu\mathbf{\Delta}\theta &=0\\
-\Rightarrow\spatie\spatie\spatie \mathbf{\Delta}\theta &=0
-\end{align}
+\begin{align*}
+&\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r=0\\
+\partial_r \quad \Rightarrow \spatie &\left( \lambda+ \mu \right)\underbrace{\theta_{,rr}}_{= \mathbf{\Delta}\theta} +\mu\underbrace{\left(\mathbf{\Delta}u_r \right)_{,r}}_{=\mathbf{\Delta}u_{r,r}} =0\\
+u_{r,r}=\theta\quad\Rightarrow\spatie &\left( \lambda+ \mu \right)\mathbf{\Delta}\theta +\mu\mathbf{\Delta}\theta =0\\
+\Rightarrow\spatie & \mathbf{\Delta}\theta =0
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
@@ -434,17 +437,21 @@ Express the equations of motion   $\mathbf{6.250}$ in curvilinear coordinates.
 \end{tcolorbox}
 $$\mathbf{6.250}: \spatie \rho f_r= \rho X_r+\left(\lambda+ \mu\right)\theta_{,r}+\mu\mathbf{\Delta}u_r$$
 We start from $\mathbf{6.252}: \spatie \rho f^r= \rho X^r+E^{rs}_{\ \ |s}$
-\begin{align}
+\begin{align*}
 & \rho f^r= \rho X^r+E^{rs}_{\ \ |s}\\
 \mathbf{6.245}\text{:}\quad\Rightarrow\spatie & E^{rs} = \lambda \delta_{rs} \theta + 2 \mu e^{rs}\\
 \Rightarrow\spatie & \rho f^r= \rho X^r+\lambda \delta_{rs} \theta _{ |s} + 2 \mu e^{rs}_{\ \ |s}\\
-\Leftrightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + 2 \mu e^{rs}_{\ \ |s}\\
+\Leftrightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + 2 \mu e^{rs}_{\ \ |s}
+\end{align*}
+\begin{align}
 \mathbf{6.245}\text{: }\spatie \spatie & e^{rs} = \half\left(u^r_{\ |s}+u^s_{\ |r}\right)\\
-\Leftrightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + 2 \mu \half\left(u^r_{\ |ss}+u^s_{\ |rs}\right)\\
-\mathbf{6.246}\text{: }\spatie \spatie &\theta = e^{nn} = \half\left(u^n_{\ |n}+u^n_{\ |n}\right) = u^n_{\ |n}\\
-\text{(6)}\Rightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + \mu \left(u^r_{\ |ss}+\theta_{\ |r}\right)\\
-\Rightarrow\spatie & \rho f^r= \rho X^r+\left(\lambda +\mu\right) \theta _{,r} + \mu u^r_{\ |ss}
+\Rightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + 2 \mu \half\left(u^r_{\ |ss}+u^s_{\ |rs}\right)
 \end{align}
+\begin{align*}
+\mathbf{6.246}\text{: }\spatie \spatie &\theta = e^{nn} = \half\left(u^n_{\ |n}+u^n_{\ |n}\right) = u^n_{\ |n}\\
+\text{(2)}\Rightarrow\spatie & \rho f^r= \rho X^r+\lambda  \theta _{,r} + \mu \left(u^r_{\ |ss}+\theta_{\ |r}\right)\\
+\Rightarrow\spatie & \rho f^r= \rho X^r+\left(\lambda +\mu\right) \theta _{,r} + \mu u^r_{\ |ss}
+\end{align*}
 So, $$f^r= \rho X^r+\left(\lambda +\mu\right) \theta _{,r} + \mu \mathbf {\Delta}u^r$$
 where we define the Laplacian differential operator as $$\mathbf{\Delta}\left({\cdot}\right) \overset{\underset{\mathrm{def}}{}}{=} \left({\cdot}\right)_{|nn}$$
  $$\blacklozenge$$
@@ -459,12 +466,12 @@ $$\mathbf{6.307}: \spatie \ \frac{1}{c^2}\frac{\partial^2H_r}{\partial t^2} -H_{
 Obviously, $\mathbf{6.307}$ is trivial as $H_r=0$ is a constant $=0$, and so are the derivatives.\\
 For $\mathbf{6.306}$, $ \frac{\partial^2E_r}{\partial t^2}= 0$ as $E_r$ is no function of time.\\
 So, the defined field satisfy the wave equation.\\
-\begin{align}
+\begin{align*}
 \left\{ \begin{array}{ll}
 \mathbf{6.301}: &\frac{1}{c}\frac{\partial E_r}{\partial t} = \epsilon_{rmn}H_{n,m}, \quad  \frac{1}{c}\frac{\partial H_r}{\partial t}= -\epsilon_{rmn}E_{n,m}\\
 \mathbf{6.302}: & E_{n,n}=0, \spatie \quad H_{n,n}=0
 \end{array}\right.
-\end{align}
+\end{align*}
 The first equation of $\mathbf{6.302}$ is not satisfied as $E_{n,n}= N$ with $N$ the space dimension.
  $$\blacklozenge$$
 \newpage
@@ -474,14 +481,14 @@ The first equation of $\mathbf{6.302}$ is not satisfied as $E_{n,n}= N$ with $N$
 Prove a similar statement for the electric and magnetic vectors of the complementary electromagnetic field.
 \end{tcolorbox}
 If we take the complex conjugate of $\mathbf{6.324}$ and subtract, we obtain after multiplying by $i$:
-\begin{align}
+\begin{align*}
 E^{**}_r = -\epsilon_{rmn}H^{**}_nV_{,m}, \quad H^{**}_r = \epsilon_{rmn}E^{**}_nV_{,m}, 
-\end{align} 
+\end{align*} 
 
 Hence, the vectors $V_{,r}, E^{**}_r$ and $ H^{**}_r$ form a right-handed orthogonal triad, and we obtain the relation
-\begin{align}
+\begin{align*}
 E^{**}_rE^{**}_r=H^{**}_nH^{**}_n
-\end{align}
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
@@ -503,7 +510,7 @@ Some thoughts about polarization
 \label{fig:fig_p221}
 \end{figure}
 In the above figures, only the electric field is represented (the magnetic field has to be imagined perpendicular to the $E_r$ vector).\\
-In figure (a) we see an elliptical polarization which occurs when the EMW can be split into two perpendicular components. When $\left|\overline{E_1}\right|= \left|\overline{E_2}\right|$, one can speak about circular polarization. Figure (b) gives a view at a certain time $t$ of the result of $\overline{E_1}+\overline{E_2}$.//
+In figure (a) we see an elliptical polarization which occurs when the EMW can be split into two perpendicular components. When $\left|\overline{E_1}\right|= \left|\overline{E_2}\right|$, one can speak about circular polarization. Figure (b) gives a view at a certain time $t$ of the result of $\overline{E_1}+\overline{E_2}$.\\
 In figure (c) an observer 'sees' in the phase wave situated at $P$, an unpolarized EMV. After passing a linear polarizing material at $Q$ the observer will 'see' the EMV oscillating only in the vertical plane along $\mathbf{v}$ 
  $$\blacklozenge$$
 \newpage
@@ -670,10 +677,10 @@ Let's impose the condition on $\Pi_n$:
 \end{align}
 From $(1)$ we have
 \begin{align}
-\frac{1}{c^2}\frac{\partial^2 \Pi_n}{\partial t^2}&=\Pi_{m,mn}-E_n\\
-\text{(17) becomes}\spatie  \Pi_{r,mm}&=\Pi_{m,mn}-E_n\\
-\Rightarrow\spatie E_n &= \Pi_{m,mn}-\Pi_{r,mm}\\
-\Rightarrow\spatie \partial_tE_n &=\partial_t\Pi_{m,mn}- \partial_t\Pi_{r,mm}
+\frac{1}{c^2}\frac{\partial^2 \Pi_r}{\partial t^2}&=\Pi_{m,mr}-E_r\\
+\text{(17) becomes}\spatie  \Pi_{r,mm}&=\Pi_{m,mr}-E_r\\
+\Rightarrow\spatie E_r &= \Pi_{m,mr}-\Pi_{r,mm}\\
+\Rightarrow\spatie \partial_tE_r &=\partial_t\Pi_{m,mr}- \partial_t\Pi_{r,mm}
 \end{align}
 Which is consistent with $\mathbf{6.302(a)}$ following $\text{(16)}$.\\\\
 
@@ -696,9 +703,9 @@ Which is consistent with $\mathbf{6.301(a)}$\\\\
 \end{tcolorbox}
 The reason why we can find a solution in the form $\mathbf{6.361}$ is because the condition $\mathbf{6.358}: \quad \Pi^{(0)}_{r,mm}+ k^2 \Pi^{(0)}_r = 0$ is a linear homogeneous differential equation. So any linear combination of solutions of this equation will also be a solution:\\
 Be
-\begin{align}
+\begin{align*}
 \Pi^{(0)}_r = \overset{N}{\sum} C_n\overset{n}{\Pi}^{(0)}_r
-\end{align}
+\end{align*}
 where the $\overset{n}{\Pi}^{(0)}_r$ satisfy the condition  $\overset{n}{\Pi}^{(0)}_{r,mm}+ k^2 \overset{n}{\Pi}^{(0)}_r = 0$ an are evaluated at the same point $z_r$ but at different $\zeta_n$.\\
 This is the situation as illustrated in the figure $(a)$ below.
 \begin{figure}[H]%
@@ -730,7 +737,7 @@ Let's first look at this with a discrete point and define
  E^{(0)}_r&= ik\epsilon_{rpq}\Pi^{(0)}_{q,p}\\
  H^{(0)}_r&= \Pi^{(0)}_{m,mr}+k^2\Pi^{(0)}_r
 \end{align}
-We check whether that Maxwell's equation in the form $\mathbf{6.356}$ are satisfieC:
+We check whether that Maxwell's equation in the form $\mathbf{6.356}$ are satisfied:
 \begin{align}
 &-ikE^{(0)}_r= \epsilon_{rmn}H^{(0)}_{n,m}\\
 \text{(1) and (2)}\quad\Rightarrow \spatie &-ikik\epsilon_{rpq}\Pi^{(0)}_{q,p}= \underbrace{\epsilon_{rmn}\Pi^{(0)}_{q,qmn}}_{=0}+\epsilon_{rmn}k^2\Pi^{(0)}_{n,m}\\
@@ -806,29 +813,29 @@ $$\mathbf{6.371}\spatie F_{\alpha\beta} = H_{\alpha\beta}, \ =-F_{4\alpha}=E_{\a
 $$\mathbf{6.374}\spatie g_{\alpha\beta} = a_{\alpha\beta}, \ g_{\alpha4}=0, \ g_{44}=-1$$
 \end{tcolorbox}
 For clarity this give in matrix form
-\begin{align}
+\begin{align*}
 \left(F_{mn}\right)=\left(\begin{matrix}
 0&H_3&H_2&E_1\\
 -H_3&0&H_1&E_2\\
 H_2&-H_1&0&E_3\\
 -E_1&-E_2&-E_3&0\\
 \end{matrix}\right)
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 \left(g_{mn}\right)=\left(\begin{matrix}
 a_{11}&a_{12}&a_{13}&0\\
 a_{12}&a_{22}&a_{23}&0\\
 a_{13}&a_{23}&a_{33}&0\\
 0&0&0&-1\\
 \end{matrix}\right)
-\end{align}
+\end{align*}
  $$\blacklozenge$$
 \newpage
 
 
 \section{p231 - Exercise}
 \begin{tcolorbox}
-Show that with homogeneous coordinates $z-r$ ($z_1,z_2,z_3$ being rectangular Cartesians in space and $z_4= ict=ix^4$ ) Maxwell's equations read
+Show that with homogeneous coordinates $z_r$ ($z_1,z_2,z_3$ being rectangular Cartesians in space and $z_4= ict=ix^4$ ) Maxwell's equations read
 $$ F_{rm,n}+F_{mn,r}+F_{nr,m}=0, \ F_{rm,m}=0$$
 Write out the components of $F_{mn}$ in terms of the real electric and magnetic vectors, noting which components are real and which are imaginary.
 \end{tcolorbox}
@@ -1054,7 +1061,8 @@ v^sv_{r|s}\dv{x^r}{u}&=kv^sv_{r|s}v^r\\
 &=kv^sv^m_{\ |s}v_m\\
 &=kv^sv^r_{\ |s}v_r
 \end{align}
-So (5) can be equivalently written as $kv^sv_{r|s}v^r + \dv{U}{u}+\dv{P}{u}= 0$ and $kv^sv^r_{\  |s}v_r+ \dv{U}{u}+\dv{P}{u}= 0$. Summing these two gives
+So (5) can be equivalently written as $kv^sv_{r|s}v^r + \dv{U}{u}+\dv{P}{u}= 0$ and $kv^sv^r_{\  |s}v_r+ \dv{U}{u}+\dv{P}{u}= 0$.\\
+ Summing these two gives
 \begin{align}
 &kv^s\left(v_{r|s}v^r+ v^r_{\  |s}v_r\right) + 2\dv{U}{u}+2\dv{P}{u}= 0\\
 \Leftrightarrow\spatie &kv^s\left(v_{r}v^r\right)_{|s} + 2\dv{U}{u}+2\dv{P}{u}= 0\\
@@ -1079,7 +1087,7 @@ Replacing in the general expression $\half v_{r}v^r + U+P= C$, $v_{r}v^r $ by $v
 \section{p235 - Exercise 3}
 \begin{tcolorbox}
 For the general motion of the fluid described in Exercise 2, prove that $$\dv{}{t}\int_C v_rdx^r =0$$
-where the integral is take round any closed curve, and $\dv{}{t}$ is the co-moving time derivative.
+where the integral is taken around any closed curve, and $\dv{}{t}$ is the co-moving time derivative.
 \end{tcolorbox}
 
 \begin{figure}[H]%
@@ -1096,7 +1104,8 @@ So we can use the Kelvin-Stokes theorem and form
 
 Consider now the surface formed by the envelope of the stream lines starting from the curve $\partial\Sigma_t$.
 
-What we try to achieve is to go from a curve integral to a volume integral using first the Kelvin-Stokes theorem followed by the divergence theorem and adding a term which we have to prove it is equal to zero
+What we try to achieve is to go from a curve integral to a volume integral using first the Kelvin-Stokes theorem followed by the divergence theorem and adding a term which we have to prove it is equal to zero.\\
+We write tentatively,
 \begin{align}
 \oint_{\partial\Sigma_{t+dt} }{v_rdx^r }-\oint_{\partial\Sigma_{t}} v_rdx^r&= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS-\iint_{\Sigma_{t}}\epsilon_{rjk}v_{k,j}(-n^r)dS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
 &= \iint_{\Sigma_{t+dt}}\epsilon_{rjk}v_{k,j}n^rdS+\iint_{\Sigma_{t}}\epsilon_{rjk}v_{k,j}n^rdS+\underbrace{\iint_{\Sigma_{s}}\epsilon_{rjk}v_{k,j}n^rdS}_{=0?}\\
@@ -1213,8 +1222,7 @@ In the fluid considered here ($\partial_t v_r=0$; $\rho=\rho(p)\Rightarrow \rho^
 \end{align}\\\\
 We are now able to deduce the asked expression.\\\\
 
-Consider the following expression $\epsilon_{nmr}\epsilon_{nst}v_mv_{t,s}$
-This can be expressed as 
+Consider the following expression $\epsilon_{nmr}\epsilon_{nst}v_mv_{t,s}$. This can be expressed as 
 \begin{align}
 \epsilon_{nrm}\epsilon_{nst}v_mv_{t,s}&=\left(\delta_{rs}\delta_{mt}-\delta_{rt}\delta_{ms}\right)v_mv_{t,s}\\
 &=v_mv_{m,r}-v_mv_{r,m}
@@ -1239,7 +1247,7 @@ So, $(19)$ becomes
 \begin{align}
 &\underbrace{\epsilon_{pkr}v_{s,k}v_{s,r}}_{=0}+\underbrace{\epsilon_{pkr}v_sv_{s,kr}}_{=0}+2\epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} =0
 \end{align}
-Nothing that, 
+Noting that, 
 \begin{align}
 \epsilon_{pkr}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k} 
 &=\epsilon_{rpk}\epsilon_{rnm}\left(\omega_nv_m\right)_{,k}\\
@@ -1298,7 +1306,7 @@ Suppose now that $k\ne p$. We rewrite $\half\epsilon_{kmn}\omega_{mn}\epsilon_{p
 \begin{align}
 \half\sum_{(p)}^{p\neq k}\sum_{(k)}^{k\neq p}\epsilon_{(k)mn}\omega_{mn}\epsilon_{(p)rs}v_{(p),(k)} 
 \end{align}
-nothing that the explicit summation symbol only span two dimensions.\\
+noting that the explicit summation symbol only span two dimensions.\\
 In $(37)$ as $k\ne p$ we need that $m=p$ or $n= p$ and rewrite $(37)$ as
 \begin{align}
 \half\sum_{(p)}^{p\neq k}\sum_{(k)}^{k\neq p}\epsilon_{(k)mn}\omega_{mn}\epsilon_{(p)rs}v_{(p),(k)} =&\left\{\begin{array}{l}\quad\half\sum_{(p)}\sum_{(k)}\epsilon_{(k)(p)n}\omega_{(p)n}\epsilon_{(p)rs}v_{(p),(k)} \\\\
@@ -1318,8 +1326,8 @@ $$\lozenge$$\\
 In curvilinear coordinates the expression becomes
 $$\fdv{\omega_{rs}}{t}= \omega_{pr}v_{p|s} - \omega_{ps}v_{p|r}$$\\
 $$\lozenge$$\\
-Suppose that initially at a certain point $\omega_{rs}=0$, then obviously $\fdv{\omega_{rs}}{t}= \omega_{pr}v_{p|s} - \omega_{ps}v_{p|r}=0$ and thus $\omega_{rs} =C$, a constant, which must be zero as the initial condiation was that $\omega_{rs}(t=0)=0$.
-$$\lozenge$$
+Suppose that initially at a certain point $\omega_{rs}=0$, then obviously $\fdv{\omega_{rs}}{t}= \omega_{pr}v_{p|s} - \omega_{ps}v_{p|r}=0$ and thus $\omega_{rs} =C$, a constant, which must be zero as the initial condition was that $\omega_{rs}(t=0)=0$.
+
  $$\blacklozenge$$
 \newpage
 
@@ -1530,12 +1538,12 @@ Let's test the expression $E_{\alpha \beta} = \epsilon_{\alpha\rho}\epsilon_{\be
 E_{\alpha \beta,\beta} &= \epsilon_{\alpha\rho}\epsilon_{\beta \sigma} \psi_{,\rho \sigma\beta}\\
 &= 0
 \end{align}
-The last identity is due to the fact that for a fixed $\alpha$, or $\rho$ will take the value of $\alpha$ (making $\epsilon_{\alpha\rho}=0$, or for $\rho\ne\alpha$, the only non-zero terms imply that $\beta\ne\sigma$ where the expansion is of the form $\epsilon_{\alpha\rho}\epsilon_{\alpha\rho} \psi_{,\rho \sigma\beta}+\epsilon_{\alpha\rho}\epsilon_{\rho\alpha} \psi_{,\rho \sigma\beta}$ (no summation over dummy indexes) and as the order of partial differentiation is of no importance and $\epsilon_{\rho\alpha}$ and $\epsilon_{\alpha\rho}$ are of opposite sign, the two terms will cancel each other.\\
+The last identity is due to the fact that for a fixed $\alpha$,\\ or $\rho$ will take the value of $\alpha$ (making $\epsilon_{\alpha\rho}=0$), \\or for $\rho\ne\alpha$, the only non-zero terms imply that $\beta\ne\sigma$ where the expansion is of the form $\epsilon_{\alpha\rho}\epsilon_{\alpha\rho} \psi_{,\rho \sigma\beta}+\epsilon_{\alpha\rho}\epsilon_{\rho\alpha} \psi_{,\rho \sigma\beta}$ (no summation over dummy indexes) and as the order of partial differentiation is of no importance and $\epsilon_{\rho\alpha}$ and $\epsilon_{\alpha\rho}$ are of opposite sign, the two terms will cancel each other.\\
 So indeed, $E_{\alpha \beta} = \epsilon_{\alpha\rho}\epsilon_{\beta \sigma} \psi_{,\rho \sigma} $ satisfies the differential equation $E_{rs,s}=0$.
 $$\lozenge$$
 Let's calculate explicitly the $E_{\alpha\beta}$.\\
 $\epsilon_{\alpha\rho}\ne0$ implies $\alpha\ne\rho$ and $\epsilon_{\beta \sigma}\ne0$ implies $\beta \ne\sigma$, hence
-\begin{align}
+\begin{align*}
 \begin{array}{ll}
 E_{11}&=\epsilon_{12}\epsilon_{12}\psi_{,22}\\
 &=(1)(1)\psi_{,22}\\
@@ -1547,7 +1555,7 @@ E_{12}&=\epsilon_{12}\epsilon_{21}\psi_{,21}\\
 &=(1)(-1)\psi_{,21}\\
 &=-\psi_{,21}
 \end{array}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -1627,7 +1635,7 @@ Be $\Gamma= \left(1-2\sigma\right)\Delta u_r+\theta_{,r}$ and let's plug into it
 &= -\left(1-2\sigma\right)\frac{1}{2\left(1-\sigma\right)} \psi_{k,kr}+\frac{1-2\sigma}{2\left(1-\sigma\right)}\psi_{k,kr}\\
 &=0
 \end{align}
-and indeed $$u_r=\psi_r-\frac{1}{4\left(1-\sigma\right)}\left(z_s\psi_s+\phi\right)_{,r}$$ is a solution of $$\left(1-2\sigma\right)\Delta u_r+\theta_{,r}=0$$
+so indeed $$u_r=\psi_r-\frac{1}{4\left(1-\sigma\right)}\left(z_s\psi_s+\phi\right)_{,r}$$ is a solution of $$\left(1-2\sigma\right)\Delta u_r+\theta_{,r}=0$$
 $$\blacklozenge$$
 \newpage
 
@@ -1638,19 +1646,19 @@ If, for rectangular Cartesian coordinates $z_r$, $\chi_{rs}$ is any symmetric te
 $$E_{mn}= \epsilon_{mpr}\epsilon_{nqs}\chi_{rs,pq}$$
 is symmetric, and satisfies the equations $E_{mn,n}= 0$.\\ Show that if we choose $\chi_{rs}= z_rz_s$, then $E_{mn}= -2\delta_{mn}$.
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 E_{nm}&= \epsilon_{npr}\epsilon_{mqs}\chi_{rs,pq}\\
 &= \epsilon_{npr}\epsilon_{mqs}\chi_{sr,qp}\\
 &= \epsilon_{nqs}\epsilon_{mpr}\chi_{rs,pq}\\
 &= E_{mn}
-\end{align}
+\end{align*}
 $$\lozenge$$
 Consider $$E_{mn,n}= \epsilon_{mpr}\epsilon_{nqs}\chi_{rs,pqn}$$
 As $\epsilon_{nqs}$ is antisymmetric in $(n,q)$ and $\chi_{rs,pqn}$ is symmetric in these indices,  $E_{mn,n}$ reduces to a sum of terms of the type $\epsilon_{mpr}\epsilon_{(nq)s}\chi_{rs,p(qn)}-\epsilon_{mpr}\epsilon_{(nq)s}\chi_{rs,p(nq)}$.\\
 So, $E_{mn,n}=0$
 $$\lozenge$$
 Be $\chi_{rs}= z_rz_s$, then
-\begin{align}
+\begin{align*}
 E_{mn}&= \epsilon_{mpr}\epsilon_{nqs}(z_rz_s)_{,pq}\\
 &= \epsilon_{mpr}\epsilon_{nqs}(\delta_{pr}z_s+\delta_{sp}z_r)_{,q}\\
 &= \epsilon_{mpr}\epsilon_{nqs}(\delta_{pr}\delta_{sq}+\delta_{sp}\delta_{rq})\\
@@ -1658,8 +1666,8 @@ E_{mn}&= \epsilon_{mpr}\epsilon_{nqs}(z_rz_s)_{,pq}\\
 &= \epsilon_{pmq}\epsilon_{pqn}\\
 &= \delta_{mq}\delta_{qn}-\delta_{mn}\underbrace{\delta_{qq}}_{=3}\\
 &= \delta_{mn}-3\delta_{mn}\\
-&= -2\delta_{mn}\\
-\end{align}
+&= -2\delta_{mn}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -2002,13 +2010,13 @@ H_{n,m}&= -k^2\epsilon_{npq}B_pG\left[z_qF\frac{1}{R}\right]_{,m}\\
 &= -k^2\epsilon_{npq}B_pG\left[z_q\right]_{,m}F\frac{1}{R}-k^2\epsilon_{npq}B_pGz_q\left[F\right]_{,m}\frac{1}{R}-k^2\epsilon_{npq}B_pGz_qF\left[\frac{1}{R}\right]_{,m}\\
 &= -k^2\epsilon_{npm}B_pGF\frac{1}{R}-k^2\epsilon_{npq}B_pGz_qF^{'}R_{,m}\frac{1}{R}+k^2\epsilon_{npq}B_pGz_qF\frac{R_{,m}}{R^2}\\
 &= -k^2\epsilon_{npm}B_pGF\frac{1}{R}-k^2\epsilon_{npq}B_pGz_q\left(\frac{ik}{R}-\frac{1}{R^2}\right)e^{ikR}\frac{z_m}{R}\frac{1}{R}+k^2\epsilon_{npq}B_pGz_qF\frac{z_{,m}}{R^3}\\
-&= -k^2\epsilon_{npm}B_pGF\frac{1}{R}-k^2\epsilon_{npq}B_pGz_qk^2\left(\frac{i}{kR}-\frac{1}{k^2R^2}\right)e^{ikR}\frac{z_m}{R}\frac{1}{R}+k^2\epsilon_{npq}B_pGz_qF\frac{z_{m}}{R^3}\\
+&= -k^2\epsilon_{npm}B_pGF\frac{1}{R}-k^2\epsilon_{npq}B_pGz_qk^2\left(\frac{i}{kR}-\frac{1}{k^2R^2}\right)e^{ikR}\frac{z_m}{R}\frac{1}{R}+k^2\epsilon_{npq}B_pGz_qF\frac{z_{m}}{R^3}
 \end{align}
 Again we can approximate by dropping the real part in $\left(\frac{i}{kR}-\frac{1}{k^2R^2}\right)$ as $Rk>> 2\pi$, so
 \begin{align}
 H_{n,m}&-k^2\epsilon_{npm}B_pGF\frac{1}{R}-ik^3\epsilon_{npq}B_pGz_qFz_m\frac{1}{R^2}+k^2\epsilon_{npq}B_pGz_qF\frac{z_{m}}{R^3}
 \end{align}
-Lets' multiply $(43)$ by $\epsilon_{rmn}$
+Lets' multiply $(42)$ by $\epsilon_{rmn}$
 Again we can approximate by dropping the real part in $\left(\frac{i}{kR}-\frac{1}{k^2R^2}\right)$ as $Rk>> 2\pi$, so
 \begin{align}
 \epsilon_{rmn}H_{n,m}&=\left\{\begin{array}{l}
@@ -2170,7 +2178,7 @@ And for $\mathbf{6.340}$ we get
 &\frac{1}{c}\partial_t \psi^{'}+ \phi^{'}_{m,m}\\
 &= \frac{1}{c}\partial_t \psi^{}+ \phi^{}_{m,m}-\left(\underbrace{\frac{1}{c^2}\partial^2_t v-v_{,mm}}_{=\text{(10)}}\right)\\
 &= \frac{1}{c}\partial_t \psi^{}+ \phi^{}_{m,m}-\frac{1}{c}\partial_t \psi^{}- \phi^{}_{m,m}\\
-=0
+&=0
 \end{align}
 
 $$\blacklozenge$$
@@ -2212,8 +2220,7 @@ H_{\alpha\beta} &=\phi_{\beta,\alpha}-\phi_{\alpha,\beta}\\
 F_{\alpha\beta} &= H_{\alpha\beta}= -\left(\phi_{\alpha,\beta}-\phi_{\beta,\alpha}\right)\\
 &= \kappa_{\alpha,\beta}-\kappa_{\beta,\alpha}
 \end{align}
-Consider $F_{44}$ and $\kappa_4= \psi$.\\
-So,
+Consider $F_{44}$ and $\kappa_4= \psi$.
 \begin{align}
 F_{44} &= \kappa_{44}-\kappa_{44}\\
 &=0
