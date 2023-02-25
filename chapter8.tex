@@ -8,10 +8,10 @@ $$\mathbf{8.101}\spatie \dv{T^{\rho}}{u} =\dv{T_r}{u}X^{\rho}_{r} + X^{\rho}_{rs
 \end{tcolorbox}
 $T^r$ being a tensor, we have $ T^{\rho} = T^r X^{\rho}{r}$
 , giving
-\begin{align}
+\begin{align*}
 \dv{T^{\rho}}{u} &= X^{\rho}_{r}\dv{T_r}{u} + T^r dv{X^{\rho}_{r}}{u}\\
 &= \dv{T_r}{u}X^{\rho}_{r} + T^r X^{\rho}_{rs}\dv{x^s}{u}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -21,7 +21,7 @@ $$\blacklozenge$$
 $$\fdv{TS^r}{u} = \dv{T}{u} S^r + T \fdv{S^r}{u}$$
 \end{tcolorbox}
 We have 
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{ll}
 \fdv{S^r}{u} = \dv{S^r}{u} +\Gamma^r_{mn}S^m\dv{x^n}{u}& \ \\\\
 \fdv{TS^r}{u} = \dv{TS^r}{u} +\Gamma^r_{mn}TS^m\dv{x^n}{u}& \ \\
@@ -32,7 +32,7 @@ T\fdv{S^r}{u} = T\dv{S^r}{u} +\Gamma^r_{mn}TS^m\dv{x^n}{u}&(a)\\\\
 \end{array}\right.\\
 (a)-(b)\Rightarrow\spatie & T \fdv{S^r}{u} - \fdv{TS^r}{u} =-  S^r\dv{T}{u} \\
 \Rightarrow\spatie &\fdv{TS^r}{u} = T\fdv{S^r}{u}  +  S^r\dv{T}{u} 
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -40,34 +40,34 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Show that any tensor $T^{mn}$ may be written in the form
 $$T^{mn}=X_{(p)}^{\ \ m}Y_{(p)}^{\ \ n}$$
-and use this result to prove problem 11, Exercise III.
+and use this result to prove problem 11, Exercises III.
 \end{tcolorbox}
 The proof is the same as for $\mathbf{(8.107)}$ . Let's define $X^{(p) m}_{}=T^{mp}$ and $Y^{\ \ n}_{(p)}= \delta^n_p$. Then 
-\begin{align}
+\begin{align*}
 S^{mn}&= X^{(p) m}_{} \delta^n_p\\
  &= X^{(n) m}_{}\\
  &=T^{mn}
-\end{align}
+\end{align*}
 $$\lozenge$$
 Problem 11, Exercise III: $ T^{mn}_{\quad | mn}= T^{mn}_{\quad | nm}$\\
 We can compose $T^{mn}$ in two equivalent ways:   $T^{mn} = X^{(p) m}_{}Y^{\ \ n}_{(p)}$ with $X^{(p) m}_{}=T^{mp}$and $Y^{\ \ n}_{(p)}= \delta^n_p$ and also $T^{mn} = X^{(p) n}_{}Y^{\ \ m}_{(p)}$ with $X^{(p) n}_{}=T^{pn}$and $Y^{\ \ m}_{(p)}= \delta^m_p$. \\
 For the first we have obviously
-\begin{align}
+\begin{align*}
 T^{mn}_{\quad | m}&= X^{(p) m}_{\quad \quad |m} \delta^n_p+ X^{(p) m}_{} \underbrace{\delta^n_{p|m}}_{=0}\\
 &= X^{(p) m}_{\quad \quad | m} \delta^n_p\\
 T^{mn}_{\quad \quad | mn}&= X^{(p) m}_{\quad \quad |mn} \delta^n_p+ X^{(p) m}_{\quad |m} \underbrace{\delta^n_{p|m}}_{=0}\\
 &= X^{(p) m}_{\quad \quad |mn} \delta^n_p\\
 &= X^{(n) m}_{\quad \quad |mn} 
 = T^{mn}_{\quad | mn}
-\end{align}
+\end{align*}
 and for the second 
-\begin{align}
+\begin{align*}
 T^{mn}_{\quad | n}&= X^{(p) n}_{\quad \quad |n} \delta^m_p+ X^{(p) n}_{} \underbrace{\delta^m_{p|n}}_{=0}\\
 &= X^{(p) n}_{\quad \quad | n} \delta^m_p\\
 T^{mn}_{\quad \quad | nm}&= X^{(p) n}_{\quad \quad |nm} \delta^m_p+ X^{(p) n}_{\quad |n} \underbrace{\delta^m_{p|m}}_{=0}\\
 &= X^{(p) n}_{\quad \quad |nm} \delta^m_p\\
 &= X^{(m) n}_{\quad \quad |nm} = T^{mn}_{\quad | nm}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -78,15 +78,15 @@ Show that, if the parameter along the curve $x^r=x^r(u)$ is changed from $u$ to 
 $$\fdv{}{v}= \dv{u}{v}\fdv{}{u}$$
 \end{tcolorbox}
 Be $T^{rs\dots}_{mn\dots}$ an arbitrary tensor. Then,
-\begin{align}
+\begin{align*}
 \fdv{}{v}T^{rs\dots}_{mn\dots} &= \dv{}{v}T^{rs\dots}_{mn\dots}+ \sum_{p} A^p_t \dv{x^t}{v} - \sum_{p} B_{pt} \dv{x^t}{v} 
-\end{align}
+\end{align*}
 with $A^p_t$ and $B_{pt}$ being the coefficients as functions of the Christoffels symbols and the tensor.
 This expression can be expressed as 
-\begin{align}
+\begin{align*}
 \fdv{}{v}T^{rs\dots}_{mn\dots} &= \dv{u}{v}\dv{}{u}T^{rs\dots}_{mn\dots}+ \sum_{p} A^p_t  \dv{u}{v}\dv{x^t}{u} - \sum_{p} B_{pt}  \dv{u}{v}\dv{x^t}{u} \\
 &=\dv{u}{v}\fdv{}{u}T^{rs\dots}_{mn\dots}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -97,11 +97,11 @@ $$\mathbf{8.114}\spatie C^r_{mn}=\Gamma^r_{mn}-\overline{\Gamma}^r_{mn}$$
 is a tensor 
 \end{tcolorbox}
 Using $\mathbf{(8.112)}$ and $\mathbf{(8.113)}$ we get for a coordinate transformation
-\begin{align}
+\begin{align*}
 C^{\rho}_{\mu \nu }&=\Gamma^{\rho}_{\mu \nu }-\overline{\Gamma}^{\rho}_{\mu \nu }\\
 &= \Gamma^{r}_{mn}X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}+ X^{r}_{\mu \nu}X^{\rho}_{r}-\overline{\Gamma}^{r}_{mn}X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}- X^{r}_{\mu \nu}X^{\rho}_{r}\\
 &= \left(\Gamma^{r}_{mn}- \overline{\Gamma}^{r}_{mn}\right) X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}
-\end{align}
+\end{align*}
 which is the transformation rule for a tensor 
 $$\blacklozenge$$
 \newpage
@@ -114,9 +114,9 @@ Show that the right-hand side of $\mathbf{8.110}$ may also be obtained formally 
 \end{tcolorbox}
 Be $Q= T^{..r}_{mn}X^mY^nZ_r$ an invariant, then $\fdv{Q}{u}$ is also invariant and $\fdv{Q}{u} = \dv{Q}{u}$.
 So,
-\begin{align}
+\begin{align*}
 \dv{Q}{u}&= \dv{T^{..r}_{mn}}{u}X^mY^nZ_r+ T^{..r}_{mn}\left(\dv{X^m}{u}Y^nZ_r+X^m\dv{Y^n}{u}Z_r +X^mY^n\dv{Z_r}{u}\right)
-\end{align}
+\end{align*}
 where $X^m, \ Y^n, \ Z_r$ are transported parallely, hence  $$\fdv{X^m}{u} = 0, \ \fdv{Y^n}{u}=0 , \ \fdv{Z_r}{u}=0  $$
 and 
 $$\dv{X^m}{u} = -\Gamma^m_{pq}X^p\dv{x^q}{u}, \ \dv{Y^n}{u}=-\Gamma^n_{pq}Y^p\dv{x^q}{u} , \ \dv{Z_r}{u}=\Gamma^p_{rq}Z_p\dv{x^q}{u}  $$
@@ -129,7 +129,7 @@ Putting $   \fdv{T^{..r}_{mn}}{u} = \dv{T^{..r}_{mn}}{u}-\Gamma^p_{mq}T^{..r}_{p
 $$\fdv{X^m}{u} = 0, \ \fdv{Y^n}{u}=0 , \ \fdv{Z_r}{u}=0  $$
 we get 
 $$\fdv{Q}{u}= \fdv{T^{..r}_{mn}}{u}X^mY^nZ_r$$
-as in $(3)$.  
+as in $(2)$.  
 $$\blacklozenge$$
 \newpage
 
@@ -140,11 +140,11 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove that $\delta^r_{s|n} = C^r_{sn}$ where $C^r_{sn}$ is defined by $\mathbf{(8.114)}$.
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
  \delta^r_{s|n} &=\underbrace{\delta^r_{s,n} }_{=0}+ \Gamma^r_{kn}\delta^k_s - \overline{\Gamma}^k_{sn}\delta^r_k\\
  &=\Gamma^r_{sn} - \overline{\Gamma}^r_{sn}\\
  &= C^r_{sn}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \\\\
 \section{p288 - Exercise}
@@ -165,29 +165,29 @@ Show that by a suitable choice of the parameter $u$ along a path, the differenti
  \fdv{\lambda^r}{u} = \mu(u)\lambda^r
  \end{align}
  Suppose now that we can find a suitable parameter $s$ for which
- \begin{align}
+ \begin{align*}
  \fdv{\lambda^r}{s} = 0
- \end{align}
+ \end{align*}
  so 
- \begin{align}
+ \begin{align*}
  \fdv{\lambda^r}{s} = \dv[2]{x^r}{s}+\Gamma^r_{mn}\dv{x^m}{s}\dv{x^n}{s}=0
- \end{align}
+ \end{align*}
  and suppose that there is an homeomorphism between $u$ and $s$, then we can write (see section $2.17$ for the details):
- \begin{align}
+ \begin{align*}
 \dv[2]{x^r}{u}+\Gamma^r_{mn}\dv{x^m}{s}\dv{x^n}{s}=- \frac{\dv[2]{u}{s}}{\left(\dv{x^r}{s}\right)^2}\dv{x^r}{u}
- \end{align}
+ \end{align*}
  and from$(1)$ we deduce 
- \begin{align}
+ \begin{align*}
  -\frac{\dv[2]{u}{s}}{\left(\dv{u}{s}\right)^2}= \mu(u)
- \end{align}
+ \end{align*}
  This is a differential equation which gives (see section $2.17$ in part I for the details)
- \begin{align}
+ \begin{align*}
  \frac{\dv[2]{s}{u}}{\left(\dv{s}{u}\right)^2}= \mu(u)
- \end{align}
+ \end{align*}
  giving a solution 
- \begin{align}
+ \begin{align*}
  s(u)&= \int_{u_0}^{u}\left(exp\left(\int_{v_0}^v\mu(v)dw\right)\right)dv
- \end{align}
+ \end{align*}
  as a suitable parameter for which $$\fdv{\lambda^r}{s} = 0$$
 $$\blacklozenge$$
 \newpage
@@ -198,17 +198,17 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Show that, in a space with ortho-invariant linear connection, the Kronecker delta is propagated parallely along curves satisfying $C_n\lambda^n = 0$.
 \end{tcolorbox}
- \begin{align}
+ \begin{align*}
  \fdv{}{u}\delta^r_s &= \underbrace{\dv{}{u}\delta^r_s}_{=0}+\Gamma^r_{mn}\delta^m_s\dv{x^n}{u} - \overline{\Gamma}^m_{sn}\delta^r_m\dv{x^n}{u} \\
  &= \left(\Gamma^r_{mn}\delta^m_s - \overline{\Gamma}^m_{sn}\delta^r_m\right)\dv{x^n}{u} \\
  &=\underbrace{ \left(\Gamma^r_{sn} - \overline{\Gamma}^r_{sn}\right)}_{=C^r_{sn}}\dv{x^n}{u}\\
  &=C^r_{sn}\lambda^n 
- \end{align}
+ \end{align*}
  Ortho-invariant linear connection means $C^r_{sn}=\delta^r_s C_n$, giving
-  \begin{align}
+  \begin{align*}
  \fdv{}{u}\delta^r_s &= \delta^r_s C_n\lambda^n \\
  &=0
- \end{align}
+ \end{align*}
  provided that $C_n\lambda^n = 0$.
 $$\blacklozenge$$\\\\
 
@@ -247,20 +247,20 @@ $$\blacklozenge$$\\
 Prove the above identities by using a coordinate system considered in $F2$.
 \end{tcolorbox}
  At the origin of the coordinate syetm of the type considered in $F2$. We have 
- \begin{align}
+ \begin{align*}
  R^s_{.rmn}&= \Gamma^s_{rn,m}-\Gamma^s_{rm,n}\\
  \Rightarrow \spatie R^s_{.rnm}&= \Gamma^s_{rm,n}-\Gamma^s_{rn,m} = -R^s_{.rmn}
- \end{align}
+ \end{align*}
  and 
- \begin{align}
+ \begin{align*}
  R^s_{.rmn} + R^s_{.mnr}+ R^s_{.nrm}&= \Gamma^s_{rn,m}-\Gamma^s_{rm,n} +\Gamma^s_{mr,n}-\Gamma^s_{mn,r} +\Gamma^s_{nm,r}-\Gamma^s_{nr,m} \\
  &=0
- \end{align}
+ \end{align*}
  and 
- \begin{align}
+ \begin{align*}
  R^s_{.rmn|k} + R^s_{.rnk|m}+ R^s_{.rkm|n}&= \Gamma^s_{rn,mk}-\Gamma^s_{rm,nk} +\Gamma^s_{rk,nm}-\Gamma^s_{rn,km} +\Gamma^s_{rm,kn}-\Gamma^s_{rk,mn}\\
  &=0
- \end{align}
+ \end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -268,17 +268,17 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Verify that $F_{mn}$ is skew-symmetric and that $R_{mn}+F_{mn}$ is symmetric. Show also directly from $8.219$ that $F_{mn}$ vanishes in a Riemannian space?
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 F_{mn} &= \half\left( \Gamma^s_{ns,m}-\Gamma^s_{ms,n} \right)\\
 F_{nm} &= \half\left( \Gamma^s_{ms,n}-\Gamma^s_{ns,m} \right)\\
 &= -\half\left( \Gamma^s_{ns,m}-\Gamma^s_{ms,n} \right)
-\end{align}
+\end{align*}
 And, as for $m=n$, $F_{mn} = 0$, we can conclude that $F_{mn}$ is skew-symmetric.
 $$\lozenge$$\\
-\begin{align}
+\begin{align*}
 R_{mn} +F_{mn} &=  \Gamma^s_{ms,n}-\Gamma^s_{mn,s}+\half\left( \Gamma^s_{ns,m}-\Gamma^s_{ms,n} \right)+\Gamma^k_{ms}\Gamma^s_{kn}-\Gamma^k_{mn}\Gamma^s_{ks}\\
 &=  \underbrace{\half \Gamma^s_{ms,n}-\Gamma^s_{mn,s}+\half \Gamma^s_{ns,m}}_{=\text{symmetric in } m,n} +\underbrace{\Gamma^k_{ms}\Gamma^s_{kn}}_{=\text{symmetric in } m,n}-\underbrace{\Gamma^k_{mn}\Gamma^s_{ks}}_{=\text{symmetric in } m,n}\\
-\end{align}
+\end{align*}
 Conclusion: $R_{mn} +F_{mn}$ is symmetric.
 $$\lozenge$$\\
 In Riemannian space we have $$F_{mn} = \half R^s_{.smn} = \half a^{sk}R_{ksmn}$$
@@ -314,17 +314,17 @@ Is $\delta^r_s$ a gauge invariant tensor?
 \end{tcolorbox}
 We have $\delta^n_r = a^{'}_{rk} a^{'kn} $ with (see $\mathbf{(8.311)}$) $a^{'}_{rk}= \lambda a^{'}_{rk} $.\\
 From chapter II $\mathbf{(2.203)}$ we have 
-\begin{align}
+\begin{align*}
 a^{'kn} &= \frac{\Delta^{'kn}}{a^{'}}
-\end{align}
+\end{align*}
 with
-\begin{align}
+\begin{align*}
 \Delta^{'kn} &= \lambda^{N-1}\Delta^{kn}\\
 a^{'}&= \lambda^N a\\
 \Rightarrow\spatie a^{'kn} &= \frac{ 1}{\lambda} a^{kn}\\
 \Rightarrow\spatie \delta^n_r &= \lambda a_{rk}\frac{ 1}{\lambda} a^{kn}\\
 &= \delta^{kn} 
-\end{align}
+\end{align*}
 Hence, $ \delta^{kn} $ is gauge invariant.
 $$\blacklozenge$$
 \newpage
@@ -344,10 +344,10 @@ How does it behave under gauge transformations?
  $$R_{srmn} = a_{sp}R^s_{.rmn}$$
  $R^p_{.rmn} $ is gauge invariant, hence $R^{'p}_{.rmn} =R^p_{.rmn} $ and $a^{'}_{sp}= \lambda a^{}_{sp} $ giving
  
- \begin{align}
+ \begin{align*}
  R^{'}_{srmn} &=\lambda a^{}_{sp}R^p_{.rmn}\\
  &=\lambda R_{srmn}
- \end{align}
+ \end{align*}
  Hence, $R_{srmn}$ is not gauge invariant.
 $$\blacklozenge$$\\
 \newpage
@@ -359,15 +359,17 @@ In a space with a general linear connection,show that the expressions
 $$\Gamma^r_{mn}- \Gamma^r_{nm}, \quad \overline{\Gamma}^r_{mb}- \overline{\Gamma}^r_{nm}$$ are tensors of the tpe indicated by the position of he suffixes.
 \end{tcolorbox}
  We use $\mathbf{(8.112)}$ page $286$:
- \begin{align}
- \left\{\begin{array}{l}
+ \begin{align*}
+ &\left\{\begin{array}{l}
  \Gamma^{\rho}_{\mu\nu} = \Gamma^{r}_{mn} X^{\rho}_r X^m_{\mu} X^n_{\nu} + X^r_{\mu \nu} X^{\rho}_r\\\\
  \overline{\Gamma}^{\rho}_{\mu\nu} = \overline{\Gamma}_{mn} X^{\rho}_r X^m_{\mu} X^n_{\nu} + X^r_{\mu \nu} X^{\rho}_r\\
- \end{array}\right.\\
+ \end{array}\right.
+ \end{align*}
+ \begin{align*}
  \Rightarrow\spatie \Gamma^{\rho}_{\mu\nu} -\Gamma^{\rho}_{\nu\mu}&=\Gamma^{r}_{mn} X^{\rho}_r X^m_{\mu} X^n_{\nu}-\Gamma^{r}_{nm} X^{\rho}_r X^n_{\mu} X^m_{\nu}\\
  &= \left(\Gamma^{r}_{mn}-\Gamma^{r}_{nm}\right)X^{\rho}_r X^m_{\mu} X^n_{\nu}
- \end{align}
- So, $\Gamma^{r}_{mn}-\Gamma^{r}_{nm}$ transforms as a tensor.
+ \end{align*}
+ So, $\Gamma^{r}_{mn}-\Gamma^{r}_{nm}$ transforms as a tensor. The same reasoning is valid for the other connection.
 $$\blacklozenge$$\\
 \newpage
 
@@ -379,12 +381,12 @@ $$\blacklozenge$$\\
  $$ L^r_{mn} = -L^r_{nm} = \half\left(\Gamma^r_{mn} - \Gamma^r_{nm}\right)$$
 \end{tcolorbox}
 For an invariant, yields
-\begin{align}
+\begin{align*}
 &T_{|m} = T_{,m}\\
 \Rightarrow\spatie T_{|mn}-T_{|nm} &= \underbrace{T_{,mn}-T_{,nm}}_{=0} -\overline{\Gamma}^k_{mn}T_{,k} + \overline{\Gamma}^k_{nm}T_{,k} \\
 &= -\left(\Gamma^k_{mn}- \Gamma^k_{nm} \right) \underbrace{T_{,k}}_{= T_{|k}}\\
 &= 2T_{|k}L^k_{mn}
-\end{align}
+\end{align*}
 with $ L^k_{mn} = \half\left(\Gamma^k_{mn}- \Gamma^k_{nm} \right) $
 
 $$\blacklozenge$$\\
@@ -399,15 +401,15 @@ If $T_r$ is a covariant vector field in in a space with a single linear connecti
  $$R^s_{.pm} = \Gamma^s_{rn,m} - \Gamma^s_{rm,n} + \Gamma^p_{rn}\Gamma^s_{pm}-\Gamma^p_{rm}\Gamma^s_{pn}$$
 \end{tcolorbox}
 Starting from $ T_{r|m} = T_{r,m} - \Gamma^p_{rm}T_p$ we get
-\begin{align}
+\begin{align*}
 &\left\{\begin{array}{l}
 T_{r|mn} = T_{r,mn} - \Gamma^p_{rm,n}T_p- \Gamma^p_{rm}T_{p,n} - \Gamma^q_{rn}T_{q,m} + \Gamma^q_{rn}\Gamma^p_{qm}T_{p} - \Gamma^q_{mn}T_{r,q} +  \Gamma^q_{mn}\Gamma^p_{rq}T_{p} \\\\
 T_{r|nm} = T_{r,mn} - \Gamma^p_{rn,m}T_p- \Gamma^p_{rn}T_{p,m} - \Gamma^q_{rm}T_{q,n} + \Gamma^q_{rm}\Gamma^p_{qn}T_{p} - \Gamma^q_{nm}T_{r,q} +  \Gamma^q_{nm}\Gamma^p_{rq}T_{p} \\
 \end{array}
 \right.
-\end{align}
+\end{align*}
 
-\begin{align}
+\begin{align*}
 \Rightarrow\quad T_{r|mn} -T_{r|nm} &= \left\{\begin{array}{l}
  \left(\Gamma^p_{rn,m} - \Gamma^p_{rm,n} 
 - \Gamma^q_{mn}\Gamma^p_{rq}+ \Gamma^q_{rn}\Gamma^p_{qm}- \Gamma^q_{rm}\Gamma^p_{qn}+  \Gamma^q_{mn}\Gamma^p_{rq}\right)T_p\\\
@@ -422,7 +424,7 @@ T_{r|nm} = T_{r,mn} - \Gamma^p_{rn,m}T_p- \Gamma^p_{rn}T_{p,m} - \Gamma^q_{rm}T_
 \end{array}
 \right.\\
 &= R^p_{.rmn}T_p-2T_{r|q}L^q_{mn}
-\end{align}
+\end{align*}
 $$\blacklozenge$$\\
 \newpage
 
@@ -451,10 +453,10 @@ We can also write $(4)$ as $ \Gamma^m_{tk}\lambda^k = \mu \delta^m_t$
 &=0
 \end{align}
 As $(7)$ is true for every curve (every $\lambda^t$), we can conclude as a  trivial solution that $\Gamma^m_{kt}=\Gamma^m_{tk}$. But another solution makes $\left(\Gamma^m_{kt}-\Gamma^m_{tk}\right)\lambda^t\lambda^k  =0$, i.e. $ \Gamma^m_{kt}-\Gamma^m_{tk}= \delta^m_kA_t - \delta^m_tA_k $, indeed
-\begin{align}
+\begin{align*}
 \left(\delta^m_kA_t - \delta^m_tA_k\right)\lambda^t\lambda^k &=  \lambda^mA_t\lambda^t-\lambda^mA_k\lambda^k\\
 &=0
-\end{align}
+\end{align*}
 This  solution is less restrictive than the trivial solution. \\
 As any tensor can be expressed as the outer product of $1-$forms, the proof is valid for any tensor of any rank.
 $$\blacklozenge$$\\
@@ -471,7 +473,7 @@ $$x^{\rho} = \delta^{\rho}_r\left(x^r-x^r_0\right) + \half\left\{\half\delta^{\r
 Be $T_r$ a random tensor at a point $O$ and a random curve $x^r=x^r(u)$.\\ Then 
 \begin{align}\Delta T_r=  \dv{T_r}{u}-\fdv{T_r}{u}  =  \Gamma^m_{rn}T_m\lambda^n
 \spatie (\lambda^n=\dv{x^n}{u})\end{align} 
-let's used the proposed coordinate transformation and using that $\Gamma^p_{pm}-\Gamma^p_{mp} = \delta^p_pA_m - \delta^p_n A_p= \left(N-1\right)A_m$  at the point $O$, so the transformation reduces to
+let's use the proposed coordinate transformation and using that $\Gamma^p_{pm}-\Gamma^p_{mp} = \delta^p_pA_m - \delta^p_n A_p= \left(N-1\right)A_m$  at the point $O$, so the transformation reduces to
 \begin{align}
 x^{\rho} = \delta^{\rho}_r\left(x^r-x^r_0\right) + \half\left\{\half\delta^{\rho}_r\left(\Gamma^r_{mn} +\Gamma^r_{nm}\right)_0 - \delta^{\rho}_nA_{n(0)} \right\}\left(x^m-x^m_0\right)\left(x^n-x^n_0\right)
 \end{align} 
@@ -491,14 +493,14 @@ and
 X^{\rho}_{tm} &= \half\left(\Gamma^r_{tm} +\Gamma^r_{mt}\right)_0\delta^{\rho}_r- \half \delta^{\rho}_m A_{t(0)}- \half \delta^{\rho}_t A_{m(0)}
 \end{align}
 giving for $(5)$:
-\begin{align}
+\begin{align*}
 \Delta T_{\mu} &= \left[ \Gamma^s_{mt}X^m_{\mu}- \left(\half\left(\Gamma^r_{tm} +\Gamma^r_{mt}\right)_0\delta^{\rho}_r- \half \delta^{\rho}_m A_{t(0)}- \half \delta^{\rho}_t A_{m(0)}\right)X^s_{\rho}X^m_{\mu} \right]T_s\lambda^t\\
  &= \left[ \Gamma^s_{mt}X^m_{\mu}- \half\left(\Gamma^r_{tm} -\Gamma^r_{mt}\right)_0\delta^{s}_rX^m_{\mu}+ \half \delta^{s}_m A_{t(0)}X^m_{\mu}+ \half \delta^{s}_t A_{m(0)}X^m_{\mu}\right]T_s\lambda^t\\
  &= \left[ \half\underbrace{\left(\Gamma^s_{mt}-\Gamma^s_{tm} -\right)_0}_{=\delta^s_mA_{t(0)} - \delta^s_t A_{m(0)}}X^m_{\mu}+ \half \delta^{s}_m A_{t(0)}X^m_{\mu}+ \half \delta^{s}_t A_{m(0)}X^m_{\mu}\right]T_s\lambda^t\\
  &= \left[ \half\delta^s_mA_{t(0)} X^m_{\mu}- \half\delta^s_t A_{m(0)}X^m_{\mu}+ \half \delta^{s}_m A_{t(0)}X^m_{\mu}+ \half \delta^{s}_t A_{m(0)}X^m_{\mu}\right]T_s\lambda^t\\
  &=  \delta^s_mA_{t(0)} X^m_{\mu}T_s\lambda^t\\
  &= \underbrace{\left(A_{t(0)} \lambda^t\right)}_{\text{invariant}}\underbrace{T_sX^s_{\mu}}_{= T_{\mu}}
-\end{align}
+\end{align*}
 and we get $$\Delta T_{\mu}= kT_{\mu}$$.
 $$\blacklozenge$$\\
 \newpage
@@ -510,12 +512,12 @@ $$\blacklozenge$$\\
 Show that $$T_{r|s} - T_{s|r}= T_{r,s}-T_{s,r}$$
 $T_r$ being a covariant vector, if the connection is symmetric but not, if the connection is unsymmetric.
 \end{tcolorbox}
-$T_{r|s} = T_{r,s}-\Gamma^m_{rs}T_m$ and $T_{s|r} = T_{s,r}-\Gamma^m_{sr}T_m$
-So if the linear connection is symmetric
-\begin{align}
-T_{r|s} - T_{s|r}&= T_{r,s}-\Gamma^m_{rs}T_m-T_{s,r}+\Gamma^m_{sr}T_m
+$$T_{r|s} = T_{r,s}-\Gamma^m_{rs}T_m$$ and $$T_{s|r} = T_{s,r}-\Gamma^m_{sr}T_m$$
+ So if the linear connection is symmetric
+\begin{align*}
+T_{r|s} - T_{s|r}&= T_{r,s}-\Gamma^m_{rs}T_m-T_{s,r}+\Gamma^m_{sr}T_m\\
 &= T_{r,s}-T_{s,r}
-\end{align}\\
+\end{align*}\\
 This is obviously not true for a non-symmetric linear connection.
 $$\blacklozenge$$\\
 \newpage
@@ -524,11 +526,11 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Show that, in the generalized Stokes' theorem $\mathbf{(7.505)}$, the partial derivatives in the integrand on the left-hand side can be replaced by the covariant derivative if the space has a symmetric connection.
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \mathbf{(7.505):}\spatie \int_{R_{(M)}} T_{k_1\dots k_{M-1},k_M}d\tau_{(M1)}^{k_1\dots k_{M-1}}&= \int_{R_{(M-1)}} T_{k_1\dots k_{M-1},k_M}d\tau_{(M-1)}^{k_1\dots k_{M-1}}
-\end{align}
+\end{align*}
 and we have 
-\begin{align}
+\begin{align*}
 \int_{R_{(M)}} T_{k_1\dots k_{M-1}|k_M}d\tau_{(M1)}^{k_1\dots k_{M-1}}&= \left\{\begin{array}{l}
 \int_{R_{(M)}} T_{k_1\dots k_{M-1},k_M}d\tau_{(M1)}^{k_1\dots k_{M-1}}\\\\
 -\int_{R_{(M)}} \Gamma^{k_{\rho}}_{k_1 k_M}T_{k_{\rho}\dots k_{M-1},k_M}d\tau_{(M1)}^{k_1\dots k_{M-1}}\\\\
@@ -536,7 +538,7 @@ and we have
 \spatie \spatie \vdots\\\\
 -\int_{R_{(M)}} \Gamma^{k_{\rho}}_{k_{M-1} k_M}T_{k_1\dots k_{\rho},k_M}d\tau_{(M1)}^{k_1\dots k_{M-1}}
 \end{array}\right.
-\end{align}
+\end{align*}
 We note that in the terms with the negative sign that $d\tau_{(M1)}^{k_1\dots k_{M-1}}$ is skew-symmetric. So, under the integral we will have two cancelling terms of sums of the form 
 
 $$ \Gamma^{u}_{k_p k_M}T_{\dots u \dots ,k_M}d\tau_{(M1)}^{k_1\dots (k_p)\dots (k_{M})}+\Gamma^{u}_{k_M k_p }T_{\dots u \dots ,k_M}d\tau_{(M1)}^{k_1\dots (k_{M})\dots (k_p)}$$
@@ -610,16 +612,16 @@ K&=\left(a_{mn}X^mX^n\right)_{,s}\phi_r d\tau_{(2)}^{rs}\\
 &=a_{mn,s}X^mX^n \phi_r d\tau_{(2)}^{rs}+2a_{mn}X^mX^n_{,s}\phi_r d\tau_{(2)}^{rs}
 \end{align}
 From $\mathbf{(8.304)}$ we have
-\begin{align}
+\begin{align*}
 a_{mn,s} -\Gamma^k_{ms}a_{kn}- \Gamma^k_{nk}a_{km}+a_{mn}\phi_s=0
-\end{align} 
+\end{align*} 
 and $(11)$ can be written as 
 
-\begin{align}
+\begin{align*}
 K&= \Gamma^k_{ms}a_{kn}X^mX^n \phi_r d\tau_{(2)}^{rs}+ \Gamma^k_{ns}a_{km}X^mX^n \phi_r d\tau_{(2)}^{rs}-a_{mn}\phi_s X^mX^n \phi_r d\tau_{(2)}^{rs}+2a_{mn}X^mX^n_{,s}\phi_r d\tau_{(2)}^{rs}\\
 &= 2\Gamma^k_{ms}a_{kn}X^mX^n \phi_r d\tau_{(2)}^{rs}-\underbrace{a_{mn}\phi_s X^mX^n \phi_r d\tau_{(2)}^{rs}}_{=0}+2a_{mn}X^mX^n_{,s}\phi_r d\tau_{(2)}^{rs}\\
 &= 2\underbrace{\left(\Gamma^m_{ks}X^k +X^m_{,s}\right)}_{X^m_{\ |s}}a_{mn}X^n\phi_r d\tau_{(2)}^{rs}
-\end{align}
+\end{align*}
 We can put $X^m_{\ |s}=0$ as we can  span the infinitesimal $2-$space by a bundle of curves along which we parallely transport $X^m$.
 So, $K=0$ and $(9)$ becomes
 $$\Delta X^2  = \frac{2}{N}F_{rs}  X^2 d\tau_{(2)}^{rs}$$
@@ -633,14 +635,14 @@ $$\blacklozenge$$\\
 Verify that the projective curvature tensor $\mathbf{8.338}$ is invariant under all projective transformations.
 \end{tcolorbox}
 We have
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{ll}
 \mathbf{(8.338)}&W^s_{.rmn}=R^s_{.rmn}-\frac{2}{N+1}\delta_r^s F_{mn}+\frac{1}{N-1}\left(\delta^s_m R_{rn}-\delta^s_n R_{rm}\right)-\frac{2}{N^2-1}\left(\delta^s_n F_{rm}-\delta^s_mF_{rn}\right)\\\\
 \mathbf{(8.214)}&R^{s}_{.rmn} = \Gamma^{s}_{rn,m} - \Gamma^{s}_{rm,n}+\Gamma^{p}_{rn}\Gamma^{s}_{pm}-\Gamma^{p}_{rm}\Gamma^{s}_{pn}\\\\
 \mathbf{(8.219)}&F_{mn} = \half\left(\Gamma^{s}_{ns,m} - \Gamma^{s}_{ms,n}\right)\\
 \end{array}
 \right.
-\end{align}
+\end{align*}
 using a projective transformation of the form $\mathbf{(8.337)}$, we get 
 
 \begin{align}
@@ -655,10 +657,10 @@ using a projective transformation of the form $\mathbf{(8.337)}$, we get
 \Gamma^{'s}_{pm} = \Gamma^{s}_{pm} +\delta^s_m\psi_p +\delta^s_p\psi_m\\\\
 \Gamma^{'p}_{rm} = \Gamma^{p}_{rm} +\delta^p_m\psi_r +\delta^p_r\psi_m\\\\
 \Gamma^{'s}_{pn} = \Gamma^{s}_{pn} +\delta^s_n\psi_p +\delta^s_p\psi_n\\\\
-\end{matrix}\right.\\
+\end{matrix}\right.
 \end{align}
 giving
-\begin{align}
+\begin{align*}
 R^{'s}_{.rmn} &= \Gamma^{'s}_{rn,m} - \Gamma^{'s}_{rm,n}+\Gamma^{'p}_{rn}\Gamma^{'s}_{pm}-\Gamma^{'p}_{rm}\Gamma^{'s}_{pn}\\
 &=\left\{\begin{matrix}
 R^{s}_{.rmn}\\\\
@@ -680,8 +682,8 @@ R^{s}_{.rmn}\\\\
 +\delta^p_n\psi_r\delta^s_m\psi_p +\delta^p_n\psi_r\delta^s_p\psi_m +\delta^p_r\psi_n\delta^s_m\psi_p  +\delta^p_r\psi_n \delta^s_p\psi_m\\\\
 -\delta^p_m\psi_r \delta^s_n\psi_p -\delta^p_m\psi_r \delta^s_p\psi_n-\delta^p_r\psi_m\delta^s_n\psi_p -\delta^p_r\psi_m\delta^s_p\psi_n\\
 \end{matrix}\right.
-\end{align}
-\begin{align}
+\end{align*}
+\begin{align*}
 &=\left\{\begin{matrix}
 R^{s}_{.rmn}\\\\
 +\delta^s_n\psi_{r,m} +\delta^s_r\psi_{n,m}-\delta^s_m\psi_{r,n} -\delta^s_r\psi_{m,n}\\\\
@@ -699,14 +701,14 @@ R^{s}_{.rmn}\\\\
 -\delta^s_n\psi_p \Gamma^{p}_{rm}
 +\delta^s_m\psi_r\psi_n  -\delta^s_n\psi_r\psi_m 
 \end{matrix}\right.
-\end{align}
+\end{align*}
 and
-\begin{align}
+\begin{align*}
 F^{'}_{mn} &= \half\left(\Gamma^{s}_{ns,m} - \Gamma^{s}_{ms,n}\right)\\
 &=F^{}_{mn} + \half\left(N+1\right)\left(\psi_{n,m} -\psi_{m,n}\right)
-\end{align}
+\end{align*}
 and
-\begin{align}
+\begin{align*}
 R^{'}_{rm} &= \left\{\begin{matrix}
 R^{}_{.rm}\\\\
 +\delta^s_s\psi_{r,m} +\delta^s_r\psi_{s,m}-\delta^s_m\psi_{r,s} -\delta^s_r\psi_{m,s}\\\\
@@ -724,17 +726,17 @@ R^{}_{.rm}\\\\
 &=R^{}_{.rm}
 +N\psi_{r,m} -\psi_{m,r} -\left(N-1\right) \Gamma^{p}_{rm}\psi_p
 -\left(N-1\right)\psi_r\psi_m  
-\end{align}
+\end{align*}
 and
-\begin{align}
+\begin{align*}
 R^{'}_{rn} &=R^{}_{.rn}
 +N\psi_{r,n} -\psi_{n,r} -\left(N-1\right) \Gamma^{p}_{rn}\psi_p
 -\left(N-1\right)\psi_r\psi_n  
-\end{align}
+\end{align*}
 
 
 When using a projective transformation of the form $\mathbf{(8.337)}$ (where $\psi_k$ is a random vector) and we calculate $\Delta W = W^{'s}_{.rmn}-W^s_{.rmn}$ , only terms containing $\psi_k$ will remain and we get
-\begin{align}
+\begin{align*}
 \Delta W&= \left\{ \begin{matrix}
 \delta^s_n\psi_{r,m} +\delta^s_r\psi_{n,m}-\delta^s_m\psi_{r,n} -\delta^s_r\psi_{m,n}\\\\
 +\delta^s_m\psi_p\Gamma^{p}_{rn} 
@@ -767,9 +769,9 @@ When using a projective transformation of the form $\mathbf{(8.337)}$ (where $\p
 \\\\
 -\frac{1}{N-1}\delta^s_n  \psi_{r,m} +\frac{1}{N-1}\delta^s_n  \psi_{m,r}+\frac{1}{N-1}\delta^s_m \psi_{n,r} -\frac{1}{N-1}\delta^s_m \psi_{r,n}
 \end{matrix}\right.
-\end{align}
+\end{align*}
 which simplifies to
-\begin{align}
+\begin{align*}
 \left(N-1\right)\Delta W&=\left\{ \begin{matrix}
 \cancel{N\delta^s_m \psi_{r,n}} -\cancel{\delta^s_m \psi_{n,r} }
  \\\\
@@ -779,8 +781,8 @@ which simplifies to
 -\cancel{\delta^s_n  \psi_{r,m}} +\cancel{\delta^s_n  \psi_{m,r}}+\cancel{\delta^s_m \psi_{n,r}} -\cancel{\delta^s_m \psi_{r,n}}
 \end{matrix}\right.\\
 &=0
-\end{align}
-proving that $ = W^{'s}_{.rmn}=W^s_{.rmn}$ for any (random vector $\psi_k$) and thus invariant for that type of projective transformation.
+\end{align*}
+proving that $ = W^{'s}_{.rmn}=W^s_{.rmn}$ for any (random) vector $\psi_k$ and thus invariant for that type of projective transformation.
 $$\blacklozenge$$\\
 \newpage
 
@@ -793,11 +795,11 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 In a projective space, \textit{the coefficients of projective connection $P^{r}_{mn}$ }are defined as follows
 $$P^{r}_{mn} = \Gamma ^{r}_{mn}-\frac{1}{N+1}\left(\delta^r_m \Gamma^p_{pn}+  \delta^r_n \Gamma^p_{pm} \right)$$
-Show that $P^{r}_{mn} $ is invariant under projective transformations of $\Gamma^{r}_{mn}$. verify that $P^{r}_{nm}=P^{r}_{mn}$, $P^{r}_{rn}=0$. Find the transformation properties of $P^{r}_{mn}$ under changes of coordinate system. (T.Y. Thomas.)
+Show that $P^{r}_{mn} $ is invariant under projective transformations of $\Gamma^{r}_{mn}$. Verify that $P^{r}_{nm}=P^{r}_{mn}$, $P^{r}_{rn}=0$. Find the transformation properties of $P^{r}_{mn}$ under changes of coordinate system. (T.Y. Thomas.)
 \end{tcolorbox}
-Using $(2)$from the previous exercise, we have
+Using $(1)$from the previous exercise, we have
 
-\begin{align}
+\begin{align*}
 P^{'r}_{mn} &= \Gamma ^{'r}_{mn}-\frac{1}{N+1}\left(\delta^r_m \Gamma^{'p}_{pn}+  \delta^r_n \Gamma^{'p}_{pm} \right)\\
 &=\left\{\begin{matrix}
  \Gamma^{r}_{mn} +\delta^r_n\psi_m +\delta^r_m\psi_n\\\\
@@ -820,21 +822,21 @@ P^{'r}_{mn} &= \Gamma ^{'r}_{mn}-\frac{1}{N+1}\left(\delta^r_m \Gamma^{'p}_{pn}+
  -\cancel{\frac{1}{N+1}\delta^r_m \psi_n} -\cancel{\frac{N}{N+1}\delta^r_m \psi_n}\\\\
 \end{matrix}\right.\\
 &= P^{r}_{mn}
-\end{align}
+\end{align*}
 proving the invariance of $P^{r}_{mn}$ under projective transformations of the linear symmetric connections.
 $$\lozenge$$
 As we are dealing with linear symmetric connections and $\delta^r_m \Gamma^{p}_{pn}-  \delta^r_n \Gamma^{p}_{pm} $ also is symmetric, we can conclude that $P^{r}_{mn}$ is symmetric. \\
 Also,
-\begin{align}
+\begin{align*}
 P^{r}_{rn} &= \Gamma ^{r}_{rn}-\frac{1}{N+1}\left(\delta^r_r \Gamma^p_{pn}+  \delta^r_n \Gamma^p_{pr} \right)\\
 &= \Gamma ^{r}_{rn}-\frac{1}{N+1}\left(N \Gamma^p_{pn}+  \Gamma^p_{pn} \right)\\
 &= \Gamma ^{r}_{rn}-\Gamma^p_{pn}\\
 &=0
-\end{align}
+\end{align*}
 $$\lozenge$$
 Let's perform a coordinate transformation, and use $$\mathbf{(8.112)}: \quad \Gamma^{\rho}_{\mu\nu} = \Gamma^{r}_{mn}X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}+ X^{r}_{\mu\nu}X^{\rho}_{r}$$ from which we obtain
 
-\begin{align}
+\begin{align*}
 P^{\rho}_{\mu\nu} &= \Gamma^{\rho}_{\mu\nu}-\frac{1}{N+1}\left(\delta^{\rho}_{\mu} \Gamma^{\tau}_{\tau \nu}+  \delta^{\rho}_{\nu} \Gamma^{\tau}_{\tau \mu} \right)\\
 &= \left\{\begin{matrix}\Gamma^{r}_{mn}X^{\rho}_{r}X^{m}_{\mu}X^{n}_{\nu}+ X^{r}_{\mu\nu}X^{\rho}_{r}\\\\
 -\frac{1}{N+1}\delta^{\rho}_{\mu} \left(\Gamma^{r}_{mn}\underbrace{X^{\tau}_{r}X^{m}_{\tau}}_{=\delta^m_r}X^{n}_{\nu}+ \underbrace{X^{r}_{\tau\nu}X^{\tau}_{r}}_{=0}\right)\\\\
@@ -848,7 +850,7 @@ P^{\rho}_{\mu\nu} &= \Gamma^{\rho}_{\mu\nu}-\frac{1}{N+1}\left(\delta^{\rho}_{\m
 -\frac{\pdv{}{x^r}\sqrt{a}}{\sqrt{a}(N+1)}\left(\delta^{\rho}_{\mu} X^{n}_{\nu}
 +\delta^{\rho}_{\nu}X^{n}_{\mu}\right)
 \end{matrix}\right.
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -861,27 +863,27 @@ $$\lambda^s\left(\dv{\lambda^r}{u}+P^r_{mn}\lambda^m\lambda^n\right) = \lambda^r
 where $P^r_{mn}$ are the coefficients of projective connection defined in Ex. $10$. Deduce that no change in the $\Gamma^r_{mn}$ other than a projective transformation leaves the $P^r_{mn}$ invariant.
 \end{tcolorbox}
 Starting from $\mathbf{(8.328)}$ we have the differential equation of a path
-\begin{align}
+\begin{align*}
 \lambda^s\left(\dv{\lambda^r}{u}+\Gamma^r_{mn}\lambda^m\lambda^n\right) = \lambda^r\left(\dv{\lambda^s}{u}+\Gamma^s_{mn}\lambda^m\lambda^n\right)
-\end{align}
+\end{align*}
 and using the definition of $P^r_{mn}$ we check the following expression
-\begin{align}
+\begin{align*}
 \lambda^s\left(\dv{\lambda^r}{u}+\left[\Gamma^r_{mn}-\frac{1}{N+1}\left(\delta^r_m \Gamma^p_{pn}+  \delta^r_n \Gamma^p_{pm} \right)\right]\lambda^m\lambda^n\right) &\overset{\mathrm{?}}{=} \lambda^r\left(\dv{\lambda^s}{u}+\left[\Gamma^s_{mn}-\frac{1}{N+1}\left(\delta^s_m \Gamma^p_{pn}+  \delta^s_n \Gamma^p_{pm} \right)\right]\lambda^m\lambda^n\right)\\
 \Rightarrow \spatie  \Gamma^p_{pn}\lambda^r\lambda^n\lambda^s+  \Gamma^p_{pm} \lambda^m\lambda^r\lambda^s &\overset{\mathrm{?}}{=} \Gamma^p_{pn}\lambda^s\lambda^n\lambda^r+   \Gamma^p_{pm}\lambda^m\lambda^s\lambda^r
-\end{align}
+\end{align*}
 Obviously the last expression is true, proving the equivalence of the equation of a path.
 $$\lozenge$$
 As $$\lambda^s\left(\dv{\lambda^r}{u}+P^r_{mn}\lambda^m\lambda^n\right) = \lambda^r\left(\dv{\lambda^s}{u}+P^s_{mn}\lambda^m\lambda^n\right)$$ describes a path and is equivalent to $\mathbf{(8.328)}$ we can follow the exact same reasoning from $\mathbf{(8.328)}$ on, to $\mathbf{(8.332)}$ where 
-\begin{align}
+\begin{align*}
 B^r_{mn} &=P^{'r}_{mn}-P^{r}_{mn}\\
 &=\Gamma ^{'r}_{mn}-\frac{1}{N+1}\left(\delta^r_m \Gamma^{'p}_{pn}+  \delta^r_n \Gamma^{'p}_{pm} \right)-\Gamma ^{r}_{mn}+\frac{1}{N+1}\left(\delta^r_m \Gamma^p_{pn}+  \delta^r_n \Gamma^p_{pm} \right)\\
 &=\underbrace{\Gamma ^{'r}_{mn}-\Gamma ^{r}_{mn}}_{= A^r_{mn}}-\frac{1}{N+1}\left[\delta^r_m \Gamma^{'p}_{pn}+  \delta^r_n \Gamma^{'p}_{pm} -\delta^r_m \Gamma^p_{pn}-  \delta^r_n \Gamma^p_{pm} \right]\\
 &=A^r_{mn}-\frac{1}{N+1}\left[\delta^r_m\left( \Gamma^{'p}_{pn}-\Gamma^p_{pn}\right) +  \delta^r_n \left(\Gamma^{'p}_{pm} -   \Gamma^p_{pm} \right)\right]
-\end{align}
+\end{align*}
 As we want $P^r_{mn}$ to be invariant under projective transformations, we have $B^r_{mn}=0$ and hence $(7)$ can be written as
-\begin{align}
+\begin{align*}
 A^r_{mn}&=\frac{1}{N+1}\left[\delta^r_m\left( \Gamma^{'p}_{pn}-\Gamma^p_{pn}\right) +  \delta^r_n \left(\Gamma^{'p}_{pm} -   \Gamma^p_{pm} \right)\right]
-\end{align}
+\end{align*}
 From this we see that $A^r_{mn}$ must be of the form
 $$A^r_{mn}=\delta^r_n\phi_m+\delta^r_n\phi_n$$
 with $\phi_k = \frac{1}{N+1}\left( \Gamma^{'p}_{pk}-\Gamma^p_{pk}\right) $, which leads to the type of transformations as defined in $\mathbf{(8.337)}$.
@@ -909,11 +911,11 @@ P^s_{.smn}&=P^s_{sn,m}-P^s_{sm,n}+\underbrace{P^p_{sn}P^s_{pm}-P^p_{sm}P^s_{pn} 
 from which we see that $P^s_{.smn}=-P^s_{.snm}$. From the definition of $P^s_{.rmn}$ it is easy to see that this quantity is symmetric in the last two suffixes.
 Hence we can conclude from $P^s_{.smn}=-P^s_{.snm}$ and $P^s_{.smn}=P^s_{.snm}$ that $P^s_{.smn}=0$.
 $$\lozenge$$
-\begin{align}
+\begin{align*}
 P_{rm}&=P^s_{.rms}\\
 &=\underbrace{P^s_{rs,m}}_{=0}-P^s_{rm,s}+P^p_{rs}P^s_{pm}-P^p_{rm}\underbrace{P^s_{ps} }_{=0}\\
 &=-P^s_{rm,s}+P^p_{rs}P^s_{pm}
-\end{align}
+\end{align*}
 $$\lozenge$$
 The last assignment requires about 5 pages of tedious and boring basic algebraic and suffix manipulations. There was no added value to transcript this in Latex.
 \begin{comment} 
@@ -1223,7 +1225,7 @@ $$\blacklozenge$$
 
 \section{p310 - Exercise 14}
 \begin{tcolorbox}
-In a space with linear connection, we say that the \textit{directions} of two vectors, $X^r$ at a point $A$ and $Y^r$ at a point $B$, are parallel with respect to a curve $C$ which joins $A$ and $B$ if the vector obtained by parallel propagation of $X^r$ along $C$ from $A$ to $B$ is a multiple of $Y^r$. prove that the most general change of linear connection which preserves parallelism of directions (with respect to all curves) is given by 
+In a space with linear connection, we say that the \textit{directions} of two vectors, $X^r$ at a point $A$ and $Y^r$ at a point $B$, are parallel with respect to a curve $C$ which joins $A$ and $B$ if the vector obtained by parallel propagation of $X^r$ along $C$ from $A$ to $B$ is a multiple of $Y^r$. Prove that the most general change of linear connection which preserves parallelism of directions (with respect to all curves) is given by 
 $$\Gamma^{'r}_{\ mn} = \Gamma^r_{mn} + \delta^r_m \psi_n$$
 where $\psi_n$ is an arbitrary vector. If $\Gamma^r_{mn}$ are the coefficients of a symmetric connection, show that $\Gamma^{'r}_{\ mn}$ are semi-symmetric(cf. Exercise 4).
 \end{tcolorbox}
@@ -1245,7 +1247,7 @@ We get,
 \end{matrix}\right.
 \end{align}
 As $Y^r$ is fixed, the partial derivatives can be reduced to $\left(\lambda_{(.)} \right)_{, n}Y^r + 2^{nd}\text{  order terms}$ and we rewrite $(3)$ as
-\begin{align}
+\begin{align*}
 &\left\{\begin{matrix}
 \left(\Gamma^r_{mn}\lambda_{(1)}+\delta^r_m\left(\lambda_{(1)}\right)_{, n}  \right) Y^m=0\\\\
 \left(\Gamma^{'r}_{mn}\lambda_{(2)}+\delta^r_m\left(\lambda_{(2)}\right)_{, n}  \right) Y^m=0
@@ -1255,7 +1257,7 @@ As $Y^r$ is fixed, the partial derivatives can be reduced to $\left(\lambda_{(.)
 \left(\Gamma^{'r}_{mn}+\delta^r_m\frac{\left(\lambda_{(2)}\right)_{, n}}{\lambda_{(2)}} \right) Y^m=0
 \end{matrix}\right.\\
 \Rightarrow \spatie &\Gamma^{'r}_{mn}= \Gamma^r_{mn}+\delta^r_m\left[\frac{\left(\lambda_{(1)}\right)_{, n}}{\lambda_{(1)}}-\frac{\left(\lambda_{(2)}\right)_{, n}}{\lambda_{(2)}}  \right]
-\end{align}
+\end{align*}
 Put $\psi_n = \half\left(\frac{\left(\lambda_{(1)}\right)_{, n}}{\lambda_{(1)}}-\frac{\left(\lambda_{(2)}\right)_{, n}}{\lambda_{(2)}}\right) $
 and we get $$\Gamma^{'r}_{mn}= \Gamma^r_{mn}+2\delta^r_m\psi_n  $$
 $$\lozenge$$
@@ -1322,14 +1324,14 @@ $$\begin{matrix}
 \end{matrix}$$
 \end{tcolorbox}
 Using the transformation rule for the connections
-\begin{align}
+\begin{align*}
 \Gamma^{\rho}_{\rho\nu} &=  \Gamma^r_{mn}X^{\rho}_{r}X^{m}_{\rho}X^{n}_{\nu}+X^{r}_{\rho \nu}X^{\rho}_{r}\\
 &=  \Gamma^r_{rn}X^{n}_{\nu}+X^{r}_{\rho \nu}X^{\rho}_{r}
-\end{align}
+\end{align*}
 By Exercise $I.12$ page 25 we have
- \begin{align}
+ \begin{align*}
 X^{r}_{\rho \nu}X^{\rho}_{r}&= \pdv{ln J}{x^{\nu}}= \frac{1}{J}\pdv{J}{x^{\nu}}
-\end{align}
+\end{align*}
 proving the expression. An identical way leads to the same rule for the second connection.
 $$\blacklozenge$$
 \newpage
@@ -1456,22 +1458,22 @@ This is a direct consequence of the two terms in expression $(3)$ of Exercise 18
 Also, we have
 $$\half\left(\Gamma^{\rho}_{\rho\nu}+\overline{\Gamma}^{\rho}_{\rho\nu}\right)= X^{n}_{\nu}\half\left(\Gamma^r_{rn}+\overline{\Gamma}^r_{rn}\right) + \frac{1}{J}\pdv{J}{x^{\nu}}$$ 
 which gives also an unchanged factor $\frac{1}{J}\pdv{J}{x^{\nu}}$  and as in the expression of the absolute derivative the other terms do not contain any contracted connection the transformation rule is valid for a) and b).\\\\
-For the product rule and sum rule , a) and b) are  also correct as the last term of the absolute derivative is linear in the $\Gamma^k_{kt}$ and can replace it by any covariant vector to make the product and sum rule still valid.
+For the product rule and sum rule , a) and b) are  also correct as the last term of the absolute derivative is linear in the $\Gamma^k_{kt}$ and we can replace it by any covariant vector to make the product and sum rule still valid.
 $$\lozenge$$
 \textbf{Are the operations of contraction and absolute differentiation commutative when having a single connection ?}\\\\
 Again we only have to scrutinize the last term of containing 
 $$-W\Gamma^m_{mt}T^{r . \dots}_{.s\dots}\dv{x^t}{u}$$ as we already now that the other terms (valid for absolute tensors) are also commutative in the operations of contraction.
 As in section $8.1$ of the book, let's restrict ourselves to the contracting of vectors $U^r$ and $V_s$. 
-\begin{align}
+\begin{align*}
 \fdv{}{u}U^rV_s &= \dots -W\Gamma^m_{mt}U^rV_s\dv{x^t}{u}\\
 \Rightarrow \spatie \fdv{}{u}U^rV_r &= \dots -W\Gamma^m_{mt}U^rV_r\dv{x^t}{u}\\
-\end{align}
+\end{align*}
 on the other hand 
-\begin{align}
+\begin{align*}
 V_s\fdv{}{u}U^r+ U^r\fdv{}{u}V_s &= \dots -W_U\Gamma^m_{mt}U^rV_s\dv{x^t}{u}-W_V\Gamma^m_{mt}U^rV_s\dv{x^t}{u}\\
 &= \dots -W\Gamma^m_{mt}U^rV_s\dv{x^t}{u}\\
-\Rightarrow \spatie V_r\fdv{}{u}U^r+ U^r\fdv{}{u}V_r &= \dots -W\Gamma^m_{mt}U^rV_r\dv{x^t}{u}\\
-\end{align}
+\Rightarrow \spatie V_r\fdv{}{u}U^r+ U^r\fdv{}{u}V_r &= \dots -W\Gamma^m_{mt}U^rV_r\dv{x^t}{u}
+\end{align*}
 proving the commutativity.
 $$\blacklozenge$$
 \newpage
