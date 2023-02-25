@@ -290,6 +290,202 @@ For $\phi=0$ we lie on the light-cone.\\
 For $\phi>0 \quad\Rightarrow R^2 > y_4^2$ and so $-R<y_4<R$ defines one region (region III).\\
 For $\phi<0 \quad\Rightarrow R^2 < y_4^2$ and so   $y_4>R$ or $y_4<-R$ define two  regions (region I and II).
 $$\lozenge$$
+
+\textbf{We now show statement $\mathit{a.}$ of the exercise.}\\
+Consider $2$ events $P_0,\ P_1$ with coordinates $(y_1^{(0)},y_2^{(0)},y_3^{(0)},y_4^{(0)})$ and $(y_1^{(1)},y_2^{(1)},y_3^{(1)},y_4^{(1)})$  and a curve defined by 
+\begin{align}
+y_i= \pm\sqrt{\left(\left(y_i^{(1)}\right)^2-\left(y_i^{(0)}\right)^2\right)u + \left(y_i^{(0)}\right)^2}\spatie u\in \left[0,1\right]
+\end{align}
+where the $\pm$ is chosen so that $y_i(0) = y_i^{(0)}$ and $y_i(1) = y_i^{(1)}$ and that the sign only changes when $y_i(u)=0$ and $sign\left(y_i^{(0)}\right) \neq sign\left(y_i^{(1)}\right)$. Such curve will be continuous.\\
+Be $\phi_0\equiv \phi(0)$, $\phi_1\equiv \phi(1)$,
+
+Then $(2)$ in $(1)$ gives
+\begin{align}
+&\phi(u) = \left(\phi_1+\phi_0\right)u+\phi_0
+\end{align}\\\\
+\textit{Case a1: $P_0, P_1$ both lie in region I or both in region II.} \\
+We have the following conditions:\\
+\begin{align*}
+\phi_0 < 0\wedge \phi_1  < 0
+\end{align*}
+then, $$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$
+Indeed, as $\phi_0 < 0\wedge \phi_1  < 0$, we have in expression $(3)$, $\phi_1+\phi_0<0$ and $\phi_0 <0$ meaning that for $\phi(u)$ to become $0$, $u$ must be negative, which is not in the domain of the defined curve.
+
+So, there exist no $u\in\left[0,1\right]$ for which $\phi(u)=0$ and the curve does not intersect the null cone.\\\\
+\textit{Case a2: $P_0, P_1$ both lie in region III.} Then,
+\begin{align*}
+\phi_0 > 0\wedge \phi_1  > 0
+\end{align*}
+Then, $$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$ as we can follow the same reasoning as in case 1 but with $\phi_1+\phi_0>0$ and $\phi_0 >0$.
+So, there exist no $u\in\left[0,1\right]$ for which $\phi(u)=0$ and the curve does not intersect the null cone.\\\\
+\\$$\lozenge$$
+
+\textbf{We now show statement $\mathit{b.}$ of the exercise.}\\\\
+
+\textit{Case b1: $P_0$ lies in region I, $P_1$  lies in region II.} \\
+Those two regions are separated by the $3$-flat (plane) $y_4=0$. So it's suffice that $R^2=0$ for $\phi(u)$ being zero. Hence $y_i=0$, $  i=1,2,3$, and the curve will cut the cone at it's apex.
+\\\\
+\textit{Case b2: $P_0$ lies in region I or II, $P_1$  lies in region III.} \\
+Put
+\begin{align*}
+R^2&= \left(y_1\right)^2+\left(y_2\right)^2+\left(y_3\right)^2\\
+{R_{0}}^2&= \left(y^0_1\right)^2+\left(y^0_2\right)^2+\left(y^0_3\right)^2\\
+{R_{1}}^2&= \left(y^1_1\right)^2+\left(y^1_2\right)^2+\left(y^1_3\right)^2
+\end{align*}
+For the points on the curve, $R^2$ can then be written as 
+\begin{align*}
+R^2&= \left(R_1^2-R_0^2\right)u+R_0^2
+\end{align*}
+Then \begin{align}
+&\phi(u) = \left(R_1^2-R_0^2\right)u+R_0^2 - \left[\left(y_4^{(1)}\right)^2   -\left(y_4^{(0)}\right)^2 \right]u -\left(y_4^{(0)}\right)^2 \quad \text{(see (1))}
+\end{align}\\
+We have the following conditions:\\
+\begin{align*}
+\left\{\begin {matrix}
+\phi_0 < 0&\wedge &\phi_1  > 0\\\\
+R_0^2 > (y_4^{0})^2&\wedge & R_1^2 < (y_4^{1})^2
+\end{matrix}\right.
+\end{align*}
+Then, $$\exists  \  u \in \left[0,1\right]: \phi(u)=0$$
+ From $(4)$ we have ,
+\begin{align}
+\phi(u)=0\quad\Rightarrow\spatie  &= -\frac{R_0^2- \left(y_4^{(0)}\right)^2}{R_1^2-R_0^2  -\left(y_4^{(1)}\right)^2  +\left(y_4^{(0)}\right)^2}
+\end{align}
+
+Let's simplify notationally the last equation. As $\phi_0 < 0\wedge \phi_1 > 0$, put $R_0^2- \left(y_4^{(0)}\right)^2=-\tau $ and $R_1^2- \left(y_4^{(1)}\right)^2=\sigma$ with both $\tau, \sigma > 0$. $(5)$ can be written as
+\begin{align*}
+u&=\frac{\tau}{\sigma +\tau}\\
+ &=\frac{1}{1+\frac{\sigma}{\tau}}\\
+\Rightarrow\spatie &\exists  \  u \in \left[0,1\right]: \phi(u)=0 \spatie \text{ as } \frac{\sigma}{\tau} >0
+\end{align*}
+So, there is a solution $u\in \left[0,1\right]$ for which $\phi(u)=0$ and the curve intersects the null cone.
+\\$$\lozenge$$\\
+\newpage
+
+\textbf{We now investigate the straight segment questions.} \\
+\textit{Case 1: $A$ and $B$ both lie in the present (region I) or in the past (region II)}\\\\
+\\\\
+
+\textit{Case 2: If $A$ is any point in the present, there exist at least one point $B$ in the present that the straight segment $AB$ cuts the null cone}\\\\
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+Then,
+ \begin{align}
+\phi(u) &= \left\{\begin{array}{l} \ \ \left[\left(y_1^{(1)}-y_1^{(0)}\right)u + y_1^{(0)}\right]^2\\
++\left[\left(y_2^{(1)}-y_2^{(0)}\right)u + y_2^{(0)}\right]^2\\
++\left[\left(y_3^{(1)}-y_3^{(0)}\right)u + y_3^{(0)}\right]^2\\
+-\left[\left(y_4^{(1)}-y_4^{(0)}\right)u + y_4^{(0)}\right]^2\\
+\end{array}\right.\\
+&= \left\{\begin{array}{l} \ \ 
+\left(y_1^{(1)}\right)^2 u^2+\left(y_1^{(0)}\right)^2 u^2 - 2y_1^{(1)}y_1^{(0)}u^2 + 2y_1^{(1)}y_1^{(0)}u-  2\left(y_1^{(0)}\right)^2 u+ \left(y_1^{(0)}\right)^2\\
++\left(y_2^{(1)}\right)^2 u^2+\left(y_2^{(0)}\right)^2 u^2 - 2y_2^{(1)}y_2^{(0)}u^2 + 2y_2^{(1)}y_2^{(0)}u-  2\left(y_2^{(0)}\right)^2 u+ \left(y_2^{(0)}\right)^2\\
++\left(y_3^{(1)}\right)^2 u^2+\left(y_3^{(0)}\right)^2 u^2 - 2y_3^{(1)}y_3^{(0)}u^2 + 2y_3^{(1)}y_3^{(0)}u-  2\left(y_3^{(0)}\right)^2 u+ \left(y_3^{(0)}\right)^2\\
+-\left(y_4^{(1)}\right)^2 u^2-\left(y_4^{(0)}\right)^2 u^2 + 2y_4^{(1)}y_4^{(0)}u^2 - 2y_4^{(1)}y_4^{(0)}u+  2\left(y_4^{(0)}\right)^2 u- \left(y_4^{(0)}\right)^2\\
+\end{array}\right.
+\end{align}
+Put $\phi_0 = \left(y_1^{(0)}\right)^2+\left(y_2^{(0)}\right)^2+\left(y_3^{(0)}\right)^2-\left(y_4^{(0)}\right)^2$ and $\phi_1 = \left(y_1^{(1)}\right)^2+\left(y_2^{(1)}\right)^2+\left(y_3^{(1)}\right)^2-\left(y_4^{(1)}\right)^2$. \\
+Then,
+\begin{align}
+\phi(u)= \left\{\begin{array}{l} \ \ 
+\phi_1u^2+\phi_0u^2-2\left(y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}\right)u^2 \\
+-2\phi_0 u + 2 \left(y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}\right)u\\
++\phi_0
+\end{array}\right.
+\end{align}
+Let's put $\kappa = y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}$, we get the expression
+\begin{align}
+\phi(u)&= 
+\left(\phi_1 +\phi_0-2\kappa\right) u^2 + 2 \left(\kappa- \phi_0\right)u
++\phi_0
+\end{align}
+
+
+The function $\phi(u)$ is a parabola. 
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c1.tex}}
+	\qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c2.tex}}
+    \qquad
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c3.tex}}
+\caption{Non problematic null cone parametric functions.}
+\label{fig:fig_p126_1a}
+\end{figure}
+\begin{figure}[H]%
+    \centering
+    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c4.tex}}
+\caption{Problematic null cone parametric functions.}
+\label{fig:fig_p126_1b}
+\end{figure}From the parabola's in figure $4.2.$ it is clear that the function can't reach $0$ in $u\in(0,1)$  and hence that the segment will not intersect the null cone.\\
+One problematic could occur as represented in figure $4.3$.
+For such a parabola, we have :
+\begin{align}
+\left\{\begin{array}{l} \ \ 
+\phi(u)= au^2+bu+c\\\\
+a = \left(\phi_1 +\phi_0-2\kappa\right) <0\\\\
+b=2 \left(\kappa- \phi_0\right)\\\\
+c=\phi_0\\\\
+a+b=\phi_1-\phi_0\\\\
+\phi_0<0\\\\
+\phi_1 < 0
+\end{array}\right.
+\end{align}
+From the $3$ known inequalities 
+\begin{align}
+\left\{\begin{array}{l} \ \ 
+a < 0\\\\
+\phi_0<0\\\\
+\phi_1 < 0
+\end{array}\right.
+\end{align}
+we get
+\begin{align}
+\left\{\begin{array}{l} \ \ 
+a < 0\quad\Rightarrow\quad \kappa > \frac{\phi_1+\phi_0}{2} \\\\ b=2 \left(\kappa- \phi_0\right)\quad \Rightarrow\quad b > \phi_1-\phi_0\\\\
+\end{array}\right.
+\end{align}
+Note that there is nothing special in the choice of $\phi_1, \ \phi_0$ as the segment is not oriented and as $\phi_1,\phi_0 <0$ we can put arbitrarily $b \geq0$ with $\phi_1 \geq \phi_0$.\\ 
+Let's examine if there is a value $u_{max} \in (0,1)$ such that $\phi(u_{max})\geq 0$ and let us investigate whether the relation between the coefficients $a,b$ does not lead to a contradiction for such value of $u_{max} \in (0,1)$.  
+\begin{align}
+\dv{\phi(u)}{u}&=0\\
+\Rightarrow\spatie u_{max} &= -\frac{b}{2a}\quad\text{ with } 0<b < -2a\\
+\phi(u_{max}) &= -\frac{b^2}{4a}+\phi_0
+\end{align}
+Is it possible to have $\phi(u_{max}) \geq 0$ with $u_{max} \in (0,1)$? One straightforward condition to have this possible is that the discriminant of the quadratic equation os $b^2-4ac>=0$.
+Hence,
+\begin{align}
+D &= \left[2 \left(\kappa- \phi_0\right)\right]^2-4\left(\phi_1 +\phi_0-2\kappa\right)\phi_0\\
+&= 4\kappa^2+ 4\phi_0^2-8\kappa\phi_0-4\phi_1\phi_0 -4\phi_0^2+8\kappa\phi_0\\
+&= 4\left(\kappa^2-\phi_1\phi_0\right)\\
+&= \left\{\begin{array}{l} \ \ 
+4\left[\left(y_1^{(0)}y_4^{(1)}-y_4^{(0)}y_1^{(1)}\right)^2
++\left(y_4^{(0)}y_2^{(1)}-y_2^{(0)}y_4^{(1)}\right)^2
++\left(y_4^{(0)}y_3^{(1)}-y_3^{(0)}y_4^{(1)}\right)^2\right]\\\\
+-4\left[\left(y_2^{(0)}y_1^{(1)}-y_1^{(0)}y_2^{(1)}\right)^2
++\left(y_3^{(0)}y_1^{(1)}-y_1^{(0)}y_3^{(1)}\right)^2
++\left(y_3^{(0)}y_2^{(1)}-y_2^{(0)}y_3^{(1)}\right)^2\right]\\\\
+\end{array}\right.
+\end{align}
+Obviously, this path of proving leads to nothing as $D$ can be positive even for a segment lying entirely in zone $I$ or $II$. To see that, take two events, stationary in  the space  at the point $P\left(0,0,y_3^{(0)}\right)$. The negative term in (39) disappears and obviously $D>0$.\\
+$\dagger$WHAT IS THE ANALYTICAL WAY TO PROVE THIS? IS $a>0$ A CONDITION?$\dagger$
+\end{comment}
+\begin{comment}
+\begin{figure}[H]
+\input{D:/MathLatex/images/fig_p126_Ex1_b.tex}
+\caption{Travelling between two points in region III (present) in a  $V_3$ space-time manifold}
+\label{fig:fig_p96_3415_b}
+\end{figure}
+\end{comment}
 $$\dagger$$
 $$\blacklozenge$$
 \newpage
