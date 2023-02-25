@@ -7,45 +7,45 @@
 If $b_{rs}$ is an absolute tensor, show that the determinant $\left|b_{rs}\right|$ is a relative invariant of weight $2$. What are the tensor characters of $\left|c^{rs}\right|$ and $\left|f^r_{s}\right|$?
 \end{tcolorbox}
 As $b_{rs}$ is an absolute tensor, we have 
-\begin{align}
+\begin{align*}
 b^{'}_{uv}&= b_{rs}\pdv{x^r}{x^{'u}}\pdv{x^s}{x^{'v}}
-\end{align}
+\end{align*}
 Hence,
-\begin{align}
+\begin{align*}
 \left|b^{'}_{uv}\right|&= \left|b_{rs}\right|\left|\pdv{x^r}{x^{'u}}\right|\left|\pdv{x^s}{x^{'v}}\right|
-\end{align}
+\end{align*}
 and as $J= \left|\pdv{x^k}{x^{'s}}\right|$ we get 
-\begin{align}
+\begin{align*}
 \left|b^{'}_{uv}\right|&= J^2\left|b_{rs}\right|
-\end{align}
+\end{align*}
 Conclusion, $\left|b_{rs}\right|$ is a relative invariant of weight $ 2$.
 $$\lozenge$$
 As $c^{rs}$ is an absolute tensor, we have 
-\begin{align}
+\begin{align*}
 c^{'uv}&= c^{rs}\pdv{x^{'u}}{x^r}\pdv{x^{'v}}{x^s}
-\end{align}
+\end{align*}
 Hence,
-\begin{align}
+\begin{align*}
 \left|c^{'uv}\right|&= \left|c^{rs}\right|\left|\pdv{x^{'u}}{x^r}\right|\left|\pdv{x^{'v}}{x^s}\right|
-\end{align}
+\end{align*}
 and as $J^{-1}= \left|\pdv{x^{'s}}{x^k}\right|$ we get 
-\begin{align}
+\begin{align*}
 \left|c^{'uv}\right|&= J^{-2}\left|c^{rs}\right|
-\end{align}
+\end{align*}
 Conclusion, $\left|c^{rs}\right|$ is a relative invariant of weight $ -2$.
 $$\lozenge$$
 As $f^{r}_{s}$ is an absolute tensor, we have 
-\begin{align}
+\begin{align*}
 f^{'u}_{v}&= f^{r}_{s}\pdv{x^{'u}}{x^r}\pdv{x^s}{x^{'v}}
-\end{align}
+\end{align*}
 Hence,
-\begin{align}
+\begin{align*}
 \left|f^{'u}_{v}\right|&= \left|f^{r}_{s}\right|\left|\pdv{x^{'u}}{x^r}\right|\left|\pdv{x^s}{x^{'v}}\right|
-\end{align}
+\end{align*}
 and we get 
-\begin{align}
+\begin{align*}
 \left|f^{'u}_{v}\right|&= JJ^{-1}\left|f^{r}_{s}\right|
-\end{align}
+\end{align*}
 Conclusion, $\left|f^{r}_{s}\right|$ is an absolute  invariant tensor .
 $$\blacklozenge$$
 \newpage
@@ -70,15 +70,15 @@ Show that equations $\mathbf{5.231}$ and $\mathbf{6.128}$ can be written as foll
 $$M_{rs} = \delta^{kl}_{rs}z_kF_l$$
 $$\omega_{rs} = \half\delta^{kl}_{rs}v_{l,k}$$
 \end{tcolorbox}
-\begin{align}
+\begin{align*}
 \text{(5.231)}\quad M_{rs}&=\epsilon_{rsn}M_n= z_rF_s-z_sF_r
-\end{align}
+\end{align*}
 In this expression $M_{rs}=0$ when $r=s$, but this is also the case with $\delta^{kl}_{rs}$.\\
 In $M_{rs} = \delta^{kl}_{rs}z_kF_l$ we see that there is no contribution in the summation when $k=l$. The only contribution being those for which $k=r \wedge l=s \text{ (positive contribution) } \vee \quad k=s \wedge l=r \text{ (negative contribution) } $, hence $$\delta^{kl}_{rs}z_kF_l\quad\Leftrightarrow\quad z_rF_s-z_sF_r$$
 $$\lozenge$$
-\begin{align}
+\begin{align*}
 \text{(6.128)}\quad \omega_{rs} = \half\left(v_{s,r}-v_{r,s}\right)
-\end{align}
+\end{align*}
 The same arguments of the previous case apply to this case (a way to see this is to represent symbolically,  $z_rF_s$ and $v_{s,r}$ by $T_{rs}$)
 $$\blacklozenge$$
 \newpage
@@ -90,7 +90,7 @@ If $T_{k_1k_2\dots k_M}$ is completely skew-symmetric, determine
 $$\delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}$$
 \end{tcolorbox}
 
-$\delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}$ is a sum of $M!$ terms: the first of these is $T_{s_1s_2\dots s_M}$ ; the other terms are obtained from it by permuting the subscripts and a minus sign is attached if the permutation is odd. Since $T_{s_1s_2\dots s_M}$ is completely skew-symmetric, each of the $M!$ terms equals  $+T_{s_1s_2\dots s_M}$ 
+$\delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}$ is a sum of $M!$ terms: the first of these is $T_{s_1s_2\dots s_M}$, the other terms are obtained from it by permuting the subscripts and a minus sign is attached if the permutation is odd. Since $T_{s_1s_2\dots s_M}$ is completely skew-symmetric, each of the $M!$ terms equals  $+T_{s_1s_2\dots s_M}$ 
 Hence,
 
 $$ \delta^{k_1k_2\dots k_M}_{s_1s_2\dots s_M}T_{k_1k_2\dots k_M}= M! \ T_{s_1s_2\dots s_M}$$
@@ -138,10 +138,10 @@ Be $P= T_{14}T_{23}+T_{24}T_{31}+T_{34}T_{12}$, we can write this as $P= \frac{1
 \end{figure}
 The factor $\frac{1}{8}$ is explained by te fact that are $2^3$ possible permutations in the $i,j,m,n$ indexes i.e. $2\times2$ for the permutations $P_1$ and $P_2$ and again $2$ for the permutation $P_3$. Note that a single permutation $P_1$ or $P_2$ changes the sign of  $T_{ij}T_{mn}$ but also changes the sign of $\delta^{ijmn}_{1234}$, so the combined sign doesn't change. A double permutation $P_1$ and  $P_2$ changes the sign of  $T_{ij}$ and $T_{mn}$ resulting in a unchanged sign of  $T_{ij}T_{mn}$ but also $\delta^{ijmn}_{1234}$ is unchanged because of the double permutation. Finally $P_3$ has no effect, nor on $T_{ij}T_{mn}$ nor on $\delta^{ijmn}_{1234}$. So we have 8 repetitions for  the same set $i,j,m,n$.\\
 So we have, 
-\begin{align}
+\begin{align*}
 P&= \frac{1}{8}\delta^{ijmn}_{1234}T_{ij}T_{mn}\\
 &= \frac{1}{8}\epsilon^{ijmn}T_{ij}T_{mn}
-\end{align}
+\end{align*}
 From this follows immediately as $\epsilon^{ijmn}$ is a relative tensor of weight $1$ and $T_{ij}$ an absolute tensor (i.e. a relative tensor of weight $0$) that $P$ is a relative tensor of eight $1$ i.e. a density.
 $$\blacklozenge$$
 \newpage
@@ -158,9 +158,9 @@ $\mathbf{6.130}$:
 \end{align}
 Put $\hat{T}^r= \omega_r$ and $T_{mn} = \omega_{mn}$
 then the expressions in $(1)$ can be expressed as (considering that the covariant an contravariant expressions are identical in rectangular Cartesian coordinates) 
-\begin{align}
+\begin{align*}
 \hat{T}^r=\frac{1}{(3-2)!}\epsilon^{mnr}T_{mn},\spatie T_{mn}=\epsilon_{rmn}\hat{T}^r
-\end{align}
+\end{align*}
 which are exactly the general definitions $\mathbf{7.121}$ and $\mathbf{7.122}$ (with $N=3$ and $M=2$) for dual tensors.
 $$\blacklozenge$$
 \newpage
@@ -174,29 +174,29 @@ $$\eta_{r_1\dots r_N}= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\eta^{s_1\dots s_N}$
 $$\eta^{r_1\dots r_N}= \epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\eta_{s_1\dots s_N}$$
 \end{tcolorbox}
 We have 
-\begin{align}
+\begin{align*}
 \left\{\begin{array}{lll}
 (\mathbf{7.208})&\eta_{r_1\dots r_N}= \left(\epsilon(a)a\right)^{\half}\epsilon_{r_1\dots r_N}&(a)\\\\
 (\mathbf{7.209})&\eta^{r_1\dots r_N}= \left(\epsilon(a)a\right)^{-\half}\epsilon^{r_1\dots r_N}&(b)\\\\
 (\mathbf{7.210})&\epsilon_{r_1\dots r_N}= \frac{1}{a} a_{r_1s_1}\dots a_{r_Ns_N}\epsilon^{s_1\dots s_N}&(c)\\\\
 (\mathbf{7.211})&\epsilon^{r_1\dots r_N}= a a^{r_1s_1}\dots a^{r_Ns_N}\epsilon_{s_1\dots s_N}&(d)\\
 \end{array}\right.
-\end{align}
+\end{align*}
 Combining $(a)$ and $(c)$ and writing $a$ as $\left(\epsilon(a)a\right)^{\half}\left(\epsilon(a)a\right)^{\half} \epsilon(a)$ in order to keep track of the sign of $a$, we get
-\begin{align}
+\begin{align*}
 \eta_{r_1\dots r_N} &=\left(\epsilon(a)a\right)^{\half}\epsilon_{r_1\dots r_N}\\
 &=\left(\epsilon(a)a\right)^{\half}\frac{1}{\left(\epsilon(a)a\right)^{\half}\left(\epsilon(a)a\right)^{\half} \epsilon(a)}a_{r_1s_1}\dots a_{r_Ns_N}\epsilon^{s_1\dots s_N}\\
 &= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\left(\epsilon(a)a\right)^{-\half}\epsilon^{s_1\dots s_N}\\
 &= \epsilon(a)a_{r_1s_1}\dots a_{r_Ns_N}\eta^{s_1\dots s_N}\\
-\end{align}
+\end{align*}
 $$\lozenge$$
 $(b)$ and $(d)$ give in the same way
-\begin{align}
+\begin{align*}
 \eta^{r_1\dots r_N} &= \left(\epsilon(a)a\right)^{-\half}\epsilon^{r_1\dots r_N}\\
 &=\left(\epsilon(a)a\right)^{-\half}\left(\epsilon(a)a\right)^{\half}\left(\epsilon(a)a\right)^{\half} \epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\epsilon_{s_1\dots s_N}\\
 &=\epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\left(\epsilon(a)\right)^{\half}\epsilon_{s_1\dots s_N}\\
 &=\epsilon(a)a^{r_1s_1}\dots a^{r_Ns_N}\eta_{s_1\dots s_N}
-\end{align}
+\end{align*}
 
 
 $$\blacklozenge$$
@@ -209,19 +209,19 @@ $\mathbf{7.216}\quad \epsilon_{r_1\dots r_N|k}=\epsilon^{r_1\dots r_N}_{\quad\qu
 $\quad \quad \eta_{r_1\dots r_N|k}= \eta^{r_1\dots r_N}_{\quad\quad|k}=0$
 \end{tcolorbox}
 We use $\mathbf{(7.214)}$   $T^{r\dots}_{s\dots |k}= \left(\epsilon(a)a\right)^{\half W}\left[ \left(\epsilon(a)a\right)^{-\half W} T^{r\dots}_{s\dots }\right]_{|k}$ and put $T^{r\dots}_{s\dots }=\epsilon_{r_1 \dots r_N}$ and at the origin of the Riemannian coordinate system, we have $T^{r\dots}_{s\dots |k}=T^{r\dots}_{s\dots,k}$, giving
-\begin{align}
+\begin{align*}
 \epsilon_{r_1 \dots r_N,k} &= \left(\epsilon(a)a\right)^{\half W}\left[ \left(\epsilon(a)a\right)^{-\half W} \epsilon_{r_1 \dots r_N}\right]_{,k}\\
 &= \left(\epsilon(a)a\right)^{\half W}\left[ \underbrace{\left(\left(\epsilon(a)a\right)^{-\half W}\right)_{,k}}_{=0} \epsilon_{r_1 \dots r_N}+\left(\epsilon(a)a\right)^{-\half W} \underbrace{\epsilon_{r_1 \dots r_N,k}}_{=0}\right]\\
 &=0
-\end{align}
+\end{align*}
 The same reasoning is the same for $\epsilon^{r_1\dots r_N}$.
 $$\lozenge$$
 For $ \eta_{r_1\dots r_N|k}$ the proof is even simpler as $ \eta_{r_1\dots r_N|k}$is an absolute oriented tensor ($W=0$), giving 
-\begin{align}
+\begin{align*}
 \eta_{r_1 \dots r_N|k} &= \eta_{r_1 \dots r_N,k}\\
 &= \left(\epsilon(a)a\right)^{\half } \underbrace{\left(\left(\epsilon(a)a\right)^{-\half }\right)_{,k}}_{=0} \epsilon_{r_1 \dots r_N}+\left(\epsilon(a)a\right)^{\half } \underbrace{\epsilon_{r_1 \dots r_N,k}}_{=0}\\
 &=0
-\end{align}
+\end{align*}
 The proof for $\eta^{r_1\dots r_N}$ is identical.
 $$\blacklozenge$$
 \newpage
@@ -262,7 +262,8 @@ $$\blacklozenge$$
 $$\mathbf{7.304} \quad \Delta^{k_1\dots k_M}=\delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1} \dots \Delta_{(M)}x^{s_M}$$ 
 \end{tcolorbox}
 Using $\mathbf{7.303}$ and noting that a permutation of columns in the matrix changes or not  the sign of its determinant depending on the sign of the permutation, we can write 
-\begin{align}\Delta^{k_1\dots k_M} &= \left|\begin{matrix}
+\begin{align*}
+\Delta^{k_1\dots k_M} &= \left|\begin{matrix}
 \Delta_{(1)}x^{k_1}&\Delta_{(1)}x^{k_2} &\dots&\Delta_{(1)}x^{k_M}\\
 \Delta_{(2)}x^{k_1}&\Delta_{(2)}x^{k_2} &\dots&\Delta_{(2)}x^{k_M}\\
 \vdots&\vdots&\vdots&\vdots\\
@@ -274,11 +275,11 @@ Using $\mathbf{7.303}$ and noting that a permutation of columns in the matrix ch
 \vdots&\vdots&\vdots&\vdots\\
 \Delta_{(M)}x^{1}&\Delta_{(M)}x^{2} &\dots&\Delta_{(M)}x^{M}\\
 \end{matrix}\right|
-\end{align}
+\end{align*}
 And using $\mathbf{4.313}:\quad \left|A_{pq}\right|= \epsilon_{s_1 s_2 \dots s_M}A_{1 s_1}A_{2 s_2}\dots A_{M s_M}$:
-\begin{align}\Delta^{k_1 \dots k_M} &= \underbrace{\epsilon^{k_1 k_2\dots k_m} \epsilon_{s_1 s_2 \dots s_M}}_{\text{see (7.114)}}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}\\
+\begin{align*}\Delta^{k_1 \dots k_M} &= \underbrace{\epsilon^{k_1 k_2\dots k_m} \epsilon_{s_1 s_2 \dots s_M}}_{\text{see (7.114)}}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}\\
 &= \delta^{k_1\dots k_M}_{s_1\dots s_M}\Delta_{(1)}x^{s_1}\Delta_{(2)}x^{s_2} \dots \Delta_{(M)}x^{s_M}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -329,14 +330,14 @@ Indeed suppose, as in the example $(a)$ ,  $k_1=2, k_2=1,k_3=3, ,\dots ,k_j = m,
 $d\tau_{(M)}^{k_1 k_2\dots k_m}=(\theta_{\alpha}) \delta_{1 2 \dots M}^{\alpha_1\dots \alpha_M}d_{(\alpha_1)}x^{k_j}d_{(\alpha_2)}x^{k_m}\dots d_{(\alpha_M)}x^{k_n}$, we need to make an equivalent permutation so that $\alpha_r$ gets in the same position  as $k_r$, resulting in a new sequence $\{\alpha_2,\alpha_1,\alpha_3,\dots,\alpha_M,\dots,\alpha_j, \alpha_m\}$.\\
 The number of permutations to generate $\theta_{\alpha}$ and $\theta_k$ are identical resulting in $\theta_{\alpha}\theta_k=1$.
 So $(6)$ can be rewritten (noting that the $\alpha_r$ are dummy indexes and that we are free to rename them so that $r=1, n=2,\dots$) 
-\begin{align}
+\begin{align*}
 d\tau_{(M)}^{k_1 k_2\dots k_m}= \delta_{1 2 \dots M}^{\beta_1\beta_2 \dots \beta_M}d_{(\beta_1)}x^{k_1}d_{(\beta_2)}x^{k_2}\dots d_{(\beta_n)}x^{k_n}\dots d_{(\beta_M)}x^{k_M}
-\end{align}
+\end{align*}
 Finally, using $\mathbf{7.114}$ 
-\begin{align}
+\begin{align*}
 d\tau_{(M)}^{k_1 k_2\dots k_m}&= \underbrace{\epsilon_{1 2 \dots M}}_{=1}\epsilon^{\beta_1\beta_2 \dots \beta_M}d_{(\beta_1)}x^{k_1}d_{(\beta_2)}x^{k_2}\dots d_{(\beta_n)}x^{k_n}\dots d_{(\beta_M)}x^{k_M}\\
 &= \epsilon^{\beta_1\beta_2 \dots \beta_M}d_{(\beta_1)}x^{k_1}d_{(\beta_2)}x^{k_2}\dots d_{(\beta_n)}x^{k_n}\dots d_{(\beta_M)}x^{k_M}
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -448,41 +449,41 @@ $$\blacklozenge$$
 Using polar coordinates in Euclidean $3-$space find the volume of an infinitesimal cell whose edges are tangent to the coordinate curves. Obtain the volume of a sphere by integration.
 \end{tcolorbox}
 For polar spherical coordinates we have
-\begin{align}
+\begin{align*}
 \left(a_{mn}\right)&= \left(\begin{array}{lll}
 1&0&0\\
 0&r^2&0\\
 0&0&r^2\sin^2\theta
 \end{array}\right)
-\end{align}
+\end{align*}
 giving
-\begin{align}
+\begin{align*}
 \left|a_{mn}\right| &= r^4\sin^2\theta
-\end{align}
+\end{align*}
 
 and using as parameters the $x^k \equiv(r,\theta,\phi)$ as parameters for the parametric surface
 
 we get 
-\begin{align}
+\begin{align*}
 \left|d_{(s)}x^k\right| &= \left|\begin{array}{lll}
 dr&0&0\\
 0&d\theta&0\\
 0&0&d\phi\\
 \end{array}\right|\\
 &= drd\theta d\phi
-\end{align}
+\end{align*}
 
 Using $\mathbf{7.405}$:
-\begin{align}
+\begin{align*}
 dv_{(N)}^2&= \epsilon (a)\left|a_{mn}\right|\left|d_{(s)}x^k\right|^2\\
 &= r^4\sin^2\theta\left( drd\theta d\phi\right)^2
-\end{align}
+\end{align*}
 getting for the volume of a sphere with radius $R$:
-\begin{align}
+\begin{align*}
 V&=8 \int_{0}^{R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{\frac{\pi}{2}}dv_{(N)}\\
 &= 8 \int_{0}^{R}\int_{0}^{\frac{\pi}{2}}\int_{0}^{\frac{\pi}{2}}r^2\sin\theta dr d\theta d\phi\\
 &= \frac{4}{3}\pi R^3
-\end{align}
+\end{align*}
 $$\blacklozenge$$
 \newpage
 
@@ -506,7 +507,7 @@ R^2&0&0&0\\
 \end{array}\right)
 \end{align}
 
-Using as parameters the $x^k \equiv(r,\theta,\phi)$ as parameters for the parametric surface and using $\mathbf{7.409}:\quad b_{\alpha\beta}= a_{ks}\pdv{x^k}{y^{\alpha}}\pdv{x^s}{y^{\beta}} $, we get for the $3-$space $t=$ constant
+Using as parameters the $x^k \equiv(r,\theta,\phi)$ for the parametric surface and using $\mathbf{7.409}:\quad b_{\alpha\beta}= a_{ks}\pdv{x^k}{y^{\alpha}}\pdv{x^s}{y^{\beta}} $, we get for the $3-$space $t=$ constant
 \begin{align}
 \left(b_{mn}\right)&= \left(\begin{array}{lll}
 R^2&0&0\\
@@ -575,7 +576,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Since $\pdv{T_k}{x^s}$ differs from the tensor $\half\left(T_{k,s}-T_{s,k}\right)$ by an expression symmetric in $k, \ s$ and $d\tau_{(2)}^{ks}$ is an absolute tensor, skew-symmetric in these suffixes, it follows that the integrand on the left is an invariant.
 \end{tcolorbox}
-Let's express $\mathbf{7.504}$ in curvilinear coordinates, equipped with metric
+Let's express $\mathbf{7.504}$ in curvilinear coordinates, equipped with a metric
 \begin{align}
 \int_{R_2}T_{k|s}d\tau_{(2)}^{ks} = \int_{R_1}T_{r}d\tau_{(1)}^{r}
 \end{align}
@@ -637,7 +638,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 The skew-symmetric part of a tensor $T_{k_1\dots k_M}$ is defined as  
 $$ T_{\left [k_1 \dots k_M\right ]}= \left(M!\right)^{-1}\delta_{k_1 \dots k_M}^{s_1 \dots s_M} T_{s_1\dots s_M}$$
-Show that the left-hand side of equation $\mathbf{7.525}$ is unchanged if $T_{k_1\dots k_M}$ is replace by its skew-symmetric part. Show that the same is true for the right-hand side.
+Show that the left-hand side of equation $\mathbf{7.525}$ is unchanged if $T_{k_1\dots k_M}$ is replaced by its skew-symmetric part. Show that the same is true for the right-hand side.
 \end{tcolorbox}
 The integrand of the left-hand side of $\mathbf{7.525}$ is
 \begin{align}
@@ -686,7 +687,7 @@ $$\frac{N!}{M!\left(N-M\right)!}$$
 \mathbf{7.312:}\quad d\tau^{k_1\dots k_M}&= \epsilon^{\alpha_1 \dots \alpha_M}\pdv{x^{k_1}}{y^{\alpha_1}}\dots \pdv{x^{k_M}}{y^{\alpha_M}}\left|d_{(\beta)}y^{\gamma}\right|
 \end{align}
 As all $k_i$ are different, the unconstrained number of ordered arrangement of $M$ elements picked out of a set of N possibilities is $N(N-1)\dots (N-M+1) = \frac{N!}{\left(N-M\right)!}$.\\
-As $d\tau^{k_1\dots k_M}$ is skew-symmetric we have to divide this number by the number of constraints of the form $d\tau^{k_1\dots k_j \dots k_p \dots k_M} = -d\tau^{k_1\dots k_p \dots k_j \dots k_M}$. This number just corresponds to tne number of permutations of $M$ distinct objects and is equal to $M!$.\\
+As $d\tau^{k_1\dots k_M}$ is skew-symmetric we have to divide this number by the number of constraints of the form $d\tau^{k_1\dots k_j \dots k_p \dots k_M} = -d\tau^{k_1\dots k_p \dots k_j \dots k_M}$. This number just corresponds to the number of permutations of $M$ distinct objects and is equal to $M!$.\\
 Hence,
 $$\frac{N!}{M!\left(N-M\right)!}$$
 $$\blacklozenge$$
@@ -703,7 +704,7 @@ $\mathbf{(2.525)}$  gives:
 \end{align}
 Let us now consider the following notation for $\delta^{k_1\dots k_M}_{s_1 \dots s_M}$
 $$\delta^{k_1 \leftrightsquigarrow s_x\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow k_y\leftrightsquigarrow s_M}$$
-showing the respective position of an element in the two series use in the generalized Kronecker delta.\\
+showing the respective position of an element in the two series used in the generalized Kronecker delta.\\
 Consider in this expression (no summations on the indexes) the positive and negative terms like
 \begin{align}
 \left.\Gamma^{k_y}_{q s_{\tau}}\delta^{k_1 \leftrightsquigarrow q\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow k_y\leftrightsquigarrow s_M}\right|_{q\ne s_x},\dots ,- \left.\Gamma^{q}_{ s_x s_{\tau}}\delta^{k_1 \leftrightsquigarrow s_x\leftrightsquigarrow  k_M}_{s_1 \leftrightsquigarrow q\leftrightsquigarrow s_M}\right|_{q\ne k_y}
@@ -947,23 +948,23 @@ b^{'}= J^2 b\\\\
 b^{'mr}_{} = J b^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}
 \end{array}\right.
 \end{align}
-Using $(1)$
+Using $(9)$
 \begin{align}
 b^{'mr}_{}\Delta^{'ms}&=\delta^{'s}_r b^{'}
 \end{align}
-Substituting with $(2)$
+Substituting with $(10)$
 \begin{align}
 Jb^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}\Delta^{'ms}&=\delta^{u}_v \frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b\\
 Jb^{uv}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\frac{\partial x^{'r} }{\partial x^{v}}\Delta^{'ms}&=\frac{\partial x^{'s} }{\partial {x^u}}\frac{\partial x^{v} }{\partial x^{'r}} J^2 b^{mv}_{}\Delta^{mu}\\
 \times \frac{\partial x^{p} }{\partial x^{'r}}\spatie b^{up}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}\Delta^{'ms}&=Jb^{mp}_{}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
 \end{align}
 This is a system of $N^2$ linear equations in $N^2$ unknowns $\Delta^{'ms}$.  We claim that  $\Delta^{'ms}= J \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$ is a solution of that system.\\
-Substituting this candidate solution in the left side of $(6)$ gives
-\begin{align}
+Substituting this candidate solution in the left side of $(14)$ gives
+\begin{align*}
 b^{up}_{}\frac{\partial x^{'m} }{\partial {x^{u}}}J \Delta^{ij}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}&=Jb^{up}_{}\delta^i_u\Delta^{ij}\frac{\partial x^{'s} }{\partial x^{j}}\\
 &=Jb^{mp}\Delta^{mu}\frac{\partial x^{'s} }{\partial {x^u}}  
-\end{align}
-proving that our candidate solution is indeed the solution for $(6)$, provided of course the usual conditions on the solvability of a system of linear equations.\\
+\end{align*}
+proving that our candidate solution is indeed the solution for $(14)$, provided of course the usual conditions on the resolvability of a system of linear equations.\\
 We rewrite the cofactor as $\Delta^{s}_{m}$ which transform as $$\Delta^{s}_{m}= J \Delta^{i}_{j}\frac{\partial x^{i} }{\partial {x^{'m}}}\frac{\partial x^{'s} }{\partial x^{j}}$$
 and conclude that the cofactor is a relative mixed tensor of weight $1$.
 $$\blacklozenge$$
@@ -975,7 +976,7 @@ In the space-time of relativity with metric form
 $$\left ( dx^1\right)^2+\left( dx^2\right)^2+\left ( dx^3\right)^2-\left( dx^4\right)^2$$
 the $3-$space with equation 
 $$\left (x^1\right)^2+\left( x^2\right)^2+\left( x^3\right)^2-\left( x^4\right)^2=0$$
-is called a null cone. prove that the $3-$volume of any portion of the null cone is zero.
+is called a null cone. Prove that the $3-$volume of any portion of the null cone is zero.
 \end{tcolorbox}
 We have $\mathbf{7.414}: v_{(3)} = \int_{R_{(3)}} dv_{(3)} $  with $\mathbf{7.410}: dv_{(3)}= \left(\epsilon(b)b\right)^{\half}\epsilon(\tau)\left | d_{(\beta)}y_{\alpha}\right |$ \\
 and $\mathbf{(7.409)}: b_{\alpha \beta }= a_{ks}\frac{\partial x^k}{\partial y_{\alpha}}\frac{\partial x^s}{\partial y_{\beta}}$. Let's compute $b=\left | b_{\alpha \beta }\right|$. We define the intrinsic parameters $\left(x^1, x^2,x^3\right)$ for the $\left( y_{\alpha}\right)$.
@@ -1092,7 +1093,7 @@ Finally,
 g_{ms}g^{ns}&= \delta_m^n\\
 \Rightarrow \quad \left|g_{ms}\right|\left|g^{ns}\right|&=\underbrace{\left|\delta_m^n\right|}_{=1}
 \end{align}
-From the definition of $g^{mn}$ we have, nothing that for a matrix $A \in GL_n(\mathbb{R})$, $\left|k a^{mn}\right| = k^n \left| a^{mn}\right|$, with in our case $n=4$:
+From the definition of $g^{mn}$ we have, noting that for a matrix $A \in GL_n(\mathbb{R})$, $\left|k a^{mn}\right| = k^n \left| a^{mn}\right|$, with in our case $n=4$:
 \begin{align}
 \left|g^{mn}\right| &= \left|f^{mn}\right|\left(\left|f^{ks}\right|^{-\half}\right)^4\\
 &=\left|f^{ks}\right|^{-\half}\left|f^{ks}\right|^{-2}\\
@@ -1164,7 +1165,7 @@ $$\int_{C} v_rdx^r = \int_{C^{'}} v_r dx^r$$
 the integrals being taken in senses which coincide when one curve is deformed into the other. (Note that this is a generalization of Exercise VI, No.4.) 
 \end{tcolorbox}
 The preliminary text "\textit{In a non-metrical space $V_3$ there is given an absolute covariant vector field $v_r$. Then the derived vector field $\omega^r =\epsilon^{rmn}v_{n,m}$ determines an invariant direction at each point of $V_3$ and hence a congruence of curves in $V_3$."} is not clear to me.
-First, $\omega^r =\epsilon^{rmn}v_{n,m}$ \textit{determines an invariant direction}. What does that mean as  $\omega^r$is not a tensor as can be seen hereunder (reminder $\epsilon^{rmn}$ is a relative contravariant tensor of weight $1$):
+First, $\omega^r =\epsilon^{rmn}v_{n,m}$ \textit{determines an invariant direction}. What does that mean as  $\omega^r$is not an absolute tensor as can be seen hereunder (reminder $\epsilon^{rmn}$ is a relative contravariant tensor of weight $1$):
 \begin{align}
 \omega^{'r} &=\epsilon^{'rmn}v^{'}_{n,m}\\
 &=\epsilon^{'rmn}\partial_{x^{'m}}\left(v_{k}\pdv{x^k}{x^{'n}}\right)\\
@@ -1183,7 +1184,7 @@ Let's thackle the proof.
 \caption{Vortice tube in non-metrical space}
 \label{fig:fig_p280a}
 \end{figure}
-Using $\mathbf{7.505}$ we can write(see figure for the naming of the different manifolds) 
+Using $\mathbf{7.505}$ we can write (see figure for the naming of the different manifolds) 
 \begin{align}
 \int_{R^{'}_{(1)}}v_r d\tau_{(1)}^r - \int_{R^{}_{(1)}}v_r d\tau_{(1)}^r &= \int_{R^{'}_{(2)}}v_{r,m}d\tau_{(2)}^{rm} - \int_{R^{}_{(2)}}v_{r,m}d\tau_{(2)}^{rm}
 \end{align}
@@ -1236,7 +1237,7 @@ We can write
 \begin{align}
 \int_{R^\Sigma_{(2)}}v_{r,m}d\tau_{(2)}^{rm}  &= \int_{R^{'}_{(2)}}v_{r,m}d\tau_{(2)}^{rm} + \int_{R^{}_{(2)}}v_{r,m}d\tau_{(2)}^{rm}+\int_{R^{T}_{(2)}}v_{r,m}d\tau_{(2)}^{rm} 
 \end{align}
-Note that in the second term we changed the sign. This is necessary as in $(9)$ the extension on $R^{}_{(2)}$ is taken on the "inside" of $ R_{(3)}$. So we have to change sign of one of the chosen coordinates on $R^{}_{(2)}$ in order to keep the right orientation of the extension. You can visualize this in figure $7.2(a)$: imagine that the caps of the tubes $R^{}_{(2)}$ and $R^{'}_{(2)}$ are deformed to half spheres and that the tube is  shrinked along the $\omega^r$ curves so that the two caps join and form the a sphere as the volume $R_{(3)}$. Then going form one half-sphere to the other will create jump (discontinuity) in the orientation of the elementary cell.\\
+Note that in the second term we changed the sign. This is necessary as in $(9)$ the extension on $R^{}_{(2)}$ is taken on the "inside" of $ R_{(3)}$. So we have to change sign of one of the chosen coordinates on $R^{}_{(2)}$ in order to keep the right orientation of the extension. You can visualize this in figure $7.2(a)$: imagine that the caps of the tubes $R^{}_{(2)}$ and $R^{'}_{(2)}$ are deformed to half spheres and that the tube is  shrinked along the $\omega^r$ curves so that the two caps join and form the a sphere as the volume $R_{(3)}$. Then going form one half-sphere to the other will create a jump (discontinuity) in the orientation of the elementary cell.\\
 Using $\mathbf{7.505}$ again (together with the skew-symmetry of $d\tau_{(2)}^{rm}$ and symmetry of $v_{r,mn}$ in the two last indexes) we can write $(29)$   as 
 \begin{align}
 \int_{R^\Sigma_{(2)}}v_{r,m}d\tau_{(2)}^{rm}  &= \int_{R^{}_{(3)}}v_{r,mn}d\tau_{(2)}^{rmn}\\
@@ -1273,7 +1274,7 @@ $$\blacklozenge$$
 Generalize Ex. 14 to the case of a closed $V_M$ immersed in a non-metrical $V_N$ in the form  
 $$\int_{V_M} v_{k_1\dots k_{M-1},k_M}d\tau_{(M)}^{k_1\dots k_{M-1}k_{M}}=0$$
 \end{tcolorbox}
-Let's define the functions $T_{k_1\dots k_{M-1}k_M \dots k_{N-1} }= v_{k_1\dots k_{M-1},k_M \dots k_{N-1} }$ (not necessarily a tensor) . Then with the generalized Stokes theorem (with $R_N$ being the $N-$space enclosed  by the $R_{N-1}$space
+Let's define the functions $T_{k_1\dots k_{M-1}k_M \dots k_{N-1} }= v_{k_1\dots k_{M-1},k_M \dots k_{N-1} }$ (not necessarily a tensor) . Then with the generalized Stokes theorem (with $R_N$ being the $N-$space enclosed  by the $R_{N-1}$ space)
 \begin{align}
 \int_{R_{N-1}} T_{k_1\dots k_{M-1}k_M \dots k_{N-1}}d\tau_{(N-1)}^{k_1\dots k_{M-1}k_M \dots k_{N-1}} &=\int_{R_{N}} T_{k_1\dots k_{M-1}k_M \dots k_{N-1},k_N }d\tau_{(N)}^{k_1\dots k_{M-1}k_M \dots k_{N-1}k_N }  \\
 &=0
@@ -1301,7 +1302,7 @@ $$V=\frac{\pi^{\half N} R^N}{\Gamma\left(\half P+1\right)}$$
 Check this result for $N=2$ and $N=3$.
 \end{tcolorbox}
 We prove the first question by induction.
-We know that for a $2-$ or $3-$ sphere that volume is proportional to $R^2$ or $R^3$.
+We know that for a $2-$ or $3-$ sphere that the volume is proportional to $R^2$ or $R^3$.
 Suppose that the volume $V(N-1, R)$ of a $N-1$ sphere with radius $R$ is 
 \begin{align}
 V(N-1, R) =  K_{N-1}R^{N-1}
@@ -1448,7 +1449,7 @@ but in the $V_{(N-1)}$ integral $r=R^2$ and $z_p z_p = R^2$ as we are integratin
 \Rightarrow\spatie \left(N+2\right)\int_{V(N)} r^2 dv_{(n)} &=R^3 \int_{V(N-1)} dv_{(N-1)} \\
 &=R^3 V_{(N-1)} 
 \end{align}
-The volume $V_{(N-1)} $ is not the volume of the $N-1$ ball in a $N-1$space, but is the 'area' of the shell enclosing $V_{(N-1)}$
+The volume $V_{(N-1)} $ is not the volume of the $N-1$ ball in a $N-1$ space, but is the 'area' of the shell enclosing $V_{(N-1)}$
 $$\lozenge$$
 \textbf{Lemma} : The area of a sphere enclosing a ball with volume $V_{(N)}$ is 
 $$ S_{(N)} = \frac{N}{R} V_{(N)}$$
