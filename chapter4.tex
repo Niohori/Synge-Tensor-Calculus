@@ -301,27 +301,33 @@ Be $\phi_0\equiv \phi(0)$, $\phi_1\equiv \phi(1)$,
 
 Then $(2)$ in $(1)$ gives
 \begin{align}
-&\phi(u) = \left(\phi_1+\phi_0\right)u+\phi_0
+&\phi(u) = \left(\phi_1-\phi_0\right)u+\phi_0
 \end{align}\\\\
 \textit{Case a1: $P_0, P_1$ both lie in region I or both in region II.} \\
-We have the following conditions:\\
+We have the following conditions:
 \begin{align*}
 \phi_0 < 0\wedge \phi_1  < 0
 \end{align*}
 then, $$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$
-Indeed, as $\phi_0 < 0\wedge \phi_1  < 0$, we have in expression $(3)$, $\phi_1+\phi_0<0$ and $\phi_0 <0$ meaning that for $\phi(u)$ to become $0$, $u$ must be negative, which is not in the domain of the defined curve.
-
+ Indeed, put $\tau = -\phi_0 \text{ and }  \sigma =-\phi_1  $ with $\tau,\ \sigma>0$. Then, from $(3)$ we deduce that for  $\phi(u)=0$ we get 
+ \begin{align}
+ &u= -\frac{\phi_0}{\phi_1-\phi_0}\\
+ \Rightarrow\spatie & u= \frac{\tau}{\tau-\sigma}\\
+ \Rightarrow\spatie & u= \frac{1}{1-\frac{\sigma}{\tau}}\\
+ \Rightarrow\spatie &\cancel{\exists}  \  u \in \left[0,1\right]: \phi(u)=0 \spatie \text{ as } \frac{\sigma}{\tau} >0
+ \end{align}
 So, there exist no $u\in\left[0,1\right]$ for which $\phi(u)=0$ and the curve does not intersect the null cone.\\\\
 \textit{Case a2: $P_0, P_1$ both lie in region III.} Then,
 \begin{align*}
 \phi_0 > 0\wedge \phi_1  > 0
 \end{align*}
-Then, $$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$ as we can follow the same reasoning as in case 1 but with $\phi_1+\phi_0>0$ and $\phi_0 >0$.
+Following the same reasoning as in $(7)$ but with $\tau = \phi_0 \text{ and }  \sigma =\phi_1  $ with $\tau,\ \sigma >0$ we can conclude
+$$\cancel{\exists } \  u \in \left[0,1\right]: \phi(u)=0$$ 
 So, there exist no $u\in\left[0,1\right]$ for which $\phi(u)=0$ and the curve does not intersect the null cone.\\\\
 \\$$\lozenge$$
 
 \textbf{We now show statement $\mathit{b.}$ of the exercise.}\\\\
-
+\begin{comment}
 \textit{Case b1: $P_0$ lies in region I, $P_1$  lies in region II.} \\
 Those two regions are separated by the $3$-flat (plane) $y_4=0$. So it's suffice that $R^2=0$ for $\phi(u)$ being zero. Hence $y_i=0$, $  i=1,2,3$, and the curve will cut the cone at it's apex.
 \\\\
@@ -359,15 +365,19 @@ u&=\frac{\tau}{\sigma +\tau}\\
 \Rightarrow\spatie &\exists  \  u \in \left[0,1\right]: \phi(u)=0 \spatie \text{ as } \frac{\sigma}{\tau} >0
 \end{align*}
 So, there is a solution $u\in \left[0,1\right]$ for which $\phi(u)=0$ and the curve intersects the null cone.
+\end{comment}
+$$\dagger$$
 \\$$\lozenge$$\\
-\newpage
+
 
 \textbf{We now investigate the straight segment questions.} \\
+\begin{comment}
 \textit{Case 1: $A$ and $B$ both lie in the present (region I) or in the past (region II)}\\\\
 \\\\
 
 \textit{Case 2: If $A$ is any point in the present, there exist at least one point $B$ in the present that the straight segment $AB$ cuts the null cone}\\\\
 
+\end{comment}
 
 
 
