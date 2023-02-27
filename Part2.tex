@@ -32,9 +32,10 @@
 
 %**************************** Tikz libraries *******************************
 \usepackage{tikz}
-%\usepgfplotslibrary{external} 
+
 \usetikzlibrary{external}
-\tikzexternalize
+\tikzexternalize[prefix=./Externalized_figures/]
+%\tikzexternalize
 \usetikzlibrary{shapes,arrows,arrows.meta,spy}
 \usetikzlibrary{calc}% needed for BB
 \usepackage{pgfplots}
