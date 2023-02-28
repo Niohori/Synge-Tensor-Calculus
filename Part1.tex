@@ -33,12 +33,10 @@
 \usepackage{tikz}
 \usetikzlibrary{external}
 \tikzexternalize[prefix=./Externalized_figures/]
-
+%\tikzset{external/mode=graphics if exists}
+%\tikzexternalize
 
 \usepackage{tikz,pgfplots}
-\usetikzlibrary{external}
-% All auxiliary files and externalised graphics go to \externaldirectory.
-\tikzexternalize[prefix=\externaldirectory]
 \usetikzlibrary{shapes,arrows,arrows.meta,spy}
 \usetikzlibrary{calc}% needed for BB
 \usepackage{pgfplots}

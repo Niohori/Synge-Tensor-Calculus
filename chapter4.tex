@@ -337,120 +337,25 @@ $$\lozenge$$\\
 
 
 \textbf{We now investigate the straight segment questions.} \\
-\textit{Case 1: $A$ and $B$ both lie in the present (region I) or in the past (region II)}\\\\
-
+\textit{Case 1: $A$ and $B$ both lie in the present (region I) or in the past (region II)}\\
+Be $$y_i = \left(y_i^{(1)}-y_i^{(0)}\right)u+ y_i^{(0)}\spatie u\in [0,1]$$ and be $a_{ij}$ the metric tensor of the  $4-$space.\\
+We have
+\begin{align*}
+\phi(u)&= a_{ij}y_iy_j\\
+&= a_{ij}\left[\left(y_i^{(1)}-y_i^{(0)}\right)u+ y_i^{(0)}\right]\left[\left(y_j^{(1)}-y_j^{(0)}\right)u+ y_j^{(0)}\right]\\
+&= a_{ij}\left[\left\{\begin{matrix}\left(y_i^{(1)}y_j^{(1)}+y_i^{(0)}y_j^{(0)}-y_i^{(1)}y_j^{(0)}-y_i^{(0)}y_j^{(1)}\right)u^2\\
++ \left(y_i^{(0)}y_j^{(1)}-y_i^{(0)}y_j^{(0)}+y_i^{(1)}y_j^{(0)}-y_i^{(0)}y_j^{(0)}\right)u\\
++y_i^{(0)}y_j^{(0)}\end{matrix}\right.\right]
+\end{align*}
+Putting $\kappa = a_{ij}y_i^{(1)}y_j^{(0)}$, we can write the last expression as 
+\begin{align}
+\phi(u)&= \left(\phi_1+\phi_0-2\kappa\right)u^2 -2\left(\phi_0-\kappa\right)u+\phi_0
+\end{align}
+Trying to prove that there is no $u\in [0,1]$ so that $\phi(u)=0$ by solving this quadratic equation, leads to nothing...
 
 \textit{Case 2: If $A$ is any point in the present, there exist at least one point $B$ in the present that the straight segment $AB$ cuts the null cone}\\
 
 
-\begin{comment}
-Then,
- \begin{align}
-\phi(u) &= \left\{\begin{array}{l} \ \ \left[\left(y_1^{(1)}-y_1^{(0)}\right)u + y_1^{(0)}\right]^2\\
-+\left[\left(y_2^{(1)}-y_2^{(0)}\right)u + y_2^{(0)}\right]^2\\
-+\left[\left(y_3^{(1)}-y_3^{(0)}\right)u + y_3^{(0)}\right]^2\\
--\left[\left(y_4^{(1)}-y_4^{(0)}\right)u + y_4^{(0)}\right]^2\\
-\end{array}\right.\\
-&= \left\{\begin{array}{l} \ \ 
-\left(y_1^{(1)}\right)^2 u^2+\left(y_1^{(0)}\right)^2 u^2 - 2y_1^{(1)}y_1^{(0)}u^2 + 2y_1^{(1)}y_1^{(0)}u-  2\left(y_1^{(0)}\right)^2 u+ \left(y_1^{(0)}\right)^2\\
-+\left(y_2^{(1)}\right)^2 u^2+\left(y_2^{(0)}\right)^2 u^2 - 2y_2^{(1)}y_2^{(0)}u^2 + 2y_2^{(1)}y_2^{(0)}u-  2\left(y_2^{(0)}\right)^2 u+ \left(y_2^{(0)}\right)^2\\
-+\left(y_3^{(1)}\right)^2 u^2+\left(y_3^{(0)}\right)^2 u^2 - 2y_3^{(1)}y_3^{(0)}u^2 + 2y_3^{(1)}y_3^{(0)}u-  2\left(y_3^{(0)}\right)^2 u+ \left(y_3^{(0)}\right)^2\\
--\left(y_4^{(1)}\right)^2 u^2-\left(y_4^{(0)}\right)^2 u^2 + 2y_4^{(1)}y_4^{(0)}u^2 - 2y_4^{(1)}y_4^{(0)}u+  2\left(y_4^{(0)}\right)^2 u- \left(y_4^{(0)}\right)^2\\
-\end{array}\right.
-\end{align}
-Put $\phi_0 = \left(y_1^{(0)}\right)^2+\left(y_2^{(0)}\right)^2+\left(y_3^{(0)}\right)^2-\left(y_4^{(0)}\right)^2$ and $\phi_1 = \left(y_1^{(1)}\right)^2+\left(y_2^{(1)}\right)^2+\left(y_3^{(1)}\right)^2-\left(y_4^{(1)}\right)^2$. \\
-Then,
-\begin{align}
-\phi(u)= \left\{\begin{array}{l} \ \ 
-\phi_1u^2+\phi_0u^2-2\left(y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}\right)u^2 \\
--2\phi_0 u + 2 \left(y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}\right)u\\
-+\phi_0
-\end{array}\right.
-\end{align}
-Let's put $\kappa = y_1^{(1)}y_1^{(0)}+y_2^{(1)}y_2^{(0)}+y_3^{(1)}y_3^{(0)}-y_4^{(1)}y_4^{(0)}$, we get the expression
-\begin{align}
-\phi(u)&= 
-\left(\phi_1 +\phi_0-2\kappa\right) u^2 + 2 \left(\kappa- \phi_0\right)u
-+\phi_0
-\end{align}
-
-
-The function $\phi(u)$ is a parabola. 
-\begin{figure}[H]%
-    \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c1.tex}}
-	\qquad
-    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c2.tex}}
-    \qquad
-    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c3.tex}}
-\caption{Non problematic null cone parametric functions.}
-\label{fig:fig_p126_1a}
-\end{figure}
-\begin{figure}[H]%
-    \centering
-    \subfloat[]{\input{D:/MathLatex/images/fig_p126_Ex1_c4.tex}}
-\caption{Problematic null cone parametric functions.}
-\label{fig:fig_p126_1b}
-\end{figure}From the parabola's in figure $4.2.$ it is clear that the function can't reach $0$ in $u\in(0,1)$  and hence that the segment will not intersect the null cone.\\
-One problematic could occur as represented in figure $4.3$.
-For such a parabola, we have :
-\begin{align}
-\left\{\begin{array}{l} \ \ 
-\phi(u)= au^2+bu+c\\\\
-a = \left(\phi_1 +\phi_0-2\kappa\right) <0\\\\
-b=2 \left(\kappa- \phi_0\right)\\\\
-c=\phi_0\\\\
-a+b=\phi_1-\phi_0\\\\
-\phi_0<0\\\\
-\phi_1 < 0
-\end{array}\right.
-\end{align}
-From the $3$ known inequalities 
-\begin{align}
-\left\{\begin{array}{l} \ \ 
-a < 0\\\\
-\phi_0<0\\\\
-\phi_1 < 0
-\end{array}\right.
-\end{align}
-we get
-\begin{align}
-\left\{\begin{array}{l} \ \ 
-a < 0\quad\Rightarrow\quad \kappa > \frac{\phi_1+\phi_0}{2} \\\\ b=2 \left(\kappa- \phi_0\right)\quad \Rightarrow\quad b > \phi_1-\phi_0\\\\
-\end{array}\right.
-\end{align}
-Note that there is nothing special in the choice of $\phi_1, \ \phi_0$ as the segment is not oriented and as $\phi_1,\phi_0 <0$ we can put arbitrarily $b \geq0$ with $\phi_1 \geq \phi_0$.\\ 
-Let's examine if there is a value $u_{max} \in (0,1)$ such that $\phi(u_{max})\geq 0$ and let us investigate whether the relation between the coefficients $a,b$ does not lead to a contradiction for such value of $u_{max} \in (0,1)$.  
-\begin{align}
-\dv{\phi(u)}{u}&=0\\
-\Rightarrow\spatie u_{max} &= -\frac{b}{2a}\quad\text{ with } 0<b < -2a\\
-\phi(u_{max}) &= -\frac{b^2}{4a}+\phi_0
-\end{align}
-Is it possible to have $\phi(u_{max}) \geq 0$ with $u_{max} \in (0,1)$? One straightforward condition to have this possible is that the discriminant of the quadratic equation os $b^2-4ac>=0$.
-Hence,
-\begin{align}
-D &= \left[2 \left(\kappa- \phi_0\right)\right]^2-4\left(\phi_1 +\phi_0-2\kappa\right)\phi_0\\
-&= 4\kappa^2+ 4\phi_0^2-8\kappa\phi_0-4\phi_1\phi_0 -4\phi_0^2+8\kappa\phi_0\\
-&= 4\left(\kappa^2-\phi_1\phi_0\right)\\
-&= \left\{\begin{array}{l} \ \ 
-4\left[\left(y_1^{(0)}y_4^{(1)}-y_4^{(0)}y_1^{(1)}\right)^2
-+\left(y_4^{(0)}y_2^{(1)}-y_2^{(0)}y_4^{(1)}\right)^2
-+\left(y_4^{(0)}y_3^{(1)}-y_3^{(0)}y_4^{(1)}\right)^2\right]\\\\
--4\left[\left(y_2^{(0)}y_1^{(1)}-y_1^{(0)}y_2^{(1)}\right)^2
-+\left(y_3^{(0)}y_1^{(1)}-y_1^{(0)}y_3^{(1)}\right)^2
-+\left(y_3^{(0)}y_2^{(1)}-y_2^{(0)}y_3^{(1)}\right)^2\right]\\\\
-\end{array}\right.
-\end{align}
-Obviously, this path of proving leads to nothing as $D$ can be positive even for a segment lying entirely in zone $I$ or $II$. To see that, take two events, stationary in  the space  at the point $P\left(0,0,y_3^{(0)}\right)$. The negative term in (39) disappears and obviously $D>0$.\\
-$\dagger$WHAT IS THE ANALYTICAL WAY TO PROVE THIS? IS $a>0$ A CONDITION?$\dagger$
-\end{comment}
-\begin{comment}
-\begin{figure}[H]
-\input{D:/MathLatex/images/fig_p126_Ex1_b.tex}
-\caption{Travelling between two points in region III (present) in a  $V_3$ space-time manifold}
-\label{fig:fig_p96_3415_b}
-\end{figure}
-\end{comment}
 $$\dagger$$
 $$\blacklozenge$$
 \newpage
