@@ -1,10 +1,3 @@
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{bending}
-\usetikzlibrary{decorations.text}
-\usetikzlibrary {arrows.meta}
-\usetikzlibrary{bending}
-\usetikzlibrary{decorations.pathmorphing}
-\usetikzlibrary{decorations.markings}
 
 \begin{tikzpicture}[scale=0.75]
 \tikzstyle{left-hand-mirror} = [
@@ -36,8 +29,8 @@
 \node[above right,] at (Fp) {$\overrightarrow{F^{'}}$};
 \coordinate (Px) at (-2,-2) {};
 \coordinate (Py) at (6.8,0) {};
-\node[label=north west:$P1$] at (Px) {};
-\node[label=north west:$P2$] at (Py) {};
+\node[label=north west:$P_1$] at (Px) {};
+\node[label=north west:$P_2$] at (Py) {};
 \coordinate (Pp) at (5,-2) {};
 \draw [dashed] (Pp) -- (P);
 \draw [dashed] (Pp) -- (Px);
@@ -45,8 +38,10 @@
 \coordinate (Fpp) at (3,-1) {};
 \coordinate (Fx) at (-1,-1) {} {};
 \coordinate (Fy) at (4,0) {} {};
-\node[label=north west:$F1$] at (Fx) {};
-\node[label=north west:$F1$] at (Fy) {};
+\node[label=north west:$F_1$] at (Fx) {};
+\node[label=north west:$F_2$] at (Fy) {};
+\draw[fill = black]  (Fx) circle (0.1);
+\draw[fill = black]  (Fy) circle (0.1);
 \draw [dashed] (Fp) -- (Fpp);
 \draw [dashed] (Fpp) -- (Fx);
 \draw [dashed] (Fpp) -- (Fy);
