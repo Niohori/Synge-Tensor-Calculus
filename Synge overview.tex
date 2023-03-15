@@ -32,15 +32,15 @@
     }
 ]
  
-\coordinate(N1) at (15.5,26) {} {};
-\coordinate(N2) at (8.5,21) {} {};
+\coordinate(N1) at (-3.5,28.5) {} {} {};
+\coordinate(N2) at (11.5,21) {} {} {};
 \coordinate(N3) at (11.5,5.5) {} {};
-\coordinate(N4) at (-4,12) {} {} {};
-\coordinate(N5) at (-13,22) {} {};
+\coordinate(N4) at (-3.5,9) {} {} {} {};
+\coordinate(N5) at (-11,18) {} {} {};
 \coordinate(N6) at (-16.5,5) {} {};
-\coordinate(N7) at (12.5,-6.5) {} {} {} {};
-\coordinate(N8) at (-4.5,-19) {} {} {}{};
-\coordinate(N9) at (-16,-18.5) {} {} {} {}{};
+\coordinate(N7) at (11.5,-10.5) {} {} {} {} {};
+\coordinate(N8) at (-15.5,-14.5) {} {} {} {}{};
+\coordinate(N9) at (0,-18) {} {} {} {} {}{};
 %%TENSORS
 \node (T1) [concept] at (N1){1. Tensors $$T^{'mn}=T^{rs}\partial_r x^{'m}\partial_s x^{'n}$$
 $$T^{'}_{mn}=T_{rs}\partial_m x^{r}\partial_n x^{r}$$
@@ -112,16 +112,16 @@ systems}
 \node (SS) at (N8){Special \\ Spaces}
     child {node(SS1) {Flat$$R_{rsmn}=0$$}
        child {node(SS1c) {Cartesian tensors}}
-    child {node(SS1a) {Homogenous $$\phi = dz_ndz_n$$}}
-    child {node(SS1b) {Orthogonal transformation}}
     child {node(SS1d) {Scalar procuct$$X_nY_n$$}}
     child {node(SS1e) {Divergence$$X_{n,n}$$}}
+    child {node(SS1a) {Homogenous $$\phi = dz_ndz_n$$}}
+    child {node(SS1b) {Orthogonal transformation}}
     }
     child {node (SS2) {Constant curvature }child {node(SS2a) {Schur theorem}}
     };
     
     %%Proper Cartesian tensors
-\node (CT) at (N9){Proper\\ Cartesian \\ tensors}
+\node (CT) at (N9){Proper\\ Cartesian \\ tensors$$\left|A_{mn}\right|=1$$}
     child {node(CTa) {Permutation}}
     child {node(CTb) {Vector product$$\epsilon_{mnrs}X_nY_r$$ }}
     child {node(CTc) {Curl$$\epsilon_{mnr}X_r,n$$}
@@ -138,7 +138,7 @@ systems}
 \node [annotation,left] at (CR1h.west){$$\left( R^n_{.t} - \frac{1}{2}\delta^n_t R \right)_{|n}=0$$ $$G^n_{.t} = R^n_{.t} - \frac{1}{2}\delta^n_t R $$$$G^n_{.n}=0$$ };
 \node [annotation,right] at (GD1.east){$$\frac{\delta^2\eta^r}{\delta s^2}+R^r_{.smn}p^s\eta^m p^n=0$$};
 \node [annotation,left] at (RC1.west){$$K = $$ $$\frac{R_{rsmn}\xi^r\eta^s \xi^m\eta^m}{\left(a_{pu}a_{qv}-a_{pv}a_{qu}\right)\xi^p\eta^q \xi^u\eta^v}$$};
-\node [annotation,below] at (SS1b.south east){$$z^{'}_{m}=A_{mn}z_n+A_m $$ $$A_{mp}A_{mq}= \delta_{pq}$$};
+\node [annotation,right] at (SS1b.south east){$$z^{'}_{m}=A_{mn}z_n+A_m $$ $$A_{mp}A_{mq}= \delta_{pq}$$};
 \node [annotation,left] at (SS1c.west){$$T^{'}_{rs}= T_{mn}A_{rm}A_{sn}$$ };
 \node [annotation,left] at (CTa.west){$$\epsilon_{mrs}\epsilon_{mpq} = \delta_{rp}\delta_{sq}-\delta_{rq}\delta_{sp}$$ };
 
@@ -157,6 +157,7 @@ systems}
       \draw [concept connection]  (RC1) edge (SS2);
       \draw [concept connection]  (GD1) edge (SS2);
       \draw [concept connection]  (SS1c) edge (CT);
+            \draw [concept connection]  (SS1b) edge (CT);
   \end{pgfonlayer}
 \end{tikzpicture}
  

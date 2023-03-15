@@ -14,5 +14,6 @@
 
 #### This way, every image will be treated as a separate pdf-file and will make the compilation faster (except the first time).
 
+##The solutions are given in the Ricci index notation as in the book. An interesting exercise could be to convert the exercises in the coordinate-free notation.
 
 
